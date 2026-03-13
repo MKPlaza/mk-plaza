@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Press+Start+2P&family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&family=Uncial+Antiqua&family=Exo+2:ital,wght@1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Kirsty';
+  src: url('https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/kirsty__.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-cinzel: "Cinzel Decorative", serif;
+  --font-pixel: "Press Start 2P", cursive;
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
+
+:root {
+  --mk-midnight: #0a1128;
+  --mk-blue: #1a237e;
+  --mk-gold: #ffd700;
+  --mk-silver: #e0e0e0;
+  --mk-eye-glow: #ffeb3b;
+  --glass: rgba(10, 17, 40, 0.4);
+  --glass-heavy: rgba(10, 17, 40, 0.6);
+  --fluid-ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --mk-accent-red: #ff2a50;
+}
+
+body {
+  @apply bg-[var(--mk-midnight)] text-[var(--mk-silver)] overflow-hidden;
+  transition: background-color 0.5s ease;
+}
+
+.pixel-theme {
+  font-family: var(--font-pixel);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  animation: marquee 12s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 12s linear infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--mk-gold);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ffea00;
+}
+
+.game-card {
+  background: #0a1128;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.game-card:hover {
+  border-color: rgba(255, 204, 0, 0.4); 
+  background: #0e1a3d;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.launch-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
