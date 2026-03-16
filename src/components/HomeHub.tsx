@@ -26,6 +26,14 @@ interface HomeHubProps {
 
 const CHANGELOG = [
   {
+    version: 'v1.1',
+    date: 'MAR 14, 2026',
+    updates: [
+      'THE DAY THAT MR. KRABS FRIES',
+      'Added more m0v135, 4n1m3, 7v 5h0w5, and m4ng4'
+    ]
+  },
+  {
     version: 'v1.0',
     date: 'Mar 10, 2026',
     updates: [
@@ -38,13 +46,6 @@ const CHANGELOG = [
     date: 'MAR 07, 2026',
     updates: [
       'Welcome to MKPlaza!'
-    ]
-  },
-  {
-    version: 'Beta v1.0',
-    date: 'MAR 05, 2026',
-    updates: [
-      'test release, still not final changes lmao'
     ]
   }
 ];
