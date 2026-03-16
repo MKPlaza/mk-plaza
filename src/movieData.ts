@@ -465,7 +465,7 @@ export const MOVIES: Movie[] = [
             },
             {
                 title: "Detective Pikachu",
-                imageUrl: "https://www.dropbox.com/scl/fi/re37586v68y8y0qq7kyl0/Pok-mon_Detective_Pikachu_teaser_poster.jpg?rlkey=zlwb1mjl98m4dppujehri1otx&st=grggi7r0&dl=1",
+                imageUrl: "https://www.dropbox.com/scl/fi/re37586v68y8y0qq7kyl0/-mon_Detective_Pikachu_teaser_poster.jpg?rlkey=zlwb1mjl98m4dppujehri1otx&st=grggi7r0&dl=1",
                 link: "https://drive.google.com/file/d/1q5wcbuy536XQKTBAF7ImApMAlNMVHM5T/view",
                 description: "Boy meets talking Pikachu who wants to be detective.",
                 year: "2019"
@@ -912,13 +912,6 @@ export const MOVIES: Movie[] = [
                 year: "2023"
             },
             {
-                title: "Jurassic World: Rebirth",
-                imageUrl: "https://www.dropbox.com/scl/fi/1qsdnk4bgzys2s73j79kk/Jurassic_World_Rebirth_poster.jpg?rlkey=awafkakx81wynmq0erbmsx09z&st=u4zifiyi&dl=1",
-                link: "https://drive.google.com/file/d/1x0n_tZPq79HxAnV2ZwnVPTkBenFGZjx-/view?usp=sharing",
-                description: "New generation encounters dinosaurs.",
-                year: "2025"
-            },
-            {
                 title: "Gladiator",
                 imageUrl: "https://www.dropbox.com/scl/fi/qqdmx1cyflflkm3cn20mt/Gladiator_-2000_film_poster.png?rlkey=t1smwff0rwqlugfwzbjwks909&st=q957bip0&dl=1",
                 link: "https://drive.google.com/file/d/1Hd90lotAZQPfB8rfJ219MTTe9xy59TZ0/view",
@@ -1255,6 +1248,13 @@ export const MOVIES: Movie[] = [
                 year: "2019"
             },
             {
+                title: "Pokémon the Movie: Coco",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSPBAdxWEMQ56pojv9yJ-zLEIVzJ7eGFj3LaMZjW8AWkODPNy41",
+                link: "https://drive.google.com/file/d/1NS6XiRHS5qWzGr8ynDfaiaW7s0fMAaAP/view?usp=sharing",
+                description: "In the Forest of Okoya, the Mythical Pokémon Zarude finds an infant boy in a cradle washed up on a riverbank.",
+                year: "2020"
+            },
+            {
                 title: "Pokémon: Mewtwo Returns",
                 imageUrl: "https://m.media-amazon.com/images/M/MV5BMTM4NTAxMTQ4OV5BMl5BanBnXkFtZTYwNTM2MjI5._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/file/d/1Vbux2rKqR7SsUGDYYFZpKbTKxoa31r9U/view?usp=drive_link",
@@ -1350,6 +1350,20 @@ export const MOVIES: Movie[] = [
                 imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBWwaBfcQH-4cxTb496CJtKYyvcK4FaitIsw&s",
                 link: "https://drive.google.com/file/d/198qUcefIK54KnZzxAx6_L8u7l37oCfhK/view",
                 description: "A year later, Wakanda faces pressure from other nations to share their vibranium, with attempts to steal it by force.",
+                year: "2022"
+            },
+            {
+                title: "Dragon Ball Super: Broly",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTtee_nA-fbMYgK9N-Udz1zV92C_l-mqp34n2SmWeg99cLYVmad",
+                link: "https://drive.google.com/file/d/1TDKC-UVrRxNm1ZMYGU8SUG0R1jSn_oYt/view?usp=drive_link",
+                description: "Goku and Vegeta encounter Broly, a Saiyan warrior unlike any fighter they've faced before.",
+                year: "2018"
+            },
+            {
+                title: "Dragon Ball Super: Super Hero",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtA7aTcIcg7Qo1JrrS4f8xnf4fUvXbGuGXHW_GaApojneU9WUi",
+                link: "https://drive.google.com/file/d/1-gxJrcv5Ob2lnX1bu-nI2rniRg0p_Mmt/view",
+                description: "The Red Ribbon Army from Goku's past has returned with two new androids to challenge him and his friends.",
                 year: "2022"
             },
             {
@@ -1927,6 +1941,41 @@ export const MOVIES: Movie[] = [
                 year: "1993"
             },
             {
+                title: "The Lost World: Jurassic Park",
+                description: "A research team is sent to the Jurassic Park Site B island to study the dinosaurs there, while an InGen team approaches with another agenda.",
+                year: "1997",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_At9BMX3gTT1Vv_WWpDqsR-ZuEfELrRopGLUegXF_NaS7ONpx",
+                link: "https://drive.google.com/file/d/15okru5XkkghrsKUfQJaFUTUHxHF_o9a1/view?usp=drive_link"
+            },
+            {
+                title: "Jurassic Park III",
+                description: "A decidedly odd couple with ulterior motives convince Dr. Alan Grant to go to Isla Sorna, resulting in an unexpected landing.",
+                year: "2001",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTGd5VtCqjQNuViRSEsQpkSrzegmGxvhR0AoARlJgu_gKPWNmm",
+                link: "https://drive.google.com/file/d/1W9RJS1N_rBcNFAA73Y3B6leLhhjXXY9k/view?usp=drive_link"
+            },
+            {
+                title: "Jurassic World",
+                description: "A new theme park creates a genetically modified hybrid dinosaur, which escapes containment and goes on a killing spree.",
+                year: "2015",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRAhiD1zplxxzrmecY1L6PnNP_xTRO-kTW1ufH54wsKXLy_lWlO",
+                link: "https://drive.google.com/file/d/1oD0MwA_C9OVb7HeO70m9gAAs-dbm9SJG/view?usp=drive_link"
+            },
+            {
+                title: "Jurassic World Dominion",
+                description: "Four years after the destruction of Isla Nublar, dinosaurs now live and hunt alongside humans all over the world.",
+                year: "2022",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSrcWio-ZbeiNU_y8qzZ88wL5F8ICXaDQvmHivByFKBT6O8CS2E",
+                link: "https://drive.google.com/file/d/1x84uwAQzm7-j9MhDdNF5sb_jCRQFhjIa/view?usp=drive_link"
+            },
+            {
+                title: "Jurassic World: Rebirth",
+                imageUrl: "https://www.dropbox.com/scl/fi/1qsdnk4bgzys2s73j79kk/Jurassic_World_Rebirth_poster.jpg?rlkey=awafkakx81wynmq0erbmsx09z&st=u4zifiyi&dl=1",
+                link: "https://drive.google.com/file/d/1x0n_tZPq79HxAnV2ZwnVPTkBenFGZjx-/view?usp=sharing",
+                description: "New generation encounters dinosaurs.",
+                year: "2025"
+            },
+            {
                 title: "Joker",
                 imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQc373yboAw6UaeuzJMGhgSN6JubsGFMgWOA_XC3jtbxvPuZ7LH",
                 link: "https://drive.google.com/file/d/1czY5u0zA3TPQh97OFth_1GkaK9nUo-Lq/view?usp=drive_link",
@@ -1953,6 +2002,27 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1o-u405CtHzkRFAjDRxnlwIV1MKzmpQYa/view",
                 description: "Retired hitman seeks vengeance for puppy.",
                 year: "2014"
+            },
+            {
+                title: "John Wick: Chapter 2",
+                description: "After returning to the criminal underworld to repay a debt, John Wick discovers that a large bounty has been put on his life.",
+                year: "2017",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT581lV1qvox1QN7kDBtsMAHmrS_3TqY-k-Ab3bVapiVd9ezSJN",
+                link: "https://drive.google.com/file/d/1gzsZEVTNEb93tSa0nuzlpR2n20D4Dyx9/view"
+            },
+            {
+                title: "John Wick: Chapter 3 - Parabellum",
+                description: "John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head.",
+                year: "2019",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRhD2WYV8AtuJuFkps4KHY_i38KJ6ZqN0nj-3KSLXG0IIpDBvf_",
+                link: "https://drive.google.com/file/d/1CsIZrKGXn557DdOJrdz5ty7nkg0i4CWR/view"
+            },
+            {
+                title: "John Wick: Chapter 4",
+                description: "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy.",
+                year: "2023",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStOedgmuVFv-U8ZgSlCMwkN9EN7WqqZW-PC4quRBqAWYrzsVMV",
+                link: "https://drive.google.com/file/d/10LUlcX6Hu9pn3c3xmPlfJOf20Qjwgxq_/view"
             },
             {
                 title: "Kill Bill: Vol. 1",
@@ -2548,6 +2618,41 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/18i5j4gguKnfjNXVcfPKLz3GbxaiWbhrh/view?usp=drive_link",
                 description: "1970s TV family tries to save home in 1990s.",
                 year: "1995"
+            },
+            {
+                title: "The Purge",
+                description: "A wealthy family is held hostage for harboring the target of a murderous syndicate during the Purge, a 12-hour period in which all crime is legal.",
+                year: "2013",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSB42KBjwptX7K_YMYpgmIHQcYSiTBSRBUsi5cgwKO0vosFeOCW",
+                link: "https://drive.google.com/file/d/1PFz-u8_kVFY8Z--NyloACB1DUwiT0oK4/view?usp=drive_link"
+            },
+            {
+                title: "The Purge: Election Year",
+                description: "Former Police Sergeant Barnes becomes head of security for Senator Charlie Roan, a Presidential candidate targeted for death on Purge night.",
+                year: "2016",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQealOoCUe2m6tjoQT6V5AveTE1CUAL9_XfUkW8Zb6kgrhlqoc_",
+                link: "https://drive.google.com/file/d/1TmtXANeLZHYqnxcjn5JsiO2LMi6J7H_z/view?usp=drive_link"
+            },
+            {
+                title: "The Purge: Anarchy",
+                description: "Three groups of people intertwine and are left stranded in the streets on Purge Night, trying to survive the chaos and violence.",
+                year: "2014",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnn5WNrVimVnmVjtPcUIrDiKlRArDt3gWWytXZoQ66YWxOz2EY",
+                link: "https://drive.google.com/file/d/1d7FFXzRf0u7L23AqH-HsUua_kA8a_edQ/view?usp=drive_link"
+            },
+            {
+                title: "Purge of Kingdoms",
+                description: "In a spoof of Game of Thrones, nobles from the Eight Kingdoms gather for a Purge Fest, where they must survive 12 hours of legal mayhem.",
+                year: "2019",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLx2_UEBgBYZT3de0KHddetgE7cNPV9WIVehrvRqJglY_nzgtH",
+                link: "https://drive.google.com/file/d/1tfdoWD6V8uopSbpIE5GJUg0dZI-2P-yD/view?usp=drive_link"
+            },
+            {
+                title: "The Forever Purge",
+                description: "All the rules are broken as a sect of lawless marauders decides that the annual Purge does not stop at daybreak and instead should never end.",
+                year: "2021",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRBCPBd-SsIu02SmLfCEAT7tVNaBD2D8M4cUmkoNQ6lHcoBYYXv",
+                link: "https://drive.google.com/file/d/1gl4AuWnS848wnWlbH9ToOi7Ga1OV7y_1/view?usp=drive_link"
             },
             {
                 title: "A Very Brady Sequel",
