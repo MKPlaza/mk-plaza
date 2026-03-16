@@ -2,6 +2,16 @@ import { Anime } from './types';
 
 export const ANIME: Anime[] = [
             {
+                title: "Accel World",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQrrCMEsZr3GVvc8C-ABixg_cNz23Jcy9nIg4dc24tSTtAWmrBr",
+                link: "https://drive.google.com/drive/folders/1Y-I63Mj1TcYOCo2m9wAUD-hfG8y8xd6y?usp=drive_link"
+            },
+            {
+                title: "Ace Attorney",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStUoURKAa2teG8QpCcTv4btkQRfI9xQ0lT_6HYkqAhEwOE-BDU",
+                link: "https://drive.google.com/drive/u/3/folders/1oiTD4MSCwf8IEJdNk-mJGq_NZ5xRMkA1"
+            },
+            {
                 title: "Afro Samurai",
                 imageUrl: "https://m.media-amazon.com/images/M/MV5BMjRlZGMwZmMtZjA0YS00NjUzLTk1OGYtNDhjZjM3ZmJkNGRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/drive/folders/1enWphPUwgRPYnGj2TD7XVNrG8HCc3CDm?usp=drive_link"
@@ -46,6 +56,11 @@ export const ANIME: Anime[] = [
                 title: "Beyblade Burst Evolution",
                 imageUrl: "https://upload.wikimedia.org/wikipedia/en/7/76/BurstEvoKV.jpg",
                 link: "https://drive.google.com/drive/folders/1pb0WRAQvsBNMHs2WmB_G8CWapSiOzEQ7?usp=sharing"
+            },
+            {
+                title: "Beyblade Burst Turbo",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS4ssZ5irTvoT5mgnY_VkL0n6VSBMBQGYmBEM7jMPsnGCKuO6R4",
+                link: "https://drive.google.com/drive/folders/1wQ-KU3XRJ-7GrN6I6bpjv0KLzuyQ1UdW?usp=sharing"
             },
             {
                 title: "Black Clover",
@@ -441,6 +456,11 @@ export const ANIME: Anime[] = [
                 link: "https://drive.google.com/drive/folders/1pBeEXAWh8tneZc2KtwqTfP0AYJGKLKiO"
             },
             {
+                title: "Dragon Ball Daima",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQH7xHtYgw8bkrePkk6k1jnzcpaFbIv2amRVkcPQKU-x4gMeBGf",
+                link: "https://drive.google.com/drive/folders/1Gap47Ji2oO1azRa9bMKMwfKZ2vFqnJlu"
+            },
+            {
                 title: "FLCL",
                 imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/FLCL_image.jpg/250px-FLCL_image.jpg",
                 link: "https://drive.google.com/drive/folders/1o9e5599os97UWVvY-0MJKpkpEBz1vzxY?usp=sharing"
@@ -454,6 +474,11 @@ export const ANIME: Anime[] = [
                 title: "Fushigi Yuugi",
                 imageUrl: "https://m.media-amazon.com/images/M/MV5BYjRjYzE5NTYtNGEzYi00NjE5LTg2YWItOWU5YzE3MDczNGQ2XkEyXkFqcGc@._V1_.jpg",
                 link: "https://drive.google.com/drive/folders/11QoMw6ZDt2qc7TtEjX8qnRr87sU4_mUC?usp=share_link"
+            },
+            {
+                title: "Gamera Rebirth",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoiZ5LmczGRJmOlmNmEWWGuKKsxZD60BoGCf0qnhtstr3oKaEz",
+                link: "https://drive.google.com/drive/folders/1fsTdYYlKhWrNtqiXIJDCN_sXR7aYArRb"
             },
             {
                  title: "Gachiakuta",
@@ -510,6 +535,43 @@ export const ANIME: Anime[] = [
                 title: "I've Been Killing Slimes For 300yrs and Maced Out My Level ",
                 imageUrl: "https://m.media-amazon.com/images/M/MV5BMzkwNjY2YTYtOTRlNS00YTkwLWE3ODQtY2U3ZWQ0NmJmOTIxXkEyXkFqcGc@._V1_.jpg",
                 link: "https://drive.google.com/drive/folders/1fy_Tb9MLYsFI4u6pkNZ-8a7CAX6NqXCJ"
+            },
+            {
+                title: "JoJo's Bizarre Adventure: Phantom Blood",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQF7CHTJaca9OuR9UnS9PD5Mm-fFxh9sX0ExnrV_SxTS8lhINDP",
+                link: "https://drive.google.com/drive/folders/1mr1qc0snBIJezAGqNLUEQ1E5tOTAls8d?usp=drive_link"
+            },
+            {
+                title: "JoJo's Bizarre Adventure: Stardust Crusaders",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/7/75/JoJo_Part_3_Stardust_Crusaders.jpg/250px-JoJo_Part_3_Stardust_Crusaders.jpg",
+                link: "https://drive.google.com/drive/folders/1UqxMrU_daEl5o9BK3SGjPuqUHCQMVMbs?usp=drive_link"
+            },
+            {
+                title: "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Part_4_Final_Poster.png/250px-Part_4_Final_Poster.png",
+                link: "https://drive.google.com/drive/folders/1J9kVqoIgJMUm1fGP2blMAFdB9lOL89WR?usp=drive_link"
+            },
+            {
+                title: "JoJo's Bizarre Adventure: Golden Wind",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/6/66/JoJo_Part_5_Golden_Wind.jpg",
+                link: "https://drive.google.com/drive/folders/1tPSpv_4KkJCJYNj04CoAqj42g-1piqk_?usp=drive_link"
+            },
+            {
+                title: "JoJo's Bizarre Adventure: Stone Ocean",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQj0DY4CXWCnufwF8KmsRR5SUJZCW7KgpHWlF6QreAnHxX41INS",
+                links: [{
+                        part: "Part 1",
+                        url: "https://drive.google.com/drive/folders/1CmSExL_xr984YVeiznYUM47ipJDumF2A?usp=drive_link"
+                    },
+                    {
+                        part: "Part 2",
+                        url: "https://drive.google.com/drive/folders/1pgnNrbEBbOvQ3m1b36PUuALoOKp5kiPM?usp=drive_link"
+                    },
+                    {
+                        part: "Part 3",
+                        url: "https://drive.google.com/drive/folders/1y58BpHs1beWLb9HCtLo5KghmTka6_3Gg?usp=drive_link"
+                    }
+                ]
             },
             {
                 title: "Jujustu Kaisen",
@@ -685,7 +747,7 @@ export const ANIME: Anime[] = [
             {
                 title: "One Piece",
                 imageUrl: "https://cdn.jsdelivr.net/gh/Trainboy89/n@main/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc%40._V1_.jpg",
-                link: "https://drive.google.com/drive/folders/16q62VzA_apLIMgl2FUWcgTCKkbdNzAcd"
+                link: "https://drive.google.com/drive/folders/1VdoAVMV9ojCefzkVMsXB3ms5TCEcgxoC?usp=sharing"
             },
             {
                 title: "One Punch Man",
@@ -746,6 +808,40 @@ export const ANIME: Anime[] = [
                 link: "https://drive.google.com/drive/folders/1dfTRiMicKo4bGNf7RAHIHFktwym1t-6h"
             },
             {
+                title: "Sailor Moon",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTEBA4wj1eo6B4ovFGKpzY_UWejpFgWD858AuOTTcxvBhK6YEFs",
+                link: "https://drive.google.com/drive/folders/14GyQ9hx_x-ayo8pyYqHLXGgXep7Ww0P_"
+            },
+            {
+                title: "Sailor Moon R",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/8/84/Sailor_Moon_R_The_Movie_poster.png",
+                links: [
+                    {
+                        part: "E1-25",
+                        url: "https://drive.google.com/drive/folders/1mirM2YviJ9MJo2pYG3Cuvt2X3Ac5vCtF"
+                    },
+                    {
+                        part: "E26-42",
+                        url: "https://drive.google.com/drive/folders/1yJmBs5aRpm95g2trkfjqWQY8-ylgOWGy"
+                    }
+                ]
+            },
+            {
+                title: "Sailor Moon S",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/a/a4/Sailor_Moon_S_The_Movie_poster.jpg",
+                link: "https://drive.google.com/drive/folders/1el1Gc0kyjyoEQBaIjR3OgJZztAq92gcJ"
+            },
+            {
+                title: "Sailor Moon SuperS",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/0/01/Sailor_Moon_Super_S_The_Movie_poster.jpg",
+                link: "https://drive.google.com/drive/folders/12Gt59AiHbPMPgm7OtoF7qCnLscctUSOu"
+            },
+            {
+                title: "Sailor Moon Sailor Stars",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/2/22/Sailor_Senshi2.png",
+                link: "https://drive.google.com/drive/folders/1BFML4_hPJsZHF_ttWQ6m0uRYsgS4vgOf"
+            },
+            {
                 title: "Sakamoto Days",
                 imageUrl: "https://m.media-amazon.com/images/M/MV5BNTM4MmZiNjEtOGY0MC00MGM0LTkxZjEtODUxMmJmZWEwOWU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/drive/folders/1W4qrA62fruNe02Hq8esI7srq9hcOn_yN?usp=sharing"
@@ -764,6 +860,11 @@ export const ANIME: Anime[] = [
                 title: "Spy x Family",
                 imageUrl: "https://cdn.jsdelivr.net/gh/Trainboy89/n@main/Spy%2Bx%2BFamily_%2Bthe%2BOfficial%2BAnime%2BGuide%E2%80%94Mission%2BReport_%2B220409-0625.webp",
                 link: "https://drive.google.com/drive/folders/1U_buKadood-g8ny8z4BcefYrybY0AsS5?dmr=1&ec=wgc-drive-hero-goto"
+            },
+            {
+                title: "Tekken: Bloodline",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSPF6OhLyaqNf-RpPz5sdZc5mw5e9HcPPM5Rido8v1-vw6SAccm",
+                link: "https://drive.google.com/drive/folders/1q1o_HmsO-moD9_75Cv3pwMjwupIllBIW"
             },
             {
                 title: "The Seven Deadly Sins",
