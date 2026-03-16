@@ -14,14 +14,15 @@ export interface PartnerItem {
 
 export const PARTNERS: PartnerItem[] = [
   {
-    id: 'placeholder-1',
-    name: 'Placeholder',
-    operatedBy: 'Placeholder',
-    desc: 'Placeholder description.',
-    link: '#',
-    logo: '',
+    id: 'zodiac',
+    name: 'ZODIAC',
+    operatedBy: '.dzxs (ZXS)',
+    desc: ' "The best proxy on the block!!! " ',
+    link: 'zodiac-thisdoesntmatter.vercel.app',
+    logo: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Zodiac/b2383ff7f33965fa9dd15a468d226b1a.webp',
+    banner: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Zodiac/zodiac-banner.jpg',
     socials: [
-      { platform: 'Website', url: '#' }
+      { platform: 'Discord', url: 'https://discord.gg/unblockify' }
     ]
   },
   {
