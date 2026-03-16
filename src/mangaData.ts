@@ -65,11 +65,26 @@ export const MANGA: Manga[] = [
         year: "1998"
     },
     {
-        title: "Dragon Ball Z",
-        imageUrl: "https://m.media-amazon.com/images/I/81-1jqVHePL._AC_UF1000,1000_QL80_.jpg",
-        url: "https://drive.google.com/drive/u/0/folders/1iSzHqkCiW5S44-_97x_6x_pTTMJrPrMH",
-        description: "Goku and his friends defend the Earth against extraterrestrial threats.",
-        year: "1989"
+
+        title: "Dragon Ball OG",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/c/c9/DB_Tank%C5%8Dbon.png",
+        url: "https://drive.google.com/drive/folders/1TZ6z_ePBI2zt12Kqv0I2AYegGR6LjOrp",
+        description: "The original Dragon Ball manga following young Goku's adventures.",
+        year: "1984"
+    },
+    {
+        title: "Dragon Ball Super",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Dragon-Ball-Super-Monochrome.jpg",
+        url: "https://drive.google.com/drive/folders/1hyV1oaf6Cj-DiwYljSNt10xHOnAxjila",
+        description: "Goku and his friends face new threats from other universes and powerful deities.",
+        year: "2015"
+    },
+    {
+        title: "Dragon Ball Super (In Color)",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Dragon_Ball_Super_Volume_1.png/250px-Dragon_Ball_Super_Volume_1.png",
+        url: "https://drive.google.com/drive/folders/1iSzHqkCiW5S44-_97x_6x_pTTMJrPrMH",
+        description: "The Dragon Ball Super manga, now in full color.",
+        year: "2015"
     },
     {
         title: "Naruto",
@@ -175,5 +190,33 @@ export const MANGA: Manga[] = [
         url: "https://drive.google.com/file/d/1rU9M5IFuGc-Iv-01jEmi6BXxrj3aTkN-/view",
         description: "Yusuke Urameshi returns from death to solve supernatural cases as a Spirit Detective.",
         year: "1990"
+    },
+    {
+        title: "Archie Sonic",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Sonic_252.webp",
+        url: "https://drive.google.com/drive/folders/1Rl63s8mf0P41xy-bVNamLoEz7xAkf-nL",
+        description: "The long-running comic series featuring Sonic the Hedgehog and his friends.",
+        year: "1993"
+    },
+    {
+        title: "Sonic IDW",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/en/b/b0/Sonic_the_Hedgehog_1_Cover_A.jpg",
+        url: "https://drive.google.com/drive/folders/1ilEix-RfR10sBDAejkvzVubhCr_bSagf?usp=drive_link",
+        description: "The modern Sonic the Hedgehog comic series by IDW Publishing.",
+        year: "2018"
+    },
+    {
+        title: "TMNT",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/TMNT_Ultimate_Collection.jpg",
+        url: "https://drive.google.com/drive/folders/1Nb17fir8Loz7Zx9gkrlAGXvE7uAzi7TG",
+        description: "The adventures of the Teenage Mutant Ninja Turtles.",
+        year: "1984"
+    },
+    {
+        title: "Omori",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/OMORI_MANGA_Volume_1_Cover.webp",
+        url: "https://drive.google.com/drive/folders/15F1mjpPm_zj8bCcbDpjoB9MbMtzuEKJE",
+        description: "The manga adaptation of the psychological horror RPG, Omori.",
+        year: "2024"
     }
 ];
