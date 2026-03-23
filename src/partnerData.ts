@@ -6,6 +6,8 @@ export interface PartnerItem {
   link: string;
   logo: string;
   banner?: string;
+  background?: string;
+  estDate?: string;
   socials?: {
     platform: string;
     url: string;
@@ -21,6 +23,8 @@ export const PARTNERS: PartnerItem[] = [
     link: 'zodiac-thisdoesntmatter.vercel.app',
     logo: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Zodiac/b2383ff7f33965fa9dd15a468d226b1a.webp',
     banner: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Zodiac/zodiac-banner.jpg',
+    background: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Zodiac/zodiac-wallpaper-thing.webp',
+    estDate: '2026',
     socials: [
       { platform: 'Discord', url: 'https://discord.gg/unblockify' }
     ]
@@ -32,6 +36,7 @@ export const PARTNERS: PartnerItem[] = [
     desc: 'Placeholder description.',
     link: '#',
     logo: '',
+    estDate: '2026',
     socials: [
       { platform: 'Website', url: '#' }
     ]
@@ -43,6 +48,7 @@ export const PARTNERS: PartnerItem[] = [
     desc: 'Placeholder description.',
     link: '#',
     logo: '',
+    estDate: '2026',
     socials: [
       { platform: 'Website', url: '#' }
     ]
@@ -54,6 +60,7 @@ export const PARTNERS: PartnerItem[] = [
     desc: 'Placeholder description.',
     link: '#',
     logo: '',
+    estDate: '2026',
     socials: [
       { platform: 'Website', url: '#' }
     ]
