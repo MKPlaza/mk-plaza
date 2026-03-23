@@ -189,6 +189,39 @@ export const GAME_PAYLOADS: Record<string, { title: string; customHtml: string }
   </body>
 </html>`
             },
+	'offline-html': {
+    title: "Offline Games",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        src="https://drive.google.com/embeddedfolderview?id=1Gg7fmesMNF7J5hTrGl2ZOHTQVsm9V93T#list" 
+        allowfullscreen>
+    </iframe>
+</body>
+</html>
+`
+},
 'look-outside': {
                 title: "Look Outside",
                 customHtml: `<!DOCTYPE html>
@@ -11681,7 +11714,7 @@ export const GAME_PAYLOADS: Record<string, { title: string; customHtml: string }
                 EJS_color = "#000000";
                 EJS_startOnLoaded = true;
                 EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data";
-                EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/gb/PokeAmbrosia.zip";
+                EJS_gameUrl = "https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/gb/PokeAmia.zip";
                 EJS_defaultOptions = {
                     vsync: "disabled"
                 };
@@ -33221,244 +33254,122 @@ let joystick = nipplejs.create({
 `
 },
 'sonic-mania': {
-    title: "Sonic Mania",
+    title: "Sonic Mania (Web Port)",
     customHtml: `
 <!doctype html>
 <html lang="en-us">
-    <head>
-        <base href="https://rawcdn.githack.com/burnedpopcorn/SonicManiaPlusWebPort/main/">
-        <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sonic Mania</title>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224423134.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background-color: #000; font-family: 'Inter', sans-serif; text-align: center; }
+        canvas { height: 100%; margin: auto; display: block; background-color: #000; image-rendering: pixelated; visibility: hidden; }
+        canvas.visible { visibility: visible; }
+        #output { display: none; }
+        #loading-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224632873.png') no-repeat center center;
+            background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1000; transition: opacity 0.1s ease;
+        }
+        #loading-screen.fade-out { opacity: 0; pointer-events: none; }
+        #loading-screen.hidden { display: none; }
+        .loading-content { width: 80%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-start; }
+        .loading-header { display: flex; justify-content: space-between; width: 100%; margin-bottom: 8px; }
+        .loading-title { color: #ffffff; font-size: 16px; font-weight: 900; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .loading-bar-container { width: 100%; height: 10px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
+        .loading-bar { width: 0%; height: 100%; background: #ffffff; border-radius: 10px; transition: width 0.3s ease-out; }
+        .loading-text { font-size: 13px; color: #ffffff; font-weight: 700; height: 1.2em; }
+        .control-panel { position: fixed; top: 15px; right: 15px; z-index: 1001; }
+        .game-btn { background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: white; padding: 8px 12px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="424" height="240" onclick="window.focus();" oncontextmenu="event.preventDefault();"></canvas>
+    <div class="control-panel">
+        <button id="fullscreen-button" class="game-btn">Fullscreen</button>
+    </div>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-header">
+                <div class="loading-title">Sonic Mania - Ported by Crunch Arcade</div>
+                <div id="mb-text" style="color:white; font-size:14px;">0.0MB / 198.8MB</div>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+            <div class="loading-text" id="loading-text">Initializing...</div>
+        </div>
+    </div>
 
-        <title>Sonic Mania</title>
+    <script type="text/javascript">
+        var loadingBar = document.getElementById('loading-bar');
+        var loadingText = document.getElementById('loading-text');
+        var mbText = document.getElementById('mb-text');
+        var loadingScreen = document.getElementById('loading-screen');
+        var canvas = document.getElementById('canvas');
+        var totalSizeMB = 198.8;
 
-        <link type="text/css" rel="stylesheet" href="css/fonts.css" />
-        <style type="text/css">
-            html, body {
-                font-family: arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background-color: #000;
-                text-align: center;
-            }
+        function finishLoading() {
+            loadingBar.style.width = '100%';
+            loadingText.textContent = "Crunch Arcade on top";
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(function() {
+                    loadingScreen.classList.add('hidden');
+                    canvas.classList.add('visible');
+                }, 100);
+            }, 1000);
+        }
 
-            /*noinspection CssInvalidPropertyValue,CssOverwrittenProperties*/
-            canvas {
-                height: 100%;
-                margin: auto;
-                padding: 0;
-                border: 0 none;
-                background-color: #000;
-                -ms-interpolation-mode: nearest-neighbor;
-                image-rendering: optimizeSpeed;
-                image-rendering: -webkit-optimize-contrast;
-                image-rendering: -moz-crisp-edges;
-                image-rendering: -o-crisp-edges;
-                image-rendering: crisp-edges;
-                image-rendering: pixelated;
-            }
+        document.getElementById('fullscreen-button').onclick = function() {
+            if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+            else document.exitFullscreen();
+        };
 
-            .spinner {
-                height: 30px;
-                width: 30px;
-                margin: 20px 0 0 20px;
-                display: inline-block;
-                vertical-align: top;
-
-                -webkit-animation: rotation .8s linear infinite;
-                -moz-animation: rotation .8s linear infinite;
-                -o-animation: rotation .8s linear infinite;
-                animation: rotation 0.8s linear infinite;
-
-                border-left: 5px solid rgb(235, 235, 235);
-                border-right: 5px solid rgb(235, 235, 235);
-                border-bottom: 5px solid rgb(235, 235, 235);
-                border-top: 5px solid rgb(120, 120, 120);
-
-                border-radius: 100%;
-                background-color: rgb(189, 215, 46);
-            }
-
-            @-webkit-keyframes rotation {
-                from {
-                    -webkit-transform: rotate(0deg);
-                }
-                to {
-                    -webkit-transform: rotate(360deg);
-                }
-            }
-
-            @-moz-keyframes rotation {
-                from {
-                    -moz-transform: rotate(0deg);
-                }
-                to {
-                    -moz-transform: rotate(360deg);
-                }
-            }
-
-            @-o-keyframes rotation {
-                from {
-                    -o-transform: rotate(0deg);
-                }
-                to {
-                    -o-transform: rotate(360deg);
-                }
-            }
-
-            @keyframes rotation {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(360deg);
-                }
-            }
-
-            #status {
-                display: inline-block;
-                vertical-align: top;
-                margin-top: 30px;
-                margin-left: 20px;
-                font-weight: bold;
-                color: rgb(120, 120, 120);
-            }
-
-            #progress {
-                height: 20px;
-                width: 300px;
-            }
-
-            #output {
-                width: 100%;
-                height: 200px;
-                margin: 10px auto 0;
-                border-left: 0;
-                border-right: 0;
-                padding-left: 0;
-                padding-right: 0;
-                display: block;
-                background-color: black;
-                color: white;
-                font-family: 'Lucida Console', Monaco, monospace;
-                outline: none;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="spinner" id="spinner" style="display: none;"></div>
-        <div id="status" style="display: none;">Downloading...</div>
-        <progress id="progress" value="0" max="100" hidden="hidden"></progress>
-        <canvas id="canvas" onclick="window.focus();" oncontextmenu="event.preventDefault();"></canvas>
-        <textarea id="output" style="display: none;" rows="8"></textarea>
-
-        <script type="text/javascript">
-            const ogxhr = window.XMLHttpRequest;
-
-            function xhrfunc() {
-                const xhr = new ogxhr();
-                const open = xhr.open;
-                xhr.open = function(method, url, ...rest) {
-                    if (url.includes("version.txt")) {
-                        return open.call(this, method, "updates/version.txt", ...rest);
-                    }
-                    return open.call(this, method, url, ...rest);
-                };
-                return xhr;
-            }
-            window.XMLHttpRequest = xhrfunc;
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('sw.js').then(function(registration) {
-                    registration.addEventListener('updatefound', function() {
-                        var installingWorker = registration.installing;
-                        console.log('A new service worker is being installed:', installingWorker);
-                    });
-                }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            } else {
-                console.log('ServiceWorker not supported');
-            }
-
-            var statusElement = document.getElementById('status');
-            var progressElement = document.getElementById('progress');
-            var spinnerElement = document.getElementById('spinner');
-
-            var Module = {
-                preRun: [],
-                postRun: [],
-                print: (function () {
-                    var element = document.getElementById('output');
-                    if (element) element.value = ''; // clear browser cache
-                    return function (text) {
-                        if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-                        console.log(text);
-                        if (element) {
-                            element.value += text + "\\n";
-                            element.scrollTop = element.scrollHeight; // focus on bottom
+        var Module = {
+            preRun: [function() {
+                FS.mkdir('/saves');
+                FS.mount(IDBFS, {}, '/saves');
+                FS.syncfs(true, function(err) {
+                    try {
+                        if (FS.analyzePath('/saves/SaveData.bin').exists) {
+                            var data = FS.readFile('/saves/SaveData.bin');
+                            FS.writeFile('/SaveData.bin', data);
                         }
-                    };
-                })(),
-                printErr: function (text) {
-                    if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-                    console.error(text);
-                },
-                canvas: (function () {
-                    var canvas = document.getElementById('canvas');
-
-                    // As a default initial behavior, pop up an alert when webgl context is lost. To make your
-                    // application robust, you may want to override this behavior before shipping!
-                    // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
-                    canvas.addEventListener("webglcontextlost", function (e) {
-                        alert('WebGL context lost. You will need to reload the page.');
-                        e.preventDefault();
-                    }, false);
-
-                    return canvas;
-                })(),
-                setStatus: function (text) {
-                    if (!Module.setStatus.last) Module.setStatus.last = {time: Date.now(), text: ''};
-                    if (text === Module.setStatus.last.text) return;
-                    var m = text.match(/([^\\(]+)\\((\\d+(\\.\\d+)?)\\/(\\d+)\\)/);
-                    var now = Date.now();
-                    if (m && now - Module.setStatus.last.time < 30) return; // if this is a progress update, skip it if too soon
-                    Module.setStatus.last.time = now;
-                    Module.setStatus.last.text = text;
-                    if (m) {
-                        text = m[1];
-                        progressElement.value = parseInt(m[2]) * 100;
-                        progressElement.max = parseInt(m[4]) * 100;
-                        progressElement.hidden = false;
-                        spinnerElement.hidden = false;
-                    } else {
-                        progressElement.value = null;
-                        progressElement.max = null;
-                        progressElement.hidden = true;
-                        if (!text) spinnerElement.style.display = 'none';
-                    }
-                    statusElement.innerHTML = text;
-                },
-                totalDependencies: 0,
-                monitorRunDependencies: function (left) {
-                    this.totalDependencies = Math.max(this.totalDependencies, left);
-                    Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+                    } catch(e) {}
+                });
+            }],
+            postRun: [function() {
+                finishLoading();
+                setInterval(function() {
+                    try {
+                        var data = FS.readFile('/SaveData.bin');
+                        FS.writeFile('/saves/SaveData.bin', data);
+                        FS.syncfs(false, function(err) {});
+                    } catch(e) {}
+                }, 5000);
+            }],
+            canvas: (function() { return canvas; })(),
+            setStatus: function(text) {
+                var m = text.match(/([^(]+)((d+(.d+)?)/(d+))/);
+                if (m) {
+                    var loaded = parseFloat(m[2]);
+                    var total = parseFloat(m[4]);
+                    var percent = Math.round((loaded / total) * 100);
+                    loadingBar.style.width = percent + '%';
+                    mbText.textContent = ((percent/100)*totalSizeMB).toFixed(1) + 'MB / ' + totalSizeMB + 'MB';
+                    loadingText.textContent = "Downloading game data...";
                 }
-            };
-            Module.setStatus('Downloading...');
-            window.onerror = function () {
-                Module.setStatus('Exception thrown, see JavaScript console');
-                spinnerElement.style.display = 'none';
-                Module.setStatus = function (text) {
-                    if (text) Module.printErr('[post-exception status] ' + text);
-                };
-            };
-        <\/script>
-        <script async="async" defer="defer" type="text/javascript" src="RSDKv5.js"><\/script>
-    </body>
+            }
+        };
+    <\/script>
+    <script src="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/Data.js"><\/script>
+    <script async src="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@refs/heads/main/RSDKv5U.js"><\/script>
+</body>
 </html>
 `
 },
@@ -33645,44 +33556,50 @@ let joystick = nipplejs.create({
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Banjo-Tooie</title>
+    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             overflow: hidden;
             background: #000000;
             margin: 0;
-            color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        #game {
+            width: 100%;
+            height: 100%;
+            display: none;
         }
         #startButton {
             display: block;
-            width: 160px;
-            height: 40px;
+            width: 200px;
+            padding: 15px;
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            text-decoration: none;
             font-size: 16px;
-            margin: 20px auto;
-            padding: 10px 20px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             font-family: 'Press Start 2P', cursive;
-            box-shadow: 0px 0px 10px 2px #000000;
+            box-shadow: 0px 0px 15px rgba(76, 175, 80, 0.5);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        #startButton:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <div style="width: 100vw; height: 100vh; max-width: 100%;">
-        <div id="game" style="display: none; width: 100%; height: 100%;"></div>
-        <button id="startButton">PLAY</button>
-    </div>
-    
+    <div id="game"></div>
+    <button id="startButton">PLAY</button>
+
     <script>
-        document.getElementById("game").style.display = "none";
-        
         function startGame() {
             document.getElementById("game").style.display = "block";
             document.getElementById("startButton").style.display = "none";
@@ -33691,15 +33608,19 @@ let joystick = nipplejs.create({
             window.EJS_core = "n64";
             window.EJS_color = "#000000";
             window.EJS_startOnLoaded = true;
-            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
+            window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data";
             window.EJS_gameUrl = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/banjotooie/Banjo-Tooie%20(USA).n64";
             window.EJS_defaultOptions = {
                 vsync: "disabled"
             };
-            
-            var script = document.createElement("script");
-            script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
-            document.body.appendChild(script);
+
+            const loader = document.createElement("script");
+            loader.src = "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@main/data/loader.js";
+            document.body.appendChild(loader);
+
+            const cloak = document.createElement("script");
+            cloak.src = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/storage/js/cloak.js";
+            document.body.appendChild(cloak);
         }
         
         document.getElementById("startButton").addEventListener("click", startGame);
@@ -40334,6 +40255,320 @@ let joystick = nipplejs.create({
 </html>
 `
 },
+'osu': {
+    title: "WebOsu 2.0!",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <base href="https://cdn.jsdelivr.net/gh/genizy/osu@aabb0e62f0ebfbf4f472c9e86be0b3e7cf4540bc/">
+  <meta charset="utf-8" />
+  <title>WebOsu 2.0!</title>
+  <meta name="description"
+    content="Play WebOsu – A browser-based rhythm game inspired by osu!std. Experience fast-paced gameplay with an extensive beatmap library. No downloads, play free online now!">
+  <link rel="canonical" href="http://webosu-2.github.io/" />
+  <link rel="stylesheet" href="style/picnic.min.css" />
+  <link rel="stylesheet" type="text/css" href="style/main.css" />
+  <link rel="stylesheet" type="text/css" href="style/font.css" />
+  <link rel="icon" href="favicon.png" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <script src="scripts/launchgame.js"><\/script>
+  <script src="scripts/downloader.js"><\/script>
+  <script src="scripts/addbeatmaplist.js"><\/script>
+  <script src="scripts/settings.js"><\/script>
+  <script src="scripts/jsloader.js"><\/script>
+  <script src="scripts/lib/localforage.min.js"><\/script>
+<style>
+#sidebarad1,
+#sidebarad2 {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  z-index: 999999;
+}
+#sidebarad1 {
+  left: 0;
+}
+#sidebarad2 {
+  right: 0;
+}
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+.sidebar-frame {
+  width: 160px;
+  height: 600px;
+  border: none;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+  <div class="game-area" id="game-area" hidden></div>
+
+  <div class="pause-menu" id="pause-menu" hidden>
+    <div class="paused-title">paused</div>
+    <div class="button-list">
+      <div class="pausebutton continue" id="pausebtn-continue">
+        <div class="inner">Continue</div>
+      </div>
+      <div class="pausebutton retry" id="pausebtn-retry">
+        <div class="inner">Retry</div>
+      </div>
+      <div class="pausebutton quit" id="pausebtn-quit">
+        <div class="inner">Quit</div>
+      </div>
+    </div>
+  </div>
+
+  <nav id="main-nav">
+    <div class="nav-link">
+      <a class="brand" onclick="indexHtml()">WebOsu 2.0!</a>
+      <a class="pseudo button" onclick="latestHtml()">Latest</a>
+      <a class="pseudo button"" onclick="popularHtml()">Popular</a>
+      <a class="pseudo button" onclick="genresHtml()">Genres</a>
+    </div>
+    <div class="nav-search">
+      <form action="javascript:searchHtml()">
+        <input type="text" name="q" placeholder="Beatmap name or Set ID" />
+        <input type="image" class="search-button" src="research.svg" />
+      </form>
+    </div>
+    <div class="nav-tool">
+      <a class="pseudo button" onclick="favouritesHtml()">Favourites</a>
+      <a class="pseudo button" onclick="faqHtml()">FAQ</a>
+      <a class="pseudo button" onclick="settingsHtml()">Settings</a>
+      <a
+        onclick="document.documentElement.requestFullscreen();"
+        class="pseudo button"
+        >Go to full screen</a
+      >
+    </div>
+  </nav>
+
+  <div class="main-page" id="main-page">
+  </div>
+  
+
+  <script>
+function indexHtml() {
+    document.getElementById("main-page").innerHTML = \`<div class="column left"> </div> <div class="main-content column"> <div class="announcement"> Announcement: This site is still under development. If you encounter any issues, read <a onclick="faqHtml()">the FAQ</a>. Now ad-free again! </div> <br /> <div class="index-area"> <a onclick="genRandomList()" class="more" style="cursor:pointer;">Get new random Beatmaps</a> <h2>Random Beatmaps<h2> <hr /> <div class="beatmap-list" id="beatmap-list-random"> </div> </div> <div class="index-area"> <h2>Latest Beatmaps</h2> <a class="more" onclick="latestHtml()">View more latest beatmaps</a> <hr /> <div class="beatmap-list" id="beatmap-list-new"> </div> </div> <div class="index-area"> <h2>Favourited Beatmaps</h2> <a class="more" onclick="favouritesHtml()">View more favourited beatmaps</a> <hr /> <div class="beatmap-list" id="beatmap-list-liked"> </div> </div> <div class="index-area"> <h2>Popular Beatmaps</h2> <a class="more" onclick="popularHtml()">View more popular beatmaps</a> <hr /> <div class="beatmap-list" id="beatmap-list-hot"> </div> </div> <footer id="footer"> <div style="text-align: center;"> <h3 class="text">Supports touchscreen devices.</h3> <h3 class="text"> Version 0.4.0, see our <a href="https://github.com/WebOsu-2/webosu-2.github.io">Github page.</a> </h3> <h3 class="text"> Our beatmap provider is SayoBot </h3> </div> </footer> </div> <div class="column right"> </div> <div class="statuslines" id="statuslines"> <div class="progress" id="script-progress"> Scripts <div class="lds-dual-ring"></div> </div> <div class="progress" id="skin-progress"> Skin <div class="lds-dual-ring"></div> </div> <div class="progress" id="sound-progress"> Hitsounds <div class="lds-dual-ring"></div> </div> </div>\`
+    // recently played
+    if (window.localforage) {
+        let listhistory = document.getElementById("beatmap-list-history");
+        localforage.getItem("playhistory1000", function (err, item) {
+            if (err) {
+                listhistory.innerText = "Could not fetch play history.";
+                return;
+            }
+            if (item && item.length) {
+                item = item.reverse();
+                sid = [];
+                for (let i = 0; i < item.length; ++i) {
+                    if (item[i].sid) sid.push(item[i].sid);
+                }
+                sid = [...new Set(sid)]; // uniq
+                for (let i = 0; i < 4 && i < sid.length; ++i) addBeatmapSid(sid[i], listhistory)
+            } else {
+                listhistory.innerText = "Play any beatmap to add them here.";
+            }
+        })
+    }
+    // new
+    addBeatmapList("https://api.sayobot.cn/beatmaplist?0=20&1=0&2=2&5=1", document.getElementById("beatmap-list-new"), function (t) {
+        return (t.modes & 1) != 0;
+    }, 4);
+    // random
+    function genRandomList() {
+        // clear list
+        let list = document.getElementById("beatmap-list-random");
+        // fill list
+        let randstart = Math.floor(Math.random() * 20000);
+        addBeatmapList("https://api.sayobot.cn/beatmaplist?0=10&1=" + randstart + "&2=1&5=1", list, function (t) {
+            while (list.firstChild) list.removeChild(list.firstChild);
+            return (t.modes & 1) != 0;
+        }, 4);
+    }
+    genRandomList();
+    // hot
+    addBeatmapList("https://api.sayobot.cn/beatmaplist?0=4&1=0&2=1&5=1", document.getElementById("beatmap-list-hot"));
+    // liked
+    if (window.localforage) {
+        window.localforage.getItem("likedsidset", function (err, val) {
+            if (err) {
+                document.getElementById("beatmap-list-liked").innerText = "Could not get liked beatmaps.";
+                return;
+            }
+            if (val && val.size) {
+                let listlike = document.getElementById("beatmap-list-liked");
+                list = Array.from(val);
+                for (let i = 0; i < list.length && i < 4; ++i) addBeatmapSid(list[i], listlike);
+            } else {
+                document.getElementById("beatmap-list-liked").innerText = "Heart any beatmap to add them here.";
+            }
+        });
+    } else {
+        alert("localforage not supported")
+    }
+}
+function latestHtml(){
+  document.getElementById("main-page").innerHTML = \`<div class="main-content"> <div class="beatmap-list" id="beatmap-list"> </div> <div class="button" style="width: 100%; margin-bottom: 10px" id="btnmore"> Load more </div> <footer id="footer"> <div style="text-align: center;"> <h3 class="text">Supports touchscreen devices.</h3> <h3 class="text"> Version 0.4.0, see our <a href="https://github.com/WebOsu-2/webosu-2.github.io">Github page.</a> </h3> <h3 class="text"> Our beatmap provider is SayoBot </h3> </div> </footer> </div> <div class="statuslines" id="statuslines"> <div class="progress" id="script-progress"> Scripts <div class="lds-dual-ring"></div> </div> <div class="progress" id="skin-progress"> Skin <div class="lds-dual-ring"></div> </div> <div class="progress" id="sound-progress"> Hitsounds <div class="lds-dual-ring"></div> </div> </div>\`
+  addBeatmapList("https://api.sayobot.cn/beatmaplist?0=20&1=0&2=2&5=1");
+    var cur = 20;
+    document.getElementById("btnmore").onclick = function () {
+      addBeatmapList(
+        "https://api.sayobot.cn/beatmaplist?0=20&1=" + cur + "&2=2&5=1"
+      );
+      cur += 20;
+    };
+}
+function popularHtml() {
+  document.getElementById("main-page").innerHTML = \`<div class="main-content"> <div class="beatmap-list" id="beatmap-list"> </div> <div class="button" style="width: 100%; margin-bottom: 10px" id="btnmore"> Load more </div> <footer id="footer"> <div style="text-align: center;"> <h3 class="text">Supports touchscreen devices.</h3> <h3 class="text"> Version 0.4.0, see our <a href="https://github.com/WebOsu-2/webosu-2.github.io">Github page.</a> </h3> <h3 class="text"> Our beatmap provider is SayoBot </h3> </div> </footer> </div> <div class="statuslines" id="statuslines"> <div class="progress" id="script-progress"> Scripts <div class="lds-dual-ring"></div> </div> <div class="progress" id="skin-progress"> Skin <div class="lds-dual-ring"></div> </div> <div class="progress" id="sound-progress"> Hitsounds <div class="lds-dual-ring"></div> </div> </div>\`;
+  addBeatmapList("https://api.sayobot.cn/beatmaplist?0=20&1=0&2=1&5=1");
+    var cur = 20;
+    document.getElementById("btnmore").onclick = function () {
+      addBeatmapList(
+        "https://api.sayobot.cn/beatmaplist?0=20&1=" + cur + "&2=1&5=1"
+      );
+      cur += 20;
+    };
+}
+function genresHtml() {
+  document.getElementById("main-page").innerHTML = \`<div class="main-content"> <div class="sort-nav"> <div class="title">Genre</div> <div class="selitem" genre="1">All</div> <div class="selitem" genre="4">Games</div> <div class="selitem" genre="8">Animation</div> <div class="selitem" genre="16">Rock</div> <div class="selitem" genre="32">Popular</div> <div class="selitem" genre="128">Novelty</div> <div class="selitem" genre="1024">Electronic</div> <div class="selitem" genre="2+64+256">Others</div> </div> <div class="sort-nav"> <div class="title">Language</div> <div class="selitem" lang="1">All</div> <div class="selitem" lang="32">Instrumental</div> <div class="selitem" lang="4">English</div> <div class="selitem" lang="8">Japanese</div> <div class="selitem" lang="64">Korean</div> <div class="selitem" lang="16">Chinese</div> <div class="selitem" lang="128">French</div> <div class="selitem" lang="256">German</div> <div class="selitem" lang="2+1024">Others</div> </div> <hr /> <div class="beatmap-list" id="beatmap-list"> </div> <div class="button" style="width: 100%; margin-bottom: 10px" id="btnmore"> Load more </div> <footer id="footer"> <div style="text-align: center;"> <h3 class="text">Supports touchscreen devices.</h3> <h3 class="text"> Version 0.4.0, see our <a href="https://github.com/WebOsu-2/webosu-2.github.io">Github page.</a> </h3> <h3 class="text"> Our beatmap provider is SayoBot </h3> </div> </footer> </div> <div class="statuslines" id="statuslines"> <div class="progress" id="script-progress"> Scripts <div class="lds-dual-ring"></div> </div> <div class="progress" id="skin-progress"> Skin <div class="lds-dual-ring"></div> </div> <div class="progress" id="sound-progress"> Hitsounds <div class="lds-dual-ring"></div> </div> </div>\`;
+  let btns = document.getElementsByClassName("selitem");
+    function search(genre, lang) {
+      // clear list
+      list = document.getElementById("beatmap-list");
+      while (list.firstChild) {
+        list.removeChild(list.firstChild);
+      }
+      addBeatmapList(
+        "https://api.sayobot.cn/beatmaplist?0=20&1=0&2=4&5=1&7=" +
+        genre +
+        "&8=" +
+        lang
+      );
+      var cur = 20;
+      document.getElementById("btnmore").onclick = function () {
+        addBeatmapList(
+          "https://api.sayobot.cn/beatmaplist?0=20&1=" +
+          cur +
+          "&2=4&5=1&7=" +
+          genre +
+          "&8=" +
+          lang
+        );
+        cur += 20;
+      };
+      // update buttons state
+      for (let i = 0; i < btns.length; ++i) {
+        let g = eval(btns[i].getAttribute("genre"));
+        let l = eval(btns[i].getAttribute("lang"));
+        if (g == genre || l == lang) {
+          btns[i].classList.add("active");
+        } else {
+          btns[i].classList.remove("active");
+        }
+      }
+    }
+    let curgenre = 1;
+    let curlang = 1;
+    search(curgenre, curlang);
+    for (let i = 0; i < btns.length; ++i) {
+      btns[i].onclick = function () {
+        let g = eval(btns[i].getAttribute("genre"));
+        let l = eval(btns[i].getAttribute("lang"));
+        if (g) curgenre = g;
+        if (l) curlang = l;
+        search(curgenre, curlang);
+      };
+    }
+}
+function favouritesHtml() {
+  document.getElementById("main-page").innerHTML = \`<div class="main-content"> <div class="beatmap-list" id="beatmap-list"> </div> <div class="button" style="width: 100%; margin-bottom: 10px" id="btnmore"> Load more </div> <footer id="footer"> <div style="text-align: center;"> <h3 class="text">Supports touchscreen devices.</h3> <h3 class="text"> Version 0.4.0, see our <a href="https://github.com/WebOsu-2/webosu-2.github.io">Github page.</a> </h3> <h3 class="text"> Our beatmap provider is SayoBot </h3> </div> </footer> </div> <div class="statuslines" id="statuslines"> <div class="progress" id="script-progress"> Scripts <div class="lds-dual-ring"></div> </div> <div class="progress" id="skin-progress"> Skin <div class="lds-dual-ring"></div> </div> <div class="progress" id="sound-progress"> Hitsounds <div class="lds-dual-ring"></div> </div> </div>\`;
+  if (window.localforage) {
+      window.localforage.getItem("likedsidset", function (err, val) {
+        if (err) {
+          alert("Error loading liked beatmap list");
+          return;
+        }
+        if (val && val.size) {
+          list = Array.from(val);
+          function addlist(startoffset, maxlength) {
+            for (
+              let i = startoffset;
+              i < list.length && i < startoffset + maxlength;
+              ++i
+            )
+              addBeatmapSid(list[i]);
+            if (list.length <= startoffset + maxlength) {
+              document
+                .getElementById("btnmore")
+                .setAttribute("style", "display:none;");
+            }
+          }
+          addlist(0, 20);
+          var cur = 20;
+          document.getElementById("btnmore").onclick = function () {
+            addlist(cur, 20);
+            cur += 20;
+          };
+        } else {
+          document.getElementById("beatmap-list").innerText =
+            "There are no beatmaps to show, add more.";
+        }
+      });
+    } else {
+      alert("localforage not supported");
+    }
+}
+function faqHtml() {
+  document.getElementById("main-page").innerHTML = \` <div class="main-content"> <div class="faqentry"> <h2>How do I play Osu?</h2> The default keys are the left and right mouse buttons and the Z and X keys, which can be modified in the settings. The circles that appear on the game screen are called strike circles. When the circle outside the strike circle shrinks and falls just on the strike circle, click on the strike circle. Some circles have a slider that you need to hold down and follow as it moves. When a large disk appears on the screen, press and hold a button and quickly rotate your mouse around the center of the circle. </div> <div class="faqentry"> <h2>The cursor movement seems to be delayed?</h2> Try enabling the hardware cursor in settings, which can reduce cursor input latency. However, in some operating systems or browsers, problems such as flickering or the inability to display the cursor may occur, so it is turned off by default. In addition, the cursor size adjustment of the current hardware cursor only has 3 fixed levels. The minimum value is displayed below 0.65, and the maximum value is displayed above 0.95. </div> <div class="faqentry"> <h2>The game is stuck, what should I do?</h2> It may be that the browser itself consumes a large amount of resources, causing the lag, or it may be that some strange mechanism causes the browser to reduce the frequency of event sending. It is recommended to avoid excessive CPU usage, close anti-virus software/computer manager like Avast, try closing other tabs of the browser and restart the browser. Please make sure you are using a mainstream modern browser (such as Chrome, Firefox, or MS Edge). If it's still stuck, <a href="https://github.com/WebOsu-2/webosu-2.github.io/issues/new">please file an issue on our github page</a>. </div> <div class="faqentry"> <h2>Why is nothing displayed on the web page?</h2> It may be that our API, <a href="https://osu.sayobot.cn">SayoBot</a> , is having issues. If so, you can contact the developers of Mino for them to fix it. </div> <div class="faqentry"> <h2>Can I upload beatmaps locally?</h2> You can not upload beatmaps here. We get all of our beatmaps from the osu database, upload your own beatmap to osu for it to (eventually) show up here. </div> <div class="faqentry"> <h2>What should I do if the audio and/or video are out of sync?</h2> <a href="https://github.com/WebOsu-2/webosu-2.github.io/issues/new">Please file an issue on our github page</a> </div> <div class="faqentry"> <h2>I have other problems not shown here.</h2> <a href="https://github.com/WebOsu-2/webosu-2.github.io/issues/new">file an issue on our github page</a> </div> </div>\`;
+}
+function settingsHtml() {
+  document.getElementById("main-page").innerHTML = \`<div class="panel"> <h1>Settings</h1> <button class="accordion"> <h2>Display</h2> <span class="accordion-icon"></span> </button> <div class="settings-section"> <table class="holder" id="settings-panel"> <tr> <td> <div class="option-name">Background Dim</div> <div class="option-control"> <input id="dim-range" class="slider" type="range" min="0" max="100" value="0" /> <div class="range-indicator" id="dim-range-indicator" hidden></div> </div> </td> </tr> <tr> <td> <div class="option-name">Background Blur</div> <div class="option-control"> <input id="blur-range" class="slider" type="range" min="0" max="8" value="0" /> <div class="range-indicator" id="blur-range-indicator" hidden></div> </div> </td> </tr> <tr> <td> <div class="option-name">Cursor Size</div> <div class="option-control"> <input id="cursorsize-range" class="slider" type="range" min="0.5" max="2.0" step="0.01" value="0.5" /> <div class="range-indicator" id="cursorsize-range-indicator" hidden></div> </div> </td> </tr> <tr> <td> <div class="option-name">Slider snake in</div> <div class="option-control"> <input id="snakein-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td> <div class="option-name">Slider snake out</div> <div class="option-control"> <input id="snakeout-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td> <div class="option-name">Auto start game on fullscreen</div> <div class="option-control"> <input id="autofullscreen-check" type="checkbox" /><span></span> </div> </td> </tr> </table> </div> <button class="accordion"> <h2>Input</h2> <span class="accordion-icon"></span> </button> <div class="settings-section"> <table class="holder" id="settings-panel"> <tr> <td title="Bypasses mouse acceleration, highly recommended. Turn off if you face issues."> <div class="option-name">Raw cursor input</div> <div class="option-control"> <input id="showhwmouse-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td title="To avoid accidentally changing the volume"> <div class="option-name">Disable mouse wheel while playing</div> <div class="option-control"> <input id="disable-wheel-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td title="To avoid accidentally clicking objects"> <div class="option-name">Disable mouse click while playing</div> <div class="option-control"> <input id="disable-button-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td> <div class="option-name">Left click</div> <div class="option-control"> <input id="lbutton1select" type="button" value="oops" /> <input type="button" value="M1" /> </div> </td> </tr> <tr> <td> <div class="option-name">Right click</div> <div class="option-control"> <input id="rbutton1select" type="button" value="oops" /> <input type="button" value="M2" /> </div> </td> </tr> <tr> <td> <div class="option-name">Pause</div> <div class="option-control"> <input id="pausebuttonselect" type="button" value="oops" /> <input id="pausebutton2select" type="button" value="oops" /> </div> </td> </tr> </table> </div> <button class="accordion"> <h2>Audio</h2> <span class="accordion-icon"></span> </button> <div class="settings-section"> <table class="holder" id="settings-panel"> <tr> <td> <div class="option-name">Master Volume</div> <div class="option-control"> <input id="mastervolume-range" class="slider" type="range" min="0" max="100" value="0" /> <div class="range-indicator" id="mastervolume-range-indicator" hidden></div> </div> </td> </tr> <tr> <td> <div class="option-name">Sound Effect Volume</div> <div class="option-control"> <input id="effectvolume-range" class="slider" type="range" min="0" max="100" value="0" /> <div class="range-indicator" id="effectvolume-range-indicator" hidden></div> </div> </td> </tr> <tr> <td> <div class="option-name">Music Volume</div> <div class="option-control"> <input id="musicvolume-range" class="slider" type="range" min="0" max="100" value="0" /> <div class="range-indicator" id="musicvolume-range-indicator" hidden></div> </div> </td> </tr> <tr title="Makes the audio offset a certain amount."> <td> <div class="option-name">Audio Offset</div> <div class="option-control"> <input id="audiooffset-range" class="slider" type="range" min="-50" max="50" value="-50" /> <div class="range-indicator" id="audiooffset-range-indicator" hidden></div> </div> <div style="font-size: 0.8em; color: #999; margin-top: 2.2em"> Not recommended to use! If you do, please turn off the hitsounds. Go to <a style="color: #8bc" href="https://bemuse.ninja/?mode=sync">bemuse sync</a> to determine the keyboard delay. </div> </td> </tr> <tr hidden> <td> <div class="option-name disabled">Enable beatmap hitsounds</div> <div class="option-control"> <input id="beatmap-hitsound-check" type="checkbox" /><span></span> </div> </td> </tr> </table> </div> <button class="accordion"> <h2>Mods</h2> <span class="accordion-icon"></span> </button> <div class="settings-section"> <table class="holder" id="settings-panel"> <tr> <td title="This doesn't make things easier!"> <div class="option-name">Easy</div> <div class="option-control"> <input id="easy-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td title="Everything gets slower..."> <div class="option-name">Daycore</div> <div class="option-control"> <input id="daycore-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td title="Everything gets a bit harder..."> <div class="option-name">Hard Rock</div> <div class="option-control"> <input id="hardrock-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td title="Play with no approach circles and fading circles/sliders"> <div class="option-name">Hidden</div> <div class="option-control"> <input id="hidden-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td title="Everything gets faster..."> <div class="option-name">Nightcore</div> <div class="option-control"> <input id="nightcore-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td title="Watch a (probably) perfect automated play"> <div class="option-name">Autoplay</div> <div class="option-control"> <input id="autoplay-check" type="checkbox" /><span></span> </div> </td> </tr> </table> </div> <button class="accordion"> <h2>Skins</h2> <span class="accordion-icon"></span> </button> <div class="settings-section"> <table class="holder" id="settings-panel"> <tr> <td> <div class="option-name">Hide circle number</div> <div class="option-control"> <input id="hidenumbers-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td> <div class="option-name">Hide "Great" (300s)</div> <div class="option-control"> <input id="hidegreat-check" type="checkbox" /><span></span> </div> </td> </tr> <tr> <td> <div class="option-name">Hide connecting lines</div> <div class="option-control"> <input id="hidefollowpoints-check" type="checkbox" /><span></span> </div> </td> </tr> </table> </div> <br /> <input id="restoredefault-btn" type="button" class="warnbtn" value="Restore to default settings" /> </div>\`;
+  var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        panel.classList.toggle("active");
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+}
+indexHtml();
+  <\/script>
+</html>
+
+`
+},
 'kindergarten-3': {
     title: "Kindergarten 3",
     customHtml: `
@@ -41761,6 +41996,1017 @@ let joystick = nipplejs.create({
 </html>
 `
 },
+'scary-shawarma-anomaly': {
+    title: "Scary Shawarma 3D",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Scary Shawarma 3D</title>
+<style>
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; background: #000; }
+#unity-canvas { width: 100%; height: 100%; background: #000; display: block; }
+#loading-text {
+font-weight: bold;
+background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+background-size: 400% 400%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: rainbow 3s ease infinite;
+font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;
+}
+@keyframes rainbow {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+</style>
+</head>
+<body>
+<div id="loading-text"> LOADING... </div>
+<canvas id="unity-canvas"></canvas>
+<script>
+const hash = "2d3cf8131a7cd9525c77b35f421c7100c2682d65";
+const base = "https://cdn.jsdelivr.net/gh/shayderrr/idk@" + hash + "/scary/";
+const loadingText = document.querySelector("#loading-text");
+const NO_DATA = 'no data';
+var ysdk = null, player = null, ygGameInstance = null, initGame = false;
+var playerData = NO_DATA, cloudSaves = NO_DATA, environmentData = NO_DATA, nowFullAdOpen = false;
+let loadedBytes = 0;
+function LogStyledMessage(m, s) { console.log('%c' + m, s || 'color: #FFDF73; background-color: #454545'); }
+
+async function fetchWithProgress(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(\`HTTP \${response.status}: \${url}\`);
+  const reader = response.body.getReader();
+  let chunks = [];
+  let received = 0;
+  while (true) {
+    const {done, value} = await reader.read();
+    if (done) break;
+    received += value.length;
+    loadedBytes += value.length;
+    chunks.push(value);
+    loadingText.textContent = \`LOADING... \${(loadedBytes / 1048576).toFixed(2)} MB\`;
+  }
+  let fullBuffer = new Uint8Array(received);
+  let offset = 0;
+  for (let chunk of chunks) { fullBuffer.set(chunk, offset); offset += chunk.length; }
+  return fullBuffer.buffer;
+}
+
+async function mergeFiles(parts) {
+  const buffers = await Promise.all(parts.map(part => fetchWithProgress(part)));
+  return URL.createObjectURL(new Blob(buffers, { type: 'application/octet-stream' }));
+}
+
+function YG2Instance(m, a) {
+  if (ygGameInstance) {
+    if (a !== undefined) ygGameInstance.SendMessage('YG2Instance', m, a);
+    else ygGameInstance.SendMessage('YG2Instance', m);
+  }
+}
+
+function InitGame() { initGame = true; }
+
+async function RequestingEnvironmentData() {
+  if (!ysdk) return;
+  try {
+    environmentData = JSON.stringify({
+      "language": ysdk.environment.i18n.lang,
+      "deviceType": ysdk.deviceInfo.type,
+      "isMobile": ysdk.deviceInfo.isMobile(),
+      "isDesktop": ysdk.deviceInfo.isDesktop()
+    });
+    YG2Instance('SetEnvirData', environmentData);
+  } catch(e) {}
+}
+
+async function InitPlayer() {
+  try {
+    if (!ysdk) return;
+    player = await ysdk.getPlayer();
+    playerData = JSON.stringify({
+      "playerAuth": player.isAuthorized() ? "resolved" : "rejected",
+      "playerName": player.getName(),
+      "playerId": player.getUniqueID(),
+      "playerPhoto": player.getPhoto('medium')
+    });
+  } catch (e) { playerData = JSON.stringify({"playerAuth": "rejected"}); }
+  YG2Instance('SetAuth', playerData);
+}
+
+function LoadCloud() {
+  if (player) {
+    player.getData(["saves"]).then(d => {
+      cloudSaves = d.saves ? JSON.stringify(d.saves) : NO_DATA;
+      YG2Instance('SetLoadSaves', cloudSaves);
+    }).catch(() => YG2Instance('SetLoadSaves', NO_DATA));
+  } else YG2Instance('SetLoadSaves', NO_DATA);
+}
+
+function SaveCloud(j, f) { if(player) player.setData({ saves: [j] }, f); }
+function InitPayments() { YG2Instance('PaymentsEntries', NO_DATA); }
+function ConsumePurchases() { if(ysdk && ysdk.getPayments) { ysdk.getPayments().then(p => p.getPurchases().then(ps => ps.forEach(x => { p.consumePurchase(x.purchaseToken); YG2Instance('OnPurchaseSuccess', x.productID); }))); } }
+function InitLeaderboards() { YG2Instance('LeaderboardEntries', NO_DATA); }
+function InterAdvShow() { if(ysdk) ysdk.adv.showFullscreenAdv({ callbacks: { onOpen:()=>{nowFullAdOpen=true;YG2Instance('OpenInterAdv');}, onClose:(s)=>{nowFullAdOpen=false;YG2Instance('CloseInterAdv',s.toString());window.focus();}, onError:()=> {nowFullAdOpen=false;YG2Instance('ErrorInterAdv');} } }); }
+function RewardedAdvShow(id) { if(ysdk) ysdk.adv.showRewardedVideo({ callbacks: { onOpen:()=>YG2Instance('OpenRewardedAdv'), onClose:()=>{YG2Instance('CloseRewardedAdv');window.focus();}, onRewarded:()=>YG2Instance('RewardAdv', id), onError:()=>YG2Instance('ErrorRewardedAdv') } }); }
+
+function loadScript(url) {
+  return new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = url;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+(async () => {
+  try {
+    await loadScript(base + "sdk.js");
+    try {
+      const sdkPromise = YaGames.init();
+      const timeout = new Promise((_, r) => setTimeout(() => r("timeout"), 3500));
+      ysdk = await Promise.race([sdkPromise, timeout]);
+      if(ysdk !== "timeout") { await RequestingEnvironmentData(); await InitPlayer(); await LoadCloud(); }
+    } catch (e) { console.log("SDK Bypass"); }
+
+    await loadScript(base + "Build/Builds.loader.js");
+
+    const [dataUrl, wasmUrl, frameworkUrl] = await Promise.all([
+      mergeFiles([base + "Build/Builds.data.br"]),
+      mergeFiles([base + "Build/Builds.wasm.br.part1", base + "Build/Builds.wasm.br.part2"]),
+      mergeFiles([base + "Build/Builds.framework.js.br"])
+    ]);
+
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: dataUrl,
+      frameworkUrl: frameworkUrl,
+      codeUrl: wasmUrl,
+      streamingAssetsUrl: base + "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "ScaryShawarma3D",
+      productVersion: "1.0",
+    }).then(i => {
+      ygGameInstance = i;
+      loadingText.remove();
+      YG2Instance('InitSDKComplete');
+    }).catch(e => {
+      loadingText.textContent = "Unity Load Error: " + e.message;
+      console.error(e);
+    });
+  } catch (e) {
+    loadingText.textContent = "Fatal: " + e.message;
+    console.error(e);
+  }
+})();
+<\/script>
+</body>
+</html>
+`
+},
+'duck-life-1': {
+    title: "Duck Life 1",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Duck Life</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        /* Sidebar layout preserved from original source */
+        .sidebar-ad {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 9999;
+        }
+        #left-ad { left: 0; }
+        #right-ad { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            background: rgba(0,0,0,0.7); color: #fff; text-align: center;
+            cursor: pointer; font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="left-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="right-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            player.load("https://cdn.jsdelivr.net/gh/markrosenbaum/some-repo@aeb3030a3fb90987658ff4ee1063c64f6206152f/dl/duck-life.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-2': {
+    title: "Duck Life 2: World Champion",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Duck Life 2</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        .sidebar-ad {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 9999;
+        }
+        #left-ad { left: 0; }
+        #right-ad { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            background: rgba(0,0,0,0.7); color: #fff; text-align: center;
+            cursor: pointer; font-family: sans-serif; line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="left-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="right-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            // Specific SWF path for Duck Life 2 World Champion
+            player.load("https://cdn.jsdelivr.net/gh/markrosenbaum/some-repo@aeb3030a3fb90987658ff4ee1063c64f6206152f/dl2/ducklife2worldchampion.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-3': {
+    title: "Duck Life 3: Evolution",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Duck Life 3</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        .sidebar-ad {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 9999;
+        }
+        #left-ad { left: 0; }
+        #right-ad { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            background: rgba(0,0,0,0.7); color: #fff; text-align: center;
+            cursor: pointer; font-family: sans-serif; line-height: 22px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="left-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="right-ad" class="sidebar-ad">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            // Specific SWF path for Duck Life 3 Evolution
+            player.load("https://cdn.jsdelivr.net/gh/markrosenbaum/some-repo@aeb3030a3fb90987658ff4ee1063c64f6206152f/dl3/ducklife3game.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-5': {
+    title: "Duck Life 5: Treasure Hunt",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <title>Duck Life 5</title>
+    <style>
+        body, html { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
+        }
+        #ruffle-container { width: 100%; height: 100%; }
+        
+        /* Sidebar layout preserved from Duck Life 5 source */
+        #sidebarad1, #sidebarad2 {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            line-height: 22px; text-align: center; background: rgba(0,0,0,0.7);
+            color: #fff; font-size: 14px; cursor: pointer; user-select: none; z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+
+    <div id="ruffle-container"></div>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+            // Specific SWF path for Duck Life 5: Treasure Hunt
+            player.load("https://cdn.jsdelivr.net/gh/jackilyna/web-flash@eeca0ee340c64e455095970004dfce5a9c6e791a/webfl/dlife.swf");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    <\/script>
+</body>
+</html>
+`
+},
+'duck-life-8': {
+    title: "Duck Life 8: Adventure",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Duck Life 8: Adventure</title>
+    <style>
+        html, body { 
+            margin: 0; padding: 0; height: 100%; 
+            overflow: hidden; background: #231F20; 
+        }
+        #unity-container { 
+            width: 100%; height: 100%; 
+            position: fixed; top: 0; left: 0; 
+        }
+        #loading-text {
+            color: white; font-size: 32px; font-family: cursive; 
+            text-align: center; margin-top: 50px; position: relative; z-index: 10;
+        }
+        #sidebarad1, #sidebarad2 {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            line-height: 22px; text-align: center; background: rgba(0,0,0,0.7);
+            color: #fff; font-size: 14px; cursor: pointer; z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-text"> LOADING ASSETS... </div>
+    <div id="unity-container">
+        <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+    </div>
+
+    <script>
+        const base = "https://cdn.jsdelivr.net/gh/web-ports/duck-8@main/";
+        const loadingText = document.querySelector("#loading-text");
+        let loadedBytes = 0;
+
+        async function fetchWithProgress(url) {
+            const response = await fetch(base + url);
+            const reader = response.body.getReader();
+            let chunks = [];
+            let received = 0;
+            while (true) {
+                const {done, value} = await reader.read();
+                if (done) break;
+                received += value.length;
+                loadedBytes += value.length;
+                chunks.push(value);
+                loadingText.textContent = "LOADING... " + (loadedBytes / (1024 * 1024)).toFixed(2) + " MB / 178.06 MB";
+            }
+            let fullBuffer = new Uint8Array(received);
+            let offset = 0;
+            for (let chunk of chunks) {
+                fullBuffer.set(chunk, offset);
+                offset += chunk.length;
+            }
+            return fullBuffer.buffer;
+        }
+
+        async function mergeFiles(filePrefix, start, end) {
+            let parts = [];
+            for (let i = start; i <= end; i++) {
+                parts.push(filePrefix + ".part" + i);
+            }
+            const buffers = await Promise.all(parts.map(part => fetchWithProgress(part)));
+            return URL.createObjectURL(new Blob(buffers));
+        }
+
+        (async () => {
+            // Load Unity Loader first
+            const loaderScript = document.createElement('script');
+            loaderScript.src = base + "Build/UnityLoader.js";
+            document.head.appendChild(loaderScript);
+            await new Promise(r => loaderScript.onload = r);
+
+            // Fetch and Merge binary parts
+            const [dataUrl, wasmUrl] = await Promise.all([
+                mergeFiles("Build/dl8.data.unityweb", 1, 8),
+                mergeFiles("Build/dl8.wasm.code.unityweb", 1, 2)
+            ]);
+
+            // Proxy XHR to use our Blob URLs
+            const originalOpen = XMLHttpRequest.prototype.open;
+            XMLHttpRequest.prototype.open = function (method, url, ...rest) {
+                if (url.includes("dl8.data.unityweb")) url = dataUrl;
+                else if (url.includes("dl8.wasm.code.unityweb")) url = wasmUrl;
+                return originalOpen.call(this, method, url, ...rest);
+            };
+
+            UnityLoader.instantiate("unity-container", base + "Build/dl8.json", {
+                onProgress: (gameInstance, progress) => {
+                    if (progress === 1) loadingText.remove();
+                }
+            });
+        })();
+    <\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'time-shooter-1': {
+    title: "Time Shooter",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/gn-math/assets@main/199/">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Time Shooter</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+        body { margin: 0; background-color: #000; overflow: hidden; }
+        #unity-container { width: 100%; height: 100%; position: absolute; }
+        #unity-canvas { width: 100%; height: 100%; background: #231f20; }
+        
+        #sidebarad1, #sidebarad2 {
+            position: fixed; top: 50%; transform: translateY(-50%);
+            width: 160px; height: 600px; padding: 0; margin: 0; z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute; top: 0; right: 0; width: 22px; height: 22px;
+            line-height: 22px; text-align: center; background: rgba(0,0,0,0.7);
+            color: #fff; font-size: 14px; cursor: pointer; user-select: none; z-index: 10;
+        }
+        
+        #loading-cover { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: #000; display: flex; justify-content: center; align-items: center; z-index: 10; 
+        }
+        .spinner { 
+            border: 5px solid #f3f3f3; border-top: 5px solid #3498db; 
+            border-radius: 50%; width: 50px; height: 50px; animation: spin 2s linear infinite; 
+            margin: 0 auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="dark">
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+    </div>
+    
+    <div id="loading-cover">
+        <div id="unity-loading-bar">
+            <div id="unity-logo"><img src="logo.png"></div>
+            <div id="unity-progress-bar-empty" style="display: none;">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+
+    <script>
+        const hideFullScreenButton = "1";
+        const buildUrl = "Build";
+        const loaderUrl = buildUrl + "/TimeGD.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/TimeGD.data.unityweb",
+            frameworkUrl: buildUrl + "/TimeGD.framework.js.unityweb",
+            codeUrl: buildUrl + "/TimeGD.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "g80g",
+            productName: "Time Shooter",
+            productVersion: "1.0",
+        };
+
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        const spinner = document.querySelector('.spinner');
+
+        const canFullscreen = (function() {
+            for (const key of [
+                'exitFullscreen', 'webkitExitFullscreen', 'webkitCancelFullScreen',
+                'mozCancelFullScreen', 'msExitFullscreen',
+            ]) {
+                if (key in document) {
+                    return true;
+                }
+            }
+            return false;
+        }());
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
+            config.devicePixelRatio = 1;
+        }
+        canvas.style.background = "url('" + buildUrl + "/TimeGD.jpg') center / cover";
+
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                spinner.style.display = "none";
+                progressBarEmpty.style.display = "";
+                progressBarFull.style.width = \`\${100 * progress}%\`;
+            }).then((unityInstance) => {
+                loadingCover.style.display = "none";
+                if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                        fullscreenButton.style.display = "";
+                    }
+                    fullscreenButton.onclick = () => {
+                        unityInstance.SetFullscreen(1);
+                    };
+                }
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    <\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'time-shooter-2': {
+    title: "Time Shooter 2",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/gn-math/assets@main/200/">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Time Shooter 2</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+        #sidebarad1,
+        #sidebarad2 {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 600px;
+            padding: 0;
+            margin: 0;
+            z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+        }
+        .sidebar-frame {
+            width: 160px;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+    </div>
+    <div id="loading-cover" style="display:none;">
+        <div id="unity-loading-bar">
+            <div id="unity-logo"><img src="logo.png"></div>
+            <div id="unity-progress-bar-empty" style="display: none;">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+
+    <script>
+        const hideFullScreenButton = "1";
+        const buildUrl = "Build";
+        const loaderUrl = buildUrl + "/TimeShooter2_GD.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/TimeShooter2_GD.data.unityweb",
+            frameworkUrl: buildUrl + "/TimeShooter2_GD.framework.js.unityweb",
+            codeUrl: buildUrl + "/TimeShooter2_GD.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "g80g",
+            productName: "Time Shooter 2",
+            productVersion: "0.1",
+        };
+
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        const spinner = document.querySelector('.spinner');
+
+        const canFullscreen = (function() {
+            for (const key of [
+                    'exitFullscreen',
+                    'webkitExitFullscreen',
+                    'webkitCancelFullScreen',
+                    'mozCancelFullScreen',
+                    'msExitFullscreen',
+                ]) {
+                if (key in document) {
+                    return true;
+                }
+            }
+            return false;
+        }());
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
+            config.devicePixelRatio = 1;
+        }
+        canvas.style.background = "url('" + buildUrl + "/TimeShooter2_GD.jpg') center / cover";
+        loadingCover.style.display = "";
+
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                spinner.style.display = "none";
+                progressBarEmpty.style.display = "";
+                progressBarFull.style.width = \`\${100 * progress}%\`;
+            }).then((unityInstance) => {
+                loadingCover.style.display = "none";
+                if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                        fullscreenButton.style.display = "";
+                    }
+                    fullscreenButton.onclick = () => {
+                        unityInstance.SetFullscreen(1);
+                    };
+                }
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    <\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'time-shooter-3': {
+    title: "Time Shooter 3: SWAT",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Time Shooter 3 SWAT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/style.css">
+    <style>
+        #sidebarad1,
+        #sidebarad2 {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 600px;
+            padding: 0;
+            margin: 0;
+            z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+        }
+        .sidebar-frame {
+            width: 160px;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body class="dark">
+    <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+    </div>
+    <div id="loading-cover" style="display:none;">
+        <div id="unity-loading-bar">
+            <div id="unity-logo"><img src="https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3/logo.png"></div>
+            <div id="unity-progress-bar-empty" style="display: none;">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+    
+    <script>
+        const hideFullScreenButton = "1";
+        const buildUrl = "https://cdn.jsdelivr.net/gh/mistirk/google@eebffdf79a14f6e01e153d5cd4bed23c432874fb/version/time-s3";
+        const loaderUrl = buildUrl + "/ts3.loader.js";
+        const config = {
+            dataUrl: buildUrl + "/ts3.data",
+            frameworkUrl: buildUrl + "/ts3.framework.js",
+            codeUrl: buildUrl + "/ts3.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "GoGoMan",
+            productName: "Time Shooter SWAT",
+            productVersion: "0.03",
+        };
+
+        const container = document.querySelector("#unity-container");
+        const canvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        const spinner = document.querySelector('.spinner');
+
+        const canFullscreen = (function() {
+            for (const key of [
+                    'exitFullscreen',
+                    'webkitExitFullscreen',
+                    'webkitCancelFullScreen',
+                    'mozCancelFullScreen',
+                    'msExitFullscreen',
+                ]) {
+                if (key in document) {
+                    return true;
+                }
+            }
+            return false;
+        }());
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            container.className = "unity-mobile";
+            config.devicePixelRatio = 1;
+        }
+        canvas.style.background = "url('" + buildUrl + "/ts3.jpg') center / cover";
+        loadingCover.style.display = "";
+
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                spinner.style.display = "none";
+                progressBarEmpty.style.display = "";
+                progressBarFull.style.width = \`\${100 * progress}%\`;
+            }).then((unityInstance) => {
+                loadingCover.style.display = "none";
+                if (canFullscreen) {
+                    if (!hideFullScreenButton) {
+                        fullscreenButton.style.display = "";
+                    }
+                    fullscreenButton.onclick = () => {
+                        unityInstance.SetFullscreen(1);
+                    };
+                }
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+    <\/script>
+    
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'minecraft-web': {
+    title: "Minecraft",
+    customHtml: `
+<!doctype html>
+<html lang="en-us">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/genizy/mcpeweb@latest/">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+    <title>Minecraft</title>
+    <link href="manifest.json" rel="manifest">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: none;
+        }
+        canvas.emscripten {
+            display: block;
+            outline: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+    
+    <script>
+        var Module = {
+            canvas: document.getElementById("canvas")
+        };
+        ! function() {
+            var e = document.getElementById("canvas");
+            e.addEventListener("mousedown", (function(t) {
+                !t.isTrusted || document.pointerLockElement || window.mcMenuOpen || e.requestPointerLock()
+            }));
+            e.addEventListener("touchstart", (function(e) {
+                e.preventDefault()
+            }), {
+                passive: !1
+            });
+            document.addEventListener("touchstart", (function(e) {
+                var t = e.target.tagName;
+                "INPUT" !== t && "TEXTAREA" !== t && "BUTTON" !== t && "SELECT" !== t && "OPTION" !== t && e.preventDefault()
+            }), {
+                passive: !1
+            })
+        }();
+    <\/script>
+    
+    <script>
+        "serviceWorker" in navigator && window.addEventListener("load", (() => {
+            navigator.serviceWorker.register("./sw.js").then((e => {
+                console.log("ServiceWorker registration successful with scope: ", e.scope)
+            }), (e => {
+                console.log("ServiceWorker registration failed: ", e)
+            }))
+        }))
+    <\/script>
+    
+    <script async src="index.js"><\/script>
+</body>
+</html>
+`
+},
 'pizza-tower-scoutdigo': {
     title: "Pizza Tower: Scoutdigo Mod",
     customHtml: `
@@ -41771,76 +43017,447 @@ let joystick = nipplejs.create({
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <link rel="icon" type="x-icon" href="favicon.png">
-    <title>Pizza Tower: Scoutdigo Mod</title>
+	<link rel="icon" type="x-icon" href="favicon.png">
+	<title>Pizza Tower: Scoutdigo Mod</title>
     <style>
-      @keyframes rotation { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      html { background: #FFFFFF; }
+      @-webkit-keyframes rotation {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @-moz-keyframes rotation {
+        from {
+          -moz-transform: rotate(0deg);
+        }
+
+        to {
+          -moz-transform: rotate(360deg);
+        }
+      }
+
+      @-o-keyframes rotation {
+        from {
+          -o-transform: rotate(0deg);
+        }
+
+        to {
+          -o-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      html {
+        background: #FFFFFF;
+      }
+
       body {
-        font-family: arial; margin: 0; padding: 0; min-height: 100vh; width: 100vw;
-        background-color: black; display: flex; flex-direction: column; overflow-x: hidden; place-items: center;
+        font-family: arial;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        min-height: fill-available;
+        min-height: 100vh; /* Otherwise contents can be covered by an address bar in Safari on iOS 15 */
+        min-width: 100vw;
+        background: radial-gradient(
+          56.63% 56.63% at 50% 43.37%,
+          transparent 0%,
+          transparent 100%
+        );
+		background-color: black;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+		place-items: center;
       }
-      .emscripten { padding-right: 0; display: block; text-align: center; font-family: "Lucida Console", Monaco, monospace; }
+
+      body.scrollingDisabled {
+        overflow: hidden;
+      }
+
+      .emscripten {
+        padding-right: 0;
+        display: block;
+      }
+
+      div.emscripten {
+        text-align: center;
+		font-family: "Lucida Console", Monaco, monospace;
+      }
+
+      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
       canvas.emscripten {
-        display: none; background-color: black; transition: opacity 5s ease-in; opacity: 0;
-        image-rendering: pixelated; -ms-interpolation-mode: nearest-neighbor;
+        display: none;
+        background-color: black;
+        position: flex;
+        transition: opacity 5s ease-in;
+        -webkit-transition: opacity 5s ease-in;
+        opacity: 0;
+        filter: blur(0) grayscale(0);
+        image-rendering: optimizeSpeed;             /* Older versions of FF         */
+        image-rendering: -moz-crisp-edges;          /* FF 6.0+                      */
+        image-rendering: -webkit-optimize-contrast; /* Safari                       */
+        image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+        image-rendering: pixelated;                 /* Awesome future-browsers       */
+        -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
       }
-      canvas.active { animation: fadeIn 2s; opacity: 1; }
-      @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+      canvas.active {
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        opacity: 1;
+      }
+
+      canvas.paused {
+        animation-name: blur;
+        animation-duration: 0.5s;
+        filter: blur(2px) grayscale(1);
+      }
+
+      canvas.unpaused {
+        animation-name: none;
+      }
+
+      canvas.animatedSizeTransitions {
+        transition: width 0.3s ease, height 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes blur {
+        0% {
+          filter: blur(0) grayscale(0);
+        }
+
+        100% {
+          filter: blur(2px) grayscale(1);
+        }
+      }
+
       .spinner {
-        height: 30px; width: 30px; animation: rotation 0.8s linear infinite;
-        border: 5px solid #bdff00; border-top: 5px solid #719900; border-radius: 100%;
+        height: 30px;
+        width: 30px;
+
+        -webkit-animation: rotation 0.8s linear infinite;
+        -moz-animation: rotation 0.8s linear infinite;
+        -o-animation: rotation 0.8s linear infinite;
+        animation: rotation 0.8s linear infinite;
+
+        border: 5px solid #bdff00;
+        border-top: 5px solid #719900;
+        border-radius: 100%;
       }
-      #status { font-weight: bold; color: white; }
-      progress { width: 250px; height: 10px; appearance: none; padding: 5px; }
-      progress::-webkit-progress-bar { background-color: #8492a6; border-radius: 15px; }
-      progress::-webkit-progress-value { background-image: -webkit-linear-gradient(left, #719900, #bdff00); border-radius: 15px; }
-      div.loading { position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: none; }
-      .output-container { text-align: center; margin-top: auto; padding-bottom: 20px; }
-      .output-button { border: none; width: 200px; height: 25px; margin: 5px; border-radius: 5px; cursor: pointer; background-color: black; color: white; outline: 2px dashed #20c20e; font-family: "Lucida Console", Monaco, monospace; }
-      #pauseMenuContainer { position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; align-items: center; z-index: 1000; }
-      #pauseMenu { display: flex; flex-direction: column; padding: 40px; background: #2E273F; border-radius: 4px; }
-      #pauseMenu button { background: #FA1E4E; color: white; border: none; padding: 12px; margin: 5px; cursor: pointer; border-radius: 6px; }
-    </style>
+
+      #status {
+        display: inline-block;
+        vertical-align: top;
+        font-weight: bold;
+        color: white;
+      }
+
+      #progress {
+        width: 250px;
+        height: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 5px;
+      }
+
+      /* Determines the style of the background of the progress bar */
+      progress[value]::-webkit-progress-bar {
+        background-color: #8492a6;
+        height: 10px;
+        border-radius: 15px;
+      }
+      /* Determines the style of the completed part of the progress bar */
+      progress[value]::-webkit-progress-value {
+        background-image: -webkit-linear-gradient(left, #719900, #bdff00);
+        height: 10px;
+        border-radius: 15px;
+      }
+
+      div.loading {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+      }
+      div.loading > * {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      .output-container {
+        text-align: center;
+        margin-top: auto;
+      }
+      .output-button {
+        border: none;
+        width: 200px;
+        height: 25px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+		outline-color: #20c20e;
+		outline-style: dashed;
+        font-family: "Lucida Console", Monaco, monospace;
+      }
+
+      #output {
+        display: none;
+        height: 200px;
+        background-color: black;
+        color: white;
+        font-family: "Lucida Console", Monaco, monospace;
+        outline: none;
+        border: none;
+        padding: 0;
+        width: 100%;
+      }
+
+      #message-container {
+        display: none;
+        min-height: 50px;
+        background-color: rgba(20, 20, 20, 0.5);
+        outline: none;
+        border: none;
+        padding: 0;
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+
+      #messages {
+        margin-left: 50px;
+        color: white;
+        font-family: "Lucida Console", Monaco, monospace;
+        outline: none;
+        border: none;
+        padding: 0;
+      }
+
+      img.qrCode {
+         opacity: 1.0;
+         width: 50%;
+         height: 50%;
+      }
+
+      #pauseMenuContainer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #pauseMenuContainer[hidden] {
+        display: none !important;
+        opacity: 0;
+      }
+
+      #pauseMenuBorder {
+        background: linear-gradient(135deg, #FA1E4E, transparent 40%);
+        padding: 1px;
+        border-radius: 4px;
+        clip-path: polygon(10.5px 0, 100% 0, 100% 100%, 0 100%, 0 10.5px);
+        width: 70vw;
+        max-width: 400px;
+      }
+
+      #pauseMenu {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 30px 60px 30px;
+        background: linear-gradient(180deg, #2E273F 16.15%, rgba(46, 39, 63, 0.79) 56.25%, #2E273F 91.15%);
+        border-radius: 4px;
+        clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        opacity: 1;
+      }
+
+      #pauseMenu button {
+        font-weight: 500;
+        font-size: 17px;
+        color: white;
+        background: #FA1E4E;
+        border: 1px solid #FA1E4E;
+        border-radius: 6px;
+        padding: 12px 24px;
+        margin: 5px 0;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      #pauseMenu button#quitButton {
+        background: #FA1E4E40;
+      }
+
+      #pauseMenu button:hover {
+        filter: brightness(1.15);
+      }
+
+      #pauseMenu button:active {
+        filter: brightness(0.85);
+      }
+
+      #pauseMenu button[hidden] {
+        display: none;
+      }
+    #sidebarad1,
+#sidebarad2 {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  z-index: 999999;
+}
+#sidebarad1 {
+  left: 0;
+}
+#sidebarad2 {
+  right: 0;
+}
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+.sidebar-frame {
+  width: 160px;
+  height: 600px;
+  border: none;
+  display: block;
+}
+</style>
   </head>
   <body>
     <div id="loading-text" style="color: white; font-size: 48px; font-family: cursive; text-align: center; margin-top: 20px;"> LOADING... </div>
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
-    
+    <canvas
+      class="emscripten"
+      id="canvas"
+      oncontextmenu="event.preventDefault()"
+      tabindex="-1"
+    >
+    </canvas>
     <div id="pauseMenuContainer" hidden>
+      <div id="pauseMenuBorder">
         <div id="pauseMenu">
-          <button onclick="resume()">Resume</button>
-          <button onclick="quitIfSupported()">Quit</button>
+          <button id="resumeButton" onclick="resume()">
+            Resume
+          </button>
+          <button id="quitButton" onclick="quitIfSupported()">
+            Quit
+          </button>
+        </div>
         </div>
     </div>
-
     <div class="loading">
       <div class="spinner" id="spinner"></div>
-      <div id="status">Downloading...</div>
+      <div class="emscripten" id="status">Downloading...</div>
+
       <progress value="0" max="100" id="progress" hidden="1"></progress>
     </div>
-
-    <div class="output-container">
-      <button class="output-button" onclick="toggleConsole()">Toggle Console</button>
-      <button class="output-button" onclick="togglegithub()">Visit Github Repo</button>
-      <button class="output-button" onclick="toggleclear_site_cache()">Clear Site Cache</button>
-      <button class="output-button" onclick="toggleFPS()">Enable FPS Counter</button>
-      <button class="output-button" onclick="togglewebports()">View All Web Ports</button>
-      <button class="output-button" onclick="togglejoin_discord()">Join Discord Server</button>
-      <input id="colorpicker" type="color" onchange="changecolor(this)">
+    <div class="output-container" id="output-container">
+	  <button class="output-button" onclick="toggleConsole()" title="Lists Console Output and Loading Progress"+>
+        Toggle Console
+      </button>
+	  <button id="QRButton" class="output-button" onclick="togglegithub()" title="Sends you to My Github Repository of this Project"+>
+        Visit Github Repo
+      </button>
+	  <button id="QR2Button" class="output-button" onclick="toggleclear_site_cache()" title="Fixes Crashes due to the Website being Updated, but also Deletes ALL Saves, so Continue with Caution"+>
+        Clear Site Cache
+      </button>
+		<button class="output-button" id="stats-button" onclick="toggleFPS()" title="Enables External FPS Counter"+>
+        Enable FPS Counter
+      </button>
+	    <button class="output-button" id="share-button" onclick="togglewebports()" title="Sends you to My Personal Website with a List of All My Web Ports"+>
+        View All Web Ports
+      </button>
+	    <button class="output-button" onclick="togglejoin_discord()" title="Press to Join My Discord Server for Info and Updates"+>
+        Join Discord Server
+      </button>
+	    <input id="colorpicker" type="color" onchange="changecolor(this)" title="Changes Color of the Website's Background"+>
+      <textarea id="output" rows="8"></textarea>
     </div>
 
-    <script>
-      const loadingText = document.querySelector("#loading-text");
+    <div id="message-container">
+      <div id="messages">
+      </div>
+    </div>
+	<script async
+     data-ad-client="ca-pub-123"
+     data-ad-frequency-hint="30s"
+     data-adbreak-test="on"
+     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+   <\/script>
+
+   <script>
+     window.adsbygoogle = window.adsbygoogle || [];
+     const adBreak =  adConfig = function(o) {adsbygoogle.push(o);}
+   <\/script>
+<script>
+        const loadingText = document.querySelector("#loading-text");
       let totalBytes = 315181892;
       let loadedBytes = 0;
 
       function formatSize(bytes) {
-        if (bytes > 1073741824) return (bytes / 1073741824).toFixed(2) + " GB";
-        if (bytes > 1048576) return (bytes / 1048576).toFixed(2) + " MB";
-        return (bytes / 1024).toFixed(2) + " KB";
+        if (bytes > 1024 * 1024 * 1024) {
+          return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
+        } else if (bytes > 1024 * 1024) {
+          return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+        } else if (bytes > 1024) {
+          return (bytes / 1024).toFixed(2) + " KB";
+        } else {
+          return bytes + " B";
+        }
       }
-
       async function fetchWithProgress(url) {
         const response = await fetch(url);
         const reader = response.body.getReader();
@@ -41852,43 +43469,87 @@ let joystick = nipplejs.create({
           received += value.length;
           loadedBytes += value.length;
           chunks.push(value);
-          const percent = ((loadedBytes / totalBytes) * 100).toFixed(1);
-          loadingText.textContent = \`LOADING... \${formatSize(loadedBytes)} / \${formatSize(totalBytes)} (\${percent}%)\`;
+          const doneText = formatSize(loadedBytes);
+          const totalText = formatSize(totalBytes);
+          const percent =
+            totalBytes > 0
+              ? ((loadedBytes / totalBytes) * 100).toFixed(1)
+              : "?";
+          loadingText.textContent = \`LOADING... \${doneText} / \${totalText} (\${percent}%)\`;
         }
         let fullBuffer = new Uint8Array(received);
         let offset = 0;
-        for (let chunk of chunks) { fullBuffer.set(chunk, offset); offset += chunk.length; }
+        for (let chunk of chunks) {
+          fullBuffer.set(chunk, offset);
+          offset += chunk.length;
+        }
         return fullBuffer.buffer;
       }
-
       async function mergeFiles(parts) {
         const buffers = await Promise.all(parts.map(fetchWithProgress));
         return URL.createObjectURL(new Blob(buffers));
       }
 
-      (async () => {
+      function getParts(file, count) {
         let parts = [];
-        for (let i = 1; i <= 16; i++) { parts.push("game.unx.part" + i); }
-        const gameurl = await mergeFiles(parts);
-        window.gameUnxUrl = gameurl;
+        for (let i = 1; i <= count; i++) {
+          parts.push(file + ".part" + i);
+        }
+        return parts;
+      }
+      function resizeUnityContainer() {
+        var container = document.getElementById("gameContainer");
+        container.style.width = window.innerWidth + "px";
+        container.style.height = window.innerHeight + "px";
+      }
+      (async () => {
+        const gameunx = getParts("game.unx", 16);
+        const gameunxs = [...gameunx];
+        const [gameurl] = await Promise.all([mergeFiles(gameunxs)]);
 
-        const originalFetch = window.fetch;
-        window.fetch = async function (...args) {
-            let [url, options] = args;
-            if (typeof url === 'string' && url.includes("game.unx")) url = window.gameUnxUrl;
-            return originalFetch.call(this, url, options);
-        };
+            window.gameUnxUrl = gameurl;
 
-        loadingText.remove();
-        ["index.js", "runner.js"].forEach(src => {
-            var s = document.createElement("script");
-            s.src = src;
-            s.async = (src === "runner.js");
-            document.body.appendChild(s);
-        });
+      const originalFetch = window.fetch;
+      window.fetch = async function (...args) {
+          let [url, options] = args;
+          if (typeof url === 'string' && url.includes("game.unx")) {
+              console.log("fetch:", url);
+              url = window.gameUnxUrl;
+          } else if (url instanceof Request && url.url.includes("game.unx")) {
+              console.log("fetch request:", url.url);
+              url = new Request(window.gameUnxUrl, url);
+          }
+          return originalFetch.call(this, url, options);
+      };
+
+      const originalOpen = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function (method, url, ...rest) {
+          if (url.includes("game.unx")) {
+              console.log("XHR:", url);
+              url = window.gameUnxUrl;
+          }
+          return originalOpen.call(this, method, url, ...rest);
+      };
+      loadingText.remove();
+          var indexscript = document.createElement("script");
+  indexscript.src= "index.js";
+  indexscript.type="text/javascript";
+
+    var runnerscript = document.createElement("script");
+  runnerscript.src= "runner.js";
+  runnerscript.async= true;
+  runnerscript.type="text/javascript";
+
+  document.body.appendChild(indexscript);
+    document.body.appendChild(runnerscript);
       })();
-    <\/script>
-  </body>
+  <\/script>
+  <div id="sidebarad1">
+  <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+</div>
+<div id="sidebarad2">
+  <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+</div>
 </html>
 `
 },
@@ -44138,6 +45799,1088 @@ let joystick = nipplejs.create({
 </html>
 `
 },
+'football-bros': {
+title: "Football Bros",
+customHtml: `
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+
+	  <meta charset="utf-8">
+    <base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@d7f8079f5d979182e04f05b1ade24f2a757253a3/football%20bros/"
+
+	  <meta name="description" content="Online multiplayer football! Bone crushing hits, long bombs, and tons more!" />
+	  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	  <link rel="shortcut icon" type="image/png" href="./favicon.png">
+	  <meta name="Keywords" content="Football, Play, Free, Online, Multiplayer, Games, IO, Sports, Scrolling, Friends">
+	  <meta name="author" content="Blue Wizard Digital">
+
+	  <meta property="og:type" content="website" />
+	  <meta property="og:title" content="Football Bros" />
+	  <meta property="og:description" content="Online multiplayer football! Bone crushing hits, long bombs, and tons more!" />
+	  <link rel="manifest" href="manifest.json">
+
+
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/FootballBros.js"><\/script>
+
+	  <script>
+	    window.addEventListener("touchmove", function(event) {
+	      event.preventDefault();
+	    }, {
+	      capture: false,
+	      passive: false
+	    });
+	    if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+	      var meta = document.getElementById("viewport");
+	      meta.setAttribute('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+	    }
+	    window.addEventListener('keydown', function(e) {
+	      if ((e.keyCode == 32 || e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 9) && e.target == document.body) {
+	        e.preventDefault();
+	      }
+	    });
+	    var aCo = 'US';
+	  <\/script>
+
+	  <style>
+	    html,
+	    body {
+	      margin: 0;
+	      padding: 0;
+	      height: 100%;
+	      background: #000000;
+	      color: orange;
+	      height: 100%;
+	      width: 100%;
+	      height: 100vh;
+	      width: 100vw;
+	      margin: 0;
+	      padding: 0;
+	    }
+
+	    .body::-webkit-scrollbar {
+	      	      width: 0px;
+	    }
+
+	    #openfl-content {
+	      background: #000000;
+	      width: 100%;
+	      height: 100%;
+	    }
+
+	    #spinner {
+	      -webkit-transform-origin: 50% 50%;
+	      -moz-transform-origin: 50% 50%;
+	      -o-transform-origin: 50% 50%;
+	      transform-origin: 50% 50%;
+	      width: 82px;
+	      height: 81px;
+	      -webkit-animation: spin1 2s infinite linear;
+	      -moz-animation: spin1 2s infinite linear;
+	      -o-animation: spin1 2s infinite linear;
+	      -ms-animation: spin1 2s infinite linear;
+	      animation: spin1 2s infinite linear;
+	    }
+
+
+
+
+	    	    #more {
+	      display: flex;
+	      justify-content: space-between;
+	      background-color: #1a1a1a;
+	      padding: 40px;
+	      border-top: 0px solid #444;
+	      color: #fff;
+	      font-family: 'Arial', sans-serif;
+	    }
+
+	    .info-box {
+	      width: 48%;
+	      background-color: #222;
+	      padding: 20px;
+	      border-radius: 8px;
+	      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+	    }
+
+	    h3 {
+	      font-size: 24px;
+	      color: #ffa500;
+	      	      margin-bottom: 15px;
+	    }
+
+	    p,
+	    b {
+	      line-height: 1.6;
+	      font-size: 16px;
+	    }
+
+	    p {
+	      margin-bottom: 10px;
+	    }
+
+	    b {
+	      color: #ffd700;
+	      	    }
+
+
+	    	    a:link {
+	      color: #ffd700;
+	    }
+
+	    	    a:visited {
+	      color: #ffd700;
+	    }
+
+	    	    a:hover {
+	      color: #ffd700;
+	    }
+
+	    	    a:active {
+	      color: #ffd700;
+	    }
+
+	    .notch-top-left {
+	      width: 20px;
+	      height: 20px;
+	      background-color: var(--background-color, #1a1a1a);
+	      position: absolute;
+	      top: -10px;
+	      left: -10px;
+	      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+	    }
+
+	    	    footer {
+	      background-color: #000;
+	      padding: 20px 0;
+	      text-align: center;
+	      color: #ccc;
+	      font-size: 14px;
+	      border-top: 2px solid #444;
+	      margin-top: 40px;
+	      font-family: 'Arial', sans-serif;
+	      border: 0;
+	    }
+
+	    .feedback-form {
+	      position: absolute;
+	      top: 50%;
+	      left: 50%;
+	      transform: translate(-50%, -50%);
+	      width: 50vw;
+	      height: 50vh;
+	      background-color: #2A6DB0;
+	      padding: 20px;
+	      border: 4px solid #FF0000;
+	      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	      text-align: center;
+	      color: #FFFFFF;
+	    }
+
+	    .feedback-form h3 {
+	      font-size: 24px;
+	      margin-bottom: 20px;
+	      color: #FFFFFF;
+	      text-shadow: 2px 2px #000000;
+	    }
+
+	    .feedback-form textarea {
+	      width: calc(100% - 20px);
+	      height: 50%;
+	      margin-bottom: 10px;
+	      padding: 10px;
+	      font-size: 16px;
+	      font-family: 'Courier New', Courier, monospace;
+	      border: 3px solid #000000;
+	      background-color: #000000;
+	      	      color: #FFFFFF;
+	      	      resize: none;
+	      box-sizing: border-box;
+	    }
+
+	    .feedback-form button {
+	      width: 100%;
+	      padding: 12px;
+	      background-color: #FFD700;
+	      	      color: #000000;
+	      border: 3px solid #FF0000;
+	      border-radius: 0;
+	      font-size: 18px;
+	      cursor: pointer;
+	      font-family: 'Courier New', Courier, monospace;
+	      text-shadow: 1px 1px #000000;
+	    }
+
+	    .feedback-form button:hover {
+	      background-color: #FFB800;
+	      	      color: #FFFFFF;
+	    }</style>
+
+
+	  	  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GREB63PWEL"><\/script>
+
+	  <script>
+	    window.dataLayer = window.dataLayer || [];
+
+	    function gtag() {
+	      dataLayer.push(arguments);
+	    }
+	    gtag('js', new Date());
+
+	    if (location.hostname != "localhost") gtag('config', 'G-GREB63PWEL', {
+	      cookie_flags: 'secure;samesite=none'
+	    });
+	  <\/script>
+
+	  <script>
+
+	    document.addEventListener("aip_interstitialadavailable", function(e) {
+	      console.log("An interstitial ad is available");
+	    });
+	  <\/script>
+	  <script>
+	    console.log("Initting AIP")
+	    window.aiptag = window.aiptag || {
+	      cmd: []
+	    };
+	    aiptag.cmd.display = aiptag.cmd.display || [];
+	    aiptag.cmd.player = aiptag.cmd.player || [];
+
+
+	    aiptag.consented = false; // GDPR setting, please set this value to false if an EU user has declined or not yet accepted marketing cookies, for users outside the EU please use true and for users accepted the GDPR also use true
+	    aiptag.cmp = {
+	      show: true,
+	      position: "centered",
+	      button: false,
+	      buttonText: "Privacy settings",
+	      buttonPosition: "bottom-left"
+	    }
+	  <\/script>
+	  <script async src="tag.min.js"><\/script>
+
+	  <script>
+	    function SetupMSNotification() {
+	      console.log("notifying");
+	      if (typeof $msstart !== 'undefined') {
+	        console.log("notifying2");
+	        var id = btoa("");
+	        $msstart.scheduleNotificationAsync({
+	          title: 'Unlock new bros now!',
+	          description: 'You are just about to unlock a new Bro! Who will it be?',
+	          type: 1,
+	          minDelayInSeconds: 24 * 60 * 60
+	        }).then(response => {
+	          console.log("notification response: " + response);
+	        });
+	        $msstart.scheduleNotificationAsync({
+	          title: 'Dunk all over your bros!',
+	          description: 'New bros just waiting to be dunked on! Unlock them now!',
+	          type: 1,
+	          minDelayInSeconds: 24 * 7 * 60 * 60
+	        }).then(response => {
+	          console.log("notification response: " + response);
+	        });
+
+	      }
+	    }
+
+	    var msAdID;
+
+	    function LoadVideo() {
+	      if (typeof $msstart !== 'undefined') {
+	        $msstart.loadAdsAsync().then(adInstance => {
+	          // Use the adInstance.instanceId to make a call to showAdsAsync
+	          msAdID = adInstance.instanceId;
+	        });
+
+	        SetupMSNotification();
+	      }
+	    }
+
+	    function ShowVideo(theUnitName = null) {
+	      Main.DoneVideoAd(true);
+	      return; //! when aip is live, remove this
+
+	      console.log('SHOW_VIDEO:' + theUnitName);
+	      var aUnitName = "";
+	      if (typeof $msstart !== 'undefined') {
+	        $msstart.showAdsAsync(msAdID).then(adInstance => {
+	          // Use the adInstance.showAdsCompletedAsync to be notified of the completion of showing the advertisement
+	          adInstance.showAdsCompletedAsync.then((val) => {
+	            console.log('MS Video Ad Complete');
+	            Main.DoneVideoAd();
+	            window.focus();
+	            window.document.getElementById('openfl-content').focus();
+	            LoadVideo();
+	          }).catch((err) => {
+	            console.log('Ms Video Ad Error');
+	            Main.DoneVideoAd();
+	            window.focus();
+	            window.document.getElementById('openfl-content').focus();
+	            LoadVideo();
+	          });
+	        });
+	      } else if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.addEventListener("adFinished", Main.DoneVideoAd); // reenable sound, enable ui
+	        gCrazySDK.addEventListener("adError", Main.DoneVideoAd); // reenable sound, enable ui
+	        gCrazySDK.requestAd();
+	        console.log('CG_AD_REQUESTED');
+	        SendEvent('event', 'cgvideo');
+	        return;
+	      } else if (typeof adplayer === 'undefined') {
+	        Main.DoneVideoAd(true);
+	        SendEvent('event', 'video_adblocked');
+	        console.log('VIDEO_ADBLOCKED');
+
+	      } else {
+	        var aStr = 'preroll';
+	        //if(theUnitName != null) aStr = theUnitName;
+	        lastUnitPlayed = aStr;
+	        SendEvent('event', 'startvideo-' + aStr);
+
+	        aiptag.cmd.player.push(function() {
+	          adplayer.startVideoAd(theUnitName);
+	        });
+	      }
+	    }
+	  <\/script>
+
+	  <!-- Firebase App (the core Firebase SDK) -->
+	  <script src="firebase-app.js"><\/script>
+	  <!-- Firebase Authentication -->
+	  <script src="firebase-auth.js"><\/script>
+	  <!-- Firebase Firestore (Database) -->
+	  <script src="firebase-firestore.js"><\/script>
+
+	  <script>
+
+	    const firebaseConfig = {
+	      apiKey: "AIzaSyAFCwYdbkLozIgtH5zuGydcjk_LNhYnve0",
+	      authDomain: "football-bros-8f1b3.firebaseapp.com",
+	      projectId: "football-bros-8f1b3",
+	      storageBucket: "football-bros-8f1b3.appspot.com",
+	      messagingSenderId: "807434051106",
+	      appId: "1:807434051106:web:7e2fd59782e7c13165f47b"
+	    };
+
+
+	    firebase.initializeApp(firebaseConfig);
+	    const auth = firebase.auth();
+	    const db = firebase.firestore();
+	    var userData = "";
+
+	    function triggerSignIn() {
+	      var provider = new firebase.auth.GoogleAuthProvider();
+	      auth.signInWithPopup(provider);
+	    }
+
+
+	    function saveGameData(gameData) {
+	      console.log('saving gamedata:' + gameData);
+	      var userId = auth.currentUser.uid;
+	      userData = gameData;
+	      db.collection('users').doc(userId).set({
+	        gameData: gameData
+	      }).then(function() {
+	        console.log('Game data saved');
+	      }).catch(function(error) {
+	        console.error('Error saving game data:', error);
+	      });
+	    }
+
+
+	    function loadGameData() {
+	      return userData;
+	    }
+
+	    function loadGameDataAsync() {
+	      var userId = auth.currentUser.uid;
+	      db.collection('users').doc(userId).get().then(function(doc) {
+	        if (doc.exists) {
+	          userData = doc.data().gameData;
+	          //Main.LoadGlobals();
+	          console.log('Game data:', doc.data().gameData);
+	          if (typeof Main != "undefined") {
+	            Main.LoadDataComplete();
+	          }
+
+	        } else {
+	          console.log('No such document!');
+	        }
+	      }).catch(function(error) {
+	        console.error('Error loading game data:', error);
+	      });
+	    }
+
+
+	    auth.onAuthStateChanged(function(user) {
+	      if (user) {
+	        loadGameDataAsync();
+	        SendEvent('event', 'sign_in');
+	        console.log('user signed in');
+	      } else {
+	        console.log('No user signed in');
+	        SendEvent('event', 'sign_out');
+	      }
+	    });
+
+	    function signOut() {
+	      auth.signOut().then(() => {
+	        Main.SignOutComplete();
+	        console.log('signed out');
+	      });
+	    }
+
+	    function isUserLoggedIn() {
+	      return auth.currentUser !== null;
+	    }
+	  <\/script>
+
+	</head>
+
+	<body style="overflow:hidden;">
+	  <noscript>Enable JavaScript bro!</noscript>
+	  <script>
+	    //alert("Globals:"+localStorage.getItem("/:Globals").length);
+	    /////////////////////////////////////////////////////////////////////
+	    ////////////////////////////////////////////////////////////////////
+	    var url = window.location.href;
+	    if (url.includes("www.")) {
+	      url = url.replace("www.", "");
+
+	      var f = document.createElement('form');
+	      f.action = url;
+	      f.method = 'POST';
+	      var i = document.createElement('input');
+	      i.type = 'hidden';
+	      i.name = 'FGlobals';
+	      i.value = localStorage.getItem("/:Globals");
+	      f.appendChild(i);
+
+	      document.body.appendChild(f);
+	      f.submit();
+	    } else {
+	      var aPost = "";
+	      var aStorage = localStorage.getItem("/:Globals");
+	      var aLen = 0;
+	      if (aStorage != null && aStorage.length > 0) {
+	        aLen = aStorage.length;
+	      }
+	      if (aPost.length > aLen) localStorage.setItem("/:Globals", aPost);
+	      if (aPost.length > 0 && aPost.length == aLen) localStorage.setItem("/:Globals", aPost);
+	    }
+	    /////////////////////////////////////////////////////////////////////
+	    ////////////////////////////////////////////////////////////////////
+	  <\/script>
+
+	  <div id="loading" style="position: absolute; z-index: 15; top: 60%; left: 50%; transform: translate(-50%, 0); background: black;">
+	    <center><img src="assets/loading4.png"><br />
+	      <img src="assets/fbro.png">
+	      <img src="assets/sbro.png">
+	      <img src="assets/wbro.png">
+	      <img src="assets/bbro.png">
+	    </center>
+	  </div>
+
+	  <div id="game2" style="width: 100%; height: 100%; ">
+	    <div id="openfl-content" onblur="window.focus();" style="width: calc(100%); float:left;">
+	      <script type="text/javascript">
+	        lime.embed("FootballBros", "openfl-content", 0, 0, {
+	          parameters: {}
+	        });
+	      <\/script>
+	    </div>
+	    <div id="preroll" style="width: 960px; height: 540px; display: none; position: absolute; top: 50%; left: 50%; z-index: 100; transform: translate(-50%, -50%);">
+	    </div>
+
+	    <div id="footballbros-io_300x250" style="width: 336px; height: 280px; visibility:hidden; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	      <script>
+	        if (typeof gCrazySDK == 'undefined') {
+	          aiptag.cmd.display.push(function() {
+	            aipDisplayTag.display('footballbros-io_300x250');
+	          });
+	        }
+	      <\/script>
+	    </div>
+	    <div id="footballbros-io_300x250_2" style="width: 336px; height: 280px; visibility:hidden; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	      <script>
+	        if (typeof gCrazySDK == 'undefined') {
+	          aiptag.cmd.display.push(function() {
+	            aipDisplayTag.display('footballbros-io_300x250_2');
+	          });
+	        }
+	      <\/script>
+	    </div>
+	    <div id="footballbros-io_336x280" style="visibility:hidden; width: 336px; height: 600px; display: none; position: absolute; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="footballbros-io_336x280_2" style="visibility:hidden; width: 336px; height: 600px; display: none; position: absolute; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="footballbros-io_728x90" style="visibility:hidden; width: 728px; height: 90px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="footballbros-io_728x90_m" style="visibility:hidden; width: 728px; height: 90px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="footballbros-io_970x250" style="visibility:hidden; width: 970px; height: 250px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100; text-align: center;overflow: hidden;">
+	    </div>
+
+	    <div class="feedback-form" id="feedbackForm" style="display:none;">
+	      <h3>Report a Bug/Glitch</h3>
+	      <textarea id="feedback" placeholder="Describe the bug or glitch with a lot of details, like how to make the glitch happen and anything else whether it seems useful or not..."></textarea>
+	      <textarea id="email" placeholder="Email address (optional)" style="height: 50px;"></textarea>
+	      <textarea id="discord" placeholder="Discord ID (optional)" style="height: 50px;"></textarea>
+	      <button onclick="sendFeedback()" id="submitBtn">Submit Feedback</button>
+	      <br />
+	      <br />
+	      <button onclick="document.getElementById('feedbackForm').style.display='none'" id="submitBtn">Cancel</button>
+	      <p id="responseMsg"></p>
+	    </div>
+	    <script>
+	      //                                                                                                                          var doFeedback = true;
+	      function getOSFromUserAgent() {
+	        const userAgent = navigator.userAgent;
+	        const platform = navigator.platform;
+
+
+	        if (/Windows NT/i.test(userAgent)) return 'Windows';
+	        if (/Mac OS X/i.test(userAgent)) return 'macOS';
+	        if (/Linux/i.test(userAgent)) return 'Linux';
+	        if (/Android/i.test(userAgent)) return 'Android';
+	        if (/iPhone|iPad|iPod/i.test(userAgent)) return 'iOS';
+	        if (/CrOS/i.test(userAgent)) return 'Chrome OS';
+
+
+	        return platform || 'Unknown';
+	      }
+	      async function sendFeedback() {
+	        var feedback = '*' + document.getElementById("feedback").value.trim() + '*';
+	        var email = document.getElementById("email").value.trim();
+	        var discord = document.getElementById("discord").value.trim();
+	        const screenResolution = window.screen.width + 'x' + window.screen.height;
+	        const windowResolution = window.innerWidth + 'x' + window.innerHeight;
+	        var aOS = getOSFromUserAgent();
+	        var aCity = 'Provo';
+	        const hostname = window.location.hostname;
+	        const gpu = (() => {
+	          const canvas = document.createElement('canvas');
+	          const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+	          const debugInfo = gl?.getExtension('WEBGL_debug_renderer_info');
+	          const gpuInfo = debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : 'Unknown';
+
+
+	          canvas.remove();
+	          return gpuInfo;
+	        })();
+
+	        feedback = feedback + '\nDomain: ' + hostname;
+	        feedback = feedback + ', OS: ' + aOS;
+	        feedback = feedback + ', Screen res: ' + screenResolution;
+	        feedback = feedback + ', Window res: ' + windowResolution;
+	        feedback = feedback + ', GPU: ' + gpu;
+	        feedback = feedback + ', City: ' + aCity;
+	        feedback = feedback + ', Email: ' + email;
+	        feedback = feedback + ', Discord: ' + discord;
+
+	        const responseMsg = document.getElementById("responseMsg");
+	        const submitBtn = document.getElementById("submitBtn");
+
+	        if (!feedback) {
+	          alert("Please enter feedback.");
+	          return;
+	        }
+
+	        submitBtn.disabled = true;
+	        responseMsg.textContent = "Submitting...";
+
+	        try {
+	          const response = await fetch("sendFeedback.php", {
+	            method: "POST",
+	            headers: {
+	              "Content-Type": "application/x-www-form-urlencoded"
+	            },
+	            body: new URLSearchParams({
+	              feedback: feedback
+	            })
+	          });
+
+	          const result = await response.json();
+
+	          if (result.status === "success") {
+	            document.getElementById("feedbackForm").style.display = "none"; // Close the feedback form
+	            alert(result.message); // Show success message
+	          } else {
+	            document.getElementById("feedbackForm").style.display = "none"; // Close the feedback form
+	            alert(result.message); // Show error message
+	          }
+	        } catch (error) {
+	          document.getElementById("feedbackForm").style.display = "none"; // Close the feedback form
+	          alert("Error submitting feedback. Please try again.");
+	        }
+
+	        submitBtn.disabled = false;
+	      }
+	    <\/script>
+
+
+
+	  </div>
+	  <br />
+	  <div tabindex="-1" id="more">
+	    <div class="info-box">
+	      <h3>About Football Bros</h3>
+	      <p>Alt url: www.dunk.monster. Football Bros is a simple, fast-paced football game with all kinds of crazy action! With online multiplayer gameplay, lots of plays, and all kinds of crazy football action!</p>
+	      <p>The controls are very simple: Use either the arrow keys or WASD to control your bro. Space bar will throw a pass, dive, or stiff arm, depending on the situation.</p>
+	      <p>Be sure to follow us on social media for the latest updates and info!</p>
+	      <br />
+	      <h3>Changelog (1/30/2024)</h3>
+	      <p>Added Sayjuan to Philly.</p>
+	      <p>Changed play selection to a horizontal strip to fit on more screens.</p>
+	      <p>Fixed stuck moving in a direction once a play starts.</p>
+	      <p>Fixed "1 wins away" grammar.</p>
+	      <p>Fixed punts so kicking team doesnt crowd around the ball.</p>
+	      <p>Fixed punts so that kicking team couldn't catch a kick on the fly and get a 1st down.</p>
+	      <p>Fixed posession on 2 pt conversions.</p>
+	      <p>Fixed diving into a snapped ball so you can't start diving until the qb actually has the ball.</p>
+	      <p>Fixed glitch where sometimes a kickoff/xp would show up when it wasn't supposed to when a td was scored right at 0:00 of the 1st half.</p>
+	      <p>Added blue wizard logo.</p>
+	      <p>Added 5 new plays that are unlocked as perks.</p>
+	    </div>
+	    <div class="info-box">
+	      <h3>FAQ</h3>
+	      <b>Why isn't the game loading?</b>
+	      <p>You should check your internet connection and make sure our site isn't blocked. Also, disable all ad blockers.</p>
+	      <b>How do I play?</b>
+	      <p>Use your arrow keys and space bar! The rest is easy- pick your play and go!</p>
+	      <b>Which browser should I use?</b>
+	      <p>You should use Chrome. It is the only browser guaranteed to work. Football Bros has also been tested to work on Firefox and Safari, but not guaranteed.</p>
+	      <b>Are there more Bros games?</b>
+	      <p>Yes! Check out <a tabindex="-1" href="">Basket Bros</a>, <a tabindex="-1" href="">Soccer Bros</a> and <a tabindex="-1" href="https://wrestlebros.io">Wrestle Bros</a>. Also be sure to check out <a tabindex="-1" href="https://iogames.space" target="_blank">IO Games at iogames.space</a></p>
+	      <b>Do you have a favorite team?</b>
+	      <p>Yes, but we're not saying which one. Drop us an e-mail if you think you know.</p>
+	      <b>I'm blocked, where else can i play?</b>
+	      <p>Check here, these links work for both football and basket bros: <a href="">Football Bros Unblocked</a></p>
+
+	    </div>
+	  </div>
+	  <footer>
+	    <div tabindex="-1" class="footer-links">
+	      <a href="">Copyright 2024 Blue Wizard Digital</a> |
+	      <a tabindex="-1" href="">Terms of Service</a> |
+	      <a tabindex="-1" href="">Privacy Policy</a>
+	    </div>
+	  </footer>
+	  <script>
+	    var lastRefresh = 0;
+
+	    function refreshTag(theTag) {
+	      try {
+	        aiptag.cmd.display.push(function() {
+	          aipDisplayTag.refresh(theTag);
+	        });
+	        console.log('Tag refreshed successfully');
+	      } catch (error) {
+	        console.error('Error refreshing the tag:', error);
+	      }
+	    }
+
+
+	    function ShowAd1(doRefresh) {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('footballbros-io_160x600');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+
+	      l = window.document.getElementById('footballbros-io_160x600');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+
+
+	      if (typeof gCrazySDK !== 'undefined') {
+	        var d = new Date();
+	        var ms = d.getTime();
+	        if (ms - lastRefresh > 10000) {
+	          gCrazySDK.requestResponsiveBanner(["footballbros-io_160x600"]);
+	          lastRefresh = ms;
+	        }
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_160x600');
+	        refreshTag('footballbros-io_160x600_2');
+	        SendEvent('event', 'aip_banner_requested');
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+
+	    }
+
+	    var lastRefresh6 = 0;
+	    var doTagOnce = true;
+
+	    function ShowAd6() {
+	      var d = new Date();
+	      var ms = d.getTime();
+	      if (ms - lastRefresh6 < 10000) {
+	        return;
+	      }
+	      lastRefresh6 = ms;
+
+
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('footballbros-io_300x250');
+	      if (l == null) {
+	        return;
+	      }
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+
+	      if (typeof gCrazySDK !== 'undefined') {} else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_300x250');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	        doTagOnce = false;
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+	    }
+
+	    var lastRefresh2 = 0;
+
+	    function ShowAd2() {
+
+	      var d = new Date();
+	      var ms = d.getTime();
+	      if (ms - lastRefresh2 < 10000) {
+	        return;
+	      }
+	      lastRefresh2 = ms;
+
+
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('footballbros-io_300x250_2');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+
+	      if (typeof gCrazySDK !== 'undefined') {
+	        var d = new Date();
+	        var ms = d.getTime();
+	        if (ms - lastRefresh2 > 10000) {
+	          //hndled by the first banner request
+	          //gCrazySDK.requestBanner([{containerId: 'footballbros-io_300x250_2',size: '300x250',}]);
+	          gCrazySDK.requestResponsiveBanner(["footballbros-io_300x250", "footballbros-io_300x250_2"]);
+
+	          lastRefresh2 = ms;
+	        }
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_300x250_2');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+	    }
+
+	    function ShowAd3() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('footballbros-io_728x90');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["footballbros-io_728x90"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_728x90');
+	        SendEvent('event', 'aip_banner_requested');
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+
+	    }
+
+	    function ShowAd4() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      if (window.innerWidth < 1200) return;
+	      var l = window.document.getElementById('footballbros-io_336x280');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["footballbros-io_336x280"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_336x280');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+
+	    }
+
+	    function ShowAd7() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      if (window.innerWidth < 1200) return;
+	      var l = window.document.getElementById('footballbros-io_336x280_2');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["footballbros-io_336x280_2"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_336x280_2');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+
+	    }
+
+	    function ShowAd8() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('footballbros-io_728x90_m');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["footballbros-io_728x90"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_728x90_m');
+	        SendEvent('event', 'aip_banner_requested');
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+
+	    }
+
+	    function ShowAd9() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('footballbros-io_970x250');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["footballbros-io_970x250"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('footballbros-io_970x250');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+
+
+	        doTagOnce = false;
+	      } else {
+	        l.style.backgroundImage = "url(assets/turnoff.jpg)";
+	        SendEvent('event', 'banner_adblocked_message_shown');
+	      }
+
+	    }
+
+
+
+
+
+	    function right(str, chr) {
+	      return str.slice(str.length - chr, str.length);
+	    }
+
+	    function SetCGInviteLink() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        var meta = document.getElementById("cglink");
+	        var aStr = meta.value;
+	        aStr = right(aStr, 8);
+	        var aCGLink = gCrazySDK.inviteLink({
+	          roomId: aStr
+	        });
+	        meta.value = aCGLink;
+	        meta.select
+	        document.execCommand('Copy')
+	        console.log("COPIED CG URL");
+	      }
+	    }
+
+	    function ShowAdBreak() {
+	      //check if the adslib is loaded correctly or blocked by adblockers etc.
+	      if (typeof gCrazySDK !== 'undefined') {
+	        Main.DoneInterstitialAd(false);
+	        return;
+	      }
+
+	      if (typeof adplayer === 'undefined') {
+	        Main.DoneInterstitialAd(true);
+	        return;
+	      }
+	      aiptag.cmd.player.push(function() {
+	        adplayer.startAdBreak();
+	      });
+	    }
+
+
+	    document.getElementById("openfl-content").addEventListener("wheel", doScroll);
+	    document.getElementById("more").addEventListener("wheel", doScroll);
+
+	    function doScroll(event) {
+	      window.scroll(0, window.scrollY + event.deltaY);
+	    }
+
+	    setInterval(function() {
+	      //console.log("active element:" + document.activeElement);
+	      if (document.activeElement.tagName == "IFRAME") {
+	        document.activeElement.blur();
+	        document.getElementById('openfl-content').focus();
+	        //console.log('refocusing');
+	      }
+	    }, 30);
+
+
+	    /*setInterval(function () { 
+	    	var l = window.document.getElementById('preroll');
+	    	if(l != null && typeof l.style !== 'undefined' && l.style.visibility !== 'visible') {
+	    		document.getElementById('openfl-content').focus();
+	    		if(document.activeElement instanceof HTMLIFrameElement)
+	    		{
+	    			//document.activeElement.style.display = "none";
+	    			window.focus();
+	    			window.document.getElementById('openfl-content').focus();
+	    		}
+	    	}
+	    }, 1000);*/
+
+
+	    /*		setInterval(function () { 
+	    			var l = window.document.getElementById('footballbros-io_160x600');
+	    			if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
+	    				ShowAd5();
+	    			}
+	    		}, 30000);
+
+	    		setInterval(function () { 
+	    			var l = window.document.getElementById('footballbros-io_160x600_2');
+	    			if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
+	    				ShowAd1();
+	    			}
+	    		}, 32000);*/
+
+	    var sid = 'dnq3hin5g67igk2rb6viv78pd1'
+
+	    function updateStatus(fromEvent = false) {
+	      const req = new XMLHttpRequest();
+	      var aStr = "recordsession.php?s=" + sid;
+	      if (fromEvent == true) aStr = aStr + "&e=1"
+	      req.open("GET", aStr);
+	      req.send();
+	    }
+
+	    function SendEvent(theEvent, theAction, theParms = '') {
+	      if (theParms == '') {
+	        gtag(theEvent, theAction);
+	      } else {
+	        gtag(theEvent, theAction, theParms);
+	      }
+	      updateStatus(true);
+	      //console.log("Sending event: " + theEvent + "/" + theAction + "/" + theParms);
+	    }
+	    //setInterval(function() { updateStatus, 4*60*1000);			
+	    //setInterval( function() { 
+	    //	window.scrollTo(0, 0); 
+	    //}, 2000 );					
+	    updateStatus(true);
+
+	    //setInterval(ClearAds, 2000);		
+
+	    function EmailSignup() {
+	      if (document.getElementById("signup") || document.getElementById("deleteme")) return;
+	      const iframe = document.createElement("iframe");
+	      iframe.src = "";
+
+	      //			iframe.style.display = "block";
+	      iframe.style.width = "550px";
+	      iframe.style.height = "" + window.innerHeight - 100 + "px";
+	      iframe.style.position = "absolute";
+	      iframe.style.top = "50px";
+	      iframe.style.left = "50%";
+	      iframe.style["margin-left"] = "-225px";
+	      //iframe.style["margin-right"] = "-275px";
+	      iframe.style["max-width"] = "100%";
+	      iframe.setAttribute("id", "signup");
+
+	      document.body.appendChild(iframe);
+	    }
+
+	    function GamePlayStart() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        console.log("GamePlayStart");
+	        gCrazySDK.gameplayStart();
+	      }
+	    }
+
+	    function GamePlayStop() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        console.log("GamePlayStop");
+	        gCrazySDK.gameplayStop();
+	      }
+	    }
+
+	    function HappyTime() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        console.log("happytime");
+	        gCrazySDK.happytime();
+	      }
+	    }
+
+	    var scrollerMessage = "   ";
+
+	    const element = document.getElementById('openfl-content');
+
+	    function keepFocus() {
+	      element.focus();
+	    }
+
+	    element.addEventListener('blur', keepFocus);
+	    element.addEventListener('focusout', keepFocus);
+	  <\/script>
+	</div></div>
+
+</html>
+` 
+},
 'pokemon-indian-ruby': {
     title: "Pokémon Indian Ruby (GBA Hack)",
     customHtml: `
@@ -45816,6 +48559,1601 @@ let joystick = nipplejs.create({
 </html>
 `
 },
+'basket-bros': {
+    title: "Basket Bros",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="https://cdn.jsdelivr.net/gh/genizy/assets@main/basketbros-io/">
+    <meta charset="utf-8" />
+    <title>Basket Bros</title>
+    <meta name="description" content="Online multiplayer basketball! Dunk all over your bros!" />
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+    <script type="text/javascript" src="./BasketBros.js?th=448"><\/script>
+    <script>
+      window.addEventListener(
+        "touchmove",
+        function (event) {
+          event.preventDefault();
+        },
+        { capture: false, passive: false }
+      );
+      if (typeof window.devicePixelRatio != "undefined" && window.devicePixelRatio > 2) {
+        var meta = document.getElementById("viewport");
+        meta.setAttribute("content", "width=device-width, initial-scale=" + 2 / window.devicePixelRatio + ", user-scalable=no");
+      }
+      window.addEventListener("keydown", function (e) {
+        if ((e.keyCode == 32 || e.keyCode == 38 || e.keyCode == 40) && e.target == document.body) {
+          e.preventDefault();
+        }
+      });
+    <\/script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #000000;
+        color: orange;
+        height: 100%;
+        width: 100%;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      .body::-webkit-scrollbar {
+        /* WebKit */
+        width: 0px;
+      }
+      #openfl-content {
+        background: #000000;
+        width: 100%;
+        height: 100%;
+      }
+      #spinner {
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        width: 82px;
+        height: 81px;
+        -webkit-animation: spin1 2s infinite linear;
+        -moz-animation: spin1 2s infinite linear;
+        -o-animation: spin1 2s infinite linear;
+        -ms-animation: spin1 2s infinite linear;
+        animation: spin1 2s infinite linear;
+      }
+    #sidebarad1,
+#sidebarad2 {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  z-index: 999999;
+}
+#sidebarad1 {
+  left: 0;
+}
+#sidebarad2 {
+  right: 0;
+}
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+.sidebar-frame {
+  width: 160px;
+  height: 600px;
+  border: none;
+  display: block;
+}
+</style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125804026-2"><\/script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-125804026-2", { cookie_flags: "secure;samesite=none" });
+      gtag("config", "G-GYMF5NRSDN", { cookie_flags: "secure;samesite=none" });
+    <\/script>
+
+    <script>
+      //Interstitial ad available event
+      document.addEventListener("aip_interstitialadavailable", function (e) {
+        console.log("An interstitial ad is available");
+      });
+    <\/script>
+    <script src="//api.adinplay.com/libs/aiptag/pub/DGZ/basketbros.io/tag.min.js"><\/script>
+
+    <script>
+      var aiptag = aiptag || {};
+      aiptag.cmd = aiptag.cmd || [];
+      aiptag.cmd.display = aiptag.cmd.display || [];
+      aiptag.cmd.player = aiptag.cmd.player || [];
+      // Settings
+      aiptag.consented = false; // GDPR setting, please set this value to false if an EU user has declined or not yet accepted marketing cookies, for users outside the EU please use true and for users accepted the GDPR also use true
+
+      aiptag.cmd.player.push(function () {
+        adplayer = new aipPlayer({
+          AIP_ADBREAK_COMPLETE: function () {
+            console.log("Adbreak Completed");
+            Main.DoneInterstitialAd(false);
+          },
+          AD_WIDTH: 960,
+          AD_HEIGHT: 540,
+          AD_DISPLAY: "default", //default, fullscreen, center, fill
+          TRUSTED: true,
+          LOADING_TEXT: "loading advertisement",
+          PREROLL_ELEM: function () {
+            return document.getElementById("preroll");
+          },
+          AIP_COMPLETE: function (state) {
+            /*******************
+					 ***** WARNING *****
+					*******************
+					Please do not remove the PREROLL_ELEM
+					from the page, it will be hidden automaticly.
+					If you do want to remove it use the AIP_REMOVE callback.
+					*/
+            Main.DoneVideoAd();
+            window.document.getElementById("openfl-content").focus();
+            if (state == null) state = "null";
+            console.log("Video Ad Complete: " + state);
+            SendEvent("event", "donevideo-" + lastUnitPlayed + "-" + state);
+          },
+          AIP_REMOVE: function () {
+            // Here it's safe to remove the PREROLL_ELEM from the page if you want. But it's not recommend.
+          },
+        });
+      });
+
+      function ShowVideo(theUnitName = null) {
+        console.log("SHOW_VIDEO");
+        var aUnitName = "";
+        if (typeof gCrazySDK !== "undefined") {
+          gCrazySDK.addEventListener("adFinished", Main.DoneVideoAd); // reenable sound, enable ui
+          gCrazySDK.addEventListener("adError", Main.DoneVideoAd); // reenable sound, enable ui
+          gCrazySDK.requestAd();
+          console.log("CG_AD_REQUESTED");
+          SendEvent("event", "cgvideo");
+          return;
+        }
+        if (typeof adplayer === "undefined") {
+          Main.DoneVideoAd(true);
+          SendEvent("event", "video_adblocked");
+          console.log("VIDEO_ADBLOCKED");
+        } else {
+          var aStr = "preroll";
+          if (theUnitName != null) aStr = theUnitName;
+          lastUnitPlayed = aStr;
+          SendEvent("event", "startvideo-" + aStr);
+
+          aiptag.cmd.player.push(function () {
+            adplayer.startPreRoll(theUnitName);
+          });
+        }
+      }
+    <\/script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""><\/script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function () {
+        OneSignal.init({
+          appId: "9e216ce8-de65-411a-8cbd-50930a7bd60c",
+        });
+      });
+    <\/script>
+  </head>
+  <body style="overflow: hidden;">
+    <noscript>Enable JavaScript bro!</noscript>
+    <div id="loading" style="position: absolute; width: 392px; height: 31px; z-index: 15; top: 50%; left: 50%; margin: 100px 0 0 -200px; background: black;">
+      <img src="assets/loading.png" />
+    </div>
+
+    <div id="game2" style="width: 100%; height: 100%;">
+      <div id="basketbros-io_160x600" style="float: left; width: 170px; height: 600px; position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);">
+        <script>
+          if (typeof gCrazySDK == "undefined") {
+            aiptag.cmd.display.push(function () {
+              aipDisplayTag.display("basketbros-io_160x600");
+            });
+          }
+        <\/script>
+      </div>
+
+      <div id="openfl-content" style="width: calc(100% - 320px); float: left;">
+        <script type="text/javascript">
+          lime.embed("BasketBros", "openfl-content", 0, 0, { parameters: {} });
+        <\/script>
+      </div>
+      <div id="preroll" style="width: 960px; height: 540px; background-color: black; display: none; position: absolute; top: 50%; left: 50%; z-index: 100; transform: translate(-50%, -50%);"></div>
+
+      <div
+        id="basketbros-io_160x600_2"
+        style="float: right; width: 170px; height: 600px; justify-content: right; text-align: right; position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);"
+      >
+        <script>
+          if (typeof gCrazySDK == "undefined") {
+            aiptag.cmd.display.push(function () {
+              aipDisplayTag.display("basketbros-io_160x600_2");
+            });
+          }
+        <\/script>
+      </div>
+      <div id="basketbros-io_300x250" style="width: 300px; height: 250px; visibility: hidden; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;"></div>
+      <div id="basketbros-io_300x250_2" style="width: 300px; height: 250px; visibility: hidden; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;"></div>
+      <div id="basketbros-io_player_300x600" style="visibility: hidden; width: 300px; height: 600px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;"></div>
+      <div id="basketbros-io_300x600_m" style="visibility: hidden; width: 300px; height: 600px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;"></div>
+      <div id="basketbros-io_728x90" style="visibility: hidden; width: 728px; height: 90px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;"></div>
+    </div>
+    <br />
+    <div>
+      <div class="notch-top-left" style="--notch-color: var(--background-color);"></div>
+      <div class="info-box">
+        <h3>About BasketBros</h3>
+        <p>Alt link: www.lookinthe.net. Fun, fast-paced 1 on 1 basketball game with lots of action. Pick from a variety of characters and let the play begin. Go for crazy dunks, hit the stepback 3, or maybe even punch out your opponent!</p>
+        <p>The controls are very simple: Use either the arrow keys or wasd to control your baller. Jump by pressing the up arrow, and jump again to shoot. Enter/Space will attack if you are on defense.</p>
+        <p>Be sure to allow notifications so you will know when fun new basketball characters are added to the game!</p>
+      </div>
+      <div class="info-box">
+        <h3>FAQ</h3>
+        <b>Why isn't the game loading?</b>
+        <p>You should check your internet connection and make sure our site isn't blocked. Also, disable all ad blockers.</p>
+        <b>How do I play?</b>
+        <p>Just hop in and go dunk on some fools!</p>
+        <b>Which browser should I use?</b>
+        <p>You should use chrome. It is the only browser guaranteed to work. BasketBros has also been tested to work on FireFox and Safari, but not guaranteed.</p>
+      </div>
+    </div>
+    <div class="section">
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin: 10px; padding: 2px; justify-content: center;">
+        <div class="partner">
+          <script>
+            function getPartner(y) {
+              var referrer = document.referrer;
+              if (referrer.includes("crazygames")) {
+                return (
+                  '<center><br><div style="transform:translate(' +
+                  "-50" +
+                  "px," +
+                  y +
+                  'px); width=70%; z-index: 101; text-align:right;><font style="font-weight:normal;font-family:Arial;color:#010101;font-size:20px;"><a href="https://crazygames.com" target="_blank">Crazy Games</a></font><br></div></center>'
+                );
+              } else if (referrer.includes("iogames.space")) {
+                return (
+                  '<center><br><div style="transform:translate(' +
+                  "-50" +
+                  "px," +
+                  y +
+                  'px); width=70%; z-index: 101; text-align:right;><font style="font-weight:normal;font-family:Arial;color:#010101;font-size:20px;"><a href="https://iogames.space" target="_blank">IO Games</a></font><br></div></center>'
+                );
+              } else if (referrer.includes("poki")) {
+                return (
+                  '<center><br><div style="transform:translate(' +
+                  "-50" +
+                  "px," +
+                  y +
+                  'px); width=70%; z-index: 101; text-align:right;><font style="font-weight:normal;font-family:Arial;color:#010101;font-size:20px;">Check out our friends at <a href="https://poki.com" target="_blank">Poki</a></font><br></div></center>'
+                );
+              } else if (referrer.includes("silver")) {
+                return (
+                  '<center><br><div style="transform:translate(' +
+                  "-50" +
+                  "px," +
+                  y +
+                  'px); width=70%; z-index: 101; text-align:right;><font style="font-weight:normal;font-family:Arial;color:#010101;font-size:20px;"><a href="https://silvergames.com" target="_blank">Silver Games</a></font><br></div></center>'
+                );
+              } else {
+                return (
+                  '<center><br><div style="transform:translate(' +
+                  "-50" +
+                  "px," +
+                  y +
+                  'px); width=70%; z-index: 101; text-align:right;><font style="font-weight:normal;font-family:Arial;color:#010101;font-size:20px;"><a href="https://crazygames.com" target="_blank">Crazy Games</a></font><br></div></center>'
+                );
+              }
+              return "";
+            }
+            document.write(getPartner(0));
+          <\/script>
+        </div>
+        <br />
+        <br />
+        <div class="partner">&nbsp; Would you like to be a partner too? Contact: echo-the-coder@tuta.io </div>
+      </div>
+    </div>
+    <div class="section">
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin: 10px; padding: 2px; justify-content: center;">
+        <div class="partner">Mirrors/Proxies: <a href="/">Basket Bros Unblocked / BasketBros Unblocked</a><br /></div>
+      </div>
+    </div>
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"><\/script>
+    <script>
+      var lastRefresh = 0;
+      function ShowAd1(doRefresh) {
+        if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+          return;
+        }
+        var l = window.document.getElementById("basketbros-io_160x600");
+        if (l == null) return;
+        l.style.display = "";
+        l.style.visibility = "visible";
+
+        l = window.document.getElementById("basketbros-io_160x600");
+        if (l == null) return;
+        l.style.display = "";
+        l.style.visibility = "visible";
+
+        if (typeof gCrazySDK !== "undefined") {
+          var d = new Date();
+          var ms = d.getTime();
+          if (ms - lastRefresh > 10000) {
+            gCrazySDK.requestResponsiveBanner(["basketbros-io_160x600"]);
+            lastRefresh = ms;
+          }
+        } else if (typeof aipDisplayTag !== "undefined") {
+          aipDisplayTag.refresh("basketbros-io_160x600");
+          aipDisplayTag.refresh("basketbros-io_160x600_2");
+        }
+      }
+
+      var lastRefresh6 = 0;
+      function ShowAd6() {
+        if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+          return;
+        }
+        var l = window.document.getElementById("basketbros-io_300x250");
+        if (l == null) {
+          return;
+        }
+        l.style.display = "";
+        l.style.visibility = "visible";
+
+        if (typeof gCrazySDK !== "undefined") {
+          var d = new Date();
+          var ms = d.getTime();
+          if (ms - lastRefresh6 > 10000) {
+            //hndled by the first banner request
+            //gCrazySDK.requestBanner([{containerId: 'basketbros-io_300x250',size: '300x250',}]);
+            //gCrazySDK.requestResponsiveBanner(["basketbros-io_300x250"]);
+            lastRefresh6 = ms;
+          }
+        } else if (typeof aipDisplayTag !== "undefined") {
+          aipDisplayTag.refresh("basketbros-io_300x250");
+        }
+      }
+
+      var lastRefresh2 = 0;
+      function ShowAd2() {
+        if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+          return;
+        }
+        var l = window.document.getElementById("basketbros-io_300x250_2");
+        if (l == null) return;
+        l.style.display = "";
+        l.style.visibility = "visible";
+
+        if (typeof gCrazySDK !== "undefined") {
+          var d = new Date();
+          var ms = d.getTime();
+          if (ms - lastRefresh2 > 10000) {
+            //hndled by the first banner request
+            //gCrazySDK.requestBanner([{containerId: 'basketbros-io_300x250_2',size: '300x250',}]);
+            gCrazySDK.requestResponsiveBanner(["basketbros-io_300x250", "basketbros-io_300x250_2"]);
+
+            lastRefresh2 = ms;
+          }
+        } else if (typeof aipDisplayTag !== "undefined") {
+          aipDisplayTag.refresh("basketbros-io_300x250_2");
+        }
+      }
+      function ShowAd3() {
+        if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+          return;
+        }
+        var l = window.document.getElementById("basketbros-io_728x90");
+        if (l == null) return;
+        l.style.display = "";
+        l.style.visibility = "visible";
+        if (typeof gCrazySDK !== "undefined") {
+          gCrazySDK.requestResponsiveBanner(["basketbros-io_728x90"]);
+        } else if (typeof aipDisplayTag !== "undefined") aipDisplayTag.refresh("basketbros-io_728x90");
+      }
+      function ShowAd4() {
+        if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+          return;
+        }
+        if (window.innerWidth < 1200) return;
+        var l = window.document.getElementById("basketbros-io_player_300x600");
+        if (l == null) return;
+        l.style.display = "";
+        l.style.visibility = "visible";
+        if (typeof gCrazySDK !== "undefined") {
+          gCrazySDK.requestResponsiveBanner(["basketbros-io_player_300x600"]);
+          //gCrazySDK.requestBanner([{containerId: 'basketbros-io_player_300x600',size: '300x600',}]);
+        } else if (typeof aipDisplayTag !== "undefined") aipDisplayTag.refresh("basketbros-io_player_300x600");
+      }
+      function ShowAd7() {
+        if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+          return;
+        }
+        if (window.innerWidth < 1200) return;
+        var l = window.document.getElementById("basketbros-io_300x600_m");
+        if (l == null) return;
+        l.style.display = "";
+        l.style.visibility = "visible";
+        if (typeof gCrazySDK !== "undefined") {
+          gCrazySDK.requestResponsiveBanner(["basketbros-io_player_300x600"]);
+          //gCrazySDK.requestBanner([{containerId: 'basketbros-io_player_300x600',size: '300x600',}]);
+        } else if (typeof aipDisplayTag !== "undefined") aipDisplayTag.refresh("basketbros-io_300x600_m");
+      }
+
+      function right(str, chr) {
+        return str.slice(str.length - chr, str.length);
+      }
+      function SetCGInviteLink() {
+        if (typeof gCrazySDK !== "undefined") {
+          var meta = document.getElementById("cglink");
+          var aStr = meta.value;
+          aStr = right(aStr, 8);
+          var aCGLink = gCrazySDK.inviteLink({ roomId: aStr });
+          meta.value = aCGLink;
+          meta.select;
+          document.execCommand("Copy");
+          console.log("COPIED CG URL");
+        }
+      }
+
+      function ShowAdBreak() {
+        //check if the adslib is loaded correctly or blocked by adblockers etc.
+        if (typeof gCrazySDK !== "undefined") {
+          Main.DoneInterstitialAd(false);
+          return;
+        }
+
+        if (typeof adplayer === "undefined") {
+          Main.DoneInterstitialAd(true);
+          return;
+        }
+        aiptag.cmd.player.push(function () {
+          adplayer.startAdBreak();
+        });
+      }
+
+      document.getElementById("openfl-content").addEventListener("wheel", doScroll);
+      function doScroll(event) {
+        window.scroll(0, window.scrollY + event.deltaY);
+      }
+
+      /*		setInterval(function () { 
+			var l = window.document.getElementById('basketbros-io_160x600');
+			if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
+				ShowAd5();
+			}
+		}, 30000);
+
+		setInterval(function () { 
+			var l = window.document.getElementById('basketbros-io_160x600_2');
+			if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
+				ShowAd1();
+			}
+		}, 32000);*/
+
+      var sid = "vqpdso5mdr0n80kkknmkbi3ntg";
+      function updateStatus(fromEvent = false) {
+        const req = new XMLHttpRequest();
+        var aStr = "recordsession.php?s=" + sid;
+        if (fromEvent == true) aStr = aStr + "&e=1";
+        req.open("GET", aStr);
+        req.send();
+      }
+      function SendEvent(theEvent, theAction) {
+        gtag(theEvent, theAction);
+        updateStatus(true);
+        //console.log("Sending event: " + theEvent + "/" + theAction);
+      }
+      //setInterval(function() { updateStatus, 4*60*1000);
+      updateStatus(true);
+
+      //setInterval(ClearAds, 2000);
+    <\/script>
+    <div id="sidebarad1">
+      <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+      <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+  </body>
+</html>
+`
+},
+'baseball-bros': {
+    title: "Baseball Bros",
+    customHtml: `
+<html lang="en">
+    <base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@ae6706e5224c55594c491edfc7f5ad541e2ea02b/baseball%20bros/" </base>
+	<head>
+ 
+	  <meta charset="utf-8">
+ 
+	  <title>BASEBALL BROS! | Official Site</title>
+	  <meta name="description" content="Online multiplayer baseball! Strikeouts, steals, and grand slams! Hit Nukes!" />
+	  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	  <link rel="shortcut icon" type="image/png" href="./favicon.png">
+	  <meta name="Keywords" content="Baseball, Play, Free, Online, Multiplayer, Games, IO, Sports, Scrolling, Friends">
+	  <meta name="author" content="Blue Wizard Digital">
+ 
+	  <meta property="og:type" content="website" />
+	  <meta property="og:title" content="Baseball Bros" />
+	  <meta property="og:description" content="Online multiplayer baseball! Hit home runs, steal bases, strike out the side!" />
+	  <link rel="manifest" href="manifest.json">
+ 
+ 
+	  <script type="text/javascript" src="./BaseballBros.js?th=76"><\/script>
+ 
+	  <script>
+	    window.addEventListener("touchmove", function(event) {
+	      event.preventDefault();
+	    }, {
+	      capture: false,
+	      passive: false
+	    });
+	    if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+	      var meta = document.getElementById("viewport");
+	      meta.setAttribute('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+	    }
+	    window.addEventListener('keydown', function(e) {
+	      if ((e.keyCode == 32 || e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 9) && e.target == document.body) {
+	        e.preventDefault();
+	      }
+	    });
+	    var aCo = 'US';
+	  <\/script>
+ 
+	  <style>
+	    html,
+	    body {
+	      margin: 0;
+	      padding: 0;
+	      height: 100%;
+	      background: #000000;
+	      color: orange;
+	      height: 100%;
+	      width: 100%;
+	      height: 100vh;
+	      width: 100vw;
+	      margin: 0;
+	      padding: 0;
+	    }
+ 
+	    .body::-webkit-scrollbar {
+	      	      width: 0px;
+	    }
+ 
+	    #openfl-content {
+	      background: #000000;
+	      width: 100%;
+	      height: 100%;
+	    }
+ 
+	    #spinner {
+	      -webkit-transform-origin: 50% 50%;
+	      -moz-transform-origin: 50% 50%;
+	      -o-transform-origin: 50% 50%;
+	      transform-origin: 50% 50%;
+	      width: 82px;
+	      height: 81px;
+	      -webkit-animation: spin1 2s infinite linear;
+	      -moz-animation: spin1 2s infinite linear;
+	      -o-animation: spin1 2s infinite linear;
+	      -ms-animation: spin1 2s infinite linear;
+	      animation: spin1 2s infinite linear;
+	    }
+ 
+ 
+ 
+ 
+	    	    #more {
+	      display: flex;
+	      justify-content: space-between;
+	      background-color: #1a1a1a;
+	      padding: 40px;
+	      border-top: 0px solid #444;
+	      color: #fff;
+	      font-family: 'Arial', sans-serif;
+	    }
+ 
+	    .info-box {
+	      width: 48%;
+	      background-color: #222;
+	      padding: 20px;
+	      border-radius: 8px;
+	      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+	    }
+ 
+	    h3 {
+	      font-size: 24px;
+	      color: #ffa500;
+	      	      margin-bottom: 15px;
+	    }
+ 
+	    p,
+	    b {
+	      line-height: 1.6;
+	      font-size: 16px;
+	    }
+ 
+	    p {
+	      margin-bottom: 10px;
+	    }
+ 
+	    b {
+	      color: #ffd700;
+	      	    }
+ 
+ 
+	    	    a:link {
+	      color: #ffd700;
+	    }
+ 
+	    	    a:visited {
+	      color: #ffd700;
+	    }
+ 
+	    	    a:hover {
+	      color: #ffd700;
+	    }
+ 
+	    	    a:active {
+	      color: #ffd700;
+	    }
+ 
+	    .notch-top-left {
+	      width: 20px;
+	      height: 20px;
+	      background-color: var(--background-color, #1a1a1a);
+	      position: absolute;
+	      top: -10px;
+	      left: -10px;
+	      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+	    }
+ 
+	    	    footer {
+	      background-color: #000;
+	      padding: 20px 0;
+	      text-align: center;
+	      color: #ccc;
+	      font-size: 14px;
+	      border-top: 2px solid #444;
+	      margin-top: 40px;
+	      font-family: 'Arial', sans-serif;
+	      border: 0;
+	    }
+ 
+	    .feedback-form {
+	      position: absolute;
+	      top: 50%;
+	      left: 50%;
+	      transform: translate(-50%, -50%);
+	      width: 50vw;
+	      height: 50vh;
+	      background-color: #2A6DB0;
+	      padding: 20px;
+	      border: 4px solid #FF0000;
+	      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	      text-align: center;
+	      color: #FFFFFF;
+	    }
+ 
+	    .feedback-form h3 {
+	      font-size: 24px;
+	      margin-bottom: 20px;
+	      color: #FFFFFF;
+	      text-shadow: 2px 2px #000000;
+	    }
+ 
+	    .feedback-form textarea {
+	      width: calc(100% - 20px);
+	      height: 50%;
+	      margin-bottom: 10px;
+	      padding: 10px;
+	      font-size: 16px;
+	      font-family: 'Courier New', Courier, monospace;
+	      border: 3px solid #000000;
+	      background-color: #000000;
+	      	      color: #FFFFFF;
+	      	      resize: none;
+	      box-sizing: border-box;
+	    }
+ 
+	    .feedback-form button {
+	      width: 100%;
+	      padding: 12px;
+	      background-color: #FFD700;
+	      	      color: #000000;
+	      border: 3px solid #FF0000;
+	      border-radius: 0;
+	      font-size: 18px;
+	      cursor: pointer;
+	      font-family: 'Courier New', Courier, monospace;
+	      text-shadow: 1px 1px #000000;
+	    }
+ 
+	    .feedback-form button:hover {
+	      background-color: #FFB800;
+	      	      color: #FFFFFF;
+	    }</style>
+ 
+	  	  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D67EBFNGR6"><\/script>
+ 
+	  <script>
+	    window.dataLayer = window.dataLayer || [];
+ 
+	    function gtag() {
+	      dataLayer.push(arguments);
+	    }
+	    gtag('js', new Date());
+ 
+	    if (location.hostname != "localhost") gtag('config', 'G-D67EBFNGR6', {
+	      cookie_flags: 'secure;samesite=none'
+	    });
+	  <\/script>
+ 
+	  <script>
+	    //Interstitial ad available event
+	    document.addEventListener("aip_interstitialadavailable", function(e) {
+	      console.log("An interstitial ad is available");
+	    });
+	  <\/script>
+	  <script>
+	    console.log("Initting AIP")
+	    window.aiptag = window.aiptag || {
+	      cmd: []
+	    };
+	    aiptag.cmd.display = aiptag.cmd.display || [];
+	    aiptag.cmd.player = aiptag.cmd.player || [];
+ 
+	    //CMP tool settings
+	    aiptag.consented = false; // GDPR setting, please set this value to false if an EU user has declined or not yet accepted marketing cookies, for users outside the EU please use true and for users accepted the GDPR also use true
+	    aiptag.cmp = {
+	      show: true,
+	      position: "centered",
+	      button: false,
+	      buttonText: "Privacy settings",
+	      buttonPosition: "bottom-left"
+	    }
+	  <\/script>
+	  <script async src="tag.min.js"><\/script>
+ 
+	  <script>
+	    function SetupMSNotification() {
+	      console.log("notifying");
+	      if (typeof $msstart !== 'undefined') {
+	        console.log("notifying2");
+	        var id = btoa("https://baseballbros.io/sbros_364x180.png");
+	        $msstart.scheduleNotificationAsync({
+	          title: 'Unlock new bros now!',
+	          description: 'You are just about to unlock a new Bro! Who will it be?',
+	          type: 1,
+	          minDelayInSeconds: 24 * 60 * 60
+	        }).then(response => {
+	          console.log("notification response: " + response);
+	        });
+	        $msstart.scheduleNotificationAsync({
+	          title: 'Dunk all over your bros!',
+	          description: 'New bros just waiting to be dunked on! Unlock them now!',
+	          type: 1,
+	          minDelayInSeconds: 24 * 7 * 60 * 60
+	        }).then(response => {
+	          console.log("notification response: " + response);
+	        });
+ 
+	      }
+	    }
+ 
+	    var msAdID;
+ 
+	    function LoadVideo() {
+	      if (typeof $msstart !== 'undefined') {
+	        $msstart.loadAdsAsync().then(adInstance => {
+	          // Use the adInstance.instanceId to make a call to showAdsAsync
+	          msAdID = adInstance.instanceId;
+	        });
+ 
+	        SetupMSNotification();
+	      }
+	    }
+ 
+	    function ShowVideo(theUnitName = null) {
+	      Main.DoneVideoAd(true);
+	      return; //! when aip is live, remove this
+ 
+	      console.log('SHOW_VIDEO:' + theUnitName);
+	      var aUnitName = "";
+	      if (typeof $msstart !== 'undefined') {
+	        $msstart.showAdsAsync(msAdID).then(adInstance => {
+	          // Use the adInstance.showAdsCompletedAsync to be notified of the completion of showing the advertisement
+	          adInstance.showAdsCompletedAsync.then((val) => {
+	            console.log('MS Video Ad Complete');
+	            Main.DoneVideoAd();
+	            window.focus();
+	            window.document.getElementById('openfl-content').focus();
+	            LoadVideo();
+	          }).catch((err) => {
+	            console.log('Ms Video Ad Error');
+	            Main.DoneVideoAd();
+	            window.focus();
+	            window.document.getElementById('openfl-content').focus();
+	            LoadVideo();
+	          });
+	        });
+	      } else if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.addEventListener("adFinished", Main.DoneVideoAd); // reenable sound, enable ui
+	        gCrazySDK.addEventListener("adError", Main.DoneVideoAd); // reenable sound, enable ui
+	        gCrazySDK.requestAd();
+	        console.log('CG_AD_REQUESTED');
+	        SendEvent('event', 'cgvideo');
+	        return;
+	      } else if (typeof adplayer === 'undefined') {
+	        Main.DoneVideoAd(true);
+	        SendEvent('event', 'video_adblocked');
+	        console.log('VIDEO_ADBLOCKED');
+ 
+	      } else {
+	        var aStr = 'preroll';
+	        //if(theUnitName != null) aStr = theUnitName;
+	        lastUnitPlayed = aStr;
+	        SendEvent('event', 'startvideo-' + aStr);
+ 
+	        aiptag.cmd.player.push(function() {
+	          adplayer.startVideoAd(theUnitName);
+	        });
+	      }
+	    }
+	  <\/script>
+ 
+	  <!-- Firebase App (the core Firebase SDK) -->
+	  <script src="firebase-app.js"><\/script>
+	  <!-- Firebase Authentication -->
+	  <script src="firebase-auth.js"><\/script>
+	  <!-- Firebase Firestore (Database) -->
+	  <script src="firebase-firestore.js"><\/script>
+ 
+	  <script>
+	    const firebaseConfig = {
+	      apiKey: "AIzaSyBuzj8XEP7-5kOFFhyuxylQ6P0B2G_ogsM",
+	      authDomain: "baseball-bros-8dd7f.firebaseapp.com",
+	      projectId: "baseball-bros-8dd7f",
+	      storageBucket: "baseball-bros-8dd7f.firebasestorage.app",
+	      messagingSenderId: "618024516218",
+	      appId: "1:618024516218:web:11efff2d4b092aefaf99c3"
+	    };
+ 
+	    firebase.initializeApp(firebaseConfig);
+	    const auth = firebase.auth();
+	    const db = firebase.firestore();
+	    var userData = "";
+ 
+	    function triggerSignIn() {
+	      var provider = new firebase.auth.GoogleAuthProvider();
+	      auth.signInWithPopup(provider);
+	    }
+ 
+	    function saveGameData(gameData) {
+	      console.log('saving gamedata:' + gameData);
+	      var userId = auth.currentUser.uid;
+	      userData = gameData;
+	      db.collection('users').doc(userId).set({
+	        gameData: gameData
+	      }).then(function() {
+	        console.log('Game data saved');
+	      }).catch(function(error) {
+	        console.error('Error saving game data:', error);
+	      });
+	    }
+ 
+	    function loadGameData() {
+	      return userData;
+	    }
+ 
+	    function loadGameDataAsync() {
+	      var userId = auth.currentUser.uid;
+	      db.collection('users').doc(userId).get().then(function(doc) {
+	        if (doc.exists) {
+	          userData = doc.data().gameData;
+	          //Main.LoadGlobals();
+	          console.log('Game data:', doc.data().gameData);
+	          if (typeof Main != "undefined") {
+	            Main.LoadDataComplete();
+	          }
+	        } else {
+	          console.log('No such document!');
+	        }
+	      }).catch(function(error) {
+	        console.error('Error loading game data:', error);
+	      });
+	    }
+ 
+	    auth.onAuthStateChanged(function(user) {
+	      if (user) {
+	        loadGameDataAsync();
+	        SendEvent('event', 'sign_in');
+	        console.log('user signed in');
+	      } else {
+	        console.log('No user signed in');
+	        SendEvent('event', 'sign_out');
+	      }
+	    });
+ 
+	    function signOut() {
+	      auth.signOut().then(() => {
+	        Main.SignOutComplete();
+	        console.log('signed out');
+	      });
+	    }
+ 
+	    function isUserLoggedIn() {
+	      return auth.currentUser !== null;
+	    }
+	  <\/script>
+ 
+	</head>
+ 
+	<body style="overflow:hidden;">
+	  <noscript>Enable JavaScript bro!</noscript>
+	  <script>
+	    //alert("Globals:"+localStorage.getItem("/:Globals").length);
+	    /////////////////////////////////////////////////////////////////////
+	    ////////////////////////////////////////////////////////////////////
+	    var url = window.location.href;
+	    if (url.includes("www.")) {
+	      url = url.replace("www.", "");
+ 
+	      var f = document.createElement('form');
+	      f.action = url;
+	      f.method = 'POST';
+	      var i = document.createElement('input');
+	      i.type = 'hidden';
+	      i.name = 'FGlobals';
+	      i.value = localStorage.getItem("/:Globals");
+	      f.appendChild(i);
+ 
+	      document.body.appendChild(f);
+	      f.submit();
+	    } else {
+	      var aPost = "";
+	      var aStorage = localStorage.getItem("/:Globals");
+	      var aLen = 0;
+	      if (aStorage != null && aStorage.length > 0) {
+	        aLen = aStorage.length;
+	      }
+	      if (aPost.length > aLen) localStorage.setItem("/:Globals", aPost);
+	      if (aPost.length > 0 && aPost.length == aLen) localStorage.setItem("/:Globals", aPost);
+	    }
+	    /////////////////////////////////////////////////////////////////////
+	    ////////////////////////////////////////////////////////////////////
+	  <\/script>
+ 
+	  <div id="loading" style="position: absolute; z-index: 15; top: 60%; left: 50%; transform: translate(-50%, 0); background: black;">
+	    <center><img src="assets/loading4.png"><br />
+	      <img src="assets/fbro.png">
+	      <img src="assets/bbbro.png">
+	      <img src="assets/sbro.png">
+	      <img src="assets/wbro.png">
+	      <img src="assets/kbro.png">
+	      <img src="assets/bbro.png">
+	    </center>
+	  </div>
+ 
+	  <div id="game2" style="width: 100%; height: 100%; ">
+	    <div id="openfl-content" onblur="window.focus(); window.scrollTo(0, 0);" style="width: calc(100%); float:left;">
+	      <script type="text/javascript">
+	        lime.embed("BaseballBros", "openfl-content", 0, 0, {
+	          parameters: {}
+	        });
+	      <\/script>
+	    </div>
+	    <div id="preroll" style="width: 960px; height: 540px; display: none; position: absolute; top: 50%; left: 50%; z-index: 100; transform: translate(-50%, -50%);">
+	    </div>
+ 
+	    <div id="baseballbros-io_300x250" style="width: 336px; height: 280px; visibility:hidden; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	      <script>
+	        if (typeof gCrazySDK == 'undefined') {
+	          aiptag.cmd.display.push(function() {
+	            aipDisplayTag.display('baseballbros-io_300x250');
+	          });
+	        }
+	      <\/script>
+	    </div>
+	    <div id="baseballbros-io_300x250_2" style="width: 336px; height: 280px; visibility:hidden; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	      <script>
+	        if (typeof gCrazySDK == 'undefined') {
+	          aiptag.cmd.display.push(function() {
+	            aipDisplayTag.display('baseballbros-io_300x250_2');
+	          });
+	        }
+	      <\/script>
+	    </div>
+	    <div id="baseballbros-io_336x280" style="visibility:hidden; width: 336px; height: 600px; display: none; position: absolute; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="baseballbros-io_336x280_2" style="visibility:hidden; width: 336px; height: 600px; display: none; position: absolute; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="baseballbros-io_728x90" style="visibility:hidden; width: 728px; height: 90px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="baseballbros-io_728x90_m" style="visibility:hidden; width: 728px; height: 90px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100;overflow: hidden;">
+	    </div>
+	    <div id="baseballbros-io_970x250" style="visibility:hidden; width: 970px; height: 250px; display: none; position: absolute; top: 30px; left: 30px; z-index: 100; text-align: center;overflow: hidden;">
+	    </div>
+ 
+	    <div class="feedback-form" id="feedbackForm" style="display:none;">
+	      <h3>Report a Bug/Glitch</h3>
+	      <textarea id="feedback" placeholder="Describe the bug or glitch with a lot of details, like how to make the glitch happen and anything else whether it seems useful or not..."></textarea>
+	      <textarea id="email" placeholder="Email address (optional)" style="height: 50px;"></textarea>
+	      <textarea id="discord" placeholder="Discord ID (optional)" style="height: 50px;"></textarea>
+	      <button onclick="sendFeedback()" id="submitBtn">Submit Feedback</button>
+	      <br />
+	      <br />
+	      <button onclick="document.getElementById('feedbackForm').style.display='none'" id="submitBtn">Cancel</button>
+	      <p id="responseMsg"></p>
+	    </div>
+	    <script>
+	      //                                                                                                                          var doFeedback = true;
+	      function getOSFromUserAgent() {
+	        const userAgent = navigator.userAgent;
+	        const platform = navigator.platform;
+ 
+	        if (/Windows NT/i.test(userAgent)) return 'Windows';
+	        if (/Mac OS X/i.test(userAgent)) return 'macOS';
+	        if (/Linux/i.test(userAgent)) return 'Linux';
+	        if (/Android/i.test(userAgent)) return 'Android';
+	        if (/iPhone|iPad|iPod/i.test(userAgent)) return 'iOS';
+	        if (/CrOS/i.test(userAgent)) return 'Chrome OS';
+ 
+	        return platform || 'Unknown';
+	      }
+	      async function sendFeedback() {
+	        var feedback = '*' + document.getElementById("feedback").value.trim() + '*';
+	        var email = document.getElementById("email").value.trim();
+	        var discord = document.getElementById("discord").value.trim();
+	        const screenResolution = window.screen.width + 'x' + window.screen.height;
+	        const windowResolution = window.innerWidth + 'x' + window.innerHeight;
+	        var aOS = getOSFromUserAgent();
+	        var aCity = 'Unknown';
+	        const hostname = window.location.hostname;
+	        const gpu = (() => {
+	          const canvas = document.createElement('canvas');
+	          const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+	          const debugInfo = gl?.getExtension('WEBGL_debug_renderer_info');
+	          const gpuInfo = debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : 'Unknown';
+ 
+	          canvas.remove();
+	          return gpuInfo;
+	        })();
+ 
+	        feedback = feedback + '\nDomain: ' + hostname;
+	        feedback = feedback + ', OS: ' + aOS;
+	        feedback = feedback + ', Screen res: ' + screenResolution;
+	        feedback = feedback + ', Window res: ' + windowResolution;
+	        feedback = feedback + ', GPU: ' + gpu;
+	        feedback = feedback + ', City: ' + aCity;
+	        feedback = feedback + ', Email: ' + email;
+	        feedback = feedback + ', Discord: ' + discord;
+ 
+	        const responseMsg = document.getElementById("responseMsg");
+	        const submitBtn = document.getElementById("submitBtn");
+ 
+	        if (!feedback) {
+	          alert("Please enter feedback.");
+	          return;
+	        }
+ 
+	        submitBtn.disabled = true;
+	        responseMsg.textContent = "Submitting...";
+ 
+	        try {
+	          const response = await fetch("sendFeedback.php", {
+	            method: "POST",
+	            headers: {
+	              "Content-Type": "application/x-www-form-urlencoded"
+	            },
+	            body: new URLSearchParams({
+	              feedback: feedback
+	            })
+	          });
+ 
+	          const result = await response.json();
+ 
+	          if (result.status === "success") {
+	            document.getElementById("feedbackForm").style.display = "none";
+	            alert(result.message);
+	          } else {
+	            document.getElementById("feedbackForm").style.display = "none";
+	            alert(result.message);
+	          }
+	        } catch (error) {
+	          document.getElementById("feedbackForm").style.display = "none";
+	          alert("Error submitting feedback. Please try again.");
+	        }
+ 
+	        submitBtn.disabled = false;
+	      }
+	    <\/script>
+ 
+ 
+ 
+	  </div>
+	  <br />
+	  <div tabindex="-1" id="more">
+	    <div class="info-box">
+	      <h3>About Baseball Bros</h3>
+	      <p>Baseball Bros is a simple, fast-paced baseball game that's easy to learn and has lots of crazy hijinks! With online multiplayer gameplay, franchise mode, fun pitching, and so much more!</p>
+	      <p>Controls: Use either the arrow keys or WASD to control your bro. Space bar will throw a the ball, dive, slide, or change directions when you're running the bases.</p>
+	      <p>Be sure to follow us on social media for the latest updates and info!</p>
+	      <br />
+	      <h3>Changelog (3/13/2024)</h3>
+	      <p>Fixed another glitch where the game ends to early if the home team scores on their last at bat while still losing.</p>
+	      <p>Made cpu players better at catching fly balls. Should make it more difficult in 1p games.</p>
+	      <p>Updated theme song.</p>
+	      <p>Fixed more innings glitches.</p>
+	      <p>Fixed glitch where home team wouldn't get their fair at bat in extra innings.</p>
+	      <p>Improved virtual controller on iPads and pnones.</p>
+	    </div>
+	    <div class="info-box">
+	      <h3>FAQ</h3>
+	      <b>Why isn't the game loading?</b>
+	      <p>You should check your internet connection and make sure our site isn't blocked. Also, disable all ad blockers.</p>
+	      <b>How do I play?</b>
+	      <p>Use your arrow keys and space bar! The rest is easy- pick your play and go!</p>
+	      <b>Which browser should I use?</b>
+	      <p>You should use Chrome. It is the only browser guaranteed to work. Baseball Bros has also been tested to work on Firefox and Safari, but not guaranteed.</p>
+	      <b>Are there more Bros games?</b>
+	      <p>Yes! Check out <a tabindex="-1" href="https://footballbros.io">Football Bros</a>, href="https://basketbros.io">Basket Bros</a>, <a tabindex="-1" href="https://soccerbros.gg">Soccer Bros</a> and <a tabindex="-1" href="https://wrestlebros.io">Wrestle Bros</a>. Also be sure to check out <a tabindex="-1" href="https://freegames.io" target="_blank">Web games at FreeGames.io</a></p>
+	      <b>Do you have a favorite team?</b>
+	      <p>Yes, but we're not saying which one. Drop us an e-mail if you think you know.</p>
+	      <b>I'm blocked, where else can i play?</b>
+	      <p>Check here, these links work for all the bros games: <a href="https://sites.google.com/bluewizard.com/basket-bros-unblocked">Baseball Bros Unblocked</a></p>
+ 
+	    </div>
+	  </div>
+	  <footer id="footer" tabindex="-1">
+	    <div tabindex="-1" class="footer-links">
+	      <a tabindex="-1" href="https://bluewizard.com">Copyright 2024 Blue Wizard Digital</a> |
+	      <a tabindex="-1" href="https://bluewizard.com/terms/">Terms of Service</a> |
+	      <a tabindex="-1" href="https://bluewizard.com/privacypolicy/">Privacy Policy</a>
+	    </div>
+	  </footer>
+	  <script>
+	    var lastRefresh = 0;
+ 
+	    function refreshTag(theTag) {
+	      try {
+	        aiptag.cmd.display.push(function() {
+	          aipDisplayTag.refresh(theTag);
+	        });
+	        console.log('Tag refreshed successfully');
+	      } catch (error) {
+	        console.error('Error refreshing the tag:', error);
+	      }
+	    }
+ 
+ 
+	    function ShowAd1(doRefresh) {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('baseballbros-io_160x600');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+ 
+	      l = window.document.getElementById('baseballbros-io_160x600');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+ 
+ 
+	      if (typeof gCrazySDK !== 'undefined') {
+	        var d = new Date();
+	        var ms = d.getTime();
+	        if (ms - lastRefresh > 10000) {
+	          gCrazySDK.requestResponsiveBanner(["baseballbros-io_160x600"]);
+	          lastRefresh = ms;
+	        }
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_160x600');
+	        refreshTag('baseballbros-io_160x600_2');
+	        SendEvent('event', 'aip_banner_requested');
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+ 
+	    }
+ 
+	    var lastRefresh6 = 0;
+	    var doTagOnce = true;
+ 
+	    function ShowAd6() {
+	      var d = new Date();
+	      var ms = d.getTime();
+	      if (ms - lastRefresh6 < 10000) {
+	        return;
+	      }
+	      lastRefresh6 = ms;
+ 
+ 
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('baseballbros-io_300x250');
+	      if (l == null) {
+	        return;
+	      }
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+ 
+	      if (typeof gCrazySDK !== 'undefined') {} else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_300x250');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	        doTagOnce = false;
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+	    }
+ 
+	    var lastRefresh2 = 0;
+ 
+	    function ShowAd2() {
+ 
+	      var d = new Date();
+	      var ms = d.getTime();
+	      if (ms - lastRefresh2 < 10000) {
+	        return;
+	      }
+	      lastRefresh2 = ms;
+ 
+ 
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('baseballbros-io_300x250_2');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+ 
+	      if (typeof gCrazySDK !== 'undefined') {
+	        var d = new Date();
+	        var ms = d.getTime();
+	        if (ms - lastRefresh2 > 10000) {
+	          //hndled by the first banner request
+	          //gCrazySDK.requestBanner([{containerId: 'baseballbros-io_300x250_2',size: '300x250',}]);
+	          gCrazySDK.requestResponsiveBanner(["baseballbros-io_300x250", "baseballbros-io_300x250_2"]);
+ 
+	          lastRefresh2 = ms;
+	        }
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_300x250_2');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+	    }
+ 
+	    function ShowAd3() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('baseballbros-io_728x90');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["baseballbros-io_728x90"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_728x90');
+	        SendEvent('event', 'aip_banner_requested');
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+ 
+	    }
+ 
+	    function ShowAd4() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      if (window.innerWidth < 1200) return;
+	      var l = window.document.getElementById('baseballbros-io_336x280');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["baseballbros-io_336x280"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_336x280');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+ 
+	    }
+ 
+	    function ShowAd7() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      if (window.innerWidth < 1200) return;
+	      var l = window.document.getElementById('baseballbros-io_336x280_2');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["baseballbros-io_336x280_2"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_336x280_2');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+ 
+	    }
+ 
+	    function ShowAd8() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('baseballbros-io_728x90_m');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["baseballbros-io_728x90"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_728x90_m');
+	        SendEvent('event', 'aip_banner_requested');
+	      } else
+	        SendEvent('event', 'banner_adblocked');
+ 
+	    }
+ 
+	    function ShowAd9() {
+	      if (/Android|webOS|iPhone|iPad|iPod|Opera Mini/i.test(navigator.userAgent)) {
+	        return;
+	      }
+	      var l = window.document.getElementById('baseballbros-io_970x250');
+	      if (l == null) return;
+	      l.style.display = '';
+	      l.style.visibility = 'visible';
+	      if (typeof gCrazySDK !== 'undefined') {
+	        gCrazySDK.requestResponsiveBanner(["baseballbros-io_970x250"]);
+	      } else if (typeof aipDisplayTag !== 'undefined') {
+	        refreshTag('baseballbros-io_970x250');
+	        SendEvent('event', 'aip_banner_requested');
+	        if (typeof aiptag !== 'undefined' && aiptag.settings == "") {
+	          if (doTagOnce) SendEvent('event', 'aip_prosper');
+	          SendEvent('event', 'request_prosper');
+	        } else if (typeof aiptag !== 'undefined' && aiptag.settings.iProsperTest !== "undefined") {
+	          if (doTagOnce) SendEvent('event', 'aip_legacy');
+	          SendEvent('event', 'request_legacy');
+	        }
+ 
+ 
+	        doTagOnce = false;
+	      } else {
+	        l.style.backgroundImage = "url(assets/turnoff2.jpg)";
+	        SendEvent('event', 'banner_adblocked_message_shown');
+	      }
+ 
+	    }
+ 
+	    function right(str, chr) {
+	      return str.slice(str.length - chr, str.length);
+	    }
+ 
+	    function SetCGInviteLink() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        var meta = document.getElementById("cglink");
+	        var aStr = meta.value;
+	        aStr = right(aStr, 8);
+	        var aCGLink = gCrazySDK.inviteLink({
+	          roomId: aStr
+	        });
+	        meta.value = aCGLink;
+	        meta.select
+	        document.execCommand('Copy')
+	        console.log("COPIED CG URL");
+	      }
+	    }
+ 
+	    function ShowAdBreak() {
+	      //check if the adslib is loaded correctly or blocked by adblockers etc.
+	      if (typeof gCrazySDK !== 'undefined') {
+	        Main.DoneInterstitialAd(false);
+	        return;
+	      }
+ 
+	      if (typeof adplayer === 'undefined') {
+	        Main.DoneInterstitialAd(true);
+	        return;
+	      }
+	      aiptag.cmd.player.push(function() {
+	        adplayer.startAdBreak();
+	      });
+	    }
+ 
+ 
+	    document.getElementById("openfl-content").addEventListener("wheel", doScroll);
+	    document.getElementById("more").addEventListener("wheel", doScroll);
+ 
+	    function doScroll(event) {
+	      window.scroll(0, window.scrollY + event.deltaY);
+	    }
+ 
+	    function doScroll2(event) {
+	      window.scroll(0, window.scrollY + event.deltaY);
+	    }
+ 
+ 
+	    setInterval(function() {
+	      //console.log("active element:" + document.activeElement);
+	      if (document.activeElement.tagName == "IFRAME") {
+	        document.activeElement.blur();
+	        document.getElementById('openfl-content').focus();
+	        //console.log('refocusing');
+	      }
+	    }, 30);
+ 
+ 
+	    /*setInterval(function () { 
+	    	var l = window.document.getElementById('preroll');
+	    	if(l != null && typeof l.style !== 'undefined' && l.style.visibility !== 'visible') {
+	    		document.getElementById('openfl-content').focus();
+	    		if(document.activeElement instanceof HTMLIFrameElement)
+	    		{
+	    			//document.activeElement.style.display = "none";
+	    			window.focus();
+	    			window.document.getElementById('openfl-content').focus();
+	    		}
+	    	}
+	    }, 1000);*/
+ 
+ 
+	    /*		setInterval(function () { 
+	    			var l = window.document.getElementById('baseballbros-io_160x600');
+	    			if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
+	    				ShowAd5();
+	    			}
+	    		}, 30000);
+ 
+	    		setInterval(function () { 
+	    			var l = window.document.getElementById('baseballbros-io_160x600_2');
+	    			if(l != null && typeof l.style !== 'undefined' && l.style.visibility == 'visible') {
+	    				ShowAd1();
+	    			}
+	    		}, 32000);*/
+ 
+	    var sid = '02k06etmp6fnad6qk2e82s1dfi'
+ 
+	    function updateStatus(fromEvent = false) {
+	      const req = new XMLHttpRequest();
+	      var aStr = "recordsession.php?s=" + sid;
+	      if (fromEvent == true) aStr = aStr + "&e=1"
+	      req.open("GET", aStr);
+	      req.send();
+	    }
+ 
+	    function SendEvent(theEvent, theAction, theParms = '') {
+	      if (theParms == '') {
+	        gtag(theEvent, theAction);
+	      } else {
+	        gtag(theEvent, theAction, theParms);
+	      }
+	      updateStatus(true);
+	      //console.log("Sending event: " + theEvent + "/" + theAction + "/" + theParms);
+	    }
+	    //setInterval(function() { updateStatus, 4*60*1000);
+	    //setInterval( function() {
+	    //	window.scrollTo(0, 0);
+	    //}, 2000 );
+	    updateStatus(true);
+ 
+	    //setInterval(ClearAds, 2000);
+ 
+	    function EmailSignup() {
+	      if (document.getElementById("signup") || document.getElementById("deleteme")) return;
+	      const iframe = document.createElement("iframe");
+ 
+	      //			iframe.style.display = "block";
+	      iframe.style.width = "550px";
+	      iframe.style.height = "" + window.innerHeight - 100 + "px";
+	      iframe.style.position = "absolute";
+	      iframe.style.top = "50px";
+	      iframe.style.left = "50%";
+	      iframe.style["margin-left"] = "-225px";
+	      //iframe.style["margin-right"] = "-275px";
+	      iframe.style["max-width"] = "100%";
+	      iframe.setAttribute("id", "signup");
+ 
+	      document.body.appendChild(iframe);
+	    }
+ 
+	    function GamePlayStart() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        console.log("GamePlayStart");
+	        gCrazySDK.gameplayStart();
+	      }
+	    }
+ 
+	    function GamePlayStop() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        console.log("GamePlayStop");
+	        gCrazySDK.gameplayStop();
+	      }
+	    }
+ 
+	    function HappyTime() {
+	      if (typeof gCrazySDK !== 'undefined') {
+	        console.log("happytime");
+	        gCrazySDK.happytime();
+	      }
+	    }
+ 
+	    var scrollerMessage = " WELCOME TO BASEBALL BROS! ARE YOU READY TO HIT SOME NUKES? WE'RE STILL MAKING ADJUSTMENTS- YOU CAN CHECK THE BOTTOM OF THE PAGE FOR THE LATEST CHANGES! IF YOU HAVE A GLITCH OR FEEDBACK, YOU CAN EMAIL INFO@BLUEWIZARD.COM!!! ";
+ 
+	    const element = document.getElementById('openfl-content');
+	    function keepFocus() {
+	      element.focus();
+	    }
+	    element.addEventListener('blur', keepFocus);
+	    element.addEventListener('focusout', keepFocus);
+	  <\/script>
+</html>
+`
+},
 'pokemon-swsh-ultimate': {
     title: "Pokemon Sword and Shield Ultimate Plus",
     customHtml: `
@@ -46929,6 +51267,237 @@ let joystick = nipplejs.create({
         });
     <\/script>
   </body>
+</html>
+`
+},
+'basket-random': {
+    title: "Basket Random",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket Random</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="generator" content="Construct 3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bubbls/ruffle@1520d90d7b2994737acd8f7a633d018f63c22ca7/style.css" type="text/css">
+    
+    <script>
+        window.addEventListener("keydown", function(e) {  if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) { e.preventDefault(); } }, false); 
+    <\/script>
+    
+    <style>
+        #sidebarad1, #sidebarad2 {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 600px;
+            padding: 0;
+            margin: 0;
+            z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+        }
+        .sidebar-frame {
+            width: 160px;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@1520d90d7b2994737acd8f7a633d018f63c22ca7/box2d.js"><\/script>
+    
+    <noscript>
+        <div id="notSupportedWrap">
+            <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+            <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+        </div>
+    </noscript>
+    
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@1520d90d7b2994737acd8f7a633d018f63c22ca7/suppoortcheck.js"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@1520d90d7b2994737acd8f7a633d018f63c22ca7/offclient.js" type="module"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@1520d90d7b2994737acd8f7a633d018f63c22ca7/main.js" type="module"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@1520d90d7b2994737acd8f7a633d018f63c22ca7/registersw.js" type="module"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@1520d90d7b2994737acd8f7a633d018f63c22ca7/api.js"><\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'boxing-random': {
+    title: "Boxing Random",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boxing Random</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="generator" content="Scirra Construct">
+    <meta name="author" content="TwoPlayerGames">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bubbls/ruffle@25f6152ab54ec5409c832c904ed3e5e482600d6a/boxstyle.css" type="text/css">
+
+    <style>
+        #sidebarad1, #sidebarad2 {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 160px;
+            height: 600px;
+            padding: 0;
+            margin: 0;
+            z-index: 999999;
+        }
+        #sidebarad1 { left: 0; }
+        #sidebarad2 { right: 0; }
+        .sidebar-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 10;
+        }
+        .sidebar-frame {
+            width: 160px;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@25f6152ab54ec5409c832c904ed3e5e482600d6a/boxwasm.js"><\/script>
+    <noscript>
+        <div id="notSupportedWrap">
+            <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+            <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+        </div>
+    </noscript>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@25f6152ab54ec5409c832c904ed3e5e482600d6a/boxcheck.js"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@25f6152ab54ec5409c832c904ed3e5e482600d6a/boxclient.js" type="module"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@25f6152ab54ec5409c832c904ed3e5e482600d6a/boxmain.js" type="module"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@25f6152ab54ec5409c832c904ed3e5e482600d6a/boxsw.js" type="module"><\/script>
+
+    <div id="sidebarad1">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+    <div id="sidebarad2">
+        <div class="sidebar-close" onclick="this.parentElement.style.display='none'">✕</div>
+    </div>
+</body>
+</html>
+`
+},
+'volley-random': {
+    title: "Volley Random",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volley Random</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="generator" content="Scirra Construct">
+
+    <link rel="stylesheet" href="https://274105583-163826330694719375.preview.editmysite.com/uploads/b/139890129-613310438668365288/files/style.css" type="text/css">
+    <script type="text/javascript">
+        function analytics() {sdk.showBanner();};
+        function analytics_ID() {sdk.showBanner();};
+        setTimeout(function() {analytics();}, 1000);
+        setInterval(function() {analytics_ID();}, 675000);
+    <\/script>
+</head>
+<body>
+
+    <script>
+    if (location.protocol.substr(0, 4) ==="file")
+    {
+        alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+    }
+    <\/script>
+    
+    <script src="https://274105583-163826330694719375.preview.editmysite.com/uploads/b/139890129-613310438668365288/files/box2d.wasm.js"><\/script>
+    
+    <noscript>
+        <div id="notSupportedWrap">
+            <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+            <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+        </div>
+    </noscript>
+    
+    <script src="https://274105583-163826330694719375.preview.editmysite.com/uploads/b/139890129-613310438668365288/files/scripts/supportcheck.js"><\/script>
+    <script src="https://274105583-163826330694719375.preview.editmysite.com/uploads/b/139890129-613310438668365288/files/scripts/offlineclient.js" type="module"><\/script>
+    <script src="https://274105583-163826330694719375.preview.editmysite.com/uploads/b/139890129-613310438668365288/files/scripts/main.js" type="module"><\/script>
+    <script src="https://274105583-163826330694719375.preview.editmysite.com/uploads/b/139890129-613310438668365288/files/scripts/register-sw.js" type="module"><\/script>
+    
+</body>
+</html>
+`
+},
+'soccer-random': {
+    title: "Soccer Random 1",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soccer Random 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://471058263-725410472258601738.preview.editmysite.com/uploads/b/139890129-510930859892590631/files/style.css" type="text/css">
+    <script>
+        window.addEventListener("keydown", function(e) { if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) { e.preventDefault(); } }, false); 
+    <\/script>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script src="https://471058263-725410472258601738.preview.editmysite.com/uploads/b/139890129-510930859892590631/files/box2d.wasm.js"><\/script> 
+    <noscript>
+        <div id="notSupportedWrap">
+            <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+            <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+        </div>
+    </noscript>
+    <script src="https://471058263-725410472258601738.preview.editmysite.com/uploads/b/139890129-510930859892590631/files/scripts/supportcheck.js"><\/script>
+    <script src="https://471058263-725410472258601738.preview.editmysite.com/uploads/b/139890129-510930859892590631/files/scripts/offlineclient.js" type="module"><\/script>
+    <script src="https://471058263-725410472258601738.preview.editmysite.com/uploads/b/139890129-510930859892590631/files/scripts/main.js" type="module"><\/script>
+    <script src="https://471058263-725410472258601738.preview.editmysite.com/uploads/b/139890129-510930859892590631/files/scripts/register-sw.js" type="module"><\/script>
+</body>
 </html>
 `
 },
