@@ -2807,5 +2807,19 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1gO0OtMfAoVUaZGxX825aH48OySgHYd5n/view?usp=sharing",
                 description: "Girl discovers app that controls boys.",
                 year: "2014"
+            },
+            {
+                title: "Hoppers",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRRmZawCA6nU54kqX2dugkNQi4A58G-yqWyUu0E3YwbaVp5GgTC",
+                link: "https://drive.google.com/file/d/1NkmCNf5CUML_KZvNi4fgGKA8r7fpXIdd/view?usp=drive_link",
+                description: "A scientist discovers a way to transfer a human's consciousness into a robotic animal.",
+                year: "2026"
+            },
+            {
+                title: "Red One",
+                imageUrl: "https://m.media-amazon.com/images/M/MV5BMjA4NDkwNzktNjJkYi00ODNhLWFhYzQtYzk5NjU4MDM0OWZmXkEyXkFqcGc@._V1_.jpg",
+                link: "https://drive.google.com/file/d/1_placeholder_red_one/view?usp=sharing",
+                description: "After Santa Claus (code name: Red One) is kidnapped, the North Pole's Head of Security must team up with the world's most infamous bounty hunter in a globe-trotting, action-packed mission to save Christmas.",
+                year: "2024"
             }
 ];
