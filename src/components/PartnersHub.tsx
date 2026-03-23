@@ -41,12 +41,11 @@ export default function PartnersHub() {
               }`}
             >
               {partner.banner && (
-                <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
+                <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity duration-500">
                   <img src={partner.banner} alt="" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
                 </div>
               )}
-
               <div className="relative z-10 flex items-center gap-4">
                 <div className="flex items-center gap-5 flex-grow">
                   <div className="w-16 h-16 rounded-full bg-black/60 border border-white/10 flex items-center justify-center overflow-hidden p-3 shadow-2xl group-hover:border-[var(--mk-gold)]/30 transition-colors">
@@ -79,6 +78,12 @@ export default function PartnersHub() {
               exit={{ opacity: 0, x: -20 }}
               className="absolute inset-0 p-12 lg:p-20 overflow-y-auto flex flex-col"
             >
+              {selectedPartner.background && (
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                  <img src={selectedPartner.background} alt="" className="w-full h-full object-cover opacity-30" referrerPolicy="no-referrer" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--mk-midnight)]/60 to-[var(--mk-midnight)]" />
+                </div>
+              )}
               <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--mk-gold)]/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 
               <div className="relative z-10 max-w-3xl">
@@ -99,7 +104,7 @@ export default function PartnersHub() {
                         Partner
                       </span>
                       <span className="text-xs text-[var(--mk-silver)] opacity-40 font-bold uppercase tracking-widest">
-                        Est. 2026 &bull; Made by {selectedPartner.operatedBy}
+                        Est. {selectedPartner.estDate || '2026'} &bull; Made by {selectedPartner.operatedBy}
                       </span>
                     </div>
                   </div>
