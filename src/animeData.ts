@@ -12,20 +12,6 @@ export const ANIME: Anime[] = [
                 link: "https://drive.google.com/drive/u/3/folders/1oiTD4MSCwf8IEJdNk-mJGq_NZ5xRMkA1"
             },
             {
-                title: "Cyberpunk: Edgerunners",
-                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTJzu3zDbGM0ZQTwYwn14xPD_KPmamL-Y8XE5OK-6RBBuw7jqM",
-                description: "A street kid trying to survive in a technology and body modification-obsessed city of the future. Having everything to lose, he chooses to stay alive by becoming an edgerunner: a mercenary outlaw also known as a cyberpunk.",
-                year: "2022",
-                link: "https://drive.google.com/drive/folders/1q7Y8JBLsCyqVIvmq2Zi93tSPebobgPwA?usp=drive_link"
-            },
-            {
-                title: "Yu-Gi-Oh!",
-                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHRqlfrREFO0_0dVxNAVOQySJRpS_OE_hUU1jtUF6jqPTxpaFJSVWh6lzXK60AVSX5AkbI&s",
-                description: "A young boy named Yugi Mutou solves an ancient Egyptian puzzle and awakens a gambling alter-ego within his body that helps him solve conflicts using various games.",
-                year: "2000",
-                link: "https://drive.google.com/drive/folders/124TPsVnf6BvotwM3A-PdljjHw4b2wS87?usp=drive_link"
-            },
-            {
                 title: "Afro Samurai",
                 imageUrl: "https://m.media-amazon.com/images/M/MV5BMjRlZGMwZmMtZjA0YS00NjUzLTk1OGYtNDhjZjM3ZmJkNGRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/drive/folders/1enWphPUwgRPYnGj2TD7XVNrG8HCc3CDm?usp=drive_link"
@@ -209,6 +195,13 @@ export const ANIME: Anime[] = [
                 title: "Cowboy Bebop",
                 imageUrl: "https://upload.wikimedia.org/wikipedia/en/a/a9/Cowboy_Bebop_key_visual.jpg",
                 link: "https://drive.google.com/drive/folders/1BBQhmMmkPejoIOvEZF_-jcFOa62iF8KK?usp=share_link"
+            },
+            {
+                title: "Cyberpunk: Edgerunners",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTJzu3zDbGM0ZQTwYwn14xPD_KPmamL-Y8XE5OK-6RBBuw7jqM",
+                description: "A street kid trying to survive in a technology and body modification-obsessed city of the future. Having everything to lose, he chooses to stay alive by becoming an edgerunner: a mercenary outlaw also known as a cyberpunk.",
+                year: "2022",
+                link: "https://drive.google.com/drive/folders/1q7Y8JBLsCyqVIvmq2Zi93tSPebobgPwA?usp=drive_link"
             },
             {
                 title: "Dandadan",
@@ -965,6 +958,13 @@ export const ANIME: Anime[] = [
                         url: "https://drive.google.com/drive/folders/1OFIN-v1Q6rKvwXdmptihw5EBgE6ixpV3?usp=sharing"
                     }
                 ]
+            },
+            {
+                title: "Yu-Gi-Oh!",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHRqlfrREFO0_0dVxNAVOQySJRpS_OE_hUU1jtUF6jqPTxpaFJSVWh6lzXK60AVSX5AkbI&s",
+                description: "A young boy named Yugi Mutou solves an ancient Egyptian puzzle and awakens a gambling alter-ego within his body that helps him solve conflicts using various games.",
+                year: "2000",
+                link: "https://drive.google.com/drive/folders/124TPsVnf6BvotwM3A-PdljjHw4b2wS87?usp=drive_link"
             },
             {
                 title: "Zom 100: Bucket List of the Dead",
