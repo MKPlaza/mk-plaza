@@ -702,6 +702,13 @@ export const MOVIES: Movie[] = [
                 year: "2025"
             },
             {
+                title: "The SpongeBob SquarePants Movie",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzF33bj8wuOJgcH2rvLYHXAxQt2FgW4YqXLn46xOAPLDLTQucJ",
+                link: "https://drive.google.com/file/d/11mVla6Y3qLX4pplfnxMavSczJ200_8dl/view?usp=drive_link",
+                description: "SpongeBob SquarePants and Patrick Star go on a quest to retrieve King Neptune's stolen crown and save Mr. Krabs from a death sentence.",
+                year: "2004"
+            },
+            {
                 title: "Saving Bikini Bottom: The Sandy Cheeks Movie",
                 imageUrl: "https://resizing.flixster.com/YPxmePH0javyxa_6obXzzGlwgGM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2RkOTdlZjJmLTQ0M2QtNDE2Yy04ZWYyLWZjOTdiOGRmMDk4My5qcGc=",
                 link: "https://drive.google.com/file/d/17fAM9sipu3BPElFpqFrG3ukYahbUEZQJ/view?usp=drive_link",
