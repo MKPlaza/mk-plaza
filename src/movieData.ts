@@ -982,6 +982,13 @@ export const MOVIES: Movie[] = [
                 year: "2022"
             },
             {
+                title: "Despicable Me 4",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQnZGXMNERS8l6sBYL9QaPgFTdp3Pkxyu-ff1WVuq1CWpp65ITa",
+                link: "https://drive.google.com/file/d/1siki1wYP3LpfjFpUT8Z9lJuJzl7MdBhX/view?usp=drive_link",
+                description: "Gru, Lucy, Margo, Edith, and Agnes welcome a new member to the family, Gru Jr., who is intent on tormenting his dad. Gru faces a new nemesis in Maxime Le Mal and his femme fatale girlfriend Valentina, and the family is forced to go on the run.",
+                year: "2024"
+            },
+            {
                 title: "M3GAN",
                 imageUrl: "https://www.dropbox.com/scl/fi/b8g18123piymxit8vk7e7/M3GAN_Poster.jpg?rlkey=0awe2343tw0v6zwnfyuu9tmpi&st=ezun8tdm&dl=1",
                 link: "https://drive.google.com/file/d/1MMl1EYr_OYdc9R-va2IIdPUmkqcj1UpR/view",
