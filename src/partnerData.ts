@@ -30,15 +30,17 @@ export const PARTNERS: PartnerItem[] = [
     ]
   },
   {
-    id: 'placeholder-2',
-    name: 'Placeholder',
-    operatedBy: 'Placeholder',
-    desc: 'Placeholder description.',
-    link: '#',
-    logo: '',
+    id: 'chillzone',
+    name: 'Chillzone',
+    operatedBy: 'ohsols',
+    desc: 'my son potential man made this',
+    link: 'https://chillz0ne.dev/',
+    logo: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Chillzone/czone-icon.jpg',
+    banner: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Chillzone/czone.gif',
+    background: 'https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Chillzone/czone-background.gif',
     estDate: '2026',
     socials: [
-      { platform: 'Website', url: '#' }
+      { platform: 'Discord', url: 'https://discord.com/invite/cuHARsXESW' }
     ]
   },
   {
