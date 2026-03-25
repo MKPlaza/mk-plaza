@@ -142,6 +142,20 @@ export const MOVIES: Movie[] = [
                 year: "1999"
             },
             {
+                title: "Scooby-Doo",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZIUYUCfJcsDzCnY0sMs4qyxrN8y5xtzEBeof2qalnxiTaZWm",
+                link: "https://drive.google.com/file/d/1mwMlE9sWCZLVtQ4ljJEeLxtVrKknnfUB/view?usp=drive_link",
+                description: "After an acrimonious break up, the Mystery Inc. gang are individually summoned to an island resort to investigate strange goings on.",
+                year: "2002"
+            },
+            {
+                title: "Scooby-Doo 2: Monsters Unleashed",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSlIxulitrCkIyE27MEdcCv1Ib8UW0pXkNQUmda6cVNW39ztOC",
+                link: "https://drive.google.com/file/d/1VXxo8cvPI7-zigV3FR5JP3-C2WSXvkXt/view?usp=drive_link",
+                description: "The Mystery Inc. gang must save Coolsville from an attack of their past monsters brought to life by an evil masked figure.",
+                year: "2004"
+            },
+            {
                 title: "Scooby-Doo! and Krypto, Too!",
                 imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAHISH3_gLAP4ACIZXSRtTxXMbFsb9Rya89s1iX_szQAkiOuQn",
                 link: "https://drive.google.com/file/d/1A3KkhmxtAok0WhO2iaSR4GPwOWBs_T6w/view?usp=drive_link",
@@ -688,6 +702,20 @@ export const MOVIES: Movie[] = [
                 year: "2025"
             },
             {
+                title: "Saving Bikini Bottom: The Sandy Cheeks Movie",
+                imageUrl: "https://resizing.flixster.com/YPxmePH0javyxa_6obXzzGlwgGM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2RkOTdlZjJmLTQ0M2QtNDE2Yy04ZWYyLWZjOTdiOGRmMDk4My5qcGc=",
+                link: "https://drive.google.com/file/d/17fAM9sipu3BPElFpqFrG3ukYahbUEZQJ/view?usp=drive_link",
+                description: "When Bikini Bottom and all its residents are suddenly scooped out of the ocean, Sandy Cheeks and SpongeBob SquarePants journey to Texas to save the town from a villainous plot.",
+                year: "2024"
+            },
+            {
+                title: "Plankton: The Movie",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoTeAhF9MjfBqFF9Y5D31MZ8s_tT8iuef18F1416xkWnSl5vW9",
+                link: "https://drive.google.com/file/d/1GhJnl35m05XYpjooWoxeg0lw54VpjCEx/view?usp=drive_link",
+                description: "Plankton's world is turned upside down when his plan to take over the world is thwarted.",
+                year: "2025"
+            },
+            {
                 title: "Superman",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/file/d/1nO646VaJQBN725tPVe9TLFnLBFPJ-jbL/view?usp=sharing",
@@ -898,6 +926,13 @@ export const MOVIES: Movie[] = [
                 year: "2019"
             },
             {
+                title: "The Nun",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi49U-7alumxu_CBlDWp1xl5WkY2JBGAVszrFluxBQN1elyelm",
+                link: "https://drive.google.com/file/d/1f54gZFt1PT6TllWwa-5SjtkRuOITxLNs/view?usp=drive_link",
+                description: "A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania.",
+                year: "2018"
+            },
+            {
                 title: "Beavis and Butt-Head Do the Universe",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BZDAzMzk0NjktZDBiNS00ODNlLWI4NTItZDAzZTMxYTY2YTk4XkEyXkFqcGc%40._V1_.jpg",
                 link: "https://drive.google.com/file/d/18Y0uInnJ7cNwwGsbJWlH3zPr4LtccmyR/view?usp=sharing",
@@ -937,6 +972,13 @@ export const MOVIES: Movie[] = [
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/Minions_The_Rise_of_Gru_-_poster_(English).jpg",
                 link: "https://drive.google.com/file/d/1lrJNkBON3H_5n8lF3WKCaUT6AUl9qbh4/view",
                 description: "Twelve-year-old dreams of becoming supervillain.",
+                year: "2022"
+            },
+            {
+                title: "Minions and More 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6JbrS6Q5ztUmw5Xa8CvezcM_bRyGKQ2Q_SJCjpx2Z11jn3rf44L6rEj51LNbW6i-M53IpLX6Gqnm3JcqfbHVneq2qNS-Ak4H_dVGmag&s=10",
+                link: "https://drive.google.com/file/d/1SH1liTGeW3xZT37iIIzNmyIyqNZVEaWT/view?usp=drive_link",
+                description: "A collection of Minions shorts from the Despicable Me franchise.",
                 year: "2022"
             },
             {
@@ -1353,6 +1395,20 @@ export const MOVIES: Movie[] = [
                 year: "2022"
             },
             {
+                title: "Dragon Ball Z: Wrath of the Dragon",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSIM8Lg-5-7CVYMFk_0D7dOkk-LWO0rZZnKeoeamwfbPBe3B1vI",
+                link: "https://drive.google.com/file/d/1qJQUUUOnTmoQghPiBaUauP9PXlZjOJQQ/view?usp=drive_link",
+                description: "A mysterious old man asks for help in releasing the hero Tapion from a music box. But Tapion is not the only thing inside.",
+                year: "1995"
+            },
+            {
+                title: "Dragon Ball Z: Battle of Gods",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTEpzzFvt4WBvmz7sD5RdAlQ_Y0-DjtirFm54fxme1UOsDyDUtH",
+                link: "https://drive.google.com/file/d/1jPUfA3jQqnXU3fmNdBbe_LC1UOXBFQx7/view?usp=drive_link",
+                description: "The Z-Fighters must contend with Beerus, the God of Destruction, who awakens and travels to Earth in search of a Super Saiyan God.",
+                year: "2013"
+            },
+            {
                 title: "Dragon Ball Super: Broly",
                 imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTtee_nA-fbMYgK9N-Udz1zV92C_l-mqp34n2SmWeg99cLYVmad",
                 link: "https://drive.google.com/file/d/1TDKC-UVrRxNm1ZMYGU8SUG0R1jSn_oYt/view?usp=drive_link",
@@ -1759,6 +1815,13 @@ export const MOVIES: Movie[] = [
                 year: "1984"
             },
             {
+                title: "Ghostbusters: Frozen Empire",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ6NthsSmt0iCv7PiwyR3QyuOpkGD8BmghbMJXezuW8u-wo15RO",
+                link: "https://drive.google.com/file/d/1JSj4AbrcqmjOLKWJJS7u7IxyMGJiQmzY/view?usp=drive_link",
+                description: "When the discovery of an ancient artifact unleashes an evil force, Ghostbusters new and old must join forces to protect their home and save the world from a second Ice Age.",
+                year: "2024"
+            },
+            {
                 title: "Grease",
                 imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTOO07bZ2gSzP6RzqDJFUqm0FsgtwVNa07gU5Rcu2_kXNPUFJ1u",
                 link: "https://drive.google.com/file/d/1W77S931ShuhZ2RVeiNrfdQQUcR4pKsD0/view?usp=drive_link",
@@ -2037,6 +2100,13 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1p5DfNhB87k8bE-OQi7ELONmPkIhJIjC-/view?usp=sharing",
                 description: "The Bride continues her quest for vengeance.",
                 year: "2004"
+            },
+            {
+                title: "Kung Fu Panda 4",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7JjEKTO61is55MO9oWgqxOJ48o60Aux8iprkQ0jEswoBVFNaw",
+                link: "https://drive.google.com/file/d/1boIeWj09LNCdGhmasx5f5YnClj0IyDWe/view?usp=drive_link",
+                description: "Po is tapped to become the Spiritual Leader of the Valley of Peace, but first he must find and train a new Dragon Warrior.",
+                year: "2024"
             },
             {
                 title: "The Karate Kid",
@@ -2821,5 +2891,12 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1_placeholder_red_one/view?usp=sharing",
                 description: "After Santa Claus (code name: Red One) is kidnapped, the North Pole's Head of Security must team up with the world's most infamous bounty hunter in a globe-trotting, action-packed mission to save Christmas.",
                 year: "2024"
+            },
+            {
+                title: "Joe's College Road Trip",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ2dnKKC8DQp0G9BNla7b5oE_-0LMZxR7zwolrwnUlWM-6_xQ0",
+                link: "https://drive.google.com/file/d/1bIHwYf80n_DovwE2D7irPbgkyaVZOChx/view?usp=drive_link",
+                description: "To teach his sheltered grandson about the real world, Madea's foul-mouthed brother Joe takes the college-bound teen on a raucous cross-country road trip.",
+                year: "2026"
             }
 ];
