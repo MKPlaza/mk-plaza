@@ -2492,206 +2492,536 @@ export const GAME_PAYLOADS: Record<string, { title: string; customHtml: string }
 </html>
 `
                 },
-                'sonic-cd': {
-            title: "Sonic CD (WebAssembly)",
-            customHtml: `
-<!doctype html>
+	'sonic-cd': {
+    title: "Sonic CD",
+    customHtml: `
+<!DOCTYPE html>
+
+
+
 <html lang="en-us">
-	<head>
-        <base href="https://rawcdn.githack.com/TWS2401/Sonic-CD-WASM/main/">
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sonic CD</title>
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-soniccd@main/image_2026-02-28_164525280.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
-		<title>Sonic CD</title>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-		<link type="text/css" rel="stylesheet" href="css/fonts.css" />
-		<style type="text/css">
-			html, body {
-				font-family: arial, sans-serif;
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				background-color: #000;
-				text-align: center;
-			}
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: #000;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
 
-			canvas {
-				height: 100%;
-				margin: auto;
-				padding: 0;
-				border: 0 none;
-				background-color: #000;
-				-ms-interpolation-mode: nearest-neighbor;
-				image-rendering: optimizeSpeed;
-				image-rendering: -webkit-optimize-contrast;
-				image-rendering: -moz-crisp-edges;
-				image-rendering: -o-crisp-edges;
-				image-rendering: crisp-edges;
-				image-rendering: pixelated;
-			}
+        #canvasWrapper {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100vw; height: 100vh;
+            background: black;
+            z-index: 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-			.spinner {
-				height: 30px;
-				width: 30px;
-				margin: 20px 0 0 20px;
-				display: inline-block;
-				vertical-align: top;
-				-webkit-animation: rotation .8s linear infinite;
-				-moz-animation: rotation .8s linear infinite;
-				-o-animation: rotation .8s linear infinite;
-				animation: rotation 0.8s linear infinite;
-				border-left: 5px solid rgb(235, 235, 235);
-				border-right: 5px solid rgb(235, 235, 235);
-				border-bottom: 5px solid rgb(235, 235, 235);
-				border-top: 5px solid rgb(120, 120, 120);
-				border-radius: 100%;
-				background-color: rgb(189, 215, 46);
-			}
+        canvas {
+            display: block;
+            position: absolute;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+            outline: none;
+        }
 
-			@-webkit-keyframes rotation {
-				from { -webkit-transform: rotate(0deg); }
-				to { -webkit-transform: rotate(360deg); }
-			}
-			@-moz-keyframes rotation {
-				from { -moz-transform: rotate(0deg); }
-				to { -moz-transform: rotate(360deg); }
-			}
-			@-o-keyframes rotation {
-				from { -o-transform: rotate(0deg); }
-				to { -o-transform: rotate(360deg); }
-			}
-			@keyframes rotation {
-				from { transform: rotate(0deg); }
-				to { transform: rotate(360deg); }
-			}
+        #output { display: none; }
 
-			#status {
-				display: inline-block;
-				vertical-align: top;
-				margin-top: 30px;
-				margin-left: 20px;
-				font-weight: bold;
-				color: rgb(120, 120, 120);
-			}
+        #loading-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #000 url('https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-soniccd@main/image_2026-02-28_165116299.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: opacity 0.4s ease;
+        }
 
-			#progress {
-				height: 20px;
-				width: 300px;
-			}
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-			#output {
-				width: 100%;
-				height: 200px;
-				margin: 10px auto 0;
-				border-left: 0;
-				border-right: 0;
-				padding-left: 0;
-				padding-right: 0;
-				display: block;
-				background-color: black;
-				color: white;
-				font-family: 'Lucida Console', Monaco, monospace;
-				outline: none;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="spinner" id="spinner" style="display: none;"></div>
-		<div id="status" style="display: none;">Downloading...</div>
-		<progress id="progress" value="0" max="100" hidden="hidden"></progress>
-		<canvas id="canvas" onclick="window.focus();" oncontextmenu="event.preventDefault();"></canvas>
-		<textarea id="output" style="display: none;" rows="8"></textarea>
+        #loading-screen.hidden { display: none; }
 
-		<script type="text/javascript">
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('sw.js').then(function(registration) {
-					registration.addEventListener('updatefound', function() {
-						var installingWorker = registration.installing;
-						console.log('A new service worker is being installed:', installingWorker);
-					});
-				}, function(err) {
-					console.log('ServiceWorker registration failed: ', err);
-				});
-			} else {
-				console.log('ServiceWorker not supported');
-			}
+        .loading-content {
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-			var statusElement = document.getElementById('status');
-			var progressElement = document.getElementById('progress');
-			var spinnerElement = document.getElementById('spinner');
+        .loading-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 8px;
+        }
 
-			var Module = {
-				preRun: [],
-				postRun: [],
-				print: (function () {
-					var element = document.getElementById('output');
-					if (element) element.value = ''; // clear browser cache
-					return function (text) {
-						if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-						console.log(text);
-						if (element) {
-							element.value += text + "\\n";
-							element.scrollTop = element.scrollHeight; // focus on bottom
-						}
-					};
-				})(),
-				printErr: function (text) {
-					if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-					console.error(text);
-				},
-				canvas: (function () {
-					var canvas = document.getElementById('canvas');
-					canvas.addEventListener("webglcontextlost", function (e) {
-						alert('WebGL context lost. You will need to reload the page.');
-						e.preventDefault();
-					}, false);
-					return canvas;
-				})(),
-				setStatus: function (text) {
-					if (!Module.setStatus.last) Module.setStatus.last = {time: Date.now(), text: ''};
-					if (text === Module.setStatus.last.text) return;
-					var m = text.match(/([^(]+)\\((\\d+(\\.\\d+)?)\\/(\\d+)\\)/);
-					var now = Date.now();
-					if (m && now - Module.setStatus.last.time < 30) return; // if this is a progress update, skip it if too soon
-					Module.setStatus.last.time = now;
-					Module.setStatus.last.text = text;
-					if (m) {
-						text = m[1];
-						progressElement.value = parseInt(m[2]) * 100;
-						progressElement.max = parseInt(m[4]) * 100;
-						progressElement.hidden = false;
-						spinnerElement.hidden = false;
-					} else {
-						progressElement.value = null;
-						progressElement.max = null;
-						progressElement.hidden = true;
-						if (!text) spinnerElement.style.display = 'none';
-					}
-					statusElement.innerHTML = text;
-				},
-				totalDependencies: 0,
-				monitorRunDependencies: function (left) {
-					this.totalDependencies = Math.max(this.totalDependencies, left);
-					Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
-				}
-			};
-			Module.setStatus('Downloading...');
-			window.onerror = function () {
-				Module.setStatus('Exception thrown, see JavaScript console');
-				spinnerElement.style.display = 'none';
-				Module.setStatus = function (text) {
-					if (text) Module.printErr('[post-exception status] ' + text);
-				};
-			};
-		<\/script>
-		<script async="async" defer="defer" type="text/javascript" src="index.js"><\/script>
-	</body>
+        .title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mini-favicon {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+
+        .loading-title {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 900;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .loading-mb {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .loading-bar-container {
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .loading-bar {
+            width: 0%;
+            height: 100%;
+            background: #fff;
+            border-radius: 10px;
+            transition: width 0.3s ease-out;
+        }
+
+        .loading-text {
+            font-size: 13px;
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            height: 1.2em;
+        }
+
+        .loading-dots {
+            position: absolute;
+            bottom: 40%;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px; height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: dot-pulse 1.5s infinite ease-in-out;
+            box-shadow: 0 0 5px rgba(255,255,255,0.5);
+        }
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50%       { opacity: 1;   transform: scale(1.2); }
+        }
+
+        .ownership-footer {
+            position: absolute;
+            bottom: 25px;
+            width: 100%;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 11px;
+            padding: 0 20px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .control-panel {
+            position: fixed;
+            top: 15px; right: 15px;
+            z-index: 1001;
+        }
+
+        .game-btn {
+            background: rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            color: white;
+            padding: 8px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(4px);
+            transition: all 0.2s;
+            min-width: 130px;
+            font-family: 'Inter', sans-serif;
+        }
+        .game-btn:hover {
+            background: rgba(0,0,0,0.8);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        #fpsInfo {
+            position: fixed;
+            bottom: 8px; right: 10px;
+            z-index: 99999;
+            color: rgba(255,255,255,0.4);
+            font-size: 11px;
+            font-family: monospace;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvasWrapper">
+        <canvas id="canvas" tabindex="0" width="848" height="480" onclick="window.focus();" oncontextmenu="event.preventDefault();"></canvas>
+    </div>
+
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-header">
+                <div class="title-group">
+                    <img src="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-soniccd@main/image_2026-02-28_164525280.png" class="mini-favicon" alt="icon">
+                    <div class="loading-title">Sonic CD (html by crunch arcade)</div>
+                </div>
+                <div class="loading-mb" id="mb-text">0.0MB of 75.0MB</div>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+            <div class="loading-text" id="loading-text">getting jsdelivr stuff...</div>
+        </div>
+
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <div class="ownership-footer">
+            crunch arcade owns this btw
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <button id="fullscreen-button" class="game-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+            Fullscreen
+        </button>
+    </div>
+
+    <div id="fpsInfo">detecting refresh rate...</div>
+    <textarea id="output" rows="8"></textarea>
+
+    <script type="text/javascript">
+        const $ = id => document.getElementById(id);
+
+        var loadingBar    = $('loading-bar');
+        var loadingText   = $('loading-text');
+        var mbText        = $('mb-text');
+        var loadingScreen = $('loading-screen');
+        var totalSizeMB   = 75.0;
+
+        function finishLoading() {
+            loadingBar.style.width = '100%';
+            mbText.textContent = totalSizeMB.toFixed(1) + 'MB of ' + totalSizeMB.toFixed(1) + 'MB';
+            loadingText.textContent = 'ready!';
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+                loadingScreen.addEventListener('transitionend', function() {
+                    loadingScreen.classList.add('hidden');
+                }, { once: true });
+            }, 400);
+        }
+
+        $('fullscreen-button').onclick = function() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(function() {
+                    console.warn('Fullscreen failed');
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        };
+
+        (function() {
+            var fpsInfoEl = $('fpsInfo');
+
+            function detectRefreshRate(cb) {
+                var samples = [], last = null, count = 0;
+                function tick(now) {
+                    if (last !== null) {
+                        var delta = now - last;
+                        if (delta > 0 && delta < 100) samples.push(delta);
+                    }
+                    last = now;
+                    if (++count < 60) { requestAnimationFrame(tick); }
+                    else {
+                        samples.sort(function(a,b){ return a-b; });
+                        cb(Math.round(1000 / samples[Math.floor(samples.length/2)]));
+                    }
+                }
+                requestAnimationFrame(tick);
+            }
+
+            function pickTargetFPS(hz) {
+                if (hz <= 60) return hz;
+                var best = 30;
+                for (var d = 1; d <= hz; d++) {
+                    if (hz % d === 0) {
+                        var fps = hz / d;
+                        if (fps <= 60 && fps > best) best = fps;
+                    }
+                }
+                return Math.max(30, best);
+            }
+
+            function installRAFThrottle(targetFPS) {
+                var interval = 1000 / targetFPS;
+                var lastTime = -Infinity;
+                var origRAF = window.requestAnimationFrame.bind(window);
+                var origCAF = window.cancelAnimationFrame.bind(window);
+                var idMap = new Map(), idCounter = 1;
+
+                window.requestAnimationFrame = function(cb) {
+                    var wrappedId = idCounter++;
+                    var entry = { active: true, nativeId: null };
+                    function wrapped(now) {
+                        if (!entry.active) return;
+                        if ((now - lastTime) >= interval - 0.5) { lastTime = now; cb(now); }
+                        else { entry.nativeId = origRAF(wrapped); }
+                    }
+                    entry.nativeId = origRAF(wrapped);
+                    idMap.set(wrappedId, entry);
+                    return wrappedId;
+                };
+
+                window.cancelAnimationFrame = function(id) {
+                    var entry = idMap.get(id);
+                    if (entry) { entry.active = false; try { origCAF(entry.nativeId); } catch(e){} idMap.delete(id); }
+                };
+            }
+
+            detectRefreshRate(function(hz) {
+                var target = pickTargetFPS(hz);
+                fpsInfoEl.textContent = 'monitor: ' + hz + 'hz → locked at ' + target + 'fps';
+                installRAFThrottle(target);
+                console.log('[FPS] Monitor: ' + hz + 'hz, locked to: ' + target + 'fps');
+                setTimeout(function() { fpsInfoEl.style.transition = 'opacity 1s'; fpsInfoEl.style.opacity = '0'; }, 5000);
+            });
+        })();
+
+        (function() {
+            const BASE_W = 848, BASE_H = 480;
+
+            function isFS() {
+                return !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement);
+            }
+
+            function adoptCanvas(el) {
+                if (!el) return;
+                try { el.width = BASE_W; el.height = BASE_H; } catch(e) {}
+                if (!el.id) el.id = 'canvas';
+                const wrap = $('canvasWrapper');
+                if (!wrap.contains(el)) wrap.appendChild(el);
+                el.style.position = 'absolute';
+                window.Module = window.Module || {};
+                window.Module.canvas = el;
+            }
+
+            adoptCanvas($('canvas'));
+
+            new MutationObserver(muts => {
+                for (const m of muts)
+                    for (const n of m.addedNodes)
+                        if (n.nodeName === 'CANVAS')
+                            setTimeout(() => { adoptCanvas(n); updateAllCanvasFits(); }, 0);
+            }).observe(document.documentElement, { childList: true, subtree: true });
+
+            function applyCoverFit(canvasEl) {
+                try {
+                    if (!canvasEl) return;
+                    const vw = Math.max(1, window.innerWidth);
+                    const vh = Math.max(1, window.innerHeight);
+                    var scale = isFS()
+                        ? Math.max(vw / BASE_W, vh / BASE_H)
+                        : Math.min(vw / BASE_W, vh / BASE_H);
+                    const displayW = Math.round(BASE_W * scale);
+                    const displayH = Math.round(BASE_H * scale);
+                    canvasEl.style.width  = displayW + 'px';
+                    canvasEl.style.height = displayH + 'px';
+                    canvasEl.style.left   = Math.round((vw - displayW) / 2) + 'px';
+                    canvasEl.style.top    = Math.round((vh - displayH) / 2) + 'px';
+                    if (canvasEl.width !== BASE_W || canvasEl.height !== BASE_H) {
+                        try { canvasEl.width = BASE_W; canvasEl.height = BASE_H; } catch(e) {}
+                    }
+                } catch(e) { console.warn('applyCoverFit failed', e); }
+            }
+
+            function updateAllCanvasFits() {
+                document.querySelectorAll('canvas').forEach(c => applyCoverFit(c));
+            }
+
+            window.addEventListener('resize', updateAllCanvasFits);
+            document.addEventListener('fullscreenchange', updateAllCanvasFits);
+            document.addEventListener('webkitfullscreenchange', updateAllCanvasFits);
+            document.addEventListener('mozfullscreenchange', updateAllCanvasFits);
+            setTimeout(function() { setInterval(updateAllCanvasFits, 500); }, 3000);
+            updateAllCanvasFits();
+            window.updateAllCanvasFits = updateAllCanvasFits;
+        })();
+
+        var _saveSystemReady = false;
+        var DB_NAME = 'sonic-cd-saves';
+        var STORE_NAME = 'files';
+
+        function openSaveDB() {
+            return new Promise(function(res, rej) {
+                var rq = indexedDB.open(DB_NAME, 1);
+                rq.onupgradeneeded = function(e) { e.target.result.createObjectStore(STORE_NAME); };
+                rq.onsuccess = function(e) { res(e.target.result); };
+                rq.onerror = function(e) { rej(e.target.error); };
+            });
+        }
+
+        function saveToDB(data) {
+            openSaveDB().then(function(db) {
+                var tx = db.transaction(STORE_NAME, 'readwrite');
+                tx.objectStore(STORE_NAME).put(new Uint8Array(data), 'SData.bin');
+                tx.oncomplete = function() { console.log('[saves] SData.bin saved (' + data.length + ' bytes)'); };
+                tx.onerror = function(e) { console.warn('[saves] save failed:', e.target.error); };
+            });
+        }
+
+        function loadFromDB() {
+            return openSaveDB().then(function(db) {
+                return new Promise(function(res, rej) {
+                    var tx = db.transaction(STORE_NAME, 'readonly');
+                    var rq = tx.objectStore(STORE_NAME).get('SData.bin');
+                    rq.onsuccess = function() { res(rq.result || null); };
+                    rq.onerror = function(e) { rej(e.target.error); };
+                });
+            });
+        }
+
+        function installSaveHooks() {
+            if (_saveSystemReady) return;
+            _saveSystemReady = true;
+
+            loadFromDB().then(function(data) {
+                if (data && data.length > 0) {
+                    try {
+                        FS.writeFile('/SData.bin', data);
+                        console.log('[saves] SData.bin restored (' + data.length + ' bytes)');
+                    } catch(e) { console.warn('[saves] restore failed:', e); }
+                } else {
+                    console.log('[saves] no existing save found, starting fresh');
+                }
+            }).catch(function(e) { console.warn('[saves] loadFromDB error:', e); });
+
+            var origWrite = FS.write;
+            FS.write = function(stream, buffer, offset, length, position) {
+                var result = origWrite.apply(this, arguments);
+                if (stream && stream.path && stream.path.includes('SData') && length > 0) {
+                    try {
+                        var saved = FS.readFile('/SData.bin');
+                        saveToDB(saved);
+                    } catch(e) { console.warn('[saves] failed to read SData.bin after write:', e); }
+                }
+                return result;
+            };
+
+            console.log('[saves] save hooks installed');
+        }
+
+        var Module = {
+            preRun: [],
+            postRun: [function() {
+                finishLoading();
+                if (window.updateAllCanvasFits) updateAllCanvasFits();
+                setTimeout(installSaveHooks, 1000);
+            }],
+            print:    function(text) { console.log(text); },
+            printErr: function(text) { console.error(text); },
+            canvas: (function() {
+                var canvas = document.getElementById('canvas');
+                canvas.addEventListener("webglcontextlost", function(e) {
+                    alert('WebGL context lost. Reload the page.');
+                    e.preventDefault();
+                }, false);
+                return canvas;
+            })(),
+            setStatus: function(text) {
+                if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
+                if (text === Module.setStatus.last.text) return;
+                var m = text.match(/([^(]+)\\((\\d+(\\.\\d+)?)\\/(\\d+)\\)/);
+                var now = Date.now();
+                if (m && now - Module.setStatus.last.time < 30) return;
+                Module.setStatus.last.time = now;
+                Module.setStatus.last.text = text;
+                if (m) {
+                    var loaded  = parseFloat(m[2]);
+                    var total   = parseFloat(m[4]);
+                    var percent = Math.round((loaded / total) * 100);
+                    var currentMB = (percent / 100 * totalSizeMB).toFixed(1);
+                    loadingBar.style.width = percent + '%';
+                    mbText.textContent     = currentMB + 'MB of ' + totalSizeMB.toFixed(1) + 'MB';
+                    if      (percent < 20) loadingText.textContent = 'getting jsdelivr stuff...';
+                    else if (percent < 60) loadingText.textContent = 'downloading game data...';
+                    else if (percent < 90) loadingText.textContent = 'assembling Data.rsdk...';
+                    else                   loadingText.textContent = 'almost there...';
+                } else {
+                    if (text) loadingText.textContent = text;
+                }
+            },
+            totalDependencies: 0,
+            monitorRunDependencies: function(left) {
+                this.totalDependencies = Math.max(this.totalDependencies, left);
+                Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : '');
+            }
+        };
+
+        Module.setStatus('Downloading...');
+    <\/script>
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-soniccd@main/js1/index.js"><\/script>
+
+</body>
 </html>
 `
-        },
+},
                 'sonic-jam': {
                     title: "Sonic Jam (Sega Saturn)",
                     customHtml: `
@@ -5241,6 +5571,1339 @@ export const GAME_PAYLOADS: Record<string, { title: string; customHtml: string }
                         </html>
                     `
                 },
+	'sonic-and-the-fallen-star': {
+    title: "Sonic and The Fallen Star",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="https://cdn.jsdelivr.net/gh/bubbls/ports@main/sonic-and-the-falling-star/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="HandheldFriendly" content="true" />
+
+  <title>Sonic and The Fallen Star</title>
+
+<style type="text/css">
+  body {
+      background-color: #000;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+  
+  #gameContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  #MMFCanvas {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+      display: none; 
+  }
+  
+  #loadingScreen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+  }
+  
+  #loadingText {
+      color: #FFF;
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+  
+  
+  h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #F00;
+      font-size: x-large;
+  }
+  p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000;
+      font-size: small;
+  }
+  #bloctxt {
+      border-left-width: 5px;
+      border-left-style: solid;
+      border-left-color: #F00;
+      padding-left: 10px;
+      position: absolute;
+      left: 50%;
+      width: 600px;
+      margin-left: -260px;
+      background-color: #FFF;
+  }
+</style>
+
+    <script>
+      if (!document.createElement("canvas").getContext)
+      {
+            window.open("http://www.clickteam.com/html5-fallback", "_self");
+        }
+    <\/script>
+
+    <script src="src/Runtime.js"><\/script>
+
+  <script>
+    if (window.location.protocol == "file:")
+    {
+        document.write('<div id="bloctxt">');
+        document.write('<h1>The application cannot be run...</h1>');
+        document.write('<p>HTML browsers do not allow you to launch data files directly from the file system.<br>');
+        document.write('A drag & drop of the html file on a web-browser window will not work, on any machine.<br>');
+        document.write('Please use the Build & Run option (it opens a local web server) to run your application,<br>')
+        document.write('or upload your application folder to a remote web-server, and start it from there...</p>');
+        document.write('</div>');
+        throw new error("Cannot run application");
+    }
+  <\/script>
+</head>
+
+<body>
+
+<div id="loadingScreen">
+    <div id="loadingText">Loading...</div>
+    <div id="loadingDetails">Initializing...</div>
+</div>
+
+<div id="gameContainer">
+    <canvas id="MMFCanvas" width="424" height="240">
+        Your browser does not support Canvas.
+    </canvas>
+</div>
+
+<script>
+    // Loading tracker
+    const loadingDetails = document.getElementById('loadingDetails');
+    const loadingScreen = document.getElementById('loadingScreen');
+    const canvas = document.getElementById('MMFCanvas');
+    
+    let loadingSteps = [
+        'Loading john.cch...',
+        'Loading resources...',
+        'Initializing runtime...',
+        'Starting game...'
+    ];
+    let currentStep = 0;
+    
+    function updateLoadingText(text) {
+        loadingDetails.textContent = text;
+    }
+    
+    function simulateLoading() {
+        if (currentStep < loadingSteps.length) {
+            updateLoadingText(loadingSteps[currentStep]);
+            currentStep++;
+            setTimeout(simulateLoading, 300);
+        }
+    }
+    
+    window.addEventListener("load", windowLoaded, false);
+    function windowLoaded()
+    {
+        // Start showing loading messages
+        simulateLoading();
+        
+        // Intercept XMLHttpRequest to track actual file loading
+        const originalOpen = XMLHttpRequest.prototype.open;
+        XMLHttpRequest.prototype.open = function(method, url) {
+            // Extract filename from URL
+            const filename = url.split('/').pop();
+            if (filename.includes('.cc')) {
+                updateLoadingText('Loading ' + filename + '...');
+            }
+            return originalOpen.apply(this, arguments);
+        };
+        
+        // Start the runtime
+        new Runtime("MMFCanvas", "resources/john.cch");
+        
+        // Hide loading screen after a delay (adjust time as needed)
+        setTimeout(function() {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s';
+            canvas.style.display = 'block';
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 3000); // Wait 3 seconds, adjust based on your game's load time
+        
+        // Resize handling
+        window.addEventListener('resize', resizeCanvas, false);
+        resizeCanvas();
+    }
+    
+    function resizeCanvas() {
+        const canvas = document.getElementById('MMFCanvas');
+        const scaleX = window.innerWidth / 424;
+        const scaleY = window.innerHeight / 240;
+        const scale = Math.min(scaleX, scaleY);
+        
+        canvas.style.width = (424 * scale) + 'px';
+        canvas.style.height = (240 * scale) + 'px';
+    }
+<\/script>
+
+</body>
+</html>
+`
+},
+'sonic-robo-blast-2': {
+    title: "Sonic Robo Blast 2",
+    customHtml: `
+<!doctype html>
+<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/srb2.png" sizes="256x256" type="image/png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/srb2.png">
+    <meta name="apple-mobile-web-app-title" content="SRB2">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.3.0/jszip.min.js"><\/script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.1/Sortable.min.js"><\/script>
+    <script src="https://cdn.jsdelivr.net/gh/mazmazz/idb-keyval@idb-version/dist/idb-keyval-iife.min.js"><\/script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"><\/script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise-pool@2.5.0/es6-promise-pool.min.js"><\/script>
+    <title>Sonic Robo Blast 2</title>
+    <style>
+      html, body { height: 100%; }
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background-color: #000;
+        background-image:
+          linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.80) 10%, rgba(0,0,0,0.80) 90%, rgba(0,0,0,0.25) 100%),
+          url(https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/background.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #ffffff;
+      }
+      body.startedMainLoop { background-image: none; }
+      body.startedMainLoop #content { display: none; }
+      a { color: rgb(107, 161, 255); }
+      a:visited { color: #7f6bd1; }
+      @media (min-width: 320px) { #logo { width: 120%; height: auto; margin: 0 -10%; } #systemArguments, #userArguments { width: 120%; margin: 0 -10%; } }
+      @media (min-width: 481px) { #logo { width: 90%; height: auto; } #systemArguments, #userArguments { width: 90%; } }
+      @media (min-width: 641px) { #logo { width: 60%; height: auto; } #systemArguments, #userArguments { width: 60%; } }
+      @media (min-width: 1281px) { #logo { width: 40%; height: auto; } #systemArguments, #userArguments { width: 40%; } }
+      #status-cont { display: inline-block; font-weight: bold; text-align: center; margin: auto 10%; }
+      #progress { height: 20px; width: 256px; }
+      #canvas, #keyCapture { position: fixed; top: 0; left: 0; width: 100% !important; height: 100% !important; opacity: 0; }
+      #keyCapture { opacity: 0; background-color: rgba(0,0,0,0); border: 0; color: rgba(0,0,0,0); z-index: -99999; }
+      #textForm { display: flex; position: fixed; bottom: 0; left: 0; width: 100%; height: 2.5em; z-index: -99999; opacity: 0; }
+      #textCapture { flex-grow: 1; }
+      #textSubmit { width: 6.66em; }
+      #content { width: 100%; height: 100%; overflow-y: auto; text-align: center; display: grid; }
+      button, .button { width: 160px; height: 48px; margin: 0.1em; background-color: darkgray; background-image: linear-gradient(black, darkgray); border: 0.1em gray solid; border-radius: 2px; color: white; font-weight: bold; text-align: center; line-height: 2.5em; display: inline-block; cursor: default; }
+      .blueButton { background-color: mediumblue; background-image: linear-gradient(black, mediumblue); border-color: mediumblue; }
+      .yellowButton { background-color: black; background-image: linear-gradient(black, white); border-color: white; }
+      .redButton { background-image: linear-gradient(black, crimson); border-color: crimson; }
+      #startbtn { background-color: black; color: white; background-image: linear-gradient(grey, white); border: 0.1em black solid; font-weight: bolder; font-size: 1.25em; line-height: normal; cursor: pointer; }
+      #notes { display: inline-block; text-align: start; }
+      summary { margin: 0.75em 0; font-size: 1.2em; }
+      #addonFilesTemplate { display: none; }
+      .addonFilesField { display: inline-block; width: 100%; margin: 0.1em 0; }
+      #resetbtn { display: none; }
+      .addonFilesField .addonButton { width: 2.5em; }
+      .addonFilesField label, .addonFilesField input[type=file] { width: 12.5em; height: 2.5em; margin: 0; cursor: pointer; }
+      .addonFilesField input[type=file] { font-size: 1em; display: none; }
+      .addonFilesField .addonDelete { width: 2.5em; height: 2.5em; margin: 0 0 0 0.1em; }
+      #addonButtonAdd { width: 15.4em; height: 2.5em; margin: 0.1em 0; }
+      #androidNotice { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div id="status-cont" class="emscripten">
+        <div id="header">
+          <p><img id="logo" src="https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main/assets/srb2logo.png"/></p>
+        </div>
+        <div id="details">
+          <p>
+            <button id="startbtn" onclick="StartLoad()">Play</button>
+            <span hidden class="emscripten" id="status"></span>
+          </p>
+          <progress value="0" max="100" id="progress" hidden=1></progress>
+          <p><button id="resetbtn" class="button" onclick="javascript:window.location.reload()">Cancel</button></p>
+        </div>
+        <form id="controlsForm" action="javascript:void(0);">
+          <details id="addons">
+            <summary>Mods</summary>
+            <div id="addonFilesContainer">
+              <div class="addonFilesField" id="addonFilesTemplate">
+                <input type="file" id="addonFiles" class="button yellowButton"/>
+                <label for="addonFiles" class="button yellowButton">Load File</label><div class="addonButton addonDelete button redButton">-</div>
+              </div>
+            </div>
+            <div id="addonButtonAdd" class="button blueButton">+</div>
+            <p>
+              <input type="checkbox" id="addonStartup" checked/>
+              <label for="addonStartup">Load Mods on Startup</label>
+            </p>
+            <details id="addonsHelp">
+              <summary>Mod Help</summary>
+              <p>You may load one or more mods here. Drag each mod to change its loading order.</p>
+              <p>Or, you may load ZIP files. They will be available in the Addons Menu.</p>
+              <p>To load savegames and gamedata, place them in a folder titled <code>userdata/</code> within the ZIP file.</p>
+              <p><a href="https://mb.srb2.org/forumdisplay.php?f=116" target="_blank">You may download mods here</a>.</p>
+            </details>
+          </details>
+          <details id="controls">
+            <summary>Settings</summary>
+            <p>
+              <label for="resizeHeight">Resolution</label>
+              <input type="range" id="resizeHeight" name="resizeHeight" oninput="ShowValue(this, 'p', (elem) => { return elem.value > 800; }, 'Full');" min="200" max="900" value="200" step="100"/>
+              <span id="resizeHeightValue"></span>
+            </p>
+            <p>
+              <input type="checkbox" id="playMusic" checked/><label for="playMusic">Play Music</label>
+              <input type="checkbox" id="playSound" checked/><label for="playSound">Play Sounds</label>
+            </p>
+            <p><input type="checkbox" id="useMouse" checked/><label for="useMouse">Use Mouse</label></p>
+            <details id="storageControls">
+              <summary>Storage</summary>
+              <button class="yellowButton" onclick="DownloadFS(); return false;">Download User Data</button>
+              <button class="redButton" onclick="if (confirm('Are you sure? All installed data will be reset!\\n\\nYour user data will be preserved.')) ResetProgramData(true, _=>alert('Program data reset.')); return false;">Reset Program Data</button>
+              <button onclick="if (confirm('Are you sure? All your progress will be lost!')) DeleteFS('/home/web_user/.srb2', true, _=>alert('User data deleted.')); return false;">Delete User Data</button>
+            </details>
+            <details id="advancedControls">
+              <summary>Advanced</summary>
+              <p>
+                <label for="drawDistance">Draw Distance</label>
+                <input type="range" id="drawDistance" name="drawDistance" oninput="ShowValueRange(this, '', DrawDistanceRange);" min="0" max="10" value="5" step="1"/>
+                <span id="drawDistanceValue"></span>
+              </p>
+              <p>
+                <input type="checkbox" id="shadow" checked/><label for="shadow">Render Shadows</label>
+                <input type="checkbox" id="midisoundfont" class="nosave"/><label for="midisoundfont">Reset Soundfont</label>
+              </p>
+              <p>
+                <span id="packageVersionRow">
+                  <label for="packageVersion">Version</label>
+                  <select id="packageVersion">
+                    <option value="2.2.4" selected>2.2.4</option>
+                    <option value="2.2.4-lowend">2.2.4-lowend</option>
+                  </select>
+                </span>
+                <input type="checkbox" id="lowend"/><label for="lowend">Prefer Low-End</label>
+              </p>
+              <p>
+                <label for="userArguments">Command Line</label><br/>
+                <textarea id="systemArguments" rows="2" readonly></textarea><br/>
+                <textarea id="userArguments" rows="2" placeholder="Custom Arguments"></textarea>
+              </p>
+            </details>
+          </details>
+        </form>
+        <details id="help">
+          <summary>Help</summary>
+          <p id="fullscreenNotice">Toggle fullscreen by pressing F11.</p>
+          <p>No online multiplayer: download the PC version at <a href="//www.srb2.org" target="_blank">srb2.org</a>.</p>
+          <p>Game controllers should work.</p>
+          <p>If this page crashes, try enabling "Low-End" mode under Settings > Advanced.</p>
+          <p id="androidNotice">There is a native Android port on <a href="https://github.com/Jimita/SRB2/releases" target="_blank">GitHub</a>.</p>
+        </details>
+        <details id="footer">
+          <summary>About</summary>
+          <p>Sonic Robo Blast 2 is a 3D Sonic the Hedgehog fangame inspired by the original Sonic games of the 1990s.</p>
+          <p><a href="https://github.com/mazmazz/SRB2-emscripten/issues">View issues</a> / <a href="https://github.com/mazmazz/SRB2-emscripten">View source</a></p>
+          <p>Contributors: <a href="https://github.com/mazmazz">mazmazz</a> / <a href="https://github.com/heyjoeway">heyjoeway</a> / <a href="https://github.com/Jimita">Jimita</a></p>
+          <span id="newVersion"></span>
+          <p style="font-size:xx-small;">Licensed under GNU GPL v2. See <a href="https://opensource.org/licenses/GPL-2.0" target="_blank">https://opensource.org/licenses/GPL-2.0</a>.</p>
+          <p style="font-size:xx-small;">The <a href="https://musical-artifacts.com/artifacts/400" target="_blank">Florestan Basic GM GS</a> soundfont by <a href="http://dev.nando.audio" target="_blank">Nando Florestan</a>.</p>
+          <p style="font-size:xx-small;">Original design copyright 1998-2020 Sonic Team Junior.</p>
+        </details>
+        <div id="copyright">
+          <p style="font-size:xx-small;">ported to a singlefile by crunch arcade</p>
+		  <p style="font-size:xx-small;">Sonic Robo Blast 2 and Sonic Team Junior are in no way affiliated with SEGA&reg; or Sonic Team.</p>
+          <p style="font-size:xx-small;">Sonic the Hedgehog is a trademark of SEGA&reg;</p>
+        </div>
+      </div>
+    </div>
+
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1" style="z-index:-9999;"></canvas>
+    <textarea id="keyCapture" oncontextmenu="event.preventDefault()" tabindex="-1"></textarea>
+    <form id="textForm" onsubmit="InjectText();" action="javascript:void(0);" autocomplete="off">
+      <input id="textCapture" tabindex="-1" placeholder="Console Command" disabled/>
+      <input id="textSubmit" type="submit" value="Enter"/>
+    </form>
+
+    <script type='text/javascript'>
+
+
+      var CDN_BASE = 'https://cdn.jsdelivr.net/gh/UGBONTOP/ugs-sbr2v2.2.4@main';
+
+      var BLOCKED_EXTENSIONS = ['.pk3', '.dta', '.sf2', '.md5'];
+
+      var CdnUrl = (version, name) => {
+        let url = \`\${CDN_BASE}/data/\${version}/\${name}\`;
+        let blocked = BLOCKED_EXTENSIONS.some(ext => name.endsWith(ext));
+        return blocked ? url + '.txt' : url;
+      };
+
+      var FetchCdnData = async (version, name) => {
+        let baseUrl = CdnUrl(version, name);
+
+        let part0Res = await fetch(\`\${baseUrl}.part0\`);
+        if (part0Res.ok) {
+          console.log(\`Fetching split file: \${baseUrl}.part*\`);
+          let parts = [new Uint8Array(await part0Res.arrayBuffer())];
+          let partIdx = 1;
+          while (true) {
+            let partRes = await fetch(\`\${baseUrl}.part\${partIdx}\`);
+            if (!partRes.ok) break;
+            parts.push(new Uint8Array(await partRes.arrayBuffer()));
+            partIdx++;
+          }
+          console.log(\`Assembled \${parts.length} parts for \${name} (\${version})\`);
+          let totalLen = parts.reduce((sum, p) => sum + p.byteLength, 0);
+          let combined = new Uint8Array(totalLen);
+          let offset = 0;
+          parts.forEach(p => { combined.set(p, offset); offset += p.byteLength; });
+          return combined;
+        }
+
+        console.log(\`Fetching: \${baseUrl}\`);
+        let res = await fetch(baseUrl);
+        if (!res.ok) throw \`HTTP \${res.status}\`;
+        return new Uint8Array(await res.arrayBuffer());
+      };
+
+      var FetchMd5 = async (version, name) => {
+        let url = \`\${CDN_BASE}/data/\${version}/\${name}.md5.txt\`;
+        let res = await fetch(url);
+        if (!res.ok) return null;
+        let md5 = (await res.text()).trim();
+        return md5.length === 32 ? md5 : null;
+      };
+
+
+      var CanvasElement = document.getElementById('canvas');
+      var StatusElement = document.getElementById('status');
+      var ProgressElement = document.getElementById('progress');
+      var ControlsFormElement = document.getElementById('controlsForm');
+      var PackageVersionElement = document.getElementById('packageVersion');
+      var AddonFields = 0;
+
+      HTMLSelectElement.prototype.contains = function(value) {
+        for (var i = 0, l = this.options.length; i < l; i++) {
+          if (this.options[i].value == value) return true;
+        }
+        return false;
+      };
+
+      var URLParams;
+
+      var GetSelectedPackageVersion = _ => {
+        let val = '';
+        if (PackageVersionElement.selectedIndex > -1) {
+          val = PackageVersionElement.options[PackageVersionElement.selectedIndex].value;
+          if (document.getElementById('lowend').checked && PackageVersionElement.contains(\`\${val}-lowend\`))
+            val = \`\${val}-lowend\`;
+        } else val = '2.2.4';
+        return val;
+      };
+
+      var DeleteNode = (node) => { node.querySelectorAll('*').forEach(n => n.remove()); node.remove(); };
+
+      var HideContent = () => {
+        StatusElement.hidden = false;
+        ProgressElement.hidden = false;
+        document.getElementById('startbtn').style.display = "none";
+        document.getElementById('addons').style.display = "none";
+        document.getElementById('controls').style.display = "none";
+        document.getElementById('help').style.display = "none";
+        document.getElementById('footer').style.display = "none";
+        document.getElementById('copyright').style.display = "none";
+        document.getElementById('resetbtn').style.display = "inline-block";
+      };
+
+      var ShowContent = () => {
+        StatusElement.hidden = true;
+        ProgressElement.hidden = true;
+        document.getElementById('startbtn').style.display = "inline-block";
+        document.getElementById('addons').style.display = "block";
+        document.getElementById('controls').style.display = "block";
+        document.getElementById('help').style.display = "block";
+        document.getElementById('footer').style.display = "block";
+        document.getElementById('copyright').style.display = "block";
+        document.getElementById('resetbtn').style.display = "none";
+      };
+
+      var StartLoad = async () => {
+        PackageVersion = GetSelectedPackageVersion();
+        SaveFormToStorage(ControlsFormElement);
+        window.removeEventListener('focus', CheckVersion, false);
+        await UXInstallProgram(false, PackageVersion);
+        await GetWasm(PackageVersion);
+        // .js is not blocked, fetch directly
+        let script = document.createElement('script');
+        script.setAttribute('src', \`\${CDN_BASE}/data/\${PackageVersion}/srb2.js\`);
+        document.head.appendChild(script);
+        document.body.classList.add('calledRun');
+      };
+
+      var DrawDistanceRange = ['256','512','768','1024','1536','2048','3072','4096','6144','8192','Infinite'];
+
+      var ShowValueRange = (elem, suffix, rangeValues) => {
+        document.getElementById(\`\${elem.id}Value\`).innerText = \`\${rangeValues[elem.value]}\${suffix}\`;
+      };
+
+      var ShowValue = (elem, suffix, overrideTest, override) => {
+        if (typeof overrideTest !== 'undefined' && overrideTest(elem))
+          document.getElementById(\`\${elem.id}Value\`).innerText = override;
+        else
+          document.getElementById(\`\${elem.id}Value\`).innerText = \`\${elem.value}\${suffix}\`;
+      };
+
+      var SaveFormToStorage = (form) => {
+        let inputs = form.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+          let val = input.type === 'checkbox' ? input.checked
+                    : input.type === 'select-one' ? (input.selectedIndex > -1 ? input.options[input.selectedIndex].value : '')
+                    : input.value;
+          if (input.type !== 'file' && (!URLParams.has(input.id) || URLParams.get(input.id) != val) && !input.classList.contains('nosave'))
+            localStorage.setItem(\`\${form.id}_\${input.id}\`, val);
+        });
+      };
+
+      var LoadFormFromStorage = (form) => {
+        let inputs = form.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+          let val;
+          if (URLParams.has(input.id)) val = URLParams.get(input.id);
+          else val = localStorage.getItem(\`\${form.id}_\${input.id}\`);
+          if (val !== null && !input.readOnly && input.type !== 'file' && !input.classList.contains('nosave')) {
+            if (input.type === 'checkbox') input.checked = (val === "true");
+            else if (input.type === 'select-one')
+              for (let i = 0; i < input.length; i++) {
+                if (input.options[i].value === val) { input.selectedIndex = i; break; }
+              }
+            else input.value = val;
+          }
+        });
+      };
+
+      var HandleInput = (e) => {
+        let val = e.target.type === 'checkbox' ? e.target.checked
+                  : e.target.type === 'select-one' ? (e.target.selectedIndex > -1 ? e.target.options[e.target.selectedIndex].value : '')
+                  : e.target.value;
+        if (e.target.type !== 'file' && (!URLParams.has(e.target.id) || URLParams.get(e.target.id) != val) && !e.target.classList.contains('nosave'))
+          localStorage.setItem(\`\${ControlsFormElement.id}_\${e.target.id}\`, val);
+        BuildControlArguments();
+        document.getElementById("systemArguments").value = SystemArgumentsToString();
+      };
+
+      var AddFormEventListeners = (form, event, callback, settings) => {
+        let inputs = form.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => input.addEventListener(event, callback, settings));
+      };
+
+      var DeleteAddonField = (elem) => {
+        DeleteNode(elem);
+        if (!document.getElementById("addonFilesContainer").querySelectorAll('.addonFilesField:not([id=addonFilesTemplate])').length)
+          AddAddonField();
+      };
+
+      var HandleDeleteAddon = (e) => {
+        DeleteAddonField(e.target.parentElement);
+        BuildControlArguments();
+        document.getElementById("systemArguments").value = SystemArgumentsToString();
+      };
+
+      var HandleFileInput = (e) => {
+        if (e.target.files.length) {
+          let name = e.target.files[0].name;
+          if (name.length > 16) name = \`\${name.substring(0, 16)}...\`;
+          e.target.parentElement.querySelector('label').innerText = name;
+        }
+      };
+
+      var AddAddonField = () => {
+        let newField = document.getElementById("addonFilesTemplate").cloneNode(true);
+        newField.id = \`addonFilesField\${AddonFields}\`;
+        newField.querySelector('input[type=file]').id = \`addonFiles\${AddonFields}\`;
+        newField.querySelector('input[type=file]').addEventListener('input', HandleFileInput, false);
+        newField.querySelector('input[type=file]').addEventListener('input', HandleInput, false);
+        newField.querySelector('label').htmlFor = \`addonFiles\${AddonFields}\`;
+        if (UserAgentIsiOS()) {
+          newField.querySelector('label').style.display = 'none';
+          newField.querySelector('input[type=file]').classList.add('addonButton');
+          newField.querySelector('input[type=file]').style.display = 'inline-block';
+        }
+        newField.querySelector('.addonDelete').addEventListener('click', HandleDeleteAddon, false);
+        newField.style.display = 'block';
+        document.getElementById("addonFilesContainer").insertBefore(newField, null);
+        AddonFields++;
+      };
+
+      var InitializeiOSLanding = () => {
+        if (UserAgentIsiOS()) {
+          if (!IsStandalone()) {
+            document.getElementById("details").innerHTML = "<p style='font-weight: 900;'>To play, add this site to your Home Screen!</p>";
+            document.getElementById("addons").style.display = "none";
+            document.getElementById("controls").style.display = "none";
+            document.getElementById("help").style.display = "none";
+            return true;
+          }
+        }
+      };
+
+      var InitializeFormFields = () => {
+        URLParams = new URLSearchParams(window.location.search);
+        LoadFormFromStorage(ControlsFormElement);
+        if (localStorage.getItem('controlsForm_resizeHeight') === null && !UserAgentIsMobile())
+          document.getElementById('resizeHeight').value = 400;
+        if (UserAgentIsiOS()) {
+          document.getElementById('lowend').checked = true;
+          document.getElementById('lowend').disabled = true;
+        }
+        ShowValue(document.getElementById('resizeHeight'), 'p', (elem) => { return elem.value > 800; }, 'Full');
+        ShowValueRange(document.getElementById('drawDistance'), '', DrawDistanceRange);
+        AddFormEventListeners(ControlsFormElement, 'input', HandleInput, false);
+        if (PackageVersionElement.length < 2) document.getElementById('packageVersionRow').style.display = 'none';
+        BuildControlArguments();
+        document.getElementById("systemArguments").value = SystemArgumentsToString();
+        if (UserAgentIsAndroid()) document.getElementById("androidNotice").style.display = "block";
+        if (UserAgentIsMobile()) {
+          if (IsStandalone()) document.getElementById("fullscreenNotice").style.display = "none";
+          else document.getElementById("fullscreenNotice").innerText = "To play in fullscreen, try adding this web page to your Home Screen.";
+        }
+      };
+
+      var InitializeAddons = () => {
+        AddAddonField();
+        document.getElementById("addonButtonAdd").addEventListener('click', AddAddonField, false);
+        Sortable.create(document.getElementById('addonFilesContainer'), {
+          onEnd: () => { BuildControlArguments(); document.getElementById("systemArguments").value = SystemArgumentsToString(); }
+        });
+      };
+
+      var InitializeSections = () => {
+        ['addons','addonsHelp','controls','advancedControls'].forEach(id => {
+          let el = document.getElementById(id);
+          if (!el) return;
+          el.open = (localStorage.getItem(id) === 'true' || (id === 'addonsHelp' && localStorage.getItem(id) === null));
+          el.addEventListener('toggle', function() { localStorage.setItem(id, this.open); }, false);
+        });
+      };
+
+      window.addEventListener('load', function() {
+        if (!InitializeiOSLanding()) {
+          InitializeAddons();
+          InitializeFormFields();
+          InitializeSections();
+        }
+      }, {once: true});
+
+      ////////////////////////////////
+      // Version Check
+      ////////////////////////////////
+
+      var CheckVersion = async () => {
+        if (document.body.classList.contains('calledRun')) return;
+        try {
+          let response = await fetch(\`\${CDN_BASE}/version-shell.txt\`);
+          let data = (await response.text()).trim();
+          console.log(\`SRB2 Web Version: 1592091069\`);
+          if (data && data !== "1592091069") {
+            let updateCount = localStorage.getItem('srb2web_update');
+            if (IsStandalone() && (!updateCount || !parseInt(updateCount))) {
+              localStorage.setItem('srb2web_update', (1).toString());
+              window.location.reload(true); return;
+            } else {
+              if (document.getElementById('newVersion'))
+                document.getElementById('newVersion').outerHTML = \`<p style="font-size:xx-small;">Update Version: <a href="#" onclick="window.location.reload(true);return false;">\${data}</a></p>\`;
+            }
+          }
+          localStorage.setItem('srb2web_update', (0).toString());
+          let updateCount2 = localStorage.getItem('srb2program_update');
+          if (!updateCount2 || !parseInt(updateCount2))
+            response = await fetch(\`\${CDN_BASE}/version-package.txt\`);
+          else throw("Already checked program version.");
+          data = (await response.text()).trim();
+          let prev = localStorage.getItem('srb2program_defaultversion');
+          console.log(\`SRB2 Default Program Version: 2.2.4\`);
+          if (data && prev && data !== prev) {
+            if (PackageVersionElement.length > 1 && confirm(\`SRB2 Version \${data} is released! Switch to new version?\`)) {
+              for (let i = 0; i < PackageVersionElement.length; i++) {
+                if (PackageVersionElement.options[i].value === data) {
+                  PackageVersionElement.selectedIndex = i;
+                  SaveFormToStorage(ControlsFormElement);
+                  alert(\`The new version will run when you \${UserAgentIsMobile() ? 'tap' : 'click'} "Play".\`);
+                  break;
+                }
+              }
+            }
+          }
+          localStorage.setItem('srb2program_defaultversion', data);
+        } catch (err) {
+          console.log(\`Error Checking New Version:\`, err);
+          localStorage.setItem('srb2web_update', (0).toString());
+        }
+      };
+
+      localStorage.setItem('srb2program_update', (0).toString());
+      window.addEventListener('load', CheckVersion, {once: true});
+      window.addEventListener('focus', CheckVersion, false);
+
+      ////////////////////////////////
+      // Utilities
+      ////////////////////////////////
+
+      var UserAgentIsiOS = () => { var ua = window.navigator.userAgent; return (!!ua.match(/iPad/i)||!!ua.match(/iPhone/i)||!!ua.match(/iPod/i)) && !!ua.match(/WebKit/i) && !ua.match(/CriOS/i) && !ua.match(/FxiOS/i); };
+      var UserAgentIsiPhone = () => /iPhone|iPod/.test(navigator.userAgent);
+      var IsStandalone = () => window.matchMedia('(display-mode: standalone)').matches || (("standalone" in window.navigator) && window.navigator.standalone);
+      var UserAgentIsMobile = () => { let c=false;(function(a){if(/(android|bb\\d+|meego).+mobile|avantgo|bada\\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\\-(n|u)|c55\\/|capi|ccwa|cdm\\-|cell|chtm|cldc|cmd\\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\\-s|devi|dica|dmob|do(c|p)o|ds(12|\\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\\-|_)|g1 u|g560|gene|gf\\-5|g\\-mo|go(\\.w|od)|gr(ad|un)|haie|hcit|hd\\-(m|p|t)|hei\\-|hi(pt|ta)|hp( i|ip)|hs\\-c|ht(c(\\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\\-(20|go|ma)|i230|iac( |\\-|\\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\\/)|klon|kpt |kwc\\-|kyo(c|k)|le(no|xi)|lg( g|\\/(k|l|u)|50|54|\\-[a-w])|libw|lynx|m1\\-w|m3ga|m50\\/|ma(te|ui|xo)|mc(01|21|ca)|m\\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\\-2|po(ck|rt|se)|prox|psio|pt\\-g|qa\\-a|qc(07|12|21|32|60|\\-[2-7]|i\\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\\-|oo|p\\-)|sdk\\/|se(c(\\-|0|1)|47|mc|nd|ri)|sgh\\-|shar|sie(\\-|m)|sk\\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\\-|v\\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\\-|tdg\\-|tel(i|m)|tim\\-|t\\-mo|to(pl|sh)|ts(70|m\\-|m3|m5)|tx\\-9|up(\\.|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\\-|your|zeto|zte\\-/i.test(a.substr(0,4)))c=true;})(navigator.userAgent||navigator.vendor||window.opera);return c;};
+      var UserAgentIsAndroid = () => /Android/.test(navigator.userAgent);
+
+      var ResizeDimensions = (x, y, resizeHeight) => {
+        let portrait=(x<y), width=Math.max(x,y), height=Math.min(x,y);
+        let target=Math.max(resizeHeight,(portrait?320:200)), factor;
+        if (!resizeHeight) return {x,y};
+        factor=target/height;
+        if (width*factor<320) factor=320/width;
+        width*=factor; height*=factor;
+        return portrait?{x:Math.ceil(height),y:Math.ceil(width)}:{x:Math.ceil(width),y:Math.ceil(height)};
+      };
+
+      ////////////////////////////////
+      // Base FS Functions
+      ////////////////////////////////
+
+      var GetBasenameFromPath = (path) => path.split('\\\\').pop().split('/').pop();
+      var GetDirnameFromPath = (path) => { let arr=path.split('\\\\').pop().split('/'); arr.pop(); return arr.join('/'); };
+      let TypedArrayToBuffer = (array) => array.buffer.slice(array.byteOffset, array.byteLength+array.byteOffset);
+
+      function MyArrayBuffer() { return new Promise(resolve => { let fr=new FileReader(); fr.onload=()=>resolve(fr.result); fr.readAsArrayBuffer(this); }); }
+      if ('File' in self) File.prototype.arrayBuffer = File.prototype.arrayBuffer || MyArrayBuffer;
+      if ('Blob' in self) Blob.prototype.arrayBuffer = Blob.prototype.arrayBuffer || MyArrayBuffer;
+
+      var InitializeFS = () => {
+        FS.mkdirTree('/addons');
+        FS.symlink('/home/web_user/.srb2', '/addons/.srb2');
+        FS.symlink('/home/web_user/.srb2', '/addons/userdata');
+        FS.mount(IDBFS, {}, '/home/web_user');
+        return new Promise(resolve => { FS.syncfs(true, (err) => { console.log("SyncFS done", err); resolve(); }); });
+      };
+
+      var WriteFS = (baseDir, path, data) => {
+        if (data instanceof ArrayBuffer) data = new Uint8Array(data);
+        if (path.includes('/')||path.includes('\\\\')) baseDir=\`\${baseDir}/\${GetDirnameFromPath(path)}\`;
+        let fn=GetBasenameFromPath(path), parents='/';
+        baseDir.split('/').forEach(name => {
+          if (name.length) {
+            let mode=0;
+            try { mode=FS.lstat(\`\${parents}\${name}\`)['mode']; } catch(e) {}
+            if (FS.isLink(mode)) parents=\`\${FS.readlink(\`\${parents}\${name}\`)}/\`;
+            else parents+=\`\${name}/\`;
+          }
+        });
+        baseDir=parents.substring(0,parents.length-1);
+        try { FS.mkdirTree(parents); } catch(e) {}
+        try { FS.unlink(\`\${baseDir}/\${fn}\`); } catch(e) {}
+        FS.createDataFile(baseDir, fn, data, true, true);
+        return Promise.resolve(true);
+      };
+
+      var SyncFS = (populate=false) => new Promise(resolve => {
+        if (typeof FS!=='undefined') FS.syncfs(populate, ()=>{});
+        resolve();
+      });
+
+      var DownloadFS = (downloadPath, manageLoop=true, callback=null) => {
+        let customStore=new idbKeyval.Store('/home/web_user','FILE_DATA',21);
+        if (typeof downloadPath==='undefined') downloadPath='/home/web_user/.srb2';
+        if (manageLoop&&StartedMainLoop) PauseLoop();
+        return SyncFS()
+          .then(_=>idbKeyval.keys(customStore))
+          .then(keys => {
+            let promises=[], zip=new JSZip();
+            keys.forEach(key => {
+              if (key.includes(downloadPath))
+                promises.push(idbKeyval.get(key,customStore).then(val => {
+                  if ('contents' in val&&val.contents) zip.file(key.replace('/home/web_user/',''),TypedArrayToBuffer(val.contents),{date:new Date(val.timestamp)});
+                }));
+            });
+            return Promise.all(promises).then(_=>zip);
+          })
+          .then(zip=>zip.generateAsync({type:'blob'}))
+          .then(blob=>saveAs(blob,'srb2-data.zip'))
+          .catch(err=>console.log(\`DownloadFS: \${err}\`))
+          .finally(_=>{ if(typeof callback==='function')callback(); if(manageLoop&&StartedMainLoop)ResumeLoop(); });
+      };
+
+      var DeleteFS = (deletePath, manageLoop=true, callback=null) => {
+        if (typeof deletePath==='undefined') throw 'DeleteFS: Must specify a path';
+        if (FS) {
+          try { FS.unlink(deletePath); } catch(e) { console.error(\`DeleteFS: \${deletePath}\`,e); }
+          return SyncFS().then(_=>{ if(typeof callback==='function')callback(); if(manageLoop&&StartedMainLoop)ResumeLoop(); });
+        }
+        let customStore=new idbKeyval.Store('/home/web_user','FILE_DATA',21);
+        if (manageLoop&&StartedMainLoop) PauseLoop();
+        return SyncFS()
+          .then(_=>idbKeyval.keys(customStore))
+          .then(keys=>Promise.all(keys.filter(k=>k.includes(deletePath)).map(k=>idbKeyval.del(k,customStore))))
+          .then(_=>SyncFS(true))
+          .catch(err=>console.log(\`DeleteFS: \${err}\`))
+          .finally(_=>{ if(typeof callback==='function')callback(); if(manageLoop&&StartedMainLoop)ResumeLoop(); });
+      };
+
+      ////////////////////////////////
+      // Program Data
+      ////////////////////////////////
+
+      var InstallFiles=[], PersistentLumpFiles=[], StartupFiles=[], RequiredFiles=[], VersionBases={};
+      var CompositeKey = (fn, version) => \`data/\${version}/\${fn}\`;
+      var StripLeadingSeparators = (fn) => fn.replace(/^\\/*/, '');
+
+      var ResetProgramData = async (manageLoop=true, callback=null) => {
+        let s=_=>{};
+        await idbKeyval.clear(new idbKeyval.Store('EM_PRELOAD_CACHE','METADATA',1)).catch(s);
+        await idbKeyval.clear(new idbKeyval.Store('EM_PRELOAD_CACHE','PACKAGES',1)).catch(s);
+        await idbKeyval.clear(new idbKeyval.Store('SRB2_DATA','FILES',1)).catch(s);
+        await idbKeyval.del('/home/web_user/.srb2/music.dta',new idbKeyval.Store('/home/web_user','FILE_DATA',21)).catch(s);
+        if (typeof callback==='function') callback();
+        if (manageLoop&&StartedMainLoop) ResumeLoop();
+        return Promise.resolve();
+      };
+
+      var InstallProgramFileReferences = async (name, version, fullBase) => {
+        let customStore=new idbKeyval.Store('SRB2_DATA','FILES',1);
+        let fullBase2=fullBase.slice(0,fullBase.indexOf(version));
+        return Promise.all(fullBase2.map(async base => {
+          if (base&&base!==version) {
+            let baseFile=await idbKeyval.get(CompositeKey(name,base),customStore);
+            if (!(baseFile instanceof Object)) baseFile={};
+            if (!('contents' in baseFile)&&!('base' in baseFile&&baseFile['base']!=version)) {
+              baseFile['base']=version;
+              return idbKeyval.set(CompositeKey(name,base),baseFile,customStore);
+            }
+          }
+        }));
+      };
+
+      var InstallProgramFile = async (name, version, md5=null, fullBase=[]) => {
+        let customStore=new idbKeyval.Store('SRB2_DATA','FILES',1);
+        try {
+          // FetchCdnData handles split parts (.part0, .part1, ...) automatically,
+          // falling back to a single-file fetch if no parts exist.
+          let data = await FetchCdnData(version, name);
+          await InstallProgramFileReferences(name,version,fullBase);
+          let idbFile=await idbKeyval.get(CompositeKey(name,version),customStore)||{};
+          idbFile['contents']=data;
+          idbFile['md5']=md5;
+          await idbKeyval.set(CompositeKey(name,version),idbFile,customStore);
+          console.log(\`Downloaded \${name} (\${version}) — stored as original name.\`);
+          return idbFile;
+        } catch(e) {
+          throw \`InstallProgramFile: \${name} (\${version}) - \${e}\`;
+        }
+      };
+
+      var CheckInstallProgramFile = async (name, version, base=[], fullBase=[], checkMd5IfFileExists=false) => {
+        if (typeof version==='undefined'||!version) {
+          if (base&&base.length) return CheckInstallProgramFile(name,base.shift(),base,fullBase,checkMd5IfFileExists);
+          else throw \`CheckInstallProgramFile: \${name} - No version to fetch from!\`;
+        }
+        let customStore=new idbKeyval.Store('SRB2_DATA','FILES',1);
+
+        // Check local IDB first
+        try {
+          let localFile=await idbKeyval.get(CompositeKey(name,version),customStore);
+          if (localFile&&localFile instanceof Object) {
+            if ('base' in localFile) return CheckInstallProgramFile(name,localFile['base'],[],fullBase,checkMd5IfFileExists);
+            if (!checkMd5IfFileExists) { console.log(\`Retrieved \${name} (\${version}) from storage.\`); return localFile; }
+          }
+        } catch(e) {}
+
+        // Fetch md5 (always stored as .md5.txt on server)
+        let remoteMd5=await FetchMd5(version, name);
+
+        if (remoteMd5===null) {
+          if (base&&base.length&&base[0]) return CheckInstallProgramFile(name,base.shift(),base,fullBase,checkMd5IfFileExists);
+          if (!RequiredFiles.includes(name)) return Promise.resolve();
+          throw \`Cannot retrieve MD5 for \${name}\`;
+        }
+
+        // Compare with stored md5
+        try {
+          let idbFile=await idbKeyval.get(CompositeKey(name,version),customStore);
+          if (idbFile&&'md5' in idbFile&&idbFile['md5']&&remoteMd5===idbFile['md5'].trim()) {
+            await InstallProgramFileReferences(name,version,fullBase);
+            console.log(\`Retrieved \${name} (\${version}) from storage (md5 match).\`);
+            return idbFile;
+          }
+        } catch(e) {}
+
+        // md5 mismatch or no local — download fresh
+        return InstallProgramFile(name,version,remoteMd5,fullBase);
+      };
+
+      var CheckInstallFileList = async (fileList, version='2.2.4', checkServer=false, progressCallback=null, finishedCallback=null) => {
+        let bases=await GetVersionBases(version);
+        let files=[...fileList];
+        let count=0;
+        let promiseProducer=()=>{
+          if (count<files.length) {
+            let br=[...bases];
+            return CheckInstallProgramFile(files[count++],br.shift(),br,[...bases],checkServer)
+              .then(_=>{ if(typeof progressCallback==='function') progressCallback(files[count]||null,Math.min(count,files.length),files.length); });
+          }
+          return null;
+        };
+        if (typeof progressCallback==='function') progressCallback(files[0]||null,0,files.length);
+        let pool=new PromisePool(promiseProducer,3);
+        return pool.start()
+          .then(_=>{ if(typeof finishedCallback==='function')finishedCallback(); })
+          .catch(e=>{ console.error(\`CheckInstallFileList: \${e}\`); throw e; });
+      };
+
+      var GetVersionFileLists = async (version='2.2.4') => {
+        let fileLists={'INSTALL':InstallFiles,'PERSISTENT':PersistentLumpFiles,'STARTUP':StartupFiles,'REQUIRED':RequiredFiles};
+        try { await CheckInstallFileList(Object.keys(fileLists),version,true,null,null); } catch(e) { console.error('GetVersionFileLists error:',e); }
+        await Promise.all(Object.keys(fileLists).map(async name => {
+          try {
+            fileLists[name].length=0;
+            let file=await RetrieveInstalledFile(name,version,false);
+            if (file instanceof Object&&'contents' in file&&file.contents) {
+              let lines=new TextDecoder("utf-8").decode(file.contents).replace('\\r\\n','\\n').split('\\n');
+              lines.forEach(line=>{ let l=line.trim(); if(l&&!l.startsWith('//'))fileLists[name].push(l); });
+            }
+          } catch(e) { console.error(\`GetVersionFileLists: Could not populate \${name}\`,e); }
+        }));
+        StartupFiles.push(...PersistentLumpFiles);
+      };
+
+      var GetVersionBases = async (version='2.2.4') => {
+        if (VersionBases instanceof Object&&version in VersionBases) return VersionBases[version];
+        let base=[version], baseVer=version;
+        try {
+          let customStore=new idbKeyval.Store('SRB2_DATA','FILES',1);
+          do {
+            let childBaseVer=await idbKeyval.get(CompositeKey('BASE',baseVer),customStore);
+            if (childBaseVer) {
+              if (!base.includes(childBaseVer)){ base.push(childBaseVer); baseVer=childBaseVer; } else break;
+            } else {
+              // BASE file has no extension — not blocked by jsDelivr
+              let r=await fetch(\`\${CDN_BASE}/data/\${baseVer}/BASE\`);
+              if (!r.ok) break;
+              childBaseVer=(await r.text()).trim();
+              if (childBaseVer&&!base.includes(childBaseVer)) {
+                await idbKeyval.set(CompositeKey('BASE',baseVer),childBaseVer,customStore);
+                base.push(childBaseVer); baseVer=childBaseVer;
+              } else { await idbKeyval.set(CompositeKey('BASE',baseVer),'',customStore); break; }
+            }
+          } while(baseVer);
+        } catch(e) { console.error(\`GetVersionBases: \${version} - \${e}\`); throw e; }
+        VersionBases[version]=[...base];
+        return base;
+      };
+
+      var InstallProgram = async (full=false, version='2.2.4', checkServer=false, progressCallback=null, finishedCallback=null) => {
+        await GetVersionBases(version);
+        await GetVersionFileLists(version);
+        return CheckInstallFileList([...InstallFiles],version,checkServer,progressCallback,finishedCallback);
+      };
+
+      var UXInstallProgram = (full, version='2.2.4') => {
+        HideContent();
+        return InstallProgram(full,version,true,(name,curVal,maxVal)=>{
+          let percent=maxVal>0?Math.round(curVal/maxVal*100):0;
+          ProgressElement.value=percent;
+          StatusElement.innerText=name?\`Retrieving \${name.split('/').pop()}...\`:\`Finishing...\`;
+        },()=>{
+          if (full){ alert('Finished install.'); window.location.reload(); }
+          else { StatusElement.innerText='Loading...'; ProgressElement.value=0; }
+        });
+      };
+
+      var RetrieveInstalledFile = async (fn, version='2.2.4', checkServer=false) => {
+        let bases=await GetVersionBases(version);
+        return CheckInstallProgramFile(fn,version,[...bases],[...bases],checkServer);
+      };
+
+      var WriteInstalledFileToFS = async (fn, version='2.2.4', checkServer=false) => {
+        let idbFile=await RetrieveInstalledFile(fn,version,checkServer);
+        if (idbFile instanceof Object&&'contents' in idbFile&&idbFile['contents'])
+          return WriteFS('/',fn,idbFile['contents']);
+      };
+
+      var DeleteInstalledFileFromFS = async (fn, persistentFilenames=[]) => {
+        if (!persistentFilenames.includes(fn)) return DeleteFS(fn);
+      };
+
+      ////////////////////////////////
+      // Addons
+      ////////////////////////////////
+
+      var ExtractZipFile = (destBaseDir, buffer) => {
+        return JSZip.loadAsync(buffer).then(zip=>{
+          let files=[];
+          zip.forEach((path,file)=>{
+            if (!file['dir']) files.push(zip.file(path).async('uint8array').then(data=>WriteFS(destBaseDir,path,data)));
+            else { try { FS.mkdir(\`\${destBaseDir}/\${path}\`); } catch(e){} }
+          });
+          return Promise.all(files).then(SyncFS).catch(err=>console.log(err));
+        });
+      };
+
+      var LoadAddons = () => {
+        let addons=[];
+        document.getElementById("addonFilesContainer").querySelectorAll(".addonFilesField:not([id=addonFilesTemplate]) input[type=file]").forEach(input=>{
+          if (input.files.length) {
+            if (input.files[0].name.endsWith('.zip')) addons.push(ExtractZipFile('/addons',input.files[0]));
+            else addons.push(input.files[0].arrayBuffer().then(buf=>WriteFS('/addons',input.files[0].name.replace(' ','_'),new Uint8Array(buf))).catch(err=>console.log(err)));
+          }
+        });
+        return Promise.all(addons).catch(err=>console.log('LoadAddons() error',err));
+      };
+
+      ////////////////////////////////
+      // Runtime Parameters
+      ////////////////////////////////
+
+      var SystemArguments=['+addons_option','CUSTOM','+addons_folder','/addons'];
+      var ControlArguments=[], UserArguments=[];
+
+      var BuildControlArguments = () => {
+        let inputs=ControlsFormElement.querySelectorAll('input, textarea');
+        let files=document.getElementById('addonFilesContainer').querySelectorAll('input[type=file]');
+        let args=[], validFile=false;
+        if (document.getElementById('addonStartup').checked) {
+          files.forEach(input=>{
+            if (input.files.length&&!input.files[0].name.endsWith('.zip')) {
+              if (!validFile){ args.push('-file'); validFile=true; }
+              args.push(\`/addons/\${input.files[0].name.replace(' ','_')}\`);
+            }
+          });
+        }
+        inputs.forEach(input=>{
+          switch(input.id) {
+            case 'resizeHeight':{ let rh=input.value>800?0:input.value; let d=ResizeDimensions(GetViewportWidth(),GetViewportHeight(),rh); args.push('+scr_resizeheight',rh.toString(),'-width',d.x.toString(),'-height',d.y.toString()); break; }
+            case 'playMusic':{ let v=input.checked?'on':'off'; args.push('+midimusic',v,'+digimusic',v); break; }
+            case 'playSound':{ args.push('+sounds',input.checked?'on':'off'); break; }
+            case 'useMouse':{ if(!input.checked)args.push('-nomouse'); break; }
+            case 'drawDistance':{ args.push('+drawdist',DrawDistanceRange[input.value]); break; }
+            case 'shadow':{ args.push('+shadow',input.checked?'on':'off'); break; }
+            case 'midisoundfont':{ if(input.checked)args.push('+midisoundfont','/florestan.sf2'); break; }
+          }
+        });
+        args.push('+scr_resize',UserAgentIsiPhone()?'off':'on');
+        ControlArguments=args;
+      };
+
+      var BuildUserArguments = () => {
+        let s=document.getElementById('userArguments').value.trim();
+        UserArguments=s.length>0?s.split(' '):[];
+      };
+
+      var SystemArgumentsToString = () => \`\${SystemArguments.join(' ')} \${ControlArguments.join(' ')}\`;
+
+      ////////////////////////////////
+      // Module Runtime
+      ////////////////////////////////
+
+      var StartedMainLoop=false;
+      var StartedMainLoopCallback = () => {
+        document.getElementById('canvas').style.zIndex="9999";
+        document.getElementById('canvas').style.opacity="1.0";
+        document.body.classList.add('startedMainLoop');
+        StartedMainLoop=true;
+        DeleteNode(document.getElementById('content'));
+        UnlockMouse(true);
+      };
+
+      var ErrorCrashed=false;
+      var ErrorHandler = (e, errorId) => {
+        let index=Module['aliveId'].indexOf(errorId);
+        if (index>-1) {
+          if (!Module['alive'][index]&&!ErrorCrashed) {
+            ErrorCrashed=true;
+            let msg=\`PROGRAM ERROR\\n\\n\${UserAgentIsMobile()?"Tap":"Click"} "\${UserAgentIsiOS()?"Close":"OK"}" to restart.\\n\\nDEVELOPER INFO\\n\\n\${e&&e.stack?e.stack:e}\\n\\nSRB2 Version: \${PackageVersion}\\nWeb: 1592091069\\n\\n\${navigator.userAgent}\`;
+            console.error(msg); PauseLoop();
+            try { if(Module['SDL2']&&Module['SDL2'].audioContext)Module['SDL2'].audioContext.close(); } catch(e){}
+            alert(msg); window.location.reload();
+          }
+          Module['alive'].splice(index,1); Module['aliveId'].splice(index,1);
+        }
+      };
+
+      var InitiateErrorCheck = (e) => {
+        if (!ErrorCrashed&&e&&typeof e==='string'&&e.includes('exception thrown:')) {
+          let id=(+new Date+Math.random().toString(36).slice(-5));
+          Module['alive'].push(false); Module['aliveId'].push(id);
+          setTimeout(ErrorHandler,1000/70,e,id);
+        }
+      };
+
+      // Called by the WASM to mark all pending error checks as alive (game recovered)
+      var InvalidateErrorChecks = () => {
+        if (Module&&Module['alive']) {
+          Module['alive'] = Module['alive'].map(() => true);
+        }
+      };
+      window.InvalidateErrorChecks = InvalidateErrorChecks;
+
+      var GetWasm = async (version='2.2.4') => {
+        let customStore=new idbKeyval.Store('SRB2_DATA','FILES',1);
+        let wasm=await idbKeyval.get(CompositeKey('srb2.wasm',version),customStore);
+        console.log('[GetWasm] IDB entry:',wasm?\`found, \${wasm.contents?wasm.contents.byteLength+' bytes':'NO CONTENTS'}\`:'NOT FOUND');
+        if (!(wasm instanceof Object)||!('contents' in wasm)||!wasm['contents']) {
+          let msg='Runtime Error: Program not found!\\n\\nIf you see this error again, try resetting your program data under Settings > Storage.';
+          console.error(msg); alert(msg); window.location.reload();
+        } else {
+          Module['wasmBinary']=wasm['contents'];
+        }
+      };
+
+      var PackageVersion;
+
+      var Module = {
+        arguments:[], calledRun:false, alive:[], aliveId:[], wasmBinary:null,
+        StripLeadingSeparators, WriteInstalledFileToFS, DeleteInstalledFileFromFS, PersistentLumpFiles,
+
+        preRun:[()=>{
+          BuildControlArguments(); BuildUserArguments();
+          Module['arguments'].push(...SystemArguments,...ControlArguments,...UserArguments);
+          addRunDependency('mount-filesystem');
+          InitializeFS()
+            .then(()=>Promise.all(StartupFiles.map(async fn=>{
+              try { await WriteInstalledFileToFS(fn,PackageVersion,false); }
+              catch(e){ let msg=\`Runtime Error: File \${fn} not found!\\n\\nTry resetting program data.\`; console.error(msg); alert(msg); window.location.reload(); return Promise.reject(); }
+            })))
+            .then(LoadAddons)
+            .finally(()=>removeRunDependency('mount-filesystem'));
+        }],
+
+        printErr:(e)=>{ console.error(e); InitiateErrorCheck(e); },
+        quit:(e)=>{ InitiateErrorCheck(e); },
+        onExit:()=>{ window.location.reload(); },
+
+        print:(function(){
+          var el=document.getElementById('output');
+          if(el)el.value='';
+          return function(text){
+            if(arguments.length>1)text=Array.prototype.slice.call(arguments).join(' ');
+            if(el){el.value+=text+"\\n"; el.scrollTop=el.scrollHeight;}
+          };
+        })(),
+
+        canvas:(function(){
+          var canvas=document.getElementById('canvas');
+          canvas.addEventListener("webglcontextlost",function(e){alert('WebGL context lost. Reload the page.');e.preventDefault();},false);
+          return canvas;
+        })(),
+
+        setStatus:function(text){
+          if(!Module.setStatus.last)Module.setStatus.last={time:Date.now(),text:''};
+          if(text===Module.setStatus.last.text)return;
+          var m=text.match(/([^(]+)\\(\\(\\d+(\\.\\d+)?\\)\\/(\\d+)\\)/);
+          var now=Date.now();
+          if(m&&now-Module.setStatus.last.time<30)return;
+          Module.setStatus.last.time=now; Module.setStatus.last.text=text;
+          if(m){
+            ProgressElement.value=parseInt(m[2])*100;
+            ProgressElement.max=parseInt(m[4])*100;
+            ProgressElement.hidden=false;
+            StatusElement.innerHTML=m[1];
+          } else {
+            StatusElement.innerHTML="Starting game... (may take a minute)";
+          }
+        },
+
+        totalDependencies:0,
+        monitorRunDependencies:function(left){
+          this.totalDependencies=Math.max(this.totalDependencies,left);
+          Module.setStatus(left?\`Preparing... (\${this.totalDependencies-left}/\${this.totalDependencies})\`:'All downloads complete.');
+        }
+      };
+
+      Module.setStatus('Downloading...');
+      window.onerror=function(){ Module.setStatus=function(t){if(t)Module.printErr('[post-exception status] '+t);}; };
+
+      ////////////////////////////////
+      // iOS Support
+      ////////////////////////////////
+
+      var ActivateAudio=function(){
+        if(!Module['SDL2'])Module['SDL2']={};
+        var SDL2=Module['SDL2'];
+        if(!SDL2.audioContext){
+          if(typeof AudioContext!=='undefined')SDL2.audioContext=new AudioContext();
+          else if(typeof webkitAudioContext!=='undefined')SDL2.audioContext=new webkitAudioContext();
+        }
+        if(SDL2.audioContext&&SDL2.audioContext.currentTime==0){
+          var buf=SDL2.audioContext.createBuffer(1,1,44100);
+          var src=SDL2.audioContext.createBufferSource();
+          src.buffer=buf; src.connect(SDL2.audioContext.destination); src.start();
+        }
+        if(Module['calledRun'])Module.ccall('COM_ImmedExecute',null,['string'],['restartaudio']);
+      };
+
+      window.addEventListener('load',function(){
+        if(UserAgentIsiOS()&&IsStandalone()){
+          window.addEventListener('touchend',ActivateAudio,{once:true});
+          window.addEventListener('resize',()=>ChangeResolution(),false);
+        }
+      },{once:true});
+
+      ////////////////////////////////
+      // Pause/Resume
+      ////////////////////////////////
+
+      var SuspendAudioContext=()=>{ try{Module['SDL2']&&Module['SDL2'].audioContext&&Module['SDL2'].audioContext.suspend();}catch(e){} };
+      var ResumeAudioContext =()=>{ try{Module['SDL2']&&Module['SDL2'].audioContext&&Module['SDL2'].audioContext.resume(); }catch(e){} };
+      var PauseLoop =()=>{ if(Module['calledRun'])Module.ccall('pause_loop','number',[],[]); };
+      var ResumeLoop=()=>{ if(Module['calledRun'])Module.ccall('resume_loop','number',[],[]); };
+
+      var DoResume=()=>{
+        if(Module['calledRun']){
+          let SDL2=Module['SDL2']||{};
+          if(!SDL2.audioContext||SDL2.audioContext.state==='closed'){
+            SDL2.audioContext=null;
+            if(UserAgentIsiOS())window.addEventListener('touchend',ActivateAudio,{once:true});
+            else ActivateAudio();
+          } else ResumeAudioContext();
+          ResumeLoop(); ChangeResolution();
+        }
+        window.removeEventListener('touchend',DoResume,{once:true});
+        window.removeEventListener('click',DoResume,{once:true});
+        window.removeEventListener('keydown',DoResume,{once:true});
+      };
+
+      var HandleVisibilityChange=(e)=>{
+        if(Module['calledRun']){
+          if(e.type==='focus')DoResume();
+          else{ PauseLoop(); SuspendAudioContext(); window.addEventListener('touchend',DoResume,{once:true}); window.addEventListener('click',DoResume,{once:true}); window.addEventListener('keydown',DoResume,{once:true}); }
+        }
+      };
+
+      window.addEventListener('load',function(){
+        window.addEventListener('blur',HandleVisibilityChange);
+        window.addEventListener('focus',HandleVisibilityChange);
+      },{once:true});
+
+      ////////////////////////////////
+      // On-Screen Keyboard
+      ////////////////////////////////
+
+      var KeyCaptureElement=document.getElementById("keyCapture");
+      var TextCaptureElement=document.getElementById("textCapture");
+      var ActiveCaptureElement=null, CloseDelay=0;
+
+      var I_RaiseScreenKeyboard=()=>{
+        CloseDelay=UserAgentIsiOS()?1:0;
+        if(UserAgentIsAndroid()){
+          ActiveCaptureElement=TextCaptureElement;
+          TextCaptureElement.parentElement.style.cssText='z-index:100000;opacity:1.0;';
+          TextCaptureElement.disabled=false;
+          ['keydown','keyup','keypress'].forEach(e=>TextCaptureElement.addEventListener(e,HandleKey,true));
+        } else ActiveCaptureElement=KeyCaptureElement;
+        KeyCaptureElement.value=".";
+        KeyCaptureElement.style.zIndex='99999';
+        KeyCaptureElement.addEventListener('touchend',HandleTouchKeyboard,false);
+        ActiveCaptureElement.focus();
+      };
+
+      var I_KeyboardOnScreen=()=>document.activeElement===ActiveCaptureElement;
+      var I_CloseScreenKeyboard=()=>{
+        ActiveCaptureElement.blur();
+        KeyCaptureElement.style.zIndex='-99999';
+        TextCaptureElement.parentElement.style.cssText='z-index:-99999;opacity:0;';
+        TextCaptureElement.disabled=true;
+        KeyCaptureElement.removeEventListener('touchend',HandleTouchKeyboard,false);
+      };
+
+      var HandleTouchKeyboard=()=>{ if(CloseDelay--<=0)I_CloseScreenKeyboard(); };
+      var HandleKey=(e)=>{ e.stopPropagation(); };
+
+      var InjectText=()=>{
+        let text=ActiveCaptureElement.value;
+        ActiveCaptureElement.focus();
+        if(Module['calledRun']&&text){
+          Module.ccall('inject_text',null,['string'],[text]);
+          Module.ccall('inject_keycode',null,['int','int'],[13,false]);
+          Module.ccall('inject_keycode',null,['int','int'],[13,true]);
+        }
+        ActiveCaptureElement.value='';
+      };
+
+      ////////////////////////////////
+      // Viewport
+      ////////////////////////////////
+
+      var ChangeResolution=(x,y)=>{
+        if(Module['calledRun'])
+          Module.ccall('change_resolution','number',['number','number'],[x||GetViewportWidth(),y||GetViewportHeight()]);
+      };
+
+      var GetViewportWidth =()=>document.documentElement.clientWidth;
+      var GetViewportHeight=()=>document.documentElement.clientHeight;
+      var AllowWindowResize=()=>!I_KeyboardOnScreen()||!UserAgentIsMobile()||GetViewportHeight()>GetViewportWidth()||GetViewportWidth()/GetViewportHeight()<=2.2;
+      var LockMouse  =()=>{ if(StartedMainLoop)Module.ccall('lock_mouse',null,[],[]); };
+      var UnlockMouse=(force=false)=>{ if(StartedMainLoop){ if(force&&document.pointerLockElement)document.exitPointerLock(); else if(!document.pointerLockElement)Module.ccall('unlock_mouse',null,[],[]); } };
+
+      window.addEventListener('mousedown',LockMouse,false);
+      document.addEventListener('pointerlockchange',_=>UnlockMouse(),false);
+      window.addEventListener('load',_=>{
+        ['keydown','keyup','keypress'].forEach(t=>document.addEventListener(t,e=>{ if(e instanceof KeyboardEvent&&e.key==='F11')e.stopPropagation(); },true));
+      },{once:true});
+
+    <\/script>
+  </body>
+</html>
+`
+},
             'vs-atrocity': {
                 title: "FNF: Atrocity",
                 customHtml: `
@@ -22188,209 +23851,6 @@ export const GAME_PAYLOADS: Record<string, { title: string; customHtml: string }
 </html>
 `
 },
-'sonic-and-the-fallen-star': {
-    title: "Sonic and The Fallen Star",
-    customHtml: `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <base href="https://cdn.jsdelivr.net/gh/bubbls/ports@main/sonic-and-the-falling-star/">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="HandheldFriendly" content="true" />
-
-  <title>Sonic and The Fallen Star</title>
-
-<style type="text/css">
-  body {
-      background-color: #000;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-  }
-  
-  #gameContainer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  #MMFCanvas {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      image-rendering: pixelated;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: crisp-edges;
-      display: none; 
-  }
-  
-  #loadingScreen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-  }
-  
-  #loadingText {
-      color: #FFF;
-      font-size: 24px;
-      margin-bottom: 20px;
-  }
-  
-  
-  h1 {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #F00;
-      font-size: x-large;
-  }
-  p {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #000;
-      font-size: small;
-  }
-  #bloctxt {
-      border-left-width: 5px;
-      border-left-style: solid;
-      border-left-color: #F00;
-      padding-left: 10px;
-      position: absolute;
-      left: 50%;
-      width: 600px;
-      margin-left: -260px;
-      background-color: #FFF;
-  }
-</style>
-
-    <script>
-      if (!document.createElement("canvas").getContext)
-      {
-            window.open("http://www.clickteam.com/html5-fallback", "_self");
-        }
-    <\/script>
-
-    <script src="src/Runtime.js"><\/script>
-
-  <script>
-    if (window.location.protocol == "file:")
-    {
-        document.write('<div id="bloctxt">');
-        document.write('<h1>The application cannot be run...</h1>');
-        document.write('<p>HTML browsers do not allow you to launch data files directly from the file system.<br>');
-        document.write('A drag & drop of the html file on a web-browser window will not work, on any machine.<br>');
-        document.write('Please use the Build & Run option (it opens a local web server) to run your application,<br>')
-        document.write('or upload your application folder to a remote web-server, and start it from there...</p>');
-        document.write('</div>');
-        throw new error("Cannot run application");
-    }
-  <\/script>
-</head>
-
-<body>
-
-<div id="loadingScreen">
-    <div id="loadingText">Loading...</div>
-    <div id="loadingDetails">Initializing...</div>
-</div>
-
-<div id="gameContainer">
-    <canvas id="MMFCanvas" width="424" height="240">
-        Your browser does not support Canvas.
-    </canvas>
-</div>
-
-<script>
-    // Loading tracker
-    const loadingDetails = document.getElementById('loadingDetails');
-    const loadingScreen = document.getElementById('loadingScreen');
-    const canvas = document.getElementById('MMFCanvas');
-    
-    let loadingSteps = [
-        'Loading john.cch...',
-        'Loading resources...',
-        'Initializing runtime...',
-        'Starting game...'
-    ];
-    let currentStep = 0;
-    
-    function updateLoadingText(text) {
-        loadingDetails.textContent = text;
-    }
-    
-    function simulateLoading() {
-        if (currentStep < loadingSteps.length) {
-            updateLoadingText(loadingSteps[currentStep]);
-            currentStep++;
-            setTimeout(simulateLoading, 300);
-        }
-    }
-    
-    window.addEventListener("load", windowLoaded, false);
-    function windowLoaded()
-    {
-        // Start showing loading messages
-        simulateLoading();
-        
-        // Intercept XMLHttpRequest to track actual file loading
-        const originalOpen = XMLHttpRequest.prototype.open;
-        XMLHttpRequest.prototype.open = function(method, url) {
-            // Extract filename from URL
-            const filename = url.split('/').pop();
-            if (filename.includes('.cc')) {
-                updateLoadingText('Loading ' + filename + '...');
-            }
-            return originalOpen.apply(this, arguments);
-        };
-        
-        // Start the runtime
-        new Runtime("MMFCanvas", "resources/john.cch");
-        
-        // Hide loading screen after a delay (adjust time as needed)
-        setTimeout(function() {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.transition = 'opacity 0.5s';
-            canvas.style.display = 'block';
-            setTimeout(function() {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }, 3000); // Wait 3 seconds, adjust based on your game's load time
-        
-        // Resize handling
-        window.addEventListener('resize', resizeCanvas, false);
-        resizeCanvas();
-    }
-    
-    function resizeCanvas() {
-        const canvas = document.getElementById('MMFCanvas');
-        const scaleX = window.innerWidth / 424;
-        const scaleY = window.innerHeight / 240;
-        const scale = Math.min(scaleX, scaleY);
-        
-        canvas.style.width = (424 * scale) + 'px';
-        canvas.style.height = (240 * scale) + 'px';
-    }
-<\/script>
-
-</body>
-</html>
-`
-},
 'pokemon-ultra-violet': {
     title: "Pokémon Ultra Violet",
     customHtml: `
@@ -33457,54 +34917,237 @@ let joystick = nipplejs.create({
 `
 },
 'sonic-mania': {
-    title: "Sonic Mania (Web Port)",
+    title: "Sonic Mania",
     customHtml: `
 <!doctype html>
 <html lang="en-us">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Sonic Mania</title>
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224423134.png" type="image/png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 100%; height: 100%; overflow: hidden; background-color: #000; font-family: 'Inter', sans-serif; text-align: center; }
-        canvas { height: 100%; margin: auto; display: block; background-color: #000; image-rendering: pixelated; visibility: hidden; }
-        canvas.visible { visibility: visible; }
-        #output { display: none; }
-        #loading-screen {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224632873.png') no-repeat center center;
-            background-size: cover; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1000; transition: opacity 0.1s ease;
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
         }
-        #loading-screen.fade-out { opacity: 0; pointer-events: none; }
-        #loading-screen.hidden { display: none; }
-        .loading-content { width: 80%; max-width: 600px; display: flex; flex-direction: column; align-items: flex-start; }
-        .loading-header { display: flex; justify-content: space-between; width: 100%; margin-bottom: 8px; }
-        .loading-title { color: #ffffff; font-size: 16px; font-weight: 900; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-        .loading-bar-container { width: 100%; height: 10px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
-        .loading-bar { width: 0%; height: 100%; background: #ffffff; border-radius: 10px; transition: width 0.3s ease-out; }
-        .loading-text { font-size: 13px; color: #ffffff; font-weight: 700; height: 1.2em; }
-        .control-panel { position: fixed; top: 15px; right: 15px; z-index: 1001; }
-        .game-btn { background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; color: white; padding: 8px 12px; cursor: pointer; }
+
+        canvas {
+            height: 100%;
+            margin: auto;
+            padding: 0;
+            border: 0 none;
+            background-color: #000;
+            image-rendering: pixelated;
+            visibility: hidden;
+        }
+
+        canvas.visible {
+            visibility: visible;
+        }
+
+        #output { display: none; }
+
+        #loading-screen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: url('https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224632873.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: opacity 0.1s ease;
+        }
+
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #loading-screen.hidden {
+            display: none;
+        }
+
+        .loading-content {
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .loading-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .title-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mini-favicon {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+
+        .loading-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 900;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .loading-mb {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .loading-bar-container {
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .loading-bar {
+            width: 0%;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 10px;
+            transition: width 0.3s ease-out;
+        }
+
+        .loading-text {
+            font-size: 13px;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            height: 1.2em;
+        }
+
+        .loading-dots {
+            position: absolute;
+            bottom: 40%;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: dot-pulse 1.5s infinite ease-in-out;
+            box-shadow: 0 0 5px rgba(255,255,255,0.5);
+        }
+
+        .dot:nth-child(2) { animation-delay: 0.2s; }
+        .dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .ownership-footer {
+            position: absolute;
+            bottom: 25px;
+            width: 100%;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 11px;
+            padding: 0 20px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .control-panel {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1001;
+        }
+
+        .game-btn {
+            background: rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            color: white;
+            padding: 8px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(4px);
+            transition: all 0.2s;
+            min-width: 130px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .game-btn:hover {
+            background: rgba(0,0,0,0.8);
+            border-color: rgba(255,255,255,0.4);
+        }
     </style>
 </head>
 <body>
+
     <canvas id="canvas" width="424" height="240" onclick="window.focus();" oncontextmenu="event.preventDefault();"></canvas>
+    <textarea id="output" rows="8"></textarea>
+
     <div class="control-panel">
-        <button id="fullscreen-button" class="game-btn">Fullscreen</button>
+        <button id="fullscreen-button" class="game-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+            Fullscreen
+        </button>
     </div>
+
     <div id="loading-screen">
         <div class="loading-content">
             <div class="loading-header">
-                <div class="loading-title">Sonic Mania - Ported by Crunch Arcade</div>
-                <div id="mb-text" style="color:white; font-size:14px;">0.0MB / 198.8MB</div>
+                <div class="title-group">
+                    <img src="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/image_2026-02-26_224423134.png" class="mini-favicon" alt="icon">
+                    <div class="loading-title">Sonic Mania ported to the web by Crunch Arcade</div>
+                </div>
+                <div class="loading-mb" id="mb-text">0.0MB of 198.8MB</div>
             </div>
             <div class="loading-bar-container">
                 <div class="loading-bar" id="loading-bar"></div>
             </div>
-            <div class="loading-text" id="loading-text">Initializing...</div>
+            <div class="loading-text" id="loading-text">getting jsdlivr stuff</div>
+        </div>
+
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <div class="ownership-footer">
+            crunch arcade owns this btw
         </div>
     </div>
 
@@ -33513,24 +35156,58 @@ let joystick = nipplejs.create({
         var loadingText = document.getElementById('loading-text');
         var mbText = document.getElementById('mb-text');
         var loadingScreen = document.getElementById('loading-screen');
+        var fullscreenButton = document.getElementById('fullscreen-button');
         var canvas = document.getElementById('canvas');
         var totalSizeMB = 198.8;
 
-        function finishLoading() {
-            loadingBar.style.width = '100%';
-            loadingText.textContent = "Crunch Arcade on top";
-            setTimeout(function() {
-                loadingScreen.classList.add('fade-out');
-                setTimeout(function() {
-                    loadingScreen.classList.add('hidden');
-                    canvas.classList.add('visible');
-                }, 100);
-            }, 1000);
+        var links = [
+            "crunch arcade on top",
+        ];
+
+        function speakCrunch() {
+            window.speechSynthesis.cancel();
+            var utterance = new SpeechSynthesisUtterance("Crunch arcade on top");
+            utterance.rate = 1.6;
+            utterance.pitch = 1.0;
+            window.speechSynthesis.speak(utterance);
         }
 
-        document.getElementById('fullscreen-button').onclick = function() {
-            if (!document.fullscreenElement) document.documentElement.requestFullscreen();
-            else document.exitFullscreen();
+        window.onclick = function() {
+            var probe = new SpeechSynthesisUtterance("");
+            window.speechSynthesis.speak(probe);
+        };
+
+        function typeWriter(text, i, callback) {
+            if (i === 0) speakCrunch();
+            if (i < text.length) {
+                loadingText.textContent = text.substring(0, i + 1);
+                setTimeout(function() { typeWriter(text, i + 1, callback); }, 40);
+            } else if (callback) {
+                setTimeout(callback, 3000);
+            }
+        }
+
+        function finishLoading() {
+            loadingBar.style.width = '100%';
+            mbText.textContent = totalSizeMB.toFixed(1) + 'MB of ' + totalSizeMB.toFixed(1) + 'MB';
+            var randomLink = links[Math.floor(Math.random() * links.length)];
+            typeWriter(randomLink, 0, function() {
+                loadingScreen.classList.add('fade-out');
+                loadingScreen.addEventListener('transitionend', function() {
+                    loadingScreen.classList.add('hidden');
+                    canvas.classList.add('visible');
+                }, { once: true });
+            });
+        }
+
+        fullscreenButton.onclick = function() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(function() {
+                    console.warn("Fullscreen failed");
+                });
+            } else {
+                document.exitFullscreen();
+            }
         };
 
         var Module = {
@@ -33538,40 +35215,99 @@ let joystick = nipplejs.create({
                 FS.mkdir('/saves');
                 FS.mount(IDBFS, {}, '/saves');
                 FS.syncfs(true, function(err) {
+                    if (err) console.log('FS load error:', err);
                     try {
                         if (FS.analyzePath('/saves/SaveData.bin').exists) {
                             var data = FS.readFile('/saves/SaveData.bin');
                             FS.writeFile('/SaveData.bin', data);
+                            console.log('Save data loaded from IndexedDB');
                         }
-                    } catch(e) {}
+                    } catch(e) {
+                        console.log('No existing save data found:', e);
+                    }
                 });
             }],
             postRun: [function() {
                 finishLoading();
+
                 setInterval(function() {
                     try {
                         var data = FS.readFile('/SaveData.bin');
                         FS.writeFile('/saves/SaveData.bin', data);
-                        FS.syncfs(false, function(err) {});
                     } catch(e) {}
+                    FS.syncfs(false, function(err) {
+                        if (err) console.log('FS save error:', err);
+                    });
                 }, 5000);
             }],
-            canvas: (function() { return canvas; })(),
+            print: function(text) { console.log(text); },
+            printErr: function(text) { console.error(text); },
+            canvas: (function() {
+                var canvas = document.getElementById('canvas');
+                canvas.addEventListener("webglcontextlost", function(e) {
+                    alert('WebGL context lost. Reload the page.');
+                    e.preventDefault();
+                }, false);
+                return canvas;
+            })(),
             setStatus: function(text) {
-                var m = text.match(/([^(]+)((d+(.d+)?)/(d+))/);
+                if (!Module.setStatus.last) Module.setStatus.last = {time: Date.now(), text: ''};
+                if (text === Module.setStatus.last.text) return;
+
+                var m = text.match(/([^(]+)\\(\\(\\d+(\\.\\d+)?\\)\\/(\\d+)\\)/);
+                var now = Date.now();
+                if (m && now - Module.setStatus.last.time < 30) return;
+
+                Module.setStatus.last.time = now;
+                Module.setStatus.last.text = text;
+
                 if (m) {
                     var loaded = parseFloat(m[2]);
                     var total = parseFloat(m[4]);
                     var percent = Math.round((loaded / total) * 100);
+                    var currentMB = (percent / 100 * totalSizeMB).toFixed(1);
+
                     loadingBar.style.width = percent + '%';
-                    mbText.textContent = ((percent/100)*totalSizeMB).toFixed(1) + 'MB / ' + totalSizeMB + 'MB';
-                    loadingText.textContent = "Downloading game data...";
+                    mbText.textContent = currentMB + 'MB of ' + totalSizeMB.toFixed(1) + 'MB';
+
+                    if (percent < 20) loadingText.textContent = "getting jsdlivr stuff";
+                    else if (percent < 60) loadingText.textContent = "downloading game data...";
+                    else if (percent < 90) loadingText.textContent = "assembling Data.rsdk...";
+                    else loadingText.textContent = "almost there...";
+
+                } else if (text.startsWith('Downloading part')) {
+                    var match = text.match(/(\\d+)\\/(\\d+)/);
+                    if (match) {
+                        var p = Math.round((parseInt(match[1]) / parseInt(match[2])) * 60);
+                        loadingBar.style.width = p + '%';
+                        var currentMB = (p / 100 * totalSizeMB).toFixed(1);
+                        mbText.textContent = currentMB + 'MB of ' + totalSizeMB.toFixed(1) + 'MB';
+                        loadingText.textContent = text;
+                    }
+                } else if (text === 'Assembling Data.data...') {
+                    loadingBar.style.width = '65%';
+                    loadingText.textContent = "combining stuff";
                 }
+            },
+            totalDependencies: 0,
+            monitorRunDependencies: function(left) {
+                this.totalDependencies = Math.max(this.totalDependencies, left);
+                Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : '');
             }
         };
+
+        Module.setStatus('Downloading...');
+
+        window.addEventListener('beforeunload', function() {
+            try {
+                var data = FS.readFile('/SaveData.bin');
+                FS.writeFile('/saves/SaveData.bin', data);
+            } catch(e) {}
+            FS.syncfs(false, function(err) {});
+        });
     <\/script>
     <script src="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@main/Data.js"><\/script>
-    <script async src="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@refs/heads/main/RSDKv5U.js"><\/script>
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/gh/UGBONTOP/Sonic-Mania-InYourBrowser@refs/heads/main/RSDKv5U.js"><\/script>
 </body>
 </html>
 `
@@ -52201,5 +53937,187 @@ customHtml: `
 	
 	</body>
 </html>`
-            }
+            },
+	'retro-bowl': {
+    title: "Retro Bowl",
+    customHtml: `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <base href="https://cdn.jsdelivr.net/gh/genizy/assets@main/retro-bowl/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="utf-8" />
+
+    <title>Retro Bowl</title>
+
+    <style>
+      body {
+        background: #000;
+        color: #cccccc;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+      }
+      canvas {
+        image-rendering: optimizeSpeed;
+        -webkit-interpolation-mode: nearest-neighbor;
+        -ms-touch-action: none;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+      }
+      :-webkit-full-screen #canvas {
+        width: 100%;
+        height: 100%;
+      }
+      div.gm4html5_div_class {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+      }
+      /* START - Login Dialog Box */
+      div.gm4html5_login {
+        padding: 20px;
+        position: absolute;
+        border: solid 2px #000000;
+        background-color: #404040;
+        color: #00ff00;
+        border-radius: 15px;
+        box-shadow: #101010 20px 20px 40px;
+      }
+      div.gm4html5_cancel_button {
+        float: right;
+      }
+      div.gm4html5_login_button {
+        float: left;
+      }
+      div.gm4html5_login_header {
+        text-align: center;
+      }
+      /* END - Login Dialog Box */
+      :-webkit-full-screen {
+        width: 100%;
+        height: 100%;
+      }
+</style>
+  </head>
+
+  <body>
+    <div class="gm4html5_div_class" id="gm4html5_div_id">
+      <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="display: none;" />
+      <canvas id="canvas" width="960" height="540">
+        <p>Your browser doesn't support HTML5 canvas.</p>
+      </canvas>
+    </div>
+
+    <script type="text/javascript" src="html5game/RetroBowl.js?WAEAC=1633155445"><\/script>
+    <script>
+      window.onload = GameMaker_Init;
+    <\/script>
+  </body>
+</html>
+`
+},
+'retro-bowl-college': {
+    title: "Retro Bowl College",
+    customHtml: `
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<base href="https://cdn.jsdelivr.net/gh/SenpaiX1/ghdfhres@latest/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta charset="utf-8" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <title>Retro Bowl College</title>
+  <style>
+    body {
+      background: #000000;
+      color: #cccccc;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+    }
+
+    canvas {
+      image-rendering: pixelated;
+      -webkit-interpolation-mode: nearest-neighbor;
+      -ms-touch-action: none;
+      touch-action: none;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+    }
+
+    :-webkit-full-screen #canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    :-webkit-full-screen {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Custom Runner Styles */
+    div.gm4html5_div_class {
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+    }
+
+    div.gm4html5_login {
+      padding: 20px;
+      position: absolute;
+      border: solid 2px #000000;
+      background-color: #404040;
+      color: #00ff00;
+      border-radius: 15px;
+      box-shadow: #101010 20px 20px 40px;
+    }
+
+    div.gm4html5_cancel_button {
+      float: right;
+    }
+
+    div.gm4html5_login_button {
+      float: left;
+    }
+
+    div.gm4html5_login_header {
+      text-align: center;
+    }
+
+    :-webkit-full-screen {
+      width: 100%;
+      height: 100%;
+    }
+</style>
+</head>
+
+<body>
+  <div class="gm4html5_div_class" id="gm4html5_div_id">
+    <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="display:none;" />
+    <canvas id="canvas" width="853" height="480" style="position: absolute; top: 50%; left: 50%; bottom: -50%; right: -50%; transform: translate(-50%, -50%);">
+      <p>Your browser doesn't support HTML5 canvas.</p>
+    </canvas>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@1523e1e73e0b1c006b7e17639135d68b79f6e4d8/retro%20bowl/html5game/RetroBowl.js"><\/script>
+  <script src="poki-sdk.js"><\/script>
+  <script>
+    window.onload = GameMaker_Init;
+  <\/script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"94edd7826a3f8400","version":"2025.6.2","r":1,"token":"8be41b6e10e9479099c99f86c64d1a12","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"><\/script>
+</body>
+</html>
+`
+}
 };
