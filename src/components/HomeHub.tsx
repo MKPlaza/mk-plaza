@@ -26,26 +26,28 @@ interface HomeHubProps {
 
 const CHANGELOG = [
   {
+    version: 'v2',
+    date: 'APR 1, 26',
+    updates: [
+      'Added GOAT',
+      'More G4m3s coming soon',
+      'Added The Super Mario Galaxy Movie!'
+
+    ]
+  },
+  {
+    version: 'v1.1.5',
+    date: 'MAR 19, 2026',
+    updates: [
+      'Added Invincible Season 4 fr'
+    ]
+  },
+  {
     version: 'v1.1',
     date: 'MAR 14, 2026',
     updates: [
       'THE DAY THAT MR. KRABS FRIES',
       'Added more m0v135, 4n1m3, 7v 5h0w5, and m4ng4'
-    ]
-  },
-  {
-    version: 'v1.0',
-    date: 'Mar 10, 2026',
-    updates: [
-      'Truly, Welcome to MKPlaza',
-      'Happy Mar10 Day!'
-    ]
-  },
-  {
-    version: 'Beta v2.0',
-    date: 'MAR 07, 2026',
-    updates: [
-      'Welcome to MKPlaza!'
     ]
   }
 ];
