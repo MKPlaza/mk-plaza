@@ -467,13 +467,14 @@ export default function App() {
               <iframe 
                 className="w-full h-full border-none bg-black"
                 allow="fullscreen; gamepad; autoplay"
-                srcDoc={GAME_PAYLOADS[selectedGame.id]?.customHtml || `<!DOCTYPE html><html><body style="margin:0;background:#000;display:flex;align-items:center;justify-content:center;height:100vh;color:#fff;font-family:sans-serif">
+                src={!GAME_PAYLOADS[selectedGame.id]?.customHtml ? selectedGame.link : undefined}
+                srcDoc={GAME_PAYLOADS[selectedGame.id]?.customHtml || (!selectedGame.link ? `<!DOCTYPE html><html><body style="margin:0;background:#000;display:flex;align-items:center;justify-content:center;height:100vh;color:#fff;font-family:sans-serif">
                     <div style="text-align:center">
                         <h2 style="letter-spacing:4px">EMULATING ${selectedGame.title.toUpperCase()}</h2>
                         <div style="width:50px;height:2px;background:#e63946;margin:20px auto"></div>
                         <p style="opacity:0.6;font-size:12px;text-transform:uppercase">Connecting to secure ROM vault...</p>
                     </div>
-                </body></html>`}
+                </body></html>` : undefined)}
               />
             </div>
           </motion.div>
