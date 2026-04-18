@@ -58,6 +58,27 @@ export const MOVIES: Movie[] = [
                 year: "2026"
             },
             {
+                title: "Ready or Not 2: Here I Come",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSboc4YnkzClqlNs0RWNus91iIZdSAnhdBoOuUd6mhSIX7TtTUlpKxormAAwtUH1rjpPm4-ug&s=10",
+                link: "https://drive.google.com/file/d/13jK1aDRespvEjDqfAdGULZtdKvLMjbn5/view?usp=sharing",
+                description: "Samara Weaving returns as Grace in this intense sequel. Following the blood-soaked survival of her wedding night, Grace must navigate a new, even deadlier game of hide-and-seek with a fresh set of twisted rules.",
+                year: "2026"
+            },
+            {
+                title: "Pizza Movie",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS7hfpo2v1k67BbfFh72jRov7MnnbHVfCmvHHV0Aj3ZSr63dNea",
+                link: "https://drive.google.com/file/d/1KrkimDNrloKfu38Mi-yhTNq3HONTTaIt/view?usp=drive_link",
+                description: "High college students face an unexpected journey when they must navigate two flights of stairs to retrieve their pizza delivery, turning a simple task into a surreal adventure.",
+                year: "2026"
+            },
+            {
+                title: "Send Help",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ1fEJjg76O9hJypbI_Lci4Pk4w4X8uhlcXA2Rs45gxNEKTRaJ",
+                link: "https://drive.google.com/file/d/1qcbBQNBZV2yL2VVDoJRCZj1QdyklRtxi/view?usp=drive_link",
+                description: "Directed by Sam Raimi, this psychological horror-thriller follows a group of stranded survivors on a remote island. As isolation takes its toll, they begin to realize that the elements are the least of their worries.",
+                year: "2026"
+            },
+            {
                 title: "Spider-Man: Into the Spider-Verse",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM%40._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/file/d/1V3Bq0lrDQUxJay5DDs3gK69ZvRNb1j2u/view",
