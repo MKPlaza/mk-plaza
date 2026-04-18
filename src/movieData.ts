@@ -51,6 +51,13 @@ export const MOVIES: Movie[] = [
                 year: "2026"
             },
             {
+                title: "The Legend of Aang - The Last Airbender",
+                imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/aang.webp",
+                link: "https://drive.google.com/file/d/1GLkdpNumWIYJ8rw6kUJgf5NiDLsaUDLU/view?usp=sharing",
+                description: "Avatar Aang, the world's last Airbender, learns of an ancient power that could save his culture from extinction. With the help of his friends, he embarks on a global quest to find it before it falls into the wrong hands.",
+                year: "2026"
+            },
+            {
                 title: "Spider-Man: Into the Spider-Verse",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM%40._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/file/d/1V3Bq0lrDQUxJay5DDs3gK69ZvRNb1j2u/view",
