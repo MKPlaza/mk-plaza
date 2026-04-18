@@ -73,6 +73,7 @@ const iconMap: Record<string, any> = {
 export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame }: GamesHubProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentFilter, setCurrentFilter] = useState('ALL');
+  const [displayCount, setDisplayCount] = useState(24);
 
   const filteredGames = GAMES.filter(game => {
     const searchLower = searchTerm.toLowerCase();
@@ -87,7 +88,8 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
     return matchesPlatform && matchesSearch;
   });
 
-  const filterOptions = ['ALL', 'Nintendo', 'Sega', 'PlayStation', 'PC', 'Other'];
+  const visibleGames = filteredGames.slice(0, displayCount);
+  const filterOptions = ['ALL', 'PC', 'Nintendo', 'Sega', 'PlayStation', 'Other'];
 
   return (
     <motion.div  
@@ -110,7 +112,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         <div className="flex items-center justify-center gap-3 mt-4">
           <div className="h-px w-8 bg-white/10"></div>
           <span className="text-[11px] font-black tracking-[0.3em] uppercase text-neutral-400">
-            {filteredGames.length.toString().padStart(2, '0')} <span className="text-red-600/60">TITLES</span> IN THE {currentFilter === 'ALL' ? '' : currentFilter + ' '}VAULT
+            {filteredGames.length.toLocaleString()} <span className="text-red-600/60">TITLES</span> IN THE {currentFilter === 'ALL' ? '' : currentFilter + ' '}VAULT
           </span>
           <div className="h-px w-8 bg-white/10"></div>
         </div>
@@ -122,7 +124,10 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
           type="text" 
           placeholder="Search the vault (Title, system, or tag)..." 
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+            setDisplayCount(24);
+          }}
           className="w-full bg-white/5 border border-white/10 text-white py-4 pl-14 pr-6 rounded-full outline-none focus:border-[var(--mk-gold)]/50 focus:bg-white/10 focus:shadow-[0_0_20px_rgba(255,204,0,0.1)] transition-all font-sans font-medium placeholder:text-neutral-600"
         />
       </div>
@@ -131,7 +136,10 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         {filterOptions.map(option => (
           <button
             key={option}
-            onClick={() => setCurrentFilter(option)}
+            onClick={() => {
+              setCurrentFilter(option);
+              setDisplayCount(24);
+            }}
             className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border ${
               currentFilter === option
                 ? 'bg-[var(--mk-gold)] border-[#ffe066] text-black shadow-[0_10px_15px_-3px_rgba(255,204,0,0.3)] scale-105'
@@ -145,7 +153,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence mode="popLayout">
-          {filteredGames.map((game) => {
+          {visibleGames.map((game) => {
             const isFavorited = favorites.some(f => f.id === game.id);
             const IconComponent = iconMap[game.icon] || Gamepad2;
             
@@ -159,9 +167,12 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
                 className="game-card group relative rounded-3xl overflow-hidden flex flex-col min-h-[300px] border border-white/10 transition-all duration-500"
               >
                 {game.image && (
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-all duration-500 opacity-20 group-hover:opacity-60 group-hover:scale-105 z-0" 
-                    style={{ backgroundImage: `url('${game.image}')` }}
+                  <img 
+                    src={game.image}
+                    alt={game.title}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover transition-all duration-500 opacity-20 group-hover:opacity-60 group-hover:scale-105 z-0" 
+                    referrerPolicy="no-referrer"
                   />
                 )}
                 
@@ -175,14 +186,14 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
                       <div className="p-3 bg-white/5 backdrop-blur-sm rounded-2xl transition-colors group-hover:bg-white/10">
                         <IconComponent className={`w-6 h-6 ${game.iconColor} drop-shadow-md`} />
                       </div>
-                      <div className="flex flex-col items-end">
+                      <div className="flex flex-col items-end text-right">
                         <span className="text-[10px] font-black text-white/40 tracking-widest uppercase mb-1 drop-shadow-md">{game.system}</span>
                         <span className="text-[10px] font-bold text-red-500 bg-red-600/10 backdrop-blur-md px-2 py-0.5 rounded-md border border-red-600/20">{game.year}</span>
                       </div>
                     </div>
                     
                     <div className="flex justify-between items-start gap-4 mb-3">
-                      <h3 className="text-2xl font-bold text-white drop-shadow-lg">{game.title}</h3>
+                      <h3 className="text-2xl font-bold text-white drop-shadow-lg line-clamp-2">{game.title}</h3>
                       <button 
                         onClick={(e) => {
                           e.stopPropagation();
@@ -222,6 +233,17 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
           })}
         </AnimatePresence>
       </div>
+
+      {filteredGames.length > displayCount && (
+        <div className="mt-12 flex justify-center">
+          <button 
+            onClick={() => setDisplayCount(prev => prev + 24)}
+            className="px-12 py-4 bg-white/5 border border-white/10 text-[var(--mk-gold)] text-xs font-black uppercase tracking-[0.2em] rounded-2xl hover:bg-[var(--mk-gold)] hover:text-black hover:border-[var(--mk-gold)] transition-all transform hover:-translate-y-1 shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+          >
+            Load More Titles
+          </button>
+        </div>
+      )}
 
       {filteredGames.length === 0 && (
         <div className="flex flex-col items-center justify-center py-20 text-center">
