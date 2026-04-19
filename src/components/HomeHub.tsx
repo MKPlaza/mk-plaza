@@ -31,7 +31,7 @@ const CHANGELOG = [
     updates: [
       'Fixed The Super Mario Bros Galaxy Movie',
       'Added 1.6k more games',
-      'Added 4 more movies "From The Legend Of Aang to Send Help"
+      'Added 4 more movies "From The Legend Of Aang to Send Help'
     ]
   },
   {
