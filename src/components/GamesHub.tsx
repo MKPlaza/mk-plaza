@@ -75,9 +75,20 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
   const [currentFilter, setCurrentFilter] = useState('ALL');
   const [displayCount, setDisplayCount] = useState(24);
 
-  const filteredGames = GAMES.filter(game => {
+  const filteredGames = [...GAMES]
+    .sort((a, b) => (a.title || "").localeCompare(b.title || ""))
+    .filter(game => {
     const searchLower = searchTerm.toLowerCase();
-    const matchesPlatform = currentFilter === 'ALL' || game.platform === currentFilter;
+    
+    let matchesFilter = true;
+    if (currentFilter !== 'ALL') {
+      if (currentFilter === '#') {
+        matchesFilter = /^\d/.test(game.title || '');
+      } else {
+        matchesFilter = game.title?.toUpperCase().startsWith(currentFilter) || false;
+      }
+    }
+
     const matchesSearch = searchTerm === '' || 
       (game.title?.toLowerCase().includes(searchLower) || false) ||
       (game.desc?.toLowerCase().includes(searchLower) || false) ||
@@ -85,11 +96,11 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
       (game.platform?.toLowerCase().includes(searchLower) || false) ||
       (game.year?.includes(searchLower) || false);
       
-    return matchesPlatform && matchesSearch;
+    return matchesFilter && matchesSearch;
   });
 
   const visibleGames = filteredGames.slice(0, displayCount);
-  const filterOptions = ['ALL', 'PC', 'Nintendo', 'Sega', 'PlayStation', 'Other'];
+  const filterOptions = ['ALL', '#', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')];
 
   return (
     <motion.div  
@@ -132,7 +143,7 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
         />
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2 mb-12">
+      <div className="flex overflow-x-auto gap-2 mb-12 no-scrollbar pb-6 -mx-4 px-4 mask-fade-edges">
         {filterOptions.map(option => (
           <button
             key={option}
@@ -140,10 +151,10 @@ export default function GamesHub({ favorites, onToggleFavorite, setSelectedGame 
               setCurrentFilter(option);
               setDisplayCount(24);
             }}
-            className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border ${
+            className={`flex-shrink-0 min-w-[50px] h-12 flex items-center justify-center rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 border ${
               currentFilter === option
-                ? 'bg-[var(--mk-gold)] border-[#ffe066] text-black shadow-[0_10px_15px_-3px_rgba(255,204,0,0.3)] scale-105'
-                : 'border-white/5 bg-white/5 text-neutral-500 hover:text-white'
+                ? 'bg-[var(--mk-gold)] border-[#ffe066] text-black shadow-[0_10px_15px_-3px_rgba(255,204,0,0.3)] scale-105 select-none'
+                : 'border-white/5 bg-white/5 text-neutral-500 hover:text-white hover:bg-white/10'
             }`}
           >
             {option}
