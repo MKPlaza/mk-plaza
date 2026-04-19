@@ -26,6 +26,15 @@ interface HomeHubProps {
 
 const CHANGELOG = [
   {
+    version: 'v2.5',
+    date: 'APR 18, 2026',
+    updates: [
+      'Fixed The Super Mario Bros Galaxy Movie',
+      'Added 1.6k more games',
+      'Added 4 more movies "From The Legend Of Aang to Send Help"
+    ]
+  },
+  {
     version: 'v2',
     date: 'APR 1, 26',
     updates: [
