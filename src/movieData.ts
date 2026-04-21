@@ -2,6 +2,27 @@ import { Movie } from './types';
 
 export const MOVIES: Movie[] = [
             {
+                title: "The Bride!",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTToJzpoisSPMhz0PtF-daETu68GMk8V_N-vs3icrn3YccdCPK1",
+                link: "https://drive.google.com/file/d/1xSofJ9d2rDIGNlGqiVPcYJgG00oSOS0b/view",
+                description: "Maggie Gyllenhaal's dark reimagining of the classic monster tale. A lonely Frankenstein travels to 1930s Chicago to seek the help of Dr. Euphronius to create a companion.",
+                year: "2026"
+            },
+            {
+                title: "Frankenstein's Bride",
+                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/frank-bride.avif",
+                link: "https://drive.google.com/file/d/1yF3yrdhJ1LM3sMFyvjiMXqxBM1y05llK/view",
+                description: "Vengeance is hers in this modern take on the classic horror icon.",
+                year: "2025"
+            },
+            {
+                title: "Frankenstein",
+                imageUrl: "https://pics.filmaffinity.com/Frankenstein_s_Bride-528687358-mmed.jpg",
+                link: "https://drive.google.com/file/d/1E78ETKieIUSm9-oGon7lq3NxOy94MGqd/view",
+                description: "Guillermo del Toro's take on Mary Shelley's classic tale about Victor Frankenstein, a scientist who brings a creature to life in a horrific experiment.",
+                year: "2025"
+            },
+            {
                 title: "Deadpool and Wolverine",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/dp3_1sht_digital_srgb_ka_swords_v5_resized.jpg",
                 link: "https://drive.google.com/file/d/1B_eiKUt7N5OxyUN9c37LG0pxcErP4yJ6/view",
@@ -51,9 +72,16 @@ export const MOVIES: Movie[] = [
                 year: "2026"
             },
             {
+                title: "Spider-Man: Into the Spider-Verse",
+                imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM%40._V1_FMjpg_UX1000_.jpg",
+                link: "https://drive.google.com/file/d/1V3Bq0lrDQUxJay5DDs3gK69ZvRNb1j2u/view",
+                description: "Teen Miles Morales becomes Spider-Man across dimensions.",
+                year: "2018"
+            },
+            {
                 title: "The Legend of Aang - The Last Airbender",
                 imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/aang.webp",
-                link: "https://drive.google.com/file/d/1GLkdpNumWIYJ8rw6kUJgf5NiDLsaUDLU/view?usp=sharing",
+                link: "https://drive.google.com/file/d/1GLkdpNumWIYJ8rw6kUJgf5NiDLsaUDLU/view",
                 description: "Avatar Aang, the world's last Airbender, learns of an ancient power that could save his culture from extinction. With the help of his friends, he embarks on a global quest to find it before it falls into the wrong hands.",
                 year: "2026"
             },
@@ -79,11 +107,32 @@ export const MOVIES: Movie[] = [
                 year: "2026"
             },
             {
-                title: "Spider-Man: Into the Spider-Verse",
-                imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM%40._V1_FMjpg_UX1000_.jpg",
-                link: "https://drive.google.com/file/d/1V3Bq0lrDQUxJay5DDs3gK69ZvRNb1j2u/view",
-                description: "Teen Miles Morales becomes Spider-Man across dimensions.",
-                year: "2018"
+                title: "Iron Lung",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRT6bD0k4YVE8g5GgEJn8l498XEyYFPpUcwg7jIB4ln0Epwd7UP",
+                link: "https://drive.google.com/file/d/1x5AAIcDcYIqTRw14fQoLjYvBjixpfWNO/view",
+                description: "Based on the popular indie horror game, a lone convict explores a literal sea of blood on a desolate moon in a claustrophobic, rusted-out submarine.",
+                year: "2026"
+            },
+            {
+                title: "The Bride!",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTToJzpoisSPMhz0PtF-daETu68GMk8V_N-vs3icrn3YccdCPK1",
+                link: "https://drive.google.com/file/d/1xSofJ9d2rDIGNlGqiVPcYJgG00oSOS0b/view",
+                description: "Maggie Gyllenhaal's dark reimagining of the classic monster tale. A lonely Frankenstein travels to 1930s Chicago to seek the help of Dr. Euphronius to create a companion.",
+                year: "2026"
+            },
+            {
+                title: "Frankenstein's Bride",
+                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/frank-bride.avif",
+                link: "https://drive.google.com/file/d/1yF3yrdhJ1LM3sMFyvjiMXqxBM1y05llK/view",
+                description: "Vengeance is hers in this modern take on the classic horror icon.",
+                year: "2025"
+            },
+            {
+                title: "Frankenstein",
+                imageUrl: "https://pics.filmaffinity.com/Frankenstein_s_Bride-528687358-mmed.jpg",
+                link: "https://drive.google.com/file/d/1E78ETKieIUSm9-oGon7lq3NxOy94MGqd/view",
+                description: "Guillermo del Toro's take on Mary Shelley's classic tale about Victor Frankenstein, a scientist who brings a creature to life in a horrific experiment.",
+                year: "2025"
             },
             {
                 title: "Spider-Man: Across the Spider-Verse",
@@ -116,7 +165,7 @@ export const MOVIES: Movie[] = [
             {
                 title: "The Super Mario Galaxy Movie",
                 imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSbQAer_UacWJzfW1n8AREzPD6-MRfyAZT5aBEIhVYZqo0mclfO",
-                link: "https://drive.google.com/file/d/14v5G1i88QriR2cKV-n1OiLFCo849jpaV/view?usp=sharing",
+                link: "https://drive.google.com/file/d/1Sr1dIisyBJgnCbW4WrgSIcLO8uiNSTv2/view?usp=drive_link",
                 description: "Mario ventures into space, exploring cosmic worlds and tackling galactic challenges far from the familiar Mushroom Kingdom.",
                 year: "2026"
             },
@@ -993,6 +1042,13 @@ export const MOVIES: Movie[] = [
                 imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi49U-7alumxu_CBlDWp1xl5WkY2JBGAVszrFluxBQN1elyelm",
                 link: "https://drive.google.com/file/d/1f54gZFt1PT6TllWwa-5SjtkRuOITxLNs/view?usp=drive_link",
                 description: "A priest with a haunted past and a novice on the threshold of her final vows are sent by the Vatican to investigate the death of a young nun in Romania.",
+                year: "2018"
+            },
+            {
+                title: "A-X-L",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAv3jtv-MD48dVAY5B1ij4W1HArB05yrSrO3gJt9hLF2BLpoSa",
+                link: "https://drive.google.com/file/d/1XZg46Ss_6P2_cY_sTjPwN0zlDyy9T47O/view?usp=drivesdk",
+                description: "A teenage motocross racer discovers a top-secret robotic dog designed for the military, forming an unlikely bond that puts them both in danger.",
                 year: "2018"
             },
             {
@@ -2170,6 +2226,13 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1p5DfNhB87k8bE-OQi7ELONmPkIhJIjC-/view?usp=sharing",
                 description: "The Bride continues her quest for vengeance.",
                 year: "2004"
+            },
+            {
+                title: "Kill Bill 1 & 2",
+                imageUrl: "https://cdn.premiumkino.de/movie/4341/80a77d1a4f155692d695f4b41929fc08_w900.webp",
+                link: "https://drive.google.com/drive/folders/15caY7ohh1fTIcvEUBrYY9w1g3TJvVYKN",
+                description: "A former assassin, known as the Bride, wakes from a coma and seeks revenge on her former boss, Bill, and his deadly associates in this two-part epic.",
+                year: "2003"
             },
             {
                 title: "Kung Fu Panda 4",
