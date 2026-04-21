@@ -96,6 +96,13 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/drive/folders/1F2G8LJaV2rJ2pUlvIeGngHEVV2x8mITp?usp=sharing"
       },
       {
+        title: "Better Call Saul",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR5Hj4TwQxnwom4YvO7aMOeHEXkN2XGB24Tjdp7gcGHhZ1bapDb",
+        description: "The trials and tribulations of criminal lawyer Jimmy McGill in the years leading up to his fateful run-in with Walter White and Jesse Pinkman.",
+        year: "2015",
+        link: "https://drive.google.com/drive/folders/17RmoOZlDQ_ETrPjI0bwOQBnyGDEDP_Qr?usp=sharing"
+      },
+      {
         title: "Bluey",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYWU1YmQzMjEtMDNjOS00MGIyLWExY2ItZDAzNmU5NWViMGZmXkEyXkFqcGc@._V1_.jpg",
         description: "An Australian animated series following a Blue Heeler puppy and her family.",
@@ -140,6 +147,13 @@ export const TV_SHOWS: TVShow[] = [
         description: "A sequel series to The Karate Kid following Johnny Lawrence and Daniel LaRusso.",
         year: "2018",
         link: "https://drive.google.com/drive/folders/1idzqcZUju0ADDEWnm1D9AC344rIFiGRN?usp=drive_link"
+      },
+      {
+        title: "Common Side Effects",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSILsd87WuzQJ2JtqDis5TLpztED4nUkC57DIfoY8es3oGo71hX",
+        description: "Two former high school friends must navigate a world of corporate conspiracy and strange occurrences in this dark comedy series.",
+        year: "2025",
+        link: "https://drive.google.com/drive/folders/1FrJJPclMG2BI9q0LK8WIKnGUpofmv9uG"
       },
       {
         title: "Danny Phantom",
@@ -188,6 +202,13 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/drive/folders/1-kchkgMKhucUCfcyTZ5j5_GS8jWu9TQC?usp=sharing"
       },
       {
+        title: "Godzilla - The Original Animated Series",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-aNR8qFmAYCfHuckWwXvy0kZ5IVkRoSwd6C9UXJkLuAZGPEU",
+        description: "The classic Hanna-Barbera adventures of Godzilla and his nephew Godzooky as they protect the world from giant monsters.",
+        year: "1978",
+        link: "https://drive.google.com/drive/folders/1hLmZo78hwuNQPtJauvSg7vRHHG5izmAG"
+      },
+      {
         title: "Gravity Falls",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTEzNDc3MDQ2NzNeQTJeQWpwZ15BbWU4MDYzMzUwMDIx._V1_FMjpg_UX1000_.jpg",
         description: "Two siblings spend the summer with their great-uncle in a mysterious town.",
@@ -214,6 +235,20 @@ export const TV_SHOWS: TVShow[] = [
         description: "An animated series about the princess of Hell opening a hotel for sinners.",
         year: "2024",
         link: "https://drive.google.com/drive/folders/1FnnwXwhzJgxIFFjp9I0uW6EFknZ8l6U7?usp=drive_link"
+      },
+      {
+        title: "Helluva Boss",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoVEVFS8JZ3JidOAtHZf1Gf8v82x-c6c1w3ZZS1LgI7f7Ine25",
+        description: "In the fiery depths of Hell, a group of imps runs an assassination agency targeting the living world.",
+        year: "2019",
+        link: "https://drive.google.com/drive/folders/1-0vYAQcrZ8dZtpNUFh-fG-X60aigQNuP"
+      },
+      {
+        title: "Heated Rivalry",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu3ooe5FqsdWCsy8iu1VR_0B2ACoBk4IM83XOXDVXbwAVkH1mR",
+        description: "Two rival hockey stars must confront their feelings for each other as they compete on the ice and deal with the pressures of professional sports.",
+        year: "2025",
+        link: "https://drive.google.com/drive/folders/1jvDzjCxZClLjqZqyt7yfEWmFhO1YOziw?usp=drive_link"
       },
       {
         title: "Hey Arnold",
@@ -312,6 +347,13 @@ export const TV_SHOWS: TVShow[] = [
         description: "A Marvel series following a man with dissociative identity disorder who gains powers from an Egyptian god.",
         year: "2022",
         link: "https://drive.google.com/drive/folders/1nW610bRzpYobTHqK5k13LRkiZrRvDmZ8?usp=sharing"
+      },
+      {
+        title: "Murderbot",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuudzd1IIRnBqezBADS3Doo66HQT2WpW5u3Fwu9bpjNZfaNM0k",
+        description: "A self-hacking security android who calls itself 'Murderbot' would much rather be watching media than dealing with its human clients.",
+        year: "2025",
+        link: "https://drive.google.com/drive/folders/1lt15xhc40wmCIjBhbrbk4TNuCTUekJR_"
       },
       {
         title: "Murder Drones",
