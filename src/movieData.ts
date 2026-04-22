@@ -2,27 +2,6 @@ import { Movie } from './types';
 
 export const MOVIES: Movie[] = [
             {
-                title: "The Bride!",
-                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTToJzpoisSPMhz0PtF-daETu68GMk8V_N-vs3icrn3YccdCPK1",
-                link: "https://drive.google.com/file/d/1xSofJ9d2rDIGNlGqiVPcYJgG00oSOS0b/view",
-                description: "Maggie Gyllenhaal's dark reimagining of the classic monster tale. A lonely Frankenstein travels to 1930s Chicago to seek the help of Dr. Euphronius to create a companion.",
-                year: "2026"
-            },
-            {
-                title: "Frankenstein's Bride",
-                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/frank-bride.avif",
-                link: "https://drive.google.com/file/d/1yF3yrdhJ1LM3sMFyvjiMXqxBM1y05llK/view",
-                description: "Vengeance is hers in this modern take on the classic horror icon.",
-                year: "2025"
-            },
-            {
-                title: "Frankenstein",
-                imageUrl: "https://pics.filmaffinity.com/Frankenstein_s_Bride-528687358-mmed.jpg",
-                link: "https://drive.google.com/file/d/1E78ETKieIUSm9-oGon7lq3NxOy94MGqd/view",
-                description: "Guillermo del Toro's take on Mary Shelley's classic tale about Victor Frankenstein, a scientist who brings a creature to life in a horrific experiment.",
-                year: "2025"
-            },
-            {
                 title: "Deadpool and Wolverine",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/dp3_1sht_digital_srgb_ka_swords_v5_resized.jpg",
                 link: "https://drive.google.com/file/d/1B_eiKUt7N5OxyUN9c37LG0pxcErP4yJ6/view",
@@ -399,6 +378,27 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1u1glpdPyZvJ1MAgTrxAnTrS8Wvys3Bdt/view",
                 description: "Tony Stark faces declining health and vengeful enemy.",
                 year: "2010"
+            },
+            {
+                title: "The Bride!",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTToJzpoisSPMhz0PtF-daETu68GMk8V_N-vs3icrn3YccdCPK1",
+                link: "https://drive.google.com/file/d/1xSofJ9d2rDIGNlGqiVPcYJgG00oSOS0b/view",
+                description: "Maggie Gyllenhaal's dark reimagining of the classic monster tale. A lonely Frankenstein travels to 1930s Chicago to seek the help of Dr. Euphronius to create a companion.",
+                year: "2026"
+            },
+            {
+                title: "Frankenstein's Bride",
+                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/frank-bride.avif",
+                link: "https://drive.google.com/file/d/1yF3yrdhJ1LM3sMFyvjiMXqxBM1y05llK/view",
+                description: "Vengeance is hers in this modern take on the classic horror icon.",
+                year: "2025"
+            },
+            {
+                title: "Frankenstein",
+                imageUrl: "https://pics.filmaffinity.com/Frankenstein_s_Bride-528687358-mmed.jpg",
+                link: "https://drive.google.com/file/d/1E78ETKieIUSm9-oGon7lq3NxOy94MGqd/view",
+                description: "Guillermo del Toro's take on Mary Shelley's classic tale about Victor Frankenstein, a scientist who brings a creature to life in a horrific experiment.",
+                year: "2025"
             },
             {
                 title: "Iron Man 3",
