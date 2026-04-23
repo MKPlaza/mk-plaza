@@ -2,34 +2,6 @@ import { Anime } from './types';
 
 export const ANIME: Anime[] = [
             {
-                title: "New Panty and Stocking with Garterbelt",
-                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/new-psg.avif",
-                description: "The long-awaited continuation of the chaotic adventures of the Anarchy sisters, Panty and Stocking.",
-                year: "2025",
-                link: "#"
-            },
-            {
-                title: "Panty and Stocking with Garterbelt",
-                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/psg.avif",
-                description: "Two angels are kicked out of Heaven for bad behavior and must earn their way back by hunting ghosts in Daten City.",
-                year: "2010",
-                link: "#"
-            },
-            {
-                title: "Saga of Tanya the Evil",
-                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/tanya-evil.avif",
-                description: "A ruthless Japanese salaryman is reincarnated as a magical girl in an alternate world's World War I, determined to defy a self-proclaimed god.",
-                year: "2017",
-                link: "#"
-            },
-            {
-                title: "Aggretsuko",
-                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/aggretsuko.avif",
-                description: "Retsuko is a red panda who deals with the frustrations of her dead-end office job by singing death metal at a local karaoke bar.",
-                year: "2018",
-                link: "#"
-            },
-            {
                 title: "Accel World",
                 imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQrrCMEsZr3GVvc8C-ABixg_cNz23Jcy9nIg4dc24tSTtAWmrBr",
                 description: "A young boy bullied for his weight finds solace in a virtual reality game.",
