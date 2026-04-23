@@ -57,6 +57,13 @@ export const TV_SHOWS: TVShow[] = [
         ]
       },
       {
+        title: "Back at the Barnyard",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcToIjgRNsaKzQVG3gcmqiQ7S9UHkjKLcp-IrqFIWuDWbAYY61jx",
+        description: "The adventures of Otis the Cow and his friends at the farm.",
+        year: "2007",
+        link: "https://drive.google.com/open?id=1dMikanXbvPC_rx0BxVYx2y9gw0YlABK7&usp=drive_copy"
+      },
+      {
         title: "Barbie Life in The Dreamhouse",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTg0MDc4MzU4NF5BMl5BanBnXkFtZTgwNjM5MTgyMjE@._V1_.jpg",
         description: "A web series following Barbie and her friends in their dreamhouse.",
@@ -87,6 +94,13 @@ export const TV_SHOWS: TVShow[] = [
           { part: "Season 5", url: "https://drive.google.com/drive/folders/1B3EpDItVJdqA9XSJV1aq5FFT6mb4yAxB?usp=drive_link" },
           { part: "Season 6", url: "https://drive.google.com/drive/folders/1blktqO0FTXsh5r4hileTyJ-MO5o7YVS4?usp=drive_link" }
         ]
+      },
+      {
+        title: "Beast Games",
+        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQI16wrfPl90CnW6jkA-lsp3yWLCyVy0wRVHwfOJ3Xm_-vncMTA",
+        description: "MrBeast's massive reality competition series on Prime Video, where 1,000 contestants compete for a record-breaking $5 million grand prize.",
+        year: "2024",
+        link: "https://drive.google.com/open?id=1Q8_n0CTVT3eUg_mZe-10NDYnJl9p-9w7&usp=drive_copy"
       },
       {
         title: "Beauty In Black",
@@ -167,6 +181,20 @@ export const TV_SHOWS: TVShow[] = [
         ]
       },
       {
+        title: "DuckTales (1987)",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ2nTlsuiMCZBQ5QjonSwalmZT7cAN2ES_KZo3tJ-W_mrXHvq7",
+        description: "Scrooge McDuck and his grandnephews Huey, Dewey, and Louie search for treasure and dodge villains in this animated classic.",
+        year: "1987",
+        link: "https://drive.google.com/open?id=1xQAB29NKCEhQP5vuCt4hZAn8cGT_7C_L&usp=drive_copy"
+      },
+      {
+        title: "DuckTales (2017)",
+        imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjZKQHbUE6ldL5v_JCfIRTnULGiGxmGLD1ziivchc1HIs42D9j",
+        description: "A modern reboot of the classic series following the high-flying adventures of Scrooge McDuck and his family.",
+        year: "2017",
+        link: "https://drive.google.com/drive/folders/1W8-sitpHylMbdYfhm_wkPIZt4AR0gdLj"
+      },
+      {
         title: "Everybody Hates Chris",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BM2U1M2QxZDYtMzgyYS00OWQ5LWIyNGUtMmQ1MGQ2NTU2NzNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A sitcom based on the childhood of comedian Chris Rock.",
@@ -200,6 +228,13 @@ export const TV_SHOWS: TVShow[] = [
         description: "An epic fantasy series based on George R.R. Martin's novels.",
         year: "2011",
         link: "https://drive.google.com/drive/folders/1-kchkgMKhucUCfcyTZ5j5_GS8jWu9TQC?usp=sharing"
+      },
+      {
+        title: "Ghostbusters (Animated Series)",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsbWNnNjECfk7v0Se7lfFPbW5RRhCLECAJkmh3QDemZAoXgfAt",
+        description: "The classic animated series following the supernatural adventures of the Ghostbusters in New York City.",
+        year: "1986",
+        link: "https://drive.google.com/drive/folders/1ikfAkH2QegK9KUNRPk9Kq5eStgIJ9mnO"
       },
       {
         title: "Godzilla - The Original Animated Series",
@@ -737,11 +772,11 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/drive/folders/1A-I64-vVIDKD14IzEh6mcMcvFmMH0NVr?usp=sharing"
       },
       {
-        title: "Supergirl",
-        imageUrl: "https.m.media-amazon.com/images/M/MV5BMjM3OTc3MjgxN15BMl5BanBnXkFtZTgwMjEwMTQ4OTE@._V1_.jpg",
-        description: "Superman's cousin escapes Krypton and becomes a superhero on Earth.",
-        year: "2015",
-        link: "#"
+        title: "Super Mario World",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdsQPjWLhTyaHRd6gw5MLVPz8ilkUOMtAKk7PnfjL_qy1E0k9s",
+        description: "Mario, Luigi, and Princess Toadstool move to Dinosaur Land and meet Yoshi as they fight King Koopa.",
+        year: "1991",
+        link: "https://drive.google.com/open?id=1nw7hzEpAuL_0QVZ-dP4GLstPrTlGg2OI&usp=drive_copy"
       },
       {
         title: "TAWOG",
@@ -783,6 +818,13 @@ export const TV_SHOWS: TVShow[] = [
           { part: "Season 4", url: "https://drive.google.com/drive/folders/1Qp2xW3xAvGAykrch5TWd2VvVBPW7d6XM?usp=drive_link" },
           { part: "Season 5", url: "https://drive.google.com/drive/folders/15r5t0S0tKORIf7YDx11-_UQgp6jI-GTS?usp=drive_link" }
         ]
+      },
+      {
+        title: "The Adventures of Super Mario Bros. 3",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Owvr_pUS8xRs8b-IyjFlY0VzfCeBdcl-OgiEm1-gIpE4NpVr",
+        description: "Mario and Luigi travel across the Mushroom Kingdom to thwart the evil plans of King Koopa and his seven Koopalings.",
+        year: "1990",
+        link: "https://drive.google.com/open?id=1x8OrNtdQ0KcunMJGMmUNs881lnHUDd2I&usp=drive_copy"
       },
       {
         title: "The Chi",
@@ -856,6 +898,13 @@ export const TV_SHOWS: TVShow[] = [
           { part: "Season 1", url: "https://drive.google.com/drive/folders/1MYMY-BGuKDWgmcsuWjKX6uFV0yLukSBO?usp=sharing" },
           { part: "Season 2", url: "https://drive.google.com/drive/folders/1K_X6PMWG7j484hQv9nU9SYRKuR8AWx92?usp=sharing" }
         ]
+      },
+      {
+        title: "The Super Mario Bros. Super Show!",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTLIXk9uSVQaI9FmohagbcEGEX1wdqiDMhd1M_A1fYPdCxAyqs",
+        description: "The first TV show based on the Mario games, featuring live-action segments and animated adventures.",
+        year: "1989",
+        link: "https://drive.google.com/open?id=1u2FRXPJq6TFc4DH6pqk8bhe5_Ymgu6GY&usp=drive_copy"
       },
       {
         title: "The Walking Dead",
