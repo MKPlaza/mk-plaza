@@ -380,27 +380,6 @@ export const MOVIES: Movie[] = [
                 year: "2010"
             },
             {
-                title: "The Bride!",
-                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTToJzpoisSPMhz0PtF-daETu68GMk8V_N-vs3icrn3YccdCPK1",
-                link: "https://drive.google.com/file/d/1xSofJ9d2rDIGNlGqiVPcYJgG00oSOS0b/view",
-                description: "Maggie Gyllenhaal's dark reimagining of the classic monster tale. A lonely Frankenstein travels to 1930s Chicago to seek the help of Dr. Euphronius to create a companion.",
-                year: "2026"
-            },
-            {
-                title: "Frankenstein's Bride",
-                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/frank-bride.avif",
-                link: "https://drive.google.com/file/d/1yF3yrdhJ1LM3sMFyvjiMXqxBM1y05llK/view",
-                description: "Vengeance is hers in this modern take on the classic horror icon.",
-                year: "2025"
-            },
-            {
-                title: "Frankenstein",
-                imageUrl: "https://pics.filmaffinity.com/Frankenstein_s_Bride-528687358-mmed.jpg",
-                link: "https://drive.google.com/file/d/1E78ETKieIUSm9-oGon7lq3NxOy94MGqd/view",
-                description: "Guillermo del Toro's take on Mary Shelley's classic tale about Victor Frankenstein, a scientist who brings a creature to life in a horrific experiment.",
-                year: "2025"
-            },
-            {
                 title: "Iron Man 3",
                 imageUrl: "https://www.dropbox.com/scl/fi/n3rfvl45n1c77n6yz8dz9/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTgwNzM2NjcyOQ-._V1_FMjpg_UX1000_.jpg?rlkey=nfvtg4t9azcqwy58z5k7e6wpt&st=3doq8h5u&dl=1",
                 link: "https://drive.google.com/file/d/1f7AlYvxrURwU7138fr2CzyTmN0qK43rp/view",
@@ -1368,15 +1347,15 @@ export const MOVIES: Movie[] = [
             },
             {
                 title: "Pokémon the Movie: Diancie and the Cocoon of Destruction",
-                imageUrl: "https://m.media-amazon.com/images/M/MV5BMTY2OTc4NTU1OF5BMl5BanBnXkFtZTcwMTg0MzI1MQ@@._V1_FMjpg_UX1000_.jpg",
-                link: "#",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTVBOUaqKCCwADuh5isQOMI3tHjDsEawBQxNCGOHfYfKW0Ycpkj",
+                link: "https://drive.google.com/file/d/1aH2Ivp60TpCGVc8RcXpf4-ywN4GICKEa/view?usp=drive_link",
                 description: "Ash and his friends help Diancie find Xerneas to restore the Heart Diamond.",
                 year: "2014"
             },
             {
                 title: "Pokémon: Hoopa and the Clash of Ages",
                 imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlpO-wkuLcLQJn-ervUkKJlLoUs1e6YMEyGpWcih8NYNQ9ZlexIuMu_F1KwiKLqJLw9uK1wg&s",
-                link: "https://drive.google.com/file/d/1aH2Ivp60TpCGVc8RcXpf4-ywN4GICKEa/view?usp=drive_link",
+                link: "https://drive.google.com/file/d/1ecwRwY6gUk3WqSs3kQZk39gVIKldtshn/view",
                 description: "Ash and his friends meet Hoopa and must stop its dark power from destroying Dahara City.",
                 year: "2015"
             },
@@ -1463,6 +1442,13 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1hGiXjHisQxkhja8j0vWsbGe-Q3ZLrpKU/view?usp=sharing",
                 description: "When K-pop superstars Rumi, Mira and Zoey aren't selling out stadiums or topping the Billboard charts, they're moonlighting as demon hunters to protect their fans from ever-present supernatural danger.",
                 year: "2025"
+            },
+            {
+                title: "Aggretsuko - We Wish You a Metal Christmas",
+                imageUrl: "https://m.media-amazon.com/images/M/MV5BZGVhY2RhY2ItZmQyYS00YmYyLTlmN2QtZGY3NDQ5OGExZDQ4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                link: "https://drive.google.com/file/d/1S3iIuWxIMaHFFL89wMX6Wkq-Q8YzZ7ZM/view",
+                description: "Retsuko's obsession with social media validation during the holidays leads to a metal-fueled breakdown as Haida tries to share a special Christmas moment with her.",
+                year: "2018"
             },
             {
                 title: "The Night He Came Home",
