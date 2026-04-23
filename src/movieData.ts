@@ -30,6 +30,13 @@ export const MOVIES: Movie[] = [
                 year: "2025"
             },
             {
+                title: "Michael",
+                imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/michael.jpg",
+                link: "https://drive.google.com/file/d/1k6o4C4JUMwr1mSXCIqCk-ii_F2dbeLix/view?usp=drive_link",
+                description: "The life and career of Michael Jackson, the King of Pop.",
+                year: "2026"
+            },
+            {
                 title: "Hoppers",
                 imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRRmZawCA6nU54kqX2dugkNQi4A58G-yqWyUu0E3YwbaVp5GgTC",
                 link: "https://drive.google.com/file/d/1NkmCNf5CUML_KZvNi4fgGKA8r7fpXIdd/view?usp=drive_link",
@@ -100,8 +107,15 @@ export const MOVIES: Movie[] = [
                 year: "2026"
             },
             {
+                title: "They Will Kill You",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/37/They_Will_Kill_You_poster.jpg",
+                link: "https://drive.google.com/file/d/116V5sYPPXBxzPYi8UiQ0jbXcaJpNJ65d/view?usp=drive_link",
+                description: "A woman answers an ad for a housekeeper position in a mysterious high-rise in New York City, only to discover she has entered a community with a history of mysterious disappearances.",
+                year: "2026"
+            },
+            {
                 title: "Frankenstein's Bride",
-                imageUrl: "https://raw.githubusercontent.com/MKPlaza/hydra-assets/main/thumbs/frank-bride.avif",
+                imageUrl: "https://m.media-amazon.com/images/M/MV5BYTYyNDU5ZmMtNGFiYi00ZWVlLTk2NDgtMGQxOWMyNDAzNWQ0XkEyXkFqcGc@._V1_.jpg",
                 link: "https://drive.google.com/file/d/1yF3yrdhJ1LM3sMFyvjiMXqxBM1y05llK/view",
                 description: "Vengeance is hers in this modern take on the classic horror icon.",
                 year: "2025"
@@ -111,6 +125,20 @@ export const MOVIES: Movie[] = [
                 imageUrl: "https://pics.filmaffinity.com/Frankenstein_s_Bride-528687358-mmed.jpg",
                 link: "https://drive.google.com/file/d/1E78ETKieIUSm9-oGon7lq3NxOy94MGqd/view",
                 description: "Guillermo del Toro's take on Mary Shelley's classic tale about Victor Frankenstein, a scientist who brings a creature to life in a horrific experiment.",
+                year: "2025"
+            },
+            {
+                title: "Popeye the Slayer Man",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTuI7iMTIHvVj-BlfQM2lD3y-_yWbPvY9EL5J2MVSCLOmrcHyd_",
+                link: "https://drive.google.com/open?id=1T98LuCA5MC7O2WaCDNNuJLry7H1b2j3e&usp=drive_copy",
+                description: "A slasher horror reimagining of the classic sailor character who gains strength through unusual means.",
+                year: "2025"
+            },
+            {
+                title: "Screamboat",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRzbY8u4VOdLccxLYZTiuFreUXri0qJeRl95oi9N2caa6zcm4lV",
+                link: "https://drive.google.com/open?id=1cnYDMTSYRDZxzI-qVF23qhZV07BVpgAV&usp=drive_copy",
+                description: "A mischievous mouse turns a ferry commute into a nightmare in this horror twist on Steamboat Willie.",
                 year: "2025"
             },
             {
@@ -133,6 +161,13 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1Xn4F4GNvfKOljko2ZE_JUQcBWIHhO0ql/view",
                 description: "Batman faces greatest challenge: raising a family.",
                 year: "2017"
+            },
+            {
+                title: "Batman Ninja vs. Yakuza League",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSzlhQcgEfBqU9-b_VdMhDfxFnkZYMjh3jO16faNSkTWSsN4Z-5",
+                link: "https://drive.google.com/open?id=1v4ePMMFVkWIBYNcYTyXUYPd_Uq2z2bf8&usp=drive_copy",
+                description: "Batman and the Yakuza League face off in feudal Japan in this animated cross-over.",
+                year: "2025"
             },
             {
                 title: "The Super Mario Bros. Movie",
@@ -464,10 +499,171 @@ export const MOVIES: Movie[] = [
                 year: "2025"
             },
             {
-                title: "Minecraft: The Movie",
-                imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/wii2fLImjhitYMaiVNvrH7NGdS0.jpg",
+                title: "A Minecraft Movie",
+                imageUrl: "https://m.media-amazon.com/images/M/MV5BNjk0ZjVjMTktZDk1Zi00YmNmLThhYzUtMzFiYzE2NWNjNzI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/file/d/1jpCB0o5aQI1pam7Eg4GW0VEGKi6z-RHB/view",
-                description: "Live-action adaptation of popular sandbox game.",
+                description: "The malevolent Ender Dragon sets out on a path of destruction, prompting a young girl and her group of unlikely adventurers to save the Overworld.",
+                year: "2025"
+            },
+            {
+                title: "Star Trek: Section 31",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRsNg7pvKPZ7M6b8lsGIxWwNFGDvlDEJspXnW13brBCEBrGjyFd",
+                link: "https://drive.google.com/open?id=176Ep16TeQCk90seFbjv6PgcsVh0fRi7f&usp=drive_copy",
+                description: "Emperor Philippa Georgiou joins a secret division of Starfleet tasked with protecting the United Federation of Planets.",
+                year: "2025"
+            },
+            {
+                title: "Ad Vitam",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTemsLui5351Me6PPOi3KYUC18HUGvkSDxWFdrCn-jsYGSnSgWH",
+                link: "https://drive.google.com/open?id=101dcG1Oiy-0ERWVk1Fb03dm_j09WdFfq&usp=drive_copy",
+                description: "A visionary sci-fi epic set in a future where death has been all but eradicated.",
+                year: "2025"
+            },
+            {
+                title: "Alarum",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaFtDq8fVKhhGWzmxc4sZUhJAlQUKDU9sv10HJ7M_JS2AGb0Jo",
+                link: "https://drive.google.com/open?id=1U4MHoaBMWu0yoZOnzrAlqefeq57wBZqD&usp=drive_copy",
+                description: "Two rogue spies find themselves on the run from a shadow agency.",
+                year: "2025"
+            },
+            {
+                title: "Back in Action",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSawO3SUofY0C52-XQ1FgbWj0CYO7sRbunt_IQmolkxEFT4BxxN",
+                link: "https://drive.google.com/open?id=1YZ4OYkY_ez4FObMe9_a0cWB2oLgoq4Jd&usp=drive_copy",
+                description: "Years after giving up life as CIA spies to start a family, Emily and Matt find themselves pulled back into the world of espionage when their cover is blown.",
+                year: "2025"
+            },
+            {
+                title: "Bank of Dave 2: The Loan Ranger",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQpSeJXI63iqyiq68MCymhVO7SPNCHFm_NfLLVSIuhUlOJ8r2Y_",
+                link: "https://drive.google.com/open?id=16yWCtHQrntP_GS2EyRRMmw7kmyxtLhMv&usp=drive_copy",
+                description: "Dave Fishwick takes on the payday loan industry in this anticipated sequel.",
+                year: "2025"
+            },
+            {
+                title: "Den of Thieves 2: Pantera",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKhpHCBj8YUfAXZqwrNfpIR8nzLariF2-51F5h766-zwjBjidQ",
+                link: "https://drive.google.com/open?id=1zXldKkRUbXsql3rLXGX9bNpuwcPOiusw&usp=drive_copy",
+                description: "Big Nick is on the hunt in Europe for Donnie, who is embroiled in the dangerous world of diamond thieves.",
+                year: "2025"
+            },
+            {
+                title: "Don't Die: The Man Who Wants to Live Forever",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT5PF9yrJQ0FLWaxH3jLOA6NEFD7ZPc2M7pK0wN5txdmV7G9ZZA",
+                link: "https://drive.google.com/open?id=14MBinlPb33HEeL2XcbP94UwHhZbBlz7J&usp=drive_copy",
+                description: "A high-octane action thriller about a man who discovers a conspiracy involving immortality.",
+                year: "2025"
+            },
+            {
+                title: "Evil Bong a Thon",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRbfOwXHs59LuNKZXsADNpFfNGLrkdcW42Qk214GvpGHBY9IdX",
+                link: "https://drive.google.com/open?id=1iLMIaypblyU670I00rVaPERmeWBEPzrK&usp=drive_copy",
+                description: "The 10th installment in the Evil Bong franchise, bringing more stoner horror comedy.",
+                year: "2025"
+            },
+            {
+                title: "Gunslingers",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjjUNsiOvMpOPsPoCP6EFT20TjTyNsWM3VL8PZfWOxtxiJMiuz",
+                link: "https://drive.google.com/open?id=1GdEt79gpwT4s6wRDZXH4GZuMmtj7BWeG&usp=drive_copy",
+                description: "A modern-day western about a group of outlaws seeking redemption in a lawless land.",
+                year: "2025"
+            },
+            {
+                title: "Last Breath",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAaTDTx0l23R_rZV38JOjulqMPm6OB6oHlqnqZw2RF3OBz2r-z",
+                link: "https://drive.google.com/open?id=1a_l1BZGGTQ1P_A4NBQ0RVcB4ye_9lB1e&usp=drive_copy",
+                description: "A deep-sea diver becomes trapped 100 meters below the surface of the North Sea with only 5 minutes of oxygen.",
+                year: "2025"
+            },
+            {
+                title: "Mickey 17",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSdrVqHLLdDyvoVvB1alcO6ZYJOJPuDd89Hhb_Y8OUBN9sV5TCb",
+                link: "https://drive.google.com/open?id=1w0ySmc9Lza6jAdgbxLdVQPd9xtmR_bq0&usp=drive_copy",
+                description: "An expendable employee on an expedition sent to colonize the ice world Niflheim refuses to let his replacement clone take his place.",
+                year: "2025"
+            },
+            {
+                title: "Novocaine",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQOO58vsj8RW7HvdRUaAeE0ZBH1F1v0UeATBS-LjBUKRsZjQkPK",
+                link: "https://drive.google.com/open?id=1hxffkmG2xIxMXE8-ap16hyprKo3x-86V&usp=drive_copy",
+                description: "A bank executive with a rare condition that prevents him from feeling physical pain becomes a pawn in a heist.",
+                year: "2025"
+            },
+            {
+                title: "Shiver Me Timbers",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRiuekGkJ2LStxN7qbo-5NYIhjmB1odomvh8YGtB75gq_03z2lj",
+                link: "https://drive.google.com/open?id=1R2WqjjSsA00b0udeP76OXGxiYZd_cHXd&usp=drive_copy",
+                description: "A group of modern-day treasure hunters awaken a cursed pirate crew on a remote island.",
+                year: "2025"
+            },
+            {
+                title: "Sniper: The Last Stand",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAG0zeXIHzY_JEaqwtVQ8hiKTZbgmveQCP4ToJSzUjip6oHhOC",
+                link: "https://drive.google.com/open?id=159k402C5RvOObYn-3pYz1CuRg-XNiZGr&usp=drive_copy",
+                description: "The 11th installment in the Sniper film series, following veterans on a final mission.",
+                year: "2025"
+            },
+            {
+                title: "The Calendar Killer",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTkCKvZ2YlFR5Bel5abHaC9M2ZpCW18SR9458ET_Wj5JwsT6Ru-",
+                link: "https://drive.google.com/open?id=1Pfg5YUf2BLQKPZ6tXR3CJUvmAWBBmeoR&usp=drive_copy",
+                description: "A seasoned detective hunts a serial killer who strikes on specific holidays and dates.",
+                year: "2025"
+            },
+            {
+                title: "The Conjuring: Last Rites",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTOpsfBLMRdOZg4ccC2IMNPjc87uLcNiBKZZOGWYRmdzQeSKrkw",
+                link: "https://drive.google.com/open?id=1DGeZcbS6EeKgAZdmTRr-haezOxenoYRf&usp=drive_copy",
+                description: "The final investigation of paranormal investigators Ed and Lorraine Warren as they face their ultimate challenge.",
+                year: "2025"
+            },
+            {
+                title: "The Electric State",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcToCCaMc52-bHdRc_AqjQggoh8zfSqkBIKYM64_1t7N75vsR7zS",
+                link: "https://drive.google.com/open?id=1HdmYKbuy5tElViuxt9sFwR-0Azj9_D6M&usp=drive_copy",
+                description: "An orphaned teenager traverses the American West with a robot and an eccentric drifter in search of her younger brother.",
+                year: "2025"
+            },
+            {
+                title: "The Gardener",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS556Z4VYjKkII-pLI1ikxW-uthXk7fLQQ0hWaSvTSDEI8L90aA",
+                link: "https://drive.google.com/open?id=1whRlrrOp33QASZeE0uJ-lqgkqYJFmWI-&usp=drive_copy",
+                description: "A former soldier living a quiet life as a gardener must defend his employer's estate from a violent gang.",
+                year: "2025"
+            },
+            {
+                title: "The Gorge",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSuuDGpqW6aPdJ2P2qRfDJ5k-HLX4laZUY3ZtIh4Qejt1LmnUd7",
+                link: "https://drive.google.com/open?id=1_uEz11OaT8lyL0DBK12xs86ESNlG2N9c&usp=drive_copy",
+                description: "Two highly trained snipers find themselves in a high-stakes survival situation in a dangerous and mysterious gorge.",
+                year: "2025"
+            },
+            {
+                title: "The Monkey",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQv0gj6M_pq50NZWOKErmVAQSVCVyJLcnAVKsVGEA8Kk8aaCvM9",
+                link: "https://drive.google.com/open?id=16gCjnsRMTrE3DxoSaqGfruY4RpwCGBGf&usp=drive_copy",
+                description: "Twin brothers discovery of their father's old monkey toy in the attic leads to a series of gruesome deaths.",
+                year: "2025"
+            },
+            {
+                title: "The Woman in the Yard",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrpmaVlXZT4f9GRrg1kbZvnJgUPWsAQeBncBKz71KKq1Zl3PR0",
+                link: "https://drive.google.com/open?id=11b0CGwWL1Eb_aoNThOfwDgGeHY2CNSdH&usp=drive_copy",
+                description: "A psychological thriller about a woman who finds herself being stalked by a mysterious figure in her yard.",
+                year: "2025"
+            },
+            {
+                title: "Undercover Party Crasher",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfhNrBHiZQVALnlz2UFPWTEKrvvldoh7vVhvD4rp9UsbqQpQ-2",
+                link: "https://drive.google.com/open?id=17Svl4eBSdqVqSItcYbX1c_zBf_AfgVWp&usp=drive_copy",
+                description: "An undercover agent must infiltrate a high-society party to prevent a terrorist attack.",
+                year: "2025"
+            },
+            {
+                title: "Wolf Man",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTOJE6-szoKJTWjNDUE2jsvZROo-xvY0YnXHEWdKzjJKXN5g2BZ",
+                link: "https://drive.google.com/open?id=1xKM2iHNrmzoUrWu6Q88WAuzcwFsA2og0&usp=drive_copy",
+                description: "A man and his family find themselves being terrorized by a predatory creature in this horror remake.",
                 year: "2025"
             },
             {
@@ -1094,6 +1290,13 @@ export const MOVIES: Movie[] = [
                 year: "2022"
             },
             {
+                title: "M3GAN 2.0",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRJaeUOUAGKLquZDtk8Fybow8HQlFIvMzmsEiOu_UG_FK0XG52r",
+                link: "https://drive.google.com/open?id=1QkIGawMXMjf-FQ18o169NPPB8_l-Wx0I&usp=drive_copy",
+                description: "The highly anticipated sequel to the 2023 horror hit about a life-like AI doll.",
+                year: "2025"
+            },
+            {
                 title: "The Little Rascals",
                 imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/MV5BZTlhMjA5MGYtZDYyNS00MDQ4LWI0ZDAtZjJiODJjODI0N2I3XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
                 link: "https://drive.google.com/file/d/1eiY3r9KqM3Dmjtq38eRtR_eJFSGeciPz/view",
@@ -1441,6 +1644,13 @@ export const MOVIES: Movie[] = [
                 imageUrl: "https://upload.wikimedia.org/wikipedia/en/9/93/KPDHposter.jpeg",
                 link: "https://drive.google.com/file/d/1hGiXjHisQxkhja8j0vWsbGe-Q3ZLrpKU/view?usp=sharing",
                 description: "When K-pop superstars Rumi, Mira and Zoey aren't selling out stadiums or topping the Billboard charts, they're moonlighting as demon hunters to protect their fans from ever-present supernatural danger.",
+                year: "2025"
+            },
+            {
+                title: "Jujutsu Kaisen: Execution",
+                imageUrl: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/MV5BODMxOWIxYzAtNTNiYi00MTk5LWE2MjUtNjM1MTg3YmQ5NTlhXkEyXkFqcGc@._V1_.jpg",
+                link: "https://drive.google.com/open?id=1G__q6ZhwzyqqY67CIOspxM8cdG_sVKw0&usp=drive_copy",
+                description: "The high-stakes adaptation of the Itadori's Extermination and Culling Game arcs.",
                 year: "2025"
             },
             {
@@ -2081,6 +2291,13 @@ export const MOVIES: Movie[] = [
                 year: "2007"
             },
             {
+                title: "How to Train Your Dragon",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQh6e3W6NG4NOwIuczdbVPiFBndFJGEvKaTEk0dCSAEEUirjsSO",
+                link: "https://drive.google.com/open?id=17o79ERK-HO1uQmEZwgr8wDygog_HTQsX&usp=drive_copy",
+                description: "A live-action adaptation of the beloved animated film about a young Viking who befriends a dragon.",
+                year: "2025"
+            },
+            {
                 title: "I Know What You Did Last Summer",
                 imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbwG4c7g7A3b8b5tMfuy0HjmipBt6N_CSQMaeUyGMiwc3HO_dJ",
                 link: "https://drive.google.com/file/d/1sSPtR3lcvTcjtDHvv3sOHw8qHbuaeQY1/view?usp=sharing",
@@ -2198,6 +2415,13 @@ export const MOVIES: Movie[] = [
                 year: "2023",
                 imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcStOedgmuVFv-U8ZgSlCMwkN9EN7WqqZW-PC4quRBqAWYrzsVMV",
                 link: "https://drive.google.com/file/d/10LUlcX6Hu9pn3c3xmPlfJOf20Qjwgxq_/view"
+            },
+            {
+                title: "From the World of John Wick: Ballerina",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR8o0K7IGA-v6juWqfjJ7PcLNAvQXIoanSaI5IYUCRkpvzAyX4A",
+                link: "https://drive.google.com/open?id=1QkggMVcGZDUcJNcAtuI7ZBCDKpb9WWgK&usp=drive_copy",
+                description: "A young female assassin seeks revenge against the people who killed her family.",
+                year: "2025"
             },
             {
                 title: "Kill Bill: Vol. 1",
@@ -2508,6 +2732,13 @@ export const MOVIES: Movie[] = [
                 year: "2023"
             },
             {
+                title: "Snow White",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTicvMF1Y8eE-Si57zmbW7SbFMSSgRSPGS-XbR1-z8RWM1VXSR9",
+                link: "https://drive.google.com/open?id=1YZrs6IeoQvhMBceswxnoSEixffTm3l46&usp=drive_copy",
+                description: "A live-action musical adaptation of the classic fairy tale about a princess and seven dwarfs.",
+                year: "2025"
+            },
+            {
                 title: "Suicide Squad",
                 imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcBMCsMHdRilWB2GfG2gll0D8RKLuXBj7lOd5Q-pXD2T46QVia",
                 link: "https://drive.google.com/file/d/1m2m6kudeN5pivaeCWfMR88xXEyZg8nFK/view?usp=sharing",
@@ -2681,6 +2912,13 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/12_UK0B8umPhjw5c5WOge3PtcGoDB9Uk2/view?usp=share_link",
                 description: "Siblings sail to edge of Narnia world.",
                 year: "2010"
+            },
+            {
+                title: "The Fantastic Four: First Steps",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjCfD6zDQL-x19acm_k6WwjuImyE1uLCTlMmGCrNl7sjj8vq9h",
+                link: "https://drive.google.com/open?id=1cBhl_4yyqtXZXvTMaAsS3zFBC076lHUe&usp=drive_copy",
+                description: "Marvel's First Family officially enters the MCU in a retro-futuristic version of the 1960s.",
+                year: "2025"
             },
             {
                 title: "The Princess Bride",
