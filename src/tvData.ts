@@ -117,6 +117,13 @@ export const TV_SHOWS: TVShow[] = [
         link: "https://drive.google.com/drive/folders/17RmoOZlDQ_ETrPjI0bwOQBnyGDEDP_Qr?usp=sharing"
       },
       {
+        title: "Blues Clues",
+        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS8odUnQOPZRKQVPuHkxLaCSOuJ80A61Sr2n6ZaMUKQJE6l--Fk",
+        description: "An educational children's series following Steve and his dog Blue.",
+        year: "1996",
+        link: "https://drive.google.com/drive/folders/1vDYQQUT_BEMS779FI2rfC-FnkoUG3g4Y?usp=share_link"
+      },
+      {
         title: "Bluey",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYWU1YmQzMjEtMDNjOS00MGIyLWExY2ItZDAzNmU5NWViMGZmXkEyXkFqcGc@._V1_.jpg",
         description: "An Australian animated series following a Blue Heeler puppy and her family.",
@@ -126,13 +133,6 @@ export const TV_SHOWS: TVShow[] = [
           { part: "Season 2", url: "https://drive.google.com/drive/folders/1haRPCouOzgl1HUFzLvEq6txibXJFXSS4?usp=share_link" },
           { part: "Season 3", url: "https://drive.google.com/drive/folders/1TNnG3i1upD2L4oiSZnjSIb86LUFuRDqj?usp=share_link" }
         ]
-      },
-      {
-        title: "Blues Clues",
-        imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS8odUnQOPZRKQVPuHkxLaCSOuJ80A61Sr2n6ZaMUKQJE6l--Fk",
-        description: "An educational children's series following Steve and his dog Blue.",
-        year: "1996",
-        link: "https://drive.google.com/drive/folders/1vDYQQUT_BEMS779FI2rfC-FnkoUG3g4Y?usp=share_link"
       },
       {
         title: "Boondocks",
@@ -179,6 +179,13 @@ export const TV_SHOWS: TVShow[] = [
           { part: "Season 2", url: "https://drive.google.com/drive/folders/1PEEIDi7H157aYS5y1SPf7m4d1kM786Wn?usp=share_link" },
           { part: "Season 3", url: "https://drive.google.com/drive/folders/19EBjseVtK6BcEITdVfvpxG9dbQO6mpFF?usp=share_link" }
         ]
+      },
+      {
+        title: "Donald Duck Shorts",
+        imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/donald_duck_vintage.jpg",
+        link: "https://drive.google.com/open?id=1Y_cym13tWj8XgcWYqhz5GgLLChWQ-V7b&usp=drive_copy",
+        description: "Classic animated shorts featuring everyone's favorite hot-tempered duck.",
+        year: "1940"
       },
       {
         title: "DuckTales (1987)",
@@ -953,5 +960,12 @@ export const TV_SHOWS: TVShow[] = [
         description: "A boy gains a watch that allows him to see and interact with Yo-kai.",
         year: "2014",
         link: "https://drive.google.com/drive/folders/1yUIXCpBp86InMF8gNxKekCMbd0LBVAlP?usp=drive_link"
+      },
+      {
+        title: "Zootopia+",
+        imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThmBkjtYKPHpy2f76goyLvuMGT2UHEpI95oQEiZgISMK2cs25V",
+        description: "A series of animated shorts following characters from the Zootopia film.",
+        year: "2022",
+        link: "https://drive.google.com/drive/folders/1MJUMWPnNAitXb9osZfMgR4AZw8WqbJ3-?usp=drive_link"
       }
 ];
