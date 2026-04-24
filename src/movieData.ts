@@ -1213,6 +1213,62 @@ export const MOVIES: Movie[] = [
                 year: "2019"
             },
             {
+                title: "Godzilla x Kong: The New Empire",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSUJ7QvOB8JlCOJQKPm7VXnWyvzT4uTKVXumnvxCeufk2ljcXqj",
+                link: "https://drive.google.com/open?id=1A-lFR6Niyh4KfZYfMFUzElWMDXXrpWL0&usp=drive_copy",
+                description: "Godzilla and the almighty Kong face a colossal threat hidden within our world that challenges their very existence and our own.",
+                year: "2024"
+            },
+            {
+                title: "Godzilla Minus One",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTm-v1_LmdbRXjL7L5b-jSw67aFuTUYdBP4NMXffEW5zrp9jGUH",
+                link: "https://drive.google.com/open?id=15cslPKo6esN4D6oaMaRjcC3_eIwFDX4e&usp=drive_copy",
+                description: "Japan, still reeling from the aftermath of World War II, faces a new threat in the form of a giant, radioactive monster.",
+                year: "2023"
+            },
+            {
+                title: "Godzilla vs. Kong",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG-Za-ErKCQ2Lt9AQErIkkb56xEwNL-4N7GPIIzdghVo5uHwll",
+                link: "https://drive.google.com/open?id=1emaZNk8shYA98Sq_K0x_iVT78_coOByR&usp=drive_copy",
+                description: "The epic next chapter in the cinematic Monsterverse pits two of the greatest icons in motion picture history against one another.",
+                year: "2021"
+            },
+            {
+                title: "Godzilla: King of the Monsters",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRRrZQMf70T5ZAc0_IysKR7u_y8U32S8n5h_qQZK7m1s3YFAj-",
+                link: "https://drive.google.com/open?id=1xlVHznoHc3cczI4emQUNE0vuyD2H_x9g&usp=drive_copy",
+                description: "The crypto-zoological agency Monarch faces off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah.",
+                year: "2019"
+            },
+            {
+                title: "Shin Godzilla",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAdTzc19oiRCosaGOYYvjSbVruh9gPCskyDVcKs7J1YlXFTGhC",
+                link: "https://drive.google.com/open?id=1VnID4qhUDF8EOWLQJ3Z1K-M0AwoOTlFt&usp=drive_copy",
+                description: "Japan is plunged into chaos upon the appearance of a giant monster.",
+                year: "2016"
+            },
+            {
+                title: "Godzilla: Final Wars",
+                imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSHQLbiB_G0L2Yzfw0hH4DUgJFkoXNBSr8syZl-zBFPLJbWkpnK",
+                link: "https://drive.google.com/open?id=1rin01fF2JeTiqBkvae2SJLZIuv2UUp2v&usp=drive_copy",
+                description: "Godzilla's 50th Anniversary project, in which he travels around the world to fight his old enemies plus a new, mysterious one.",
+                year: "2004"
+            },
+            {
+                title: "Godzilla",
+                imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcThe4JR42jxtNoLWBNsNtB1Td6P0XA8hb26m2eVmj36qXQLbcC1",
+                link: "https://drive.google.com/file/d/1pP6Kkr-1WmcWWt2IKEIUv7RTkgMLXTmp/view?usp=drive_link",
+                description: "Godzilla returns to terrorize Japan, and this time, he's more powerful than ever.",
+                year: "1985"
+            },
+            {
+                title: "Godzilla (1998)",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFsLHnpdOqPSSsy2cuqzUb8DEDEDvIM0XblhSjkUoqVySm5FRt",
+                link: "https://drive.google.com/file/d/1ii0BHAXtg0UNkddC0s_lx_2gTjSjG-Oc/view?usp=drive_link",
+                description: "A giant reptilian monster surfaces, leaving destruction in its wake as it strides through the city of New York.",
+                year: "1998"
+            },
+            {
                 title: "The Nun",
                 imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi49U-7alumxu_CBlDWp1xl5WkY2JBGAVszrFluxBQN1elyelm",
                 link: "https://drive.google.com/file/d/1f54gZFt1PT6TllWwa-5SjtkRuOITxLNs/view?usp=drive_link",
