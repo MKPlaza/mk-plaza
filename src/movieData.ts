@@ -534,6 +534,13 @@ export const MOVIES: Movie[] = [
                 year: "2025"
             },
             {
+                title: "Backrooms",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/en/3/3d/Backrooms_%28film%29_poster.jpg",
+                link: "https://drive.google.com/file/d/18nLws3FusSwXgQxTmAv-JmQijlCytXzD/view",
+                description: "A feature film adaptation of the viral internet analog horror phenomenon created by Kane Pixels, where a young filmmaker accidentally slips into a surreal, endless labyrinth of empty, yellow-hued office rooms.",
+                year: "2026"
+            },
+            {
                 title: "Bank of Dave 2: The Loan Ranger",
                 imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQpSeJXI63iqyiq68MCymhVO7SPNCHFm_NfLLVSIuhUlOJ8r2Y_",
                 link: "https://drive.google.com/open?id=16yWCtHQrntP_GS2EyRRMmw7kmyxtLhMv&usp=drive_copy",
@@ -952,6 +959,13 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1temXH9CFHCd7gjIsu8TMCFiqxMy8jXfj/view",
                 description: "MMA fighter seeks champions against Outworld.",
                 year: "2021"
+            },
+            {
+                title: "Mortal Kombat 2",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP0JFN5joPsEGqWaSGDflwASwuaG3So2wnLE_eatQhsBGUd4QQ",
+                link: "https://drive.google.com/file/d/1DYP51mxiszQAlgUAIepXVm95dlA9kjat/view",
+                description: "Cole Young and the Earthrealm champions recruit legendary warrior Johnny Cage to stand against the forces of Outworld in a lethal final tournament.",
+                year: "2026"
             },
             {
                 title: "Major Payne",
@@ -2555,6 +2569,27 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1jTfxqP7BrcbIv5SVAxHP7FFIdt8A51ZJ/view?usp=share_link",
                 description: "Ladybug and Cat Noir visit New York City.",
                 year: "2020"
+            },
+            {
+                title: "Miraculous World Paris: Tales of Shadybug and Claw Noir",
+                imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/Miraculous_Paris_English_poster.webp",
+                link: "https://drive.google.com/file/d/1jTfxqP7BrcbIv5SVAxHP7FFIdt8A51ZJ/view?usp=share_link",
+                description: "Marinette and Adrien discover that evil counterparts from an alternate universe, Shadybug and Claw Noir, have arrived in Paris to steal their Miraculouses.",
+                year: "2023"
+            },
+            {
+                title: "Miraculous World: Tokyo, Stellar Force",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgG0iJmLr_FhQjaB4ICNa30jrBFtsY5Xl6uuRJrYW-Nd7FYU_H",
+                link: "https://drive.google.com/file/d/1jTfxqP7BrcbIv5SVAxHP7FFIdt8A51ZJ/view?usp=share_link",
+                description: "Marinette and Adrien travel to Tokyo, Japan, where they meet a brand-new group of superheroes known as the Stellar Force.",
+                year: "2025"
+            },
+            {
+                title: "Miraculous World: London, At the Edge of Time",
+                imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSt20X_4VEAhwbIOEAKzLI17LOc3b2WVAOTi9xX_99sgmdhpZc0",
+                link: "https://drive.google.com/file/d/1-kdd2DJROzKjVC6bfIbKziouhwZp5vpj/view?usp=sharing",
+                description: "Marinette travels to London to stop a mysterious time traveler from altering history, teaming up with Bunnix and Chronobug to save the future.",
+                year: "2024"
             },
             {
                 title: "Maleficent",
