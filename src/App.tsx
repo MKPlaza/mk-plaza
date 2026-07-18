@@ -134,7 +134,14 @@ export default function App() {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
-      audioRef.current.play().catch(console.error);
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(e => {
+          if (e.name !== 'AbortError') {
+            console.warn("Playback failed", e);
+          }
+        });
+      }
     }
     setIsPlaying(!isPlaying);
   };
@@ -149,7 +156,14 @@ export default function App() {
     if (audioRef.current) {
       audioRef.current.src = MUSIC_BASE_URL + encodeURIComponent(PLAYLIST[currentSongIndex].filename);
       if (isPlaying) {
-        audioRef.current.play().catch(console.error);
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(e => {
+            if (e.name !== 'AbortError') {
+              console.warn("Playback failed", e);
+            }
+          });
+        }
       }
     }
   }, [currentSongIndex]);
