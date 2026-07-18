@@ -29,7 +29,8 @@ import {
   Maximize2,
   ExternalLink,
   Shield,
-  Handshake
+  Handshake,
+  Menu
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { THEMES, CLOAKS, PLAYLIST, MUSIC_BASE_URL } from './constants';
@@ -63,6 +64,29 @@ export default function App() {
   const [time, setTime] = useState(new Date());
   const [battery, setBattery] = useState<{ level: number; charging: boolean } | null>(null);
   const [showWelcome, setShowWelcome] = useState(false);
+
+  const [mobileNavMode, setMobileNavMode] = useState<'auto' | 'mobile' | 'desktop'>(() => {
+    const saved = localStorage.getItem('mk_mobile_nav_mode');
+    return (saved as 'auto' | 'mobile' | 'desktop') || 'auto';
+  });
+
+  const [isMobileScreen, setIsMobileScreen] = useState(false);
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('mk_mobile_nav_mode', mobileNavMode);
+  }, [mobileNavMode]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileScreen(window.innerWidth < 1024);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const useMobileUI = mobileNavMode === 'mobile' || (mobileNavMode === 'auto' && isMobileScreen);
 
   const [favorites, setFavorites] = useState<FavoriteItem[]>(() => {
     const saved = localStorage.getItem('mk_favorites');
@@ -281,22 +305,22 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <header className="fixed top-0 left-0 w-full h-20 bg-[var(--glass)] backdrop-blur-xl flex items-center justify-between px-8 z-[2000] shadow-2xl border-b border-white/5">
-        <div className="flex items-center gap-6">
+      <header className="fixed top-0 left-0 w-full h-20 bg-[var(--glass)] backdrop-blur-xl flex items-center justify-between px-4 sm:px-8 z-[2000] shadow-2xl border-b border-white/5">
+        <div className="flex items-center gap-3 sm:gap-6">
           <motion.img 
             whileHover={{ scale: 1.1, rotate: 5 }}
             src={currentTheme.logo} 
             alt="Logo" 
-            className="h-12 w-auto cursor-pointer drop-shadow-[0_0_8px_var(--mk-gold)]"
+            className="h-10 sm:h-12 w-auto cursor-pointer drop-shadow-[0_0_8px_var(--mk-gold)]"
             onClick={goHome}
           />
           <div 
-            className="text-xl font-black uppercase tracking-[3px] text-[var(--mk-gold)] drop-shadow-[0_0_12px_var(--mk-gold)] select-none"
+            className="text-base sm:text-xl font-black uppercase tracking-[2px] sm:tracking-[3px] text-[var(--mk-gold)] drop-shadow-[0_0_12px_var(--mk-gold)] select-none"
           >
             MKPlaza
           </div>
           
-          <div className="flex items-center gap-5 bg-yellow-400/5 px-4 py-1.5 rounded-full border border-yellow-400/10 font-orbitron text-[11px] text-[var(--mk-gold)] shadow-[0_0_8px_rgba(255,215,0,0.1)]">
+          <div className="hidden sm:flex items-center gap-3 sm:gap-5 bg-yellow-400/5 px-3 sm:px-4 py-1.5 rounded-full border border-yellow-400/10 font-orbitron text-[10px] sm:text-[11px] text-[var(--mk-gold)] shadow-[0_0_8px_rgba(255,215,0,0.1)]">
             <div className="flex items-center gap-2">
               {getBatteryIcon()}
               <span>{battery ? `${battery.level}%` : '--%'}</span>
@@ -323,89 +347,93 @@ export default function App() {
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3 sm:gap-6">
+          <div className="hidden sm:flex items-center gap-4 sm:gap-5">
             <a href="https://discord.gg/kZzGNnmjpv" target="_blank" className="text-[var(--mk-silver)] opacity-70 hover:opacity-100 hover:text-[var(--mk-gold)] transition-all hover:-translate-y-0.5">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
               </svg>
             </a>
             <a href="https://github.com/MKPlaza" target="_blank" className="text-[var(--mk-silver)] opacity-70 hover:opacity-100 hover:text-[var(--mk-gold)] transition-all hover:-translate-y-0.5">
-              <Github className="w-6 h-6" />
+              <Github className="w-5 h-5 sm:w-6 sm:h-6" />
             </a>
           </div>
           <button 
             onClick={() => setIsSettingsOpen(true)}
-            className="text-[var(--mk-silver)] opacity-70 hover:opacity-100 hover:text-[var(--mk-gold)] transition-all hover:rotate-45"
+            className="text-[var(--mk-silver)] opacity-70 hover:opacity-100 hover:text-[var(--mk-gold)] transition-all hover:rotate-45 p-1.5 rounded-full hover:bg-white/5"
           >
-            <Settings className="w-6 h-6" />
+            <Settings className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
       </header>
 
-      <motion.nav 
-        animate={{ 
-          y: isNavCollapsed ? -140 : 0,
-          opacity: isNavCollapsed ? 0 : 1
-        }}
-        transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-        className="fixed top-20 left-0 w-full h-[60px] bg-[var(--glass-heavy)] backdrop-blur-2xl border-b border-yellow-400/15 flex items-center justify-center gap-4 px-5 z-[1999]"
-      >
-        {[
-          { id: 'hide', label: 'Hide', icon: EyeOff, action: () => setActiveHub(null) },
-          { id: 'movies', label: 'M0v135', icon: Film, count: MOVIES.length },
-          { id: 'tv', label: 'TV 5h0w5', icon: Tv, count: TV_SHOWS.length },
-          { id: 'anime', label: 'An1m3', icon: Ghost, count: ANIME.length },
-          { id: 'manga', label: 'M4ng4', icon: BookOpenText, count: MANGA.length },
-          { id: 'games', label: 'G4m35', icon: Gamepad2, count: GAMES.length },
-          { id: 'music', label: 'Mu51c', icon: Music },
-          { id: 'proxies', label: 'Pr0x135', icon: Shield, count: PROXIES.length },
-          { id: 'partners', label: 'P4rtn3r5', icon: Handshake, count: PARTNERS.length },
-        ].map((item) => (
-          <button
-            key={item.id}
-            onClick={() => item.action ? item.action() : loadHub(item.id)}
-            className="flex items-center gap-2.5 text-[var(--mk-silver)] px-4 py-2 rounded-lg transition-all border border-transparent hover:bg-yellow-400/10 hover:border-yellow-400/30 hover:-translate-y-0.5 group"
+      {!useMobileUI && (
+        <>
+          <motion.nav 
+            animate={{ 
+              y: isNavCollapsed ? -140 : 0,
+              opacity: isNavCollapsed ? 0 : 1
+            }}
+            transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+            className="fixed top-20 left-0 w-full h-[60px] bg-[var(--glass-heavy)] backdrop-blur-2xl border-b border-yellow-400/15 flex items-center justify-center gap-4 px-5 z-[1999]"
           >
-            <item.icon className="w-5 h-5 text-[var(--mk-eye-glow)] drop-shadow-[0_0_5px_var(--mk-eye-glow)]" />
-            <div className="flex flex-col items-start">
-              <span className="text-[11px] font-bold uppercase tracking-wider">{item.label}</span>
-              {item.count !== undefined && (
-                <span className="text-[9px] opacity-50 font-mono tracking-tighter">
-                  {item.count.toString().padStart(2, '0')} Units
-                </span>
-              )}
-            </div>
-          </button>
-        ))}
+            {[
+              { id: 'hide', label: 'Hide', icon: EyeOff, action: () => setActiveHub(null) },
+              { id: 'movies', label: 'M0v135', icon: Film, count: MOVIES.length },
+              { id: 'tv', label: 'TV 5h0w5', icon: Tv, count: TV_SHOWS.length },
+              { id: 'anime', label: 'An1m3', icon: Ghost, count: ANIME.length },
+              { id: 'manga', label: 'M4ng4', icon: BookOpenText, count: MANGA.length },
+              { id: 'games', label: 'G4m35', icon: Gamepad2, count: GAMES.length },
+              { id: 'music', label: 'Mu51c', icon: Music },
+              { id: 'proxies', label: 'Pr0x135', icon: Shield, count: PROXIES.length },
+              { id: 'partners', label: 'P4rtn3r5', icon: Handshake, count: PARTNERS.length },
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => item.action ? item.action() : loadHub(item.id)}
+                className="flex items-center gap-2.5 text-[var(--mk-silver)] px-4 py-2 rounded-lg transition-all border border-transparent hover:bg-yellow-400/10 hover:border-yellow-400/30 hover:-translate-y-0.5 group shrink-0"
+              >
+                <item.icon className="w-5 h-5 text-[var(--mk-eye-glow)] drop-shadow-[0_0_5px_var(--mk-eye-glow)]" />
+                <div className="flex flex-col items-start">
+                  <span className="text-[11px] font-bold uppercase tracking-wider">{item.label}</span>
+                  {item.count !== undefined && (
+                    <span className="text-[9px] opacity-50 font-mono tracking-tighter">
+                      {item.count.toString().padStart(2, '0')} Units
+                    </span>
+                  )}
+                </div>
+              </button>
+            ))}
 
-        <button 
-          onClick={() => setIsNavCollapsed(true)}
-          className="absolute -bottom-[22px] left-1/2 -translate-x-1/2 flex items-center justify-center bg-[var(--glass-heavy)] backdrop-blur-md border border-yellow-400/20 border-t-0 text-[var(--mk-gold)] w-[60px] h-[22px] rounded-b-xl hover:h-[26px] transition-all"
-        >
-          <ChevronUp className="w-4 h-4" />
-        </button>
-      </motion.nav>
+            <button 
+              onClick={() => setIsNavCollapsed(true)}
+              className="absolute -bottom-[22px] left-1/2 -translate-x-1/2 flex items-center justify-center bg-[var(--glass-heavy)] backdrop-blur-md border border-yellow-400/20 border-t-0 text-[var(--mk-gold)] w-[60px] h-[22px] rounded-b-xl hover:h-[26px] transition-all"
+            >
+              <ChevronUp className="w-4 h-4" />
+            </button>
+          </motion.nav>
 
-      <AnimatePresence>
-        {isNavCollapsed && (
-          <motion.button 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            onClick={() => setIsNavCollapsed(false)}
-            className="fixed top-20 left-1/2 -translate-x-1/2 z-[2001] bg-[var(--mk-gold)] text-[var(--mk-midnight)] w-[60px] h-[22px] rounded-b-xl flex items-center justify-center shadow-lg"
-          >
-            <ChevronDown className="w-4 h-4" />
-          </motion.button>
-        )}
-      </AnimatePresence>
+          <AnimatePresence>
+            {isNavCollapsed && (
+              <motion.button 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                onClick={() => setIsNavCollapsed(false)}
+                className="fixed top-20 left-1/2 -translate-x-1/2 z-[2001] bg-[var(--mk-gold)] text-[var(--mk-midnight)] w-[60px] h-[22px] rounded-b-xl flex items-center justify-center shadow-lg"
+              >
+                <ChevronDown className="w-4 h-4" />
+              </motion.button>
+            )}
+          </AnimatePresence>
+        </>
+      )}
 
       <main 
         className={`absolute left-0 w-full transition-all duration-500 z-50 ${activeHub === 'partners' ? 'bg-[var(--mk-midnight)]/60' : 'bg-[var(--mk-midnight)]/90'} overflow-y-auto ${activeHub ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         style={{ 
-          top: isNavCollapsed ? '80px' : '140px',
-          height: isNavCollapsed ? 'calc(100% - 80px)' : 'calc(100% - 140px)'
+          top: useMobileUI ? '80px' : (isNavCollapsed ? '80px' : '140px'),
+          height: useMobileUI ? 'calc(100% - 144px)' : (isNavCollapsed ? 'calc(100% - 80px)' : 'calc(100% - 140px)')
         }}
       >
         {activeHub === 'home' && (
@@ -496,31 +524,34 @@ export default function App() {
       </AnimatePresence>
 
       <motion.div 
-        animate={{ left: isPlayerCollapsed ? -415 : 30 }}
+        animate={{ 
+          left: isPlayerCollapsed ? (useMobileUI ? -295 : -415) : 16,
+          bottom: useMobileUI ? 80 : 30
+        }}
         transition={{ type: 'spring', damping: 25, stiffness: 120 }}
-        className="fixed bottom-[30px] flex items-center z-[1000]"
+        className="fixed flex items-center z-[1000]"
       >
-        <div className="h-[54px] w-[400px] bg-[var(--mk-midnight)]/85 backdrop-blur-2xl rounded-full border border-yellow-400/10 flex items-center px-5 shadow-2xl">
-          <div className="flex-1 overflow-hidden whitespace-nowrap mr-4 relative">
-            <div className="inline-block text-sm text-[var(--mk-silver)] animate-marquee pl-full">
+        <div className={`h-[54px] ${useMobileUI ? 'w-[280px]' : 'w-[400px]'} bg-[var(--mk-midnight)]/85 backdrop-blur-2xl rounded-full border border-yellow-400/10 flex items-center px-4 sm:px-5 shadow-2xl transition-all duration-300`}>
+          <div className="flex-1 overflow-hidden whitespace-nowrap mr-2 sm:mr-4 relative">
+            <div className="inline-block text-xs sm:text-sm text-[var(--mk-silver)] animate-marquee pl-full">
               {PLAYLIST[currentSongIndex].title}
             </div>
           </div>
-          <div className="flex items-center gap-1">
-            <button onClick={() => changeTrack(-1)} className="p-2 text-[var(--mk-silver)] hover:text-[var(--mk-gold)] transition-colors">
-              <SkipBack className="w-4 h-4" />
+          <div className="flex items-center gap-0.5 sm:gap-1">
+            <button onClick={() => changeTrack(-1)} className="p-1.5 sm:p-2 text-[var(--mk-silver)] hover:text-[var(--mk-gold)] transition-colors">
+              <SkipBack className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
-            <button onClick={togglePlay} className="p-2 text-[var(--mk-silver)] hover:text-[var(--mk-gold)] transition-colors">
-              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+            <button onClick={togglePlay} className="p-1.5 sm:p-2 text-[var(--mk-silver)] hover:text-[var(--mk-gold)] transition-colors">
+              {isPlaying ? <Pause className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
             </button>
-            <button onClick={() => changeTrack(1)} className="p-2 text-[var(--mk-silver)] hover:text-[var(--mk-gold)] transition-colors">
-              <SkipForward className="w-4 h-4" />
+            <button onClick={() => changeTrack(1)} className="p-1.5 sm:p-2 text-[var(--mk-silver)] hover:text-[var(--mk-gold)] transition-colors">
+              <SkipForward className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
             <button 
               onClick={() => setIsLooping(!isLooping)} 
-              className={`p-2 transition-colors ${isLooping ? 'text-[var(--mk-gold)]' : 'text-[var(--mk-silver)] hover:text-[var(--mk-gold)]'}`}
+              className={`p-1.5 sm:p-2 transition-colors ${isLooping ? 'text-[var(--mk-gold)]' : 'text-[var(--mk-silver)] hover:text-[var(--mk-gold)]'}`}
             >
-              <RotateCcw className="w-4 h-4" />
+              <RotateCcw className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
           </div>
         </div>
@@ -537,14 +568,14 @@ export default function App() {
       <AnimatePresence>
         {isSettingsOpen && (
           <div 
-            className="fixed inset-0 bg-black/10 z-[3000] flex items-center justify-end pr-12"
+            className="fixed inset-0 bg-black/50 z-[3000] flex items-center justify-center lg:justify-end p-4 lg:pr-12"
             onClick={(e) => e.target === e.currentTarget && setIsSettingsOpen(false)}
           >
             <motion.div 
               initial={{ x: 100, opacity: 0, scale: 0.95 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               exit={{ x: 100, opacity: 0, scale: 0.95 }}
-              className="w-[400px] bg-[var(--glass-heavy)] backdrop-blur-2xl border border-yellow-400/30 rounded-2xl shadow-2xl max-h-[90vh] flex flex-col text-[var(--mk-silver)]"
+              className="w-full max-w-[400px] bg-[var(--glass-heavy)] backdrop-blur-2xl border border-yellow-400/30 rounded-2xl shadow-2xl max-h-[90vh] flex flex-col text-[var(--mk-silver)]"
             >
               <div className="flex justify-between items-center p-6 border-b border-yellow-400/15 shrink-0">
                 <h2 className="text-sm font-bold text-[var(--mk-gold)] uppercase flex items-center gap-2">
@@ -558,28 +589,60 @@ export default function App() {
               <div className="p-6 overflow-y-auto flex-1">
                 <div className="mb-8">
                   <div className="text-[11px] text-[var(--mk-eye-glow)] uppercase mb-4 font-bold flex items-center gap-2">
-                  <Palette className="w-4 h-4" /> Knight Presets
+                    <Palette className="w-4 h-4" /> Knight Presets
+                  </div>
+                  <div className="p-3 bg-white/5 rounded-xl border border-yellow-400/5 flex flex-col gap-2">
+                    <span className="text-xs opacity-70">Active Theme Profile</span>
+                    <select 
+                      value={Object.keys(THEMES).find(key => THEMES[key] === currentTheme)}
+                      onChange={(e) => setCurrentTheme(THEMES[e.target.value])}
+                      className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs"
+                      style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
+                    >
+                      {Object.entries(THEMES).map(([key, theme]) => (
+                        <option 
+                          key={key} 
+                          value={key}
+                          style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
+                        >
+                          {theme.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
-                <div className="p-3 bg-white/5 rounded-xl border border-yellow-400/5 flex flex-col gap-2">
-                  <span className="text-xs opacity-70">Active Theme Profile</span>
-                  <select 
-                    value={Object.keys(THEMES).find(key => THEMES[key] === currentTheme)}
-                    onChange={(e) => setCurrentTheme(THEMES[e.target.value])}
-                    className="bg-[var(--mk-midnight)]/80 border border-yellow-400/30 text-[var(--mk-silver)] p-2.5 rounded-lg w-full outline-none text-xs"
-                    style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
-                  >
-                    {Object.entries(THEMES).map(([key, theme]) => (
-                      <option 
-                        key={key} 
-                        value={key}
-                        style={{ fontFamily: currentTheme.fontFamily, fontStyle: currentTheme.fontStyle || 'normal' }}
-                      >
-                        {theme.name}
-                      </option>
-                    ))}
-                  </select>
+
+                {/* Mobile Optimization Setting */}
+                <div className="mb-8">
+                  <div className="text-[11px] text-[var(--mk-eye-glow)] uppercase mb-4 font-bold flex items-center gap-2">
+                    <Menu className="w-4 h-4" /> Mobile Optimization
+                  </div>
+                  <div className="p-3 bg-white/5 rounded-xl border border-yellow-400/5 flex flex-col gap-3">
+                    <span className="text-xs opacity-70">Navigation Layout</span>
+                    <div className="grid grid-cols-3 gap-2">
+                      {[
+                        { id: 'auto', label: 'Auto' },
+                        { id: 'mobile', label: 'Mobile' },
+                        { id: 'desktop', label: 'Desktop' },
+                      ].map((opt) => (
+                        <button
+                          key={opt.id}
+                          onClick={() => setMobileNavMode(opt.id as 'auto' | 'mobile' | 'desktop')}
+                          className={`py-2 rounded-lg text-[10px] font-black uppercase tracking-wider transition-all border ${
+                            mobileNavMode === opt.id
+                              ? 'bg-[var(--mk-gold)] border-[var(--mk-gold)] text-[var(--mk-midnight)] font-bold shadow-md'
+                              : 'bg-black/30 border-white/5 hover:bg-white/5 text-[var(--mk-silver)]/80'
+                          }`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                    <span className="text-[9px] opacity-40 leading-relaxed font-medium">
+                      Auto: Uses bottom bar on smaller screens. Mobile/Desktop: Forces corresponding viewport style.
+                    </span>
+                  </div>
                 </div>
-              </div>
 
               <div>
                 <div className="text-[11px] text-[var(--mk-eye-glow)] uppercase mb-4 font-bold flex items-center gap-2">
@@ -675,6 +738,141 @@ export default function App() {
               >
                 Close
               </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {useMobileUI && (
+        <div className="fixed bottom-0 left-0 w-full h-16 bg-[var(--glass-heavy)] backdrop-blur-2xl border-t border-yellow-400/15 z-[1999] flex items-center justify-around px-2 shadow-[0_-10px_25px_rgba(0,0,0,0.5)]">
+          {[
+            { id: 'home', label: 'Home', icon: Home },
+            { id: 'movies', label: 'M0v135', icon: Film },
+            { id: 'tv', label: 'TV 5h0w5', icon: Tv },
+            { id: 'games', label: 'G4m35', icon: Gamepad2 },
+            { id: 'more', label: 'M0r3', icon: Menu, action: () => setIsMobileDrawerOpen(true) },
+          ].map((item) => {
+            const isActive = activeHub === item.id || (item.id === 'home' && activeHub === 'home');
+            const Icon = item.icon;
+            return (
+              <button
+                key={item.id}
+                onClick={() => item.action ? item.action() : loadHub(item.id)}
+                className={`flex flex-col items-center justify-center w-16 h-full transition-all relative ${isActive ? 'text-[var(--mk-gold)]' : 'text-[var(--mk-silver)]/60 hover:text-[var(--mk-gold)]'}`}
+              >
+                <Icon className={`w-5 h-5 mb-1 ${isActive ? 'drop-shadow-[0_0_5px_var(--mk-gold)]' : ''}`} />
+                <span className="text-[9px] font-black uppercase tracking-wider scale-95">{item.label}</span>
+                {isActive && (
+                  <motion.div 
+                    layoutId="activeIndicator"
+                    className="absolute bottom-1 w-5 h-0.5 bg-[var(--mk-gold)] rounded-full"
+                    transition={{ type: 'spring', damping: 20, stiffness: 150 }}
+                  />
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      <AnimatePresence>
+        {useMobileUI && isMobileDrawerOpen && (
+          <div className="fixed inset-0 z-[3000] flex items-end justify-center">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileDrawerOpen(false)}
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            />
+            
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="relative w-full bg-[var(--glass-heavy)] backdrop-blur-3xl border-t border-yellow-400/30 rounded-t-[2rem] p-6 shadow-2xl flex flex-col max-h-[85vh] overflow-y-auto text-[var(--mk-silver)]"
+            >
+              <div className="w-12 h-1 bg-white/20 rounded-full mx-auto mb-6 shrink-0" />
+
+              <div className="flex justify-between items-center mb-6 shrink-0">
+                <h2 className="text-sm font-bold text-[var(--mk-gold)] uppercase flex items-center gap-2 tracking-widest">
+                  <Menu className="w-4 h-4" /> MKPlaza Hubs
+                </h2>
+                <button onClick={() => setIsMobileDrawerOpen(false)} className="hover:text-[var(--mk-gold)] transition-colors p-1">
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {[
+                  { id: 'anime', label: 'An1m3', icon: Ghost, count: ANIME.length },
+                  { id: 'manga', label: 'M4ng4', icon: BookOpenText, count: MANGA.length },
+                  { id: 'music', label: 'Mu51c', icon: Music },
+                  { id: 'proxies', label: 'Pr0x135', icon: Shield, count: PROXIES.length },
+                  { id: 'partners', label: 'P4rtn3r5', icon: Handshake, count: PARTNERS.length },
+                  { id: 'hide', label: 'H1d3', icon: EyeOff, action: () => { setActiveHub(null); setIsMobileDrawerOpen(false); } },
+                ].map((item) => {
+                  const isActive = activeHub === item.id;
+                  const Icon = item.icon;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => {
+                        if (item.action) {
+                          item.action();
+                        } else {
+                          loadHub(item.id);
+                          setIsMobileDrawerOpen(false);
+                        }
+                      }}
+                      className={`flex items-center gap-3 p-4 rounded-xl border transition-all text-left ${isActive ? 'bg-yellow-400/10 border-yellow-400/40 text-[var(--mk-gold)]' : 'bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10'}`}
+                    >
+                      <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-[var(--mk-gold)]' : 'text-[var(--mk-eye-glow)]'}`} />
+                      <div className="flex flex-col min-w-0">
+                        <span className="text-[11px] font-black uppercase tracking-wider truncate">{item.label}</span>
+                        {item.count !== undefined && (
+                          <span className="text-[8px] opacity-50 font-mono tracking-tighter">
+                            {item.count.toString().padStart(2, '0')} Units
+                          </span>
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="border-t border-white/5 pt-6 flex flex-col gap-3 shrink-0">
+                <span className="text-[9px] uppercase tracking-widest text-neutral-400 font-bold px-1">Other Links</span>
+                <div className="flex gap-2">
+                  <a 
+                    href="https://discord.gg/kZzGNnmjpv" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#5865F2]/20 hover:bg-[#5865F2]/30 border border-[#5865F2]/30 text-white transition-all text-xs font-bold uppercase tracking-wider"
+                  >
+                    Discord
+                  </a>
+                  <a 
+                    href="https://github.com/MKPlaza" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-[var(--mk-silver)] transition-all text-xs font-bold uppercase tracking-wider"
+                  >
+                    <Github className="w-4 h-4" /> GitHub
+                  </a>
+                </div>
+                
+                <button 
+                  onClick={() => {
+                    setIsMobileDrawerOpen(false);
+                    setIsSettingsOpen(true);
+                  }}
+                  className="w-full bg-[var(--mk-gold)] hover:scale-[1.02] text-[var(--mk-midnight)] py-3.5 rounded-xl font-bold uppercase tracking-widest text-xs transition-transform shadow-[0_0_20px_rgba(255,215,0,0.2)] flex items-center justify-center gap-2"
+                >
+                  <Settings className="w-4 h-4" /> Settings Panel
+                </button>
+              </div>
             </motion.div>
           </div>
         )}
