@@ -1,35 +1,206 @@
 import { TVShow } from './types';
 
+
+
 export const TV_SHOWS: TVShow[] = [
       {
         title: "200 Classic Cartoons",
         imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/200-classic-cartoons.jpg",
-        link: "https://drive.google.com/drive/folders/1_placeholder_cartoons",
         description: "A massive collection of classic animated shorts from the golden age of animation.",
-        year: "2008"
+        year: "2008",
+        seasons: [
+          {
+            number: 1,
+            title: "Disc 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1bQOH6zB97ZQTV1ZZ4XR243dCa-s_NclK/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Disc 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1BXsaP55zxTSw1UwvMsmMJagFDgcRR9w3/view?usp=sharing" }
+            ]
+          }
+        ]
       },
       {
         title: "Alice in Borderland",
         imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTgZjeijDWglRq6OTEXDMoU8VV8E3Euv2GbMPAYphhTzrszAu3u",
         description: "Obsessed gamer Arisu and his friends are forced to compete in a series of sadistic games to survive in a strange, empty Tokyo.",
         year: "2020",
-        link: "https://drive.google.com/drive/folders/12m78G5R4YjPUCIDIHJ3VAnK7IJRbSw8A?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1TzitsDP-8b6SZ_5WPeADtBu-Bi5x-uKJ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1_RDUG662-qoH648DdScxGi12LHCG00Ch/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/12cE1q3MDKfSMQRnOCyZVKdU_9U6x4eMS/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1e6pNiiqPX1jDxImPKzPFZZXz88BP7unK/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/10Ppgec2u0gdNpyw0O5W4EjIKT6EGooq7/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1AHfLEXRFr03PvVhGW7Yos235a_LKrat2/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1P7uXg1slZdou7dxiCCLnbQii6ZlVzvYa/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/19A_NdqUzBYpro7eDMCzGCLWdjY_M0Kci/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1Uli2q9VV3t8gpG4UCAMiEZCcp4lxEpAd/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1xqGnMAL-Q4Qpir2E2_a6exZ1Kvg4fJcK/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1LTwk_t1X7wwiy-AqOGN0iKzyK1c_2DyS/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1_h5lHavLAXKDOMUDHimUfQCGmKyYzD_D/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1y7zfN8dmNghC_FDz2BzYdtjJ5TjI0V4E/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1rvdPCF_8K3MKRYbHllR0NYge6Zt_92Yk/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1URU1RL2zkV7Inb_ntgM5JdvbPBZVA75D/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1w87jlFbE4Qko0fwxlmqPzDZF1bcJuTjg/view?usp=sharing" },
+            ]
+          }
+        ]
       },
       {
         title: "Avatar: The Last Airbender",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU0R_b4XdGsZkrl1lyxtLp1gmPNuIbA2u9HDRqWJhGi616WKCY",
         description: "In a war-torn world of elemental magic, a young boy reawakens to undertake a dangerous mystic quest to fulfill his destiny as the Avatar, and bring peace to the world.",
         year: "2005",
-        link: "https://drive.google.com/drive/folders/1OFWN8hASAuNWSn9mK2gANJ0PSQhvIA2r"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/15udfBu165UrS4V3MRO_Uxldu_9R8_Wxb/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1WUHHSkVLfGjOQn7e8qpfd8E5K9E_tu3z/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1v0qZbpN8U5bdS4nLV-qPWDrdvVbRl7Sf/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1J7t7tzyZbj95Bz48Kvv1KpTgi5oS7Z1h/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/11piQJJn8JMudHUIgurpmbjfDfLaSLwAg/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1wDPMyQzBzrMva4n3dEnv7OjpM4SOl4M0/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1zZN42_xrGQACwKJyns52IU0OxhABbAAf/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Q6OTlfOCduIu_kxrrHE76m77wpxg7LKD/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1nV-ElRQMmSZeFpLZcSkBE81tXrDmqDIH/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1fPkoVs9OAj7xiJ8sQUEdGWzpeElHEoga/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1t7yU4QcsYAkEomEeJ5AtFgbPzVu-Snqm/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/167-AvnGbtYyr_e7gYgYvotsIRhhg_G8H/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1-_2DolnquNPHs9DXKuGSnjlbnXa3Sq2E/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/12ZyiPr7hRtlQsJwwxiMxsfSwmxBKEMX_/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1fo8oeYnM3rcH1XvF6K0fZDMdwC7W-6PK/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/19pgQwlzpoblggdPGb56Rj6RLHuIbapIi/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1LMVAHdgWbfTEgj9AjyZGzAX7N3KkXzua/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1FTv7hTjKVjVA-ZVIvvCqJ0Ns8e33IJfb/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1j6u2IhsNF_gpRU9n31vQzU9SsIHCmN8F/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1H844xHH0IiAVzXnbqsGGILKlehuHdp0Y/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1N7v_8cMQFyxeQwDPFV-YwJukKc2Vfczt/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1iaBJePaMh4fHkBZHN8HsvGndg0P8CupL/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1fVaAnSQraogBG1TeuA97bn5YH5aiIub4/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1AjhOPXrnDRY8zfGuThHA4QotV4ZsvTOd/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1tqzeogsnj4xoXXi5SHhqino47UsqjdoX/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1KMZgnLfirMghT528rux6e4OmqP20Mf4r/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/12S7wj2BTyfz7vre3VAblcZR0uGeui4oJ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17wPfgiqrFVrIOqKkPIf93ZctuTbu5bcZ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1GctZFAa2vJRdBASl7mbx4ZYFWJNMVdcm/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1DEOrvlofhcqg6cnA-Jbzj5TZZfoj3OoG/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1eXZmKMLktXEM-CfXBvteaerew0umwZeQ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1mkKzsuJhdEw8SMhjBjoCaClvhpAQajdb/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1nVcIxm5QlwMZ8t9WfpfeSu83yfU3ank7/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1plb__fFETLLnFSaRahYWpIQnykQTP6wb/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Skfnj-zVkbfwYECPUtNHBg8mllUhOFIY/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/18NwUCpXdRY7lQJySpDF2BPaI8aoUvuf0/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Xer-4tzQR0SdsbWKNOXhMVM78s_CNmEg/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1lkrFpYEE1ieZLVxNT-kvj51fonjkXXLC/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1EFNI7zGpDmwPNAoKA_s_S03cUxpPV3C5/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1a3j-7N2EPWLKdCWsi00DN-1mwjfx0rYt/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1UkzzC0QzGzA_I7xVo3w0pn_fSmtb2sty/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1dPKKCDhLVRHlVL-uok62udIZ0j4WziQ_/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1mLJhbSzTGw4TVzTPjfkLFQ0lylm-s0FU/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1mTqcnBBqjGAxCOH3kR1fn4PrxrJxtB2f/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1erWE3IxXZ8s7nUSMdcXtZBTsJ6M6x453/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1PZjBuJvZeJM6ngXA-vRppiGe2fnattgk/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1m4BPPcdHKLDE7Y6LGpmxn2lrQImt2xrO/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/11sJzsCDOO73GCfeRGlz9_H1ZWrqbRFap/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ZpMJN5Gbs6CdDsLOiFHf5v-IYqPmqShF/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1FgOx-rpRORq3qkb3ua21YuUBFquLpQrT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1iAK1JFeE2HUV8F9_8ZNcGtd6Q7X-TH_f/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1W1XOF66x0KI827kI_6tY0QX7egMpk_6V/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1uwmDf8E_JVNqlasbVmHQiZN6l5gMtePe/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/19wsR3VTy8MPxzEy4pUQTjLSocg-PAA9x/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/10FI1wbJ1SKRekfnfibbZiiRVloTtR2Z6/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1aqqsusv9aQCrNTurT-BvGxydAXUW4vmh/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1wY4vQJKrnpbaCox66KtsuuTlIr8PoslR/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1D6Xr5rMD0AwMS4AW_uav9a0DlTfd7vpH/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/15T42ouy3t92Dq_IXMr8SkRGlj-enAcbK/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Y4-MQJLp0o8Exsd-00Hyl_jC6SFhXUNE/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1wMRV5pdhQd1qtqjb2gmezkhXAXZCXnFR/view?usp=sharing" }
+            ]
+          }
+        ]
       },
       {
         title: "Abbott Elementary",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYjU5YTdlZTItNWM5Yi00OGM1LTk1NGItNjY5MGU3Y2JkOWIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A mockumentary following a group of dedicated teachers in a Philadelphia public school.",
         year: "2021",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/13dLvT0_1TkcRmVmF6tZlm80xqeoWhxZp?usp=drive_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1gAtljQ6SnEWUS8HXW-y5jtbcKILcUnFU?usp=drive_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1SiFwITvaZ_Fnq9jQAIWzUZsYuHDkCtsE/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1HSDGYP2bgUcrcMwRAlf-Y_8wsSAOz-bk/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ASquaANl8GEg7S9xHO7QoBTCODf7fek1/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1sZJqBXh35XQ3cVgD4Wl6R_r417y-OqKP/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1GMCgvDJHvkXd_EVDPpEV7TT3Rg1FXx6F/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Q9QqFuwVZMnm7lA7XHKo_8KxfikyjG1h/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1jrucEdIMaq7hkL2MuFGams6BoiSISzCA/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1IHO_d6LfJz8DODJqUYVSWfMVW6jfFFmK/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Ym_DW1SbuzEAfvZdqWwqhBRhC85brgMJ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1tQaqOH91WhjqZP-RWtprAN3geyQueDIn/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/161buZFYXtNYCM0aOOlqpXnsRLFUbsAvM/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1t3-HSwMU1zwxTcQRgCoEjMaHkEPXbSTN/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1koRA2GDJuTjBorFy9mf4ahzRl91v1fVq/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1AP2Mi9nOQRsqx9g4Eke89SgFFAOz0KmB/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1yPrznjoPIzo_pYe_ssDAWdRH-L45w_oc/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17c_6ljhTq4gVejJdQQv0e4PCu4r5Kq0r/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1tQPZrHlWiL0DutWJ-8ajHlmyvCQ5PQfx/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/194E4W9KGrkT3YK-jw_vdWR0cbO_8Z6F4/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1uPXfY4GRbOuk2tA4NObE9gJqgEjqeUBW/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1-QyMtjrOAK04ggcEn8YsKYkeyMkZpojC/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/11NEMtvli86G5PDMQoJt3gdErbmxkMRe6/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1OyJf1-u19fngBWfY3Vs7EexOMAqbaVjo/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1A46x9rCzAIdQPRTOMqNS6YHGTRLZnqxs/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Ab27PiW4-1-MvxxYOsOCwlJX4w6TRMAc/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ZB1ndRJAEj1qcVFhLDTtiRy9aqZYYxdO/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1j4k128qbCAejZNgs-4C1QR7MKVFzGOI6/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1svC2BQKhzlHQuizWlH9buN7WXHSZbeQT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1yI88lAjoaDtnCEGvwnqNvzxWCO8tbOxD/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1V7rGu9OVRSMq3-oRvDWufl-kudI-FAEh/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1c3XO5IzGfVZ3SrLjDYRqRH1aUCN-c7R-/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/12bEfMP_SPlQjakGLMHZXNDRTRONCGV4P/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1KwnM5dVtWNJuTtihLoXdniM4devH_FAI/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1fnjOpdAThK1qWK3ejS1Jzs2g-2XuOfBQ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1D0ludZkHzllSBSxI-RekZGabXU1WZcei/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17UCdj2Cqv3dVNE4kkLe0Y_uYpe3qA_ht/view?usp=sharing" }
+            ]
+          }
         ]
       },
       {
@@ -37,23 +208,404 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMjkxMzIwNmQtMzM5Ni00YWJiLTg4YjQtNjBiN2IxMjZhMGQ2XkEyXkFqcGc@._V1_.jpg",
         description: "A young boy and his magical dog go on adventures in the Land of Ooo.",
         year: "2010",
-        link: "https://drive.google.com/drive/folders/1OwoKydzUQUUp6n-Nh7CCAQXGLfchU8Ta"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1H08iWbD-hk3oFkr6NrASjMm1r8gv8xt4/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1SQIdGXdzwlZK72vUbZRG2xYxm0nyT091/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1zNMFU2r8p_EcXVsffxZkMI45mlIJs3EN/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1lB-pUvyzQ8LokVd7YgiHwDUwJJEM926B/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1kZfP_GnbM2Hl3wGuYQOaayz4cU3dbyXu/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1GlS_ro0lKdqJ2ALoA6KjTbE_VtgT4Ye0/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Vma1oNqgDuSJFgzd1BJ6rdV4aSr5cccz/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1BOHr9RtyAEdHDUvOIGXeF_awukgMdT0q/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1lFbTqIBRz-5dbA6Y4BRUzSNSQXZ0fUJ1/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1NOgJWTUgxv9U-G9i_J1rXXJPTJiiSi06/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Kpu5LDVSjtWx95zAWwU6SIHvtlVSnduw/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1EXuMVBy_qXYtxCxajuy6xmMG0ze6buUK/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1wv8GvDHUDnQZ8SAgoQbKcNVwncsUreLu/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ArqVDZJm92oXGeRaad69fmH5y6YrkRLq/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17t6iiIfryAbNyJSBZpFVm9G1xYndxqDw/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/10GkP4xl1UQw5KRU9nE72l3msjYgVbaCP/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1O8bhn-gdPtClopbSskdmf_C3A6HobkqT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1-lBtrW959xC0ud-TiBLjo2W1q_a0SJmq/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/14JcGDf0GQO71HI8kuIDnCS9lUCwTXO5Y/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Sk2xMj2NZEVYfTyuIJcSSbvc5-uHi09Z/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ar24eAS1DAiRsRTGukm0MqngXsoiUmI9/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/15AGbIzXQUfG56Tr7JyCy0NlImUNt2VnQ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1FRxOo-FdtZWUxyTarrM_3bvFjDCP9O51/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Eg-lfmn381EOvT9lLO7HPIKXjcZXheYt/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/18swhk1Cl8GMdzPVZxR9BIYUc2naupSLN/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1pbw82ZUAalWCMto1uccbbWYhwL-Ki3AJ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/11nhAGULeBau3Sd63Op4UWRA0EfUaI3NS/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1iuatDF6oG2hqDxXvtEwAE3MZx4KLAL0M/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1YlYVjC677AYeRl3kEcXU9p5Lvp7cmbsz/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1PQjSUUQsbo4_GmAu8x5KihPU2v_yZ85X/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1kWQOU6P4_nBk0QZSJKXsIcXyG5c-4yvL/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1MkWjaDlUM9jFkpCBUmyrn3Uhh7NaPqIV/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/183FBtyH3CnamUBuhggByUCn6TUQox8hL/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1vM6Y5OpgJ2xwR7_14ZS4-jEqmebdAHAW/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17Bpq--5-9xFOlnJn8zvBK4L1R97ICCh7/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1s2aWDiN_z4LIVGel0S2sWCutCj2tbjWH/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1zVbfj8KrqW69QL9vW3Hkwndavv8KqcyH/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1NOt_5CoKncgv-P74-29t9OmcksSIiKs6/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1HOS9BedolGBZBpTrAAyKgSdtriVw1rBa/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1TvDDxcWFbEHr1MzIsyaVExCqnaMOqMBr/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/12puSus8PESB5w4-z5tyxw9gy36rINWaH/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1rMjf8Rxi0fVIBB2XVf0hRkCU9JqFzd5K/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1fgZiocnzAjHSLLZAYrpxobYdjsXh4tah/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1z7ggiy8AKOBM59ad7B7H-ijtEpY6Vtcj/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/15_jwjJZYLIj-uaXId80CxSJQU57oC9cC/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1SYSI0Tmju4u_VnOSy0jdTVQ2dcX0qZ87/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1I-tf-xYwySyErNxSNb3eaDZqyDZUBM7l/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/13bNsPhv71KbcLCGp5Fg2hNVCKY9-Is_2/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1jkJcAPthfwEcfvFn4VlPnLV3TK2s4z3Q/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1sKls9jQqIEZq5_pbdoOKM0ErwN3NPXju/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1wOjijA0zfa1ang1q3m3SoDpHl-pNK8Sw/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1WtC6FCqgbJTecnRc_j4JMHGndt5nzyRG/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/12_EW3f0TE9wFzylHfWwMmA0QB-heZDoT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1B9W8tD6t_v_hc-s6oF1GGc8vN6GGi5i5/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1lN7TzvAJEmc3oB8vKJ8WI9w58oaZ843f/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1-8UygIDZE7XM5inzoI68aYd6dxOSfJtV/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1YSYMg1bf9EKbQYCt86lyw2V68ZF4IlFM/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1_RNC3n2nQh4OdBq0z-Rm8tpHP_9NEko1/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1OD3zRZZD9bV0V7_GgZ9Nwa9BTWQEkLjG/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1VsRK8c-hUO79rYlnj5Rwydklsbx0GeBF/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1jP0GfPKXkcfK3KA_IEFZNC9feB8BV95A/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1du4b7w0pkEwaE5zfUJwXgkV6w3SWfJaa/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1xes11CrfQ-6LItg_ea4WC9BmrdPVViQN/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/13sQk3_GwuNORZ6hkMrQy7R9yU9uTBVe7/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/14r622p3uYKpU7kFsrFAKA3bYrvyqglc6/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1_cKwKClhRIAjOgQyU7BcQfmPvJEze_LA/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1GcZ7IxDsfE1-KSTWbkPiKBMLGe1lMgP5/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17JSdShkyqw9RlR2CGnBLbMfGQxaCZmxL/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1PnXPEc7bArz4b_juNI1GWXHZkyQdt0aT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1zT6sdyRfEiWany-vo3Sl8VlpLr8XDl_e/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1-6mrdTAlSbOr81X5mKuE59pyRa-D4p8E/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/11VRgRM87xlKtm9xvXV1Nfv_tKPL3PkZw/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1P1QBkUe2BhW9fVC-V320qtE5AD7yWkpB/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/16JnZEnV3Av1-prdbu9rxZky5ot0RJl1b/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1M30KdJOc7iN4_7wiCtGYgSuqXvGD3PzH/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1UF_y-t7QuNFlZt0AyY-Lju-kZwJeR9Ev/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/18vTA_qbMuaB0bv1ke-y7UIYQfycjbs9o/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1icsT9IIhF-T1UzQyrXidY1eC3gDs4oJt/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1mDkhsYo-F-u_PqbOW1O4idZSZBnaEEgC/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1W0jf05UoAlcTV_JiJjGlleDym6MSSk9V/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1MNoJ82x-qFjJTB9s-830qrl0yypMHjK8/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Oh3MhGkWlmhG_Axz1odTiEyGr0GTTdkI/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Nea0sL44WmTuO4DLouezS1AB4ea_pg8u/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Q6e3zwUd9_soxfgjIAeZqXCXF7A6GH-X/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1rGLD3aC18wAcnnKwS_qfl7FNdIc9KbQc/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1BXbhu8t1TexwA1IGtR4C5pGF0YxAGpIU/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1D1XVkssf4yk1YQrBgt-zjoCezXGcpgNz/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1p9f7Jx52Gh5jEYDVSKfBM8OKX4SfyJe6/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/170DZ7OhPFueeW-bhDjdZY4RsVLcc74Jm/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/18jx5jL3AQZ3F_a66Lfj3WC1KobvSU1Is/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1SgSaKacJBJLp4kygKAJzIJZl72v-tS4v/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1YoSsedgOE6d3686eM80xo-THX9mlY00J/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1pMprTtQXwelgwW0GRFGroqis2qX7mNCQ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1HtcvJuzs-Ph_x0lyuR9vw8wQg6-TFttT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1dDgqNPMvMoKOh-z5cNwfyeqvEW0NLRYS/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1hOtRlZH2oG6-M2GnmcsHZ2pkaD8rzwmy/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1wcpcZV4j1kdfg-KSuDMMQnvuSJHGkx6a/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/16n9VpEk5Yz4ojbQE5mNF0NQTxKO_R7aj/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/10V1R-J_PbvaYKfsGWGzUcRM8lUgwgeWN/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1SuSwwl19WjZV12Ol4TsgWOl9UusW9xJO/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1KHsGnhosbsA773wWt1wwnTGWTS30RPA3/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1PTdFJwxPaTSHWrQsdKEufJKhwD9CTH7j/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1BmaJUEaAj8N1q3oaBwaGmcVYwnEy4fzy/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1BOzxghv2_LWXwe0fFZun5gXzDcS-s6fq/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1gGpDEXlmQQFw8LKcgUe7UdtaxMRH4DVe/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1VwxUbKWRc1XxBx8BDb7a4r4eSYOVxfKA/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1WAH7npo3JDQWlzyQRw-2in1yn-2gaAq0/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1gYQAnHP6-n-D91xSWbrpRvPyDK_JwhVR/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1eIo98eHqXQ5LS98seDRQSDkc2sk6XRXP/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1xWjNKZwwfJM5gH7oN7lrQ8wDKoCFJVFV/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1sOmt5Xsaw23SfZrQoKXh-MIQqCw4ipYh/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1E4tSCPvHLgIMqm6Aqko-7NWDZ1vNUA-g/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1XmdWppHvuyIc8uFRO1o84gnFfu_4oidX/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1jCSZoqekKc68u5g5K5xirmCJYCPxdvO1/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1rJxEY3MQlshyLf-w3X2wym0LCEaFthHL/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/12Q7ib9IjTYwpnLt3ai18cPa9rAJkcDJg/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1XGmDOaQHdEnscM0lcdd1naMZ9gLcG8VJ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1xzt9qpka0MvSaHgZyCwpD7H-HOilDco4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HKB5KV1ipkA50j5RZkPFhz9toHSUYK48/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14eEn8Q_f5OxcjJIO0HuVHRVWnP-gqMt0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17F-9mBngyJ4mc0P09rCTCT7Tf5vErYqA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11KXDjDtuKvNBPKchjxZU0cmmlEo-QDiM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P9f_KIbnPvL3ShPhsgvQaPWrP3xkbElA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qo9zBfKcZoZ0Ux7fvPTc7kO7pzRDp8ai/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QPVmDJK9i4iWndcCzu2cRxZn-1t07Rbn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uRiu72paXxchPLw9uIhVXZyjqi9Jzt4r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tHEeYVr8qr_hKeke5ciOTB1lYnFyw8m3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1awBLSi5_RJIGd605Vk-3G8Cfg5Ld-CXL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RJzotIndLhvpwE9Zr9W4SRxxpYPdVkh9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wVD8mKYm1bi0cLwv5Ap9UrIogxjwOCec/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FlNjsEvJ3e7glRwkaJ8a4kcLMY-9ZEOQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gyBYe8hJgXpikZXGAeB9SgC3TAebHpxe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pKu748t9iJcVut3tiP0mUByvcfjUlHjj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_o7JLdLmnmEOU7wSfh0uCdCGHBD01nSa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pZUuq8U0fKjq3jDWRi7GKjLNGF12435n/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cvZ_-gLFKKc3xEGrvkgYSSYWjc2y-hnM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zMHITIQv13oPxZjQ50Rpjnhe7vp6cYuE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14XQUI_q0uFyI0ZmviwluKoyC1Boq-IsV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1y9tFKcQKwIg29M7DQTKsdMkrmtqZttqT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GB04p4B26JqTyBCL1My0PTFk756h04et/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ERH14HzCQXKSPtq4zfb_mL8mEYDwfnSr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nzH-wzF8aGHq5yKwRtNXIfW3xiLRpLsR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pe652RpzhuUnX5dJoeK7_RBwrmqI46A1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gZRSaLzUeANPnj6wgSAPw9YlO6A0oWsA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13zXXBaFHkNqRFmNbz9PkREZHS5Vr9YUY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Q5xu8TF1ewsITjm_kkZ_sWT-6AkKjpgo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1soCt7Ei55uRSptyyjkPBh-oXLpVezRZz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1U7a8VmvEx4HGTcdYSbOwR6SAibpaf1b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-UsSWqBvdUpzEhYAGdMHrwvUmXD4BYO1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JXV4bFZWPpWuLWGaV5CWDeqAmwTOE3Uz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xtu8foOc2fbvk9fwEyIZA0XPtkD7Yf-X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XGwrQxtPvk0_d5BDblKIDLfAb9glP2t0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cXpio7I0IpnXthcKxdGnP0v1PRtl1iJ8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wMaeR5dH-b-HBmbrukJT5SuchLrJUiYa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10Vybicq8YofutGyDLxasr1PzR3t9N3x8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JLTBxC3Ocf6Y9HYVi7sderjmSijC6LE3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h3sawKt9357mywCnbeWx0VbfLLPO6esn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xVmz8FYDD3vkW14kbTGf9vzKukVSRW7m/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Season 6",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1BMSURNyjXRT1cniZzIB5TxWJuNbskrXI/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1h2UvxjdcOlIzL2dBslHskbm61lNDMrkW/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1PYndYVP0pc6Qh8YF5ppymhdwcH-a-7xs/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/16eJGKiPfqImT2Omx0aDzBfFp_E2E13mJ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1FJYA0ldCenITLYnwa0DmPJ7-YbxaL7sG/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1t8P0ShUJFyd1-18AG-ap4ltjdYWUY927/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Wqt6PxIhnZHeZc8pdrKe_f9Wc8wVJCI1/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1oDSe3lk3pyH5J9AOc91ajC9FpwFiKccV/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ARH2RuAStgN2SXQZ6RgkCOiQK7-0lFB3/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1gE2W-FNBs5w25nB0zBLGzQQmot140xFe/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/10UyQCHImfow-LWMS0kWge9P10iRi3ZEG/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1N9ipvGEmlJp-g8xG5wYSeIAcTC5QNtry/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1VDEBLaFhOFI6cRqNIiT5G4NqJnbssTec/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1IeFj8lA3Di-Llf-NMvACQgIcUT_bbNJP/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1sSsWJzGcZsGj0GZ8pBc02FMfaopQJV5e/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1g7iOYfgqH456K8Aj8dTz8yBzhvvZR5qm/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1EcRLMvBILEomMF6PyTco7RAb6b6Zhy1Z/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1oyH-SSXz5w5eLnXiqUJTjTDks9J_zdBz/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1DmQd6JTgcR-NN6wllybmGzPXHpmS8_Cl/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1HbIbP-RTdjJfaaytmu4z-Es2rwvmWTPa/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Xr1c-ywePEK88Balj8kRzVDmmRECDzgj/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Ek9Cx_gFa5nUTpFvie5uK3NOePgIgCgn/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1skQ0-kyCy7IrE_ZXe4jwnqVK-fcJoqux/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1QwvUDIFFP8ONgnJTUbO0_RfPVOm9wfiG/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Uwisfa8OLR0h9fLh4lizHDhxh4kl-nz2/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1V-tHJloR4c-iLkcgyLJSMFalxJ7_4ZSO/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1DYCiYthR8f87EXRxZrs3DvjWBEUb7Tdf/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1uBwutPekSdt9zhgnaXK6E2IrdocyQ6Mp/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/19sfjYEOOTjdpFyMqqt2ajKEGA_bWjQwc/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17WgcIYcJUgl17p3TFWouUcJ2msEgxewA/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1xdHY3xvTuRBsmE1eIqbUC6EI3oQjF4sX/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1xeeqWVtGQHek5N5OxstfiehK4HQwnDBf/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/14Oajw0TqFrhoMS8BmAY5KA8Ou49Pu40g/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Ys1OjbtHu9IZll3FWl4q-p6vCgacCT4K/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Ymr4ICSxxTxLUHXHOj548IzVtVxKSAun/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1YN-d4kVbsi5cuQNfplWW4bTgL_aUyT_q/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1tg1mJkls0LpYS38lhGwRS7jEe27nfBKB/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1svGHA6DMRVTTdGuIu6UD5C88Nzvh4vTW/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1-4T2OgbebM6e9bH_0EvFnfa4_U5mk42I/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Wai7iOkPN9dsdCCn1sBCdza6s1IjCJzO/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/19wxZh4O4k_xIO832eE3al5DUJXRTEdMr/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1zgJFxRUY6s8eXtJpWFEEBMYvI8cGbt__/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Dkinqp0fUi2kZFUZeikiov-mqbqlDDXI/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1HktPNBzjKhPM52_3uxuQ1AAnKnZCgJtI/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/13NXFmpRu3-rryAJtlM9Es7XdMV2Uao2x/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1cNLCIPSOqP647pmQkiwuUthAKeictLNx/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1V5nAWH1B-l-HMN3mQXOxsUFZjSbJ8EjO/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 7,
+            title: "Season 7",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1OFuTdNC1vtv_kYdsHkrZMJxDZQRL0QQM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OSbhFH77q_D2tzd9zEVQGERRjZrr_2Ys/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NA7-sUqhu-MACwjGMqSlFlnRRiWONdjp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18N9KCR6xdP7aA_0YVL3YFTEKBY-_nfnZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14DQvKZMdxySYyMQONaaa3bEtrFImzhF6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13cUQHCyJ5Xv8XWTLFr50VbpdVQ3WIutV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w28aBoEJ9iH8p7vpz7xTXaHOjVt5QzCu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k4aMHyj76Gt3t5HW7_x908NNTFcrV4dy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y54pdyKrGEM1Nq0NHfDVq5DbpaON_l0-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Q-R_Sza5Dy8SGMB7MgfuLmzQ-CJcKHc8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PyVKPouSOleWZg9iuM8hkoUDnf1TWoRH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JHwcoOdNtxWHCpMz1dS7tWTwUZqQZnAr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vcIFEre1fe_aIIOvi2NuuQ-bfYEqfQsc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NTTpNHwh9HI2CruvTaYR9_iVJp-JjGBq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1W7_qxwovYGErYiqzdwjQnWXnAOq1C9ds/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fan1WFBknzBaJbJNc8aJ3dqDJ1QwlyGG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TZd-TxIK_9pzoNs8HGHutLmrajOZ3AHp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Yyt_6Wu4r5O8F5tFYnj2Kbd5RijBhIsy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13sKuMjXtrWyz99_CwHGUpPRd23LA1mYZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1m6hV7GsFZLv3_dZNvAoSvaYW0yYdmR6p/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vj8Etr2L1oz7qQMqEpG91_j8yeUEJ4gC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18CHvsBJJanqlDkIGy7ED9qowGkrIvtXR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13_F61gXDH52r41IHyX9iykVMcYlaDbBX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14Wc7lCZt8eUQpqsGrB9kfpCnPxMIVHI6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kYy1qPqPxovuj3vD1uT8xdsFfsF_J91c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pc3f_jmmmLK_qZgUyiF7lKLXD0F6edqJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ftImn8s3pGfsqu5Mxhf5q6ZvAmEiC4-1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1suT2GvQzzF6p2GkH5a6MQAfnsg0z_Xae/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PX_6gn_bAJ5_M2d9OkGlYtqKKAgeYPaa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/122lgNmVEAUKllnHUiDxYmrq7X3cScXX3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tBcavyrCGnOa1idBk9wABhWUcOH-Kt49/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12lPtQsvC3mtv_SR9SblgnZYlImeRKYaG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vMR0QBWzFztoWjm2OLC8Y1IzP_5QD9eR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pWFSZ7l9voLEkKp6KWAdb0KqrpCCRmYd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_PJzS5RuGXB4dRpaR6uwG2Vj5smyU7gs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18muBC-5jiwQMNzaa2ww2sh6ugzeBJWAw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Hb4tm4zE8-0bLVMIu-ELEc0dspqX5LC6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10zxZY6hS03aw7i8d5AOqCNBEXREn5sau/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ebvZikxOiI_y32m8BARwJ5Jn5klKORpl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1o9_roHMstGJGMtXJ4nhBBiPJql3Vm5Bh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Crhud76fNmzWYa2yjpECKJJVtI8UPKh7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1y9dmx_L5smR2GS0AOpCKlJidiraamBLF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "Season 8",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1XDCp3Vp_osXtfHABc01Jqg5He_kB1Juu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11vXukrB8seUuqE2nUmwDGZ_bUm4sd-Hk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mckHvS_kV74beUmt69dqqrSY14zLLcbC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZJXLl1H7ZQDdPCNGmVMfE6Uw_y5BtIQC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/186Z1FBIcKq2P8z19moiqLlICpINN_Opc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TsWA22bouzRsHGIhToxSOK-fJZ3oPdEO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13_i_uSKknfcQ-GXFxnNMKXsoX218yY8x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gb88rDobi_4yOWZUZwdgEp7M4asRFKDp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Bz-BDooJs-ZxRYfFXKIeEHkRSTNFm5iD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1C6TuRkhg_es-8DisDMnuvqC3oNYLNeBI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j7tnWL0pKVITlQRK-z7zRpgZX3g0YEix/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18nQ-ea14ZfV7eT6b9FjoIKjNrYvvow5i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yip0u6qDa6XI6cJosd2ssImghJVKXT0E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G2t9V9MMIaHUWz0gEBrRBBZtNCghd5NF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "Season 9",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1e3pACnuiKgkoLFjQOptka1SY9n2itGGn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15eG3oz5b37wBcgmHKxtrgpM1pQc36-bn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zlfQkMC0Sd7XedXYZMeGOPLTYXUWRFpl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lUfX5hrM0dwevjbhnAYRl6JIrFXdPR7S/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YjEzQg90jponXQ4eQkpbbQVgIQu4TpYQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_AzwFx4SUjWMkveVsdIjViaTDrJVOHlP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SKxoc4yV8smcoy8EiY76rXqDPdyS7xB2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Yq3KS23Q_k1JStKcmYsctsahypL6uk60/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12t-YyTwWg1_rVQeRzMtZKZfwJrK9yRhq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YRpb5yKxm3IITZ98a-_PL1HzhJBflUiD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kMKBTWAAR8fUg3OZcH2_ildX-ODiK04u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tBzz1tJJq7Mhw8y1WJhzofr9sjpVrCYA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13nNIItshbSQQsHvla6yX9fq4DeENom7E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K4rph51srxJbrXNcgQQKE8eanp9BELQ-/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 10,
+            title: "Season 10",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1JYc_LIXg91IBoOg13ms-GyYjFFGrvr1B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YJpn-ZgYZPcojq8RJBUMYMr52xSgZ9SZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FHz9L_kqjtunc4GuesdgTsGIH3uP6mXt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hXDlWB2EmytHpm3w1zfOS38VfyIrmRdF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KJCEFbb7-cHufhj6xh8nlFXuKHWM6Tz0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-EbqYevwrh8heZHsw_gUR9ByZrdv1n3P/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kMaJIEhpgbuVAikNMhZCqWQLJfhFfw_s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HxpTP2ykhHJ9VLc81_Emmi-ulc01ouCK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XYcfQdQmm78HaeDzivzYKSmrR5iBYLPi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dapb2RvW2ZKMvoDO5bBU0SACztZAye4W/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xeIEqSQyv2PqQOxYYJcxJrlNelDSuZ11/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xQgN_-GFp1UC-v4W3IMtE8JJhTIdPcH8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1m8CP99YGFb70ikFtCUrJp4RZzle1CG2r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_8AT2353QJtFh91ywZ_4SHa6TsJ7htOL/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
-        title: "Adventure Time: Fiona and Cake",
+        title: "Adventure Time: Fionna and Cake",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMzE2MTA5YjQtMzU5Ni00MWY5LWJiMTktOWRjZjZkMDVjYjlkXkEyXkFqcGc@._V1_.jpg",
         description: "A spin-off of Adventure Time following the gender-swapped versions of Finn and Jake.",
         year: "2023",
-        link: "https://drive.google.com/drive/folders/1TWYO4e4xYDMVou36cJHASEnJdV4FFkOt"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1XCuLQ8t21NhkMRi_CScSXuyRfCJmcwN_/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1m8MXVPZEzf-wQQBoE4pYG2zuzdNen8a7/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/10WtPektRH-AJ6cqCnHLRjUkUV0ejeBwK/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1RIIP5TBpgt8VAOfkKok8YNhe7fLCdwpT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1KmKuRMUPtjF1F8KefuvKBnnFt3DUMlyT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1VksrCwzs65fretyrqrUoy5T6XgkahSmJ/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1O0fiyztaqa_N5VetPH5G0MU6kS9DuhaD/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Mw9orz7RsDk3QxBTFVBReKLAfFhj0sm_/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1CjIjL4sZ3jv5PbXdy9RWQjuDXWpV-8k3/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/183Fa4L8pvLJemX2_fy6pxaEHDOVLWmLs/view?usp=sharing" }
+            ]
+          }
+        ]
       },
       {
-        title: "Arcane",
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        description: "Set in the universe of League of Legends, it follows the origins of two iconic champions.",
-        year: "2021",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1TKueC2iWAFibt1ih645ZWfQljYODJzs1?usp=drive_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1DteIHGPT-Ef8UfjO8wXG3dJivygYJVM_?usp=drive_link" }
+        title: "Among Us",
+        imageUrl: "https://m.media-amazon.com/images/M/MV5BNTdhZjMyOGItZTVlZS00NTEzLTlkYmYtMDM2MDgwNTYwZDNiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        description: "Members of your crew have been replaced by an alien shapeshifter intent on causing confusion, sabotaging the ship, and killing everyone. Root out the 'Impostor' or fall victim to its murderous designs.",
+        year: "2026",
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1NIEOk7Y0SDk_o6ZQVvBGsagp2CdhikPp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wTKTSkenau_RQ0jqTYvDjL77czsKQ9MG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Emc4RYA4UrNDzQidJM3_FCFxhLmwYiA0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CnC5zv3t8k1L3FDwMwcXT7epVef6fZB3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1losPpzKiyDn9McbAQYpAO8FCLFwdQVQE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bF8FFkeM-_0z4uHUnZMYXHXzLMYC8uGc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w9LCTgo4hvktFRNPz_eL8LZcBJiSU6ez/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19mUqrW898B0XqyjgNXtZ9w9zNT0huvvO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QJl0udFjTh4Ps1Dg6SlSqVofm26E8N5y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14duEu9OgQVJ0y-cjtQKTd6znkYt6cKls/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -61,24 +613,211 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcToIjgRNsaKzQVG3gcmqiQ7S9UHkjKLcp-IrqFIWuDWbAYY61jx",
         description: "The adventures of Otis the Cow and his friends at the farm.",
         year: "2007",
-        link: "https://drive.google.com/open?id=1dMikanXbvPC_rx0BxVYx2y9gw0YlABK7&usp=drive_copy"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1mzF3njb0Heyt1wBZf9ntxr5H0OKbYyfY/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1JSTbCLdq6WtzZju8mO7-V5rjR7C1EiY-/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ld7cM36BlOVzsXvbi-YQxp3_oKeOJ94k/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ODLTsJfw35wburHlfGXiK9RIiRHwla2O/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1nUE8AppQhLyL0TxGXmbFnkTW1bqgFmw0/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1xaVXVf69D6uf9y5c-gpCDrJixCVXLDkE/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1adqNVMCRsm_whaUwTgNS7oNDarX_8ZWO/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1DYc_QC94VsEj-nLPUroREEQd6wdBI9s2/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Au-x29L0SHHBYnpxJ_ZLlZYThaTG2tig/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/19TNyLEVz7_wFtY8a2sozM9gi_z7OnnVN/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/17D8wRrpPSOsPjfA9y5kIQCeEyxgTk2rT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Vgp92D61FHuRZbx4WWR9yAlOlRk7O1-K/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1TCzFtxEr8SNxeIBz7f1t9jL-sw3lPpLm/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1UdR2xgdDpCbrtpX99qMfJWQGk2K4o3tg/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/11Lob4cC1McAKCrmB7k5rjWZrTGbw4ouE/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1Z5py6UpN0SrfCel5Ote0ucYccDP3Wfkc/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1OQ8XuicAVQz7cUUf5LUvzDjH6uwYIi3Y/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1uF0SsqCK69Z6xXu-yS5wr4_WmhblTszY/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1rdM1OnOwG4aAlrsaRHsgwgnCe3-Q9K2D/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1IGGKB3llAke5jcDMFOyJUdVg1TbooUyL/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1R0Jz6BLWf24LCIvh8QfxFUr8cDJbwoL2/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1KSLf9st2RcZF41TgSaXa3X4d7aecd83N/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/11qC4HIHn26Zm2I1iavKqkTeFIvHlxCE4/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1aeYqWhPTRlduiaTMRDQm4e4Jvb2QXt0h/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/174jm-VnhpDt95oslth2M5FGtPFLbGotf/view?usp=sharing" }
+            ]
+          }
+        ]
       },
       {
         title: "Barbie Life in The Dreamhouse",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTg0MDc4MzU4NF5BMl5BanBnXkFtZTgwNjM5MTgyMjE@._V1_.jpg",
         description: "A web series following Barbie and her friends in their dreamhouse.",
         year: "2012",
-        link: "https://drive.google.com/drive/folders/16XksTOld5HoYI8uCgOU8aCHtlAFgERQR?usp=share_link"
+        seasons: [
+          {
+            number: 0,
+            title: "Season 0",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1qyekLd6CKF7fsgixMmTAd0_1ZdvH-3gc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/186HkauP5CEmpwf0hyV_fbGfn9oEWs-PL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MbIbXqiqLY9JaKAdVORrCczZB3L2idgf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UY0hNff259GeLpXOHgaZ_wR6DuvFxdXr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZI0Tr1r30LOArjaiQcgrbn47jKL3sRki/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tNNjExsH3MOXNrwQI0QaMMN1o4nrMF8o/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1NAup4RJYnL9H2zVOzSxpCp9ksoiA06lr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18KgsVvDjJeDiYwii8pnV54oX3ov5KDQg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RdTLfWyjKV7p37zeOT-Zym7mwmHMQg0Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1afuh8vIZ4U4fWo0whysFieVYmrGXkjZi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MHCvPi7kliJorRiclNSjsCyg-bE-hszY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kdGSBYMm0HB_-uM4zky3plCJg7FKy6OI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kKcVdLNJ7sOcU-BqqFTUObnuPIY2L10C/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ImTjiU1gXKxS4MTT2ckLim3x_FHGJebq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gdASIfXlUeG7gzBMOBw3b0MY9wT0cCgP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b3smpq6Y8eVBbdu5K1tiYqQQbnGEu7HE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1suVJcLZVYjG2YOwu4FuvkwUjkx5oUPsC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AVoQk6z23DlRZSoyinOiUhhVelEuw2gz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18c__elRgDqiz5zQ0p3HUTZf80nzCC-CQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aoNr0aspXmnsxDd53zMmvJqr7hRDQX1R/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1AvdPuxTuEjuqE7KS8AssNNUwfQ7tDsHr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j9Vk0NcBVH52YRwjU2NQQdznYwZh9OWG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Nr2sH892SEP5pecNDyYq5Q2v63kM7tAy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VVy6_y-ECYAu05b9g69d5Z1JYK2JrDnC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fzH1ngtOeXhGCw0nyF1o3JrOhwlKmexL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15f1UtMUgpOLKH2b0TGyEtAe4-1vX2aFt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f9xWnextDmtTNm89q7qXDlve8sv0Up4G/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MD8OY055kE1Cw0kiAuEho8tPYf2XAmuL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yFxB4TAoY3cnLs7-2LkogFaPX8wxLmm3/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1JWF_r8oDmOt4apDfUoXXV-C420wJAHcg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10cHFhpySFG2WWlzvP-9i5YvcGVciA-no/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lws94gaiiTLt4Fl0qu8x4Y_sa4-xPXMP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ylgcKXhGdDWSAUryX_Bh5eCx47dcl-h9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Wasd0nEVIInoPqXJxj3c84dV8cRrXiLR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hLUiygyT9Vr1726Q45Wn9rEYdAdxofpa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fTPVIx5zq6FaDb2B3Gz9_jmYER9kJZpq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xomkRNRZ3xT1CcZK6Ogh8EYRoixB9Q4O/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1xeiRORZHLaROHxYMhsPAHuELropXZDCL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P6gP9B384KAU5dwsBPKgjJVgvZx7eVz9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EUlfVQFko2nFpdy_abh3I3PIPWrNUfpi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13bFmBU4W9HHAj_xJ0G-j9MhM9gV0iXWA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xnyqxQFV7evb4s8gKVcsxqEWW-q926CI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1W49VfoGHcPxJxPnwzeMqUBuhWR5BX3FN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-R-FLdWr-_Zh_sFzVqPH6YicReqbcxcF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Frf_egNHw54eR9Rq_6ni6dFeQ_JDPp7A/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YpadKusJRTnhMitlZ1r12-wg8LC_mZeF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1nrtFYd7WCY96_1FZJUtih9gTtvO9S0Q5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KgbP-_OuI1MeoSHZ8aDIupzW8vMyLA2O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_8fmCHH6CuTAPDsVZfaG-ujTV5moNeWd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gYw_lWr6eprLN0z43gIbKQwKJ4X8fymA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BKoN5uqQ252YIi-xlfkEOyWMEdw8KC0Z/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Batman Beyond",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMDExYjNiYTYtZDkwZC00NDcxLTk3YWYtMmIyN2ZlZGYyY2E0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A teenager becomes the new Batman under the tutelage of an elderly Bruce Wayne.",
         year: "1999",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1rrz2S1Rc7wEw4jl-6tuKd3-WRZ6mK0-W?usp=share_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1fvCT82F2qUXkC83CDjMvmSildfD1-Dtr?usp=share_link" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1c9yUs9q822bPBSAFpHi71mjCZnt7wawP?usp=share_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/15ch2gRNZwFwyB1DTx2Ili5brO25y7XWH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M_r_A9tGg_PcxzFr7Nl3749sn9HS32VC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xRqRoWrJW_FNNJhjqeYgCG3DtfuDE1pW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RxCUp5w_0jwWodAykFVgY6R8e7lzxTsR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RSSD1rKYBcZWR4cFsDUL4on48ZYLqxUe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nrtNGsM49HcDW54kEwuIkc3V5mTj56OB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c5LtJDhHkrvqrR5CD6bLbqMznNZ6UYGP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10b3SnxYiypDrDkeurqdGmp851Pn7ASB5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/167jDjabLic96quMuAwTk_O9P7w9jFQ7Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uW6Og--7RkBw0OOhzZIXCSG9Mh-95lZY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ac-H0rSW9nNnNv1by7n9ZS7g-0aAZHv6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w3UcaEe8XicUfIAQ36NrIEqbP56OxCUk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DRo-KG4gLbhXXhvy4-77DmTcG3KRqBUK/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1dxN8iUt1Kcw88xQHmN6zGY0ebhf4OFFR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wwXbReAR_HOb6JW-W-lFfOdvW2KMLfnc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xDp_5drhZMO1AANcTMOkVVWRqZ46EJYj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Bagi_RGLdOpr1H2Pzp_QZHmpJAzVny5g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1URmpcPOLiCXAckvbajbbeosLW3S8fI1T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_XAjkrUX-EUOzl2do0vAcPFWAZYspT8G/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oQpGqU2ppoJHpMLMRdVBMS8lkPd_cTxJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JloeUOnpDHefOcHzRqyTB3_kA6_YPnIn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JUgM3k_Qf66l9CBZwaDEsY_rZ6FM84j9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FEeyFVZyZRQuUvnSlIElQf0aai8dhZZu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DLX0kZu-2-D9Gidn95qlDNCIG4o0zLFf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OrDwZZ32iif_GuP_5FSHLA9ruzq9gnBC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1goVz87E7E3Y_38yU0XXC7LJkAGSUOw6J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k09sgCmSX8H03bmOHu7mWgnlGAXFyNdn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JaZdbr5bxMGWiZ15F3ARHKryT_sA389t/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Wrpw2IQ99GwhMjkn4O6qOuVNoVn3O-1K/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qdExIC7HchbKUlEysMr292_BshPC-sSE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gurXHtRLkJvLBTkoknN5JIz4ffxKX2Wj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cSiBy91HTwSHWUz2PToCEIspYjoH6YEb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1p-jcE2lQJKICx3ta6bO3a0GUCLyK-nv7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gOcZCie_eYdVe--rKH0T2cUK3IuW_YRw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bgP4zUG9xaqwkWxA38jQua3LkwPoYX9Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16txPXEJ3dKLJpKjwTj-aUXlSG6ljPm5H/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ecX5leoGWsUiRJTcvRMiJaYrkbKe-Cmn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LtgmgqC-RmAiTxgTTfj-Io90hBTB8sPT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pYWrwNkz5VmGCGbhvvffCsSb7t6Tz6Uv/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/101H9C5JrRa6GwQdv2Ul9ZdrEuujYu7BR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G_LNBIeuiLjOghBluQ9vHWWZ_Wn4FE9U/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ojjYdEEHt_YgHdtlToRqZddnGwzp7QAS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oS2L8p0SS8x4FQrHishZiL2TBM_0Xm3A/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12OOc_1a9tt4Xm1M8z70pl_yNYMKkQHxR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10028HQ8UtV2I2WvLsBTYjudjpar8xfpc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EH4cJAxiNIUmeSU3wrtlnkUWkw60Br9a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gZUI42pRYWf26lrn5bG3a1qx6pnO47Cr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19CGkZUv74279-iBWEFmsm2fSFQJ1gG6X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iTkMkHb4BtOq3cRPwU_h-6QZAQ553GXx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15xt5waAs_pjRZhxj_eZJ8B2fXj2o-luR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VRqlB3oQFWjMmA6S2DGd-7jGc3VokrUx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/145hOB5FXi2WRmShhcRzPKwapFWxOwCY_/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -86,13 +825,152 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYjgwZWUzMzUtYTFkNi00MzM0LWFkMWUtMDViMjMxNGIxNDUxXkEyXkFqcGc@._V1_.jpg",
         description: "The iconic animated series following the adventures of the Dark Knight.",
         year: "1992",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/12O2UQcS1Xszcb-9kn-s19ruqvk7xnrf8?usp=sharing" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1a04KgdspaWaR2xmlATayoCXIPxWfnkfA?usp=sharing" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1jgzyDn8t28foGqkEugEzz9PPRk-YLKty?usp=drive_link" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1UOb87g133XE5L5GRZ6RRYFPZSvy3SOf1?usp=drive_link" },
-          { part: "Season 5", url: "https://drive.google.com/drive/folders/1B3EpDItVJdqA9XSJV1aq5FFT6mb4yAxB?usp=drive_link" },
-          { part: "Season 6", url: "https://drive.google.com/drive/folders/1blktqO0FTXsh5r4hileTyJ-MO5o7YVS4?usp=drive_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1QrPyVUOH6FsNlZ1xtZCjQho2lA90IPgK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uCpYnWJlk3L6aElvIJm1Sd1k5uqlcZUT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cfqc_5IkDk5ZV82DTPL1hYaUORQJGkju/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uzTuljtpqikCcDB8DH5IbzLcPKAV3rAM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NpHcFTCO3fEtcSGdHxI5mM9tFJa5IHP3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wYjUrANyUA-7KqSwKPM_vLibf42gedTR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bvE2sRcAAtb3EkW4M4hnt2iugyZCvFsy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bDsQjdSqrtWO5iYK2Qphzg5GFF-Fd2Mi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dcmyNp6WUuPR1wONGLhaoFvL8mNtdQyT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aT09HIS0QB1UIiqouff-zkPU9Xx8sXWI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_x72K9LLO6JLhZxtovN7yu7knQGRfE_u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n101Rx-dxoANbn7agVYH4KJ14NPbApx1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KsaJLYq3kFeC7ZSgaFF_ByoBj8DBRcBs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O_xFIvOFnBU4eJ_kzSv2qBSa4b1E7muu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MftFWlTa7KmxD9YJqtJ2DVVSmyHbk-oG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WlBhqnxaHDTSTF_EzOTNejrzjwJbBr5g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ldnUg4ybCn4mcCLubHCdLEMK3LewwBNi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FIXrkIEEE_IG4ugwsZB5eTuEpn6uJtmZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bU3ex2Ve2SUaBEI_C0YciYDQ_MDLp8wK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11456zhkRvVVfIDZANhB03wpVdqREHvsd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17S-66t9Uba3y6bOLrttVeDQsFstxaBJR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VpPAO7V6ZRAofGgZOsgLwmnU0uPj24Kp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KQRTPT706m2EbcNVIzxf04CLWG22GZbf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PDq55IiklDjhUzj3nnoa_-ww3mQ0Il3J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aVEXBznLOrmpi8xkCrjafK3AQYDerRqB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uX7bVyRaMRMgR_-iT1nNiPhZ6GbwKvXv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xd8OMR6NOa-R4tNqSe6NvzyE8kMrZKuQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pao_wpeCwfH-6cbcjcuA7KU_qciGBPL1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vnENrFD8Sj0SloCj1vmW7gfBSPb0qYhx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15Aghlcy7lyThpx0-_oVA7_gkSPuI4uHo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18a1ZSHB8jFdQTqVNIjbOPKVt7UvrP2Rw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qrL0Zg4gyJHNWTtlvbzABLMGS4fetsD-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UNccenqNXDEnYCIDIxWm3trYIgr5yPkW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GWy_gfZYmG8c6WFwtIxPKGTAxDY5YOmj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15ghJ6BfxARzV-ZrXNJKOXXfJ8vqk5q-U/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HSdCvf1RYHQYMeDmQuYmvSJGr1Zs-xiH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1163mIaEx2igkN1NTnDvRJwkQyNlMoBuC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UTcD5u_MrrwBiRvyApBQSSePLtnU4zAn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15BSE_-1T2JkKpHKJigaYZFuvG_Lfb2bA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dZAfglHqET3F_xrF3dcebMQvly7Da-DV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KfI1Xi9_eUbMQw0pIqQgNFRWxqK2EvgX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SJra10_mSEUfMPsDznesKiSsZcgKkR1o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PxlAG8iPslP6ns2wngFXNVJDGzm9sdQe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MGa3i9vmbxoV1ebxnXBD_aTOSv-BMSkD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f1HWa6fyPinOxnmxduk1Bo7W1jM8TRWb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sEeYNeuLs9qz8szsWrjesqJQlRD9kTBW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G1hY6ihthJQj5QNg58aWvHrTW1QBBb2Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qBSmYxsZ2PLSjLgp5aQBuphv5fFQMESD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HHwa0Z8NFHqUv5zi4OfXzuvrr21DeLtK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WTjWxD2jYU6pZigcOPlz-mvOKgwCvGAV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RkFzjH6RnVajRUuBdDOAO1H9fngKvk-r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hLakp8P-4cAzVeegjiMZzgEKWasCe_J6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UIRXXOF_AxXhotIZyCwz6Mcqi303hSK5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17713ZctsUi6ejloopdnXXTJ3qrs-cK5W/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1znK_k_VhKZhdc0dmzAux2DgS9Q07VET0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uS3UNijDad_aIsdXX7xysnO4wubufgqi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19MBhcd3A0RRrS296hzvu1llFGN1j4a98/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w_MnXnHpw-gMFuKAFyikTAWvw9crZy7o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1COFzml3lrfmgGwS3hszgp91XmbFZ58_h/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hid-IssTLee18-g9ZqL7EixMviA5p0A7/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1GTwy_fXM41HMk4cFXnOKK-Wh42dnzTUP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fgE7S_sQ0ncVqUY7XqjF0KtXYMcrUn5x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-qsgTXcjhdizpVmqZorYCI7whkjYbf6V/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kTqnJJu1_S2alv_KqGRG6wlSFNSo-uek/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Vnck3PGvRk4Gw2_WcpvFcPvPQyz0qu1m/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cgzyyD1WxplVvwvkLeY3q6Ay_dReZNtl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lDEDAImJtXlUJ2kCiDyoq3s3Tg8-osVD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UlHj6LbN8ThjbxyhvC7az0Ko5w5QWOQT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17UaEm0kaw-M9e85Jp84ouIR9cOr4YeOG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kmmJrVCfG44U2Ic7o_So5WwHGDrOhn5m/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1wVPm43AOwnf-rxzlLvf6-HUytRwQOFFS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GzWBfnWIgBvO2skIu2nc8aIU_91nRk7k/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Crlr3SFau2WgH-Hl2j9pFXvWmL3AZ7Rq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TnkzYIvZiMVqHOAzrHhH3peWUq76J75x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fIL4Lj-EKQMFysby0nx6IZ2JvWp9uzM8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tkO1G9fgLyICWg_yC11zX0BwYsEYdb81/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wBOd20d22dcQ0MDtCJg5paNRtJkdbs2d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IBeXaJYWPxJkW-4aNGD0OR87WLkIDq_f/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kM9SoA3BPDpY6bAtnQW5txrd-GEpxPa3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hvLgvGfZMEEQ4tF9rTFI-Nrkc6blg5Sr/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1yXn4nUydU8UQ7Zydz9WjpaR3MQOGpyro/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YfdDOWT2Vv9SS5pkwSpMmVQRN1Wyz_L8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-mOyuYzVAeAeQUt3_ADp3NHcUIweyH7N/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IAwMeIn3fLjcReXxvdCx3-4XL3hFaf5z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F2lLAlfK54E0oGLrMUnAbOrg5KoPoyy1/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ZfOk_fXIWUJiNgPqthIeu67hf2zyJCkp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1opN9oAkoNz_9ysGgaJ38tL5XcEZSf4A_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HXmQjkGzIfz2oR_fjmFIcttxr9ZtUZon/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lGMSoAmjGnISUu8w1880u0TJpC8SSWhy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Xx9oiKKiYImdWtYatQStjWN7K6-o7rnR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eTNtf3TpgxvIBFPpNuAetDFdV5hg0RPd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c0NvGiyV8FQInKLluaKelOebHy0a3TkD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dNTLCEYyumomcD0POElFXU07QkcTNWqH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h0h15BpF5wf4nWkI2tE11VFzeWS_7IqY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ds19Jw6BSD9dBC-tvOQYhJ2NUU97B4hP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rauFXDv4fOlEroKP47gIUjChzoj0_liI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18W4395QFRKPQiqdN74zZFeiFzo7PPRK4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KW1n3VOZN39r6ojpMXjW4eLY7uFST7gf/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Season 6",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1FnNcRdHwhFxJPACiGeULswSXPLScAkd0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lv7jZasBKyjpSAf-atVev1BVcxDyXyIt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1S_Wt3yspALxYEfcWM1sdVEFsVhWPFhOQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JPkzxr6bN7XpFCcVfaGlQDcfhYTNBxtn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A3l6WhSX7pJBViHRlaWcaO-bno8hRsGm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Oo8JKB2vd_vXFkMcdn1hOlwhbwnqmCcr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rLB6dH7WmAF2Qqb-1HaworBWyKvL9i0E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17q56ffyKvEOBraEhDzIpFeDt72eOouVo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wwlmZKvoKusIEyFobQGe_bvjp9VxS-yY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10Zi6PlVVI-_Z0_dKY_DAkcX32d2L8OS_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Z9K1jbab89V69TQ6-607iHiR5Qn_N4D-/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -100,38 +978,310 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQI16wrfPl90CnW6jkA-lsp3yWLCyVy0wRVHwfOJ3Xm_-vncMTA",
         description: "MrBeast's massive reality competition series on Prime Video, where 1,000 contestants compete for a record-breaking $5 million grand prize.",
         year: "2024",
-        link: "https://drive.google.com/open?id=1Q8_n0CTVT3eUg_mZe-10NDYnJl9p-9w7&usp=drive_copy"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/13k0hrY18GlLjexsatO5wxX3OBWdGnc-q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12F8AAO9ch8e7gZ4YkhR6b2zF8s3w8ZdY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b0ndni3BuYfZ2STRSRPHYPJaHt7nFo7d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aHHcNHwEAcKZcGm-c2ci7IE5C_8E_BjR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QUA4NJ_6s22SCBy0h-y1vy6mWs2eCpUA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cUscjFZLIGEtQ6XvufR7IuhKVcopWH2w/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18hdYEF78043t1tar5cd1iqNckekVMsdz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gxHpa9ZP_w2M9GltCh8gvQ2m01WDkoIF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19XBUppi9t6F7_X_MPFarypLOpqHAonCW/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Beauty In Black",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/6/6b/Beauty_in_Black_%28TV_series%29.jpg",
         description: "A Tyler Perry series following two women whose lives collide.",
         year: "2024",
-        link: "https://drive.google.com/drive/folders/1F2G8LJaV2rJ2pUlvIeGngHEVV2x8mITp?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1JydFd2RhP4Rq8ZUuvKDB1yfZ7__RsgHr/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ZNImN9ikLQHSfMxXD7f752X4AVk5AY57/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1rBdj2_UJqU__1AZ63S01F6WNMNb8i-wk/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1HuwtBcW5s0jcnalkhXaeTZPUMWSc1Ui8/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1NGZaeHzIZChNcYnpD86jLLqTN8gK6_1k/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/127V6HIF2nSFwg_UlF2un5As8JAA2J2ut/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1WAFuzArP7aPoAcGQfVjQMzVR9naD-vE-/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1oZdEVbMz4yhqq_3tKm8wxeJKb4rSVZxx/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/16Vx5mN-7W5azX2ZlA3pJ5EnIfgZa3dPd/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1SnkyuYZNgn4ENMoboH6DcGdyyGzeGidT/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/13jQHA1jbi5Fv3aqpxmbu0fnGErMNBked/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1ydvhGxeRULRa-7VvVQln68UNmC0yCqsa/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1NUruuvBs4ZM_ArjCPddqbhgJXbC7SKci/view?usp=sharing" },
+              { link: "https://drive.google.com/file/d/1JEt4XiPz0FQnw4RCK4_d3Mi30kHSWZdh/view?usp=sharing" }
+            ]
+          }
+        ]
       },
       {
         title: "Better Call Saul",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR5Hj4TwQxnwom4YvO7aMOeHEXkN2XGB24Tjdp7gcGHhZ1bapDb",
         description: "The trials and tribulations of criminal lawyer Jimmy McGill in the years leading up to his fateful run-in with Walter White and Jesse Pinkman.",
         year: "2015",
-        link: "https://drive.google.com/drive/folders/17RmoOZlDQ_ETrPjI0bwOQBnyGDEDP_Qr?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1Wi6sauDN7TbvtVo_0yP-E_4ELXHNIrQ4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ArrmSKpu35qqlEgnL8ItsqwILgGE_nDu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uRqqOrhn5fPum6WILlI-LHKsoXDxq6MD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a0_JLlR7GjtF_gt-sDv0kQRhDbm3dnBb/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1WZ7rKgacNdryzyVyO9P_lBFBosN6ylWK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CCMaXTHqinHKPWfPsihXMBuN8aToKHtR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uhFOzLKjmZSy3_e9qMHtts9_V5CCGmgu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N4ZJeKDxryMapoA06jABRR826Rm7pUR8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Dc3qmvnSKkDSdPfRJQ4onewcHAvqIMSx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G7H2NF69ouxgfWqD-rYUxFutVUspP--f/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1oKMufLWC8vH1hVoTzdbYgWH_IcbctEwY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HbQTn9nI_0xNbelFuZ4UBnGzWOz_kYK4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NDoTdeNgBvGo8F08KqvXjF4fIjQM-yDB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wsm1cpZ9kgbhHCLaabLCkRTzG2oFqPoy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KF02n8I6FN35OAwRt1Kg_9eRYheptZYH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eG322BGIud4J8oWDeddku3R_9SApl7vR/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1x1OIdiTqy-tlj9nZ4NKywc7CIalxtKJI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lw5ZP1HukZIeelRbpxGctU7FcXwqeocf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Le1BbZZotvCXXkqD6vzRFLU8iGQUFLw2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13t_oRmzsFDMiEVIXvHt9MxHnHAeyTR8g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HpDyWrheYyATyC1VkW-XduyGi8Hv_93e/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16apLJkVFNh5R6t8Glx5BFeRsVTVTRMJK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18ipxfL2YyUJnhAaZvtheh5eYarPIDhEM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wTWaOM4Jc0Zp7vl9uidwIq3Iv7Fc8k7F/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/15ZXLSUYB20n9EPYT8Fq36nojcpA09149/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1g2LnpW6nYOvabdI38-kXH40FrTzWlowv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-zs6OA1qW_5xVnQgRSFgbs0D7y5YC2jK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hjnusLrVXYXq0zxlecpVNDBPz7WzhTbI/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Season 6",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1y7GpKGC4ByuhIRndzyt95TgEQGCuFg5s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tuYd0QQzfewceEhN0-jq-L-EKllTcyi_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rp24KCZ-PtMNGLwWHKhx7UFXZ0kGMeRB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1C7zDIKlnAqFSQDJe911YQeXeTtwCU_Ad/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HoU0JzNux3Dl8_QvFwpBtHCbNu2mUb4d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fJSaDkcP-2IoWv8qbwXGsaLoXy9LXS7Q/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Blues Clues",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS8odUnQOPZRKQVPuHkxLaCSOuJ80A61Sr2n6ZaMUKQJE6l--Fk",
         description: "An educational children's series following Steve and his dog Blue.",
         year: "1996",
-        link: "https://drive.google.com/drive/folders/1vDYQQUT_BEMS779FI2rfC-FnkoUG3g4Y?usp=share_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1jLu-jOSMql2Jh87cyjiF9J7XjA0poRkY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XkGonryRab-q8odPQbIApYX8TQHwHSpm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bsV9lKSMifyrT8IVzNP5idGh9yW5rHEp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nza7v8-jXWS-L6UDELc0I--RhwZh7gBi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IgXAYiEHHHiNHfrQKpqO6MDY93RMpHSE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1geuf1-CUVbttLuX94beAFdlzJA_5yUnz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18Ply9GKnqEt2rXg3trkHG1HTP5u5AuKe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cUfazNZWH_vi1oP2O3URNpID1AH4cLuK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uwy6_sVL6WU4oJODpMLNh7Q9Fh44wstX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1s_ateR0uT2sCyJi8RiXo4MUtRfHTQcAU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HabRK7rTHtUvuZn6wp3osjv0r07xrKFS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jUsZpDID0qwKAs6HbCFE2VnmOhTfz8Ww/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1t2HePdR5exh7VX0YbSX-91e4VBVx2vs3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gMna0eD7AeSJ3bcNGdmILagq2f5sZKXD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GyMHVHXiurwgy12_l3PV22j8E5Bo2R_b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dmb1iHPGB0CS8Ee3UJe791HSR3KmiahM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-ZtfLA1VzGZ-YPEClRyZvXP-BzyDhcK1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sTKEfHYPAh3dzpSmxWEqgKChPAocj0Ez/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QFTuaXE-_rJXqT9mKwX8nEI6avKntmDG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Jx0bM3PkJdK9KQcGbp3DvVTrD3j0mNMZ/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Bluey",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYWU1YmQzMjEtMDNjOS00MGIyLWExY2ItZDAzNmU5NWViMGZmXkEyXkFqcGc@._V1_.jpg",
         description: "An Australian animated series following a Blue Heeler puppy and her family.",
         year: "2018",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1QwcWtD6GwWRa58w0wQjIweHHQJf47BOx?usp=share_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1haRPCouOzgl1HUFzLvEq6txibXJFXSS4?usp=share_link" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1TNnG3i1upD2L4oiSZnjSIb86LUFuRDqj?usp=share_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1S5HgQlSOoISWc7dohq9nqMevikKa4LNo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a2KlTFSCNeDnWZaiqOsCzj2SjxmTBMPz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Zt8mXMnH022ethjSgzWdCq_gaTnkN4t_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G4P4_oNAP7IjuJAjIKwhM2nlGFpzXczh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P6EIaCcSREg_3H7J2QwDtYn9TahTIkTC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xRszdeEcFE6_cWRFnDSYzJPsEHIuzqh6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UxnYo_S3r3exeKskzKr9DUQWpzA9Q82v/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oJKxaq9wtO9jozmcudcILyIfdXlZf_my/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Zf2KvInYcEMEEibzDxXLk06Ywf2TLSIw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ycVXrW4LwGfDU7dr9s5AFyhMT9loXAjh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KANgHpVBQsmjVpwULvNFjWEL34tu8vHO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FaOlvdzarJsZSa1VZj4QQtzRxfSxruv-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VwUkGlCL2qSCcxA_i7JuB8yRjSAtyQgH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1faHjhCIauKK12xBC-DoE1dySgvEmkpPr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xtu9RX4WyM0bpxBsp64OO4E7u_M9pCPn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dBaZ0DoTz5SmDxFczoUZtX4gJ09fTxat/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZIEseAKdv4rilSuWk_bTHlW6AWY4RR4b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1S3JtGgProMe2NoHgj9I5RmIAOd2eZ7ZH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vjvn2RR6vcqtQ_BNiA3E1D_OfY8H7-ZW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sF0uODQbkVGAHyANyWnrYjPEroR-2wur/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yu0kjZIA1oiKBe2Gyjl6fk_SOMHche54/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/143Bmli1gD0MuyLXKzPwQdYaO3EYXLo9f/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Xi2rOAOAHd9TkOroMHWgNGLwRXmrfCga/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jvTOE293vReZSTjpV1ctVdmPt3AANf7N/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LrVYf4xHcM_Fl0LogEHgMJU85UFFtMog/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uu8qigOQF761xYN9WDEK54SH-Bk2Is6W/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14Gvjq_CDNKk2YilZLpjdNKmAeKsP3lCJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-059B4XKL_x7E-2ZJ9NCkK2GKQe4Bh-E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bDX_67Xyu8E0FU7MfPiVLAhK-ENMIU5t/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iVo3JHFDyCOLIlt-V5xND94USE_voFrE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T5pYPhQ5peBICNOLz64e7WDaEJWMnNDe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VZlcksSM4-1nOEtqWiZdb1b4Oems5ldQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MoAicl5Ggd8NCkRQvU28Wf9u6idvQ61u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/131lsqRk6ZKs17ng27jhRlgKKm2TR5HlQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uaPzDuUlL_FTjXkT5obcTzPOrjpocCXd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18npv3p7fB6m5Y3Q4-ADj8D5Znx3V4R81/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JFDmEvG6Dp3WL6oL3xz2kWBUrWRliwlw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lU-EgpLchkYXx2hbnCM1NMKW6KJy3ArY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ik7cDbB-tWb3MBySTVM7gmN-AepHOtgD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EsP7aJTy38tUXzY8BEGERY06NwvvHvjJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HeIDQ_ajtF1l1LXTDeSAV_YsLfWr0R9X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1khCTuA7jpdLOUMs_0sh5LYFxKFKLKvSX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kxykRkXxC4xXuqYcbfqOEIDjeqqYd3Jd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M7qg3_Ze7ZcGo39DCmKlcUnumjfhCVSX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/166KEvkv37pTEqb2P6qh_Ha8XtP7ftsdV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/143FPjSRZKC6CYZ68zgSam8YT6IQi8QTh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1H95_Z8vyVolb9P_5YSdBcb-5n52hrYHc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lzQY-LCQnabaeak0JaVDT29LjPPZ5P1o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1S4uQThcyO4EAzARxuvDSAABxN0wljOUl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_sJYzDL0dR8cljt-5Rn_JYw2cOS6Av0J/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/137-LIQwaJEBE6CuZqDuXpyFRRbj-imja/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KLcD45kfvOMA_N4Q6BGjfUklAaixbZrE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1L5OGFVARPBtJHOXoXA6NwnX8FbPtSX7Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HKyEO72OOxdusMD2dDHI7o9kR6AxpFab/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AS_OL11IoEi3KzcLBglGnLSEqEBuJYgv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tbKJcB2iqwkrOoVtWBV1Ec-v_E5Ch8ta/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18b11SCznypZO9lSj5q-O63N5Dt2fpxEU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16WwAns8exx0ABZ54nkIE818Uc6JwnXHv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14X1pMM6jb5EIrH7UGnO_4yD8YKmshQ_s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wDkrHP-403g6FAlTGc030X8L9_iG-dTr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZDh84PTtT63fYcYED3HIhcZH_db7ENQq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18l87lZ8pmf2sGoTJP5UPeurCuUdMrFs8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uykAhmsyaUnA5W2spkjhGCw77OAUnVkt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18UmzZuCa3jImTN3LmpXk5nDa6AzagYen/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SYh1cTwDUVY8SnbzeuNIowuzjty6nSRs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rpu8dwFKkpSpWS6WPJuEeDniUBwdKIq0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VwdRBDjgK-Jb19m_yIPBlsphSEYbEdBc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12sShTtThAZVvGcP0XVhR5Lx2fDB3e937/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MZZfjAnhtg9t6E54JFeod3IOhU_X2Ref/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YkyG9P5h-9ff1xaDJi9KumA7FzGEUY1I/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dAKtMLEgcrFrbOFnJU8fbJOOfiz9CIVd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K03So_CGdV_xFDd_04Yh-NKpcJqHauxp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hauc58fmBKOCFs4r-LOXU4TCI31Gy2Sh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kOLxe5DKpSPZe4YSUdBth4sCxJqqUZaA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OpwLFkZR6d3-xBdEhFhZZJIJSnhjkCg8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bAzvUFolaAGu3fCB-LlCpEDiv9Lbilvj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1isSpPPjpq-MZaSN0tyhI3JzDJrhwgXB7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wlz-uo611ai4Yq1HNNlAd5rUNk--aGQd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16Yq6Rg1ANg_AG497PfICcbnstm465y7l/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wgI8KmsXoy18IH4CX93iRN-EZ5akKMcA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sPzbyMKBZaIEIUV_Tk0AYb5bdeYEqKhx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d4q46akNFYI9ySwhy_wkLi6JDdiOWEcO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PH2kpl6cqgackV04GWrhBCO2qbqRft-W/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zX1FXlsiL3qk0oXzQURSFOVmFZassMn_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IBrZO6u-IJVGcYTBUFqGzDQZ_4efyWrx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CRjJ6EXefESrjZ_GOhgYfBrYOLGaNTHK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PwSEhL6yyOQmDB29iqKS-p6okljD5fft/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MXWLdPy5KU8SqzpbbLYESZssqnzvfl__/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a6ZLd2Rt5Eks1nSnrMezbW02ql2xX_iC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VxuvLNv8wBvCMxSq-goTbN4UErFARohX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HOEUltVtGYa9zQusHaytC-7WftZB6P19/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vtiB3LoLe4ClO5XU8nuQZkJX-_llO7v2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16Hkndy4yvx1fRIFc6ETzJUPkjZx5ZoQg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e5efy207aZxnWvL9VGwvnY8kpzQBO1VX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OlNKX95iTEDsGvrW9nfkU_cbeycJwQ_s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qoVm1xU038jinaGf5PoLNtrc4BsuTM_c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Pc4NwWcBnRR8puSvYY91l_Ak8P70wbXL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sAfYoh911TzCAIOjD-fJPg4iMs6ltdaP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QAXz0y67rj2mQQWkPoiwPGI368qeWIbn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VEy00M1ZhYo8fS_kfqfZKdi8OAjuEDxp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-4vLnX1ERjCfy5Ak6n6CB-dgvFmfcDDh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tGsgEMwxJmfitDfbL9d7Q2yUvG4EhQRe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-wQlj_Ks8btqYMYolz9VZ-P3JcB6qNb8/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1lt-Qg7X2qwwBGpdbtFWPbpmJnZyNo7jj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zr6aFMcwopGQWALFoltzdqbGeMlwkrZm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TkFWDrZWby5LM2he3DrGq9KQJzatCgwV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hYctJu6XrMU2OHqTMlx55Ffj6N6yVs6X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1o46bbTahrv1Qyyz1ghtNIb8ycv45555h/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1U_1ZYRnxiIcQtTELUlm6XUB2ajBJIxRd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UBr-FB4K6eEP9RTv3YDgj_SUsyCFvVrW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Iy49X7PQIqdawZ-Cor0f-EAg_wjhxkJ3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EvOInE35aHMHK-Qz8TJ4yes9B0-YTOxv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wSMBsLuURdaox8H4zZQ9Gohwa-SdrJ24/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17TBnshIWDYjxiTndJCFTSUS5tRSUftw4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oFFnGowSjiDPHDhDNmgflJ3nhC1FZvaK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WwhV2lJ8tjuh3V6ZjX9AKWCw52FGx9Rh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NEkUalrPQ-zksUKraTUtT_RQ-3-GVahC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/158l_cGVW8IeZ2wbFcaM-SLVm2szS3kYA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bJCjIeTIkPBM7a0tyFBErj1RujjzMiyV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j8GKauJjOpu0h6igo1YzFEM0pbrPr7po/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19WWBpWoV--4ZehCwAvzFInqgVZHbkcaQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16_WXYBjjjpfFNO7K7C5ZXY5ZAuPB_MzK/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -139,183 +1289,2112 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYjFjZTAxZTItYjhjZS00MzNkLTk0NDYtYWMxYTQxNTE3YTQxXkEyXkFqcGc@._V1_.jpg",
         description: "An animated series following two brothers who move from Chicago to the suburbs.",
         year: "2005",
-        link: "https://drive.google.com/drive/folders/1ujarzaX_90FGOiRC15OmXOAgwSbdI_kA"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1On_RXrwThmeeFwJShtcbztMq3d5D_xRt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Z50dNBy0XkmOwftxEJt_PaaBXYaCIzz0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mcOUdHCsI5ayrayun9n1JYl-67JVAQi0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M_buS231xEgcbR8oYVYhRbzMwU7c5QRf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nUPBDyp3zu0jP492Rtqa_2W58CCqq3eS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IrBFktSGWB6F-trmekNWYUJkHFypafTE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tFyqx6IRZRkc5J-2ernod41WwkalZvL_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bJjo1IpHo-o5UtskPUq9dmHbxjKJ3yzs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DZ0VQNkEt3Tw0REB-ClCZCHtvFaLLUJb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BvgILNrzWqemaWajoDd4AXSVpDYjbohW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16EUjf3FQO1_-DWbOrf_io64J_uuRQCk3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N9IExqMRqISFeQUtR26a1uilzlxOL-Mn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j7ZJwE6frFzdwzdMBfly_siheBjOs3Ck/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14aOquerfTQcBUHLnZJJHxlP5jHP-nrrI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hHViqgBA5sLTr1u4sd9M0xv9_paK_jbz/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1bIEenEb9BKCssdR3N4EuOyk2FLYvv3OF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BpC2tnLeQsfgLbJNujWC79y_Y3yBJmMX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1s2IICSmLTo9wduHlHqvmwKVEmYHpyTsi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17Ce0tlri-eaoFwTFUdiZH7aO7O9QOh3X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iTG16-aVLdAa1whxRtDcLWd4xUIgjYO4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ulQh5GyBNQjQc_R3oXzMDACkrnVl0UnV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jg6vThIz1rcFFvUAuS45KbJZknB10URw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1t24x3izdoRfgV9seXMLAuNN4ZU5doZ59/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1W-5YYAYi8kF6hgZXN_j2Qni40g_7Yvci/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NtNV-kFPd_e3eR9G2jbrzo8JjJKeGstw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Miikh40bj1M6VvbxxL5YE5kD4HfV2yuk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w9Zh8xKqbHoOGH2bmXItG4DawcvyhQ6_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cbkBmsybHau9bTSEkYtFET-5D8G1epwI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rdIvZZExTvYuvUHoMZjwAKKPd_6q9RFn/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1_O1xzr62-TKSvUj0bLFLpOhFe5rLWZWN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kL5OsANgbBpZTRKC5sSYYESqxvJFhoD-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fpt_M4N3nJ_qSlO3b_N7NW9YfOUIS57K/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BdumGDf6xx1ncFjRxPEGBiVQa72a0ROi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sEt-1Q1ThiZvKlYi6xMq44oyLHxhNlHQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Erda_8sBtN57eqVHdtYEshZHo0_ufIGt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cZaxZaAG4KLCc2RT73N5IaYojMGL_-A4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1y4Dq2ikcj4DCcQzdNnblvLMi9YG7HD_z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1COILXH4DROwENYtT1PDNAbBOKJqrO8jC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w5eUEmqWCh5MYLHLP8WlW19zSZPJi1xm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kcNLN2I3ewek8-WB4JorjvJmg38kJTnb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1t3ORUrUueASAqLpqcUDqvdqpSruPyQAc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fhglHpdd6K618RZkaVHXQMO068cLgaAe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IiC65cuVBNDsMffSQopgioZC1E8beyEd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1baRaPFq59QVW3mayZtoLeVFgeHi0b7Si/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1UflPTbup0Kp22VY6E8NGxEPALQRmwbRz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_h7FPoqN74tRGOmoS4Rw5zYB8eBS6xS-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13W6iu5x2ju5cO0IvBgjt5lUkKeUw9Ugb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xysiGg3osJ6kIr2568pQ8rBeMuYM9haJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10qyjREZUJarlAPv4ZvXT_EN8mfjRuUuR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KfbZYstc_MmZUVZZVIyhVXHS8jyvd636/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Gyf3KKsfR4aGrIKCV_Iu2CPZiXq43Rim/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1y5PCA_6koFLgoNeS-lmc_JNoZzr1W7s5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10MMIIIoRBT2-HKOOlXHXuHejf2xV3Lsp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Il1Kn9uTt2DTma0hHCa3iRItMGtzd1fx/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Breaking Bad",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
         description: "A high school chemistry teacher turns to a life of crime after being diagnosed with cancer.",
         year: "2008",
-        link: "https://drive.google.com/drive/folders/1IY6qairkXpK2RXE0UVtqwm5ZjeiGYk3N"
-      },
-      {
-        title: "BoJack Horseman",
-        imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQhwYmu9V65--UQSqlyuOCBuBdObRlhvbvRft3w5GDCp5QSmLy6",
-        description: "BoJack Horseman, the washed-up star of the 1990s sitcom 'Horsin' Around,' navigates life in Hollywood with his human sidekick Todd and feline agent Princess Carolyn.",
-        year: "2014",
-        link: "https://drive.google.com/drive/folders/1Tw9CC4dRnCJxrgihyuICqLpkMJO3TjCW?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1xhKCIe3aPSGl4D5hmC19EMlem0sdt1B3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18bpmggl4pFr8N9E7CO2iknYgJ9jqzMrR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZHrDBpWALe74IhSw19AIszNccJiu3Gbz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sDcBI7CM_z6q-Fbm5eB0Af_bkBqXm3Fa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13Hk0gD1UZZmxv15aFyozccUc-4GgP2Cb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XCUPJqMPP0ltLqHwxz-Lc6DiwSgeZPbq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xopTt3t9mStmUemegARtwTiGw-m5nyYv/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1L42vN0BgBHDAlQ0Iu8_ehrFT24icCyam/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ObqCkA6MbA380IPk0PmLYjjhrCtfUjqT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zTjFI4qIVy8zVQrdqTyGdPB1KUgU36KJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11IGKcV9TAZzMkDpN99RE_zPuTcMhKdPf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nuHn4RY-O2U-_yjZJqKng4DelLyyTcSk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RnZMw8XcOs5TAV3KOi0u3oKW2rkcZMo0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1t7xcIkXXZVVDBzTQFeuFs6_S7-yePtcM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aayukMu-67sd_jGG-3rOh1bpdqDx072r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1u4HH-wi0EzLfdyv5JHF8XVa-Gut4Lcas/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qDVnxPuIHHIkO_mSJYqfIL5eM-TFvoQT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TYzieEiPgsbMM1nNb2uk23Aix4PV2bwD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mTPJkfMBVPXqYNpQqlkGd7aOC2jzkSMW/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1MgPQWryQaYTND4OyZId1g1IMJ5mKQolS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MU9LuhWnMIlLa-3ygaY6csKFiSsZsq4_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12-cmC2dLkHnaMujRUBzylFT6tAJEYxfM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dFUxMSVeRDorOg_2qJz-tFvBqyTERP-h/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T_QTvN-7rPCf_slMsS9Cmm0_x23oGJke/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I0bJbDLnBgo_slZkp7Akw_irzzpEK5Lz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12f8T3DE4FzpJTYaS5fIWoZyAsoNgnRn0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tJi93lwM1VojFQQXK8zHGZBOCnww5QEx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w_JKk6JW8TrC0hDi52CzW3QyadjKIFRr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aWmNK-DkoGvkgGGEEwzppdyGSEwfQyMH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1s-PQVS8d5p6APHR5uPUk-waaxYDQ9Ggu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18EZ6BUF0lSL2n91j4z8PJV8KBjcrXfec/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IZ-O_L6AlO6oRtk4ubP3pL_CRqpDsLDu/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1GZZnAj0VlcZXQt4l0lFgV-B64587fkHu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14awMKctWI6olqrZJYsiTJ4m4LIm2SQf2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GEak147eZo45zt67qEhk4qNWkGLUtJNv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CKxQwkMOQ2CeFKrf2a5WSCqIPuyjbGPc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fjs3iXr42ENZPD-3bLSmkWqQ9uEuSSsd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YKPk-nxN-X-67-WR5JQ8fPTg79FJR3Rv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KcWD_CWwhvpUYplSuQbmX5CdiygCyqca/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jEwLRzbiv3H9Xeg_lWTjilMNzET6nMdQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tYjTKnO-CfLtF1v57kfVGntc4xeVEiUg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fof8bXUp1Kt-08_F1H4MJ8mFHEeCC4Xq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1R4grBzvVRubkdSGj9ZZg6D6_UrWiwFKY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13WwX8i7C2e5c1bKM2V2Mr1ZZ1CYSP0By/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nfeOaFWHFfJRAlFqpYpSuZ5z7mPL3u6T/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1sa7XAkbTGp2Mqn9LTWV9d-E0TNF5vQXy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10thO4YarrSa3iMjQb0FaIfdsZr3FAYxQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PUZeNFAZEMBfJHUIXWIcM_6kZ08Y0538/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12j8M8cUWdEgEDlHy4OcJIV5UU4SnbNuS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QKtYsCSWnNWhCfBg44uP7o-0BPvFijSa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QNWPSLojL06gTsTVPZWKVCTQ2-zz2V56/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hRKUXOrfA1uQpcT143bZqn9l8mnNuouH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17X5dKf8gCvCTCtElLo46HJRWhAG9uXBd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lz4kWvdogJFs9EznY1mkpp2xU2qahvN4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Tassh4FLIplk_iYVZRdXCPd_JOD_zFh4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18n-bqmw51_FnflGLqPgnrnoa-9DsoquC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aECIo6JbpqxNy369G_7IKDWWFrX1dV1D/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wiA4wyRy_hmNVNyqV3g0665QtEjKlmiy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M0-7WgyOUS2ezZ_iXNHoYwfolCc5EMim/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ox1zhF4J-yhyTtdDljGUAgne9cPK5Pjb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EhOfs8TLp98GoM580jB_0G5mDMwMTaxv/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Cobra Kai",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYjA3NDkwNzktNjJkYi00ODNhLWFhYzQtYzk5NjU4MDM0OWZmXkEyXkFqcGc@._V1_.jpg",
         description: "A sequel series to The Karate Kid following Johnny Lawrence and Daniel LaRusso.",
         year: "2018",
-        link: "https://drive.google.com/drive/folders/1idzqcZUju0ADDEWnm1D9AC344rIFiGRN?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1lXP4gpmdIOVJVFcpxYik5ECCtnAk7CGy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_OiIuhdmFRPhVvTnUMv3zs5fDk570foK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xJzU4-MTrXGWgNku8xjruZdSS-8niSWc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UwnhKgu3DDKi00d0KYwdfeC-qUmzhzCU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Em-N0_PMVeq3XXOu5ofKBjRSUgRdSZWl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fdlheE4m9IN0VNts4L-EiyRN762lUraz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aFJTnZ16GmaQZ6HqrE06W4chr9rYlDFC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1os0gCu0UQHdKWy4iT-51tC73CFXqCB2Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fT5fpMaiAy0PLVI2mb_2z-IulCdh_guF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jVlb_e5jmIL59fm1fmBa5PQl1fraJNfA/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Common Side Effects",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSILsd87WuzQJ2JtqDis5TLpztED4nUkC57DIfoY8es3oGo71hX",
         description: "Two former high school friends must navigate a world of corporate conspiracy and strange occurrences in this dark comedy series.",
         year: "2025",
-        link: "https://drive.google.com/drive/folders/1FrJJPclMG2BI9q0LK8WIKnGUpofmv9uG"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1H0jGZz4f6fWL1g3r08aZ01NFqI_WT3Od/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fv4ZeR8t7LPa71Ntexq_O5dUJRCBCtJy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GHgaxRlZLqnaRHBCBmPOu1XvWR3Zpgyk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GMs-wrbfjqiDvZ7tAVtbO_aO4BENFB_x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GQard4Syzy8o4IN9779l-LtoUAbhFQQ-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GSVb4bWvoAyNEgvFtENmcVcPx_IkRWwd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ge-LhvaUD4M4H6USIpkXR3OckycuY-77/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GsgfdaI7zw6yMBKuEbAV4sizu56E0x5i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GumgeHs8ctqxrEFG3JZlnWJCpNi12vR8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Gw-tN9UBrvFL-eLNDbhhqoLXHkWAWBCf/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Danny Phantom",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BNjJlNzc4ODktOGVjYS00MTJkLTgzZTYtZGViMDNlNmM2MGE2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A teenager gains ghost powers and protects his town from spectral threats.",
         year: "2004",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1iZZSfbqgfu8YDIP-5g8qp8XQ4al5WrDC?usp=share_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1PEEIDi7H157aYS5y1SPf7m4d1kM786Wn?usp=share_link" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/19EBjseVtK6BcEITdVfvpxG9dbQO6mpFF?usp=share_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1aHJUSzxXypQiwIii1GTF0TT8Jw7wABdB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aJ4ybl21zFnpej5wBEw6d085yg-jTKmA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cFTd8ctCRtR2VN9zOL3uJjitOwFF5x1L/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EYmSDMi6w57SXKWy9yPkt5-8lnQRPHeD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13snby7VCLeVoaO6RRHqbCnzT0mA-Z5se/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tvoAmWeEjs2w-kFYylbdAu_KDMegtlSc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Z4ij9wv18-VafDAOgQ4vev6QswZjBWfp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XitdB-HV3FOUgkCwtGsrdagDX6bhgTws/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lt8ehcK4Rtqy_kVK6L3niL8Xx9fxok7I/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gxFm7Y-nc14Ht_q4_Z1uOrqlwMNAAH8j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SD-NWDj2HdPQIoDUVFnvjJNZ3Kp4o8Sy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SNvqzX3neXxfFmnwMYUaQMLSXRcoOCzJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yF6D9Q5TdWypWbnnqqSCCUDuVWrTXa4Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sB5MUm-X1emDfYoAzn3msHfaDdIhAB5m/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oyui2DdATD_e_8mte9808S68OEM2pHua/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wfiOpxswNvEYC10FjY-zNjjtVlGZVN-c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YVByxZC2TnputQqAYSqAhJvYJxLCGXbK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1g_KMg5EH-NyMAw6aV7rVd37rH064rxPN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dlQ8SEaegEJ_hTgnhBvJPvQCRm1PTP9z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OGaASrXTzYtD_bnPAM79ZjGtQtC_LlDR/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1fhe1wkXMKpO-rjDdEqruCFwK-jvI9ktY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1na95A4ePRkr5YTbv65252LzvxjymHz7L/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lb2t5B9NYjcj7BjCW4DThcVRnO2ARlM1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aiDrse7R5U06ZyrsTYiUp1pxpI4Wj_8v/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pPhPoIed7lBE4K7Z5k0F6GUzeBQdH0OX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UitD-w8GI2fxrgzJN0hwoRVLRq1Jm0fw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10Xw4HuyEDBKN_aHRU-zIB1wAOAYCMeuK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xvgiq7FNYDtn5tvXGqx4xjywc8F8YMpq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nWwb77HmM7GPZZQvgLTxl6ykMuI1gsQO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sXVar-6b69ziMfRpOvCYszS81UXfrXsO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19oN4Lu6Z-eXpxTpGInHVETrgHTKi473w/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14nmcDZJHhYs6AADY03GlWoNQh0biLJk2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Rd2z0MBPHQPD91VC3rv0MkfDPjO-TMUV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ltsQIqxQb9FrSRCkjDCvdNgUKQqFWg_0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1idU98v4JpxaTMTLkrrAbzNogSkJuWtvf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iPOT68U2vFQuBntCfrqXA3doLbN_Z8fH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vzHvlkYObQi6x883bOvLFRucEz6t76nB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RTjLe3dsZj0B524vmDEf9pTIUWz6Ue96/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ZT7EWpkBIvNIaAZGimLx-t3X5EpNMAVF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MZaWTx3InZMr-7FWaY2NNKyUJv9RPnc1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DpjIjKdSOw3QWKHAdd8j-yswjxpn9Utr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ayVBpm-BV7E61XU_v0HlkmdnQNVioj71/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e2atwipxC1eEGqhcO25D30piUVwTQRIj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xVm56AwrNJqPoLlvUu-2gmzLJR1WmEI_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PCnfY1_mfAHSphNImUbCivPpOfL3Qwun/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XYNYNGu3yDnCGvKeMfuqTGylKkhUnRb1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11tfuyKrELrkMuqFBHzgW51cNbs072ReE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f4_WBHgOeWWzX2cTPawlLTc22XdjRZJ_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pFjakKe02TAUw8BJDPdwgKrNarSU-p58/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tI3VRyVqMe3iKPPJ60-4li0HPVoOt4Ao/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
         title: "Donald Duck Shorts",
         imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/donald_duck_vintage.jpg",
-        link: "https://drive.google.com/open?id=1Y_cym13tWj8XgcWYqhz5GgLLChWQ-V7b&usp=drive_copy",
         description: "Classic animated shorts featuring everyone's favorite hot-tempered duck.",
-        year: "1940"
+        year: "1940",
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1_2e-06cxvfGsAqeofHf_mMLCW8nSXBQa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n_MkKloDyvSJXYMTzuEJMyBkvE2IPzDf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15ErmyTv9rMhIukQFbP9FOnq03_FbChOl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uzE5w_xZjUUILyImuriMzHO-sUvObZ2D/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KCdK3mtDPxfFZ12krbGokD35E8hvb24J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fuTAtRoT9OK9LuEaoDRBo_WzG2IAZMy_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a533Ixf8h89mCX5wjgaukkn5VaYhoOub/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n9EdmSVXK7pkiiyDsIClu66rXtOM6xjN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DvoWZuqmM0-cpsHOuog4TFg3lHmdORod/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1un_a7l0XoLPxM7uG3taXyHIv4k0FyPc-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10Frq3DMA83HUqWvaHfWMcHyDvONYxH8v/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qd9CVJkJO9VQ1B_-4MrR-Hcg_NA-Sl9Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aNUqw762RctTtB1qHeXh4scTShoKy525/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UOMdT0n-swXQgKcg8BNYVlEM9AlGvQw7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OP-7748dnUPzUGMd_EvIhvLv7RdoUAUl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PSIhODPsRMJgWfXanEJF2_FvqQyFcTkb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LlgpxFb-I2Yjf0c250n5lj1He1cORis3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1g0YNLL1Jiba_CcyQ55qyAQ6yatm8rOR5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G7p_caQdqK1CKqt_aQF0yysRxFDMu7zC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/126BIK3I2d-S0MmAQ0y45Y4TPLSpHkyCh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bZf4fQLsYCH2qMXJFCv8gnGE8MZK3_eD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yZwtX0Xs0YrwPIhcdVp4ZIPZLnD7klES/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WWqUJlqAg571fzcmKa-HgT8lPEfU9Uz2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1t_oP9PH5V8bSEl9Cyex0F-2bx4SyQLC3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nPawKziTSsc_cIy5Jh27CmSMKi-bKz_t/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GSx16K6_tLgx_yI7w414RgYrE9C9-L4w/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FPOG1wFO-DJyNAM6xJ0gDqQFLPFdS3Is/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vnVpZ80utXvHy8GLr3P860U0S4xKgCY3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Sd0ddRJKnKubm1UvOtXi3MNTErgQVKRw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SIUfZpWcFPHFN9ddfmpdbBXD9jG0c4RO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VHGNqxEE4LEsNgL1VyUntQR6CaQD5wWM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l-m1puOS24qKXYvQMCnydQtwW7qX-R8y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10itVFdABoxEcI-OchUBwYtB5CIeBXYz0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TDsu_hEN5u4ASQO1HybsKY9dOLpO7rbn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A6froYMQpnr7FLDm7o3azqAHOOFosJtZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UjrCQNL4TC4a_BgwQKfnSvR7kZDPbWJm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iVkH1U2VfgQulc_nmAUqAyG0aCUos3zW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1de6s1MRQyr4PwVIyegVdB3GAKDw436yU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SCzjdIPzq3oqtEQnXLgC2P8Do57KTktU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1x3FmtfPSgBqbcXREUeoBhGB_-rJuBQQC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15EMaupr8HKYqemiIRmfR4Ux7JrvtT9Vg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11ZPMbYEUYy94CaQgznfqCU5AG1BhdRd0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FkHZ8is9ZQXry8dPSgaKcX4eifp0kATB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JVSsGXtC7RNsAC-VQJ072_wg2OtofTOm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xfFeCQHP0e1PqUVe1S4Fa6VCMLqiWFQ7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uFibgg296pxs4ikHSeGogm69zIkJwg0x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qFGW3O3JgIXuEOia8dibq9pMzsH32Y4o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kQIeWoE2dXwcI9GNMV6U0kHuXWsvzcWN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Szd2I5lGDpwvnpiNbTcUYfwqL1KPWkMb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lCFUC-3gdkzOWsLP4KnRQveM9-437mVp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HxWsxxCQnxBuXDhlJL9gCHOuPRuBJR0R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-_BkxeZPx3CrUbmnQSNkJukobBXIOJ8v/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1utsUzY9dMMT53b7Ux9isdbusruGzOQ1B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c8aRpf3AbCmdUOEamDpFwBauIJvPk4bn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F6fBr4m5OFzBK-pCpJOmroTc_erDWBpm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VSD51lhkOZvCaCwOjoLOtnvW3x21n19W/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13OcNcaQed0uKuZfY3BG2IiGuQ3cTPWqS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ABeg7mfAVZ5dw4jZSAqU19UIHVnfrP2x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/189pF0Ru-nWPLf4IAhK4ncmc0ytaHHSmP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dx7vu0cytoPWJhvXaXJ_aRvi4v2JSzw2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y-e0wz3JjrxJa_-QhmnNd14gu2q-0cf2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zJnR0xRuJKMTQetjcN2QbHG8CuzwOhXG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fueaGuqbkm2BIBlddRzSjtkPnEOpk2eK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uhqfGo6RIJ6x0nrDSehM0wct9KVFcc9m/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lDTA9ruFZj8fO0hvRWs1vbtDwlB-3yhk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14FmDmQ1hsBwCIhQe_q9iO_catjy0k7uj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UhAvo8l6uzUaYl0mZMS54nel9kIMpfKD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14wasot929vTohy2ku2CGCm2-EFQeGRDr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1V_k_I_kUD5ghhqYLlpd9K5iq0q-PLGwD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UhC8JUfxvOFvGhKZXDQk1WxKihmrwQ3Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hrtF-E_OULs0mOkdroZQrAHviB3G5S-q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mBMC8yj17g7YWEmysju0-cvo3QnlSB6j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HRmRgoM6ja8vq0Fm13GaWJALkRyQ6-Pl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jBOSo3C8h1ZX2Xt2qp9dEBtJK7SkhjhZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vC1Uxp1ZUS5tAXu5CUlJ-RoGRincIR1K/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fwsrov18x1htcrzplp3cKhALK9pYYapH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PAW8GK9hna6-TEy86KvHGlF9qbtM1M3E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1me3sPiWPSqt5ta8aprPIvkrhZe5SRzkR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/134ABKmtwupGuprGD49_LNKgaQa9sf8Rw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17-C7xndPqxdT71cbgzR8Ckuu_4n_dTpO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FYb3jDR6DJ5vwqg3gD_DmSncfQNYpof5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XjoCpEJ54x4D-9n8A6YeOA4vOvqaKrcL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KCsuMCXWitek9AwkReGgCtBel8liOgi-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/157dGfMvzSjXUB95r3b6tPYax5hpWmSyE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l-8ZAD2mOF-a53QsgxC_PLItuLnRNnz_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fw9xqKpYPUK2LJPcBpZL2QHMONi2q9Xc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WkzO1idEiME0eKqALKzqPSbnJCiJg5ZD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vU10MxmROTaiB01g-HAF7mpScjAHU-Xs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18wz2TxEog0BOXDW49_PCf7Ox9pocXnAf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1paXnT1AU86719k68VyZNcyIoPiGeeR8D/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LBnQpmNYGURR3C0YdtzWN0BEIZ2MjoUQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iy9lcq4M4gogB0shwDqXZKN3XwiyP-tx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BaScxCLH3s7r_eWXUGpGdVcTPCl6f3Qz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BS_0V1Wpu5MLtK0e9S45NhkB2W3FdNLN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lR-F9pIg1JnXCHE4ghggULN7eSnH0DSr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1weg5pVICqEo8tgJPGgW6cMetNt72vSa9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RcynVcr24ru781yiQOSg9aHHt5V2FSBw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PIeqIzuNABtvCNUfEUz0kt_tdVWxR0cz/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "DuckTales (1987)",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ2nTlsuiMCZBQ5QjonSwalmZT7cAN2ES_KZo3tJ-W_mrXHvq7",
         description: "Scrooge McDuck and his grandnephews Huey, Dewey, and Louie search for treasure and dodge villains in this animated classic.",
         year: "1987",
-        link: "https://drive.google.com/open?id=1xQAB29NKCEhQP5vuCt4hZAn8cGT_7C_L&usp=drive_copy"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/12lNSQHF4YRxDV6h7Yks8QVB5qqKUDs5e/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PQwj_vF_-jLooUO9Jn999jcaeQ0Tjw-T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N3YPnByKBB2g3MI8Ln-MfcqSHCIQ8Rqv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-E28QTa8RmEvb8IasEJJmvB56cCQnW69/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RjQ3998VtKhJq7ipVnewMHI_75Q-_I6X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jEpRShVVnQiwI7X426AfKvaxY2RoSRwD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gOcQs08_5WVpVceChy61QNc1JlW1gKWK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZEXFDDTx_WVMFlqyQE4u2XLbwQKzNXQA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K2ze0BlVjMCpfIRlIRU7AdXgRD8lP2PC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M7yt3BTAyXegVMLWQfkZNn2F516pbyNw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UFRLfaB0-e_erfiug0Pv2iKqvRXivMTR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uFlfVSriZeLmOOr8kQ58gIchcgyOlgBY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16uU75Phj-pkxyaraLRO3Zz2z5P-8sY8S/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14w5X_CbPs5joGExK4OqLgw5OH6NdrBwQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Im0CXxoLt_i-LYlraCfirQtKjzfCGELj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Vjm23oWFnbxC-_gWzWNFiOUgMYK3SlNg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1779S7haaM6pkYP49LcbYunqeNCiPCfk9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1STXDSL_mAPfiYbH3xbShKnxXP_L6w7Iu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LzNcuWB3gtalR6MmEW6xFFcVvhiUgEbc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ou7KDb5b0q3KfKkJrLsV0kyAlsqsbPHF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17YzbsnoxOXRcTx0o9kihQGRwiVy6UP5b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17yKNgmHg-I8I9zkg_MoD7IzX1rGiF-U8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15KfO7tiwXBDI0RLWjBC4sbVkzRc6PR07/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fIBQesE-1c0rX9moLnENN1UCYEu718ic/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18rh8GJ67B3XkeroWEVKzwMafW9qzofXv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10VWSpxmKLQ9j4ECVIg0_m7jLSwWiPOtP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M0HTBNkSaNua13BlvQTsUzs9xaJwa8NC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ads1IX4J94JoB8CDqrnLBGGWtHyQKt8D/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Q6fzme8a2tT2nOfmgT7jmaDd3xeBjHU3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_lhHBTTcfczvfhZUFur_oMLhQb5UMfcL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k8LaqWSGWZrTAUVixXhMvc42lqRC3Jga/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ury5XkvwtbuaJsBSM9MiUXupYyPUbPk7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18_ynhEhZB1s2sUqhSHDSiAbFYp208gF_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BnlyUJA9QOZZrns7CG9NT1by5OHNBsFs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1asc-mrPS_QgXzcUEulHaiqVooo0AKY2_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ie4B2bcJnKVRCEwjGow_vZhefp_Jtcrw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b7FMUfg-W-X72foRxQzoR_LBv54B2Mue/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yeANyfqjzI2VqKIMIIjYa5bY0McbPmEq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14TrSMW9zbN7XpWMXSmfOwQoaf0_BO7Vl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xcbST-yAOhhiIPQeM1ioGIlBAHb32zG7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18eUz_iEP1XZbl68M66K2M_aN4VLjqICy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Hdfe_K5o-GAgrMJrQbyxhiOb5mbIJOUi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b0L0OtfUALzesFy9pQreZrRGn_XB7L60/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FEcWflfc23MiGBTaIVDrRLzmdviNOv5r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rEMjZk1e-3uZt6ZTepSsl44gzqoFxjF9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_GqzOGFkNY54WtOjYbNPqM-0m6aNEaE5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D1M7PSQ7QYHUS-g59NXtSHF6-pju59Ls/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gIkF91b9LRXP54tqlDuQEby0WCij95eH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19WdXmA4b8B9BaPP2oN87UO_fLXEZb785/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lf_wGjRlSEFPfGw4xJ1AVvcdlYJ4ROWV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pj9mVT1hugxn96bGokwTBX4VN1ZEabuE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-FM5XlgI4_ipcqufo7ddP8uGWruavG-E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19opuZT7xle7CIlig56p4eETxjVZObaGX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w-w8F1UQnJTq0j43vFdCF_NDl67Jhwha/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tzdTR8vA9IrBJ_U0evyZ3VtpU1flORMY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12hBVYXaWOGRTTFyvCSa0rzVf97h7ojq5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16tmae0spPEwUjEfHY4iace4iobC8AU2W/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OtraI1x_Ok7bYyC1tYNpFnTamb_AS4Pu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oK3XVPbk5ceNRh3CVetcl__AmXejE8tk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DWwfw7V2J7ixU9l1FrkISuJoz9aaFRAB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12QOOWkvHQ9T2WQSEVvyjnravzrgvKFpG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18Lxklx5iRP2lqa48hXEY-UPz4dQD4VoM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xCE0TzJpuJhnbQogn-o3scOspgiD7Cln/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j_fyZOwIimA-kJZxQiEQmvFwaf1D7uyi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l-S01mYLtF9lnn2Ki6B_RfxNXFwuHFeu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I7gxka2NvkI4jMj37qjD8j9_n1NP79Zd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1V0SQRsBH8iMnrGXFUc1PrfRsfgiV81J5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yDqDjZCWJoEf2MwSfdhfQgf8tV2w0ZxP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RfkGxm1hWjR5UNX25psqyRxfNxBL6aLg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VSIIS4po4I64HpNfKdLfrYPeZKdA5k5_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16HWEBBpWw55eTgLUQg0x2MCy8ImslSYX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TBSS04Uy-tOynjc9m19VSO6-WtKeabHD/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/13ThN96-DjAmt-U17rYG36AuvKmzJS4X_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1khpp2Z3K9Bo4K6fGDbZcbEf-q9SB0BQt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gGTxNjcVKUhFzZGI9_UBTDD6m5-4HcQf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SXUzRtg-6dON0BawmWbLHpFTa895XfCK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1edglJ-o6LGzb3EYFG4qIukzEC4UDxmR7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y-hlIskcj9F8FUfNBBHlZ6X4bmC6iGiP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ngILjMBhso4pKMPUolQuZCiFE2SlBDlN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/157m6NYMAmqHZwM3MsSjTp6FljMr8dz1B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vbfqU0_tQtV-DeqV_AXA8c8UJoJki6Al/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UXYzGpPdB6834-apMUq0PbGcwURUY1C6/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1DyZw0wPFhsA1h_I2PTv94Z1IAtsFKVIt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17D_6fh6Jbl3DQvD3XL28bdOTFtmUINKU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tgGntCd58fBLm_6xFoVunDpVpG2P3bJ5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zVB4HnSdKfsqsQUzrE39JQ9wXT29CFfa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-IqlSdCsJmHJV2ZzwwsYAkbBO4XXz82t/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MylIbL7G631XZZhLjfRHV4WtNgpNPsA8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-ra7kV6TNvbtnoraWexMTyaoaKni2Xp_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UuBpGtBWFQDCfvpYRzZX_Tz80_7lDYzc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1r9gyB91trP44b9wmxwCSQTJh62OmQemn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WahHxBEsb1kV-tN6-fTb9MjsQj_Fktc7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j5FPoz49Lz3fH9iW1srPBx-r45-U0KVf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vEeLRyU_iZUihTZ1JWRzgieSVYKhcQC8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Mvu8sTreAQ6X1JWXNdx7kwpSIUnSP4B6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LV6fqs6QmXr6gSusTPLZD0tANpfsW62d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/134wRHBNZ6s4YL-Qnf7z6taPeEf_d4tI7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1niqeChx5CKCvaxf4S6pyxqipQH0ZOJ_2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Mp4en3Tt2Jej4j-hVpDAjXwp6fPxyBhx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qz8akbk8wfMyilqRJeXfBL0KPcSJH9L2/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/12Ofm9t4SUCQY8UhezQhzMWoLgFjbQvY8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dcIHDQ8XcU4ektSVU8abAqVCQL7wCmDl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lO4be3xkR4mR9tZ32N5K8cRNt2aHyACY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P0GZdvoYNs5omRjlG68aayJFsu2Tj1a6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11AhGc5hbQQOA5sIQkZm7tYZqh2rLkd5V/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wrLGJQzuijN9dWoqgbjNKu--kMmOFMpy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-i085n-12uqHZaFnOhUQqm-wEcYMwI3t/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "DuckTales (2017)",
         imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjZKQHbUE6ldL5v_JCfIRTnULGiGxmGLD1ziivchc1HIs42D9j",
         description: "A modern reboot of the classic series following the high-flying adventures of Scrooge McDuck and his family.",
         year: "2017",
-        link: "https://drive.google.com/drive/folders/1W8-sitpHylMbdYfhm_wkPIZt4AR0gdLj"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1e6mHHOiT1wU0fYY_3msjr3claQTYKHfj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CABzIib9wUW131h4Vdorl2AfZbHmQ37M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K-2DW71w-EzDU3l7reBasPuYPApFIotu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uqQK12KV1SnA43si-QslVXDBbxhPr-uc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AUo0ZJ_UR2QKTa5MIW_jYw8vG6WCGZdH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jEGetydwh-HOHZ21h4EDrujbAE44p-h8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZlN6BYzFznQpue7MVLLAGOrzrPHW14HQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h-dNizxpOj18k_gO_3WI8Rrh__KwMOm7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17feDZusW8PRGABvf9aVk_mmMlLwXogpk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wptnNBajhSbM1nDdkLHZnXON6a66Ause/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1buE_VwyohnCzHYwjyMo0DXiL-aWqzmD-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PjjTfQAgf_RsRMR9pi22sfROGKlZmOQI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kM6keE6yl2Uv-_M66Y_9tKwTCwt7VzQJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uPFt0Dlof4TpUlFJ-8HLe4_bDyLDNo0e/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NFMnvJPmiNrPpD8vGL6UZhJA1af9Bqb8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bJqpunn0EWjZNhQtaLnB2ZMiLspe4k6J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ulzJHwqWoq26M-EZGFmGhaiH_EMd7AwZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RlIQjfW1PGwhCaCC75rnv_jUTCzQl8LH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KA-OEDzs727lodSbI95IN-B1FwWTzHLt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OC03Ax3OPE4wwM6MikYTd2SmxsYyq-wQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qXljicQJ6PKDcfN5EjZNPdKh6Z9IHon9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_nRTpAbb7byscChlQ-CoTJ514-sdwzHt/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1dwR638uR74Fj8a_ZAhccLOiDpIpNZIIW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aO-97kKMDh2UJReb9yQwjUGLpZo3DWz8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UwpBSLjtU9zhjijztG64M37ZQnvFR9nJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oUWA7XVdVnR7eEL8gwkPgpkHVlGcg3Js/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nodS4FEIMZUuRT4x-Z0vKYsIWaFhx1sv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K_ccYSYlgiFOcM0qk_zTO6ImqQs1j6Sj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/179CPC3BQX7frfJJ6PTSZZzn-YOl0RD2x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZGMvUDhdzCs9Ze4H5-MhVyIgAGMGFKiM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xajr7amrD5X7i_UMlYjykg9lzvWfth1R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kYyNQmCZyvtexsTinha8FCtdBQ2ah5GR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ITECtFElAk-4Yboh2NvtuqTuJTkDJeGO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TnJDW4awgE4BBgca4cuERgK9mKPbC0dt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yqdI0m8rd8sNiLR32RnA6-ig7K1LBnCg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1r657UgJ3qfcZqW39Ze6dEoFcQKDUhNQ6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NtD8HEnYHcfpvwterQLu-hslLec8uqFs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Q7fR793JVLwW2jexrpaEMuDtMFYa4wTv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ClEhFezWmahzGJdig79FBCIj2s0QzDFw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T0xH2RnSAnpHyK-dk8ei6yKg7wvb1GTU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fMWUrgM10pFRnGDqAxCwovMDsn-nK33F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QLO_OGbkdVRRpW2z0VH_QHZEc3KZOmd7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SQy97TCTk42a47r_2gKwMYOM8NsVd8ow/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JSAdUgJ_xF3OzPjK0SCtEbkPVEeGdG5e/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MDzfATh9PQ8mTL0Ypgsa8pg_jND-3Nje/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CriIXr-562P2ajP0TgaUiZH7MSpAWgUt/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1joT8W_NSNR-iggaI3kI-2l-ivQWV5jYb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eutGK6NIvPuVIkFV1smDTfxNakhjjOW5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MWxySHE3PERwSMmvPUuFjbGq9qEXGtta/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MNz6aeS_8xo-uRG0lgwYz3McG-_F34Ob/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wq-Wx2ECQ8OgRUR0eRLLEM51rBQFXlFD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MqJzzPDKMRnsGKwB2x5VzxWbtIA1T-RN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A9bj1NqB8hPpqK9WiXslemm3qd18KNAT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ejX7pDlnPPd31oEqby7XZNdlsvoh12hg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j9JBYPupASrwPj37YbZrNCLbpLaxzQhS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14LslVWB1Z209yVEcpZi4wDhZHJWNtTL3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/128X5Blq37Ly2pfmaTNSn4VdxpTaKunvZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RAbMkzRqrvdEvwyrrynQEg42BRRaxp3S/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YuFftHaQaRFnpbnpWwZfGtxEqvuV129u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DDbqLgeg3JoIOuoHqh6blp7AtqPbloyz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15-AiEZKXTqZgNGf1-EkddQcdMq64xrME/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12Bx1eBj3EYJH7_5sq1ZEWd5iFPEmDuhb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_MWfrxgAAUluDho3yocF-bkPC-rZXtaB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QGrgdwzK3oKNf5t60JhDYJFMn8QgixF1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T9tUwRhGaxCjsSiEnUJ0dKVsgkaCBWOW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vUJZSfOOabqfHIvHqhC0UqRHoxUfbV3R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19KZVUUytctNhQgrjA2NcVUIDY5c0UXoG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Cy1UOH_9A0LoWPlx1VGU1Dmrw8X5ZGSj/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Everybody Hates Chris",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BM2U1M2QxZDYtMzgyYS00OWQ5LWIyNGUtMmQ1MGQ2NTU2NzNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A sitcom based on the childhood of comedian Chris Rock.",
         year: "2005",
-        link: "https://drive.google.com/drive/folders/1RUZj9WQzdEBYYLeKhD_Y9GRcZbNZMSEy?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1Bbkfbc-eCbjsrG0uZTcQTWyOPTdh18Xh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f77LQPCFMvpUhDzdeL8jxPuLnLssG6Rq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wGhWg9SorzAQlZEJsrPyhjGrvvqTDbVY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KHP_GmskhVqdjlrHkxdSMJZuw2jU4Io6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TKGAispkF0C7ot0UhmnlhC0OGZ35qSrk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xkjsj_XTjXiWVubJZxhxx2dd0TCIBzM8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OVhnqcNn8Pu2YM1J2e89r9ji-DtOuodm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13PIL65WU_El7GyfzMcT_1I-iBUu08ZTd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12ZMK6_O_ItiqOApPC5KCAuk-3Wveks2a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18agPKf8c3YelClr4mDHacrvFSwOgphL6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jxBd_Qkzl58NqBoXPP92oOsfB_IK8wb4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pHYw1pbZVu8ud7uiv82dP0X0egsvvusx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hCLwrH23vQWjGNfT9UtETwWujV7Cumm1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AmTngPOK_e4Jo8f6r7GDS8wRcIe_Wr0s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19PjDhiuvHaBZR3a594lF0YsHXnxNZ1O7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dn4Hour0XSXm5nLCRUDPtQYfCT3dv9fL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bAkMjHaspeim_-bzcQgBMqA6atMBN8T6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13sRnVSIjh1O6FR_1325fYCnvtUi0ivWn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lUCz8BdQaSsZ5UZtVHD10-Ykvkmvzfnl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17Dd1TwIFif3Srkbzgm_93em2WCxSQ7oO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BIzujUeOkaqprQu3LnYWacosPmER4N07/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZM2BYLmkjvvwxAqCBwz68ZabwjtJMvjP/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1CVn96mA7Cvp61g9cLlZyeE9UITR9EzxM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15lGPlAn5C5xxYdmLxYKttiD6MpU_EOxd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bDoanMPW9SN-KIBXe87E16CJm6w-a1vs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jjhmdxFac9iDfONPNcRcEt0itweNrBuN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mZWDWdNdStyGMDaL8R9mIooX8jxueJdY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qFWzwaG5Lz8EPmYHHVYkOcyZpOP4VhPu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1J7tiN1Jr_TvCf-t2em5hI9_3VBdJkp7R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IYsCs49K59JFCKgVvvBnfCFY7UmoJc-F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13b2v4TYLWSpmxV3sFvtS4jQ4RcqP8tOF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19NG_F1Z7rv5EzueQqs7CyFD5L6eKJl4v/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13gHVraNn_MiStUWyhkvUq8rEICGNmT0r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1y6mo2PHvMgNeibTvHkXsHo5A0Xng94_w/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gvahvlrYcFdAZjhLDteBb4zGMi3v1smL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BXWY2PA9192_0AhDAqHQ-kqqtUM4Ohh4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gxpf4odRwr-uhscB-RJKX6IOIMDuuTe8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10GWjSMEnupwLMvEQJxE3_Xjkjrf5uTDE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15jtK4FNCmMB0vmxSYE-OplvPovlm9O78/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Rd1CpyglVKLu4j2bjNOcsFc6Ut8gsXxI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bGep12ekPw-CzO3TnEH0y7NAF7MzmQvq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12uCXCC0GqbD-Msu0lYm5KHLoBMLt51XS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18BPckrcWw6oc0slgvQ9U0pnT2jHawr98/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16WXPh7iPl_-AQByAl8zKti1ovlvclMzL/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1kfcQbTcwj9CQys3RwdwhFvKNyMy0inWr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pDqb2IHRF9zhfuwEgc8chsPCIJxw1hvI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1W7qpIH9X-F8EDILayW3vspJ7Ev-kWfmB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16iJ2H9xwNGt3Wl0m7wZu-fgvgYxhBnRZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AbnkMMN9SViT990H-5lq2V8FI8v7q5Wc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l1lv_iNzwcyZBiK-XbbZayb_Z4R2I8gR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mGqTw7FsQsm7REc-B94WzNRoHpX3eATI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rLk6h7HFlqXg8jKg-mBWcrT0hPBikXGl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZVpvyPi_7uy092cn3MEbLlNfQWD3YCMs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZWKRrWXDjEpdU4SgM03GM9295AUgbDyN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13rd1YdR8ArBlT8O0K3TQTRjg9muT9Zxc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X5tnKOgmSH83rxg9rLf9AoWNwPHO9pdm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10Vhz5tU7uV38QEIv5YVom4dT8CUNviub/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12GJ4UptUhb4CFrcT4WXitpY_96GthuK-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12XoYo4tcY_EKFsDmSaENkLVSvOWpg2I6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Hw8GBl0Qtb-kl4H-NjG8P9Uuy2uZI74K/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UpCpG_3cqUo7lj0Ey6dQiXc41a71uuq8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A9-bziaXrV_cqz3ys6R1XWQopY-Hswxj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IpsqQzCu1SvEDpCMw3-V9qEQh9APwjL_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TgeAaLdGYFAgPmjNJEWcjBFQ4ynvHlXj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12eORNRgxKdDKnM09r4YVYSU46YACq6lX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I239yFIo9gx7Mqz6X-bByxcsmAqwVcOc/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1CSDllnkQfR9E9qZaE1L4cob3JIMadlHe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Rm7wQC1Z-_2tWMn3AjnVAaAIEpvDsJSD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dQWHFtmxff61VnGlpnWp2DkTkcIG046O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bGIC3fzXaJJTPBYLu4bmorS0GbheKarg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dXD8dqJAicDBeF31fRXpvWTjovkflkhz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CNtyE0F5ElOj7vqdQRkSbD-SYAsbzqM4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nkLInSnziIiJOX8eIMfeNzbZwOowDfkV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rVF6p88c-yhVI6X5XVEw6too8ST2USAN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GGCflqZIiyDErTvXksP-2HV_-day_bKb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BOsgfna5xwC6WflmDrmnAbRK3dyw6Uh_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nctdfriYzoih5zXP0x4gT9wf28Ar6tzv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MoQaiHwcQe0eaqvKYzRIAAeiYxhCICXr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XeNPmeGFMVIL8nd80uFitZRf2AfWFheS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rwj_WfZ2-68g77nBeuAIIwQhVJnz5VV_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qrVeIP4VjjY-MiLkvIeiLMAChaIKciO-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X2-W_QmTthOdqtn_PiTMgR6YVUk8ssyi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xkFYflD6NkxvqpBAfYriPcDHk1JJVBYn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1s3DmvjFktu5ngX-mbEQhSqUZgyoyh436/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EP9gbLNwEHphS9dZaiqlOC4h0xjLCZZq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xlxlzdnRs9QaSitTZfDnlCjrOHF_nYnM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bCgBPzkIywgJM8O2TR091ZUInMTTKS_Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N7ar6aU0_Jo296fZr5wj3sDrEuj_lJHS/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Euphoria",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZjVlN2M2N2MtOWViZC00MzIxLTlhZWEtMTIwNDIwMzE3ZWJiXkEyXkFqcGc@._V1_.jpg",
         description: "A drama series following a group of high school students navigating love and trauma.",
         year: "2019",
-        link: "https://drive.google.com/drive/folders/1BVkiWaMVA1mZ1J2bJcnE3_ywvNFg1IKP"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1fJ8QAWpKY3mY9I7QBB6LTVUx0g-KV-ee/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BfKBHanfqR0EiErVDg1FYL2uesshj2HD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WFVFBtsZEsaAvRFF1LJ7m3V43A-S7MJI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10SoSVBApNk5DFcdxvvXck9XADSIRQYXa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nQgve1RMniOch7tski62gPlOV54xc2W3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZZ5MYCsZ-6fV8vq7Ue-EpsNp-mxKte4Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PXHeONp57JVsMmAcNHLj0SjYVFPjfYcD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Dto4VaQC0xcCvhn6KQWyUM-kpCyVKzVx/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1Ip0744tT6B_MylcsTiBsurFGPQIGX39c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T-1nuYUkSQcz8ZSeiMyY6tETCNaAKXXN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OIZ42lzhiQOGAG0tSWT4yf5zPhERM385/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1133MYGrRQsh2iZHtmfgO2hjTKlhgeOSs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_qHiZkwaPj_Oozxe97id7NK1MVNNvmtI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JXgNx41Zbgp-piO2bLe3cuJ38E4Q9daT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Aq0HeoWaxzNjGslY5NgBBQDTv52VwUEQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Qd3hWcvAoiMiBK51DNPAbcNh6ZvYKPr5/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Family Guy",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BNTZlMGQ1YjEtMzVlNC00ZmMxLTk0MzgtZjdkYTU1NmUxNTQ0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated sitcom following the dysfunctional Griffin family.",
         year: "1999",
-        link: "https://drive.google.com/drive/folders/11W6C-Jqv9iQVasqjfiaYz77puax1UTjH?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1MlW9gQUj2awccOkyN5hWsAyHQotqtprs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rbEEaViuyaHurRqVTKl6Fi44zWpRCdD2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ugonO8JfU5g5riLKS6LniLQ7z9XKmow_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13yOXNF6vgYigu0ota8lUQWx9B7KhW27L/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nwkGqoPh7xIkegq6l2g7CtWbFN-dzlmt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17NCz9nawhjEzZZWQy1BPUAT6oGH-9HbQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kxQK0K3Vxfs3YET3RQL5CB2IML_5R2FP/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1Z73zMcFUfUHgG6ty5MINjTvc3434wLFE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P91QL53YdAMty4j-5FPRTXDk7M1DqxG4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1g1-F6AgjDAmgUqLjulhVIh6fIqPa57iS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BbWjU30OoFrau2hIFVXJ-cm6Kmcqiq9J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10xQ9IbYoEmpPZ0M8krCDZmyWvi1qsgbi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SUcDnyvsYR3ecK8rIDwg58m_uTtzcmE5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JUHW30UZpMHiTlRphPVHOH9BIA8nSj42/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AOjByRsMAwZJlbUNiVD6dIMEb--ks7R8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tNyaJ7OuzSXQ32nsU5mNrmrlhHEOW6PK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ao2wOxXZTW8ZtsX5Y30OEnsD4mKsqHEm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13sE3D-8OIfSeybGqc1fdT_fh7a0O-NzK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11l34i2CHVk_lsEfYlQw1ca0luRZXx6lh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/105HvwNamsu4b33w00RMw2XzEbZS28LuU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Cm2yjjyeavOUVgfVYXtG9NRF-UJJLibN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1z8AWlYG9ZGW72XSAE8g0GYRs6KrI-LQQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vyDVnJ8hhriAxJytUAPhtmdIDihn9P5l/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1v3EllI_QDLJMAxXq3PxiDdgrVJcbPWzt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PT8rVEI88sC1PCLdfiyzL7FTfsTsgBaB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Qw8c5E6QRiauXcZMbivB270eCJG-9DWF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16td0Z3Cwfc3bHP5qhAT7iAQwC380xy8y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O3FdgTd4CHIPtAIbei4kJJQh5LKXC1a4/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1IC88Squ5hT0IMHA8yxii41oWA_XVnNKd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tl0Nv65tkcPkPjFZYKpi0L7DT0uLFwpZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18OuTzy6Ix0-Lyp4EExjApyAJ1uFFbPR-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T0FUQzw52j3mJ32Im6ROtTz5FxRimWQO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RzdYyGurTxlymr4qf-jcuUMzxzldDDLr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XaC8sHyQ_8o9MncogsF57rEePO4urN27/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ecqofpPhmvFHVLHeQrH-kpS3tCp_ZgsN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aRlt8huFZhCvlbAwVcjCya7DO1AA10Bc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IC25hEF_9QflC4JhdYaRSLLyDzfxYVRe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NJhCohUC9LgGC_vi1AHsVU9x9hgHbL5k/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_EjUJO4FzooOqFr4iciTm53bdvewtjnz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Hxthsmqk02IWBtirf7nRtGeMRFGilcnZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dCUrCJXaLOs8U_HGewFr6TxHaCUjxR6s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16RxaInnszUqAKdBrH9kd_rJaoAb4MILk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uOCzNyvejGerxkAv-KvB9nWcRhXa2Dit/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fq4cg-IOIpAkSMrK3zXU2MsQMjhr3hxg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bVuyVjZY5vh7diw4BmRGomJE7fhI7R57/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1o43FpCOrItVsd8Y2mCNcdMYYDjNytz-f/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P6pl7iyVorQ9VpbYYBOXefrUJvKUZ6ms/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1i_JlE-i4Hl4lX9Qer9VYkKTA7suf2bq3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VyyyoCItBjBCLt8QA1xAVtmr47O8JnjY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1noMRvD2zOvv9rtbMab1uj9DCMSNS6BL4/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1jOH8fqWQyYxmlLG0F7mI80oJSicqDLyk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NSKSYNfR19C120Q_vXwxAJf3x-qEvIPr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Q2L_28XGKxwDx_-cB6dlN_Q4vcVo8rRh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Gwb1EYYVbOP4ofwA2dQXJwd6u_CTkWzK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17RqbTp8H0LoMapLQWg5WYG7GG1-WlNGw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GY5KpFh7UY8KluYQv8GcOyMHTcAaA3Oe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WfolcQ-kSJupUEnzgDb1T0cXcWVlHp_R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1V6rH-OGEN9Z6XmzMYm4K_5zw50R_cXaD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ckH1EKBOumtFYGryQfnFjPZQLK8NjFn5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17rULI0TOR2PNA9rWciDNDFGhhsoBFjV1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yKOf1ARn-36ZN9SarYALDV6_TBaCLS11/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_V5ETFMK6Y427osDx8i-DkpfIYfdBDPV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wOOzEXYOBHrcr9ykx7MKHc7KtbgX-_a-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FKYolnvHb6fQ3wnp6qoE6odS1_GGooLq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oOx0OG9_IE4vZt2sHpEtm6CjuJ34G6OG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n177bi8ZhQ_kLhThhrET40LpY6eNwYVk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CIdnmSmovhV8h9iVjy_yo-XSjRhkUGVP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Tp56be9wivB5Zlgi9fIH5fCmD8MetsqG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Paqb1-90pZyO5YsNpyh8djMitTxi2aVn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18QBdkzbtCROkntEfsym0OlqKB9F7avSl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oRXk85wKAz1Y7ZcpgQPXuCg8X-2WRyU0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1r527-mdBhk0bIwu2i0-CWcqWsl9qOGcA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16XztB9-hYhgUGro0C3UGyqOkHvaz-nr2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17PPT4-KPj499LpmP_UGJy60J6Daa7jAC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_E2ASeh5j6rG1mv1Fh71U3ceODhx1ygA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GQR86rX0FQmMvKUh5sQksrltUEbI70PW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kRkHRAM2DN0cst9-FS-qlHUHNnrSDbVE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qQcEM0E3QmnmWEouRrrAWHqEo6U7HI8m/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/15e0hazZO7jbN--WIxdb8nctuw-Z8pf1w/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BdCEufHnpgjaqSfqcYKEqsbzVnyKjQh1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1deF9QK-9kAVRZsokwobCzjvrhB3-RLiz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14OQBfGTTgQ-E5js1LxR_rfi0XGLBwLM0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1stbKzXLaGpooerov4ythioB2wA6SFq7t/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PydLHWRlE-ajlQknlPq6PzUI3Z5DpTPb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DKMZi4saOndLTpXQnibyULvRTAw0Xxqh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/180_bIaRRteck6_iCnMQ6UGn8JEDZXVVR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16La6x_z0Zipt23tiO6kNjR8-ElsSRbAS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HLBWujGAMQtCTTidV5GrV8f1-8QVFWF9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IRt8tJGR6KZz8pdId4OOPNmsm98nfs57/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kXPdpsEBAuliq1cxxoIvKWYbcO0T3jik/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NOwmUDtv81lJl_PHN3bIR3kkAnTTKckO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15OcdFZrCNp0k_NdJLa876JEdVFMLyOhJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ySx2987av6okSIY2xM_L9uhSAedH_LXv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CbnYlcxin41sDzcNVJRpxZFCs4LcLDvI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CGixAwNOIkE5WDsu8PI89nCJnVLCokrQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18zxUSkMfRi8gyGxwhkm3Qp_fYbKACRff/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Season 6",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1bbAbQAtmlooCb4xtqjMTYGU7XrJzG5Yy/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1MVX4EUwf1KUiQTWaY3ilvo2-9i4sMQom/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1dElIOtUGdTyDLTBHL1JfwM9cV7uwHKDC/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1yZvEq68FScPMaAwsaenOyq-D6K54ilTr/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1MSXalrCmhZZbH0-CPdawahcCrty1Z8hU/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1HO03tspHV5eV1FoZnfE7qyRHx2J2q3ek/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1YtNp3SbZq57vyY5Zko9wY8_ofMIqoOkh/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1lT9U_THI6cmP3NgtVmmtLdlEUZssm1xw/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1iwIalbQ61-ccybOrdbOaiPozUdjMsoKX/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1-7t4RoNlrnFkbSnBHlkzSqbknlWtek9l/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/12Rxz7K_kdUcyAmPJNxSi4IhmE4ixxkcS/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/1aZ4Jvix1IA5bpzmu-X6pPvehKY4laxZk/view?usp=drive_link=" },
+              { link: "https://drive.google.com/file/d/14srueWfE07Po4l5cS5KspPEUs7uGkd14/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 7,
+            title: "Season 7",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1pedJ23O5puGoPyia4ZOTAjSLguy5qxGi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tvV6SZRU6yIWFQGQGlfGIeLivGChTmXu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-F18Ls7sPcQ2hiGgWURUAZpW0WaZTzpK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12X6hAg-iOI-Hd0SHU2JBwqaNBKXOSJx0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LRpNjcTdkvzgRZNJoCnihgDFcjB8hQNm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MtyqxFDTxmEX546Kcco_7xmVUSI-bNS2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aAjPh_H2pRaZ7qj3YnzdqmCvLrA15E67/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jaEVBnwV52aZNgN2mFOLXIZ5IDUHZ-L1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HtghXQfMpZDvGgsDS69rWOn2xBdLXfDS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BwJrD3q49NWcAcwvd5WY1MOc7bO0ev9J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1W4MbDH_HYZ8UzCRQx_WJxH3OBZrb7VuD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hBrea_MFZbXk2E96Z3X2442HmBWD6eEG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sgVFKyIQyU8njODb0UkDx8NUcU7Mz4eV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y7_uyDMJ3g5M5yt5yZPreKFCFkmwoLlz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zAXveSp1QSL9IO_5oMMDtlIgzGPYJ0zX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pZYLCvwp8OdLlRolp4CiBWYU2rDPFQyZ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "Season 8",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1f3svLm2QuqNaQ9sFrZ07huD5QojC0d8i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Balt5Fi3Sv8Ru4wn90HzKs6gAn67__xH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TJtmprHu_3WUsrjsO3cjzdhDeSEeekOZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18vZM5TawlN5b6Ft1X18j-ptC-ZX_ik_9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Im9K10JqnEd6tQuHx93qtcIK9qa1rS2o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dsivcof82GSSPiRjR_WRyYZ9fQDCsdsg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I_kXrqsaMw5jA0HEhiUpH790TS5hmuT2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iSOZTWn57ury4PwAJBr63UXzMr31djRh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13DYEhUHEskrG1XXmxgZNG2R8WuIchxTK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uAbM65ALKHovjEEcVzDfVbwkKHqRtjId/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VfmmX_erEt7JokF-Fi2T1A3cBz0p5mam/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c1b9vlVXQjefqZjv1XDE2nwQRlvS95oQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sb2bEuJIvqS3Bgorw32dyqH9DCQg5JK4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Am4DhXTiMu4hABq2gDihHu9EdBEYOn__/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Xs-ksUGd38rYpc8sxlhuRU_GYAatGUjF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11I1MTpsy11DUZSzN_gWv948i0nLmGJwg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sd9fW5V-V948r2T9xrbKIciR9Oc2qAze/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1atnHNJWQ6Z3YKlHrbAB9IKkY4kbWfBk9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kJdMt2gNUeb4vWuBN0ivZhdAcaO1MQaS/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "Season 9",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1Phn120KAHA4z_V6eqc_s3ic4fxGFSryS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1R5IZUCRxciDRra4AbYY1V_PGmc0-0sMS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e_7_Lj595TpGwKXUt7uQ5ob-Gx-j9bXs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1csyktXjYwIcu52bVc1LI7Lq_WLRDNg3A/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VWBxlzpTCq-HkB3d9ujfb7FhV4pcu6Gm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qcupNQmQOJDKj7Y6AdKmmQvuZDCBRhUn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GvsiTTBhea4eL84zSGdgwHfHexKV778_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-OiulVUPAYgO2YQN2Huwy4FVGyZ1Hdbv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cLR3sVN-3XmkVtybeiZp3dZ2ESrTcvOe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17t72IaIbBxxiyILE24j4608YnGAi42lo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ws0sIgfiabOXzoWPBQn2Qhqzv-D5ROPR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aKAmqUkDsNI1ZTeIWlQ8Y2pSEdpAiVhd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yQ0PAK_-SK-BhBxDsPadVK44jx33D19L/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kv0grlN5V0jpDgIOx3Y0E0RVnZA6wafR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tOSnz8eCoI410BE2wwdCLToP4meLslZC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KxYsWjKA1bLhSxQzoLnmi2bjVZgQ2fDG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WxAzCDnuJXg4uEiTY8WUF3zuVw6-D6Ms/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 10,
+            title: "Season 10",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1obvoho3IlLuZG8WIjovSX-vuINnh2r3f/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XfnhLvZ5L6yGxxJoguRGM_6tJMuk78hZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tgCF8a4GfElW0otusGP5VOBX4CeNk1wu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10k3AN5pR0WZNhSFrSW5TG_Db6p4_WNs1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pvs9dMJJyYarGnBpj8O3LfwPXBgPQnlB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1voIxHL2A9EMXS7ErWXuBFmaESOvDYW32/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sCwW63XzYY2qKNkmplF0R_gdnOKjTXfZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bud51dN-QZ2TXFQjcS6R_8pIxQ2KsgGX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EX0sKLiTs47v6iOxws6fzhWaTVE_vBWI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pHKy5_QNA07qF23TZokDIlMeki40EwMf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f-mdt-5U7whrXydtQXZXi7a7ZAyVogJ2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ud9IPBfKcrebeQmVxcP3Jf1jKyNls8qr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NRWFj7Io5n9Mq54hdQ9uHJJAS0uvlQEx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1enT6oAzGY6vQ86QOGjFqfGQ0xO7dZCcF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kejity-_LSPbJWDbDIW1trdYDkvQUFcK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ub5wCq7Hz5rVXarHL-c6lHdQn-qQL-VN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VoEf-ze4WNkph3X-orMSmLvA5LWaLaZ6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wR2sZ0TeEtO8Sp4f_XunPWiJCCI7dD0u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fch-igD93jr31dqxhHJI6dgVM2mZ50R5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WN7FIh6WhGNXYpYa641w_ud0eHsp_yQ0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HE17jBd75vEnHL32P1G4wFyMcjQ0CmpE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YaMmKtfCsbMZz9TnnYSDAG_gOs5TaONp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k5lsL3pBfULOh5gK19np7DpkNp3VfXZQ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 11,
+            title: "Season 11",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1qVifOWNXLKbK3XkBqW8_Jpdxd72rnoGG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ECQBUOovYSeq2Rl-2ITuqWBNijbOZpzn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1r5SQBhFQyRlAWbeEq4rJ8t4lTQ6zY0RI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18vABZR6DqCbmwRT7e-pBSo-L0A4GHr3q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M1vtOVJ4wYCkmTO00J70OSAO8ZXtYDJK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZdR_9VCcYenULgG99QYb_KIAyHu08lgM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T9O4XWDJ4CdaKvjL4XOuYo0diFrHKRu4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1arI6t0siDohUBqGIHS4K9D_p0jBUB4a7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oGzY8hyycf6mxIF7k9hYdtR_XuR9vMvr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZiuJKJhufkDIiWO_uSsaNLabKmbCZa6p/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xLQ5X0JGfj1TfN6zdIaDCFrRJ7CJitna/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DpHCkxD9GsZ06YkFajUsdMUUpQr1AK_j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19UFp0pG2kkuj1SWnZz7h2E6zectsVrah/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AQ1lvc2VnUVhaEWnZWzsfIWp9sKI956b/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 12,
+            title: "Season 12",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1p9Pw4ukLQN0qNI5rg0m-CRNKff5kBWbk/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 13,
+            title: "Season 13",
+            episodes: [
+              { link: "https://drive.google.com/file/d/12MPpAoTUeppskY1s6i1dfYU5BPmoA44D/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 14,
+            title: "Season 14",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1CN4n4OYRTfU3HmL700ffm9gIRBfy9UF8/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 15,
+            title: "Season 15",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1KoLV79rVnbeRamV_hMtbY1SqySOklXWo/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 16,
+            title: "Season 16",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1WmmN-qHbu8vd0YV09rRFSUsrmnIf_a-g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QKK8fjOMuOs-eb9LcyHlDliBXVqkWyrZ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 17,
+            title: "Season 17",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1w9ZnRrtt0VlV-DGh97fC_w0DBhRluH4K/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 18,
+            title: "Season 18",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1LKrkHizV3wHHjG2nN27scFlo-5QVXwSd/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 19,
+            title: "Season 19",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1m069cy3GiIlKho5hFDvjSdufLcninHqU/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 20,
+            title: "Season 20",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1jUBsXpeWtbMwbWFFSvY7qbPmpTYdfuar/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-8et03QCd1SCFDcPzuqCesBkDKYG13iw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ynJAl8Yz1YOXsJBmimVgmO78h4W6SzwQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tf_XsJiOFhYxYlUpxELs6Xzwqn2KA6XR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lj1QupGrafcML6DD0vU2OYQ1D22Suw3s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d5J38tBKoUCyQGFco-jFkiR9ViyoA4Fp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yW59HPJwlUDPKrul2kP7JxO-KJWVkBMv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j_UzuvrD10AxoeCXAAs9rSL5F4hMTtPh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1op9IzKGWcsNfbwd1DteoAGUQCDKkeBYQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_XnF6ETlglvVfvvYWyQ-GhjqpiwQx1ob/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mrXOsF7YHWDeG5oc7QssX_-tew5RgfnX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1H_qLxwNTYhr7hW_5AwxTcApbJIbX2jKn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14DKey78Mw46AijC4-jLHsUhsdHO0QfCi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K7CiDgfUGfo1RTxbJlxe6ydtOQViabZx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bf5V5z-Sov9uYknDDS2VdC658tVwrJhd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uaD0clCkSvcGa1FCuCh9AilsXgAnW3EA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A3FROMMuVtgxyPwTJUrehhF1GGD7JcFS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1td1vx6MhGGbxyeVWYaMRQvjnHT9bvFER/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XUfP6vwDkQIN48R_zm58cFVQ6jra7EFd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mhNLiOD9KP6q65bT2tWgBhrxk-w0bqns/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 21,
+            title: "Season 21",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1lIM3LCrkSax47VbmjTqfB9uabgsxNNm1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X-LrBA5xZMaTPge4alcPSskJOWHcdkil/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d7zraQeFlgUNBkfW37vUc7h_l0fDNT5Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OR2VN372z80EC0xfTWNd7CWob72POHZq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1skyGTcjO2azpE1svEhwM4u8j1Mrh4TQa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tS_Cktaz1ZxQL0aC3bwcd30V2y_e3N4I/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/115ZFeePeRM6d7DpsDQHYr9FJq5A1o1za/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EtoJPDDGgV4lQhLVU-baoBPpMoztPWdS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tNVmrZVMmA6I0_oZjAMPSQZyCG6sbJOx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ivYPtva7p8rrW8lisObDn-P4-_TSAwfW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-69RiGUYjKwPW864lsW05BW4vy5favVw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e_6K8BvavDW5SAP_NtJQWu9nz0MetSDA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14KZs3M_aDEXXHUw7TfsGVJHNin4vsMLp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N6B_6cgXC_aFbAC6Qon4XtAdRkuFV6cm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nF-_AveluttpPkcf-Keevy4vAGkck5FH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_NV-vCKEXEVRj2rbM5rfaee2y93TihpV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16T5hnWc9PvFc5SnstxFfa9vUn4Ab--4k/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RzttdDB574VUu-CkoqXsNyYc3RhAFhg1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/141y-jz5FEXtbrjTaTylxRiQ1auo19N1c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rICnP2Lk35mjMNDyy2Zz3vaPENvQPYCy/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 22,
+            title: "Season 22",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1gDv4yPOAYs1J1QQH4drKlPmJVw5VLoOf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D0sZXAGg7HqnOhuEHJLWK8xTGuWjpUHE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mMRVT58ge0p0wBugQNzLsBj_KvkGE1Qr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GN9qV1sdHhosG7JyC3CC5waO2EsVFskJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1U8vLJa1yOE12gG8eXk6crcFTS02I0-8y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e--N7rfNgeC4QlRaCuajBlWkEqMEPxb-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rue0-3SwfsUxlOLCOThVHECbPapilriR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c09NGvEfQ276fEbGymCokRYGJRy1sN8A/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oJAY5Opu7fuEaSyh9tFfxKVxY6eUvaK3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uaiLu05c18ZJAf74N1wgoAd0uvkkyEVL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1igtjUMFYxHVrmvXrIu8s5_HqldyYrlhp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1V5U0IVubrZAZv6qX-JJnpjcsLM-DIiC3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mLQr9LAONEWOoWZXXAqCL9SAKBnjHCH3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nibpdu9X92CToHymdMx8VyauPSLBWbjK/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 23,
+            title: "Season 23",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ee1BLlkUM-CCOkqwyVxzpZYkXpuw1fZs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JipzL75CF9ende2Rf-U7C44NaYE-HOrd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13_Qo7cHQaDPV9_MyBtObzbTRewEXVVvT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19bCx9n0AK1Nb6C8fYRAnb8iaUMiZD7id/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11LOqM3tzVJr_kS1wMFVCrJk-ZhyabexQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1u0HuhzI026uzpOdeqYjMxInSsvz2mdIM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11pVt-_FlVvzBZehcG5V7t3ozMWL0uyVz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MM9ArMg-8gCSFCirM4KEQIfcM7gY2SNQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PNYz16DYlfadksfCWJzHxDUxAujlAswy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jcFHMtOSncS5T_69cxCWDPz2e74xLU-D/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bBRIM3co7X_EJLWNqQtPAVLD7sp3KF8J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZTY6-XjxV67CYSWMIlCGs9KK0JENfVF3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YaKzY5l-J4NPenMFy69m7Idgqtnk6YX3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TJmBqNRSFb4NZIWGaq9E6Aj3jZyBitct/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gviPrzCdS9ZNOmkOiq3W8Pq5TAXJ8Z77/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1azlycinwJbRkVWQHuoZjkch9_-3BBS_e/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XG85gCN1G9KZiYWxgrd8HEWdFZKbh19A/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PHZGIloCM_YfecmuX9Wt0ygTpv_CYFmu/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 24,
+            title: "Season 24",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1gwUOGYiZD7jSqDobyoBUOjBksZdPqj-k/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1em15MfAsvMQk188NXzgA5v0TKAZgj8I5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VZ6Z8ijf4ezKbQRhTE90UKUf4VzOAwrU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19D_3GLjiGUN4XjisRhMCXvxMkFml-YKw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xyUsoYo8YKAinv66ni1sRpSm9G6v3KSp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15iTxS51kKqGY6qs4Wg6iFeA5z5u6wU68/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ozw9xHVSsP5IUWEmr1FieuGt5PFGZBAt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FnLEJR6ucqJrF_ylQ_GEAASWjDsxukS-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lObTiwz3Y214N7U19FPcrupgY_yo0nzR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10cerQRGOlEB64OFbAPiyTyWDWQe__uiO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1C4aqRaDN3JtIhzuDJqEdzTvZIRWKh63b/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Family Matters",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BN2YxNmI0NzgtMGM5Yi00YjJmLThjZmEtYTQ3ZTljYTU4MjdiXkEyXkFqcGc@._V1_.jpg",
         description: "A sitcom following the Winslow family and their annoying neighbor Steve Urkel.",
         year: "1989",
-        link: "https://drive.google.com/drive/folders/1YX2tgiy_q_-FWYwv5puLRdWOhwlJVTQ3?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1-jdicmmzzCCu8XB3NOs4DtpSWvVTZg_Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VJiJJ3-pbBo-loB_20_KMaVVWRJ5admN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TZPo7QKgdo623oWy7HPIVhGq0sJ3IO5J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KMcRrugu2Qeq8A9JbvDwKAZT8ODMo4N9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fYK1qtcWAzWWf1PqxGOBmTynNSNWYyIo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LaAKx1aXk6GYXTMxayfhOLZmBRDA-Xew/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/134Xx7iSlKPbatIFAcLHpCNOWhmXcB-w6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Rr5JKwANYsgX88DvgaH-V870-ln6vLVx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nsJ9TmIljayN0C1x9bOTmMn9coNKgkVy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HzwUuX4Kl_rCnTppGyKj9QAqyoXO_mn9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aNake25MAlP-msGSXKhTYaja_sXG-9zq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sSFGHRafdZ5VK9koAJrL3LRdili4qP3B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Nc8Funl_5GKxRHhHO_YdkxX_3L2Kl80T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TWlFb_J1dbSRbOTNdZOFkmSSeFINb90u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w2STlxODaGc9Qz24l_oSWSXBSyPp-77V/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NZneU6cRpOk2R5YYVwwKhkvxbO6g4pma/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sAXABSOJP5ePxuYx_f3NKruyKP9RND8c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D3htzBjIlB7RZZMc2_m-HxGV2aNCtbkM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DO6uw-_GmRyU6NzF_zxiDIa81XBDLk3j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HSXqFaQW589767KdwHt3UqT8UB27XIsY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ypiVQ3jsoik212BTvgDMJm3H4_l032gV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eICa5gm7wpecdmYYFak9pi-WX2ksHw0G/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/16ULQA8EkbavR4uDbr64e4KalsXtS8Z7P/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yupxbCtgBHNS0Sz1FUaeKZtM4fSFPju4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1E3FPWikkJL6xDPiFL1mSY3cR5Cp2D6pr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ho9IJBfO5mdsk9bpNwnaYhpDm3g3URwh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hSOz7rsTDNc2apCiYrgXIEvyO-9k22j2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11LY1ofbUV9cMf0_G7NAfvBXTUi0G_eO9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YoOz-O3eWbk_VMb59l0bPhps2TDk3fqu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fEMcJhYp38MkBZm75W3ar9uxnTHwHRQh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14gcAwB4iwYd-zj9NLZHfQZ8q5ME2aYc1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yLKRn1wwS1V6LA4UcQX_F_PeR1R34zi4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IJ6LTKTIfaT4DDDV2C6ql-qKjji4IjTq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tKnUtNE-iBXvXzUzUbpE_zzCN494L670/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gtlN6Bqf-mkJIQjASt8-ab_W4VBApcLp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17uqq6vD0z455sBi4JiPmYE9PrsH6LLSo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A-dJqUmF796DPYmVozZXgaeYTBB026d-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hT1q3FLGxgVu_Nr0sThezuryJTHbtBwS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hwNICKQeJ_3b_7os1Tb-xz4V3G771iuh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1m1UYc1eFFKl7c2UBoOHbKv47QSWfg77b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XeeFbX60kSO15m4K45Lz8O0d4iNNjj49/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1juO0umldvMGNCT013L04w-tBgdhVzVSK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MhjlpYK8dNcklMyYxqtmyU13nmi2zsOA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oW40J5PyQbPU9sH3DRG5pf5irf_ZlqTz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KNMOwBjRAEoj-f2OdoYyPjJcKLL4D4iG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XJg5bkv9vINBqOf3ckAP9A1xeK4MnAlr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oErfGJPz-YqBf_QAddTmJ5gBJljRA8Ax/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1oIMARXGlBKcTZTI1a36uTv7gc1WT1x82/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nB09lqpvuAEMqhp4rOinVn3FdEaOX821/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18RIQgjHHxbWf3CTHFi8-m0eoJGwVcqJ3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lasYhPUPKlIwUQuqMFy8x1P8BgfoTVHf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ebRNgmAABWSQIQ3TJRJo_kr1p8cqxoHv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NwQfoQZ8jCjTib3OliDL2IGKlUjVNxzd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cYA1euUZZtNDWx_KO3hpBpmleCh2D3IK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tQIXqp_hRPazP0Z69wFe0FnWitB_M81k/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IARDwIyPeTirjjaRUla2BcYlTKC6_-5B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VmKVuwf68IdKwTXzplMJFzgVruCgnxmY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RA4DIybtvajno_McVlIHXX84Lrx4BJpy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DAN167TdOP2-AnJiJop0xc0ZdI5aMFC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Bg7hPELyHCdfubg9qjIAoD0Vph4lsTC6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HFy8RJLeMElwq16mapkjDytjJ10f2HfG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nAuBqn82xy5YVDGp8LF5095AM0OSZHNv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KdVWWaNeueDnxd53S-pnRveGFjW55_lJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1az62b6wV2qh_bBQsuXG87WAMg_Zr-E9O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/181AmZPeDXseAGDU67AWbZuuRl3YVzGsE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Mh2Xdd4AZISN8HbuYjc2x4gJuj2Yc8zp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1874b4i1jMybyvLVW06yAWwYsD8vMEbkA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qy4lYl6mj2QYCzl2WGSkFaWh2_AWdnvh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EFP5EvqHGt8GIKXBngDA5sd4xIWNu-aY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c6fZ8_Ov3jesQARBzkyR4EKCHM-AXPSN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1blKdQGgmEyUQp2pC5F4JcrrwK7ZwZhlp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K7d4Im04o6VQ306uDaAl7V53fPhHEG9H/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1gJ66EeRVoWhz-gPY48oQ0amDP5xyJbQL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MuIxUczLqx_YCvjnZTLBXmjXDbjwubBO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NmGwYfEYAtRKniaWPHaF5MFGkiBKS-5n/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18QoXyrdmkHu8vdrYfDqW7-QXDoN466cn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UiuWKWVLT6rOV_p-4DxHbNoiKtA6YaqD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1L_uFg1A4rX6-5Gvdrk-3CW_hM50Gv8WO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fQRPjb-L5dS0mbYiwWexuY1jSqbhj54F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XNuvD8ZKIlWyli7Wr1qZYlIq_2Y95HA3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wMTBWJEIO5_SHvzMIHrVWbhiiynguZ2r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WdHpjap5p4JBr03mtvfiiW_20iBeis09/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RGeDmuwg49ZZDWymVErUnG0cdKP7UweU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_TcCbyClzx67k6vgupgji62i7vddTV6a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1L5hE2jMqu2IIA6vHAeZBaLo_4c3tPMyn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N612q98P9VrG7X1hVOad7mDLxp6gz9HO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1co7qd6iJE4SItu4I-fG6vibGaC52qki7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tXEqRDSp_dKV3PwUr7fApx3HyIc24gkp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pUWJODKMWOIEIcATmtUM353xWpQjBDmI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15UH4ygwoeo3-TQS_L62XfkIyuEL65rCd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZhIbWgRYP2U8zZXgY5eB6b5LC9oklcp7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/175wiDlCb34XdHIonTHBvyWNHOTxOwVGt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10wXQPKQ1hCSpOdRF1ularLue2yuWD7z3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NjBbXpBU9nM6zFzqD2SF_HV9wBbnobjz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RraukarNVju_Yh1kJRSeUrz9wrTbXtIt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HzlpixIbzCLVQWebPFZVDJR62Wp6BZyL/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1IiEQaxJDwbg5vZG_LjRLxup5Sxj_yBC4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ocgoxeqpNlT3q7-XBmYQ9w1AF8cXBOKV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wxI6CnODajPKeeSEK3K1C2Jjp-_2j9zU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kda-00I_9YcmCL8L9ZQCJf36Wm1H9wmw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uxGd7-tyT4vcmDrsCaDUuPLoBg-PbC4w/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Bbd2XcLnTqwM8xb8PyXcqngBCbd88RE5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fS7J48rel5lKhIk6DPUcL46qebs_3SGU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11ODiYzZAXU0wiDuzq9NtxbC68dgAChqk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1m0tlEK23LPU-UHu6LHrHAMoRCBum6J2E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K9eZUhhqJPPKnWJT-Tg-_iPAdZJ1g478/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wWKdVZzfCXGnqy25cLl8mp-69kmSi2h6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1reWokZRqq1ILku7p_3qLYpbR7uDqPT-d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JheM4WX_6kdJHyT0Cf7ne056PWCYcvOf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hlVGLMftPFfoMVflVx5XpKIMKhYRSMge/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kYU0SbEwaY0G2ycQpRoMGFfSOT5rmqWH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_rg-P9KjuTymseMYmOqFcNbFoUj2V16J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14VsV9K8KzEWEvc8nSiiVGXKAI4oNFJA7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yju2LfGmQlFWU28KYrwGnxrArH2gGDxm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1R0kNp3JJ1DNPmtMrGuuKvN_NlZ3NDt-M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TcVi3rCxT48v8_icpNbrtYa_7qEXB-4O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1H2e4IVbolv1_2guzSvh4qKhklXk-U7hf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Cd0f125UxDP56a5qjltm0ZYfIEh8kqs-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-WvUW7a0_dC5Yet_pwgInuC9GFApZWni/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fv3fmI6HN4fa6tr-Wsd7tpFwvRZi628i/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Season 6",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1dtf3bqubscAERSn1_X99HfD8KKy_Mlg1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y9PiZbyiA-MbkkGWYERnModhWO_hKqaD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MDl_zN7TvS0Fc0VSIi3KNHJq5IG_EaiG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BG3rXmi_ReiR5Lj4Dk4qTVYacNz5-0kf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pVmbAfQuVRY1dT78L3elg85EI3USmwNN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1t-f9vlk7DnvfBtRFH4Kfe_ZPUG6zvA7I/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14bAv-uBtCHqrWTA4qLB-KzekHN1CEuy7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GYD-eX3UbK9LOi6afmSARdu-zCh6UA4g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OFv0Pd66eJk5cI649UAyxV9b0Gu-DzxB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gCcruqooxBFHtbdmkwsSAo32r7dLnrZ8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mFTSoRxn7iDZk2ZsWLtYuJxhh5NlJMJ5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F0uIPGaQLxge0OF1u6P8mDgd8Dhdl42E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Vj7jWFMjgkGSTTS24DCijRyJQc4u3fH3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13kVlaAHFoLKy8TK7x1cdDLDGnH4N-1wQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/176Pj9-4gRA_h-wm6WQSceGQcvp-mW-yr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14PdXyNcTC7gbZEzBuPnyB4gKqYIa7-41/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19wTjcWhnlKkIcnXApBFihMiPxr32X8D6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18nuxR3UeOOQBS5yJiyCEGcYt70NHs77c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iPcAX41IPh1-sLMwozNVWiqgV8tgo0Tc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I6_T9NGV_8AUrJ21s9tPL0N_utgerzN3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZGoHV2nymIhSO57mrDTYdYFJf1v0ZRN3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rLvmSaL_Y7W0OaKXwmEHIaC-PMTzr0N8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/172GZAbzAw8NKKna2xaMsBYg0NDJ570J1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15fO9hnTrmpEx33oEo0AYG_PEFT7kS1Nb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/104bl2luJqiBrpCBXBwDdX2_4PVVewgcC/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 7,
+            title: "Season 7",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1U9K6jfnzC2BATu-1wn0B0EKBkQfKtQpv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yxgVpUE43vWdalSWZvHp55wjHlKkJYVL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AdQeUA-Naw23t8pWfx0uposJ2zp42o3S/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1264-cfTlhnB3rpEMAi6Tuk6HZc4bcry1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JIol-cNxDlN_FLijYVJo-Dmg-Q6WLtFp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Sby_e4aC4wP41HZEnHzy2QNwmfJQgJoG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hd-ZsCSnB7NZG5bsLXcpx3RONhjo7wqJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MU6wOPBZrAKHkdgixpX6dTWlQTrAcDEJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X8JNruPQIW49OR8SiIRYX4z028lKI2Dc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10yHdiIT8GOW1gdowklRvtSV1hfaRUfRE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LoJZlkhnjdv-jEAiaa3p9Zk80AbxvIen/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cmxuIoVSAsDhrBwSOZ1eEGU2DQLJYKJj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17vyzqNmyB4aTYzRvCm8z58LVoJMDjkB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16o1278DKNV_2HmEifEmXo9cB7Eh7rblB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wYtKyPJIhzahQntfZ40erVHVowouOBcM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bKq0M3OyP9Q43wn76wwkBsk9rTFm5c0x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nlL_cDS88Xgpb13aWTp7tctv7FqiBly_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13Ou-vTKbGx7Qbj0zvZHjO4mqwHL6nwXm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P156YZ1kzPCXfhcsBEb5V0vM89vYeC_C/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xDIa4PxcPKqGZtjpnRiUQSmXQDo6iEYU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cgfO_3ZHDOGIfqibO3H9CL_T7LcnKK4o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZgyyT0M0XKfkvr2n3BTUeQclRf9m579F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14N0a0jIKovfU3JAnT_WjrBRAGJU-BeDw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18W5IazbK0jRrcSn__HAAoeii99uPSNqN/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "Season 8",
+            episodes: [
+              { link: "https://drive.google.com/file/d/17w1HcXcRANH3Trte5TvIxGJaYQneruGp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18cuaZkPE_tKI5q3LuDtQW_FTm-pgVPl0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IV4VbLx8vNd733zA8515lhAn-tpOSj-r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MfGscb9hYUfVGSe_Krawj2m959CrJT4r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HflGdRMrk4DVs_4YUYEFR2VO6-46SCVV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cmZstS09ON_b1YdNhbnQlmn98mms6qN3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gkyIDqL1pAue2waO5sdvvKTfcWIQQNHL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WHg38kGeghraY_ZziPRsBXbkh6codY6n/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nKj9KlUk_w22lwR5PZWdbhZY5YaDYy3D/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IHIF9_OWblFHS_IK7rsKAUB6ztovB9wF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zvIlvcTpg2XhPjMzC8OleCzP_Y-HsZkA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rMJunfouVq5tq0JeSu-mA0xDDAtVkJOa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wP8fYz9mdteBzy83OtR7y4B5lxg3pDut/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e141nag9ZzmvDKBjVCbG8UA9zrJDZ0Vo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sUGuuLVOQgz0n7mk3xwoTz22BJvk4j3T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fPt6hBYDgIHJtvMK-w6bk1XcUwGR0AP3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DZKRbh27RBYfic5W-COdqsIBki6Y65OO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Yy9WNcfpXIp2tcCvdmgiwelekpom5VXD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PL7fnWs5mU_2eJqQdd6YPBfFCBslIhjP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hRPxXmO6TCn9VzoyUeIpPz7Qpt9Ig7HA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b2DMKvlBUnpf6fnENRJspC9bopgN4_qM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ggoEwTenfF46DHSXjX-HgofuVlCmUXvJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Z4WaCPv3lGMUvkKTL2rS2Cif5Ke-537S/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n62YHsOcw0lzzTh9A3vmzUDhheFTNAeQ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "Season 9",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1LZJYkwDlCVzNvLQklu2u_pxVkIPgPIMB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D35bRXz1TGWAw2OWOorTb1FjMOWj2mNE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1awLQ_q6ILVlfDjDpr75E-rifa4AluctV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zj4XEvQNrLWFb3uvULUHlgUmsIIXbPtH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1S4zrPXTtRF8vn3j2VD4lRQm1Lo710B96/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_muxGH6W3kvavc7wJ_D5v0beBn3keodr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ta7xQ2ly-w0SgNff0OThcQBKLVR1oxB-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SRknE9sFXi8iYBN4LpqoxqqlDW2PmYbw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MbXMOMbXJaCgz8B93bQegS_D-HpsPLxS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ybJaTm-pMrhMS9r2YSx2XKo5pe7em-lG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kgDRcMtF9R-tqBpfU1Yayz8R3btZPg7a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ijeaHEhMw7vleuMaBSoFGoBc-CPYulJK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bAFpaGust8l-RWjFUGlnUFDYNaWSAJv0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10nQQ6_B_q9s4THDCiQ7OpNUapKaVT67Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19YhT6t6FIXN3B3iqfrHhuCLgfzYCjzN1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Tw1lBS63qYiV9islGxJNRwCnTzQERyC5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1U3oDT8Qcm1WVSy1boxH4alqMDmoC9Gba/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/116XCErk4hqVgnCkU2LP5rwMUlyUm1vRa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wsPMWoE3Ju6vypT9UIBbd-Y3IS0yllkQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13fFEwMZXp9fkD1Ky4kqy4bDjRoR1hxKf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Vs1Mk6uaAWxr23vpXhG3IIFgvSq9gAkm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1crGZP9Dx3POOfuDMXsDJVXr0ncLrPFMF/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Game of Thrones",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An epic fantasy series based on George R.R. Martin's novels.",
         year: "2011",
-        link: "https://drive.google.com/drive/folders/1-kchkgMKhucUCfcyTZ5j5_GS8jWu9TQC?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1-ze41XkCcGmsXKGNj_iiglgIdMhkWdrO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10OpjDz15H7IoZn1GQcx-5QFPCRzVR69g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/106VASEwjGv3HkmpjL2XdCjKLnEFmH4Wh/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Ghostbusters (Animated Series)",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsbWNnNjECfk7v0Se7lfFPbW5RRhCLECAJkmh3QDemZAoXgfAt",
         description: "The classic animated series following the supernatural adventures of the Ghostbusters in New York City.",
         year: "1986",
-        link: "https://drive.google.com/drive/folders/1ikfAkH2QegK9KUNRPk9Kq5eStgIJ9mnO"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1703uJ_tFsUX_8by7OcgcGRMwXd9-RtFw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vzwLovU3v9J-b9EfTiwCa1wbW_ZMSERt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UtVRFYKuIj6LC45xupFTCT26yWzgrJSx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-QybXhJTxea2u4xRh4JO2tmECok5Hyiv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16sstmhMgpfZZsj1KS5cquPCtZEpLJsOK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RPYs_KibmMzumCR-jM56ZMpUmO2DV0EO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QO56yR7zk8lWsreqHvOe5SRJWuojr1ey/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_Idtifm6XNTzRBmR09NGPLN9iEG0xVj4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T7FYe4hStJXG1BGtNrQ8eMlIO15IZNDm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1opOFbp4Rx1fluTU6eFDkfgiSeYH7YWKT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sTa2a48o3iL0IYNBcBT3S2TGx78dXUWb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vjKVOVtT2ZhnBwHj-PyE0uHQm7JSjihP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZA-1-8M-spVoYR3PvqtNuQQ9NAPmZh1M/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1MPvKv0Y4WXrtHxyXkYnyolFOBwa9Az0y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k_ze9XQuutME8atGiuSXoxML1dj9fpMH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SN1VsGU7VNwGncuuKZlOGYVp2Y14AGk0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11_lOjl3y-5Q2IQWK5CGXYqMlxBLl69pf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UNDDrKcXw0S2YSwLitIrZRUsrsPkgtwt/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Godzilla - The Original Animated Series",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-aNR8qFmAYCfHuckWwXvy0kZ5IVkRoSwd6C9UXJkLuAZGPEU",
         description: "The classic Hanna-Barbera adventures of Godzilla and his nephew Godzooky as they protect the world from giant monsters.",
         year: "1978",
-        link: "https://drive.google.com/drive/folders/1hLmZo78hwuNQPtJauvSg7vRHHG5izmAG"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1XO3hc5D_INXoelFPwqnjZ1MaK-Tet_O6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pNqs6wCUzfHQCLYWWeot7FyhmOvw1iyA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-n7we3k2zhH1NDC2FIuLSnSgPR9yhgfe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vr_oLhQ4c-nRNlkh5oQhhM9_kNgYg4tZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TO7WCoTNsA-g_R-VmGCHZgZgYML4N1nU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y6LI7pJc0HXU-fKnXLXK-JDHvw9OTWXO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NFr-u4Q68lTHATZH4KjhaIN40BD0vO5M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ti4DeHRoK4_oDzlh-I4nQ1KbAN7rpuMs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-Nz1SmzxxneZ4U-uEo-vFfb4g26sX6gh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oxqgyP5VEsntBtjJ2HpBRBNLgk4RDGZQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ovnMnOShspl0JVtD2rEZXSbyKftlz8LV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GaEy0hF44L4J0k3aXu5X-5AHVQ1_s5Id/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/166vEjDjwByn7jnn8UBLrInveCctLVbEl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rlAh65xbBlcuMkARdhjkiv_tfrkY1vz1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/147p4oT73ak092yqbcfIwLXaBwxeDv-sv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZJn9nHcAlJxUh0xl2kJjE5ytog5DjImn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DvawsyS2DEVIA9wj3WlVmvn0Jtqhrf0b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/118gWMbA-OOpxr5ci3fxcbyT8i9Z5mofz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FYqeHUM1f2AnqR7fK1Kh87TDE8jrBtK4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TkW6fd_s1hh4dGtln6P04X9ZQKlF9Oen/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16vqTyXckRdrN3OtCkEUikpNP3VyNd5ru/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HdUiNuyJs9Lgce4g-pMZOmT7KQdvB1YV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13rSkKnR60mrhapQKvjkJkVfURLcByv0s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pSiWX8ifI3FQhmbU8hD5M01gPwe6KSzW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bVzmhSJtIO8xH72FRg2AurJQcb0S05Ee/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GM2nsx0axIpJas39qWsWWnJJQ22gglbt/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Gravity Falls",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTEzNDc3MDQ2NzNeQTJeQWpwZ15BbWU4MDYzMzUwMDIx._V1_FMjpg_UX1000_.jpg",
         description: "Two siblings spend the summer with their great-uncle in a mysterious town.",
         year: "2012",
-        link: "https://drive.google.com/drive/folders/1fU-FrVZ12bAZYxtxrofKkEQg2kMrIjm3"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1MPuchsrpvz0Pz6DY-Vmy9Mux1hOEcSFo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OcyNUzp7zQyFHTp2OJrtiaKkOo6E48dN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FITI_IULpcfQpEfQrw6hW-97S8TIH_uQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gqWSzyEKfLV4uMJkgzmEQ90FUMn7_783/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ypAX_UDDgVbkPRMWH-ZaCk45dzjYcqZ0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ovr-LtUURGwcSbhL4DGsK0cHI2fVocjJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17343-WBNPZZ7s29IdZL-5dE1kFkuHGZk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XL7wp2K_CD2oo-fAQDQMPWVxpY4GSrfE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10bUwtVqmBIv0IZqjHdtgnFSI5o8tSkun/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c_zYMj9-VYrCVIS-w2kwbPuja_2iiRBW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uvUs0I99PT7ONc_ztsXNvJpZrvjsGnfx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16c4iHtOJQPR77ajTZ3qNjoacdUY3RrDf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DK3Mtz-J-fC0edXzHi51X6D7qoqULIN5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13GLRvXBnwy0jW_UkDFCpWbVWwyS7qcbF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/125pKkurNBwYBe2rOHHB6l6cprNW_p1g1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19YoVoLPGybjOIv0HoXkz528cA3Z7heDp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k8Sqd9o4IErLLZg7f5sh4ErgsIhzmGIs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ft_6lXPTpVlAc5g1a2em00QVhpDK6P9C/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IZvk71ZHp3j3hhEO-h1SOihHxqjXCrcl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12NitA0pN-vyQWrHeDKzmHGkZVzHLgBsk/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1-WbvM5xZBND-uXn6KNO6r8tUxKS_GFIu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pJNyNC0kW66hxxMtJR3S1ziG0iF6AC37/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FyF7hQDq9mHrhO4XXpiCf0cjZE6Iv7tS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Yu9IKb1X8mN0d-Y8oiVCt71m5y1BO00H/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BvQbbPm0BRw075QTGWx-oZN7aRsUwqXv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TDHEodfje849aeykWK2npWUS4XonaAM0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ttS7DJSql3pvd93OD74UqEeeFlymkjHM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RF6KqW6i7ZKjdMWc3ptXcpcP3GFSOKmS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14MoMA5j09Q3BbaV17QqUTrt6UTTgQZ41/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RG4BYnMfg2IufLGekU4E7B55rAU89XWd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14O1CWnpa_2f-PCvxsTknTyHkwT2cGvK9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sp7xIIKZYEUevMAAAWtu0kgWnxSa2rA9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QaTYmtEHcWwO2pmjzOKHbMgxGLFASfPA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rpejbHPIB4t9iq-SjqDjZFk8EHrZ8U4g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13ZV4jcZzRPLaeFyvH3B9jkEz4BUh1Dj1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1u66E3jEJZtOv3LVQHy07Oe1oaT3_KQXx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FUjB3nZqguEPYD-MWUDSZyAj3Qx5iYHu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SPysiedQw9xitPd3rN59NjX16z1S96Ya/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1voSBgToKiwPw2sDBuubER_WglQ8nwzvY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QdGx__MAaYIDcOvDKTwsekWR45E3oqpP/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Harley Quinn",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYWQyMjQzOGMtY2Y0Yy00NjJkLWE3YjItOGEwODE1MWRlMjVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated series following Harley Quinn after her breakup with the Joker.",
         year: "2019",
-        link: "https://drive.google.com/drive/folders/1ap71sKGnRDDqySR6TlfL_sXpwoM5B1Q9?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/14aRrJZAUBz_YVfl1-R2FM0KLObPrM54Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GBwPvbEFKonb8t6sKz3KcBx7G-I4nnEm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GuMVNpE8saSX0R_tWXEdlO7HhmRlI7IY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Q1z9mP0o7oUWhuON8zAJOWHXSs3uLueW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G9QA9Y0fjznExcbxXZvOzGNdAj2XfOZG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wAQfFDvd3UKz443qt-xXEIasmiDKqPJO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oOpExywOTtvp6dygSIGSGwtfwldB5cyy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gJymwE2KvoeXCyHRY-ZKh7SNpXxMkgc5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SrEIrU6AKE_AZEdS-yjinWcJ5U3zrOzk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oi-P0BSmgsGLK1gAbtf55nXijDVSTHZc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_4UkJHVS5fQVYzC6cj845_1eQNZS1lNw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EqcT64wUdP5OIOReD-8IY-WCxN9ig1__/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sqDQe2xfEVVYZMYySr4awF3iNd7n6cDj/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Harvey Birdman",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMGNkY2YxOGItMDhmYi00Y2E0LWIwNmUtM2FkNzgyY2IyMGNmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A former superhero becomes a lawyer for other cartoon characters.",
         year: "2000",
-        link: "https://drive.google.com/drive/folders/140J4Jyv5DvSnrcM7bI9kvqMPUmTR6vZS"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1nsNqVcMwfpnJq2i6wwBbjKWOsFMTOn4h/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qpB0ozED-E_JHpjkVu-UARW7HO4Z4MxV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dYs7brPjXBR35HR-DAgy9mAhGxiWBCTZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FdR9yrxiy9OHh9kAd9PVf1D5NBAyYME7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QSyx3uBzDqt_9XPGGcyOhfK75fNB4PqT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16jKt8xnmBrmDow722OKqRlCMVsHVn1hk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VNZRvf6shP9HMPquyjcoNIgOLr1x_xB2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jxukg8-twhnr--yn-Vtmk_jflkmuDXdh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dz2TdvTTMyucJZWly00QaGXrfHvLqLwH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h27n7eMv9aDM_0cS6nb3VthX38WuGnr8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1p1EUJ89QQnqIxaH5QLzaJXMWfV0n1tNn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1z0ZK_xP5pk4Iuyr_hD58mkGO_vjzgCMa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BOhAsHdxOh3rj0FBYLvh_8ashe5B6iQo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bXnnvXZS6LVZGWMDN4TtXFJJVSOKhxz5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EMLNtYy3qqG0agzRpLf-J9K_fpBER2F4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UsIZr_P6SImMu6S8itxqC9wtN9dJOR87/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gOrZ4nGAr9ZNtXJ4ZLu4z4XF6uGkwlRx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bEi1U0And2zuO-4KY14W0iKWBLavwufF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1U4ALwA0vQfjSGy849vt5YFxK8q5OyR5P/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10s8kpXwhhbleYGj7-Kw7r_52IuzDplAm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1V7EE70sYfHV4HGsFla8PBmNYlofjyD0H/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19cr-E7kYym-pv-5dWe8k31ZEo49Q__jm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1woltpNebtOsUg9YkfoKl2hOvpklydFlv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12nHWqtClsBIJAJ-HRC9IGmJcVo4lmKLq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Whna1pg64lQEXgocqhbF8rPnAAwyZLWu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d1gxe9yX0rGwdbv8M7zTNS8kCP-9jicJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bpug9r6lVGWe1i7nPSqyWpZEMazLulHA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KhE_3NzxBQqeiEBVetBVXnNM0qUj8FPf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ilS-zfm2cfoYhdqAL7mOW7Fl5psGrnkK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qsErVW62R0Arj9sGgJSYfkdQJEiNSBLH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZHjTfhkJfnkjCWnaepbKTJi-rkggmW1R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lK0t7HO7b1FHlTdKaut9SRu1bi1SITyA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O2K73FyBHiliY0fiLPDjLYZQKY9Tlmw2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10MR5L6slJfrpqOThCk56Z0q5erF0G-Wt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1symZcQBjl59ax1kpYNFNCdYNmAXvxCoE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1C4oQIWfbbakiQY27p3zrsKnxX7YkxEzc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XpkNBwKvjyu-QH6G0QUEFeYt_R69riPH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AISVKyKQklOGqDcHn_armu2-zmF245JY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QeAISze5ItWnm8o4JjrO0mAMjXkiluVo/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Hazbin Hotel",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTCsC5plwy8AHI6JOBacDs0NqcDDV-C2J4I-jzr2PPyEXwX2nrm",
         description: "An animated series about the princess of Hell opening a hotel for sinners.",
         year: "2024",
-        link: "https://drive.google.com/drive/folders/1FnnwXwhzJgxIFFjp9I0uW6EFknZ8l6U7?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1NesnMlV9y5KpXdBtSGjQHnV7m78vJG_L/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kO_XaRkxZk7NQeMc1DxVsjpGfqvXwoap/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17vbeGxaphjw7GbsiAwaLXc672VBs0GqI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1H8akEOw3c9yLQ37BmbSWHWCLQE7KUQrs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AvRkPClw96L6O--3SU9KxqOgOWRi-FUf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tyVT_bvFAFI7Lj8JaIFuBbgQ_FyGdYt2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F495lt12BSMpkWx9Jj_lgmEC1vs2-6P3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IIzvloLlWrITlLRvYZuqYlz1L9Nr5GiN/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Helluva Boss",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQoVEVFS8JZ3JidOAtHZf1Gf8v82x-c6c1w3ZZS1LgI7f7Ine25",
         description: "In the fiery depths of Hell, a group of imps runs an assassination agency targeting the living world.",
         year: "2019",
-        link: "https://drive.google.com/drive/folders/1-0vYAQcrZ8dZtpNUFh-fG-X60aigQNuP"
+        seasons: [
+          {
+            number: 0,
+            title: "Season 0 (Pilot)",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1-94LMOaGChgcumwzTfUC029pG7knR0lh/view?usp=sharing" }
+            ]
+          },
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1-6HpMv56Y-3scG0bNje6oeZp72nkJLlv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11fCfy5ATtV1waaPK0NxZrikmifwxqh4M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-9HdFjuwbS1MXwU3A-tuZpCLKn_PPBtW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-IiKyEAMFVMmd5gYypVvyxwe5zOxYkTw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-TLDts_yt3g7sDee75qvVLOFqXU-vEbR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11WNpOiLjLtkBPGr3ZuVMEDGN2PaX_bQF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11Xs94x-le_tvGfvfoQUd43MZHg01-QrT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11Z6pZEkUoBxKh9ucTNyjUHMpL5vdKKw8/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/11fEv19dO6H2gaokUv50SE_15laZ-mShu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11hNV66H-Qo22dijRVJCrdky7EUqbH4_E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11iZZOGVCfBWke5QdzoY3zLWMcXgAUlXA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11iyX6ST55M_eSVP3UIqMG6yUuObduT0Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11jb3TQGwzdF2vkufqbqoe8Bw1zEpXZ62/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11m_gC8hjWGKtreaijAvas7K7d4CsDCDE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11pa478GYp8TFOHJwGhZaxIWdunNh3kcw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11uKoQRMrGkwhUZ6ISGFOOGt33ABOOFq_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11uOxncMk6NvKkBz_B566B1fPFQf0ADq1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/126qPkGz2dWxCwrGGQIA5i_5SKecL9nwq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/127T_CZXJu58koH1yf5-jH21t3lNhzqQc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/128kB2w7gVgk1Q4z2Qu2WqMJtBTj0LjlH/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Shorts",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1-0CQ5tT7BLk7_USquZxChlJNbPmoRiB_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-6pex4BMRh6fniRgFh_lnV5KRqS_qCWu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-1l8jx5q60TQWLmCBMae8ib5eRwZNGVx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-BSbUyBP-8CDTV8BskXtsh1NIK5Hm6Cu/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Heated Rivalry",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu3ooe5FqsdWCsy8iu1VR_0B2ACoBk4IM83XOXDVXbwAVkH1mR",
         description: "Two rival hockey stars must confront their feelings for each other as they compete on the ice and deal with the pressures of professional sports.",
         year: "2025",
-        link: "https://drive.google.com/drive/folders/1jvDzjCxZClLjqZqyt7yfEWmFhO1YOziw?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/19x20exiZY_bKO7FOZmwNc6Tvj_BPN_1p/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1s7rdvLsE757B9-siiXxissvVu6v9Treo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wQAx13ef_rX8DIWg1J6i4MrilyEqTtlt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K7rYL4Z63NwC6PMoYG8pUrgJz_KhpMGK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18Ud5cgCh2iJEEvhGRXBNUi0r9bt9AruJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1y6DbDWk0x9MsyoqrTE6zkzEw-tP96f4z/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Hey Arnold",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYzhiYTYwM2QtNTlmNy00MGM1LTllM2UtOGJmZTUxMmJmZjdiXkEyXkFqcGc@._V1_.jpg",
         description: "An animated series following a fourth-grader living in a boarding house.",
         year: "1996",
-        link: "https://drive.google.com/drive/folders/1tvjU4AqKfPOM_wPZA-pJsjYaOKguNaDD?usp=sharing"
+        seasons: [
+          {
+            number: 0,
+            title: "Season 0 (Specials/Pilot)",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1nZzO5yFcSy-A2F4ywLfDK1ulbrtIslgN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-vNVR0QR09yE3rxon-Vrvazho3Z9z_zQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10JVJcb3ACRG1nNVOzAhWktpQEw8_ILhP/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/142FVp1KNrgrLP4_A3b6hDMDI03V0ko4F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hzIehWeOKEEvCllPX9_4P9xDEfGidrPJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WN1ipdNJnqSdRHMhHjpBj-y_2aCnSaKn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l7BLekA6FmNeb4yhRozKTWXlMyKoBZnG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Laa1CvBGMh-q7WFG7jbX6jee_y5oHh7B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1H_DuYs1LnuYYfuE4Qc7_mcvJqng2TqSR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PkpnVerJLHQ2DwFLkBuNnJFHRrzIpWSR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LiaBJ7IW3MR5yqY2AyLHAJj-nazzxIbT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19gAk4Z8Ko1zDSF_rR15kH41XP2zzI1l9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16_oAumuEpZSDVEzJS3lFIORxwmfcioOt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18ASzGPY65uDPiIvHBI5yWoxEgfcSVWVl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1v-lZq31AezBwBFriLiEIiXdDssozpkVa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-2oiGjep7HJE2M6zAnUSROpmVjdjJIwc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qjgrufaqKjMgCnPzivQ9piuJ5kmCS7QT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FO_vHI3J5tfCSiydTflBPqOCt-kuai_n/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CN6AXJTDokaojZiqQMbwQPG_EZ-53wZ6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wrCPBg57KkJmJHpGrgZJLXZSU8joX22B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18UVpHf0_bXf3MWXY1DMKcKLTXEOju-KZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VIPp6F6oiKvb0aELbvBKtVx6PJlJPW3O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QRxQaz5QZ9lIA7YztRKs5UQbWIc_i_WR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O8GvbUg9VUWQ5qAetrWwiRpj2c4wBNhj/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1DJQwxCOvMGpuHrfTb3yfyZ59EjahJkW5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AsQKjO_aP76CP1Kr0w2cBFtc3yBzwTYa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aHFwT3TutJK86UK8n4Fl_FerNHXXXfKx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d8FcQn5PYmaP69baqSjX2mNYOP6xGghg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1StPQA1F_mvEufmYixSJzh9_c5FiUAQAR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gmNAcjgbs7Co9BPXh_Gow9c92u2hBy6M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZYgbJiaAaXqwdOSNzqgbCwbPigsFPawM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11n56t1XjcHcGDUJkQEWx_G-dI_mVp-gj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gisGVNOnPNpN5AirAHanNjfVVXaEFeCq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MnkNeigD8KsKxgaJm-HKxKw0o8Quwwir/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11vmzYdwzwB28loXRq81jGR2TwaV27tje/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vTO1iV1yRhIaRzS5NtszEWoDb4VpIMf9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UHlVz9vLuKmEIogA5gbpnYcK4JvQtZlT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FRW1LJ-SPPVGzFtqhVIK9ex0oLClwLQp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gillWX2YwWusmfYDdbb2aiKvmU73yi2Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ct8yCifMDbuW_a6Ezq2NPXZeqjSu28au/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RaoG1BGHh3f-BBPAZ-S7PD_10IhWPH6-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11yeuwWZRyvQqj5Gw8kf_PX1OC6ifEFfk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X7OKWjOngJ8IaYz7215NDuT4Jef2BWZo/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1Y8cZ0FM8bDc6ZsX-xFeE1gcs9BBrtRgi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XGHcVekEf8_IWgBA-YhRfHhB4JKZHmH8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12seqPb8kDe0tE1ivn1HJJrfifLsXZe8b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tPfv0XBk7Edlq5b4ZaQCXWvVYB3RS17M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DncH4X9jPldF4_H2mI2V4a_KN_95d4Bv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uMEzNvzpNLm6I7aKbfSzA3TDgLpGrM7f/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wXUQ2pRZZ9naRZWqJjiLpoODHT47RWrH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14qakFNiE4iPwLZCNAnf2MGYW09X2REW0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QwSbixmpnkbWOS1SnLw1n00epoaXCeJn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JIjFfKna9Dn3UgMdgxBH1dDtr9LsdwU7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qDRSApfZiHlJj6QMMOBwM4E5v1pZ2oxA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DPOD7Y-XlaZbfYSwybIdbbfxU1kZMw8m/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JE4WNEHpgLYxrqg4oBMCMajVj71t1KiO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/124pR-ssSDT8Y5WRITiZiQSKNWgSsdm2f/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e2H5FUWcqHcjQXTDBieKB4w7D68FAGxw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17m83JbF5fD98o9Z6V9cq1uUY_jgoKps6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VurYBg8va_yCDeYihM9fiyyDokBCJvy8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rd1fnFcaNfok9Lui3vJgTkfF0n2LNZwl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uEIr36VBWNmytU4sj4zziCXsLmWGMP-3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17ui_uvwV71OfpZmu46xK-DWGdg2YkHCF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NvTEsOAwgshL_If1WC2lgd2oxINkNTSv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aNrue1vlh3kLNtxKL1Fa2avqraznjagt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HWryNupEANfX_3rQ7fQqsOSOua9yryqI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1neojsx4LEUhybqZG58XW0GOxu7tR02Bd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aLge1XzJ9IjPmvjT0MOU3Er5BYkrgoSP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GQ2X8ig3Kz_SqjEFpwVTno3I1zGXl2Qa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1x_KkljH4YeiYrQ3IrX1Ygy2-9rWczFXo/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1dxRYafICHBF_M0O00cUmLvwrZAAcd_Sq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D5j3KZNZsRgmG60CG9VngzlZMW1E5RsY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/156QBszGz5Vz3DXmUKc_qp3XwInGZf9dF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LXwOoZGYUb3ixsS_ldMv_pCyBV0SGtmp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fjjnxG4Mh8O2Oj_wXoDdWDk8SByMPQNP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iv9Ifv0j62DagDxMOTHk_QtmqmKeSV92/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1z1gJvk8D8ulVlqRQleg4SRBSt8DUIdFq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sR-Cl0yiDIhChT08VKmzf-W1zKgM9v1c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LrQ-z9y_Txh70SG2E8PlWJgVumR3auOC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ROpyQEJa1YC93Lis8iPtflgkRD45lvn2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G__lD6rr68hibABroVTVpGE5-GpKXslo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P18t6MqgZHtUnZaWUFJctGFsDR1hPK_u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yFUqfss78JOl3GLddlIayQQkqxMpkptl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1v89V_4qWlaMXi_JoC-t6p4Gu7vM0lisn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SjHBglG30jSKVAk4nrnmbMuDNn5Qv5hS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WuqlkngPZd2Xq_ZTvVYmK3hHAUxcu-bO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15A2gc_BTnPQxuU02igbD8o8TubDRHAii/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uxdn6XZfi5a97Gc3QeLI2eCllD94wr-H/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ExvFrbBw1v9nonTHFSjSDcV_6mQpuHYz/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1fnoHKM0T_P5UZV-w4naixlgXxQ_lVayE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/117z42HR-Cp7ONgm7lAZe05YlpqhtTgu5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JEo9aG2m1z2MGnDzC9sJT1bv5HVG2L9v/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fqRgfLs9hPR1JyLz8XDFzfumAI8HCgyK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b7yosuyXiR8gMznDVy3bYleY4Bwo9isx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/123K-f4zDFkrRxVlWbGB2UVKsHnXXdqBW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dY5PBJoSJjpnz5gFg57hstWZHqWe8Zrb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rGpLnigHvM2xWNXTBt6A9D3d6bI_RSYs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1g55JD98CmofOPKBNe5T3hxU7JWAb5Sjr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HlZtk8ZdLgoGBkKRV6J_dUZHGTqjgnn_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11Fw0wJzN6WsK3quGvjutljhzVY2fTJIA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kUcaWSIFnYVvRGjSHDafJwDgVIWm_iV6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j-9ZqUxe8GsBneV2oFhuJkVzldTdJY-r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14dEApxBtEyAPLu1j4Vh9Lz4Th4uWEcO4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kTiTXcHeFtFqwVjiew5-4ro2d5B2JGZ_/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Inside Job",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTN1-mfLCfHW6CGc7rFKuHo4dnWrkuPyjkQTE102YDJxQZmZr1U",
         description: "For employees of Cognito Inc., conspiracies aren't just theories — they're a full-time job. Inside Job is an adult animated comedy about the shadow government and the dysfunctional team whose daily grind is committing the world's conspiracies.",
         year: "2021",
-        link: "https://drive.google.com/drive/folders/1IFalooPss60gnsuzVd8C_szewNqEb6VF?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Part 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/14TVHK3IhSi05KDXn4RVSqogEY4BWDYja/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14KchO8m4pMbwtph6NdmZP9O72anq_upi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15lYRhOlYHYGTGC24FMfURlS2C5AOhQRJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GCVzVCuLeLvYL7XvNO7RiTole20IFsFb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11yxvJPf2IduJQQFMfS-FQbPDBVc5fGpL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gbNqIIolm618DWY5caEKEFdK1gYz6qK-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11-krooNnAs_lU5w5vqtXmkO0c5v-jhJK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kdSDSZcPgTFjiBKJHxYB-arpUSti2h8F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GH0DB2jCYPMTi2MRg5ll-B526wPLxeni/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-TqrdEOb37mGF7EaVeU3jiQVVuNb_OpD/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Part 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1TRf8X5T1nmbGBcU9BFqKwPCxCRVt3i27/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13ehrfHqvjtw1BsHCED_yFUmIWG8oolI3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11_Rwa2tJ5abG2yRT9kA85Fx-7KEL7BQs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1i1qHW4HvYaiXGG0lsmfm1Xa8m9u32vQe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15-DcqVWb0VKZqMFQZqnTYSsw90Fay-qP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10Lj7n33FzjOAgd7yWMJPfODjOYbF-LUA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NWWp7cA1JGpq4zBSEIjYmOGOSRMdHU_q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VOuX98m8AyAE0KueHiYcTVaGiCzjSPeE/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "INVINCIBLE",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZjE4ZDU4ZjMtZjliYS00M2ZmLThkNTItN2U3MmJjOGU0NmIxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated superhero series based on the comic book by Robert Kirkman.",
         year: "2021",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1S5OH4Rs78nCVUJX7CDrv9OEuW9UOYnvl" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1BXvMJEsw-zNzRc4JHwSSOJUCv0tyee3s" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1k_nWuyVsCfmIcHAuWfrpysdHE2gwBKDK" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1wz5Ftg5Y8sRfRxplk57oLKRhscw-eSxu" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1CoMgg3dNQJdZOF61DMckEHn0LSxMzlPT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1idsFVN2UDFrgBqHi6iI39MIpbAshd0qd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16lKMXQozGLrxRQjQmDgdMnbO_XWhb72T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18oxnzb5DcAGyOkkTM8i7QgjEIwJmh0fp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tA7JYyEKFcmkSznDIGqJqu-LVV9IBs4V/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18dbGT6a83z6ycpPN9aZvnEjY-2c5QzyC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zTqYkMYHIR8DNV-tOe4BaMm_XjlYEAK3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15PoR9KNQeEHuF3dGxUKOD3TnQlxybFWe/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1zBgkjcupSKH9nqImaSMd_uotpaESODsa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10EiMZ6BuQ4cDdV0N7TjCRsT5kiBYu6m8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eBsEAvvpXwHAwYjOk_4bpwwzZzo4c8q5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RHi-1HU1vUtgk9GVUMN21EQmkk56rzDB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qGwDjKZ5-fqxZsCULRcPvQ1QJSRBcipJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Tjge9pZgKW_E-owB_hG6k7w3clC78uOq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ckKI5tn8lvjb1LvvA-T2W0nRG2Ze8Hrb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ys5cvG0hbB-ahXc2c4SfUc-qtzWLdNkX/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1zE5rD0kAsbRL1ABzQ_NYmrh6PMddTqBW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xssgad7jrQluALCJ4oIcQt6EXfYr8cTK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1osNi0fOSu2J2LiLpVZh9DYCw_52L3uWO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-C1e5CnYYTMgvQoeJJNnD_rWo2y0z0G9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pfUQwP8AaR2Y3yRgNAQBBWUmAX5Kx2Wu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EQtAuPNEU5Z8l8-vleFHfxHl4-0ffPJE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TITfDrfbmxc2ofxbDVBkz0QrtARoHZ1I/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aFCK6Uxdy2uAvuKv3OPDGPdwQhqCjP06/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/19SmB3hvZw5PONXHc8-4CNuQgrb9-0Z_g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qHongdzMJHSq-qUGr5P3PieyQe7ROF1-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jMAF4uXvv84aW7gVs1hC03L6JigwBLcs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17g7X-gmAFQd-LT3tOC4czkJI0QR38KdD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n2N7ESXiT2El9zadMMykfoj9pkmh7pDo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PPRSm5RaaDiSqaM0rwBTBb6zmQc0-lOl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j5aMGTjp3eiMd0oWbvs9r51cXUppncgu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JCigsO9EPPjx5zzt3SBnpMsZp3TzW0ia/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -323,17 +3402,124 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://cdn.jsdelivr.net/gh/samtheskeleton/random-things@main/ITWelcomeToDerry.webp",
         description: "A prequel series to the IT movies exploring the origins of Pennywise.",
         year: "2025",
-        link: "https://drive.google.com/drive/folders/1BmPAgeLnXjwEA5Dbj9T4jyGxCxZtUCG0?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/16YlPXM_2zbkLiqimOBSwPz8TV5oY7hme/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T7ThKYyAiiU3vHpcbLDRaMmoRb-aPZxl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d-m2qdy4m-OJJUL_KgNJq4ZvsV4HDSP-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XX0pDwlKHnC-laFY5RpUp62EfHk5qmRO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bqJbfZdQDpMQNlXd4tVdqjD3yFCdh2sN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1r7blrunwl4FiueCha9II1fOV4UqjaH3V/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EDY5r3VncKMtxmIjYL4WUv3auzkXzxH5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yh6pp8ucMUo7eeRszbLf9UTx4ZvS8FDB/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
-        title: "KC Undercover",
+        title: "K.C. Undercover",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTQ5MzQxMDA1NF5BMl5BanBnXkFtZTgwMzkxNzMwNDE@._V1_FMjpg_UX1000_.jpg",
         description: "A teenager becomes a secret agent for a government organization.",
         year: "2015",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1T8BbsKnX15lKidVFNmRuuKh8ErX5o5QI" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/190nl2SZwmpoE2IugUbQtxz8WrZE2Val2" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1LUtd7dYjcxws7ymInrkX_2KZIQDBhu6q" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1it7hz8ttlddigIwYs9jTXjx-NQKkjPrl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TaLRuce8StfHiTrFyqQY373i8I5udxf8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xfrkIFIxH8vT31Ik2UqHfyZPNcOuk4Bp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cbP6Pf0m8Cr7s26myYzYXARSqKQ_K8YC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iREkH-UsjWUaTK_pIQxN4nAwEz-8MG2R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JAAhXp69FB4jtpa7cfjZg4idmIatF2G2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IfHnPKTTLGSEfqgj4HNIPEypZem28sEv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dyqvsrmemjiq-SPyRoek3znlzkXQGtmC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1karm1DuM2hi58E29WWbndWHtdA14gnyE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MbjcF37gquPFW1CKvmUfwATtitT2_7ky/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QqZN2YeIdaAyUCVv23RN68sbNKuMfa-o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tvA-SazqYE00qLEvV4EZ3YY2pv9mtRB1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qrbfk9Ay0S1yOjSPa1F-2Wc2L5myXLzW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N9h3JoFVoUeUcKOQjgti0nQjjf53Grxx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hWXstfQKQKNnZt5kivQnJfSL45d23QsS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X9xZ9tpD_VT-g7YDI5Ye-_DbJ3scaNjn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fwjq7466u9zQv24HK0-8HHLkPmOP-GI9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NLMPR6qQvjtjtv-ldCMWqhw0oAfCdlZp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TmdDrgkIEXBCoXcsxQsANPrLXV3E61_x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kEH6tnU5aE_ZMm5702rZyXkbjirRwLQD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/117U3EiqftuNSWWx1qZUarjRzPOHTFODB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lUh0yNUuEkdaa4auET4V-toVcfYXh_TF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18Hug9Pwb-i8nfS7HpoTS5QdzmzTBOv1I/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1s3qwIA2w1ktkw1IMgIdP1E1tQF7y4xM3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12XL16Zzx3lP59Xj62IVNq3xp4JIUEu8a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1j38Ts6M6-BTvtPCKJbaKIl71RvAZZy5s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1v_F2milJdEkqwlgBn2e93-OjosgfvXLo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14gWSIkMApZKsOCc5eHD6DFj5WdNvv_w5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1x5SqYnRylup0Wfg4mXsovUawN4RKCkgy/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ZAquxq0K-xTFGdmUO_yi1iL3tEuie6cv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-AYjtmbg5f8O9eOHO5yDt7BGF2Ro6hfK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hW31Z_69LAdDqwR_HxcAOruEbUppvw2F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14jjShJd48IglS_jF7KuEA-06_kHbca7L/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/125RPmkK3qYDcuIKujstsNCPlq237xfO-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_Y42F_GKh6W5oKCP7qozUdSLaJTstSAb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xIDxsO1oT6VOBjmD0maEebTtwEnfDxAR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FfUhkwK1AOoOD-9ZJmuE5NW0-BHODcA6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QKJh3Co-KZTaQsknKDyjNd123TtTNGhY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TlJlgVTsGnbL28g6hqh3_DIYWxfZATpj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iJft09j4FHqS4fLu5uP8x-6ln1EThiEH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10vYz3JT63z5ppOHzltlBy6sW1gyOlKjB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rk2QFcsnXcZ7C4Wu-CtWEh-_iZ6GTNFm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gkj39zNX4XpSG3j7Ldfx70AZTQWjeSkg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a83spjbcxx46V53O6W1iyzyCljccNdCF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CiD6rms78sRGTWOH6k6cqcuK-zOGBnq0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mPzgzwCkUemzBTmYB7PZY7DuqAo3J8Zm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mAI82aQEnc5zwZRM5IKkV_yu-T6zhkhc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ii54WwVCDgHHdq_ehZnS3RFNJL-R-4SA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12refSK_5Ugetm7A6TwrxJ3CVpskIJO6U/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kl9JKPEjie_9f-uoptHxiWgQVWzwgOiV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1o0ig_UNFIPncIbHHT-S6uqKIj-S6mRW5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MG2xzvw5FZPsktxu4MQyyUZ9dGbWy7lm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dTGGCP8uA_j-jWwqF67cV8ebJSzWzCGr/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1-7qJ5JYcy2bkZwWr3K5knDNl0l7_w8_8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I1kRtg_37elQ2fPLpqi8RC_-bkCZCiPL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gIR4u2ihRWyZaPSdaEq3QhoQAbSrbQU1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n4TF4pX0_Kzu1831q9Z2SaFo2CV055sJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JPYSDabcKTGJZ0a-c63FQLUSli5BteWo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Yrz8tTg6ekiLPQ4vH_uK5Wtda8g3AFw_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DCWsmIz9E4evZj2JKPdqu-Cemc2wcsrd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xLCdJiXp87a5XXNPNhP8WLg7x8cI6st1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12NhhBNTkvREPlfw3KyPIIeDP9YshgAyG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cke8n7zhxWFqqcDZGhaie2Ri72-6jNO3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k7fChJw-sgYmKbfFFRyWJWmZn_FY60MC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TCLCe1lweIM_5rya4olcsEaCJodP_Gy2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yO44Vras1e3bcW1yT1yqzsKaNNlfjcEG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17hkasG-Kplh7ImY0yqNMT5mOSuZVDG5R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_qh_hxMqjZSuHrL0TXazlolLAZvMrXrB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1s0iPro7uaOUv_kFRQJDXrA2aEqNsjxEK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K_X9sXmbYcFaJnTdmKGlz8Sht72e_1wU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fwp7b1dJmN4q1p0X9VVqOHT-IpuvhWU7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eUdvwocIC_aOlAWVstd77c1bv0xMbAzV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11qlBL0_g1K60MqcFnuhciRU6uWFwLoaB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O8bfj1qMYC8QLXp4LyLnNQ8jNvLX8ZhN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PFEpyux0JQSqSXrodliXhhUTaFjbcnUx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D90RFuDXOfFGoRHkPRI1WkBvOxZhhqsf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10bgZqjGe_2eeJIbv3jaddVGIOfPsUoqX/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -341,11 +3527,120 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMmIwNjQ5MzEtNTg4Zi00NWMyLThkZDktZDg0MGU4MmYzMjlhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A high school girl fights crime with her best friend and a naked mole rat.",
         year: "2002",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1OJgL1LyWu3FNJvsJ-Li3Vi18iJhKB_YY?usp=sharing" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1KZoRGQPBOx5HkYQ5laLMugxqSyknDkcL?usp=sharing" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1K9dgECky1gy11WrMcHDI_MtXCHyyvqEh?usp=sharing" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1TR8mgOxvS6H05DxGUav9TC1ri41ZdHfR?usp=sharing" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1PR7-_JdhZN14NP-Y7DdLEyXZH1X_eLIm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IIqXBglZo4SZAm0Lq3e7e0Qin-h_-8FO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JUs899lgL15NP7LL7wn7e6iKSvDUHqed/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G8SSF0XDRueycFUclc5sgXPeWhutNCPs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1u2Pj9Uh_bpHop4AKrCacyLHHc9ebCMU9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EsBACtiCTjCZKG87nipy_z5T4VZrWsjL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pdg-HzjgWIfMd6ueTU733pME7sHFnVh9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1opwZgppA95GdhmlnzYF0SbnsTc5p2nao/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1U61Lcyodaq18rwURRvxejIqQX6029y7T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fJSyAaqNKB7_IZXI6bawXbbGghWsfu2a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pO-ElC-JNIlNPM51cSXkXLdWITe2SJN6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fbpEe4fLTI9XYaHuX4U7L7aTJQPYoE2K/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RKF_MTj4x4BK0b3OUdbq0ho5kZ_qfmp7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N4VNXDv7UDB5iNBSYROKFZZCMtQ6iL4_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I3T9JQlQqRcKEnnMtJL1ORKLzRq4eO_3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1p3X0DURSXZjY37uDuhKdpxvdOgLdyShM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1br3ERte8botRCn6TO-f6DDlluA0-v7Cn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13Aw7rsaX_w1h4mUJmij9aX0zVqJ73i_7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BFu18aTHzhajXduyB7cRZJyrXMa2qglm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T2rr1HkX9gM3iBnS6xonDbAKrwk9zI2l/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vPg106d5L9DWKGn6PRmGfDRi3-qP129O/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1rQSKsVnLaY4TCCg29NxGzRU25oQJv9Ol/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1neO144Nqe1GRHVM9IEfdWhcCGwXpxtg9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XrFN_xpQMeU4LQZZT4DdOaakz1vfq-Hb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18Is7R_EYo822HRrM7KGK9Mc-h3CCpWJc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19aAzJLkdxCo5snb4Qm18v2D7v9A6V2Gm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rDU2CtKR-XNspRT5_yLnMWBr4y30_3ER/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sAfQ0Zw4RAa-MYUAqyda2Dyeci3v6kvC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rVaf8Hs1RfOHsirAD81X10GjC3lJBsl6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YaKjZeww8OA7pzTWqRGl1u3-FhZlzeUH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aoGB__Q4biv-R-1Sx8zfb1Xh9EGvkK-N/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kKihAL_fz2BhWcoSH94BXCXPd87NB8hS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fj3NgaU8mEVBsFEYUj23AHAd3Do7SBRE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aznk9s5TGeugBv0y0WR4TCblV4vqiaRW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IBzVP8C6FSfwyjJ07lNnvmC5YEFmvLvD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16cc2KneY8kMYjK0YRPknOEMetYTXOpEI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1452iCtwyJ2PaKmjD0OQ2r8TbmAhsS2Hn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jCInMvemkZxhTXtqFKfbMgSDRtHDjzj-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lsccqjqjOvF-sj2u3J_vEIXWwAm_DzGH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ytaXboyrkN3J1YUbetiUUv9LXFVNI_pF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a4n_8DC0la8_TP2JoC3quOjrpDvJFhVh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10uHacIlYCplW2y1AVIwdd7__hhQZmhMz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c1LfuvHkOPAs5pGtj1L1WeurLm2X3UjO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1C7cyMJiUJDK1EOoQpgG3YKk0l5L03QLr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1V4V22XVf00uvXBV0AP2xsG1HduXxK3OJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eZoLCRtUQ3p3ARS0pIZal4tnGZlsxZgo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18fu1jTtDLhKB562BM6sYL3KFv_fhrI-B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GBiPweO9oiPgmfCw5r3DSJnBEY8HpjGQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DgEDSgJTainKGx0E9B4hzrjcLLMY3II_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DZadlbIdpvzPyvoCqCwjrW3c1C5Z9tbk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19qf5KsEoV-vW0tce_5SIN4vzcJBI25cT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19nAIc-_Qfpqepcj-Yw92JCTlb9Mc3Pjo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rrl3KBdLSD7hbOAyAok5omjwU8EyFiTr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YPo7OgEyNjWiRxm_1HEWjP5GK2QsTZ1w/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1PFJInjabbhPHdWIbEpOV-LFjX5AFwlOC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sy6yuLKxdCm1ENtVMnB3oJ5UL75UxZWt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AeNWl_Wp0QRW0W75lodiXVxFScQi3kRB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SZ0yGEXjPn6sZHgV5dtPVHtOoye8o6rm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O7cILKccYfXQCJHRCLVIOcfqoRuVjdqR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Mq0LOnBSVT0Uf534VV-zSQAgU40WgfD1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1o37UT9u-BcgbhzwOu9ZYtGzbc8t5aClA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13zqddNzrvGc4FuqO5g2l7I-uJ6tGbAfq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kCsJod296Ln8k8xY-QMbpRwkLCtGxUSH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1puCai_glAWS1I3ahR138B8WpX8G2Z7mp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Um_7EVQKy7ifCBKCY-SsP5VIZU4KB85h/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eo7-GYt57isTdKNEaAxnNXf6oWzpBLkn/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1f-rQ5zSSD0OwR30_5w2_cmUg9Yegi2lo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eAYUteQVcL90JJ7CZqpD76hsn-SU8uA8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wEYGUuavgOYe9xcW1G1BREy1ABhZZCnS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rGxo_YTDSIE1V_WTQ2Td5Xur1rzE0WPi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1N4Kg-UrdV_wBVEOzq9G4hCehRLE1sod3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eRQVFeIA8XlLpd4M8SZJ715JBJ7gwxH8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CINRmq2z3MJJUBzqxPMcDnVNibEl03x3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10OBdhlGGYfDaIeTsSJLNFecwTYvKJxTn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qxIyp_2Pt4rvCBuz69JkIv8o-9PvaPbd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n1JdYBN8tdJZIopdQscgguedtCa3B4wp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HFso96Rh3VTfeA4XL_5UgDZvVzuRU4xR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11NRwLhLtxuHIt6T-25r94QoPg9eBRAbD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1arpno6k5SX5z7TOdiGzznMS_NqefCBK6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/197yYjE4ShMwfO9UA431Tfq6aaJdkICIY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tlsZ0tKVtdv-7K3DcyPb5YtiubEw6MnJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oCyx3R-ZUq6PbDsovGb1q0N1trmRhz3b/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jvKw8gtZ8S_G2cJV0eGpeNEQy8OMSv1F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1y9TzQzqmRnUMZb1TCWexgWyzEJ4X8-Hb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BlEsvbCGLYT-U5dOMdCazgLdj4BTOuzP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bwOfT6qW_ooK9RPh8zXDY3ip_NGHd9wk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b3lNuSKConBoyi9mPdECCMsIXparv9uc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UDp_NAj9_66pCy_h72mF6oAY89IY2Xys/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M-RstiBN_gdh1BhoWhAqhlC3ncjgt4RW/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -353,20 +3648,246 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZGVhYTMwODAtNzkzOC00ZjA5LTliNTUtYTkyYjA0MmFhNTM3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated series based on the Kirby video game franchise.",
         year: "2001",
-        link: "https://drive.google.com/drive/folders/1LawIFQ48UCdP3-VUan7iWTm4l5EonWYw?usp=sharing"
+        seasons: [
+          {
+            number: 0,
+            title: "Season 0 (Specials)",
+            episodes: [
+              { link: "https://drive.google.com/file/d/18-KWsi8tomAx5Ecfc8XpDTo3WuHLEiCk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Uezn6AqM6-uBZeJaszOK4aYU1vxobQ7y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12q9oe-0jHtUMuYwDO5QKdgizPJMYS7CO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_yYGwyv4-yzLEAl1ORJMyXER4GVkApUN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KdthsA8TTB5BdrL9Y-ApuZrbBLELBwJ9/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ITKoIQXpGubw9BMvqt9jdRBxDoazFjYb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1acJfe2Ckvl0t6vpPS72ophcJlOZjnjDj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12nvE44L-Fhh3vyXtv-kvRy5-7D2-UBdU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WGX7aXdjZh41TmcYuQoFexBxQo7K7Osc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EMsusJBX7PJJVUfzZzrHPzRRusFba0yi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f29J7HgxFQnoREocJshw3wQKf4uaz-qy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xQfsQylvugeymjmITK646bKz_EN_Qpeg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oje-GVwmCNpUzpfgZhe3MJQb2nzBGqab/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17dZ6Ni7mavQLtBpW5GBHNPTPblcI87ul/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hM5aVZYHRwVJhvM5K7HYUvgCfswDBAFE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VGuFTk-RyiAEK-ASpUwNolaEm4luYpWS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12Sq9ieBQqOkAgT-R5zo5v-bxO9bhcEVw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1P8mElZk6ovXk2F1bf0Z77R-Gv9hFqxoK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hIEEj9i9DLAzniHuEsuzmkOB8HcyxLbu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ulVxEe8Fod_kREOtngRJeJMLrVX7VkkM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MM2qtDWmI-iwFD6ohxRDijAbAw0Pfd7a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/185YKoD37HR2_Cm8dogFLNqq5q4MKRTG1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oWDUgLCtX30DoFhW2MsZYOGWgjmSTiuJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1B1KVDJgIkiN-V6eb8Vg1RwrU87oKkmvo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uB7l9LM1vDuen7bT-Sgy7WVsOzBFdISx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MSZzpCa6FfCZxybJ1B62cdm9jifE4zLO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/182pGOGDUAk2lptq9sCSKeGHQsm7U95GR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xRpJF-eBoXDmbvKbN23iw7yQTvFARFrE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oRZgDaZEH3y8eXRWe9eR1jXrmEi5YFZK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FMv-29tZqc4mxj8fCjNrLR1t9Q3Mwtf6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-Oiif-hpyRD3Q_ETQg9FE5l6F41N9zMN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xrf8NWEPF4rIzgVQgHbYL8AhEDgznzw-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12AVbdDT7nO0z_nuaErgpPHOER6EneGTK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18VEVnsCN7ZgFlGNOK87z-9LYx3SKLPoG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18iUUWn8io91oFqasAf08PHq6VQ71FnVD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10GZAyNnM83-UA17I25Zmvw17pRQX3UBj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RYgQuzidxYE_T1h-lnv6X3SHXjwu6RRV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Qk0VkAHd-T0EzBZRtXsf8nXDm9f6xomy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bFR8hxRnjTPe7rU2Y9zw_rS8CfrCZFev/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kI2vKxRGtffjyKQIOygbZ39j1REYhv2A/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I9xotdhBT6Tie27Ho9wusHobykiSehwn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tobqIq_2x8lzWOeYo_iqHXUNVQUz1q1r/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cKyeVAN7gZKBxbJG6JxhzPG2RbEp09r5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OIFDexIVIGK3HKNBQPQ6gSMnUadyDcTG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rfNQ0VqTBsmSgeMzZ3o5RswyLrNItOr_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TAMjuUppYSMQjty6s3zm0-crGy014mF9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZV8jVJVRWUR2-vB6za3hD-NHyM_cumem/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RXL-cIUawcixkpslQiqnoMMguW_lbAkq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JQCqxRASxQKLplIGkGClWIECVLfoM4xr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sjL5pjowSvZwnjsu1A8EcMDrKVx1pCvM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jxm3ZEC9ZjvIbyHQEkYRWGt1h1FW6QF4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a3uAmKjjDEAhkRIp4WTSGWSYdfkTYSDS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KHYNp_LPPQu7zopG4L1UF40TUpvZVcTt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AO1n3w5e8Q0udMoK-2QErRIbbhYdTIUA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10Xcokkkc52SVRFmf85GeyJBL_EqhFisR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/189g3EZMIW7svXbMJJ0l6zsSxd9rY75gI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-SbmhTZ3FKfemDsNrVryehDQuaWB4G3i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Vhf8dICA_8R3PxYyfsXiSNo2fyEqoo_F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1v_nOBbHX-jVRXwXwlrltBFnqjbsaJmgV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lj4jO46wnnbkbB4morCjW8lLLakUtGX4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fQjn3GyNDACLSDN0H4Bxt-R2bBHG6Jib/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D3QmYSCXIDXoGZ_80vCr_2P46it3Xgbd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pu4Ek7d6ujyduAtYcax4T3EV6wBLaYpc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aNPtOPAboHWYtfowpUeXfVLpl3Cbw9Xp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YMxKXmpbiz90831VIGYf_6bI1rXviJEz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DVwvqK5C-ClIJNe0dJxuym9yvBkjyMB6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BBy7rb1I6idk7GHZs4WCziHX7FLq_ulx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bsa7dpi9lTpNVZIkyEkInOWlNImqwkPg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1E-yg0Dl0Hk3tRnR_nR0xFAWsKSHUjwMp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1m-FCSYeOAoCHViNGCgbAclNButAKp96Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tim8C6A8S7fg800Ib6moiDQRIDqpIgES/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17odBNLC2iziB3qAgO7-zOWqQJI4YzHOg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nZ8WD9QyT0aM1s2FJLldHtLde2gLiXtM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KDdkzmmeDGu9SYHU7BCnG6x1Id8ri0hr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FjiPA8Qw1CSGdo5kuXZoIJ4AzElvZPXC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Jrmg7MxTTVgYvgaP0X-bRsSE493SWIEq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1o4PRtgn0jrO7c3r6kKqpAulpqBmzsWRZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11WnDM6tk2Fwfh_WudsioiGHF1Oa40gY5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oO0E7To4ib-5aU0F-HSlyHTxh9E82QE4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D_qNvG6dl4J4Qitz_bdmYYV9iEuL10Vw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Q8qezfXGVBJ9ymCrPV6ehTVOhs4Xyqwd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QmZ2a49jEnoYh160g9hpWf9G9ZvcGxqf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RsmkXO_bQqZjY2yuqIqPiYbuExUGN4wf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qHNlrW5JJe0uGDzMAW1tthOTCS2mkqf9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Em8kDRjhr94-S3mdIEP1SE3A4mwXacyf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1J34h3pOb5j_LhEC-VZJs0NA7N4iGS31c/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jUqNBI9qCQ22jrwajJUnlAsUUvOoYnGu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/101k0KGyrMfCK2Qelh696uED5cmkIsfjJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X_TVAG6iGVT9nxHbMDBdIYCRMMHwZHtb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ndfddZT9VQBfiMlydNiZZmDj54t7fkM6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dyR2RIHfK5qt9runtRHdV54XHrhNhF8N/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UEhHJEDU2Ljo5NBthw6BEH9ZrHthuuS7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w_ApkgkCRepAjyfgAdaeYoK4ISxajp-T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hHWkAFp1ei-hsUwmg58cFtbAfLejv8Vh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14n-Z-91DmgSLkfrsukxOt5L1fbqpxdIm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AiMQh2Ic9UlEzYrHUoffutZ3-0kuXrMB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17TZHGp1KJXVT1Gy6dOIwP0E5rnCS18ib/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_6zoftJZDKzohk3dvG4rEqBJet5LmEtt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zOUoke2SrcvVSR3PHnGktUhjEdi-0_Rr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Or2O1NTNFaPgeveiuEvCVmb66TSBETbo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UIrYL_rS8naa_Ko5O64eDV_vnJT7IpcT/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Lab Rats",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BNGI2NjU2ZGMtOWJhZC00OWFhLThjOTEtNDkyZGIyN2RhMDYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "Three bionic teenagers live in a secret lab and go on missions.",
         year: "2012",
-        links: [
-          { part: "Season 1 Pt. 1", url: "https://drive.google.com/drive/folders/1Q8TzYtSqGaM7VkSsGtPCz4PikIWZQQI7?usp=share_link" },
-          { part: "Season 1 Pt. 2", url: "https://drive.google.com/drive/folders/1L6Qe7kyaVM6qXoVq-p8CwFXDqXMf_62c?usp=share_link" },
-          { part: "Season 1 Pt. 3", url: "https://drive.google.com/drive/folders/1ErVBrquP-QgyxqNUaKkojrpg91vRUoLU?usp=share_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1yjysqP586p72v6rHLijKWxl9TVDMKjDa?usp=share_link" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/19nqs-gZQdA5REbqggVNsdWxvORONt6tY?usp=share_link" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1uDbLXdKpC9j-eqvt1T7E6rFPN66jH-qj?usp=sharing" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1I1JFL-V_CNxqCJPgfi3m7dO6s5RUD6W9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1R6f3nQvCCTYhOaEnjnmoALqpY4gLq6KF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DUdMNcJF7rVEOm1nTOPvhhBk9EgJOyPG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1asKvMxA2QYNDChS6orT2vPUpBu3YQGud/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iXVRgzOb-AEmxCKLlpMT-c3k1NHKRfx9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pDcXPjcCdPazX29ZtRkHZFRWu6Z8BebE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Nw2vU1KOe5QpOa5PD_384cy0HhuXceYR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d2okCXjyuuTe6IqsSTQuk-dhntjwlKZW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1amvYqpPbAtUQa-dh7vTpmgW5gRtDLvep/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1x7HRBZLXVcE-XRVhHbjfuVhFqFIIAtA3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZYhyNwqjdGks_w0aqxX6EH5vnZc7oDY4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17IoYn7KgoaXCpJSg7fc1cjTciR_nJSdj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14RD2CO_72X9o_GHXT9ExJmT7i05nImg4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QYtBU7nOxncMYagwWmPXVlPcRCgvXdCn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GtO_5x-WGiuKKqPImqLzDztxnV_67Oi8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rJznLHFGHoZDEQ91PRmltVCCRM21JVGM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-PVkSGP2feAc1dq7VLf2ZXIlRa_lPGAn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18eNLIVU2bF1Q0N0bpE625suYf_GTvrgf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aVTHnneqSUYicV_d6YsnvE1X46j9gVyv/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ukxoZ0AAz-v7nmhrHo3txSgTV110YA_u/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18ktxcvpAWr7oV919z6InQby2DiLVF6ZQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16UBNbNQ6WcJ3U3QRzfjUh5vtcALd_ZyD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12OqPF25wiwiQvdpnOJwQRDwy5KL958Yd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rzCPpSQNmz-e4-NaAPKoZJLfybBrTrX4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/154fjIBoXKvNd-ntcxCll5TteH3CjcfWA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ppx3kf2fHLy-4GPvWSD9i2pF5gVtjms3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_v1cynC-GTfrOyjeIwrIVCbfKHZBAqf7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Zl12bTd991Il4XCPUNpyhUzBV1NOIMio/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BhbdSI_QVqNIz1wk5JhvI-dIv7uN2HOJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11DiWeXtiDcCXyA23YEOS0yrYlmWAavJA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sC-DN2NFgk9KL1MczwSOkJHUPrIcOR8s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vqPW239utSRv64MsKWWhMlRP1ChYVtZg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19QbYfPXpE6kkOHDeKI6IQEM_bqdqDMon/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zMUwbZNgI0fX-JzDHdEI49tmcVmCG8fW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16xNb3ujV_V9QpCfk7hb8jv7Hkd4IhiAa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DeK34E9Q2d4qmVp65f6iLe0vdLQ83GML/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1R4_IK0CD21njc3HhreaySz6QeD_5T9QQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kb6w9ZY5ZX8MUKzcM5fTcadpVc12rZnQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1clYOZpXOPaFfzjEvfROP7v28P0iAoOp1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A2Rz76bpMMrK1MnHKK_135-vfMMoW3Ld/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O6Q4b-9NXqollWzRhCTF_D1w2IGB-Dth/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wID9LPzQ2L0USP8oxMcEuET5vqnU3KLQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HGbdG14inWy4kc96r-X5VHLOeNVBkAv3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k3WhD_fSLuRHIYZTmReHgnuON9xpia_Y/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/10iBXNavCChhFRRihK-Jk7Kg_sk7AOzPn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11-ywaREuD8EAP_j_A9O4Fn_oXudrQwi0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12LcVqri0SKya3jy-Tm8vn6q9G7xj5c7U/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vMhFeJ33m0wY8S7FzqF5lAsjTd6D775T/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16LK8RSyH3GZvW66svb_Yfm4FqfW6lndG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UYgye634AMIB5FrB_MdKN4Z1ralMY-G6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NQ3Jro7x-MJXtLM6O8C_oL7ZqjoUO4v3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hBu2pS2fA900fpIVhXHZyRhemRUHGBoI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D6fPvPBZUBEl-XoeVUQS_PfKh2Bkxtt_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1K2r_3_K37uKa0Z9MbrTTvwNt8I37Wh-A/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10scTDM4QHpbxdIdWY5ztB5jgApNOJu8i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_ipZR1mc05CvsX-FT-kwhp-P3rjmyxgr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fRc-PZcjiZV4FoaHpIcIgy_M3dDAz_GI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YPYTEccLtob9xly1h9rEPov_yEkGmnEC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NM8yznbYm7dkauKLN9f5Nhw9_k-H70bP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gFkHkrAsKsljquE8a-k9ho6nEJqPy6cP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11YtnJ-HNiRKPsjy14dtQ_9XDw0CWBYwR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DoIEudI72b_XuSpsPMMblMOFXN7yTG6O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xyi19iQwXjGmsYa1NHVlubDYJWAzrvFA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LDD_yhcQmjCwKKk1WuPfl78BabB8O1Ix/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y4QgBiNwzeDPVJNVO4YEpnxPDhx912A4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UrOP7lBYMcIDAxP_i8S9AUGuC3LqNgk3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bBM5Zl0VlfZArjmFyl3ue9py284PNjMN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1axgQFUWk55ZfaCjdQJSCUI_Y54NzY_GZ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1CuSTX4YL_kw6rfx7L37mWQXw9tpVnLiF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qsY5KHQXpyVV3om5_ikY0Fx-DbWvXRwZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aTt4TJFE4WSl-iwq4bWw1xTzYHioiZN4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WVZnKnKYVft4yt0Uj_wrhaa40wcnh0pg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Dmzi0W-3BjpCUVOA4XuOSIeO5WIvGlcd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17dYy1jXG_rRjqTSLKiyeQ5CUJFTYbqJ5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17slYOH6YfOUGGSkErABiyijcZdUTOwhV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l_7dSSiu8MhISBNUVFA_zdsZ4O7Qt1Z5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/180LOVEcLze-ujdwqcIX5kkEOP62wy3-1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zhA27DWmDfXrXabDXldR53m9Fq-WiHOm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1W5HtrVoak2tfeku3-i4iQOcKy26O0s_5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a3mobi_H3ooqvIhANhg-bYJjmqZEXeDT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IKvP7A2zTFSfq04rpCUNxs70Yr0tAyoK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lakft-i009_FCERjpunEP0i8vAPvnZMl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/185wVp_v3wLnGvJsUVlD4k57k99HEruDn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PZGcX2hs5RclHUr9Kt234VS7Hvk_vsM0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/110a4bYSuvQF0wBCJrsrSNuI1VXSLxgEv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-UX7oY94jfGEec5RLAWyVmHsHpGuhGIs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jhbsLqCBh2Q1Hc9XBnAJT9wqkzvh6QCZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Wkm56Z3k-Fdugl8Ztpl-Qpe4Qavgr6Hp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1llTBfbROU_QS7tyjqbsjFKvo53nRz1ou/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h1byntrXourRbrv8SQaDeHLRWn0DlSZr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10fOdYlWR3pxX9fUbKK-Ycsl9bls8ZLFq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Y0GhPCUkv0KUUmIEAyTrOzv08tjkLPNH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16QT2-qYqSat26M2xbtthiKLlS210riZc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h-w0Axw6B51uCPE99D7ZvR-k_0EcMbZl/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -374,340 +3895,2632 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStuhyop-i0Ld-YvRc4e4AtvwFRjOGCQT8W165zospxSJMloEt2",
         description: "A Marvel series following the God of Mischief after the events of Avengers: Endgame.",
         year: "2021",
-        link: "https://drive.google.com/drive/folders/1688Cter0VKmjpR1g5YqyF2W9NfmPAbJ9?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1hSRXgqPALKB4XCQCFj6agAdDSxmGyxeW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_CroqefUBQqMKArT5MGrt0CT1RzBn0Mh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yfhVBf5u_DtsJ48Rcq-0yn5Rh7NY2Jvu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14D6WREDkA3tbbtxJIJdvbdQWAUu-3n4k/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rWmoUU4SLHz5t575NM7n30sTLkLnCT_M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SBFGpTFAEszcxQPXFy0uckb51_KnR4GE/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1FZqL6TtbJMtlwhzIH_pbFqKTP2fmj7Sx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AvMLzC6gONnYAVYbl3d6Mbef9AMw73z_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/186MYQNQN59V9SQPL9DgiCeNLoEy5rK40/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AreNClp_s9bJsdtKDLK2k8gxFom3d2Tg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TzXJ2adG1Ah2t79xi2SWvz2iFRy43f-s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1W2mFTPclF310qFq8tz-MByDtNrBh1teh/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Miraculous",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BODQ5NGFjZTQtNDkzNy00YWVjLWJiNGMtNTk1YzVmMmQ1YWQwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "Two teenagers protect Paris from supervillains using magical jewels.",
         year: "2015",
-        link: "https://drive.google.com/drive/folders/1QsOt7Qy2e3OITwrO22moBpbnv3fpQ4MQ?usp=share_link"
-      },
-      {
-        title: "Moon Knight",
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BNDAzNmYwZjgtNDc3YS00ZDMyLTk0MjktMTg4MGNmNGU3MjlhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        description: "A Marvel series following a man with dissociative identity disorder who gains powers from an Egyptian god.",
-        year: "2022",
-        link: "https://drive.google.com/drive/folders/1nW610bRzpYobTHqK5k13LRkiZrRvDmZ8?usp=sharing"
+        seasons: [
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-BGqO98w86uZx6DSR-7Zudmxv5SC9hvf/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1RY6jF8kVjjbnes2Mi_7phWM9buzRccXq/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1dnlRW0DoamYAxM0sr4X2ZdlkSMjZ2YKK/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1hkm_RsXszdU-t5BdGHPqhEXOXGzoExNB/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1nIqTzpcXtrMKGDqow4mkvBodvBC9YVLi/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1afd0NjSUVeAdkbZu5sf1nQDJqOPr7tk0/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1tP5LzlZylu44kwoSL94uZ5wW21aFK4q6/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1xkC6RJGwb83ui28BDh_BHWC5LI74vNED/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1cMPCYn09GFWEhEuEpwGxbD5x4-0-dGp2/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1pjQUXfbAFWbf5TYK_FHs0TBpy1H-4cfn/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1OqzHWuwZEXD5si9cCqOTsGgxbBV2GaSL/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1EOxg3cZcPIDOKzvzZ2nIM-J_WyAvJ8uA/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1o0xpbye7gEF0AJnFd0fZyu3ZeSdQQ9vf/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1FReVsoe3sv47YswQ31l_Zsp-pOiVuT94/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1QnrqAHKS-y-hMiDQxNzTiyreNkK2_USD/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1FUARpuuhTsOGRPCr6RSwETeW7hwGet2i/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1CSvk4qa3cS1o-lyyIiVx5KAwaDc32ZoC/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1TF5uum4wyMtR3Zx6ND36ncGAw_tZNMzb/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1LkV9DY-p8CZSk115h4SPFWBwVk1tuxVC/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1RcxrAIl4Ktx_UGhhXlK5FU_y2jwetCH3/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1p9Y3K7zPy5mpSYlwOEiOduNI3EW1f4zv/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1tqFUeaT3604wi4OpWlKgLD7TopKSqIKo/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1Htby7WohhUyRK-lOWQYHXKaglo7Lcr2K/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1AVh4mma_rviOQfCWKDUWTyFs4iPV1_XT/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1bMzpqY18uBPvuXlRQbzGQBLcFYiaTBNc/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Murderbot",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQuudzd1IIRnBqezBADS3Doo66HQT2WpW5u3Fwu9bpjNZfaNM0k",
         description: "A self-hacking security android who calls itself 'Murderbot' would much rather be watching media than dealing with its human clients.",
         year: "2025",
-        link: "https://drive.google.com/drive/folders/1lt15xhc40wmCIjBhbrbk4TNuCTUekJR_"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1wmm90PvkBUwwwyn8m1HYk6TCU1Jum9Xd/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1MlwSbYULi7ajKw5LKx2JeykXuqJ4vkX-/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/17hrd3LuAgMdftWtY-KKZ5bQptQVLfGEZ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1oyMi22DttAAbQAIWRw6DY11BnQMmypzy/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1PS9wi7TPMdcb6USJDY9pdTUqj4JOE6F8/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1IehHUhIFayKbHf4FMBv7_oS4WqMT3zvz/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1_S5fT7o422o7GZdg1aTCZIJZ414JVySo/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/10wdh2hhGTJ-OgmzFv24R9v84uP7rt2GQ/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1-N_GLOWt21Jh-tKYE2R1O9BFnIkEsBjb/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1wxTxLHITpoOtKI4JOpFVcQBm8NHW_gqj/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Murder Drones",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTtDtu47UDguN2fsOWROWE6gg7nI78kItNa5-6xR1gcr-s__vNK",
         description: "An animated series about worker drones fighting against disassembly drones.",
         year: "2021",
-        link: "https://drive.google.com/drive/folders/1QAiFXO6iG-IB2A2oGModfBP74aVHa6S8?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1hXikHG7B_db_dG7a2_zmE8c4121mIt54/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/129Q1Gb8NNVidpGCp_04K73eXDSNnntl7/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Qn3DHxCoEp3pffPISNa2kgJmrcP5Q6M4/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/17WoXwXT3uv_k23kttySOw9jqR5mXRdL5/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1j8cUdV3fQjdjeNioh5OK4f7YO-LMJd3N/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1HhMex6pLVaywfpIOkGiR88uFheIAmx8b/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Io2-FzeV3JC09S4UUvOWOyX-sxm4rOXz/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1pnNpD9KZcjtJV8-PmsoACSAKg4HE5ZxL/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1qNm_yB-Bjig5JJDcHxE3-IURF2_G6EO1/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "My Adventures with Superman",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMDdiYmU1ZGYtNzcyNC00NTMyLTlhYzUtMTQxOWI2MjdhMTgwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated series following Clark Kent as he builds his secret identity.",
         year: "2023",
-        link: "https://drive.google.com/drive/folders/1tWh4y7PZNQuNaAjq-tZq3ivrhfo-fCni?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1FPpK6PPvPTWWWOeSG2CB_PnDJt_fAJSV/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1lpHnZ9-dFgKpELkRS0piqyVNOJNM7w2N/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1qlaZlF5yzL-BEL_RVD3Xxxy0_PGjKT9_/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1aMPWl2HjEhEeGlyrSYcM0SWpyno5OliA/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1ew58JFEq2SO-HadL6pzqmi71Fz265wr2/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1KWthx73v2DqHwu1GOrbBlrmNN_nru18O/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/17UK2kBevT-NPQ5OGUnd94S0KmH40OHSG/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1Kq3Ai5mRForbl9O_0vCO5Xy-4MS669fR/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/15GKxESvBqUmxo4QCdU_iqW-x0oWtjpC5/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1r3IjglmL-hldMwA0GPvtJgucb8DyuMDb/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Ninjago",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBBdnv67taam7wvG_n8182o2IYkMWTq7JFrreht2LAAOiuvVmL",
         description: "A group of ninjas protect their world from various threats.",
         year: "2011",
-        link: "https://drive.google.com/folderview?id=15GtJc8NKaGoZyPoRXcJjTs6ZSQfKJ-xb"
+        seasons: [
+          {
+            number: 1,
+            title: "Pilot Episodes",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1aCwEvgHXw7xHUmu5bwI-mEOB7Xp4t6f8/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1nzL7G3RdgQOirtEs0_7l_XK9t5PqH90K/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Original Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1BS6PHqTwwHPxa5arwt7RFjJNdxxfK9eN/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1sBjbu-fg_K0wcWvm6Py-z7s0XyaUDvBL/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Tl8ahPH1myrBHSEmbHtR2AqbanibuD9m/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1kbouP1kSC4s-8YVkkrlWpRMBOhKb7FZK/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1vpOHtJ1kIberfNFN1MgdnqNIq12l10JV/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Mv64x-Re6-k53j7Eb4OFyetwimvKcWw8/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1to5zHIy2I-eEDdDCClH0CZRG1vRQ1BqD/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1CDV_HlwMzyi-hjtvbMjCZwxBvFrnGLvo/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/12t0QlcqKFWNPjdpASzm6sx8xl6pz2Pcl/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/194cPbjq8CAykAZhgUPsGa7EOJ9X5Z07Y/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1Dw2KGTsUNUSRQvVsErKFaydLaLpd4t-9/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1ZkpRTG_CIr-8ICXpC2DTuo2JCQLcdg7w/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1obhKRREKTRxSlLkBLxtXbggNZUY62y0W/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Original Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1KGbDQxQoTEx0yISFH00-u-SCCnBbmBMy/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Ui3RQweHJQOasELexayQ6FshT8JJPCOr/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1vCs06Kuc_kG3mJK_h0gf1qhwYj8w9MiI/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1BR5Ba1OUjee87wfDJ3qd_2y8wDMO_aDE/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19_6YYCl5bqyImcvXli4eDeR79fwS4zSs/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/10cvzyvLOvmXyWY7isDgrUU6Cpq0iUbPi/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1cgcDH1HzgfL8zj4LJdYHBxK-8TFxhoMa/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/19cUyKx86M3fkUN9SDp6a2nJzSmBthG1i/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1M6QqvWg0W8KnIOWtHwgeM1N64XULo6vz/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1VrmZBeFpnR9TJabMdocljpu6feqdGGo0/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1iwBoKN057PhWnoFXr1VByeB8OFIFc9As/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1NaB7iMUugEfnSYRUNxwabKgTxOMCIPHn/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1r6z2ITBL09nWDhMHAm9t887mwO-j3cOy/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Original Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1JDuUmmgEqYaE6n6kfjbCdEzCGytmzDC8/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/194HmBpAqwUkYT984NL360zdAVKdkWcwV/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1rBK8rmUXM9mlIlDPBbqGFW1rAZZ-PhIX/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1kYtIRBZEblMJeVe44x9OZCetS9-KqJjN/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1PIchP_UkTfw35q-8lRUpFjoVPSsDZCrY/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1_CsJN8XPsQxj-K-6Mjw3Ro71KzzYQeHL/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1X06MJ2v2BjszZd0Lz_GPucz_LvddNwmC/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1dY7QA1xA7nzLIQdiQ5zkvz7TefZSMcfb/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Original Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/15VQoVoCdi3Rc6Sb-IIuDJrgOsxEZnehv/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1tlKdUjQ-6FIO88GkJ40SeJAXRbQX5jDk/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/15zF5oIM5XXAmMXIUEBgLdcTOPIVzz9in/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1kXzi5hnSSfJIiahjImYk0kEXySNJ-y1V/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19_tg3nTbvueiAf8y8KKN5GOqEcuBOwpe/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1X3WtOILoBHW1_Tg86xtMB9r8ANvYw9TO/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1GC4KcLSKzEu0-nciYT4Jd-b8Afqahpvn/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1WnqzM8IAWrT5YGEzptbmG-cIv1-VOgI8/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1yqehia8troDCp8QQlf8HFdzn1tE_Rl1a/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1460_QzN9w2Xc09kXkfV55z5VIX-PJQxq/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Original Season 5",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1yr2RJiQ1QhSEGltyydHTFBUeUM-I1M3Z/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1SFeOTOVwcq3MDOIzRBrRFSyQq9qxOv0o/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1bKVvUF044cT3XDboseqhhob_LIdsVvIy/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1dQeBZRFT2sHGCkx-xcgvEhQKQLc0Puwy/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1oRAVOsFi37gEnMLcJzVDEmp1d0dldsrb/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1qi5esPI6Jp1Flo8ITNEOk36M9ObFzv9d/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1DfmrkzUeMkofECABbup9y1QlAGdub7L7/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1O1X35iwMJrVoNUl8gmjSiJFnH53QobbU/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1w0fd6o9hNJN8eUlKxuyY7tDa1iSEtHkY/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1VQlUmf4WaMsZ7RsMs5UIp8djNAEkQvEH/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 7,
+            title: "Original Season 6",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1d7Uvz2LUlJqOOBq2kscT550G3tzyupW_/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1RjYPIZVPox9Grxzq1vFtFf-uIdYPO3rq/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1xv4KIpfJHzzyd5K8o2pS3VDyts11QiYo/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Fswkyb-rnuN7D8HcUB_rtVnxEIEtskfI/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/16lkUkIuBUatwwTF5kfvEzqalCiaT676T/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/17f8ovB83ktk5Rf3r2_X2OoyV2PKy0WiR/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1EVhp2M8NMObM_0SUHvesGaCoDSMRtXNg/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1dNhTApKaATJvZjK_JdSI3E2mhpzBgAjn/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1sQtmn1etonVt8YuOG-GKEsq8szTWD5-g/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1ZKuHPb0bZDBKIBNhLqCELX0GizSxQ37F/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "Original Season 7",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/19GJoNfIiCcMsAZbEiyJxEDXJEICo9zmr/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1G5a1aFiDU4FZtyAK3Hs0rPfZXZLb5lMV/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1GHkznW3SoF5D9_amun46Nz0m3Yd-Qf92/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1dQ4LQ5Ay1WOhELoz96j60Qg30Pz5bEd1/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1DS-oZxdHoHGCChuBM5ZV2QjiJrSsAOCi/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1gwnrZ4gwNO73r4_iUmoC2oYG6Q4xQm31/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1jgafYpar5no7jm9J679-q22EyJYOLsVS/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/149rMr3LJZw2qMh-EorgfJ4tDO7D79ebm/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1_w5JCTlvTkHFABiRiPkdeYtR7yWpAvIG/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1FJto9YFVc9ftAngu9QPCwj8XPR9WIf5t/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "Original Season 8",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Ys06zdyuZSAedSLnv6leQad39ZOWwdur/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1PSeLtXPQKTL9b8xWrmiykfXFJfxn9hYh/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1uk_05m-a_rtreSaT8_CIzrMgqN-E5qit/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1muWlYDsJ9HcNX3xiFU0MIiSzPnq9Bneh/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1NRToKli73xr-sA7XnSlueOm5-M9MX11L/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1kqDYLgNVYXp16UdSMlN_MW5jVvJAc6Km/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1KtqRUSr2MaXXF4p4EYmsIcghuaYLenaX/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1LbK_Nnk0uDTRFfI6gcjqqI_lXT_J9wai/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1StC2kHCzMdOe5P_WwemQFdyVyqenHwoA/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/18YNkX-W-shiSCidDv1HV1A8LJi4ixmJ6/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 10,
+            title: "Original Season 9",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1qtbK6RTUAh9OCPDT3vqCnjwI8s7WlGbY/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1sIV2gh14HQaOPSITwfND-THUIQ5AkEJC/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1cVviIc_fzHnIffANqmKOSxuGPj1oBg23/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1ScE92_R-obSnZlAX6fRdTrLU2vB3913z/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1UBxcOCsPz0lKF7Fsci_wcOvtZNLKBfvg/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1u6jn8vF5mk04X18Vy29pZcHOpS3z4M4S/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1vqLJbTpIDKpe2yHmnKkNfcTI6btvXx9m/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1rcYN5_eRAonlh-UuX8ylOB8mOB9UcHBU/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1AtzgcAFWOBFe7bZdKCXHpVzgR-ffgtT5/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1sBH8NbZJacbPfgiGvC8EFeFdbON-lTrF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 11,
+            title: "Original Season 10",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1YeWV1-Pu5DlPszY0SvH7AuiP7xgizVnk/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1iURCTqyrm_88vzGrbW7ftTmIUadlh3Fo/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1oheddcyRZQXrZqU1kOuKM43bGE5vnhiG/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1iNDw6kmY2EK7nv6W22t5lgddplAHMETo/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 12,
+            title: "Original Season 11",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1MNNwViR-vzjmY1si25xz4HweOJzt_12H/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1KJelDFQKhJf27i7U1-R11ZA8SFnTG615/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1dT8gNJ6oIUZMzB2y2-D_XvukvWItXdbN/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1twmxTu5jMxN2noas9Kg3qMc5Db2mObax/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1UAa0sR5axUH0dv8XiyIBuvKbi76GS4mV/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1nKh1E_jeW0RnXAMrh_3Y0R5kjLDy7LT2/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1fbLPI4v9f1JVQBxpDKdBKvHywg4MHYjQ/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1vINDcCiUmw4eTa_1hKCtonJvnpl17TKP/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1h5LeVDQ_jAZY3Qt80rZNpFxzHYBFL7K4/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1OTdnH7ISY7FiLHkm00M316hqCtEHLFh1/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1W-vSQvQO7mXhxfTNXc-qoGbtkxlfuxdj/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/11A8D62HSds-1r7k3Kh8flNE1yrQ6AYAy/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1TVemEMRyoG9xZjcFqHzB2k7tuoLuBfAF/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1Am2SuUElisGC_OSoTlUAMTYmsVMrUcJd/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1fe8x-qzOEjdmVybaXxp4qkr24vQtkksl/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1i6L_uw4cU8UXdzyFS04AqsKbrYFNvaFD/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1PM_wf68X8OQS1VKy0HuiK45cnqP4Jx5u/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1j8jTYv7jv1UpZDEiMVl_TK3R1-CAUo3G/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1r7lf-yp8UJz08mCQwSHEd3DgfYAsCq5v/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1qsQSVymjRqYF9eaTyiZjV7D9Ezn-Jhni/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1wiunv5vAtS0L68JowjYdzj3QebArBDGO/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1B8bbA22cvpsrfYnJ3zB2P0-ohDnzF21D/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1GNohL0wKB0FfHOt2mKnNwVYoZwoqNev7/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1Czk8JwG1jXZyLwYHVwcVxbM8mR01bY4O/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1OncT-cJpJqyukTo9Mmm8uHtKgn0cMetT/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/12IHYCdTOFCzKitZwakIJpwSUt3ZeZGN0/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1t6VdWmZpDAVmqxSVDlFpiu_D0VxwNk_G/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/16sdgnmlc0JfLe0P2ThoQtFiufIu6qF3E/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1ADq7PtuPfm-CIl0A2wdeW7NR1to8-TUl/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1V3lfuz6O18j881eNgYkxi217o-VJIZgy/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 13,
+            title: "Original Season 12",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/184CR9qhLKF2YKJMdwBCzlhSCut5XngSi/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1de-AEbBNGbqRv6J_MqxpZtRay342iGHs/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1a13y_ukeNnNCMb7-3jBcHC5nxnICUy4i/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1rjGD2RJnIiLYID44CTFslTafxtd2RFbR/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1cv0lKuG4ftpbl1Ns2_Ami6znck-1c8R_/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1gB34u2K9aHWoa2WJAEEMB5a3vjCoRPWW/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1DG1Tlop8oh8hdSDRy5bNJefQpeVTNC_h/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1frUtcZScogIIsNhJIGpq8lkMnA3ebqCq/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1UZFNauVAS92-um18wOgQbf__wDkyyH39/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1NmZLe4XCD_tualm7gE_Xdc4wYrjF8AJJ/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1QvVd5m15A38NGeSGfNiLwHh1j0lCbbf-/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 14,
+            title: "Original Season 13",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1nanlqGQ0zYpoOVJT21nEZw3xaK9Sizho/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Yvc00lFlpfU1oL4lI7JqmioSDj8iO8rK/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1omtyItOGOKoUpGk1fBQFMp1XBxR2HW4t/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1BnrBEJ0cnk5pP8VTO0RKim87afRjyXUc/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1c8RI9FrpNjYdREGmLSeGqPdSVZHBhEem/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1D-wm-Euyv1lGpWU-H9qub8B-7xhiCBAK/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Z2Fsr0Ft-di-x_HiNwSuYGccMIOHwGtw/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1Qr_D9ND8W17fFnx0d6AY5XvVHIiXG3Pw/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1N9sHZ_ovkzOu0Vwe_Oj1meyC4D0CwoNS/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1Am2XGBwOp1CkJ4yq_hoUUfuTAA7NZdH_/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1MqU04aopcF-wSfc7lgM6KwjQdPOuwqtd/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1oFYnVVc_amnf8sSW7kDf0GnGhbfj4H7N/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1BnIs9IXKKml_CSAiV_VFoG1sFumQY94i/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1TblmKQJiWIdMhoZniYLWmG6yBWql8aUc/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1Ll0AoBZoEFR9qC0OHIoTJYhfIrlgAapc/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1V7EcvFhrfv7dMxYtkV5aL5BF5fHRwJqb/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 15,
+            title: "Original Season 14",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1WJ8_iPeV1VPiJcYPJVrHGjXYqNCTRO0m/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1hvDXIukBz1VQnkHwbkwyC3kWLQV5GYu5/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1NGR_e_UF5ptAsqfrcZKrka3hC3SBCObu/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1LiBwpmjngq6ZJwVxDqL09_c0PUNREddr/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1mdu5O5MgmhnXRFbt9QEC_0vjvtzeyVU-/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1CrY1hBbJYU3DVHj3DQDExTY16UBAU0bJ/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1GdMmCSIBKZ5YhEWuv6mfV4qFqzAqZ4AY/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/18nMZV6mEKC18JQvcOVF6Ul60zDxLallj/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1-DlhCaS8ScW9gdujxa2jPXe4o7Aj-v5m/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/12IAYQXeHgwsCiG3_2KcOPvlP5WQM0rIO/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1wRGrdvrI-IM3PcYK021BgRtk3vibVh5B/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/12RQBELopINjzrl5t8k3Qi-LkslhllFmC/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1Lu6USUwakoz2wvFIc_DroQLEv8nw_LKb/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/11F1lPRhus5ZqmdVwkCBLrVPW9oM-lzs-/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1s4529eipDWDqXEuUGQwD-9NKMOuZJnsO/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1RN8yNo6RO0RrjlGExG0xd_M5vyPZkaEU/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1UVaRTltNpAGT62KZtiCtfK-mJCd70LK7/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1xhAu1Mt19JgW-Zc6954S_cNYhImckMHb/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1yTYxivW3ooMMLxRLzhyn59P7tv8oKEwd/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1b6qJ_jpgpk_9yvoekVacuprxI9NRPLtw/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1-bs0UpkgUlH2-vbUhRAf9JNSBdMNssQy/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/13jp6LzKswFQADfAyfiLvnlQK-iRvyq3X/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1lVIy7B6elvB_6pVyOAhcokabGtPTev13/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/180khNkCMlQEbkPJwwv3wRgu3ALlqFWIf/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1v_aN_UwNELls4ONk02joW2wSbW8R85Ma/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1nzpxibHDskm9TwWRzy2Hac8KtYf5uerr/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1U_cFVt2ptB7SzGukt-wSamvVBrrdl_6T/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1JYSr00tXyYb1RdO4COFbkLNs4Lh00ohz/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1b6qefHiZVPct9JN0H-pP3faZYhETlyM-/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1JKAw7VZnTf74SJ_2qFF2kKRvVLbZIZMb/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 16,
+            title: "Dragons Rising Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ifQtRmowbt09SCMc9L5xBKvEWOfVd-zO/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/19JQ8BAcdkXtqBVNVHXCFyoOc5QPW8EUv/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1chdSpNh6P9DF7Jy9GpfYsaioMNzPipN3/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1s3OJ5CQA5GWypgw436zCU-vPuxhoFFTd/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/18VrKuuNtdtgvSnqUMMa28Vxyk4iHfquS/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1FUdbLv795UVqgExFVcM8xpby_emaqxCn/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1q4beL6USfK4VrqX_7rEwiJd-RxY22DHV/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/18NZRXW2fEyT9Po-vD-funsFmkfazTZsn/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1mLkVQ0kK_kSAcgHdQGZIitQSLDmLDwbH/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/14p9foITpRRxjgAWL-pusc0unFv0vLpn1/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1Lz82r09UwzGlabQR5I2FPYcxKzInc1cQ/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1ZWcVKMztfus0fV6bjBrZhpL9mnpHuJSY/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1voFmocOVR8MXv5sADJlpmgNGOcPgjJS0/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1MCdttd8AUAeDLAsOUrdsWJDeXWo19-Qe/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1wVDc3GneYz8sp8urEZ-2e845QbyIuERq/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1TJgw5zjpO_GiVRdf7zLl1aNgz6T6N7dn/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1sqH7Uch7oqGXau7Zjir1OVGC2nhbbTBG/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1r9dr_GeS3rjjOjJuSsYttVajjOqrnLXN/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1cGdq5DXYGoI8nf1rbm_jAK3Whdpp7EIs/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1vYpWsgjsqnkkARL5pdyQuRKlOX1q7jR9/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 17,
+            title: "Dragons Rising Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1IcAv4_XZcHHjOe2ZZHfKf7BiMjIXlaln/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1eV3VbOk5nLxEI1FdLU6RNizWwvHXFdEL/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1tMq90GL_g2wBMPJ3J9I543IOWwYq5c5L/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1GsZvxLuH1HnQ2GQB1AcjEXnNZOC3myTa/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Io14dgU_IlBSVKSv2vWlUE0ZtNyhkWPB/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/17Sqohf2Sx8I27A45HNRhwj_fa4RbiqRg/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1dQ-O9zk2ErtSRjllLyuogDE6U7ho5CtM/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1jR-TZH-90E_dUSBYz2v3wTQOm3cCydGN/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/13P23qGvrYkALk_ZNXmMRE5Th3GJR8eJb/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/12WNjIptJiqJL-M2Q2MI1pMh9S84LCTMR/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1XkIAusxLZ4qAXtN84XPsQdvfnxmTkSKR/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1AMGwttwXaPJkZAwdHrvdZl9XQWaLNdxK/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1apBvc0J6TWI01YLrwdTNhHJw3T836ZF-/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1m9EmQmeCEavjfuBU3c_ga13-ghK8CT1j/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1vnB1yv15N6AvJYCZN1YVFSpL25cn8wMn/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1uf0rDhVtWl2m34-Ox0-M271voGK00g30/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1BJxLyh7__tcyIL5-cwUkQq_24EwAhNaM/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/10eQjvXy_ALA-huQOLV4ZuLCc_bUNBHrI/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1i_bUqIYi_ermIlcPFrrqSsmnTxJhilqV/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/110bbL6uQGFhU_oANiJs7wUkvoAkqdtwN/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 18,
+            title: "Dragons Rising Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1qLg6eVBYxlbRAgEYD45WtJucq7DksVk5/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/177jCRE2rbW87qRhURnwRED9TqvbxOJhQ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1h4Np949idrBn3K8erC_P5xlk6V5m_Vy0/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1aZAC6UtBup7fJVyZ9IRRbD5wAflZX5BT/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1ptNs2hKwH5x1rxDaMboVNIecuJb30mFc/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1hVNOMjVRm_sTsUXCFK2af1lpZaMn-uOW/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1sXpv8QEQZ19ExOpmCgPhBj06y5NwQl2Z/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1vAueKk1oXZfDINvYZ1FERBaa_AtsBIhd/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1nbk7vzAv1mcWymx6ZCqktyiNZMlXuMzp/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1GXv3muWD_kq74klsFTLld0-1aOWm_pPV/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1CbyyoV1SnJ2OfYDroGR1ueHXba8RK_il/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1w0kv3MKXsBc6yhmttgYFP1F1pwfJqupt/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1t1NcHeq7GXXC-G8bnk81LYMQf5_Y2bOq/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1R6_PwmMKiIH6bnvqDbKlcYEbkg9WL3cx/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1mAmcG7VO79Jnl9D2OJlVBzF4UjrrQrCM/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1DuAzUyQXNYO9D11KNhrVYGUfqMdyA9Ed/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1SUvdzv6ALzZFTbKlIvoPZLzCCB2_wbl5/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1lRhd8R57rak402OHbaaMR8UsAjPGExZf/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/10VS4WtzIz-x1PL5NIQN4rkDmfKwEJQA3/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1BivrE9S9Shnryp4Ffty1EiOGzkhpnZfw/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 19,
+            title: "Dragons Rising Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1TNWBFqSxWCI7z4Mu-q2KWd6NpYT3tWPc/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/13chzdpH_W3hn7lDg0Wh_7tGWdkHPqnlR/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Vu6PxfvCRy7bXwbncGiSiLnCrjJplzjQ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1w1-ERgvrd_fpGqqeIH2IdXORj9CMkax3/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Effdu9koMXIeRVs7QroOiTGcqRTMaWGz/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1zHI4nXjxf_U50liPDWFJjt8b5O_ZWN1G/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/10xm6shyAI1IFomZQ2NA30hBg4D_HSeAr/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1GS9GPNJA4PhsVHAB9Dfjvw0njFJCcwtA/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1YfxixZUbr0rDddVC8zzVYOjFLfW5nv9d/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/19nLk35TAQp9AHTNyKzbYmSZ3DSxWDzns/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "One Piece Live Action",
         imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/assets@main/images/one-piece-live.jpg",
         description: "A live-action adaptation of the popular manga and anime series.",
         year: "2023",
-        link: "https://drive.google.com/drive/folders/1SIvo_3pKpUesX4ZDY2Y7Z59kXe632XWe?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1FERmlwy4ADVmmHCSIc6OwQWXU7rHai-_/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1n1SFw6PNqJmMThs04DEx_mkOwrcFdzcL/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1x3qaUEauPZ8y8kJeRDKJKjVuul9rlQZb/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/18wuyq4qfIi8AQgeJwAMmRRiqgeitJgoZ/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1TOtjVm-GBe5h_rPI7aVgT6zBoW4Qd0Wx/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Ie19h_IVP0mm1sI5hWujw1IVSG1KX6Hz/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1XEFIRDVX9CMaK3KDFNfbK6jgR-jmGK4w/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1_XxVpozgOg8JDbQzOZ3zvGXLnONpXZzs/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1TT7DLkMtH_WuYXYhUw8rFsc6O1wcxCzH/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1OmPhCM5P5cZc_jDkesZ7UGozZ9ylT8nl/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1UohK5V2O_RIf07MC6P-SzcXsoUM5KcaK/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/10HfxJ-JbzyE1jn3ublioW5UGvrhBrTqK/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Yz-dlq08iD4EIFXidsaHrdpjEFBzyQMu/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1a_XuVYVE83hp5__jl69r_swp8bC2bfEy/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Gpat7z7qvDNhRlWnwhmmfniOfHwTQrys/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1twOZMP52h63EoovxE9H4fi3u6T9ClEcO/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "PJs",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BN2RiZTE5OWUtMDUxZC00ZGNmLTk1YTYtNzMxN2Y5MDdmZDU4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated series following the residents of a public housing project.",
         year: "1999",
-        link: "https://drive.google.com/drive/u/0/folders/1RUQMqskS3ybzT6w5WQGouH9EBd5pEcTh"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1cWMCwdhqTgm7DMEytmsHVUx-PfkvKSkm/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1D_OK5kCXuXqOcszAD1BzIFYXjoR3-t5c/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1UF1E3rVewO1HLrPO2FxuXBK07siCRrn8/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1K-Bl2mFCJ99GaPs9TIEUywob4cXosbVP/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/137xFX5jwQiAkHMY9wDpQ6iLmGVKlc-XN/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1l6UpGtrZjyFt4DZnaMfwyq3UR7adL_DL/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/11YaTNuymqMkOAohp0vh7YvbhHAZQjSU7/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1SoUdOS5fZ2VPuz2z9uXq8pWebDUYTKHD/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1saFj0vj_WNpBt1Cl2uhQYa9teEPW48yr/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1WwvtMY34U6nndmouBNYgNs6c0xJs4E0w/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/10uKsJ_mNkxgmf3DNbwOwxRS64Agz-q-l/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1cjshulomm_bJEOVtBheZ3fP3vcBBQ3eO/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1qOywLs5Yz8TrEfnq6aFkYQxcR-IPIYoE/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1R6DfkuZX63ZkdjoKGBHaAlAOvJGl7jnM/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/13heZZupxrvK2vSUtVLg9_IhmVjvwDk8k/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1uWT5PG1Z1kXYwjeKlXPXbm6sRw2cRBcf/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1mkDqqlwzM3tGhq2wT7D2PxBT7iJdb0y8/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Rrbw1jVEJrgQvPo09hKWafNY3zSy1fMo/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1v5-F2JXkmehpooqQfoUqb2Yi4_Vqr9fl/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1PybHO5GxAhwFckknxWrQp7poZB0kgU_I/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1dEnsU-M9W1_YY-7Xkl3_o2oH5QCr86lD/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1Q3jQBge_OnRDWu9I84dIWeymGo2zPkdn/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/11QnI92itT9T6qDg9iOGACJag-8cynAjG/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1J6aJYTYhOPNUWYkeY9aGrU3kE-eCZKbn/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1zgIw8tyxy3ihhi-_Qxvnd_ahQdvyKk8L/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1quXseSlklA9ZLQt4m5QCeTbtQaGd35-F/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1ZdLlKGsEYzDyhqt2xzzlSaXM0OXmThUp/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1y4vvMaBeg6_brgWo8HtfwlL9VDz8jadU/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1fkucxh7safhWKELIrxxYA35gVPE6Suvz/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1yM761-xg1HVUyVmYkrPZUyg7pDFtn4Js/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1_tiON05Fm1xn_ZFdozhES0dYFAhqVCmt/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1BLSEuj4xkuSiNCaPOEJjZBxX4y8VNr5K/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1oIdaEiCUIZJ0uqfxFrR-Qc1BiYZAwHVJ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1pC2x9g8g_gsHWo0IwDPFcH-o1ddLF7dE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1sATtYPjpyFDhyJcfnoXx96lOw6IUPwMw/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1i8ew2II-XRuMtzFlMZV2_5HZH-sHk-Nl/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1kAlL61PxDhHZkG0n5cf8QSJazfdTo9rF/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/19MJnv5xG5J0fsyl__ABlhk6M5AQY7pe0/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/12-olYJ3Kvp2NxBCch1kFjt4EKE1b_hQB/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1hLJik6yBZM_7t_HsA6y5rSplZdIN9ePb/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1rRByyWHzOIVad2w6uDVKP1aWqbHw4gDb/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1_zQD9-WE8zhJ_a_M_cgDHXSQzWVQr0LZ/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1edTcBS57d4yor5FPY3ft27v-U06IAHLK/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "PeaceMaker",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fe/Peacemaker_season_1_poster.jpg/250px-Peacemaker_season_1_poster.jpg",
         description: "A spin-off of The Suicide Squad following the titular anti-hero.",
         year: "2022",
-        link: "https://drive.google.com/drive/folders/11RZjc9IzBxl1C26LUM4_LeF7ToNaLVLj?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Yog_ilGnJOmr8jDrJ9WnFeKRba63Lrwf/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1SDkLP0mjTccVlVCZV41y7barRtXrB-F3/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1qqukELhaXJaPxHtR9ZEwcxJooA7qs1ND/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Yrw7VPWqwm4_DMpBXmz-aEukl2IOglub/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1ZcuRTqUq4kXujtWfEeY9AAdygevbYe-I/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1omP6KIPI9Tj0ncDs_Y6KdbCRVCpr4fZh/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1gk943wVoOAiNV_Xuq17IqPh48xaj3TfA/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1X0aoxGT6EbWakDfWyBTjpm7XuVaO5vBW/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Phineas and Ferb",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTc1NjcxNzg4MF5BMl5BanBnXkFtZTgwOTMzNzgyMDE@._V1_.jpg",
         description: "Two stepbrothers build elaborate inventions during their summer vacation.",
         year: "2007",
-        link: "https://drive.google.com/drive/folders/15O2LLhprQNEUGA73u-jdNp3kL8UAHZUB?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/17ZSMzK_bfdkyD4KJLQxrW7r9sTS3NuII/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/12JUBRrrZDrg1wEARBkL5nEEgiYB_KxIk/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1FVJ9n-anQr4o9KwJOJU3yoNCCkbwvzw3/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1RG1iPUmYh3Y94oN0W56efA6uPByF2ywu/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1j1m_VDIZ5UrZL84j9l-LjpcxH5pFfdGS/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1uhfpN2mYmB-fy6C1G0blxAk29Wxsuv9r/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/15dk8Ypp8L6TwFjpCaNb1VLgJSuflWdow/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1NzrcI745xsV7tMGj_kqCLJUlhSA1Nkwr/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1W7Coo3b5csMT_rANXc5LSt10eeLUJtJD/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1NuE8D2Fez-YeQKmEvWn221hrRaWIiWRg/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1wPN8wVGshJghV3Dlz_ZcX6j8LZzRr_Cl/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/13TSJiZkm2Qxrw5R0YD7LmlZnOBqacxGu/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/12N5CE2W9GwxXzQvTVsPJRYPUVuXBVZZd/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1WAWaGatMXjIvl0U2Mv8UQyQOMrRhNMHM/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1gL-0dnDpfH1EyFoXBODBwugZDI7Sm52F/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1_mk3mRHb4_5hO3NeD5zQ79hyDhsxeIGL/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1jbSlWjpAwjXV0x4kLpLZAxpKB_Tkz1tI/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1s7CI4dIjvTGpNLOkWifjO6iMhdLfKTAP/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1wowGg0Ctp2ekEfklzcyparPx5pAqWGCI/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1XPzszVUEN5KxO2cOEH641ET-2uuRykUS/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/10yLtpSJrT5-Sd4RdNlcVp9f590OA9D5t/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/19bc1_DcFFXNYT5stjL-7aICjCO6cvAhA/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1jIOKUX4jn4K0A45N1KKSPWIxcv4Dy9Cd/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1UbZ0Fuj0Cx_wvlKjYA6Jfiz0vnglVCRw/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1ngYcQdnRBlx04txFPX-fPYxYsVSZzJk8/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1mvvZfFXLs3VbnqzCPsajszhiaJ1pFC0I/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1pmL1l45kDa7v4tvsdFxN6Aj22Pt1bcWD/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1LETDj4Va6WhLMesI0j4V7caYsJ7g9RLT/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-IGfTgnwWkKX1wEVtlbdWQ8B1UMl8qzQ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/12AJPS8LnuvHA-ZmLYXzC7nGtOQu2pqYN/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1OVMzx36aMONWhpY1O7ZeqfxT-CHkrTCC/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1sjLr4ya-M5EBH64GxRbqVAbPaSoW6pKP/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1BuO1oIM4zJYZDDITFDg9d_qoA0gNjoKx/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1X0iPTQ21ywh6T4F5c85LTI8KmARrkPHY/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1uTDb0Zl1qmSeeAfScwDUBrsUmuXQWHNK/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1O9Z5pHu-_1L6Ids70SjHud87_ToLZ6M0/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/12mlj7F4_cjxDBi5AVTjXBppHEs4Rvunf/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1MO7Zt3sGLNf5jaVhpWxXCvypT3Q33WaV/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1d-YNQcbs9bMuIm_8OH72V7aC-r43Zf8w/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1lCxYIWC7132ID7WdVcRqqOrV3kY4jpvn/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1AgmrzTjglkDPk-9kn69w7DZ2mDOa48Bv/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1RkwAZSR6JsLTpjUrxWg6pGFGEy32YN6T/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1p1fz0TnU609fuCOhCU6dabRfJdwm8dfd/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1yFuvwPKFZ69SYdoNxnpuHxp2vbRvDxQ1/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1Wb3hc2L0dRPRWPlpNrUOWqiwlSjZSikj/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1hd8aRIcW5es6uMhw64UzH-R8JIgWr91f/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1nSf23RcWQ6OUnIdUGZlt9ZdX7zH5qCho/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1amZC_gDXk0X5qkxEb-_W5Ujn96RnhGff/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1jab4I-lCfpg1zgM9HUuUs_hBCtLYT_BD/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1dwzoHcpUZUXLkvjnkwgnxmKffPWWUlm5/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/13ye3fkXQnA7uj2cqWZntdJgvrDgXHj_U/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1agLsCdUnQiVvb5hpThmB8CgLD0kmR4sj/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1BGnL_SYnI1j9lWqjUQZJcd4J9Shik3vf/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1n466S80POA3NvK_EDZOuSZRpFIG95COM/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1lypS6kJgnIQTbiDSgGsoL8Kq-BLtw7Ky/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1gmCU6kT1FIDW4e-U45qMqo2hj0ETbxy9/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1-hVBcOZHE8BowiOOxC6v7qKHwJlBivYC/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/111WzwqPsDZi4JF3vOrNuT1KSSrjv0f74/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1l_SYJDFDdArCL1wohjtxKHx61SNSUNHe/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1np_vS2EHskqrIMpvvOasnv9WJKJO3rrS/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1Owju9ar3bBYEjkaj-n7ifimaP4NHEpOj/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1e6sSIhnfGF5W8JgTv70EqPd4GSF61QJZ/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1PfbA3xC2xgPu8FHnzogQxqQsqPazv7ju/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/131EjjyI5lziqG4nErCAwpwTzNHs_fyco/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1MmWc9g8okNjZsxNRCmR5q1aFxmy_TcRX/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1D6Ha4bQPXHhHWOYnPi0eUmXbz_qAXoTP/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1kuHxVpkJ4fB0ZvMk1ueMjuD3OmmQHT0N/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1RZ-JJS6LmM8e3vsUlXAf7ckSb57UN_WK/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1vshrzNvCI3RF7G12g--DGGJQn390Eint/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1W2--j7bfMiFk2TbqR9nV3f_aWUsNAIud/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1ek8UzXGiM4Vm3O1Njy5QgKqToOgLuDC8/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
-        title: "Pokémon: Indigo League 1997",
+        title: "Pokémon: Indigo League",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSN6UmgyAs2ys-Oj-z7xBq-U9WE0LPmKBrKP_TNFwyKeX7iP2Rs",
         description: "The first season of the Pokémon animated series.",
         year: "1997",
-        link: "https://drive.google.com/drive/folders/1IPI30EquEp-SAFzT_piu4ROEK-N5F_MN?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Indigo League",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1PIM4UniUReCU5FYP-SPKSQ3tbn1hT-0F/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1-07Zsvf9iBUniEGVwR8yot-KXWTS7ZJP/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1taBlmxKzk_6OSGSmuGlqkDErmXCa-gqv/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/19PeBr9sqTUlt5eBwoCsibmlpla7eTG6N/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1-G6dht7AEMMqpH_iWlVzbxXEH5KJNmvI/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1iKfOY8f5NcL9gT_-6_A_HU0VcJAcXjgQ/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1_0Gx_j6dQTivUdX3Rwq32nJaS1F2vHb6/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1QK5W4lwRBih8KI2ZKhfggH_eAnzzVrE_/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1xHDmS7Vz5fYQ_mAPDwtNotNDq2sHWGOo/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/18zIztZKKyIpBNg6__qRqG7W0mExlwvOz/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/12XctNtmHBqgxXvIhaurON0RKoRdEF-i2/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/12th_7LaaiPwT1TjUJZFVcPbiV2ASBrx7/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/154_EL6hD368Ro8I2euuQzonaYYvNnOTD/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1fEv1G3lKvD7gB8BYmLy9kxVx9SF-vgV9/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1az2WLV-Itoqg_N__LjUM_Y3zmFZg2ksO/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1eDshS3A3nIjcmr7qZfR4i9b3OWrYiNds/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/19CyB0a1SOwqXDh3hZKe3VhIMghE9IIQw/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1l0EODxGKoCOcYy2Wus6c6BP8cvpA12OV/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1DxF_Kz1PGnTbVHXnhh6n1y1T2-EPRrJA/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1IJGotqkj0cdyzdjVD_pe_B77UuPeEPdC/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1ApnbOfX0hsIXh--mcD0YaW-eoPu5VzNx/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1rT9y6S6oA0unyBNhU7X9hRACEzOISB-p/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1MH0Q71QVE-TyOgbacMw_X3xfU4-puXRM/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1pnikApDovoc2mxLd5iDF2Oaqg2gtvGpL/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1IgAPJGbwRQYoGEusBEcC4ZxphKjyDFZU/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1n5m85LntwJ4DFbFIsbY6LdSOwuWS3wAu/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1inMZHjKBYMmhpKrfr5aY5FnrFoY3t4Dl/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1gJ8YwQvRGMGfaisAeW8GV6DIAqQis2nc/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1RmUZRG2LgcwGv4OL8Nr4fRNnHFVLUhep/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/18GZMfbhExVpLLmMwLMjbK5bBxqF-HiGW/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1yR1S1MZHnFYhg7eNUjdWMyGz_zy5nYEr/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1SR3q-zLn12wSQi8My7Yg6n0jJG8724lV/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/12C7xwpF1NakOkbgWbf3j--AiokQWqSHX/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1qz9ysjgC4FN9NInE16F5CUPIB206gOnz/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1RIc0cHx8Vu4whY17XJau4ozm2VNhP7_O/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1Astp47Bujd77QCDMV1OksKTe0HCpWPrn/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1ygkKF1QkR8SVzTit19Ksh2718_aKDGGl/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1vqlxiLVs4ipWskR3m6d0LlOWZJNDif1-/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1FsgBPo8TDfP_bKyPy4MRPOOGdQXOFnKQ/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1CUcMpQJYJytemQnIvFDzTA0rU247k5gb/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1ElHjJ6gwwYduon69Zyx0tBbvd82Vw_Gf/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1O94rwHUWKgZHX3GyY7dYQXc-JU3ldEMY/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1AUAaHNK1ubW6IpcFdfiUSIkZ2YcxLX97/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1PNlCX6RZ7lCzf9cc_xYAy4LZqfkH3SiN/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1jxZjjKygug_oXedDXAU2g7bFPLb4hfU3/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1J5peDXxLoeNX4MQnXOTrhbXXhWeFPM2D/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1xMQElxUrpX9LmAVv0Qy3g6jYKK7xRnL1/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1vtDZOPTSpZH4cj2mvJ8cUMt3fr9VF2e2/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1gEPgA66eCq5a_5AWdSe5SEI9oWlXdSpN/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1GMvyf3eLK0hnERD4ISyvwYkde7Kak8OP/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/1DIGnDnO1K3oWM9bJaUH_Gtf3UoAYBGS4/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1AzDLFB06RXOZMMK89OPS5xZl3RLZJ03A/view?usp=drive_link" },
+              { title: "Episode 53", link: "https://drive.google.com/file/d/1KyrhnrR5tTIA0KenyfEGZJiTkcdAtXp7/view?usp=drive_link" },
+              { title: "Episode 54", link: "https://drive.google.com/file/d/1eHjrNYnC2PAMFTAbwNL5_WxJgUsdCtCA/view?usp=drive_link" },
+              { title: "Episode 55", link: "https://drive.google.com/file/d/12fBsGjGgO-hKAM5b8msfZc2lAKpNFcdz/view?usp=drive_link" },
+              { title: "Episode 56", link: "https://drive.google.com/file/d/1FiBP64Rbk7gYgqEtZQV-CgAz0x5JvGns/view?usp=drive_link" },
+              { title: "Episode 57", link: "https://drive.google.com/file/d/1EerWtKfqk5vm0ecAvNq2GrmTFuyCThCy/view?usp=drive_link" },
+              { title: "Episode 58", link: "https://drive.google.com/file/d/1q_omq2le3BJQSgJBJIGfC0gYX2nitDYM/view?usp=drive_link" },
+              { title: "Episode 59", link: "https://drive.google.com/file/d/1dcwwIuGxLXN6dM_sVVbO-rgKMC5fzEOD/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Adventures on the Orange Islands",
         imageUrl: "https://m.media-amazon.com/images/I/71hw1ZpL1cL._AC_UF894,1000_QL80_.jpg",
         description: "Ash and his friends travel to the Orange Islands.",
         year: "1999",
-        link: "https://drive.google.com/drive/folders/1w3zSI3aceZwV9rTfW6rFFtEXCt7CpP4C?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Adventures on the Orange Islands S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1NCgOsrRsJpea9m7bWnVetCh3dznfwzyd/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1OUyc5kNWFAMG3K_EXuWjsC6gPPJfpwrB/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1uuzKqZxBfJN1SUlYFPnWcGBrF292Y2rP/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1st1Ay7c45WHfdnPgHOX-Avz01OUQ1XKb/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1a660n4E8dlAGKcRn1QUiANe76mC1kRN2/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1mD25K__d5nelvGh4p3CDX8Fewi3BiiP5/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1AzkfB_NirpLGwzrVXo1DxEMbf_fCw8tm/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1y7Q7jI5wcBcAknNoUO50yNuX0zqPTWFq/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1_KnEyt5-iJfJ8IGyOwbtlZ7BFtk9xr2h/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1zQsC7umDoXLQLgI57hUbp1KccBdhfaQF/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1TiHYMTn5IpuhiD528gxHlGNJ4aycEB36/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1OpYC862RBDsCkrUFAvl-mSl75GQ4KYjj/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1rXMLtxoSmdxdbM6aMJdIv1D0kkewU1YD/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/11n1PF_HZqJesnsLQHE3gu0WrW_sTFlP6/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1IzNEhGJmcRenM1kup31Mzqoz2HREn0FU/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1auVxhBdJuTqCGO7ZysSR8aOm7Hac0pxJ/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1xJCXmngUoYIJ_T18XyAfpH9HdsSjd5Mb/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1A6M8LPP6Z7YjB0EDGnQXqAdEk4tcmqYc/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1SOp68KA6nn7c9lVCWzIHben2cXGOUDoY/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1uLV02JQDf7zzKJ6SdcLgxTBaqO-PPKWu/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1pT028S889E3OrWVMdE-p2AWsx7l5l4km/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1T31M_UsQ8DxelVfjwgjefVjvYCofCY35/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/11d7FDcIGgGvv6pIBSA5ri9SOWSNU_OTY/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/12ufOdBwyt8UJsaIwtJVZxAKUKX3ZXuTh/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1uKmKFoofRB28l2H-qmGApY9-3-WnIM2U/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/136SZ_bBHMu3eERWHl13meEUrqmjSAvNx/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1WQ8L-G07pCpSuxxyN-K3pL9_cjuSt3nr/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1mycJXGNf6fuW0ozRs-UqkPWNbROckTwZ/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1_jRu_icZyGHGb6sbZDi6crTAn9UAKlij/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1eZZ8IcDfpSRAarTf3hfJbfDbY0v-jY8Z/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1X6QvNcKiMx7Ibt49bvhJgVYkaliuuj5p/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1Yd8kVYPpXpC5GaLOqnwv-jF8lX6QJK2E/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1v8OWtKrlek-B1TghfxP2pGBkLveLd13J/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1KlSRDsdwWBsezNfx6G0mkqwVbMOwjXkd/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1E5lFCHTI-D20xmiKGz1iT2R5shi2w82B/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1Y0UjmKUgn0Vst6szUUsE0Ygn3dT_Alq9/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: The Johto Journeys",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTp7tXfXovYQNUKQA7xsebEm_yntsfWH-cr9_1Q_JvZ9lMrR2_p",
         description: "Ash and his friends travel to the Johto region.",
         year: "1999",
-        link: "https://drive.google.com/drive/folders/1R61bvEzEQNqqArO8X3P7WIDzl51NbL2u?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: The Johto Journeys S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1MYtKbmilNmp2XqrOqRbsAIruq45shYQZ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1or-un3VCOqPfVD_lOwVrpnKtb6gPhX7C/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1b-yyoNawVOteSXn7IG4jY4dtDuDX2N42/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1BwPnATCb0dlSxIKDqf2SiEIXhe8Vod4T/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1VNow2umUCgFvj_fzKBAP0MKD8vup5uJb/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1pw4nxyZ2wY8mOBICzkIqPA1TRc-kFZ1P/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1C8IjqflwO-ypHqmB9OjMxv0Du23H541x/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1iR6SE2YFYtWE-lZs-z1AYMxfZ-OHGIx_/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1O8zppR0ecy4IHma7iMK_jdw7jDohhrHw/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1Sny48Uo0FpAE5li29REz3Q_nfa5o7gUI/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1lVX_BPWhC6xv94PLOu4LE4AcLDl-AtPS/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1MGHgbALiMe1VQm2EX8SeE9hDyKPTOenx/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1reo0hu6DSJoMUPbVvM2OMoiGohCm57H0/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1ONmNpPBtCmlfVkAxKKgdmnQ7aDV4-W-o/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1ZFwXphEQLuAJsipcE_vFVZOaC_CMDRLp/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1qFnEuNpFotXA86c5xnL32VLfdSd_ClbZ/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1Q3ICsb-XQATr2MGBj_fn9t8wk7Ql0_hR/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1q-z0SQdyvGk4ONyYAtAL5MRYyuQV-QP1/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1rFZio0etqTA5RWvZwygDJFBsMpED1ZW7/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1EO48evmZCDClAUfQSisJvMb0oZc_gGzS/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1556ptKBoSll9cdHD01LdIm6GK8tTMXo1/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1SzmPXPyH0XajcyBvsg2wgNR8Ln9Pi8Qf/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1CJ7kXMyxhYwNcinVgcTo_foY2k640gaK/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1SVB7NNdgjZ_xxw3-XZKSKdNe0CyWoQsO/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1XZfZ3zRP4gk32jyT__Fk2VxahQ9y8lOD/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1pvZTIvZu8QcbhXQtAnPmQHM5jy7CWbJB/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1veT1ODyfdkYLGYkghs3r5EUohz1DSQ9b/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/19GjSC09dESvwR-8Drqdc304yknQc5JH2/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1Z7MNy3Z2Qqiikr3InB5iZ4zqkvKnGkID/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1f0xRJOSAPGVjX_x9urssbtUJ8cT4Uz72/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1-O8gcVzOnfyQAWbXDzvuhqUZALMjGxsv/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1qsa0LZAo8-i2-YfotyjppQXzHH9Efvmc/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/139rGsgLma50EbErM_oqr-JNGd7eQAux2/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1tiO8rOy2x7DLpbxX1hGTF7O_xHcAbMc5/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1UD57-f2aoBeKa6wuCRC-BHqXtFUDG7Mn/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1djAragXeMW03fn4TpIlfan1j3olcO3Zi/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1qvJNqIptXWRaGSrKHiSHCwK9kvIoG9ZJ/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1KnwcjaTzmW1qAZ1dfwT21ulhu63BWKsY/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1Xeahlat_VlBNqGDWqm9dNH0T2ssnOfgm/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1eBAYiQsxG_RcXUVA0cJum0nvdGkOMq3a/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1A0Qs5eTHdvHuIr7ZMtvxdIXhjaDY3r-A/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/13-Mjsutu5mmbUEW-V9KcI8_5JsL9r-au/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1pF8nUPfhOOVLH2SrSifKMzN8yaqW4ENn/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Johto League Champions",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/2/2b/Pokemonseason4DVDvol1.jpg",
         description: "Ash continues his journey in the Johto region.",
         year: "2000",
-        link: "https://drive.google.com/drive/folders/15UwDr3yFoUUHC0If6TAwhI6bUNy27-RV?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Johto League Champions S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1LwJTmCdHUHKH88AjW-c_ByXDBu8ZTMXm/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/19OwIdkYMkpvURKhX2bhlKKhBBZz0RQ2J/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1yrtiDA9jIjtjvFb--H1jrd1EisTHyo43/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1HtAYBQpW1tD9Uamz2aBj22TJQeKK82AF/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1YTotRRoKzzKZ_-p5k2N5ZAAIyWYDBKZ4/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1YYgr0Sdeso8OhpgIJuywqUYrU3kqO7r_/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1BnDXxz0jNWSJSZFvyRrtMKuRpa70SUtt/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1Tl4qWN8O4i2tbFE_6nJBbnj3--0zxwEx/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1xNr9z47StF3DZv2QNufF8C4fXgRDz96Q/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/10QEFJUotuR7a6p_5UVttrNDxBvVfpJkF/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1ZxelALpOkfDiSook8U3RWap0vEjiIMpf/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1q0jh-vw-v9opseg4Iw7JculhXx52G5B9/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1hseAWQv9YJ3CPYVjav3RINv5DqzeQDqx/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1vSW7fMdidDB7GMlqsru7fFRgQmAfnPOn/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1DZXjrRJiDk3kSli3_bJgMVPne6SL00ph/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1jb-tGsbujJ7N-4WmCpyfOOXIlrYyfAnE/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1aB1FSBgiJ9grmyjvsHV1rcYZ4hzPOi_j/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1DtK51NL6RfQYdymIPQ7CoeFHdBblix99/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/12voSysQigO9T6J3tILBsq48RT_GL0i0i/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1qacz10albi10kQjJ9aaFUj9ZmEdsuG-h/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1P9sxX7uDsoT46QoEvW0Le9Jx-EuM4Nf4/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1mRTKpONlw2zujvPkY6jWR3UMcgbVNn1F/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1mqy_UOn0bzIwTbdnq1jQW_Os5UGxu2cz/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1GbwTTlcQdIT7FfB6n5iWxEfMmPBc7y1S/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1Ba3WRlBGPiRKm__naXoEKC32zu714eY8/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1pea3KYqDSIKQh-SDcCo783sRDWdPd3A8/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1MoEBvKK7Zw2SfNzvdSTHsiXCFy5dk2HO/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/13l8opw_aLASdBZVD9LfzdAJ_Edar7gsq/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1KKuvDf8FLGBWtWJ7tcdCz7Iu_3TUMIgR/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1eyXIhBWnhPlU3a5Q11QoFUd8B8Yh8mdf/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1LSq-v7-gPSXS2Ijf1ljltz3aVBcXZDge/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/15Hw4vq2Z4ryEQIcFlMrx_vZMnQ50vy1d/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/19wTTjU1ZM2tfbBoPggA_2sY2gyzh0Pto/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1kzDL6NjqujiqLjrz5qyckJH1hhemezdz/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1FUwmmnRQWPTfEdLsVE4sBNgKgY8_nsya/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/13wvmv1_2PyL4maGUXeOgFYBTjpdiwyPb/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1wvg2rj9tge4ChqyOh2zZflmRiojl0SZO/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1gc1CtP8tt0XB6kN8UKG0nAsW1EAvJ3ck/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1AzJ2ymwxrD7YcrxLwY7h71NDH6pSXnZH/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1wFq6IPpPve3FH45ZGtzUmzr9hc83pn2t/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1WNCpjt4zsBGe4MclMzWtRvLOaJ-ZCXIr/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/11WiuTsQaweF6QQv1pYP7b0uZRdQKAZE_/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1c7Afk14mRBE4oVPnHppxUXyv6BvzegsM/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1BlV0i5kMC5HmIMXrayZZN9uUIlzF4GIE/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1CDw5hGGGrKEVVt7HvgYnku_lgqyD-HzY/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1Rq8jgnFdeWmKJ8vJJHAcI_5SNWD6CKsE/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/17X2P__atzDC58oR77hY-MlQNcuDUEz4H/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1MEBo9bHf177sO3ps2NrXnpSKULR-qk0u/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1pO8oEBR8-eapMEQamhcmANYJnI28U6YP/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1KoICxzbNpFjZVezu9VTtSmQyZrZaFYDy/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/1VmHAs1HUAdoJBwBGLj6dzIq2hvCteXUS/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1oDRZXtre0jKqyl6y6D2Pw8jl0m_pTI3u/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Master Quest",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/b/b4/Pokemonseason5DVDBoxSet.jpg",
         description: "Ash competes in the Johto League Silver Conference.",
         year: "2001",
-        link: "https://drive.google.com/drive/folders/1DVgMJ8byBYNY4u8Tbozb3y3vYFyaaKWY?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Master Quest S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1QXMa6LdB3qrqKY-y3zmmn2ejOumNrHyF/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1i1BppolOr8D-rmhiW70MTIyACdmiRKJJ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1O3_lPkPjdzcWiKIxUDdocCansGsw35la/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1ajpwvZdS44W8_WOutXGO0e5xck1pxrGj/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1rlDlifmoDYpstD6d7T7zLbhkNpKmwdPn/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1kD6DOiW1gbJIF0Vx_8KmK1rDRbLFuLMb/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/19JxkBGkGLa1vfjh1Mq2EgXyHiQC2u1sF/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1r691eUjnole0-PhH1186_T90-qxeft3w/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1KmyV4Z8ZqgR-xcT8g1bzYIljeQ5bblMQ/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1Who47IenI76vEEPMMXTmqzLotVeTWohZ/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1l0T4TmvD4ztIUzqSY5FPNP_f_c8DMclp/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1Q5qdGSKV4BrWWZvVRjJM7D8dlUrhICnG/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1STh5twJpJlcqSMDlbUQrO1B8gWg0MQeL/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1ePXq0VUpty5pT_3XEkG4qHAcEPO76NYC/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1J_W1CULylJLJO-yBir4cQqdUNVPW9y_4/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1MqtR5Rr5KZy4lgTA8ro4diyehGtydGIH/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1T6HMCvVCs7XGMfsfQUIpHA8PyrYvcqlu/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1mWKRBWoUSdcTqTeH5e-7_CZ6CMYEH4-o/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/10cfsJsqbwhdW9AEEov1uADdJKs3INLnb/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1S_lqeUZZGmqae4PBIVDXGo5TfnPXigJY/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1FQsUsBGcGtzzmT6DxD3G1euBWh41HU_z/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1a_mCqEcfyIsO5O32tDjLQ_xEa-0XuG0Z/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1LJsBXbPdUsZHUwVIXtr_MJYZ702HiR7E/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1aNOHUcsv1lPk4WXtJ4yZYZbdn-RWbgDp/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1oOna24qx5BsjrjDqvJPPXSngyaaQXDji/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1zQlq4r8dx9t3Qqsuf-lbfrTz3RYYbfy3/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/135W_C0CIa-UJVevLScmtZ4b-6AVxjPeE/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1VMB6eId2_pTXow305VyK8BlmR72e6Rrl/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/153K--oDuOKli0YylaZ5ORZuMr0TYo5ef/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1SscZpQ88N8LeJJCw5xhI929FE2Pybtcq/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1Gkd-NbKpOOo_OY8SkRRhFJHtLD9Poj-b/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1uB7vAePkFOe957t6vndsPuKgJhDfyalf/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1xincorv2zb2_4biBFm2H-uIVgQMHqt8z/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1LLBjDu8Hv08daBr4QnDazm5Xc2mILgAp/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/15AEXecrKfZf263zE8yTMnCemSajskzvZ/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1iKMuwYaXBeCPiKJF4qz7iWVcC_pCdPDk/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1LczZe1Qt5KRIhu7ryBAnxWFOrR1H0qnJ/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/13A42X26cTU2VByLLRYpy7VSuK-bJGadk/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1MsVfC9MC5vW9-mrds8VRMqBoTXfHk9rl/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1-rG4FOMGCBK994CdFs-sQM5TsZeRXVXi/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1IrwFvT1seL1WBlNHmWpeGUDTTxg-LlNV/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1D-LMwpwLI1CeKMR6k_hX2FMNYZjBbo_D/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1_JEJXjcV-K_duugWZmFoE4hoUO3C2Y-Y/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1WkuOBHt9j1vKnVJXRQTBBEx6F6UNo3-x/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1zWwZoLZgRNDHIbJ1hg937DTHcddsYgs6/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/15fccV30rnz6JDHmlIbot63VfqL6ziWep/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1DTioD5jQfIydBJXRJhDG2biF6qaxnJSz/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1dqawGR6aXuDba8Ocq74xf5vJ5pRlFcQo/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1qP_oBX74lDuf7zlYBLhOJAfkzRuiNIHP/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1qJM_mw7oyr1exp40gQeNcNKk1sE9PXcs/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/1K54V324CIB0t2L1pcj9MY984a2uCf0Ex/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1oOVpJbxrHtafy8QeEPyiGR2c-3EgGfBf/view?usp=drive_link" },
+              { title: "Episode 53", link: "https://drive.google.com/file/d/1nKXNAKNA2jnWSKo4Zptpm44U259bI2Tq/view?usp=drive_link" },
+              { title: "Episode 54", link: "https://drive.google.com/file/d/1MYCq8C0EkdGmoZzoW2qihSwV_UOqFERF/view?usp=drive_link" },
+              { title: "Episode 55", link: "https://drive.google.com/file/d/1-1eF_VDl46Qmds8Q-XJ9H7ym92ZHo0cM/view?usp=drive_link" },
+              { title: "Episode 56", link: "https://drive.google.com/file/d/1puR28BDc5NI02dHJNTO77DVTu8Y1bBcK/view?usp=drive_link" },
+              { title: "Episode 57", link: "https://drive.google.com/file/d/1-yJYGzZCiJYyOl1D0sox9uTKQv5absjv/view?usp=drive_link" },
+              { title: "Episode 58", link: "https://drive.google.com/file/d/1itVL_8zB1soQ7Zq-X7C2auMmjAPSEW6b/view?usp=drive_link" },
+              { title: "Episode 59", link: "https://drive.google.com/file/d/11pao2CXF62I-2gOPLhLtH_Mg4DnrjCsr/view?usp=drive_link" },
+              { title: "Episode 60", link: "https://drive.google.com/file/d/1bJmSrtac6CR3grmLU6_A44euCkt84Wv6/view?usp=drive_link" },
+              { title: "Episode 61", link: "https://drive.google.com/file/d/1f12Auh4MKTlYqHZGewP4Q_1zoy-MYMNW/view?usp=drive_link" },
+              { title: "Episode 62", link: "https://drive.google.com/file/d/1ViP9Uc__nBJ9u7RowjX5G-KWbs6d9EiF/view?usp=drive_link" },
+              { title: "Episode 63", link: "https://drive.google.com/file/d/1JTYcNpFlR7qAdXBBnFGEldh7meaa2vsw/view?usp=drive_link" },
+              { title: "Episode 64", link: "https://drive.google.com/file/d/104w_iNpW5GGubnxp6wZUfk0DJtbdOXb4/view?usp=drive_link" },
+              { title: "Episode 65", link: "https://drive.google.com/file/d/1NymR9uBHUNeUJSMGwbNyIsSO8I83ALda/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Advanced",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRsPdQFuPNH5MNsllsTTQQuHCJ_Km6O8aP5cZbbT--TsC8CZgDv",
         description: "Ash travels to the Hoenn region with new friends.",
         year: "2002",
-        link: "https://drive.google.com/drive/folders/1viWFHdfeZD83732j5O9TarHPwKzwg7gk?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Advanced S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/169e6zIEQRzyHDg_Q_Qgbj-AQI6udwkx-/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1DlWay01JJTAw2dctMeQ4EATWwEBCHo4D/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1IgBKjEuDEFMY5w3uHkdg9wOxnhV5zCLM/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1v0qnnf88zQN0ZYQMMoD_rnl7i2Gzt1LA/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/17Xn6Y5-IWJJSyZ7XJg8WODCgxkVCLg_e/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/11RHcfXPwEohDgWz2XkckQSw2BC8UDZky/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1mzfrch-w46nkuiR_6VKfOnejk1p3fLSW/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1s5aJ1PpLqdPGE7rs3A04y0Fo_1PDJktl/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1zeYFE7nWY5pCm1LmInKysP8r9WBbznYN/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/198JTWI_oe2m-XEmAG_HpAep8pqVj-uQ4/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1-8UY4pVvKAY6_DHo8axNGDRh-D_PqbA2/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/18T3R0lMRwRCtDH0vv58PoshA0xXPiz_J/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1ofvtUbBpOW6XcyBD-9Do791tauPVOML1/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/12_3Z705VCNgl5ruov_gkrPs0ftrvLlXW/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1X4mwQ4OZSlTHCh3giSMtTd9vGEU-o2-Y/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1QrGzBhsP8ihMsB-Y5mQhX3LS_UfIZlEq/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1GaeeMaPTORqJDuhfSeTifSbjZKdcnMRP/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1X8u-D79oHS6Lo6G4B-kjwm9Pzz3kMIkw/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1BcQ9soJ9fvJyY9H5n55-xo5iY-7S12sX/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/14Yd2G2PHouh7697cdcWDGtWhAwszUEMj/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1DBWxmOBEmojg252wnmnC4JVh7iR-KLXt/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1vhWQnW_SPrXhlF7uRVVf8kPaocsJqc9j/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1cc6OYDUDQzHjMULmgIQAoFfocfp7uh_Y/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1HNMZXwDdvHuL-NMBaSjkRq-qp4oy0Qtb/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1xdG8TDTMtCsIqp3UqWUZyyxShVrstzcv/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/16AtmG3MXal1nlDyBIM7cfbkhYDERxfXv/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1ssj-ntK71qlEi5ixXEKXPT--YPow7X0p/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1P9Ut4vEke6g59BRLtxCzX0ePi29uOEvW/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1_uLSXI1F3pNDVgLStbrARiPjJpNIg1aA/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1F_PQkWYqWcsoUBjK3UKJf_N97atcCYph/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1IfTYwippkqwOkx-i7aHNK8j8luFLcNxJ/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1Mjqwy554MPTaOa4ecd7bUlrTq69GlIIv/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1bT5GcGqN-qf-yzizOYxx-wWJ5cBj0p7z/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1PhME9GdsgROHb84LTh2KmOBMCQhRofHu/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1fuUzUOJoRGSQQsztt2EnIdm_rlfLVwnE/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1RXZSQJI9JiUOrVbg7QU519HlXlJm6vTp/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1HC672O7rP7Blw354q2_YQ03t_XK_iJqO/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1mU9BA8SgRXWakVanASOhRoFal_uTcka6/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1-22OEKJTYplDdfEDuD3WPN1eNB0NlMxy/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/11befn9O5HFFCGUS5lbn5Xs2qEBG5LpQx/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1EL87kwY9Uv3X5UYt04SPCgmBiCWxLwbq/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Advanced Challenge",
         imageUrl: "https://m.media-amazon.com/images/I/81Mtn7Si7NL._AC_UF894,1000_QL80_.jpg",
         description: "Ash continues his journey in the Hoenn region.",
         year: "2003",
-        link: "https://drive.google.com/drive/folders/1C_AhLMQGSfWl8S8yWuhAQM0lTfTbzLEm?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Advanced Challenge S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1PYQtH1JK-o-70QVP__fbm3lKK9AD-4Lm/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Jb-jivqzSJRvib7xpfWY0oonut05ekm2/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/11APwbW4zgAS2BSjP7qoJfbb9fJzPlKs7/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/19ZWyUaC38XmryNbnPI1y0y-Uh1mYPqtB/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1ACzwSlcF393j3z-URZHbbWnF8Od0u877/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1OY2fcRckQt4VCOK40EyNIT6m4pkU6vXz/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Kxe5IoppJ8B021DttVG51Q7gBQLUfDEM/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1UHjTqx3eLj0UsA8-T78hpsaNbwtoYVqz/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1sa-Yhrs0DrizjCI_s3qtN16FDmkHevnl/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1mRKQRG6grK8o_MhiaQbvRmovTM0PxeNm/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1-0yD6Q9SGwhcJvmqZV_C3BI6VAIU-GjO/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1aRNeBclgZlEacwsyqOZnEN5zOhJcJKzh/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1CWu7rnXgIjVw44qs39s6L4QY2eDKLxaZ/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1v007dBQnPP75QvLGT6MFEYNzoccRgat4/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1oG-nvugQFPjP80in4KAlEwagfXTca85M/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1OQCsAaxC9DVANGB4yRgDVG7xooaAHjtZ/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1LL_gI7EtB-BM98gULIP33Igcr2OpaQEw/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1Tct_OTLIjmGtztOfjPY4YqrnHMR4OBbc/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1z1Q1Jbvoanl24fs46RCtdGzKxgBxgO0Q/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1u3XMynbATg6Mh6uoWKZnRwXb68CkoU8w/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1KrV4L5DucWgRZjqhWJ-5lSVnCEbdqAL5/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1MoyJ4dM5GeAQWmXerUC34Mkin1SzcnV2/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1L324XAuFkknDxI4BM3_5somH44jl5cV7/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1C_m0lGDf9edCLJWC9WwJFxvI_dVo8CCT/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1yMJizcVqO9TFCAnZ2zvJLpfK_d-XnX_3/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1sXY53RuChIH_qpzrx9LLtkrv11kB0kMb/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1Uxx4GoEpFd6nAn9gVSl_U019BMwhw1qX/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1bxtpJGOnooW8XXJalV4CeU1Du2gQagox/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1_2MxHBM6DY3FdVlkQ5tow8GCDozHfDde/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1GNUkANOEnIiDEnaipnjyFHNn6WQa7032/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/12vlQBEFyaz2Wizv7XFPcPmjzMNXFxyRW/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1sCk6zTkv0WqBteqlZUfjfUMAhXu-HZmO/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1oYzzbtTyfURpNMCzVrShJhy8pO9-8Uhk/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/19REOY-9ft1oOjEWgo5tabQuJMeKwkNlA/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1YE34xAYJuOXPDeNXQB6vo4PH4EO4_8tl/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1Fe6LS2e0KmnLyckJLDzwdchv70et2ylM/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1zv0EiD_wvSfTSALFjCBhSvDFkNGGUAEG/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1ocduU4AFT3x9Il3PuFX8eccNk6L-u65j/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1PqYKoHX_QJhPzkJ8O8nygv7l9jFmD28p/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/156qLRLRrM3sI6PmAlz4ocy8-SPHAPLRH/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1fNs3ZIvDU7fuGeaTD5olnnVUY7qgUnYe/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1eLoASBrjtDrXXRaCJFXlOLhGm2essHTW/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1SE7PfrzzU2LoP68IByTOh9AyJS-ar1Ua/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1aJjmgzlsR1a6OppK-bM2BNKcHFrlUrXs/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1d3hWNbtHN0DwgO3xUjw-AhYHsBmNiEnK/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1-hfHBF-BPU4bOosIOW7AkKa1d-ixfqqi/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1gNC0OEtuSjNJhRDRm-arCVI0Eqi2g_8p/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1oxaOi9jbGs79CVbqGZ9sKkpRwLLxQFuZ/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/17zxGaL4S7_OXbT2oOAlfhVZ2dGQNN6Kv/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1SXPFwIi1Gbh1QKJJf0d7xyHldPn2MPLP/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/1OxeDVzNXK9o9EnpqWmD99M31eNJvRGlR/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1tgJQtbbdzp7JwI34KSrsE_hUmTD_fm4Q/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Advanced Battle",
         imageUrl: "https://m.media-amazon.com/images/I/8134U8-xeSL._AC_UF894,1000_QL80_.jpg",
         description: "Ash competes in the Hoenn League.",
         year: "2004",
-        link: "https://drive.google.com/drive/folders/1b_Boq9c-2JaQENUht994IdEwGxMMaf4-?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Advanced Battle S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/19gXHPnGzc6B2yd_7EcSpaKZs7rCE3EEm/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/14Dk9_ruCRM7O95Ut1d_vYOJ2OFyxu6F6/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1oRTT_3jK4pa2SF-N172EfQWMzj4rtCsT/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1YMlGJXgzQDMpRWTzva52JZLmMnysykEy/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1USaHxX0fdt4lo4_HXcOIleKc0rL2LcZW/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1kjRYB2LAHP1FcujcG325Ck4bEAtq-0LJ/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1ZSy_3B0sToryzotqb93KkRCYvrPcE-8q/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1As9-duLKzyJEyFcOwE4KF_3NnTRkaQ59/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/14wbyJBtwW5aK9UUjfIFhiCm8_0kHVGsw/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1FtMEB9QiuY1Bq0Tl9hIrYdB0d6SMkhS2/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1OQPONL1mrFF4R37yqP9ti8zVmnq5rcGh/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1945Hq-XGFLLYZYhIH5wubSeZb5DbwXDl/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1AjKxPnNd_u2sMOJjoCAdCk7IgfIjNif9/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1BiU-2KGauQt1fbh0b9IJzLSS_wpnFF5C/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/15uV1Krk73cpyai9IKFHOApYcqq8-IIXt/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1uf6OXY8tOBz6bWYMzmnr6dovkS0DbKcn/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/12dRKRIEaFvpQWjpgsBYtTF9byrQ_3Sip/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1KeRjfumRJOOXiTckjpRjuuzC-SFlcur1/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/18nrF4oYng9C-kWEfor1qEL4X0XUPKp8Q/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1hiL43ZS72ZK5V68cy6uAKEosu20pbbqz/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1z4g6MU1No6BqA-aiu3HYQH61kq3p_iTs/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1604nkNyPkOwCvfmKz-pgp6OHVTXK8jTc/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1hNHCURaaUkCCMnQnuBV3XDAOG6h26YZy/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1FjPEIVdhl72ceHf5i9cVd4DgJG7HeKqn/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1Noi5-8t5OUTplIGuTo3ZhgB6Td2XhROt/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1WRqdVT2dGXME43k4jRLyV7AqT_nOQFi2/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1hfHiH5H7lr4xNA14wrveaIgvfIWP41c7/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1IZ7KtjdzrzFalI6Bt-dPekuP3h0ZuMRA/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1hWNJaRF5cscrSTAZy4zT27vmcywDYamq/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1MJHQX_nJYX9K6WOlIwCGK5I-51oxaiUG/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1UX-4KBkX7ZDZ2oGINvh8KxHwOzihe2NR/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1PbpUntLBXRzEOP5NsLuJjWdwe82iMlMJ/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1ydN9-9F5frx20-UPm25CiCDBGef442VG/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1aLTOBIXlFjZHO7Ohkb4mfd8XcNgFg7RH/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/12XPfk2SoQlxbnTtxpJ3Tjcz4p1Bc1bQn/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1lm2CbabhuhCDkVISAkPkBauzXK7Q8j6p/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/16wqemOGHVuG9CNZY-gLDrLIPRa-OWQM8/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/17J_zCuY3mNrTXJgiFaKIaI-jSqOcr6J-/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1_9KRElIoCYRUSEAiuXi7Wv3NOVqvcEF4/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1SIQvW3e0-jotF69hESpYlDIwTipumtRK/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1jaZbnsjIl6NHgyEbf5tk6U5SoctnUEyA/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1wcI3Glv-jFy0d0xRgWRvHyc5c5_MHF-6/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1GUScdo7xbZOAzoHPP5Fsqrgb_NgzZm_v/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1_MxIFpGwzayoiMYRI0fZjicciHR1ArIQ/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1r3euHQTqRW5HNQYrVA6MzoBTkciCdmLj/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1HaVLqcH30RWSjJE36VGAFjo9uXxqL5_V/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1VdeAGLvi0-9oscYL_2MX659KIFBCUr8E/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1F3-F9nM8bYk0BT0OsAZOTHjf9Oy7Cm3X/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1jHri5jOU0ez--Qxd7Hu3i5zhivM24n-x/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1uLAphHT1EAXMg27I15PfMO_uiQmu7wx0/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/1qgLs5D46fwQfg1FV2OMofaQiMsDi0gvN/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1E9_SAdwXodZb_eb3n5H0h4yMHnAdzh7B/view?usp=drive_link" },
+              { title: "Episode 53", link: "https://drive.google.com/file/d/1pkVljxkzjW6cWIKIyW5i2N-MFPnYtFxu/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Battle Frontier",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/2/27/Pok%C3%A9mon_Battle_Frontier_Complete_Collection_DVD.jpg",
         description: "Ash returns to Kanto to challenge the Battle Frontier.",
         year: "2005",
-        link: "https://drive.google.com/drive/folders/18JqFJFKlu-DgIuSuwmr5dcAhOdkJl_4v?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Battle Frontier S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1WnoIB6we726a3cpckPbdSzqQ9c3aDxvp/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1BJ_uwLrA7RFXWRxzmqeBtYFTyCYkAYnN/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/18dC9unz8a_RuALwipLoK33ElBhjMCWRg/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/10Xl6167umGAwD0Kn96bJ5mXf7nOtDmS9/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1h70mU1Xox2jAItQP36LjfsYM9Rfk4H6i/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1bjRJsAGtOkZVstptCAi-fGUIrrtnODWj/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1C1pLO9ifqFkrJY_p2V18okjDGNE3jRdS/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1wC4z4oCLEHlo-wXPGqy9id6CBlqWB_vd/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1T9RcY9Zb6mO67AhHsWdQXPmR1uoj5_Jx/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1mpKeJb9z5nKkSed1uP1hWpOGQydMAoX2/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1lyMZW3T3z1vsjNxhoQRzCHLZ2_y4KUvQ/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1-y9Kc6tjMNA6yJScZP21kRGJVDUzonmR/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1ksgx32vQ1QcuoJP_mL2wT6bsEvqOPhXw/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1_EQB0F7pwJPV2wR-RqJCv8yfJoN-6uY3/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1BFC7RRJfvClf9ecfiZaODV3e-0-6TTmw/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/17nicZqh6GY9NJW9cctz-ZGhDebEE_x5T/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1uaH2DOoWNk6yGTJYjk0aq5YV1b_KUjAf/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1yg2MoX1maTtaQwM-_dTjWVr2lfUNTTj5/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1KD8Wula04-FwHU1RSW-wnrrzqa0hd0qu/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1xH69GASWf6y5fc0aFGIQnTm0-u13wYeS/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1152RzpSNu21VwcYkhEm_ySHAAXVe7qVP/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1B9cv4ozX08xS1zV-Wo7a1a0TByzNh9gJ/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1G8McY8snjJd_3OClVZ5LvW1FSqpUnbRW/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1ZiNu7CT4bQVOvLIS6_RbNqTm9etizXAd/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1Sw9dFucy0ACdB07kAxiYlhyvt6iTk-Vq/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1YmH3s3V5U6eAMkOBCNduKyt7lgH0is8k/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1JdQEHBkaL4ERcQ1CAA-gp8ZRa_8UdJWM/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1XypBb0NNT4j-oTVo67kOFnYnXjATODNt/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1AO-ln0fg_-xQ_mkinPAWc_kRNycEqdhm/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/122SPCOA3wqLJ8k13tEA9-esK-R0laiVO/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1IA72edQD7AHlUaXzUuedBbXcWUGT41UE/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1fnn5kxADzdX01n_b8eVeo8zz1rfxiw2u/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1mgTjXd04ROZO80CwjxRaIB6AfEmh3c6X/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1u1nT89cbtaGocfZHalpo95LYFCV6q8b3/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1pYL1-8SfArFD5nA44hmZa_OyQNY67zgP/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1LvuXbmEiUFTnEotcPdB5jQq9HubcySrj/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1LFzOYzUS9m-TSe3Al2TjiVoYdvJfyxeU/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/139Za9wQmcfeNvjFdujaMBHXFH4wxpbxj/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/10cDt1Q5tMw2-6EDRXGSio0u5uqaEglU0/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1gYhg6jOr3AL4Rz52DXZNRtnv09gqza7B/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1oJbjlFkQOFV769PBeH8hIrEH5C95HPbV/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1gAWL6qOWM9cxQOr32MFzXKpkMYup3MCl/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1UQbUEGq3eMIBGxIDk-aXNjMRbpY-dQhq/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1MY9K3ql_ffvbe3PBfTXax3oMfkaNmhi-/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1ZVI2b3_usOxEQBCa6_KXEaFb4lfds0T4/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1npdnFpKR8EUmt0CqXulc_Fvq6hJWCuG4/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1RI51_HYLypAXNVqigpqzKY-WSD9YDwLE/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1d8B610QMbhSkMvHKntaYgDJckBcigVWT/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Diamond and Pearl",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRe_K1W3nXyDIuRoxLg0Tk7GOKgIbC3siDRS3A03lOslKwkKXH_",
         description: "Ash travels to the Sinnoh region.",
         year: "2006",
-        link: "https://drive.google.com/drive/folders/1JqlS4GFiv35J0uNi2ac7M1aY_UWeMp4O?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Diamond and Pearl S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1hEmAe-NQuGc6VZ8dGFyBD-T3AbOBsKyE/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1y8zvk0boVTRid5b2a79geJPBFDsDgzm5/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1tRRa2MpL65zNhzVMBVcVX_RD4Pr8l6y5/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/14pkMihj_CWryVEGG33I8VDfQ6Xi9_nD4/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19mNtK-7SZT7zxbXb_qOEPpUHu4CeSVLy/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1fDKlZTmUiJgvhN4p3yGBZbLxuJ_nwRPE/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1kk6G47u_PIQZYdjtf9A111_usE9rJ6l3/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1jw67DJQUKKU7iRz4NKgbiTtq9h0Vq4X3/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1uDrQ39MaRZ6s5oyg4bx2kdKCYfCw_sOA/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/16NGC8zc-l4JUpDeSG87IabZ2MR0q9gjG/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1qepd67Rl3XN3gaVHs62StDW6AjR8YDdx/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1K7DA3e6j_5wQG3yPoh_leCNy6NaPXO8_/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1BQu5cj_5y2HNPhOor2BDstmIQQZFC4pd/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1XRL3obebzlmcEbkNbSaoSvQXUZXFnEUq/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1Zsn5GE_FHXwVhzxK9hQtBLBsXR4uSOyR/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1nY8STPfUHg-lBh70u-LWnxR7kk7_171R/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1R3UfZq9wPSPP0qAsFLqDocvaA4fhz1bn/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1jvhg2AUvxVoZRfc_RU-v1MOk-P_KYBYj/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/18S5OwEwzHqhfAubLzLyTyBUdQfH1Rrik/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1vUp0QAV5z059c9D9mNoGmtfB-AuqqIYz/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/12YQMf8pmL8982rQ7QRW3NLa9A4eLXgva/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1C1Q4-JfMLLCfuQt2JQLb9CYrSZpXDpCe/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1HWnVzfaC8HaYomWQPorsXGqVzEmicArt/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1bDL6r3DQL8LpQtd7ehhCdQn4S9KhdDHf/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/18N2p9joz0rxI16SmxlCrfRXmcPTTO5IM/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1_IFY1HNsgYQ6ztcl_u2roVW_MyfNSz16/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/16KX1PWAw_wEyD_NEYICT4fTcRePo44Ko/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1z1TouBR46Ai8KkE8b3cgTvWMhxCaAYQh/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1rxe43SW14n_WsnJb3bx94-F4fAFCusoW/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1c6iSY3tWRhmLl9wJbRovATsvazLT2TR7/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1i3RE_buqb17CCkkBTXDFL3MwI9PVRCSt/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1jV28SskJRSYezY-fryD3Vno74m7bVmN7/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1okWAaqgs8pCQ61-r4j5mNqYUtp8jeFUm/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1SQoms6E003YLRk2hFezmkTKOpQ-GdR1A/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/12t3Ch9W-vxBd2O6JZoi5JrbZ3s1tBP-V/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1c2GhZkz1P29aLFHf7D1BNBfi39NNRHtO/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1LHwhqTCQeHQH0SdmbMgLeYGJnpYz_JwI/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1Cjv1AU9k1Xp6yYgf3WAbgzHz3cKeDaIu/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1cjbae6b_HyxrtgY6_2jbPV1FxlPWYgQV/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1ScCyQ7JBapIh43cFqk77QOq8btXwlIC8/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1MBg2eQ6Zcjvt1OXZlQA6bZ4Fd6hZeyXt/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1mFUC1ENDXbJqQfZI8HV85KwO7VaV1zSV/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1lxHRFPTo86lTfERYd-vaOGcV_Qt1E_Nw/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1QNX-o42OEI31R7Ur6AW0jA__EA_hRVHQ/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1FNJ0TQSsb-qPTmWk-upsOC1JwX7_-f2C/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1bbJ92bUYFahi_aqkC2sXX5ix_CT615fo/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1hJkOXL2w-4CzMTy27NBsNEJXD-kJQ51B/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1yL_fS5pLfbyg9QYMKwlLtsZ4oOxRwaKy/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1UzadNPpli-pAY1mJn8zOAgEwA0GCv4m3/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1SeTUVz8gLKuDtYhndQwwbWUsbIQWHDtL/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/16yLnWkyDq1yysSU5WHG_GL-_numgGJPB/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1iZFnwfC4Px74jtR5wXCUKUdT9DmqPky6/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: DP Battle Dimension",
         imageUrl: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9419422_b_v13_ag.jpg",
         description: "Ash continues his journey in the Sinnoh region.",
         year: "2007",
-        link: "https://drive.google.com/drive/folders/1AWtvL-38qkaUUdym0fDbQEAV0Gq-YpQ-?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: DP Battle Dimension S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1en5VKccT_BCmhlQNab6SBm63F_-8zA1N/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1XqMNiUOk3tVsgTJNh3H-sB7MJQyJ_fvD/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/18FFsVCn8iVlfYOuUZK18e1bYuQizgkCX/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1DT4WFZxpNddEh2t5Kw-pysJeAfEEHDng/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1DUkwq3NNvZJdQ_fu-7LJr17LkIxJrMl5/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1XV4qFJLRPalGILiSwCsdhvwnU-oXEJ4l/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1sw3smv9OiDiv6Ote7NHWqa0fwhZRVYDJ/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1rMjWZLpeS_s1Yu4Wpk_KztqYJG9Gb_8w/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1bkuN5izpGTWXcyOwQy6qUa7r4YVtUKNJ/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1WuqeVyeoAqc9cSxLK9NLNcVQekD6qOHo/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1-YYgBGN-naHy0gOZOF8o5PEM5l_dm4j6/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1VFX9ueNQO_939i5htjK1Te_AY0HnsMGs/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1tkpGpJHWLTNtIMMua88tC2GUAjCFSSeB/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1_XLTp50RaqKcSqUHpTykgPD3kM47y5pS/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1Vo-f8iuZaeZjKO9O44_2h8IJPl9sanPd/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1W6-5gY5eB3cf6C3QagUD5PfaO-gZ4Csb/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1g-JmdcAKvSpgeWVGGu4a6Vc0CBIyLIid/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1y8GAOL40QvqfwZWwDwUVueGy0MGXZQ7_/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1M7elj_7JO2F_Lp9pUEgoP1OC-smVdT9M/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1exozv1sxpk75kHL3vANuDMdusx5Se81I/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1zhgM80UH9JXWqxJnSM-X58zX3wfBDA5h/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1i9ZW8ZIT70OIfIT8yUckJszkS47lBCBE/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1dx-7pxsRru7SvydqvGfoqD5SnmiHqTQh/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1Iqvo7u19ZwEGdJ03iIdvwVO2CmeVdtDI/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1ILpwnpbiq4oQllo-abjPfhaGQ1LexHYx/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/19yPG2hFqKb8W1Yx5sOzqVri4Eh346LbO/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1sQp4vf7H1ovuLs9RKHjdoR3l8E5haI1-/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1pINtngkc2UpP9yRLzZfv_SDGzGNaP_dq/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1ZpjBFfB8JG_LbTfLLQhDO3M-bWEAGcxL/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1Cc0cV5GB_U0ztro0M5AUq0LhGpC5RDrJ/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1ovmgJ-t8DsU5bqgeOm0bXth8YFL9qHBA/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1KB75Cpj1SzVSTgSgKhhAwWsiwkjkU41d/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/11NsL5wo9GJH4thWC9OBaxqx24UfAyFNz/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1_oMtfWUku79CKtX8J7tFEhvM0mNRR14z/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/12X8RfBnzJ79mqXH7DOWHDZl90BvJkUlX/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/15PkTh1gQkmP0JfQ14dP7GBJOZYIDcYhA/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1oHmiLyyj6pgeB7kNtbwM9bjJz_wnCdSy/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1TYID7cpcWuzN3h-UmzZ03TBQR4J8L-7r/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1PEXe1g0hbhg8ZLND_738Wf6ZtSJ1TOme/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1eoyp6PfmRjtnnI9KhQ8bnW_X3hyql6tY/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1B-Z-O7jEB8sCiAgwqG6YrMCM_r-3ldYu/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1XnBIo1oeMXV5yDYaHxBlgMYcZFjxxoKs/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1O8opiJYaSFrkpw7yYhBNT6yld7ENQA-f/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/19gNnWjMFyCykIu-UORuDYcNYJhlAdYcY/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1H_alZ4vh8fG3jbxB7OYV4IcqpZQNAnQ6/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1gzD9UApgYFkgSM0UR3Tibjj6aafVEQFP/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1rG2RLhb2I-2bIBmoMhIoDNYb-J8NI-vh/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1Dl4mQOVZEpIqVRojkGxxeEQk9p0ptWaO/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1PMyuxTxALK4gLtrbU0ziDzv7txrcCLHK/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1t-f4CWewFD6Dsj63YlMp157FI7kRCjb3/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/1HsuKIxa6sr4chbpDbAQQQXsqKhElV1Kv/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1EJHsnohpuKpET7u7tppljszz50RGsCsn/view?usp=drive_link" },
+              { title: "Episode 53", link: "https://drive.google.com/file/d/1ftKZFG4gKs7hGf7GCKLDfTYaLOq3Poo_/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: DP Galactic Battles",
         imageUrl: "https://m.media-amazon.com/images/I/814FKzt9w2L._AC_UF894,1000_QL80_.jpg",
         description: "Ash faces off against Team Galactic.",
         year: "2008",
-        link: "https://drive.google.com/drive/folders/1ROtMgoc6fkSZHkYEFyfwax1C5xJTRyfm?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: DP Galactic Battles S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1VTblaptGIpM__relY6S5C0JWL_Me2jzr/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1wygftWm62XYQOFzDrnw0742Z-GAP-DIe/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1yl67FX0qTJDZJTz3gl4rFSkEOVGutaeb/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Gj_nLuRVQ4hH8_LV1GZhvLTGAy1m5yap/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1y-WFYFth54d_jqgyu4JL2e7NYMQkHVEO/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1WVvCur5zx228MQuWNcH3WcRWD5LjVzop/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1spX3GQt_7Y7f5xbejW992caIAS6Rm9x3/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1h6lSm1A_oWaQy16yIzGcGQY4wTjr14H5/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1sdf31LuPJPoYGNtxQN0ftTXQAWgXmnuO/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1HeU88dqXrFeXrWNAaCB69qu2ueZURXEu/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/180bF3l87d5HlU7IMgOz5BrpLlPtYilXw/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1YRiJz8rDxzq8tiANBxB_J20ceBm3PQ2h/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1rsbWepA3_ppGdU5yyUKg99lOEZx4hsHO/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1sr8znlbrpWj3GIkt3PWdPgJLsY0T-5B8/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1tMlr3Qa7Fk7XQqCXRwa1_5V90fZBW1Nz/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1zWqohI3tF32w5SSVEURaMpGWC3-nCn_R/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1tNP24tO_UCtJB_wRx2G12Q0Mo5lpBmp3/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1w-0X0meMZMh0ZriccHvQcdUdKJXx7vIb/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1nCeRGlWVWR1sFD3Sgd0d54GI58S1pxW7/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1C9-dC7RgZ4WDBiFhmmwODrbtnRsXsKDy/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1BFEDR_V2LoVZg7ntmAuF9amFtQ5s9Wqc/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1R48UwUUzrVuwKSWgUWqCtGPQELwMybFl/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/10Y8BXsfOpLxQDFiY1QfcO7ueRkVtCfDs/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1rT9xVLVg119R-RCq5sKpLhPuhpOka3Zn/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/11koeH1Tx-ESxIlCzauW9-pgcSQwRxnkE/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1STZuLTMJgx8d58UTBDyAcUDdy5kwSm8h/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1TMkJq05tVhhfKNqd0Oow0GPF7nH_JSO_/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1bL5iOSM_N510CbUE5daru1MmL1t8Q6wy/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1mdi_mhntVeC0QCK-HOgQLg9TOmBRfSjE/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1L4Qd537kYzppXZsd_riTj0GAcEV7jsT7/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1o-tsU5WzcixyIAUpsCuiSkEgOxhHG1kx/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1FZ7dUtckOODUvqXdn4FH53aZoGrNW6hb/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1qMCXv4_lcY_OesStWvtwHBemBHGpi_VG/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1CSmlhxPLw85I9o8nzW4NxYL5eI7SG9z-/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1KHSmRh_XwwLioV4YwmdjziSF1KCzS5Yx/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1042wg4Ni_Kw8LG0dj7ERq9t8bG8OGJsb/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1p70JkCN9ZDnpr0KCR1X9xMnH9hURdVCD/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/190ywRYxkrtb2qvMOel2y1TFiohL6C62T/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/19cpBiCv1e5FiEp_dbg7N3Lhdjd_gzb4h/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1eVIoVQDdI8sByFvn3lsA_uiHEcADIq0p/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1WRPQt4sgaolevWkh-W-G5bgvWyVa8sT8/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1M1YkRY9_2jxBC14UzKaWX2C6mLdMe3OX/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/11q2o8iao2MVX96H8xuDXT3Gz4qYQlHiY/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/11oIDK7Q7Pfij8zsdXWEGACSTYwnp1tBN/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1atzKRramONEY73aw14219-soevvPzaeJ/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1To3cR6PLedBfAv6S1eEVEeNbc71qT5Ih/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1FH0VW5xDL9ytsJrlPUci2mEVoBb-Elxr/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1PC74xkwCHejM2NOwPphhvsSjVhiA-C0-/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1yWUcIW2O2SYNtA9M3G9s9UcsyhUIDCqp/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1vajtEeRkyVA74F3SaSjqgs4w-0F7ESfB/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/156NNks0-rJ6fw0WsHts4AreOC0joGD0W/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1C7OGuQhq0pIi8zIqULH34kS_3n6HKO-a/view?usp=drive_link" },
+              { title: "Episode 53", link: "https://drive.google.com/file/d/1lyrAsb7DdmS4PAN-kbc-D6KDEaqegX2V/view?usp=drive_link" },
+              { title: "Episode 54", link: "https://drive.google.com/file/d/1NW5qbYjPqZ-74LPqi4Apq9gIczzbaUr8/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: DP Sinnoh League Victors",
         imageUrl: "https://m.media-amazon.com/images/I/81e0dvUpCXL._AC_UF894,1000_QL80_.jpg",
         description: "Ash competes in the Sinnoh League.",
         year: "2010",
-        link: "https://drive.google.com/drive/folders/1uLr5MqHGx4Ac4BbJU_iIjcjd3HCnBFH0?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: DP Sinnoh League Victors S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/16se46XAvtBdfjqHtHo8-rrkOheGhbbOT/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1MVwSUoEQjqJwVxImnjIqY64OJOY1KdTt/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1d9j-Bo3R7TgGLIsfKvkO1Ybv4Ib_YZyO/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1DD9a0lHUNJnE92wftEsmLYipgw9y6Nnt/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1hVUyasI6WyJ1aG4Pavdpz6Vf3J7rVETk/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1vGCbQ1aAIW18T8fVKI5EyMcNqEMquIHv/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Pv9dOl7s6DgjZ4WmfqLNxBP9bpqOeQ4G/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1Refxu5tMC3WrNBwZvvbxep2mQwOuP1Ly/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1DbWJNTlSY6neB72K_Ms1BUURLcpZRi7k/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1l2CLd_IypPDRcuf302bcivexbwqIk3th/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/19VWxdEMcfIyxJtME3nkb4u3SHhVjUF_5/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1SwfaCfTpGAQKkj5EqubS9DjdHcaCCi8R/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1RQZjU_sJijmbyMmbbiKcYqfgvNOgzgNo/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1CgOrBbisIAadrnYkqcXkmuM2Y8_yLBnH/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1C1bKrRxFPt3hUyOYCXcS6qonRaD0DaMi/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1QTePfec2gZhgDqkhob4i3zih-__H8dMK/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1C08Q_c-TZMvAXxNQ3sc3GFH6jBGnY_NH/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1JGrmgeZuiATBaKrDNhGVZoDtpWZ-vJaL/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1Hi_4uF3FXHKKymMhQ6XB86oYf_BmAGVn/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1QdNWrI22Gf-GZclYnq33-O72Qt_pfZP-/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1_MT_OFbt5ZwAc1nHfzatIi-jp1FbWlui/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1qwsHMH0E-b059tQT2YwH_P7AKqb5MFfM/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1RLUU_xYw6Wrbw5eqQDItP-LANIyQnmnd/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1EWxbRCQz1ytj8m-SQ6Y7N_fB_8cvhCq1/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1g3DjmyQ_47rBIMrWkuFzJPY6pR3Ys2ip/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/18ozKRxKT9cfrtwsvdMA2Xc3NwWqcbKoy/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1xw2zOEXwjDeFpZE-YFDjlnu4JApDT2wb/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/143e7r-AN19cNl5YUQ84hMBQkWbhhOu2f/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/15h0C7ZnfBic6-FkX2pjp2WT3OqYQq5h3/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1ugza_9ec0bSwhO3P6LjV9SOg_fRSPVie/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1c-ZPA3VwNsvzkyGGh4tssCrNurvnWqOg/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1Src9C8_nEt8DEFyy8NhLhrgWRR5MaCpm/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1-LIizlMZWzsw0Y0X6N1NwulQbsNW9Td2/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1STMn8zk8ccgxddaF_yFNmE3iNidKm3Zi/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Black & White Complete",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRp_jHpvXtCnvvhfCY0aHnoVD_NaqpYGpGKOz43nPHsLvSo9XbJ",
         description: "Ash travels to the Unova region.",
         year: "2010",
-        link: "https://drive.google.com/drive/folders/1diP15uMwjHiLcTOExHYM3vs0-BozvXeT?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Black & White S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1FY64ZnYd7q5Rcm7vGK2YqClQMvUOUaNv/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1BM9VDjbsVsg5caTkTxBgNycnYUAACJ4G/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1o0qJlRg47L7I2myh4fadoy0Z137PYAiX/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1a_RZOzPvHELXvVCkUXZxnuNsTYujMW04/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1M2Zv7tFdfchOrKPFuZdExxAoKpCVEV_z/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1a-eGUOESiRRPm7vjmN69Nd5drqmBmL4q/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/180WRzSZ44AKXiGk7RvCMeXlWT5awoQTx/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1-KnqYmxKSiCNcFxn5KixyzTqKbaoUz7c/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1ZHptw_839EXWs1W3pyuYSYEcWuVA8Jpx/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1eRbwWROVk4V2OybD4RmPFgW_hUsjh6eU/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1o0IpHXpBNT1SfcZqYvnFnJdlgzxUTEds/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1_w748z3P11mpYjuFv0PxaMwf8Kyn9hig/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1OngsSAPOq0J_7EZEvYK8grw89YSJTjCZ/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1uGJb46Z3ggZoVqsrxu9Kg7H7Z2hC_GQf/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1pEPbQJgs2XbhJZUTs8bp9Pob3NdZMl6B/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/19MfQ5k3xTG_yvU_MbgdXT3ijaLdvTxWq/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1Aj5KOGoRV6ASEjZzFsa0qFqWMoAp-_Th/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1NnZkv0gTbhqKbFMNVq3qlChh_zoPLfeT/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1JOiuaXtCX_vt3eS9YHApeSphfMMcyeu3/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1uci5YKsKlF6vRIexWW5jZStxRJH4N0FZ/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1byEEl38kg4NSoH4QSDcSzQPV1SWftnVA/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/16KW-C1PI8_Qk3p9HS1h4lB2prgoHwGas/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1_ARwpRpQr4TDwoUAVDBZeMLw7riO6vdl/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1bNFwta0bLpKDElbM6D-f1ijcu98beKnY/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1RXH5BdmdC1aq5Q1rlqHKDPcqK5atJ-r8/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1cZPWgfHCTlwou_T3sJ3xFuFAvfXdiJLJ/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1RksCn6Eidtnxq3RSoNnrTscfPsYw6dVU/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1Dtjp8-dCFmcgQWyLM0jWDF7eELIsmlIx/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1YBpG1ri5jUlg5e9_bSzQBYQL1bYu5ybM/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1BQ_RQGs6vHo2i42lnphawkUxerlEIjOg/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1Hy-vkz_v6M9Sy_yX6HURry3B7Lfl6WmV/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1mhZDUq85k1naHpVAMrhQzdhOMJmja3Mb/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/13A4MxCaZkNQM3uv6-YhL9jFXmEKgXsaO/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1_EM-DFyEZ19AdhZ82tnZ7--6rht39YSs/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1T_vp4g2R9fE3FrcuNwAma0E6g0PUWDn_/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1D65fxgGdS_rytMLRt-u_vbhIqUJhS7N3/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1js6YoSuXfVpgoElQvfb53pF1GfKLrSUr/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1HrLJ9KxXktllhuhtpwPvuD5PhhMHbjb5/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1UJweuMHXyDGNFkjWiR6_Z5gegcZzfOd7/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1T5hJWDimbSyN02G3boVYwXgGlsV-P1s2/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1Ub4_PpkFkOS_YKz0PpLcxaYbBg9hNKeo/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1wSlvI5ByIbkhg6OF76bt5MBJw_iRun-T/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1RQPAhrOMzPBbbkOwyaJTtcQq8oWxRLUY/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/19WLoxSb_QDEfTkNImHKMwwg_juoNos-E/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1ycVH996zldtgcVQwSrSB6vTWxFlQ2krY/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1eXInbnHqhzU54OnJMcCVibL5tVVrjVvY/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1tkQoJXUOhruriYeRs8PzS83TPsuDtWgv/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: XY",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSZFuNikZaGuPS-fYpNtsC0wN8SEkVCFoLlm--MIKBE8SlnyDwk",
         description: "Ash travels to the Kalos region.",
         year: "2013",
-        link: "https://drive.google.com/drive/folders/1_gC2TGwpgM4FOrLYKhZgaqbpC6aStDOZ?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: XY S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1hG5aIYCVu9wPmQ33sn7IyKo5eHsHXUxt/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1BDI0NpYuk2ACnt83c_Dqp6Szc2R7BKTm/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Cjzk-6ux4w-Z4TkZPFj5auzM7oSp-tSW/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Yv6QrFoxhAVRGVA31yV9Lo8IHNAJT9Fs/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1OuGDhhkMaIVV37Wo1c6yX2COBsuTLRPa/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1vSUrOlKI6UBkmdINcsydY1ZCB3GjzHDA/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1E0Ta090YRHt4fHL7HQnc_Apwxrx10ghn/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1k59NZ6n0HfsKJLSukcBx3TL0r5bYUZGA/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1uUJ8phAEPEZaxHvGbVjjsA1YD1-NdwdT/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1J3HnnonPz2TaidUimN9OI8lzQOlvjeZJ/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1kQnv2o9gvzBTa4Am_Fj1KG7d4tPAptpt/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1QelDXhT-Xal5ws9bZSthBSwH2558w_H1/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1fEaMTDFPjQ0oBjBUv4OihkSbKDLfwpnR/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1xsJbPjlHdCUF9H33ogZqwYfFH3Lxxs20/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1OPT3-G9bjfcEP6EPVJrER7uNPjyyHYFQ/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1qIKO9bpJ0Y5xEpatthGQ1aVT27GJ7piK/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1o7xMqMniWq_ch_dORdX0vqSRO5aPs9fv/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1BG97BqWCMHV3IuaiKXKUg11EfFxcrmFE/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1cYTrlq-xuET8XeAbxaQCb0aP84YrS-DU/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1vDRXAQ-N6yBf2zoAMwO42YJOBg0YmlzX/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1Fma0H6qBNEXdRvOX4pSV3ueyYgGSDOsM/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1a2YEMb1nxIXbll-toIwQnSZdtz5piLTu/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1Xo5iBpcOr6pu_IIITKRSHsEgmnVqPp6t/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/14pKFgbZsKcDm-OvKf3f2dxWjUkCXx4o0/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1168t-Hl1Y2EBdkLIt_neWYtEGY6qFqfR/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1n1R5R7XxcLjXz6Ra9899ObmTsn6kZDlt/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1GmurWHuvHxPGFjomZhcRs0w15Xo3DVgG/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/16SWoV2rY4kzrydGVbv5_bYNxtnYajFXA/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/162usb2hmpA3I54WGr-e3VwxSS5hHg85B/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1kOceHgzsQvdw5MJn9Mg8NnFOO_J48KSb/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1y68h42r9-YQxtEUZYneJxh0rwQ0Y2e93/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1wDgXBaqk1NHpCJty6lUcsUcjFrEqHLCD/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1RFn_M_QirjI0dIpd3RkOngRv0LLErAVB/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1_NRMu4EgBZ7N8liJxzHSwDbie1RpIYte/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1fwAQ2NTAdtpEMvm6DgOOfY0XhltAYauB/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1QfkbBkkWH32Ea4lXoQ5xS8E0JzG_WaBP/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/14kPWNAZSGhMuluFkVhT7vwwHvD6S38fl/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1RzJghTeOzzcWo2GiTNiwdzTgD86fi_2z/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/19jABfJb7RPlzE3JYu6zNjGNkhzOPgRhe/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1BvjP9TiXJR-7fLQXA4qDYq5w1O2Siu-N/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1B1mz_YEwkaeS5aLFD6EWwMMYwYZrMF6O/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/14jB5x12oVwUxzv88NkC0ERVk5ydxTsUL/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1QHF22hqLOcdoFPPVCL1ZekUXVOJ4gTti/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1063X9IxcYwuzrEBzaKf3WsdHLQzUEJCr/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/14gN52Ir6x8ujL02PIK_enQonzdS-81nm/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1HYAQ5v4c8_nnCFQpKH2FA--UGhMKkxOs/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1qNLTsczraROMzrvlggjLsRDj2FFR3LGK/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1h5-Bc-uaP_r7OtWJyRHcX4bEg4hTrS_-/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: XY Kalos Quest",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBB_cTazgVvMguN4Jsxi2mKpbmuas0fgmehS2sXYMn76Glr5mF",
         description: "Ash continues his journey in the Kalos region.",
         year: "2014",
-        link: "https://drive.google.com/drive/folders/1B3lkLsMvzY46jNm3cW-oecLT3cV24wkj?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: XY Kalos Quest S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1_oKQIoC1hDgxggoGPAenyaolFy3BFhNX/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1wmHHRmThwhp0oB2PpTmgSrhVMMSrUjZ2/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1MiqNnPLJJz0T0oRKFDud26574GXwaJIZ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1fVhKVLYwF5g9EGxd0oB5QL5xzazGLDdl/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1hUvqnFJrZX_AC93c4d6XkN7WTFSBwK-g/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1cwVMuHlP-rVGgKIPywTkQTUwIFTJ2uca/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1iyxeTZqA1zqtVpBKg1umaJhAIaYerYaR/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1WRNU8EHE1GRZFrvSqL704xIXM3lQlFqj/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1BLu6nHY96FSLhSdWT79KtyhK9y03u7RZ/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1tnQoIxnKBewPIi35geEtejTPRdlLpgJK/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1m_mYui3dt3RdPb4xwJ5gRAY4Ad8ANH6f/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1vLX2iQSxW_d2YzIZ9Mbp4NBNGt2GuHa1/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1J01pVF2EetQPof0ZyKoXmgmojfimFODP/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/11-4wQksxFq1Huxpq8rfi88H7tS2_DWZY/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1mlIblhY3Ho633L3xvP3EB6vF4BSB09qd/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1ZQ0iHeG1UOQFanv0Wv2RGZyGNlawA4Kq/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1juMQ_RgV7tUv1QrJfWjOMYEhOmQ2z8k1/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1vTs8QURRSl2t8-hg_eQ_Ua6GHgY7qhLG/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1kqR196Ed2IE3Iji2xHRdYQf1Sa90UZzq/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/10fTWqSv2DIcR29REod_UCGYBQL2_0Dhb/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1lxRiJRBypv8qqeyGQEdg_BBFtA1754w7/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1BUTdgsi8Dc6ABLbmJXkkVSn2ld_eBcU2/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1e87noksbo1VVC8ze-oPf5c-H9QE9DhkJ/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/12ylen7RFipyN24RAsbGdypFpI0D4sEor/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1-4ilbaM6f0jJPfSdEStkIFnYp_RllxKE/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1wFgbqPXH2t57O9jkjLtlNfCH7zX-6UfY/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/18uaFbEjbwVke9yPDiXS_7lqQLtt8Zf1H/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1O4-L8zFAIhOXcUZgm-sagWavSMYBi6X6/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1VmN5hxx_XwcEoasns-rhJxvGWEwXdR7i/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/12Xy7k5ScNXGdZsH7S9sZLAwZhcXZAQYn/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1_g0ks6t5Fs-H69d65RQx4dcoMLoSxIde/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1Iy6A2CXKtzgMZ00o9VTysPa5wq9dMNWc/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1DqoPiaBQFYABfXU11LDCpJbBmpqBzJ4h/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/17MtuX3UxxbNubTWxTNw6bQkS6zXsiMrm/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/12DkWuU4uMYB6dFV56NTuVUAjph-rY4IF/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1uUfOhIogi6Y3V_oeVdRVdkV-uzQKdB5G/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1SGydIicb7MqNdI-J9z1-S5Xf7slQZhAU/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1FKfN-R43mG7dTHzrFrDOgCdZTBKDEQFN/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1uP9kILjFrzEd1JEoCRqAJfMj3ac4s3PA/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1333MnKJku8IwP1se5pi7HWbWLQhX-_jv/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1D7nJdSuslhXr_L8pRmbB_LZaR4JUnF9c/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1ecWwOwP81_5EEpbHxBrMj8fnxJsRTaIY/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1et4dbkeZFInU4vxPedg7C2sudBMKBEnG/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1F1BQlXKvBEufw5_TaalEaaeuEOlvpVtQ/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1AINZSdkgNA6-6GIguLBnhyg7VbXGMShO/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: XYZ Complete",
         imageUrl: "https://m.media-amazon.com/images/I/71tWpr9TCfL._AC_UF894,1000_QL80_.jpg",
         description: "Ash faces the ultimate challenge in Kalos.",
         year: "2015",
-        link: "https://drive.google.com/drive/folders/1GdptdijSMfbxlo_Q_pe1P2xe4rkGgGP8?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: XYZ S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1oO2I3ZCTUdGEpaFftPU_k0KCvAXiCuCv/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1m-b4d1uTLr_R17r-1K8rw4cD7hKeqV4F/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Up5PxSysEgSneKJZyrmqP8B-tr7jajWK/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/12Yfp22y9nJQqack4WTQcAT5Npm6k_6wj/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Sun & Moon Complete",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTW9SrkJfMkeK8dBR3LMl774Nkc4s3cy3MNQqNuTACKAQze2zdB",
         description: "Ash travels to the Alola region.",
         year: "2016",
-        link: "https://drive.google.com/drive/folders/1knAcoOB7X5G2_luxTOEFcsqaRMjEwhio?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Sun & Moon S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ApN9pzQ0YvkjnmnI0L00lnbtuctfQ-cV/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1ojzmkPS3zD4IXYVo6Q9hfv2NTyJtgia_/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1EipcPlCKHjCHkXcF0uv11W3YrV7y6ZiX/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1m652WNxWXYKFn1k7O1C668eqB6nwJ2A7/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1S4AbHEYN4tYRIGowgCUej6fISGOJ9NQC/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1nIZ_q37fIDU7PseIZ4ywxfAWlOdJl8Ca/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/125Jl8Bld9L-1mAxV12MCJGsdUVY6OBWj/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1hE7rr9swbCya81tMcTyOZHoGsIK9MP7c/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1PVvlvf6TKrEJIzH1qYuhZooE1NRotIn1/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1X2eP2yHxHUsPpd-JfcMeUqtwRYWxjJCV/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1bww1H9UNCm7pI6gBQn0QAv3N2VMqXT1H/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1DDH8pakPZhVHoo4jAbFDzx7tV9qW3xYP/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/112blDaadYwDF06OOLU0h0b4pMezjUSkS/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1c86HxwwlI5CIa6VampRo1kFtfPbMTk3E/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1GcsIZGy5FUlrbM8R-hJI3vRX5YCkkvzh/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1HOkLCu21sd6Ng0M5OC0w6E7Av26uyoG5/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/18AXfZDSS7uga2yYi2KYJZeL03IY7n6OY/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1kt5hQlI4CppZK8KJwDOD_49Q_NQWpH1E/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/122z2p-bD5gbbnV9wcZVRgDUHyp-ZCkX0/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1JiLlFP44LwttNPM7Od-seGxBCYH_TaCf/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
-        title: "Pokémon: Ultra Adventures",
-        imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMpd6uO3eNiGRLSj3eKW22hFJSrcB6yGKCwlAkFpC6EE8-4myO",
-        description: "Ash continues his journey in Alola.",
-        year: "2017",
-        link: "https://drive.google.com/drive/folders/1Jdp67kPk2JUX3OhE5veQgRyo4kX2fvyw?usp=drive_link"
-      },
-      {
-        title: "Pokémon: Ultra Legends",
-        imageUrl: "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p16663197_b_v8_aa.jpg",
-        description: "Ash competes in the Alola League.",
-        year: "2018",
-        link: "https://drive.google.com/drive/folders/1XlhK3uNYxZMPeNsU8zZk-dtrR_MLcFze?usp=drive_link"
-      },
-      {
-        title: "Pokémon: Horizons Complete",
+        title: "Pokémon: Horizons",
         imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Pokemon_Horizons_-_The_Search_for_Laqua_2025_Poster.webp",
-        description: "A new Pokémon series following Liko and Roy.",
+        description: "A new Pokémon series following Liko and Roy as they travel the world with the Rising Volt Tacklers.",
         year: "2023",
-        link: "https://drive.google.com/drive/folders/1zA-jxsnYr9NVEgsr7TfQeMAdB7MS7BjF"
-      },
-      {
-        title: "Pokémon: Horizons: The Search for Laqua",
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BNjU1YjM2YzAtZWE2Ny00ZWNiLWFkZWItMDJhM2JiNDQwMmI1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        description: "The second part of the Pokémon Horizons series.",
-        year: "2024",
-        link: "https://drive.google.com/drive/folders/1MaFFrLyA6NY92qJz6-mKnyAIH5B08V9E?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Ix_nALxK6mUJ9dLQDVUI_UtSoz4cc809/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1ebRlsDtk-1V190IJhT2T88hmCOiF9YSU/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1QhUvt4RMotWqaQdM4bFOAcRa1n8W6jkE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1lqFA33ZxjMnyrACV9FYtWXi2wbVAzlnC/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1mYOrHZjbnrV3Shm96a9alScP0KLyo95a/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Q7KSxhkFBdmRMu1LmDt_rQO4cX1QkuQa/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1uw-9n2-6u30VXc4Aqkory7-CgLcuOAJ8/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1OFMevHUHnItedey4kG7jjnmw-80bZ5aA/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/19b6IFrYS7dWTMhw2dmvfAS3CpmbGPvuS/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/10eH4xuBujWju2dkMrktZiRdVwE6u7t2d/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/15XQ7YW3PTImF1xvpny4QaupLlGEmvkv0/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1VyC23LJvEqe1hxosEZmXf7dC6Vy5Qj_Z/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1LCWgK8v7qTxhR8QMC-pGPUVzQ_qBGfrV/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/14M0NUKQ5hNS4ntXZFjTYcyreEMLeT6hJ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1blAvvuDNH3ggZmsNzJan1DQifrkRvxM4/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1C7-e01n0ju3vhS5Pi47NjkbGrF2mOK0K/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1FA-DshPFXDgxS6v9_9MgFQQebDw3Z4W3/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1tGVDl3CPrO3GdXq2FoDT0sJN3gaQO3uX/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1qaMQAqYi9oCC664WTKaR6bOXV4xSTQuJ/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1YZ7lAtsoe8r74R_ZyobLP7y3dtkCpzgK/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1zDVeaEng5yMTSWWnwwx2NWKbyGbramvJ/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1GF2LxCNHiXv7NH-giCpZ7TXjX59Rrung/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1WA_ecfvI4E_O-OqgIGuulWIUkPn5hGE3/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Dl_ycT3WGwUO76QZoZ3nIMs-d-cDPmVW/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1vxI1FbuINYofersB9ixzJH0MpC0rSN7U/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1zQwqJvg4UgPzaPqOFFWnXBiOv5X1IaUq/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1CGRoBdlF2hc3lv3QqCIJxVcpyTEY37e4/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1kQbbzPE6j6Cs2FHurAJiVA-G_Sn9h6tk/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/11DGOq7nUF4IckSPNBlnHoyuyfwh_42hi/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1tT3cLTJEp2qyhFfNhLYMHn0jA9ngy_qq/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1POllqXlxnxEXodixHhsS8jwO2xGI5Exn/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1tY5tznu859Mvf-WCU50JIbYZzsPOWZdv/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/12Tn_eHbDDYCmquO63a4BJJZndUpfHDMM/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1JN_3GzFjNS0sMKxD_I4AGTMgzvBu0hYq/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Journeys Series",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTv-Eg4tjVkmHk31IykBtJemKrZatPmUTRChapmJ3NoVrjyMj-y",
         description: "Ash and Goh travel across all regions.",
         year: "2019",
-        link: "https://drive.google.com/drive/folders/1882yNi6g-xIqsp6rvzG3jIq9vOgcZv7O?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Journeys Series PT.1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1kCxNevzg1H77Z_Ppn8BctUqZLIuINwUM/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1amVEXdKnTQLd8obvjwDKmf-CPHkOL_Za/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1yBJA4HK-Q6p-fZt5ZuPYbSKJJ2gAwQyP/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1hh9Tznj8hwndObRSIVblbEZJTJX8wQes/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1eVPCpcF5mbnWFcLZGg0e6MqhaYHpTEsU/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1QRmTLtp1Dle03kdx1XHiwf3AkRDqB-4c/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1yF9lN745U-B8aXWkXTU9xGyJfWi08xNi/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1JtucJiXa84L20AvHKQj6EBnxtEzsgfTI/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1qfpAzYdauOd8JAwNOeOjhK_tT_BqBdlg/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1wwWdGsH32NBZv6Swv0xA6AIZobZUCJLN/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Pokémon: Journeys Series PT.2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1MVDDgtRXVT8fF-ExWZymkIB-MBBVckvD/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1UjoiQbwS2FgUwLoVXIW1VqntENrIwUuV/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1QsXXCr7CVCmU4u8ChQOCla4xr8MLmeuE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Qhgv76UTNQhmr6e89gLaah7HPf6z1tAK/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1SEZMXpu97nHTkr9od4HrwHzcADEffha1/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1YGIV9FdXSH7_mqZAc6Ho5-kzo5BWqJZf/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1pb7IQfHOl7h1Cu9y78v0JxomHVSztg8C/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/17TLwlsiYDUoM53zb97ElA8x3WLwgQ1ZA/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1IB0nBso7LKmQTa5u9JlTlwOI9bNzIS8O/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1si44HtD94ERcY9eQpO7hsMY69z9sDEfD/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1PxwlcQSdmhI0Zy9E8ZgEK5sNR0vmxB4k/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Pokémon: Master Journeys",
         imageUrl: "https://cdn.jsdelivr.net/gh/MKPlaza/MKPlaza.github.io@main/Pok%C3%A9mon_S24_-_Posters.png",
         description: "Ash and Goh continue their world tour.",
         year: "2021",
-        link: "https://drive.google.com/drive/folders/1sjzp8LdYsHaVF6UTmjJwH2EYafFZBBlW?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Pokémon: Master Journeys PT.1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1sQ0DQYxe53EQMrMd0CGlxOKnaC3ucE6c/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1ylmCwsvMIpnN7ZKewy2u1YFLE6JmqOPx/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1pL_EpKIYBgqwFE2r0cSTE6Xx0Piej2ft/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1bwBT0dtS9lWIxTQ0f1BEbd9IHb5ZzeIZ/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1p8v99SoUaAgAeNJ7tBNUhn-dIvRK8Kpt/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1zhga_rqaGpQvaJdkREYRUvjFY3Jzq3yi/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1gEm6qHQ9ct-SnorCzC3fpW67KP0U-ANK/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1W4iSVTKxR-M1Dn0ClKZjQajKRuB0hXNl/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1QryeDh70KxLBRKwiRn-vePdocSVu9YQr/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1TZzTWSPrmRXcStQ2pF5JAzts_MzkLId1/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1WbBVmWz7J426dkZbjJqWLY0DsjU4kidw/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1irCUrSldFAUYVsqzsn3WMXxlb0zYAlXF/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
-        title: "Pokémon: Ultimate Journeys",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Pok%C3%A9mon_S25_-_Posters.png/250px-Pok%C3%A9mon_S25_-_Posters.png",
-        description: "Ash competes in the World Coronation Series.",
-        year: "2022",
-        link: "https://drive.google.com/drive/folders/1owl3LPBqYHedZUU56V6ryIKaOXwsLtgG?usp=drive_link"
-      },
-      {
-        title: "Pokémon: To Be a Pokémon Master Series",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Aim_to_be_a_Pok%C3%A9mon_Master_poster.jpg/250px-Aim_to_be_a_Pok%C3%A9mon_Master_poster.jpg",
-        description: "The final episodes of Ash Ketchum's journey.",
-        year: "2023",
-        link: "https://drive.google.com/drive/folders/1Dxj1dB0i6By3jIYjpOtF27Kbfy5B3V9A?usp=drive_link"
-      },
-      {
-        title: "Reccess",
+        title: "Recess",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BY2I4OTZhNGEtOTBmMi00ZDVjLWEzOTctOWFiOWRkMmViYTExXkEyXkFqcGc@._V1_.jpg",
         description: "An animated series following six elementary school students during recess.",
         year: "1997",
-        link: "https://drive.google.com/drive/folders/10frlZDyugiDyKuxu27PDvHf8r3_qxRLG?usp=share_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Recess S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ZpganRCAJypKJVX2G1YACvFKNCIUGUdf/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1-nuvPop6_SUc3to2FRCg9TfWzD-mld6r/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1QaMIBeJGSu6kOWEUFWfLZiflonBeikDq/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/10YUYnf0b3O8pe32ebVBd-XZJhvE5nuco/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1wyP_oOd_dOqJyY6-jyipZFKE8vkDkyUo/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Gz5RBSoTa9oVdOort-L-T4coBn-6ourO/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1JMOShX2bgTwBbTSrYOEjZmI6JRCOeo_B/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1c3QqaqPe4x6f0FivyXxJjeqAbBAooLZi/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1Hg-q5756htFvkM3lpay3cRuq2OiT5Z0r/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1B9YRUhZM43rNmgPy5B6JOx6l7NRPYIPS/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1tgXtz5V2zWLBlZeiPxezmofQfv2OuP2G/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1gPZGNOE2Y9fVWYT3N_YKjSy8PElYuT-1/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1cbH6xQJ5a2blK39QaFZEH2vmYUKaezj8/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1s7GMAacFgKCJJm-kqdVgkpQs5anVmm-O/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1syg7k2oEZmCjlZpgnjIkUMak4XRKndFY/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1r-tvVrbjUtJfXqyTcOSKI9ChQieCOKz_/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1mVNgcIg85pgwHJJKR0TYEPDmj4Uqy0zK/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1XBZsOVepaCOdbYaDcjONMRTQupvbb9q8/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1mJU2IWB9Riyi9i91HnwuCngqTRpmBrnx/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1RpL86wxPv4hlUBGTbhHrVlb9RgjHx7lT/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1SXis1qvtb8SCgBllaM65iyjLm_6WOj3r/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1tvVt-97P5sd8-UNgbRBEbnA5PsCYQIPw/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1kDD_x3it_XdqQT5O3M4ednYNV9p1SWQt/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1Q6GuINkpXc-p7XtpGcQ5tfe1PxE6Dif7/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/15n0L7W9MYwWZAKQJQkCNpSVtTI-yScfC/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1sNu--1a60jQD53mlxIAH2UMdcUMQIa5U/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Recess S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1hz3oiUkEcED2aQEPuJN1Fk6PWQxfiMbX/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1TbqHboZllPHOOjzhBALd77dkIlmofF8H/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Kp6Zs2P3xiIdPbyeQehIwcLHZhqXuodr/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/14C6fMbiQc3TscrCsvU6BCMKavTIzTIi_/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1XGCVgoVD25Bfad8Qvyp8XFS3BPdYqXqz/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1x3QtraBLVLFtPS5fazA8FjKUvhe3e9u3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1dtZpIDYbZaSSLNH65N_KHq6WWLOEii9y/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/19T0RqILtfTbNU_iv_J6ztgTUwPMsl_Y6/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1HgRXL88Uzkx0cy9rCcgWr3KxkRXF-3cc/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1cVw84SM4N4jRwWu8oXcadM9Mkfl3w1Va/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1jMqBDeik91lAMsJBOLrpdYkETLP0KvXX/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1i6YzXmS7-vsgtni_b1KxMrifqXb9-6w_/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1-F8FejNjFOBC4Ninhgv-mIWsbftUuiFm/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1E6VqeW8XZ04cByZ0_hKzsOQjjzBEl1NL/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1H0vqquc4JccTJF0U9SnbtXHZ3j5D9lVd/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1N8XiHC66gVsOMB97J3-m8lMDJM4CK8Hc/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/15-0bWpGDQmfVgpaL8p62a75JJEex6_rb/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1KP4dHhPwgGk6kHh1LMyf0QXYIoaB9ArU/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1OxIzk1BTKsvmDFNZTLwQ-i1bXaarv03p/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1U6nODLXl5dQnwUBfMpEgoGxBIbRhCP5P/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1UxxLHMhhCNH1l7rU5D8dAwCX7K0ksMDE/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1t5lEwLSX_JL_uIyF_y2ph8vQtBiaactP/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1tnvVYTNJ2dTrYBqSdl1EcXctypor4q58/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1qLtC8WMfMMMWbKc5WRcpI04USEW8kDSQ/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1O1s0OxxI5fMfSrEhHgc76QnMRbfuvxDZ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Recess S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1gShqsc_bz_4ILgZxBQNXPS3ZsJ0zeV79/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1_623kLv-pCGh5SCIwMwA0MC4NUvjIXa0/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Bw8wq3KL6kIJCfiJJIJmJjAo6iaBSQ6q/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1D41pDq3PiVRKiPocfPz6qtifoFpd1weR/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1iuwI-pYgCtF0Ja4K9rAIwuhT5eFTbPwx/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1xEj_Y88nYT_CqPrSY8nyzx5zkDXSXlwT/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Pb6P5WrSHCtlXlVCiHCTdnEldfQv9-wM/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1JAYJhW2iYI9PRJAZ7-InIXMj46HT1UC1/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/14b4dNjWKY6mzZIx5fVXSnDJxGg27ef2t/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1ka-vlRjKz4_ashtvjMPSZJEWY-RLnSV1/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1yDrYLOkdRI3VE_mvO_ZdSruYW4cPub1t/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1bD00J81VhbK9DgGpZcizRRwa2_QS8-Nh/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1QMAn0G7p2Qme-wBFrzLryiyvkL33Ix_X/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1Bxope7r-UpjHSnVYJdcr6asb74prE3gx/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/15_V1LFSy6yAKcv729NSf60ms-t1n5QKe/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/11ohlcygQ2k6bQ-f-LG9d1rcbQdPDSk9g/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Recess S04",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1dPExGUdLnrANGn2haHhET71y5l3gTUZ5/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1KfDe3tulm6ZaXOJynLWl_5v86D6ch1FV/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1UsfkLfTZBUrgzYMIwTO6gMggE0ezJtXB/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1I_tyh9hVmT-lSyLXgfH1tRUd2f-HnBlW/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1gFIrw4lDhOXTWcOrjGakzxQXfcloOE9X/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/15MiTcnRku5Kb0NUYOsvjAtofcE901W6w/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1SLC0-6vy6sWhXzxXTsy5vqs5PyKjqvte/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1DWfhrNv2fgjmenqHl-TWNydJvDVrO1Di/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/12tEg5D87xns7_vpROQDoE0LpWQA4NXru/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1pkbQBJsR4NoWDZ1bRHErwqIiH7KlwnxW/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1dBWuaTMuatsLnbkR7BCzh2eaxbGz1M9P/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1s96UkN_71Mh4qMM5wPxbCp-iIA0Yd6AM/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1t0mKZzoqF2PuOeIHPtajIx7LRCAilwls/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1_rYHTQLn7mWSF8dMow0ZIingpV6xXzEE/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1U30zgiEAZEifAxlY6h4o-E5qWBYAElnm/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1zmG4JD53bBy2Y3xmuSBtufpSzdl71LMe/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1T5war-185HhU0Ifmd32j6l8BDF4HshXf/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1C1soKYOOjI4Ptm8ciBwnSxC37aZ1IdxY/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1uGPu-3RNQX9NgGs3KvCQkDwuG7rb3zuK/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1RhFvCtbSgIIK4pDsA4Iu0yzM396_LrlV/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1gGB2rjr3yeM9IuW_HgVFOjT3mFnis_-_/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1dQ3odwDDI2ChLzYTjcN4p2k8rDE-Ndn9/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1o3eCa5MTzqrPDbeIU1MMXHiOBSXtB1YF/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1jZR0LSRONHeJxouiKnIBvbjWOYXQ39mP/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1Jkx0QTja5ju4LTW-VGn5JWapVj7W-6B7/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1TURyEzNSc3Sh-KEGluBAjk9rmzpoX6ZC/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1lWvcFcfJH84YsBkrY5KNG9dEtJzobYdA/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1BkapyrRvtZXlcODe5NRPAXdgY49yO8_F/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1ho1XlClNjGw-ZhQ04IfroU_6ooiwXzPV/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1jxD8Lt2Oth7iP4kQQ_WmTe55mt3SiZ0K/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1QKU5-IipgxHQ4rYJK0nBxJbeRV3-zlEK/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1xrv1dEU5WXsGtf1WSdVUheJb9W-iJAOF/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1kjX-6uxQp5WF87YgS0jbg_jQ80P-iLR3/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1uSFFmcYNKxr42JOr9Vh41iXpY9IuchBG/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1MO9jcLSDlJKVpXWEyLSa-c_3gXt-TMzD/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1o0tx_09MLNAMqiRInWSIpXd7QYzPMZoz/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/13FfA8z_ulPwYQ8WSig2JRdBe3ObYLa9-/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1AKLaQk4M5TdGkbLuL9PL52CzebUlV6OB/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1RfOwFDR6MZsGK1NTYj0wpBpnQBuHyzrE/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1zIp4fVeAhF3TQBcSh20km5wInhdqQ10O/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1RyEibE1GIVTtF4THrzN1D_r8CDCE_ad1/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1mnwCc6oCgArEKizrtn6KRnvDPzErR_Cq/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1QWxpvycRNo6C5PhYZpDRq-Hts-Dh1FIo/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1C4RH1KsCPgTGmJUFHq_sQUhzrlCKXdrO/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/14xmDWB1W1_R3yTtw8BiLNhvbHnQsYxMN/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1tHZ4gt3VZZdfrDQh7_gs4VPq31yr-W0n/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Recess S05",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1n1kAB2I1Ijqy6-weJBMAGwh8YFnsauHF/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1SjEelAxJeZn8gp3Q7uCfQaotSMPily6c/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ZQvnxl4YqSBmHNnRkAr-95Gk2aEoiFrw/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1kvWEp-rcdRp109E1j34h2-ZNAzmyshhh/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1WtXNV2AMlEWJTEUyIZyxGuAL8PdG7Wkk/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1kkT2demzvBiYO6SOo7JRul4EZQ5aVSSK/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1heDhyfo7mQXjlikTf7-K1296IJ1ZAhf7/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1caGQikuXG9Cn7WDFD46Msi8M0M2L5AB3/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1SaUn3N5cPwwX_DOFze3P5p6hgArHJJwp/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Recess S06",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1j79qceUtzmgRwziWKR5oy3Lz8t-V0VYA/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/19D5pWazflaM_zqWbQxJ620freeO0rsHD/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1s0MziQEO33QasxercvasmSnGFCDuuIxE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/17vSu5-LiE6ZWw1yadRpeJLd7zkmtzvjO/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1HI4nTXrmOkd_q46tjpUMDdL7XGM0yuN3/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Rick and Morty",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg",
         description: "An animated series following a scientist and his grandson on interdimensional adventures.",
         year: "2013",
-        link: "https://drive.google.com/drive/folders/1EhzdG061fossyvUWpAWzDB_b6WhAWvbS?dmr=1&ec=wgc-drive-hero-goto"
+        seasons: [
+          {
+            number: 1,
+            title: "Rick and Morty S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ymxehhlcEqpM0XUpaTh_0L3eIIA-m3BR/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1epV0Hkxau3M-uZUYq_bBwuuAvd7oj7cI/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1t-f3E_UFk1ssiYT0y8WZJdmVEXaD20r4/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1TAjLdswDOm_RSjkqKblvKnSYxr1HrfbJ/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Ud7Vb2sPKYzvNCH9YP6FD5Y5C3FV_DLZ/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1l7F3flwDDp2gitiP1xmQT2fTONYD4sW6/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/13fv9l8jTLBytl1GGkNkQS7qXvFzEB_v9/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1biyC9iUovzSHJRC1MoMtQ5-64JKEQU9z/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1_w_4cfYTj33J1zGlFfolxre8WX3dpQHD/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1RuUkwpROzT0431pRc0dNyvX6o1aH33N_/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/17cA1rPhgvO4AwTid_LptKxhjMMJvL7J_/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Rick and Morty S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1JfMBnuZB0pNzFzzBFlL-4AYyBsj0oPiB/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1fRFVWkmP5FUOebidfLwZaOFPl0bgKwWi/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1r79EsIO-I4mzMX-XdObIsE0qGNZZ36Yf/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1xbYlmLyoZhfj8z5ndB1BBpK2zpEFq2d5/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1HqUXtxEqBU-DTfk-f1XLQondwNznzOkF/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ifh41YU8Yem6PT88ejYywjuCp7y3Coik/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1H9LjieaQ9POgjuNdWD4Ofky-hFc3N0YL/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1jswB7G0RJjhUgnRWs-ax9gUr2Jcn1FdA/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1TLvdH3lL6n7MaC56a4-k3uAY02sc07yh/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1GhwEN93ffd-OOGmzc5r0ddAPKri3lBzZ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Rick and Morty S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1rCAnT1pqcd0EXUSo5CkPPVEoh6lUaLKb/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1e5YKLF8Fd6DnUUwgOmtJ5Gh0vA4KNWOa/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/15eXukhGRJQQ12u_J70J3pfGwWp9FS9Z_/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/10U8FYBGLdekQVPQVeY7pyiyeVxvDOd2y/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1nclc6AIuzQyYXAUfUO2OgPBAMCaQ4F3g/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1pJuQ7uBV4-b9UT7j1iwBRUSA52Shkh7P/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1xrdfy_bvzQ2RwgVLMboZvmuYWwV86eyE/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1-TLOvkzdi3XNqPFbhvwmCCGT6S9FVNeg/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1WjQOq4nly7XTJQBgS2HE1CoIOaKlGk7K/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1-fhldDsi4f1ovpZ_Kx1ImbE2IuJNVdWZ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Rick and Morty S04",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1MwZRm3QT_TKJlLp8wRZZLg7L2Fkq0kRh/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1HnnZbJMO8doWvObw2JMshzxY2g1sWnuo/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1EXnfuFFdP26kwBOeyYrxJQW1ly5nTlzS/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1k_x_WO5uz5wMmxQUWzt-1vMNnLhXSi2W/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1RBh3Y_kZ5WjYlbQP8evVDaI6TENGQ4tm/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Ir8NkKIoRORNOY8XlFnciyjlSuT4JXJC/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Raising Dion",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTXArcVA3oKIA_JEpwH8_7vM_iHtB6_RLKJePLDGwtV9b7MSUk4",
         description: "A widowed mother must hide her young son's superpowers while investigating their origins and her husband's death.",
         year: "2019",
-        link: "https://drive.google.com/drive/folders/1CezJIUSiWvcBK0A0qRGWtCtqiDs4-zK1?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Raising Dion S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1HlTKY3mofWNfCLm7r_Cq3LHNe85PhmAv/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/17o06jkETWSMfxi9KB0jPNFjsa_Tl-BNv/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/12TjYTiQju9XFmh-1pZVnITMf-1f-rIEa/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1BLe3AxxgT2mIrLZFVgw7kdfnipXaSu6F/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "What's New, Scooby-Doo?",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSj5YWjjoWlnf82LQTLp8AFbtIyjMyurAMdnuVmfDW1tMzN163n",
         description: "Scooby and the gang solve modern mysteries.",
         year: "2002",
-        link: "https://drive.google.com/drive/folders/1lzhZ7zI8txmOQxERhfNrFewiU96kpnxZ?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "What's New, Scooby-Doo? S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1WxM5vVEm7VPf3v6Jceb8EZ-68QqTjAdq/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/16Znw6iOBDutghTEa5oRJX7m5Nd_Yk1Xn/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Du_Wbv93zZCdNapTni4X4_SRVgC4L-e1/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1ZCHZy0azCYG57C3AkW-ISMl-wqHCdAZX/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1cclP7ujTteckN3tmQuLGUNu0wobvXmNg/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1oqcysY-ZwqUZeMDTdbRRDqK1unN28wLj/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1PkghbhuX9zikVZSRT8jvDT9Io1CEt-wi/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1_-mfKqswgce8ZOMZC79oZfxBGXFeuFf0/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1Cgk3k2ooyXy_IwmX6kUHzswBewndas4n/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1UfgLHWJ7GmAydVV-bg3VakNqI66J6KZo/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1h8-ceqbOnZt4xkf42hz5WOg4y9e7K1_p/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/19XapBfThG8mZwJYH3IhpmB1wUynvwoP6/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/19-G0it0I9_NO-oxHJt-5SjpynUZyTotX/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1_Q4_d-1rEhc4FLENmhLAj9Cq7iKsZKct/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "What's New, Scooby-Doo? S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ToY7TlvYsVW-1pNw8F4VtEethcfR_kAC/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1PeKRq8wsLqX53jMTQG3p_-QL1sLWxrJp/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1FS6-mo2C893SyHa15CGhiJItt4nuu695/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1DUxFLziqOfVO-W9EMCsWtpV9JffLzFjt/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1cE8_INfDHmazatgOhAmGhzPTXnQEFWjv/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1UBxEovcsASt1bhHcdFYgw3kEJM_od4Km/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/16ILursEP9CktpU7UiHmQJ2oXyzuAT84R/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1YHZ0vesWE4uJfLlYY3xR3ueoeqWZmxSA/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1fcie2fmNk5xW0OVFRq-8pKyF34CKWWeN/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/13W45wMGKClqvUW89VcBJQurvYiu3D5TR/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1iuvTrZSrUTKVYQO0SzyS1axWPQwbe4bu/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1JJbwbFWSUZ-92E5j4s93dOI2CyaEMpX4/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1yx9MuxbQ8tmxNqZTysE4hxr11w45_C5z/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Scooby-Doo, Where Are You!",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHBU_JBUES9RevRrrnp6Il66Div_VS5hTlkpQ4YSyIwO6Bie-j",
         description: "The original mystery-solving adventures.",
         year: "1969",
-        link: "https://drive.google.com/drive/folders/1dq_qrg51SMtVW7SWAeYYrx-nKbfwKkXl?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Scooby-Doo, Where Are You! S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1yqhcoGaCig3DvK3LBFu2za3jCutYoULA/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1SVMD9TIl79CsmWQB7Gp2EhlJRC0KrhnZ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1chxtn-K1yWeAQ5VlxByRlIfvhyssBVpb/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1dXAerr3fzkb6ZwhzQ8j5qZhJgezFAEge/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1qWvnpkz3rs3VveFq2NBAL7CexUq8wCMa/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Lmj5FHtEpWoy7Z9m8C9ArEexOjeanH3C/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1GOkCGPT0zFZEDAFr6NsRVibx8kDzsbjy/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1YULXu9ldG3gkG9nhcC2k4nDHCnbZHfWr/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/18_1h5u1kjf5eWN4OG86J9gk1V8E3PWms/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/19qKZT_GYrLE46Q9867cuxhWN7iMcFxkg/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1IMe3s58rzjlcqXvGORvkoLHRjCfva-PS/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1badAhwpfq1iBEMH_GHk4UkPNWZtK1tOT/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1seD_1dXNgt9HliLJSjXWMzz-fiPfZNRV/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1BfqT0_GygSveNDIk6Hb4zfRQVHp_UEQ0/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/14bDXjW-lWpSCA_59jJWatcafQQSmXGz2/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1RutnRxfLbN36pqxqzRctZ76PBkKmN9q3/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1yVsRF2Jb2zmi-Vf0KVcahJvC9tyJCVIX/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Scooby-Doo, Where Are You! S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1m28JVh9kconlp5pNyuXbLCt3lkLvNjjc/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Scott Pilgrim Takes Off",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTldh0ID83lXukg4i4_2vKaguLHhDia9gC3WRXvnfaIAZaqhfn8",
         description: "An animated series based on the Scott Pilgrim graphic novels.",
         year: "2023",
-        link: "https://drive.google.com/drive/folders/1HojWqmuk_1nHQkiYQ2oynmgjBUFkR2Eh"
+        seasons: [
+          {
+            number: 1,
+            title: "Scott Pilgrim S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1XluvNic_zAlY3HHVrtVXKJw3MOfLV3Zw/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/146i15QzDMDXbDyPckv2sJwZ7a0Yu4cAu/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1M6iu2RPoDSkbdPctJr5MqOmv0AmAX2Ra/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/140GdILEf6hGIi29VC1I3lrwqOIYy2Dy8/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1p5HsMDvTg78n26iL9AVYw2WHI0Y1yhIl/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ORlvLwiT71jGfBazLieG1fEQMGxQMDOu/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/17sSwUiNWq1ClWMP54SNwdsV8m_ceiIQa/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1v5BPNGJbNWbigct8m_70wClpTp56DnIJ/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Smiling Friends",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbQWrP7TC_DzJciElD-Lhk9NnIYto4NdIhKuIsz8zh3l6aiKAo",
         description: "An animated series about a company dedicated to making people smile.",
         year: "2020",
-        link: "https://drive.google.com/drive/folders/19N-UdVDPOFmKkLtksBkZYwsNhfjmXA7r?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Smiling Friends S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Sn-_RD3mKCAupEmMc3Eeu-tCOQIkGlIt/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1QnDBy4Zg3h1QBUx4xGI_XR37PL-dKcCO/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1yQHqQD1_mH8yBlgnpZiotOTX-LkaCYll/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1JyAQfkj-4tUCg4iLRkfYJM7aV457X9Cn/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1B8JWs_5TK5T8uGuHr056MBjCexvsDWA7/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/19qAi7vzcvIyVmW5VDzQ8zE8YhQNLw6qB/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1KGR4Pk47oXAVgECFAlsqb4meEr0nVd5y/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/12aqClBNr1FD5xeWCQSBlm23Rz-uiKf6c/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1jhaJ-WSqFVLwdZItjQ8j32UrJUsD5KBG/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Smiling Friends S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/13LgJPlZURIIQRa6Uea4WN3Ln6ViHdBU3/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1ae2L7bbTBcFQkRMf6ghpqTtHeRc_U2iR/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1OisMNqu12MiA1ecDLz4wG2Y0RY6O1v1Q/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1IGXgcJ8zc306ZtxuxtZakDvGaR48eFtG/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1iQx-6hE5MuGFXLAC9dyLT9YrPs2AP4iy/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1F9dhyGTU_VN21xuqHUYtxbtSZklcoQ_i/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1feI-jK8rDxMPDMkOtSSLaDgvCpY1I33F/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/19ljs_oNdXiI1YQHlaJjbfwYYZKsDXxQG/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Sonic BOOM",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRS82ZTYwWQW6av4ZcXrKAiM1Y_EbQafn_OP4MWnekIi6inBbp",
         description: "An animated series following Sonic and his friends in a new setting.",
         year: "2014",
-        link: "https://drive.google.com/drive/folders/1XbAygEBBhC7K0d5ZrU1c3VMk1A2AEcXm"
+        seasons: [
+          {
+            number: 1,
+            title: "Sonic Boom S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1JoEHzuhOaeAINH7cRjTJgMqomNnczvI7/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Q35bkb4aqVJncjTbAqaXvu3LHMpxBAaT/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1RsYscptpdB6guG62zzQwy98NhDM5v0jn/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1-cnQSfq5RG6hLQyOp1SzpjznC6r7dOns/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/11At3j70hw4PZamYDS-GaQOBIi1WKNsd1/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1P09m0rWDThIV_SegRKMK87iHIlzNCLa3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1FjlZcZjPrHVMlMZiLSEnhBLk-sH9N5xD/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/16MNKJrIOkN-Ren57C9sNKWqHIO1l0IHO/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1hAFch5hioMLGQUB8ElUCp8ZyNSTv8Yu8/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1QxqCqbe3Safg6OmTboQKtu2IcttaWC2F/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1qhljBDsOk09DUBDFtIijIaeme_ddfgLy/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1o9LBno1RAFYlNPaNtcbak1MiVb_ajEs_/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1L7R8Z-d7mfFa0-yBqXI2lFvrbAbRIfHe/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/17gls937gYbGSU0oV2W-J-Vdr6-yO1CeA/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1XNJuZnCyNZ7GUerdAc3TgFBLQnQc-_aT/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1nmVTq5KydWnBKPT_9WLiF3LLs2SO41B2/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1us-vRPCcAdMDmgDiA-my-fVtkAkWC4Fx/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1UkMtdzA0mlFDCbNj2UkMPWNuiGLmA5cL/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1tUcjIL0vefoVbUVto_dEDuQObT4U27OD/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1w6nwU52qTR5Af0sK18LOPwzt83ToOAWI/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1RfWj_bt5TykVBYO6Yr3RN1LPJmOg3ds-/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1dnrbZhPkh5rL4QbZF7biYJtw4LvNC7ZX/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1ppxGw0DPfbcKdZpMBzsduXLxHmaCx0fm/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1ps_0WXPF_MbwwDAl5xMu3fmpMJqUiAbe/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1cwcy6CN2Q9oaYbJVnoPzudCbi8XuvaQz/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1xFfDweA9dzXCVfFZp_rQyCqQRVHl9PWJ/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1qV-J85GLnysV7w2XfwuMdfqSQRuiZxpe/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1ghGAeHUA9--Jc34r-ArWsp-RS4yJ-NXQ/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1eB7tbCn2YGuHhGmPMxzTayCKvg6Z7oUw/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1OmQNREBSZ_5vBqu4vb5H8DZSOgDH3eLN/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1SBfyz2aTxAJwPmkv20t_p2e3MhJ3Zp5A/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1PJI93vf6vscURNf693Qt7QOEyrE831xs/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1MDR2ik6CZ2otfUradYuVdDrUWvjcEjaR/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1VmLKZ7U5k0wJYatoykVkwBYTOqaiYw_N/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1sj6NHx3PFwNEfIzQOuTvNOgv4j_JBEbG/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1wAjlQ41XU_WNhikO4Zdk93zihB6RWGnB/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1p3XZlMYEISxdGqb-BHqxWtCqox7X9lCR/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1CyFcYWDxyecSAbxCFoa6CSWDzEjZsklZ/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1tnCDAnfsFe08NTmXvQF432bvvzVzUulC/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1-f530EKZ0NJYYFtlBU7bHCZMJWz9eFvA/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1EyGG3Tgow4i4sPSWDPA6_Mme9RHpmUpw/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1DbFIdlfrhr64kPgHZ1IFwmCCxWrB5LrM/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/15f1Ba1VL96eMtlkLtOT7rlcxoXc6Skn_/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1ShmaRHXS06k1JTq8EHvq7VTwDXEboBPl/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1cwotyFq2Cr3mupi1pBqtp--AjUtoq4Bw/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1CPmBfAY_2gjmfIXKOmRpU5oUXs6Ep-en/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1KeBvhj-woksSkDkZFXmSdKqSvRgpa_MH/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1Joa4-skF0IeO9rFK6UXuVwMwSuzr_GcO/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1i4bSuk2d2cXlnZcWXKHPubbWWHa_Vhf1/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/12FFJOQIVXghgXJXCDkhNAhqEray_t_jr/view?usp=drive_link" },
+              { title: "Episode 51", link: "https://drive.google.com/file/d/1_obXz-5oCU-ZR_5fQnUl9QWyDxVkoo4u/view?usp=drive_link" },
+              { title: "Episode 52", link: "https://drive.google.com/file/d/1GAwtiypoOM7WGe7fWekf19_5PzT4myHF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Sonic Boom S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/14E917X2D0CuU7IUtwcfh8IynIoQQyRZy/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/13NUh-tIApA9Ro86fQkehf14ryQ3p2iPA/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1DjI86rsobZ2m8kCDtfc-UJsiz4JsnjMF/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/16b5rP64P_QzrUlUK4v6VZ89R9WBEDpOB/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Sonic For Hire",
         imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/TV-Show-Posters@main/actor-sonic-for-hire-840596_small.jpg",
         description: "A web series following Sonic as he takes on various odd jobs.",
         year: "2011",
-        link: "https://drive.google.com/drive/folders/1WORzHz85bNI-xPruLAEdcTvX9fRION4G"
+        seasons: [
+          {
+            number: 1,
+            title: "Sonic For Hire S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1twpadDaGlRtMuYRytoYo7ARXD2bOY13N/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Sonic For Hire S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1XtWPNKuM78oOTNHDoNB8EiCnSCRX6Fmh/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Sonic For Hire S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-OilOSel7G_znfoM1Wam0Gkxg5NrM0sR/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Sonic For Hire S04",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/19Oi_vCT-vIdstQK2luRgOdFozbMCHrjO/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Sonic For Hire S05",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1YDsuVWOrw0xwSXTttD2o0tSp3UcSlymt/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Sonic For Hire S06",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-tJADTU0ghu3spDUrkZHCWmF81HIB_an/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 7,
+            title: "Sonic For Hire S07",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1gQhN4qLMN23EFzOcOq-9opHwjWb5LLXA/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "Sonic For Hire S08",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1aSjk2wr-zSlK86yl88TMV83wsmZ5OpRE/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "Sonic For Hire S09",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/16s5KY__sQ6AS4K7SI1TT9QGKmjiDa-Tn/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1XoJJP0JlI2Wp88MH9Oo5xjjbVvuwOzbh/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1BuQceXKa3vduKLe4ePFBmXdtv1VNwWhU/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1PFGsaBLaEwva4GJGVl4OsJgoxsbW_qXY/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1ZctNDGmk_q82nozYlNsCqVXI01FWKk3F/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1vZReslb0W1gzlT9Dj0szwFNVa2u-zVf2/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1BN-8EpzRu93PTE7OxzMhzeppVHMqJWDr/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/14BBY_1qBVHWLV2EksfgkmzhR9q-mS7vl/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1amPw6bs6fqO2d-VFTpPixJPphDARI9Tm/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Sonic Prime",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRxCbcbcd_Oi56H9uPBHgWwC7W3l8Ux5-HHIDyaQyTd4Z4LsOFt",
         description: "An animated series following Sonic as he travels through the Shatterverse.",
         year: "2022",
-        link: "https://drive.google.com/drive/folders/1q_NeRaY-fU59j9eiZQMs5bu-uFDb7oK9"
+        seasons: [
+          {
+            number: 1,
+            title: "Sonic Prime S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1LzcjShgIVM_6Uvaw_eWk_i2SQK3kgJTr/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/18Co8qrcQgtmicXChsTs8SQZ3fcJUk45z/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1KC3g613ZKlkhOxTqIWzQDzTXFq7Mn9bq/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1waGPsgVVC8KCM0-5grAak3SYD3erO1aI/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1JrSsVQAHaOts0bLSRqG70r6puS9lcbd7/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1iAIzxhBk9fLXyqfMyB-cfeyGpg5VrOA3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1YVkzHIUseYWtUP4fZEpVrsPzl192e5KV/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1ucAxiStTSMvVkTY7Xr2zvAGiIVgfsyna/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Sonic Prime S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1jqec0dGCZRGaLv3zRjUT6FrcZGLCGIy2/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1i02wY40A2QaW8VfKSbDcode7SPhFKzEh/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/16fuirKI41Vqwozf99p3Fubr_LwLOa2DE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/19i7cszrMtC-kytv5zN1V-913G0qqQrsf/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1L1nTEzFdprIT3IrK9YPqh_35jL9BAztf/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1KaiwVdqO741ASMa3dygCwfYlT51GnAy_/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1L3gZy7ZJYitH62BY-FUjW8O9Xe7JubUV/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Sonic Prime S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1d4q0dSEx555Gss_lJR8o_BhiEU7seIJ5/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1AlyPTV7cmQYg8owbdw9pNxvtjHUpeJkm/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1SdSr5CBBsojMFTY7JNzaryYfHEKPf6OX/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/14As70zGu2_imwnJ5e88r93pTgGgkfxnd/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1j8dLxylsIZEjM4jXKaByPSvEBKm9Q8gE/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1wp6k0BOxwabWsh6jJC0k0RVXUgJfKEdF/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1DKjrBAKtOAvlNZOTttNmkCT684dwIuYN/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Sonic X",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTLu7bQp9PaMRY2bNIiV6q_kKsCog8VDThCikwwmHimo4mT62aP",
         description: "An animated series following Sonic and his friends after they are transported to Earth.",
         year: "2003",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1HOYzXLzNkTTfzpAWmvMWSJaJ9kLo_PZF?usp=sharing" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1ifub9duh9-_kCjuf6QDd2sxJFGpgf6L3?usp=sharing" },
-          { part: "Season 3 PT. 1", url: "https://drive.google.com/drive/folders/1_qXvuYJEjm4ZiAbgW94ykEK61g3HadCA?usp=drive_link" },
-          { part: "Season 3 PT. 2", url: "https://drive.google.com/drive/folders/1oj7nfY2x2cSNF-btmVYrG3NdPNqmkkVi?usp=drive_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Sonic X S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1tEwGHnN38ycjJtfwZJAfS8iTgzgt4q8K/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1gRYYKc_qeVT8p-Z2me0TfBpHtXYS6NcZ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1gCZ_JXjx75G4gxjMNfbaVOH6QelLnQw9/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1VNMFlKIdvtDfRXSZnVAhy8s4eyLhzjK2/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1NoLJ2AbibQ-QKjConeKZowwx863oVFL_/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1VVqXU5354sRheAdlkCGAtteCEfaD-6gU/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1JikkvNDZKmaGGB9nBEkMlw0ympLyzkae/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1qGQyzJq3g6M2rb8jWKpWJBKEYNfBSDbT/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1j4auqr8nj1Kinn5Lyg8Bt61WEF4Z4ENh/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/18CF8FsuTK18IIXygnmDwC6og5dE-aSYD/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1MoIfiwDZjIYmZ1jcAKwKSOlkZxDD_UuN/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1Qw0QksmqSUOAfwMjnTieFzUik2XCGfyb/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/12WOF4V6SPXqZJF5ToB4umI4C_-HoqL35/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/11dHWWYODpqmTP4Ib3fC1O0YhbJcRt5LC/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1Zs6_IrlNhaAtQMhOumh1fjzgag710rcY/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1bOG7Gh9cEa7DMbjiNKEVxV54egwBhryV/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1OZN3n6-HgnHbCtlN-e7obgdk2xyLm5Th/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1y-GD_yxqLPZKWSwDd6o5WU8ePtws06FP/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1NduHD0TdQdtDKVMfl-c2d49aw3TnqnNj/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/16fT7evFG_ZelKVoSiAuTa5BwZDmFsju-/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/144zCC-MeILC8Np89fy7jyo3_rRrz-KHL/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1CfbaT6L3a18JR0CMuNwt2vwjqKu80k7n/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1r8kmciR3IXCA0QIMUxWd_eb1LTVfkXPe/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/161NGhHjWoAg_zayV6KLSo-oO5PGpFl0t/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/10z4wk6dPixGZvDkTSjtr0SOwcKf-2TQf/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1nFFWlmpcJnSmzRrTXf4k-uyjbP-1vPtJ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Sonic X S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1w-Esk2CVZFJcc2U_MnCTYz028XfOEl9_/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/15D-BGSt3NxcP9wdC8jXR9A2YIWv6otrz/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1XSU-ij0MmxFppJ5h3DougA-BXj5Wje1J/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1R4pvilJ2_f1k_xCmsEXHKoUCBm1jg9J7/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1HupLuVFeAwG_OGQUky6X8wS_-dX4xcVU/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Iual_4dmcrNwYArY-dUEYn7qTMREP9kn/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1DHxfx-uIxeRlp9f1-GZ-aH-s9HoAgpYy/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1snagXLIwhQsMjs0OU7nx85l0v2RZq8HG/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/16PcswEaf7Q9kxeTyEYeRoFpHZxr-m8Qu/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1C4dIfCsKg4MHlSOU8iHIw6bMQehZ6Ev_/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1QB4vjkkrjjPKlCOKco4Zy-zLm2hIL0ql/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1RqnBPBt3fTdQThsE6izbAmgtLEQPNPc-/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1FrimD2KQMChVDvJAT45ZAeWqKqwdffX9/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1Q30saRpMuu0LZg9t-jYQ-1JGaTd7RFR7/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1v96Nu2gLGKTi9WZjXLvg8pT9w_-Hx3A9/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1hJHFme9n72BAODbH1aF4N2KMTaZv1kAu/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1dz9gVZrs_VGN97A7QLF1xoch8PDGTRqH/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1OOxmf1zXEbOJ38jB2veB2xMzrofFxqO1/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1MhfPOrOkDLqp_y76-uEYO5DTLx_6lbbJ/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1Gt8dkM2EJ82qtZ6ETAU0vnXGntJ1_4mQ/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1Z73bmdO3ADBnkzgc4RK-myCNFePbthAw/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/13im1Tk4VHGp72qvTQHj4W3B5JwIMju-s/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1DU3oRR5fOtA5aQ_czE-FswItZYKo_LjW/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1Px0Fu3pK7mVUPwzYBoKtr5D0kpN0GgNx/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1GSbqzvW6-KfvQTlxmEql_sKV6cdmaSMs/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1wnKSKJq2Smh5YFmvj70AZKHkfPOhJB9F/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Sonic X S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1OMq2eNTMJ-KdLFBP9_QayCLu35Uxno3n/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1hrRuK1qpnx9VyrkYT-OG6Oj9h_cjOH3q/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/151Zj7ZYMRdrMMtMqB6n1q67L7e02zER6/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1fn4cnrsxso35GGPa2PLufm4z4CEX0qNO/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1e7VsiUS2za9QbNHkn52J8juqMz6wo17X/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1FaikC_hPdPjU_nXYH3ZYsAfY8z_OgmLr/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/12o5mI4wiRWFJIgauHiKiMj5Ev3PaF-I6/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1psoJ7kJEjiPel8YiAslYeSQ-xhZWfbme/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/15ia7LsFGTvjvR1ynCdge1aqISmf_ewDL/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/17EpLJjtXSauB1oGFrE7Z6oADJpbmvHtz/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1nkk-p5NDTYRZ9a4GpcG7mPE6dFrr1ML1/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1xqRR0frSyZbbjU3So6qpPQkAOQCW8vLT/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1tZnwYDW5rqyXi8YEJ_yFDiD4q70FbpG_/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1k4rtDEwJIUTlKUJY45drBkhfnRoBUWbr/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1vKOGBnxFoteQznnJJTcx0jSwHauQNnvZ/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/179CVLPbtwFzfLOhzc3LMwZF-D6IHIyVk/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1WWSo2-zXXh0w3CikuMrQ6wftnNj0PX-d/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1bps9OJWbe65-_p22Q-DWnHzOr9lVNiPq/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1ywgSagUVrynnD3YbPAhATvc-s0xg_LuE/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1GxFEivRmtRi0wsIX-LjXRDokWzvOxhAw/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -715,9 +6528,514 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https.m.media-amazon.com/images/M/MV5BZjNhODYzZGItMDRlYi00MWEzLTg4MDYtYjE2N2U5ODU1YjI4XkEyXkFqcGdeQXVyMTI5MTIzMg@@._V1_.jpg",
         description: "A long-running animated sitcom following four boys in a Colorado town.",
         year: "1997",
-        links: [
-            { part: "Main", url: "https://drive.google.com/drive/folders/1PzKaoaK4blzlaoxnwC20gZoeYE5mDxWL" },
-            { part: "Mines", url: "https://drive.google.com/drive/folders/1EvDzzcMmYt8Wol75Ip5PtEfu78USEHH-?usp=share_link" }
+        seasons: [
+          {
+            number: 0,
+            title: "South Park S00",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1indWQL1Csw4c52ZCfLTRVkgBdujPWUSL/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1XSCnLvX5AoVFjcRxiuMR9lNFVRd_BDPs/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/14emP1jrX3tTSr-CArg-HkuPLdXkepqZS/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1t0kH3cF7FRCZTk3NYMsT_vgqabOWQcxo/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 1,
+            title: "South Park S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/15FZ0sVCut_fbD_1C5hoJ81AfdjPlqk_r/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1KTvehv6VGm9EDDh1lFoRRKoWmmPQifLQ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/118-a1tQ4VODPxHyRNUKyLipD_LisPfnK/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1_CaWfRWB58qqSrowhalSdnpizgonSUax/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/14VBLZI_iBtzItIBRwxb3mEHJRjegSM_-/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/15tN_6LoJ0amNfmst2FywfbehUbLanzCG/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Z8juvMgOWQtNZd9doxH0nh2cXfjgra6u/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1hD4Y31obXfZAqoV9bpLtCpTHosqe4KwJ/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/14wzq0tzLa6sDq8bO3b7D-9omgERbolH_/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1svCaV0DZplJxCEn7M2AciuArkY40xeNY/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1ed3Vpa0dwMKWo2i8kMgbah7Y05DJm47r/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1PPKPvQu5BwQ7nhnfObrkqnLBpNvViqgd/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/11z8yGOGJBovaz9haxaCWyBCy5upPqyO1/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "South Park S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1gO1h-h0L93VT4N7FQgqzDIiKFDGvpUgo/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1HubuyP20D3YqmShsjFuN2qPNMl43KfXA/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/18sw3Fb5W2hQACZvF9seidee_UscddT11/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/18pFw1SL5mgY2NwVSqM1ncEKRC8bVuD7s/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1rHrveZs5V9xm--X2rQUCfi_oTncPJUWc/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1bZ4qLIAAGugNDlP0Od953siP87ilTU2m/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/17aU9UQTer6mmbBycCalgLX_HCXxualp8/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1GrzstuV4X-gHFwnNq38v2VsMMv4zFGfh/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1f4l2PhV9VTMJMpjZ66cBLP4l6TrxQfuD/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/15OxOgRVhF-BI-uxdK1L_pq6hfSIuEErj/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1ych0www_EUDPBvPKzESH4wn-cBp57ExF/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1Ir8K11bvW5JhSypk1B7Iv8AfL82mud44/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1R_lbbHE5ICsDiMEE2ZLCNRlOhQ2n_roO/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1s1PAj_SjSrflywWJs0YNEBOc8Pr689gC/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1AvEKZVKOa0uVd3JifDf5ttAlL_gGKz49/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1psfzKOh0IsuLs6EjQ2FufZgS4-WkLUqM/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1MT1k93_xZWglLeUU-v5A2fjmIz3Z9RFf/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1AqD7YmZZ_IWu0h8bYBQN0_QHDbcIkm25/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "South Park S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1mPyEGKOhJGflmQOPfS9aSFfmn3iJ4uDU/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1OVGtUeqyOHVWL_J4RYHzLEkTKglPtheL/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1PrMmB8MUNjGTWtVbtQJlLNrQzGannkhQ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1PfGYlcBuSrEU3CiInz5zohdd_iEmt87r/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/195gER31GoHuc1boi9uOi-Qtsimkw2B6N/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1RBskw_K2oD23k2ZgLidbj8d611Kikoe3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1GW-yTbO1kc4dS93oFsbOk7Qop-GPN41J/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1Lh4_zir5WHpOSoiOIgwVzjuBcbyeCRxT/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/152Y4eCjTy0ox1h8nNE3WyKIgGxCxzLXZ/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1J6sJq0KLSprqETA7l_F130I73oQTFXLu/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1j-GWFyS65X3jBiE36r2Lon_J-lCef157/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1Sa96ZLVPuepN9YiGgNUcS1xp7gsZK1bT/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1t2X-sVxk3TBfa4X_a-6H6f7t7q-N2ItZ/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1m4vudaKcCcGb2ZklfMQF7MMX2NdFSGxF/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1AFLPz4dAB_TjbfgLztMP_GQzcZgM4srh/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/13UrSCNB66Cf8Z9SY3fQN_zKtRuD1t-FD/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1BxmknkiR-HbBZ4lHrf77woV_B7aNzzfe/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "South Park S04",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1LD_RznoF99VDTijlaSP84fEgAuqum7NK/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/18ExgRub5BaBEF9cK5su5lBqcLpf1HdM_/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1pqOkdsQrgdZb2s0Orb1Q1E0aYp3Zhmwt/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/12gOlOsQ3jc3JpedH90ZDIh4iH0pW7nj2/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1VFd2hQP996LWAJweOTpjFuIoo7cN6tDa/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1oBb9m5HZZSE6I9URVXvxetu8AvsxcqvX/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Eel8Dz279ZGsibJj7GzU4_5D3OPNUaZ1/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/105iNezLgZo5_ZRL-MN-m-RPJe1_b_MfQ/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1-_kTvovlvY1OuXlkoewmNa-gObTAtgx5/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1AbbZDGzf-HCgy1tC6UMMvP7y-0xMchsN/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1Dsq89s-6LE2VRRfpgSQ-UWsgO-KYaWWN/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1T7Ar74LOa_q_rx8VyEeLT2YqmA5Yq9U5/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1C4QZ7p2SRTVHCOqEJbijh2ii4T8LrRxn/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1EKZ2ey5kfvmf5Kf4gbCbfTwQv89yNJVk/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1ZkPep0ch3HFaXmjNCbPg15Lj63-hW1h5/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1CDwQe2YNLANqbDxCLeGlOfS91jCTHhIz/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1ZjXXUP43R9EMOYxDXK4-I7yoDE1XF958/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "South Park S05",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1J2O5UyiNgwgesHtOJ63Muaxy-4sxC0-5/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1NNJVNdFrPpoF7an9LshR4lEL4lKjwjgc/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Yx9P3NGR32CCwLnYNUAbkY5LY-bq8TTV/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1RMHdzb6qLB7160qOl_v_wf_mi3m_erQc/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1lECWWGXCc-Ndpnr_qm87BQWBbSAiGR3P/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1n5jfnUiw-kcRYuKf9nwAlCMdGkFQPveD/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Zy81DP0AFjUV0KbSxPcH2Ek0encK0bY9/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1jv4cmOwNjPypnLieOmU80QZ9i3rrTYcd/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1X0vIUhhaKWE-qd1BUJUdZn5-ZyCQnzcv/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1K499qvlSHLCFFR3-QLlVXgiEZZ7u_wTK/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1HCQioKfKqqjd59DFi0hQW6GtBcOTH8yg/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1lJ4c8akcKwd0JiIdjvHS5e9vyOeTWzFp/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/14tMc9hdu--EpDakDroEnwqeZvWLZgyPI/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1BqvHiSNOSUsUhZbQEBiqwfz1k4aHunso/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "South Park S06",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/13SWaq8LESfDVfT67msXTd8K3OfFicwa_/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1GtNt9aoVssQ40w6hXNIRa3YysN0UAuX-/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/134H_YM85WY07KOPYi4M0ILxI31U-EcRI/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/142wn41JnpM0fZ5OcbuULpzXwJAlNfdBa/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1SzPmk1ARG7L2VDRd_J_2TnmaD3_06GAL/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/15rz8-4AFO3tV5uADV_ZGtYxmab1LJdZo/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1XylGq_JrYdwnmcn5JeJhOciGskqrcsEA/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1s0Uim_v0m2kmz1Jc0RwD3tE8fJRyW5CN/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/18n0PtC46KjjeJ53AhLieenW6reR2kvn9/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1I_xbggdqZ2A7OIbteU5v1uYB_WFJeVnT/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1lU44YHK_OoM5Kn_eVUI6TJ1yAubSvDg_/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1j3MqZ4xAc20CN4jo77k3N3i3uawAj5Qs/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1nIXVuQZhHDcI7F4BxJCPK36ZyU07-48K/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1q_3V_hB2PufxlmUzcKQqly6Lud895RwX/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/19DwebTfWsF6RFRUR3XDqBPw8fymS0Nst/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/19LdZ183MYgzvVIgoqHHEcZ8b3stPzSbu/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1gbQVpM5GYI12d6OjMUdFxgznLr7teXX-/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 7,
+            title: "South Park S07",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/16r-t1SuKavrARhF7C508re5L023WqYcH/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/16a1Kzemj-MrrHFr2uHPMckXerhBaiQnu/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1_lxoxB5vgoWTDWwTf5yS_AsZoES2Doft/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Lj99U2pnZBoxpxTDuvzYrcMD0pyjPwWt/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1pd2IvlqXuLPPBt593G2j8smSUI8qZpHu/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ja9Y77nqh2tXQydW-cF9N0XlI1iQR-0L/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1XReAA8VDxAXwI98nqsvMyVvWzvURiEd-/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1Erz26LOfBQwq0PjyRsEd3bvXuxZUootc/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1iBckUKte8k1MpjSdxH1EjYAOWjzSeWM5/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1P2_3DOLMXv2BhNFlS2lcC59br3uGXg4V/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1Pg0PWH1oR3wocMqDTLnVFLzxA8TWztCt/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/11REGxaJft5eM8AXGLBn4JHzvBmP-L2Kb/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1__bueWsdF82OO-lDeseKYB6BoqJ0HqVG/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1AVY9O6yyHGH3Tf-P73vWWW41yC7uWQK9/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1nLJ2qqUbkJNPjFkrIRr84iuT4cETDi4d/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "South Park S08",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1b_AbziWOAAiWUjVo7x2td1NLQ-BYkQFH/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1eztZZuN6Y8hsLnq7yYGvIZEJmWmMOJgk/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1B-mR85yg264qy-FA6OE4LX3eNQPiusO0/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1guhDcN7jLm_-TLVswf1U-LZkQDBc0TuX/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1hJWpO0-MJJp18f1MH44J6LDYiwgu2U3B/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Rrm8jOQj09zhgJ-0eSbn8NXeD14XJQ8N/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1tBMgtjZ5BwWTdwTOyh_7aQ-g-8t9pLNU/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/166U2WpY6K2uLzkuMNjiXaqmKjG1bZv3F/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1Z4KFuthQLnJeT37rEG_GSM2GRJGwdRpW/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/18KC4NH3YxIa3wrQ9q1nZ9UrIlXa27bEn/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1y6QPl-lBfAv8Q90qQpEsAHG_uwDeKLZG/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1hCxUAhkmOnndIjwkNpFqEyH6kwQlFa8E/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1O8kYM-RoG6xhTqpMmUhLpl5IoiogDrIM/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/10H00a3UiTMyt1Wzp3fPjpxpl8cGbWJyr/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "South Park S09",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/10j791fRTDelG6WlzBIsVyLNk330TR2av/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1ZC7cInQbkMB-mtHbdgkZHvyz4Nh8UKgm/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1qonzNhy5imtU1YIQcrpxur5am_Xm6Xdn/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1vVX5JA0eLEcqealgHzfsA7iV5CxBDNDw/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1w9WrfvwWCHIFvj7J5Q_Tf7lJVceHkydD/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1iVryap-WelVWwWTlQSXBgGYjBzw4FsxG/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1TPPwIDhM6hOjCmgUMhuQa372LnYz6q5E/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1j0M_rYHbo4W3rnWsYGjYmfQdXXJ1T2mE/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1wuynK87SSpf-R_t7lZ2nZVW9EkZ9B7dL/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1Ec6_jugCMoiHMIw2BqImHI4tJ9a6vIEg/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1hOHGIKaq0GRP-ZZirvo_bmCzSPrvmBUw/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1qpWr6kTTqT8uQ39lEPj0OkNRv3Ol3I4v/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1sPlkNeAoY8Hgf1a1BYQp-ydIQtQOBOSW/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1ynuy6cuWEzxv7-khYrWbV0rUWSZNREoq/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 10,
+            title: "South Park S10",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1U_QWhyv5iJ9Y9vKYLy_NPRfYQOiWHBth/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1gcHenVzheS2lGRlUG3LbdJ0raYXekW3d/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1NR0He4uBLH7QPAG-thuTep6IL9DMQMgu/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1dLmrs6KcIaZgN-XMIiXJ3o2LYcdKA-vM/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1PKFIi2soQ4WuJtSA8cRzXlVnpclO6z1Z/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/128uncKX29WI0ZjXmYT4Sn5GJwHTsQ2bh/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1OLSpTCcnfswTy_qR47lngO0wFkQxEiln/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1g4wBuSZHvMj5hXIA1vmiqE2VLosi_RH_/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1jn_Azi3jKi3gbelOm9BhKgMqf7fveFsj/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1i6mxDdRCpNCHe7LS9eZ3BHaeSHVAuqej/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1vWGO7UaysLmvbU_Xb-Z-PU4ymaQ2L4Xs/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1fgVEn86ZJd-fndE1_G2nrT21Mp0BQ8ix/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1_R8RrBjGPRHa607Oyhofig6KSaONXhs-/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1U8O7rPmEfdQZjkHfT-ZpCTEpNdqX-Xjj/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1wcAMxFo1-mjjmA7doyjiyhg7DN8Tli9R/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 11,
+            title: "South Park S11",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1mKvTWjqief-bI1PNbRnzKx0ED56BDJAN/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/12p2mJplQh9lILbh3Nv0curnWZtQuFjBs/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1_nnuMTtrJqlNGgc7gALme2CkhPa7OkhJ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1qVbSxZlhckJPycSFbd0fJW5Wy1TSutKp/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1uF7k64Q3U_GWpGdn1s1NHEHzU0awBhIB/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1hTiMj5_aZNJ5ibDpeU41Hb53NsKbXucJ/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Mj52_rSl06VI3pJHZlJEoQDRu9oNuArz/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/13-9uCLQPJ56d0Rl2FLz-dPkY7IYzUZa9/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1UiDmkJYfJgXrVtpM6pfeM8PW1FOJwmk3/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1Czrxcw1qA4OcXlow32R2ehNA_S-E8iop/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1cf3q6xyuuaDGcRngyjBj2BOjs_815xkR/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1Yv4fX2DXYDjDEDI3PjuexvP5FDrTtwX9/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1D6PuRQu2Etm7PZNcuMvbbQttp2bFafCc/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/13uSEHv3-uJpkLb14Jrjk9Hq_nSjv11B2/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 12,
+            title: "South Park S12",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1DnDnlNlXhKffWkJi7ZdDQu1eD7ji2HVk/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Yuw_vaBnVINMaTTPT5hZJ4rCLA6FTUyM/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1AM8txPMCn2PsLwdARrBa27tPkW4qz2gi/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1UvA6BLtbItfwioORMyX3oWX4_Xe7rgyx/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1sz1nMb3Sd8IV0cnh5L3E7sd0SzGhRybB/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1JJcWL9wQwcN8EpSJyTYmGGT0Ovx2GhKC/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/145pkBsTTEdo1qJ_UTTKoNmw0JP8e5xI8/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1fchhy5E0kUlgI1BklMhPy4vgQ7biLOkR/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1BQHjMQdmowZShVhPgIoVwEuYqiJ3pCUO/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/18VIzz3ipis4uOPzAp_ZbN57jRNrWDbIS/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1DQivkSJzXUeCQc5Dx3BrX1dEQRqXyUBj/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1d4ygWK31gemKNwXBifE-jgdAR8a5W9Cp/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/12veeTxb3G7VTWuYz9cuYQKvOMpuI2SFZ/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1N3pgFDHkiMoVLKw0hLY2wp-tkJ4jCEcO/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 13,
+            title: "South Park S13",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1W6a89ng-MwcIP0UcwTZ-tXW0_3D-bB06/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1E8_PMo99BSJoP-iuUZMZzeazJIwh7WGj/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1kJY4Tcgwy8oEzncdg60aHceedGq9B-lK/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1kTClAtnU7MyveJUoVYFP32njP0xFTESc/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1o1Cq8B5Ce-o9xJJw16Gln1giTZ26hGkm/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1UmFEIN5jt7t0NdzkXoSmW4qHQkOmhdfM/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1ttaNwm0kUhl9LKTBG0kzAi4UKfoL0z1l/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1xxtHHxk4Xih486Q6oo9Hn4RoJOH_4DVG/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1tSt9rIEmVZxbL0L6DB3LFJrVJNZXwBB9/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1DTUZHVtGYs4JlTbJATkMznUV9ZVkh5kj/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1wFyd-x8NL9WVQC1ls9X-otDTgqcm8JcX/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1AH-cv-ySdhXd4n994Vn2umBVaOnPbSDR/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/15uOqPiVhg7AfXTc6p1XqeS7PxxJJwkSR/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 14,
+            title: "South Park S14",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1qmeWC6rX74ijm_iUvOUaXvlxOgxzqx0F/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1KwcwvfaS3VzaSma2ED27Ial30W49gzfA/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1hd5Fvi7shX698hR3WhS8Gj8JSmxtMJTL/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1ci0CSFGL-FCtbPsMnyD6-5vc4MNd9H8M/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1sQ3JEskw3EwCr-EAxu6bUKrC0sgSyxgp/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1iR9IVqJyVfBn0QyMWNs_O0v5VqBv6CW0/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1QWu8JBz35Fh6ZEClHfoJVdUkzOq7Z0s7/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1CULbpXdU_DyiLgBc4ZFfOi5IoF3asnDv/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1KaU_MP1F__5jmI1WXoJ9EqnqxBSelgX8/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1n8mOKwagYmzIhs_Np8owaWEj7UerQBQo/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1TXip95TW9J1tIF23kcgEVw94kRPkD1cr/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/15BSPE8r0G1Cn02VPAju8mHDsJk38EO65/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1uf28eeY15mzY56P79DiUOOLWMaYPwqmm/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1F4jIALvHaYGYIkEnKPX0Y0qrVCKVEXm6/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 15,
+            title: "South Park S15",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1JkouGLKUgSP6hDdhrLqtuT3GnFt0BC30/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1gp9Nh_yuQa-uy7w33RZn-cvuIPk0S13A/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1utCv7pFFHLAMW8w0jDnbrjA5fLYMqEHF/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1TYT6mJC1fV-8BZTaaU9C6wejUllDowOb/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/12ZVNB2W6nUAkyrQYQs-aFJWe4azBlJaM/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1zU-2_Wb2mkDDpArg-MP6MsJQxaPrqvx-/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1i-6DSwkZt4IqsYu5dyA3W9EwlTATbWxU/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1XfV_yYb5nh5tL9ZtmR-W5xYDUCvyiYaj/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1rxcbk0ZH5ziWn80sfSUl7cjwtU2hS3R8/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1GTSzswN094ym9bjgSgOqNXXsqC4Q8nUa/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1OMuMuZYxIQY6TEGIF5iyCSgTK7HtGopS/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1JQbQaIkOQdXHbaInqfzTJjl6zskhZICv/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1sbfjuyzPZHmhcrXeRFZk3Yx5zHg2yIfw/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1-GSzRq2BJzTfK0wb9OlBb-0CV7d0MBfN/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 16,
+            title: "South Park S16",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1hssq7Vx5TuzjfkfFzikdjPC52dv3vAkD/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1w5Xn61HbP9NEwL5UJiI0IXQ2De5gCdep/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1miGFcGsfId2iisRBSqAN_2EExV4MVmhx/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/16qNJFZyxtRDDy734_-YlKkwmEv8AJsxs/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19QyPX8K9nqpYVUGQGPw_XeP4xYtEUczM/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1dO8PS1RFfFevn_LLzT8zk-Rjoz4Iz1FE/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1-nNokhF4IzhFRZMjdjVKxOZ7SN91c0e9/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1-bt5KOn3IB8MtxvLH0a7TObsP-IUdR_x/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1wmDlz6ykEBpjHMB5WwfDSgyXyBaxynh1/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1PNR8SR21_KjsBJYhSUaYc4d9XZzj21LI/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/187gSK72rpnui-2gXgY73sTdGS8ICWR2N/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1iOZAx4hpMVDe7EDA8JHykfZAmzIL-i_K/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1UkMGs9r1790aHC6TGxSr9Ddom5l7ISdW/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/16QE1eWoQzGphICf-It38qb-POibLJfzO/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 17,
+            title: "South Park S17",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1hBmZDrC4qtWyMS7OGiNYmWOuv0P0PvRa/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1ePcqkhgUyK3jFhhVC6wjnJZgEdmWoTIg/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1fV9XUfo7YZeiuGQhY8KG25vkp7NdttWo/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1I0MLGs0HcJXqbE0Y8YgkufcWc9niHhXc/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1q5K_5Tp2_8guMPCXCuyfZhI7s1GQYxcg/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1TULsizoXp1UFUIUpS1SYgUq5xfyeJkZV/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1llZNvXv3nii5QUSarBJoTltbu8lntMht/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1az_8qebHE7veteOZKMUMvJel_gFZCUQg/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1vkPrzPWIhCsXEKnB_Ft6opKDQWjF0C5-/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1oNAFkX2In-HAbC_nEHUcMRd8M5J2IjiZ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 18,
+            title: "South Park S18",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1u0O7sjbXVUZGBq3stkPIDpZt9IP2OuoP/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Ud8kCS75H7-oH7hO_esPHrBVvnFYgwTy/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/126k08hTF6UgHgsf66JK9onGnitoq61zC/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1PrDJVK8kfcPuf61UxXnNq7X4ornyjBwm/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/12OHY9HOs8S7PyZD6V_MIcHA33HPrvrw3/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1iD-HeEyyu8PKJJUYA5fypGVjTiqlyehD/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/16_5KgWgFB1oP33sPrCAnGjZ9vsuFAjWF/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/15zUknEYmHB51rI2r0qQ_yf0qG5_9ThHj/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1pIQScFMck10414iEhCC5ljCFKoL92d3p/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1tBZvfTXd0SQlVs4vB05JjJNWrqxdubE7/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 19,
+            title: "South Park S19",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1LXx-giV-pJXkRr9qlVxcG5gshNT0MTDj/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/16oScKskNIUutdJAIGfUqwFwSh00MNTQ7/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1JoPti6OZErDZUynSoRnJmainKMV53Obx/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1D_vNK3l6Q4ekizxh-dSvJITYDTB8fzFv/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1hFDCFw8nEaC6-BUKgtdkej03FmaspDap/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1HhJqX9YCbN72RANvaREKMGtnbqv4eGck/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1mm1oklVwJLetRiEtFo7ZEwxCWlhOHmec/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1EdXMGE3e03nv0SEslpOTacaF8E4yTQ1r/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1r7hY0MV1So1gjM3wzmM2fRPsOyGLAK-B/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1T7ErYA8xc1B7WhW6wZU-TqykEU1G3-S-/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 20,
+            title: "South Park S20",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1G_pP6EZ2eghI1AMll4US2KQNMOWMT8ts/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1MXyYOVG3PP3QWkjnxatkSmCWgTapzrhu/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1-CyETvJhdJ0UpIK5Veft81FrT5278Yva/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1B8HNSl79VsQs_8zyIddz2djNJBbbz7NG/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1_L6Lkg_8Ci65IeYq87d12N07MmY3_cpf/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1hkmvRNQK4NUdrsZHL186yJ3DwJrLwOcQ/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1r4nfrTXChy2uRkBhkNbMcTEDZ_AsYcg8/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1QxgpWwQNmsZb8ZfnD6WcoVEIrH1l5fKu/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1NvVHR5sZ_OT41uiPg-QtXQzUBBwBNFLG/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1yYm_-9izckhOLOOuy8tsHKtw0okBVqPy/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 21,
+            title: "South Park S21",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1mmsTlyCchQEvnk9DWHONoLJF1GrR5-dt/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1JHPatl_GuURVMZ5TU66Mx_82coAvxZJ9/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Pl9da3dwtWHGCI5M0-0Itd5AT42j7koR/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1cxBIRAzQ0yY7bJ3zN9tSzZsP8Pd_yx3I/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Nm37qxNIlaRwAl_KqgWTmK0qJqVtkEGv/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1LNQ8CkMeIcTI5By3j-fCLTpfLTGFyj5c/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1-RasmgG8rxdNhACYJoiI3kihxNVobpFT/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1E8uCWI_mNVkdfnlEwRt_SRsUbtK0druC/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/17I17k9qk5o6dgGoMPoC84srC497WNrBS/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1hIUgzRLFYbzoagGFkcROvqcxJocFyxkF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 22,
+            title: "South Park S22",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1VIA6_WPb7NfGi5bDIS7MRrWiya0mwB6a/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1GCHvzUV7cYHLfZGBvaSPZM_Reekp-t4G/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1_-RkTElxseIgwoJuqi2n3uiYLkNS36fr/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1-FcVVEssYvTv-QNyu7Jf81vuWrOMLk0K/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/16mpMB7Yfq3OWIw2s1FD1zRtecMO8co4I/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1xWY3smEKkxQf7587nw-oVXl1BDOL4jat/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1gI4xTPWu2TT2xddWzkGbCmJ030H7DaA-/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1eWSVK-fPg4IkBcBpey1JfuERdgDqBymQ/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1i_fG6TokSRY3hvU3lrWm0UqGE4WIH3gn/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1W09VWXkZwJc8BZ6ZPiI0Ap9OqTxcBvdT/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 23,
+            title: "South Park S23",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1h59EbQhx8Fb9TkxMUTEX68R3Meo0FoBF/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1AkZCJd_7m3dOFyiwxcUVZZK_SbMdNH_t/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1byEgMJMEYMEL87E6t4HNxnDVRfQO2cve/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1OF9c4GjxyCqhmg0c0VsuqpOAaeUiNCGR/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1wfd1VYQ3B8LJwebL2za60b117DTk8Aqk/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 24,
+            title: "South Park S24",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1NA8HGvfXBwHNQDB9aHDQGFs6w7e9OWaa/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1MaBeQIo46nVhwdjD6EQgZjNxLcYmptm_/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ExnWYulVQL9PxY5fEPzsyYpTPW9ElFls/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 25,
+            title: "South Park S25",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1E7vyOCIXxmGjOvwaBoTGZTEYUBzjccmO/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1yp-sC2p-7r2n3fny-egFJcnHHrqoqpbY/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1gVwHPpDpptpigIpmcZnXD30GkHUmjwyy/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1AZ3JGg-zGGCPs6FcVhfEHrvhM8gtgvCV/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1EJkDzCqJOK5GsNC0PBZhzQe6ChKuUOhR/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1_aBj_aoe1vIqdUP1hQnsnelvpfAdVUAC/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1tevrdPxgzVPrEN75d9zhcTJ2Q1Ytmcnz/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1shbYDjd5WfVgu3tNQzyzVLZhTx3LB66p/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 26,
+            title: "South Park S26",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1xuoIwG2dIS4Y4fjJUqcc2a3Bz-kF4Sgh/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/13Jh02dOFYS8zqO61pEUd4KckRf6FoPwE/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1M2UzN6S5VcM1dlmykVHkWqaojnRyX8yV/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1dxEaGp88gd29XJ8yvbjuC89Ufc0pXvSI/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1nK2TnBqdLi2DQtWdTMYYfi7fT6xAzFu3/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1OEDnruTVI___PFdqhrhdzct0suLsmxwu/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 27,
+            title: "South Park S27",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1FFPuWnfSjiMx98kpcOPOAK2y-ojzfYhN/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1JzyKk4Aku_W2-9wiOBPG43u8hl5v9MCe/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/14Hynd9wlL8RiD9zavg5rTR2l516cNZwj/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Ad9KzrhOe_d2bHtpuPzzBArycNEonUUP/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19DgxmOBVOSUIuNoIA77_hfAQpf1QCmTi/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 28,
+            title: "South Park S28",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1_PsRHBGRl9dht_96yXHF6wz3ln9G2_iN/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1NCp08XhP5aAP677U6rbco5TZvSqbvIlV/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1eY3AtvWBXyrLnmRR1pXGZ0xgNpPSdhti/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1FFKneZns6IrNjRu1eAIL2MFY97YyZ3zY/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1gxUHyyymmsjBWPW45GdvgtMT7O2Wn5Au/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -725,43 +7043,881 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYWRkN2M1NmQtZjhjMi00ODFjLTk2ODctYWJiOWNkNjg1OGY4XkEyXkFqcGc@._V1_.jpg",
         description: "The classic animated series following the adventures of Peter Parker.",
         year: "1994",
-        link: "https://drive.google.com/drive/folders/11CP20VTJqf7a2gjsLLOOu88xBropDjl2"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1dlCHJXZroeR7KNlbI_BX6d_myS332Wth/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1-zIOwzAMPjOvMIETeabMCo2ZkfGYO6gU/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1R27rWqu-_QWDTLiEpMWNCDw4oFYKAIrs/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1NR-H_srvn7SxgP97QoHtRusHewZ5zq_S/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/15YRpLvu39o9ubzaC13lZvq5vWTeTW9EA/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1dehHzlm-a8-6yXwKus_SDhzpPVmKiShO/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/13lCDxMrFq4zX8uysbaATHAr5X09nYiCT/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/18V49OLLfFOPC8w_uTHQ67w2Hm76Rm3-r/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1qlqv6uiq_t9Y_jvaqzP_ZgHV0TH_fkuO/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/15eF05bmEL_GwD9lSPXbuaojA31nbOo5S/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1VtU61aXGXU8nQsFZ4JdqMCLUkoS1loEB/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1E4Zkp_C2i1sRT-DTedWkKsw4tC0UUgBa/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/14Rkzl_l4-eqlMVOjqxVvuPfSf9OH1ZAT/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1jXBQjo8L_RXoAA2V8zVSlallcxJWcNL5/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1MicbtTnpq4mZuRmgGLozHYOS-1eYD1ri/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1-d5WEpaY5osKHyKXWzcDoZJIkhoDjYS4/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1KlfKRnYXrdouMEXeekXHyCrccHJvZb3W/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1kl9727Ec-u1_P2v19n2UNKbtQ-XI0Mo3/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1sbH3v5emlWmfXwMnX-IUDlS5tjKfmiJd/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1JOh6S4Lp-N4iAb0CAu2s6YMnLCxLev1f/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1B5rnOGg3drLqQxIFPs_-0fBaEwhbVtTs/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1Xd4CXenZYtWgzk0yJChGTkrew3301bOt/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1YCaJcuCbSzaQ7eLXsZcoHmr4PlKSNN5S/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1FOn865HQ2HEUKiWDZsF03Gbtl-whpBi-/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1IsiHJEWT9b2E0RdEmQrWvKUvO9usjuWg/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1AbDGSY7ucBUbtOB-kdj6F_OmTbwkf0oW/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1VhEGdOHoBkm17Um7GF8tUuRsogHf8CTL/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ogpRq4BFfv1MaKX8GU2Pwvu0lRaHWAir/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1hloU1bdb_3PJwXnqcvJRnSswANIb620N/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Nm8b3QDULmB0D009GNqyxrSqW0sg977O/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/11wEPuyVB5bmokT54voLwYDalOX7VC-g7/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1cM5wf3LpMmSl47ugK-roS2pyqNhaFPtc/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1HdXbyPcwNdvhGYeraSrLCqKReiI0JP0D/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1IFsR1yaL_DA1JwGFo_0ioXW8szLRbMjw/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1rnmL16V4j10On2_3m5LeMrTxlRdH5_xo/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/160RZ3mE5snvDls7UQvyF21uJWA8PZoSG/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1etZjz0Ffcwf5Pywrbuf7HVW9itcnRwv2/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/166MwF4tZWTWcWGXUao9jQBghaww481nx/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/11BON1p2MqUqVM8NbU94SgVpab93hQ_6e/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/15lAv7tksIAQ8KlrptGDl0v7MRfKI7cU-/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1UDF0b3R2Dm5A2AoV3zwvlMU3TGpJQBQc/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1PqBi3CE3kmqGWuyoz9JG3rQ-Ppp91sv9/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1SCIWDvjg452yAiUvdh-eIZfnAfjVxWiQ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/10uzwn2trWwTt_DYtgHdye5R1Jk2PcwLE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1plFnSJBlmYCggH63ewQhs5TcpTIO4KWb/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1uxo4s-OWe1cv4vTGj_yPoWKxPk2IOYSO/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1lmx_5BOpMjik9GGf9uTBR_Q3oSxBe-L3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1QEE7QyF_s3fQvpet_zcIXW1embbCKoir/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1tLsN06ZNWUcTaOZLGLpgSe4W9r1LJqHg/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1fO4UVm-PTWZRPIrd56YxNKexhWeCgpBP/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1xKkYQPCHPsED7IiKymNNr-QiSEXIZZzw/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1fWC6Y8qTH0tyy-_3QSb85VVU9hi6ubwn/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1AKOEsfskcZWPetqn4IVlcB1hCuZkXSOX/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1yJtAJ8aZxxLn0l442PquFKDoB2wERyYe/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1nce1krr-bGvf-mvpQFgx7k-oyiEWuRof/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1sw6n48x8KdBB0SxEqejjdoYaznjoaFQw/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1xvKAPHlOBYhd2tUdk-tV4QeKYSyrFGKP/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1orOXR4i4orb0ENmFghR4ytxbEycKF6gO/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1tDigfLnB5jyf9lhNph2r0IPgdLEW1YAi/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1MZ9r2wSXEpPw4SZn13rWU5HDWMgg0tm-/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1bRft-VkuRd1z_BGj1qYxW7oCh7VFtmk3/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1tQeJnzya2kfQ6xeId-In57iad02h8SrY/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/132WjGez_2YWqSG-sQ6Wyd5_AeP-u9c9c/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1wAMByop7B14vEe9LAZrX-gxopgFNEHC1/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1_kP2jdMXjQPFEFVhMICw6jTmUY2NYbj9/view?usp=drive_link" }
+            ]
+          }
+        ]
+      },
+      {
+        title: "Spider-Noir",
+        imageUrl: "https://m.media-amazon.com/images/M/MV5BMjMwMDM0ODcwMF5BMl5BanBnXkFtZTgwNjI5NDQyMDI@._V1_.jpg",
+        description: "A dark, hard-boiled take on Spider-Man set in a 1930s-inspired noir universe.",
+        year: "2009",
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1rVE1WnPyG_sqYLb3ZDjbDoodbShHeRwL/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1uwpNb3Yur_SwjzO9aLIDYFpDVQZmRg-t/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1cV-c3Pd5aaja0Y0keZMDJ0amFJPJ6WKD/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/13Z6c7eJIef0A1y3HG1K6NfpU-BNG2-iu/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1xPjlVzASqN8jJjPkOeCdsAqTGou4rSab/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1iszUSbsphaZ4tHLOc7Zq9rP7b8MCzoI-/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1RoHMDh48Oj8oVyZYd2Ahk741mSpEArgC/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1XWNcJ7zCtyeYcBQ-L2yoabOUDwjlVd0d/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Spongebob Squarepants",
         imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ5Fs8tpg29mQcDhXJi_RMZsy2InmOJ5WO9XrOxreAnzC8ftuzl",
         description: "An animated series following the adventures of a sponge in Bikini Bottom.",
         year: "1999",
-        link: "https://drive.google.com/drive/folders/1QpqcZWVMlzIru0g8xf5olhMeY75YKJkk?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1kIJ_cd6AH9qJ4LmYIKmyxPmYCMTCkThR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l7qQehWCp9ts6yY2RXBMf41xXVR6cxb5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DKor4cDIRWLLUJUGTHzzqXdTvV2BX57_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NNJPUrdpVcdOOoQKDycQo6--VkD6R-Xm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ID4nAznYwGzsI3tGD3R0bsiqAkq2QoBc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iv9Wcg7-Ey8oWI5y7zBHvZ4l9SqY_tf-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dNqFoYmMvum4UUZQcJp8ccgm-gxEwqig/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xMUbX14jFy5LEP4DAiYVrmXe9JKgjIp4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kfASUWmwwKQ9dul_H41Xq65jwns-Er1H/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k0AC5soP4QR3J1HtfV0RDGTDr7LnfxN6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lorzVM4VFrS6n8IxWlPocWAXQSO4EsG4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12laANC29p6LgjDCFPRBAAszuT9_1VlL0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F7ABx8T1GRO3Mq1OPAxvr5daZBIDdGiY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nqI1ELgAAwQ4t5TuqL7lgkcWZr9Jhw_R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/115_wcK7arCQpRqAlVO3Mm9wjxBv-ea9P/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O5otEyPabbIb9DS1G472F_laQXVmIi8N/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HXmUpLM_7tKI5t-qO8DHDg9Trz2zn7tz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Hr3iyzDQlB9t9FrNmlIf0_5oE4UHL1Ca/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1v0tX1M9ktx4scPqKfNk8vtB2kTrTAFJt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T3cVb9hs5e48kZ8U1KaT2EeEs0SQYS_i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nwIW1hkJw9jB03LN0391TUH6wUZFDGf_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AiGfr7cZKapPngDqIZGkxUOk1pICxQ8m/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YYZ-FJOO3axP6c2d4DxHaXa3p63Yt5vJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17YEXwROY3-KCTWRFyhoxhk__u15J_xki/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nKRlIpejZhOZ2YxbHhHMZBy9JA5Po-wS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kLG6sKc2mCFPb91zvZ8oAJP1iAPv3Zo0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xk5_F5op3Juxbstcc6wEVWstvecjZt87/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CaJ4lPLeLCqfTafk4jioKl6wogAU-Vyb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LPeGRiBQQAI4NxZGkA5DaydN34islY33/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ACkf5QR3Rc2okM4Q66juOLd9aMLo0vnx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1O8sUKftsPQembHW7vZzRt_XH2PN9Z25D/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZtYTWA4ccYT9VX6DjeS31rqo_7chSSyR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AVol1zZX5cY5GsOkKy1KRmY9iHjQ6-u3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KQpNlNxQk3M2YKKRzkjVg2yrFwZfOj9y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BNpigf57AbVqinXi8_5fcCTSRSSriMzX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17dL_GpD-nJN-AtNq9jgiXBA-XCRnVPrX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gyHJirnIwBrLWcg5GvmqtfoblYpnyxa_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/102Vgz5-BWqIm8-_z22rCnbFWrWBogbaf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VeQL-td17pRp8P_mwtqNam_z-151ldsB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RPh_QG2w1BPQN42fs_Sa_SD-olBs5x0F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NvdBxwXCEfrSIJUnSN9fr13QNHIYB51k/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1pM6vo4Bd_gMyXay-IlV8cXpDsQZPM3G2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mTRAdDDgLTd76zPJAnOSQbVNoYDhbmeG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XwrW5-rKCixZvnQM68jD6FUs64rc6QrO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rLCD_f1PN5X3rfgbd-UKDf-VnyzEF5Bk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vS9GECjQCjZGHyxjfKgFIv0pogMxc9CY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AoG6GXW2IyGm-GAMn0PiipvCJdrjo3L3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nIgBoxUWJmxYGMBVIiWlrDJX8DSERUSg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11UYC4Rqkz4htouiqrwOmnbQadNW1ZzY9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pSxUapbeiIVqNzELKy8_IhRlvSADC01C/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/103mssg6zAfCVqtgwN1e3krhCkMmi6Mk7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18Om6M10aNLU6e87yWF4LhzxSuyEpVN5M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vvvjX8e4aFjEbCd5tdk5D0QGPe4rPeVy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AAMxTsd6OGUZbfGYOuSnCp0a7yaWQxQa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LJxW5F9xRTX0r7F7ub1l3rs3p6fp1LHw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1D6qv8qwXMvN7n6mXpUtUCVVxeiO5Lfnm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/129jpD-rN_z9QdedaCF_dCVgBQAa0bU1i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14XcAcukeyhm5VRPJycfgQ5dUfPa5E2cl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TzK6mHDPjwviEAJxAsonDBq8pYA-ANFB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Elm0RjbDhSsdpJuKcApJqNDDoUznERBL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_3DHpybtQ04K7SHKsVToBKXzjE-OtfHZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10pjoawmfF_K_TcXzh3eheo8CEBc2aUIL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Rf2Eh6K32j_3FbbVwA7dQDPxnFcnGjOV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xUaf2b-dPZjzDWJU-hINz9EiXSwzqoXV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WaLSO2eM5NQZKTrT-RpidnVAZTUfAmcH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11ZaW_RRDDwVMTAALPMO-jGyA22KxKQUo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mD2VFra-QPVs3yP61qyhgJTMqW3vJjJt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ijLrE2haWVPpKMDhJqEO3DiPzbgEX-9q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DJLsiZnplj3__-LQGRGUZTS9td1D2e8M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZvheOH0YTpAWJ0M4GeJmG5MqSUejt0-R/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VBWIyF41cH9Z6HbSL97u4ZBWDeki3EL-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Op0ze0DLYvOLucdYp5tly6xYTF9EiB9N/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18bgLliHFEuFk6fIP6vCb4e-k3Yq46F0d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1veGx20yyMQXw5OjPb7TCKHzcWtqhqCJl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eofgKKh7XUljWkrXMLCeoesojNBOa1fp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fg4KBjUrujQwL6yVrhahT3PUbmUACBU3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cRro_drGQ9Aa--ng73UHWldial42w3Ik/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TGPqa0P_7RgakSfoG97aje3ZB7mJkbjf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OoWM-YfYRBqEmyg0CsuI6nSmC5UtYdSe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d18I8KZdxn3P5UKoMLjrpev8cJBsUQua/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1pdvxA0fwPEqn2mGXPH04aRULAoTs57zP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ukO27JkaKsAYJYJEvAY36A6jbRbxgIUc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11wjKSYffnSxeIlVjPqEfap_lBG05xyTu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TqU-KDlVLagZ0ooICaafMHDduOVlRO4V/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rAZhBZIXbbK8ecHrJlspjsgl-V-f42YS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1u-m7ytD2mBldLBulrNvsi1_ExQK_DSQx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1I06A345izJaSpDclhDBsD69q_wTG8TPz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-YV_dp4UFbWZ8Hf2AH_1kxuuszHSpMlT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1roGuvxFKEmQADULtzfS1nMiftlwb0oeL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19rDp1vHJM6w0grMocDjvXxNgeAYZPWb-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RrftXdyHjujycskuULS2U-in51HfnprJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1twPIKsdYO6qglkEc8686_QnTwL-bJLW_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19wOC_a9SI-Pvu8uRavoP8MmjJCtmR7eN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AXqv0HSpak55T0IgJY69htpZcEnQ7p7Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14WeABV80OWmvDzVFQBObF-wfxmWFjBWk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12ltslxF470UJioFrWNnCrgEf_ibzpuRy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1q30Ol2sBheY8FaypSwQTpLebfc11C4lE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Jn2ZOPuCXTul-hVH9mfKBnCzFw37l3Z3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1X_5eVHz3-MJ738Q9DwWlpaPSq56ZZhUG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1yDVs8uTvMW3fSBgzuILsadx9stoPUwHF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Uy2u3Pb2Bndahz_LfI1-00fQUecnlZxA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NVx3SEv0RjIxFKLNkOGGx1UAjHQCwyWz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DhPJ6SotnPD-B7MgsBjfneBd8XTdt2sz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1U988ikoST29_cKZAe99Z6N6C0FSmpLbU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Hzpg-v2hXygPZv3a9fMGzj_zYB6mO5nG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1galLOXgVAaoWegkvnaNCbiy3jUW0glSM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_zreP1-NGY-UwXuEdk0w8IjRl-_lSw1f/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F1xAJonTN7HCY-jids2gmkHCl0iJ-LlY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EBa01zW0-2LQG22wCD2i0H70BqXbK2sb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZxH1YkridxSVABPjvuhktWKNjBNIjmOe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DqnN1dQFM4id_Z23HJExBnrokV0nOdhk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18nw6xHHTn7AGjHOT9fCbiyeOtHGc935a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wev_AddbCVkMBuf43chQX_g2XoNIH6IE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hrHLCD8zNTLY8pwKjNrXeiy7JfWVWfMJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12NM-qEgAR79rZnPDR7kRETwkNoDkGnqN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1r_gEYwy9SZSU8EY8UPCK4LeVGwxS9ser/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qGAr5aR07WvF5-ElbxUQUMB4x5v9lUke/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { link: "https://drive.google.com/file/d/105hRGhabm7xw3LQft7auon9Mh7FP8yFU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Uvvt8ff-0Ze8Gt9jq9bzSD6j3nAocIPk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19mpM4PUGgI75LJ6NixH49dkMtPgXAZ9d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18O08KVTXJ2xh-OulyHPDR-fecn6V6cem/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GDfvxvocREkZMa0yV2nIXWHX1QlFRD4Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bEb2W96a1oRIQfmeTUL6VXENz_pRp76g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10oBxbVo5LPrFrRivQcoWAOGkSobajFp8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a518fu_dLLmyXvMdzIoCy2gIPf0d6_vG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1E195ixppqRooUtRBdV03K7u506JOR6ca/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GK0PLBB8IKh2ElWvM1DiZKfhlS2Y6k-a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aMPQTwCH49lF35h1oKmIZmSZlvpYzrAm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1djfnx2G63wfiBenhveU0XwhakgQLRQsI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NrIA1Tk-2Q6eK0kqd1vQD5T8LeO9Qgf0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aFaN7CJJSwWGQ9ktVueC0WmozQyoBgr5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lAqhnCPWI62jk0KWXDjG8KW4nn1pHeZu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ee6zl10c8M2uN5kgfJC_8mxuG8Kpk_5M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FWkx3zk5W1Rk7P97mD24oJiP_jLqTtgC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WzsbnqiSXSq2g3RbMXhUzEFDyg_k9dEN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Wz0oJMiaL5s_y_2R8cO3jBUpESFZZ9kg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vcamayHZn1fQr3NmnM-OjOxEnZsB-eq0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18XGufHiQOSV9fJ1-WDitDqlCOkXl1BcN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PznUu6ooZv7sKJVVL_21WbcQPJuAmfEq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ywj3VqU2yCb8rIhRd4lGXA0zWXIb3dWi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GtakSo1rcOk4lvFpwYVAJa4mETtEeozb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_BmVgSChmR7hX3Qnf2alSy-AjD01TmdA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ntMc8Ol-JTq5uDKRB8WQ_18GuvS5mnz7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12WI-wIvqsSgIWbWrThHi6InEy0U8sk2V/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uoRbvMBznwWkK_XZvAwKSnbeD6wcvHxM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KrxDgKoJdto7t3iUH3hf7umFGdwqQ9_Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cyAGZv37XawDyVhR7inDjpPVdFLnZiNj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fl9L1ywr8HZQ4QaNCEglJsWsMm-Fk4BM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZEJ8_Uk3WBxBPV9t5e7_FAe5dqraKh-4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13mw-7RdcQEzBeRNSGR09UF2-CweVKRMg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12o6PrSAyFdO3mrMD7o_0_IxVa13V95jq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ot5_JYSWn67Zst2Rfp906So-R0tUF_oL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fz1OfNhKlQgygBWO8MlRggFMe279eGsR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11Pk1UibF1p-mwX0zps38-EUP_SH-aT2y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fNBDpu54ntrrG8ZkfawqxdrKcCvhRB2k/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1OHQWJJdzhF-1U8NLjjhe6LY15yFf5-U5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KaE8ygadW7cqcoDMFFFUePuNaxEDvd10/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16J2h-JvphrOerPC6zNmIiPYdzVFP5OnY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xtQIpfaxBbp0q0OaBKMPI2H0D8aMXDG3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RBSxTqJB1cPr_RyGOnzPfGvh0Dmb1ri_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aWR79b6J_NrfNTDVPQXDSem4Plhri-_j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Dw30Ss5VWwEIZJ9fYbW8DTu-WVLa5WTO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1THvRc88_tSC3PifeVUGuGI9hTngvH-pO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SspWG0QkqCr0ShOgcG_FQFlYPfL39kxO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1aZnFzKZYsva49anJaaKxwm6pH418OGkQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_6lLohjt9_vjKHsSMLeFQTQrdkD-B81O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BaPWZHlLVD421jc3ji7JCW15yrUv7-Te/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1M1w3aML52SxP5qieuIkSMTD0VWt5zboO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CzWyE0RcwLg08u0Zpz-5CKLOgIDZJeot/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lJvMLlHi-eyZhawyjKq9kIMQ51pjICKq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EHU-2kfrzPeGonYCW33AuSVo80dTiQYX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iWo8Lvk2RN6ucitypelbRV4p-ldMnzx7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1J2JaCP8VNidxwPWhxudBD7fLQaWAUVKU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-S3a8ch7kbd01F0dq2tU34NebZPsSQ6I/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14rCLxijpTKg7kqbjtT4JqEk_ExulMuqW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DgKzZPYC2LecH1jgfLcmIjXkmLsahFS-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RZFtvoFYJEi45OAtickw5vZuYP5hJT_h/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1i1vft0rTlelUSMATMTd0repzKl50hBjh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lWnRsGwXf135tB5ASlDzJ_zTAoLKiUV1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WvyEZIS0PokAowLs7SSSgljnzVpsJhzd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1udXLIBxBm7Zlj-wdrsB4nHlbeVvlZ4ck/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TG4OzzIs1b--vK5TJ1cYAGybNjoABE3B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11EEIvN_WZJ4EqN_KC_Q3Zgf5GbtsrXtu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Fdt-pzr7mw47o8nhXRyeT9A0g4FQANT8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XkzuQb_YhSE5qK7RfZIFU4cg9exI_Li_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sh7zlNnTwDFJoO_6CQYxsXqwLhS0olz1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1L7M0CgzVx7iU9-0RxggzLR22n55GVIVW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n8OfbEeDpgfpOCKhQA4YXtxkzgU9uN5O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/123xkYK231J2AaHSeRrBToIl3S_S5LfnI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rVVxsFxPLaPGc8A6UideEOqvwkB6ilCU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Wluyb_tc3-6TuZ4WP7xvy6Bd4nC-Y9iV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qtonUZ29BJPzNTZNwxy666AL5qubYTNl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w6uFRzq5VxrCzXGzWtKAkGQdD-VHy2_X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13ObpmqtS-aPIO0GfmcthWAHpzwThZH9o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gmZcXZYqg0b0tmsT2l3KUeh8c9mSDrvH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hiYUgmIt8ioTDR5TX2GcR4LuxhJGKlPU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Vrjz-cEbqfcqcDMmLxhU3sh8YPZm_i-4/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Season 6",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1XQUL0B4hIvYn490yVD3BbsIh1gfgkHu1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dAdeXGfv9pohQVYJsAN32FzT7JLs6YUa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AbgNzCwPg2ktSOS5Q2OtkbF2XQ3TwL7i/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vgJzvoNGP5VLCE8DUJ2I-wLxNglG3sXW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e_WlcgIcdmuMJTs1Z_VE9oO_XY_kTMm-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Nx0O1fv6CM2vAOjgqA2YXK0K7K6hQ7wu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oXh3k26LCtC81oHJzruDzsaYtiKBoj5G/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XRpGvRGHrGNLxKKbXKVTmcbeEZjauCIa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hALezz8eRE4wVgsSISE-rMHbjbaIF92G/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SpVB5Si6Wxx9R_AUoX89yNeRZNfKPAb_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RzWI_Bd5tg4gc6jRqHraKbslKlJRrsnG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YpxIuU-BPJiaC8mkIXX6GqoE6ujimL5s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MtYGIdx_JTo78qhcEXWGAmRRs8Sonluf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1k1Jx84OB8dxd4Ad3KUBUOFzMDCuNvlhu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1641U7kyA70gsJZVKN9QscwjVsNNu4dC2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fEkwsU_l-jvjkPK9rF5Z4KCEDtNtMBga/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_R_rSEn95FkA1w5vjCpxR_UuOMpB7PWz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-asgI1vcfxV3aV4yPryEvWVvvhl5uIJQ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ttV4jjymvDfqZUMBDLOGzeUsxLxrsyBk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qKvlhL3_eiYp_wAaDawGB6ucmqitd3mt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wAp1Cd1qN0ydfVoS7rIudndmlkm3tzYN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iZT7pQPR5mheQCSVemY8ftlRuF41zmXx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1efJekfeLBErS-9zfJoysR4ZlYvuSNqS6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vlVAto8bcueyxKfnxhStTrzZRXWgijbm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1POa6Zngy3E4F0q3i1pSwTZWbdw6CmuPh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jnqRmVXzjxwurwFuj6UkoprOSw8HHBh0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bF6DajwVW0Yp-DrV4hbINm_0BM0P3T2t/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SOZuuAs1vySz424QsonR7-DPu8utZTW3/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vZHmQpq_zUbIkSz0s2Y5xWDcWhQ7ox92/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MWLJnxM86FSNoY1h6EJ4VmhbDjohpN87/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15Uw5F3tj43jExLXBbvz32E6r6iYQ1YZH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15uUEWMT_4dgbYg8dhMZYZvlHtZQAHGpA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15tggfhhpWwCh1LARK7fGL8XhZxN8VVBs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jDa_R7ls8TakNZ5OLXhGEUneGOw12zys/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1A1v0g7eZHIj_2ckE9I1Jv6xJUNwntuS2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gX37XxyCu2UjTpNKPYPiEfXwrZgEakQd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CISjmirgRN4PxeasKUcuCrMklhn4TRL7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ysx62XeSu9mu99ttl9QQG-QXUhq674MG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CJHIbtSkTeiU7ou2RAN21gCG3w9XKrkX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13cpS_hK6eQYUb0CYuxgzoCxc_gmC9gQ_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17XRgOKrVqAq5ryKfFRzCpEzY7eDTD3k1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1e0EUJArXl6SUdN_h10LxhhS5W28QqVtf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bX6cWH9vuRYu37y4T2POQeh9zceNW5nM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18Jx2f4FfZSfEYGj51AeRenEwYLSkAEZq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Im12FOPw9Nojf2rLSrfyGkCMdQ0jaH19/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hHq9jBrICuSi_FGQshiPF_WcZ8unEdT4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1inBlUBb_WTrnQYCVukadLXPyU7GCs934/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 7,
+            title: "Season 7",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1VSbuzNjqiS0mcf45kemZq_S9_V7W2hqe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oJM_v8bOtXRc9umThlCdyOYBnrifigym/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VCHuBxuaj8eKSCcC7m7d9kuh04cX3NJY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QMGVikW-dR9jj2YYvUo1pxEKgoOsxwGs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EeOZH2xA2RroKXQTdPC0i-3D4JCJob8B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XokinJ25i59npl61kgB2IuZc8a_ooMVO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15LRt7QsVEmBjBM9tOSVN41ca4WHrYEjD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1r1BaW2riToPn2NpcLxg4ioarwY7wFI_Y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IcwMlTceRTsGx3xpIyRl_B4VWQVT5ntO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18tPBdUE1MUUYqETPJ579wvHvVDqXQmF-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1L5QPB2AIYuLkGnWV2PVQ56Sgf0hM6kp8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AgI3VoU4Kg-zESTFa3k9Xu0LY4qop639/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12VlrKCrZjF1HzrAUOUewa52D-x6W7w8y/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h1qpcYzGDLr1msOD0m-ZVeb3FUoE7c4Q/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10hLXHSxu_CTzSFtyJOofXe00WQOako0S/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xqKFhcPOclFYinRNXAcfTROCJooC9k-H/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hgkSuE0SrWDkEjOxpz3mHcsBYKWc7bA6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TJQW6Sfc7iV8MyZY6usPw6H5P4kE7cZf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xLjcL70a6iyeMUhssdDdEfd1Z-nsyJHl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15PgVo9XDFU_T1E1VJIrWjuPXnyYjnE0s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AFlkm1YBHrYCuXxLoCsnVesmINdxHgv9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bhMwEmGlEa33MK2JXZFoGF2pT5rNsLHi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1E7MpLAT5RvN669VcrLFw2CHjpto_Uj-z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14S9I8-JeoRF-A0k78svDTe_RMpc6bMAo/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1E_feUo4rDbKaqdPQ2vUW_W-RZb8WWtdE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VfS1_OqLmNCoOCE_aKOgycgEUg04l7Ic/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1h0-xPnNxae42jWBfvrzIKqvwNuTa4fSc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f3a4mTqH60KljWhmIVQxcOnE2mx0PZBi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wSbM2qD7hyaZoepHoD6YdNjFkOiCQ7jL/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HdE2YGm6h1e_6nB5gs3PEwoIJVzXqatP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QjMeWobbPs9Yc5QMRUQ819h3qQ_G4iB-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1eq2xls6rBcbk-jHMgBZP-mfOXBZiB31E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fdGj9UQMMuuxnNO-yKJSf653mnWkLuSY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tqOznF2pg775UQwYtGSEj7-Bt5FywvJ7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1u6-U9-wBQ3gaaUQnP1qAvNmUVdi7LEZH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CBHVhSPYxA9HLnbLp1ZXKWpt1dKRU1pe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hUl4lj3irvZsZuRqm5MLPvOtaAe4bM3j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b1sIEpwu0Ev-kJaU8ELhIkqjkVVKMFFm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QDZ9qBB76pX916JOEifmph_BUxzvHg5B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oREC10tBWoCzEp0WmhN69XeJPnRe669F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mTchbRuzs4UHEjQ8WGg-3IsOF8nHVjLl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JRxROqibwBGyR_B_vkh8WaOMmzDPH1cO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RZhjS6YZcbIrFGE51N0eR0E_JTnFk9bu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YbyWoD6yPOeiiPaWW2LFneHhjlZh9z34/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15uF_aGjDJEFfY5_8ve7O4pzCepbS0hOP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SV2oXKtHm38S8xU7nXdH3RXbabCL-oEa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RtVBYaI0fYEIkujON3AleQCVdCpLXflV/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kYTDVUAp9OKWdC8G-ppEoLbDZZLCTbnH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1J60hyXhs0wN0HVrizFJnugHteQGuLBi9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G7EjvuS-7rxXQox7a2h-B9zXsYifQiJK/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "Season 8",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ai8R97egy1ajVVvK7OMZc4OcLD8RHddj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l7hooOH14dvmLwjBTiODnTolSvoinDa9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bwsH3ntpX5vMLOqp4RV17X6NAvhdg7Ys/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1l510teeDsopPc-UzGjwBMDO8QOCUBzuI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_4KvDvMJ2xhW3KxstYoCrTXUsh7r9mUJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1G7pOYT965si-6S8FcAHPjEwpoKbebjNu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1q6HUvuYbFMD4opowhfOGbp_rMzycf2ld/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LX1pbW5w0H9M5jD_E1d7838gYZNXIT8p/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1pGQxHeqX5401uXVNjSUb7QEUp7xCEAv0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MBOdeihHS_QC7MpZw0x29vMo7lmZh9Fr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10oj_dPhxQF79RnAw3JQpjD_6bP6ON5xn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xmuOcwfhbMinzQZIZUeAGs8cbCo6-XkE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OxiJJzdtzGcFULQTQF648s51ZvLyPjH6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wwbvmR-w1n2hKtU3voq7W8rjsfqbUkli/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZOxhcK3wSlD52S4jwXk_T6OQsLUolkZt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1g3b3lQfWBn-b_H3PAIrQoH9QN0_m9XQs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1CovYD-F2z8fSttLD2lbR_tJ5Y1duDyG_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1V9cVEuPT5GJylO6jxr5u9SV6pvsDDdSr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jZX8qF70EPB-tcZWK5OX7YQYDoL-ZGoh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QKEWXIqH7mDYLti2N_GCa98bOWxrsnEd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oL-RbjUG1_6i3RS5j3CVAQEx-N3VNefK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UuZV1eCukcZhmE7zSh8pu6jJcwZuXyoO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-bdpGh4_YmwtrEvVsuR2ojTTkE6rhAL_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qiajweO_uVWLiZEZKT7z36ccGIZkomfd/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1EUgjqiwkNdZyq_ao_bcBqB7kXsrO0PzG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PmblQDgDiFsIMcWV63FhqGZuZpohPaV4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rgJeEY2qrilb-xtO9OncRPd0lLkxBt9e/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iweqxT3LMKDUbeS-XKGNYMj0WnRRqQFE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1nvLDXWqC6voez0iUJV5gXxP4fxYg_05X/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12nJ7594Rt7QIxBMc09e4UBWzpyFihomB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1C47Q3ZcQBC8JwQyIvlhyoQGnq0Ei-NZr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Tj4KWNcvAZr-xmQmnIoiSifdZ3juIg3s/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UujZNcLgBjKPI6Ferefcwmqv-yCh2J3S/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jrnTVWh3JOfxu94MjTfgIGnMENDZS73t/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hLqFXaIppjoyzrxuGyRj-T9gYQgn-_a2/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HdxcP45OJR62N3BqPqUGiKTnoyyAYbTk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1b8dFYG1bRA5seybkUNbDghxcY5SBLPEq/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RUVu3I6rFfXzQ1A31o0BGghYZi44-_7v/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VSnUwoUEIdqlrEmUUWw6bDOKBsYfHok9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bS0-H4xI_Atd_hD7uTkuWrzxtmoyg2Gc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F0Dxw0jXmJwDo8Dd6Gqs6UstNqwSoaMP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14zAQAlAG-oPEsj5mcbBuADjo1oXUOKr8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HmgA3zCwaos5BiEwEd6yDkoEPHna3XY4/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xh3rgoypuofnw9M25h8MLbohGY0oBfmh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1KFWcQfhOxznjIPn7v__jT2rp2MSRJzyU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PV8jpMCaO8LGduEoOnqkIJqAzj1IS86d/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10uuScse9U8mX_UVeYIXLYjAxGHtwvG1z/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "Season 9",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1ilQKXKovmilFrNrj6CNfDQqQH57VVYxv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-YLyIxF8t_GNch3wvK0pYI55ZtrQVTMe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1d4dpafak89YaqViMSd2D9F-a_WEpVvBb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1qycZoTUuNKC6YuvdbG1d_beRjMqKAox8/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dfNYSGbwLiAtqPnkM70xa7yGQCqL5nfb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1smfmDG_SIgKasvsl-llepOhrei0Xw1Ri/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Hbz_r5EgqU7astLwDuJeKR4KoBvCzSj0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TYDkqhr0QT_X6henHs_QxO7ukWIaC0_0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1jFHILCIU2ToErEXlYlzu0WJSiPQy5M0O/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Jc9R49SVu0DMbBcQQny72_Z6doIbOYdj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14-GVH5KO7Zs31b09YwqX3IqO9AgvEn1o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Gy0P9HJsKrbcHz3B04ItlCg8xkwy1wZr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-V6Pgb27FzVrytzMgSfkHsXjimhxpq_l/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JKo5mLZL5MbSpmTZvwXHEMAI0czl-ZuU/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/16vYZxcezjR1h1jwN2eJJbm4CMIW2Fi1F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XAA3Jr8DJzONI9B_pt61QH4IwZtzKkxf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YMVKz_sD_13K08Yl35MxQh9lQ0hMdNvN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1i0Bgt26sSIFEfqvpynVU1uwNc28bdEkD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1z0SCUsB7yDm7-qf9ZiWUDdu30ZUfz0Ve/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1c_NpnT-bdyFTwRaFOuJpNejrh3CPeWmJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1_EZ4buPaV3pFLcenzu5Q0t1flchz28Ba/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17jHYnPZ1PTOmoZoOaOg0yNhepTrheT2H/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YNbtCSnVmsE4OZhotC7HnwET3r9ePQut/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1maw8AJdjPqVo3x9utETqISWgk7kV5pws/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1a-i9htqBtNEDA0tRYaL7mb23zzEcYVwN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1n42Z_t8EtplOPU_tSsXJwvbSKLvgVnbl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10eAe_N4aMCb0Y-UknXNdH5I0zJTTexB7/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FrhvECSf75_rGIamS0uvcX02gmbO550x/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NjRHs--r_Sj1gUnSworAY7o0DhrLGJCj/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1txg2HOpbWJeLyXSs-Kw7mxWHjHVGKQil/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lqp-kFo8kuK5KzdS3VICDoNTbC7k16Hw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15s7rtfIBXq9xjoC0z1d-CRVcMx_UG1RW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YyCaB0SnoSxV0pg1H63Mh5Y7y20AUTpz/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SkY6XdAtYz02wpz7sT-HBV0cslJLB2V6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1VPEK5k756tR58bB6RyaGS88f7oJZcswb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TDLcRoKRj4F2UqMTTuxfGEulnqA-XD9j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1oXwrX_UZKGkSgbWWTnCTHPUyCBonjbOD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WwT-BfuMlG70RecI4NTjcTpAQ0guJ--a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1TehekrVzJ0fG0NPQdEJ3wTM3xGez4SMn/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F9BVsquWSY5BBwbbXY_zaKG19jTUpUxE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/15VT9EyNN6dUmk1a7MUiTjGO__xGAsUQk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1w-wW7B9tdav1HT1_ZnjhFkKG1SQ6mb_e/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1iII0Rchv8PMKOhREKnA-gYNw5D80SNVI/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 10,
+            title: "Season 10",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1KtlOnv-hqfMyIsN-ybolqJRgT1dDl6vP/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XV4MUeEIMetI1ceTgD3VYgQvzDQAzyGG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZRsyYKqG4Nh7t6vHoar_dPj-tRAxS48a/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HadmZpLeo678WEC9MB8HaKtO8R3dc-KD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ho5196WzIkH66GwCqA3UqMIU89zyomnY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kYekCshDQQgC-0gC6MrppXdJhzaWUH60/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dIl4HQzoXy5PNWxemPJmyd3JJgU1N9Rg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-C1qdFfxP3gEr6QK3wzOtL-ZsAMau4VE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vylvtrH-zMfSHMJcUBfseG4OehRqow_K/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NxYkcM7__xLDpCbXthncFGSnL3wxb9kG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1v4BeVNFrInkg3QUAIhNGhi43WYJxPide/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1F7NdMd3-CGZppkuzo5Jp7mr1zkTAindb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1i3Au6eEobxmgDgFe53NJQKqty1gi4BOA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MjpHW_oQLBjtYLqfBD1fuEMid4l4CrdE/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1BmAIoiRvwFEgfk-z5dQN6lXYuv8jq7lK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ApoKBD7ywnAVzuGkq9uEpKew9mxqRyJc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Dyca50GepeTnp8lh5IqTtYL3jKenYTyY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GBfecPhNsddcrJgITe1a18I_tDM0dnTT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bzebrZdIsbKZXILdJ1C6iZ441i3lt9Im/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cZLMoBljo99l0UTJwTanF2igV9uJjTKH/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PhVLKNOicDUdzz_QluxNrSEQ1Vb9F-Hl/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uL_RbZuejDFNC7QbeEa9NmjL93NMP7d6/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 11,
+            title: "Season 11",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1tU-5SVquE_RGOVJlN-viclq1F5QyVLsa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1R-Gd1MzIDdJbdZscPwMzuZgJmvNzX0kR/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18C2Jt4WYN1r17CNrhuyesJ2L2w1lgqEf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rqaWgLpWqOqq0DOHNpGlB2_Rrewi4j9K/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Mt4-0Ni5obrZvx9HLnq5Q18f7GgSVcpt/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1wHE6MBBZFa0Rz6lUecaagBDR3iFD7M-E/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1GjI4kofqiXdRv3N1A6Jw1Zl-YRMN5x4M/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Uy6vkLMm3iKyRW5wXucxvYlqrlHl3XxZ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1hC3QZRnYh8ajZsLzANUfdiyqLn0EfJe1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HzxnZ1S3ii87ADIDlHYU6X5hA9QSgOs1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1t_vXtJzK6q2NiQf4PlPHFo1e8rapPSvr/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ymNt-kJ5GV_c_dfrTwLTutzxrNy0wb0n/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tz4HUJef5OzINJonpz9TIi3yYppJFNs-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17W7qxtTNbbT-oI846ja0Uo3wA_Gex9cD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lf3WPyrR9ccKiuEF6ItoCgWY1xk54yo_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XYNmqoXEJQFCfgcqkgmQx-ekzzKBu7ms/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1av_-kM74LYn0oCkQLZYYIwXNFIbS1rkI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cCfS7TfAmM0RfU_M091hAuDzFSietgLm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ZYtupXUZK1lape8tUHspOuCRYfzaS2EO/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mKNsVOiI8zxKtfew1VzMa2aaXmqKlYDm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1vCDptQu9ll1FIqoI8hW4YEqx5sUsH3wa/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1FCXNYgc8LRZ41-OYz69uTr-ql2nnQpWK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1sL7qGgd9TO3DnN9VncEK1hgQkTPPn7Lm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11uIEKcH2JTGvktwOMe-ZPifGJ-BatNnN/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/10LT3Lembdw5P2F65jaIryJSiWIQMnPLx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1PwYnslylD5CBnSDSJnQwxCEVFPqEFn-Z/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/189i3bVhN3QHQzZTpwz8Lm2A7XkuvrCBu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1p0QM_SZpaY90VDGyfUQm2o_QGQ6tXCZ6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kJocuh22_f5elqp3qHrnNzxGYvH-d9yX/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1AkG7NWdhxJBnGgAnZI8xhVT0ZZI0hhVg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1xs6sWNBnye2s9bdbEoQh8D57KCWL-i6F/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1rOWW2kxlQGNxES296wnBCWzlf2JPLpF1/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1cHjpo74ZaAfngmAHkM8JdwNoY_6jIj0-/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/13Brv9vozkCy_vethybWr8skdtFO3Kt6g/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1T6Lygvdz_gj1Bx6W0FED5bu20AGj1DTM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14cKkYYmp2IzDHx3t9Y2orn8EYf_gKbli/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/17P6LPirejKBPoDdKDyDScaAgWolKVJeh/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dZfJk-26YfAUyU7O_ufi8Q2H9bJQgDMG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lCnlNsjpTM3bBa8KfN5nKW2whdL_MhWb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RZKian2321ep5MvA7mMSuWK6jJxrkHcs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ztK7OzI5ezXUyj5hsJNH5InRtTaDogk5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1MGKnjMmpVnH4Mm_tP3cmIajlGTPUz0n0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RKHU-NbIyz6aYVutzVY-HaqMA7N9yyOc/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SNXFj8ZAFn0XaW-mtIDfin4cxNWgn_6B/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QHt_J4TEf5qOMbmb4SVbt-yYUZGQ4NKF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OjWJ16gUsZ9ifxYoYZa_hchhhFtyIqKC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dhneoR3lFxnJUyRt66ouWg4qvQ8kfZC9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JdKWhHFGWtX74wGU4LPm3GmsNkXhK0KD/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11HJBOHFdH1osORyQjgqi86DKnn2pCATG/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1IM27GpQaE4UUdDsQGaoCmCSoMj2BY12d/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 12,
+            title: "Season 12",
+            episodes: [
+              { link: "https://drive.google.com/file/d/1FAsxc7rDFLK9gGogg0JfNK-QDY621VfJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1WroCaIatvpKAJZ-OzQQhFHDkLR7KGN_J/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/11QScwzJ6JL86OSPs9ShaOV5uYYHWQVx0/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HM6zqAtNYxm_vn29Um34x5_v6XTzepD_/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1LQBZvIRrHsxiwhynNGYjfwnEFDNaUgV5/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1zSeOBdincSUx_35nyobQs7S3z8atnA63/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/18MdNjmzsfSyKmCuxaBajyVq2-YCFfeBI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1bB9aWpCXleCkrWDi50_LPH4R_Wzyrori/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mk0p7BB09jB-f6Gmvqm_q2VzVLGF5Twk/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ssgi-eKyfZSpbXO4l56e39Beo_pR2bLY/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1ETDeTK5MVpPQYH3Cvl4TGkiTp3pwClMF/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1OB47827k7LuSP9UJHYg28RCbROq1FX64/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kuNAljZ2A1oSJne4Uyguq0m1tVMEeprv/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1gvKN4v49FtMJJSFGJdMnO3dcZy221FG9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1HyG4sJTNl-8LLao3sTM12XXytsCxqmyB/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/14mG5BSwJmWmeLqxTei-9BD31i0AHzyhe/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Lwumr86PHTecPrYhF_Uj0DcDCzLQTURs/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1f8znoDTZgsKUxGGsNgTVcc93UQiS83in/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lnwxYR-1INQz15tU4-FIK7MmPC1FfQjg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1-FcDRPjANYOoxhERgujas7H-B3yvCERi/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1lzCbet0WDso1HiwssawEcM3Rhu07e4YT/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1dmjXYveh-b3QKSFR-PSjqQ2tXE6R-q85/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1RW6BoWkbHXG3wHGvhU__SmNxkn4skjVw/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1DQL0yoBR-SCiUVHh_xAeb3bXA3fbH7Ad/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1XFn1T_svm2koawoUnDPrM42jftwC0Evx/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1J0eqtipV_dHAUZV96QUTAhqh5ZcoZMLM/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1g3Cr5Oir8Ni_6RgULZHM-VeRH2y5O1bu/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19-lB52-UMynPIH-C0axzxDN9NeKi8ttp/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1NoSWVLbFfh0YtqQIakNXbYD-LTA1Rz2o/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1JsgH3GxdI7XH_Z7GIesy5WcVvqXhCoXb/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1SO0_VuJ1Z06tZDvMT-_EHuEeDWExUOxA/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1mkJolQGovkUXtRDfiAVYqlL7Zi-cD4Vg/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1UNFQGhon8UStjHg8sBoG7d4MxHrBnLUJ/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1kUKu1OmHIocojADDvRX9_03ZEIXrmoaK/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1tkd_vgbhlIeO6FUAlnJ-fFoZEyU4g8w9/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/19tkiS4uXaFMd4HDxu9rxaSl-FrTbnJTC/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1YT3F_kZP9eQg8vocdkbSHarZqyLb5l_j/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1geMwI0Y90pIktVYt7O8Vcu245uiGSZVf/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/187MUEJhRMRr8ONixaWqko8LDLZ6uhNiS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Dey2eUhP6FB9P_tYVGxyT-2YMJyyatxW/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/12m8MYeUJLWxOWdomnTguBan8Qq1vUHjS/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1QLHuoevi1dlts0Fc-yerUarMtvYil0yy/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1agN9CUc5OT2tXsJ4EUssfNd6G3vcvoE6/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1Ob3yBZ-EFgjlMH2sBzebFDAa-hEoaIAI/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1uNI2PE9BRP6fp3plSKVyWF2DqT9gRcMm/view?usp=drive_link" },
+              { link: "https://drive.google.com/file/d/1fW8-H8mEHqECejZOwq_L9w5NPPtibv4s/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Squid Game",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYTU3ZDVhNmMtMDVlNC00MDc0LTgwNDMtYWE5MTI2ZGI4YWIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A South Korean survival drama series.",
         year: "2021",
-        link: "https://drive.google.com/drive/folders/1Zs2H3Nxl-yQHm21RJNbh2bIAesJ5ouY9?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Squid Game S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1E_vTmvglW_IT1s2Je1NShr5aZTq4oDe-/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1YA64K4m4pxR0dAv2hvhqlKZyzCOIVpsa/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1bK7vrjRkJCyZO1E1-v-KfhXjaRSOhtDW/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1S1ym7WT3QwqRpfcTzUmQ7l62K0SyX7rW/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/17S-F-GtfYgcujCB46dCmkcApz-1JXWHK/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1J-c0vW9cbNZrOZWnm9XsxyP-BXxJxIc7/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1rz0hTtICYXXqDpfaWOGGs_xeanXqogzP/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1J45yf3grrBQ5IRYOXExKD0HnFqVxV-0M/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1xMfe2d_gZ9Vz3DTbCsOKrJn2frSMyeZ9/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Squid Game S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/13X6gs-2cYK7wjvf2TWtoN3QwsT9viPM2/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/18dlhfZxufL27oZcLts94IeLLC547QYt2/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1yZDAb3UvREf04T_pD486rGLVC5_tpk8-/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1WK5r2D66ES3E7Y7Z8H2gdwYI5JlgMUj0/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1LMufRFVzl24JVL-bXdcJpeD1F7LZYut4/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1oNHF3T5_kW1hY-XvzUqVzCzennHxd3Sw/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1F1sUhTLN5BzcvyBT0A26oGwnrCxhCGcx/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Squid Game S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1yR0fhRPiG0OMxWueqTj-RE5PbtusdQGS/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1WpaP15Wc6wvQ__-cKuP0xle-G9Vduasp/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1clvt6exn0YtxJPP164txQgIR2s8HBQi-/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1jzpeoKP7dSjQEn0zam1X7HIjTmzoD4Lz/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1sTBlzYHOxrwAQ7TD686hbsrPvma9TWZf/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1HnfKFxUGTQRVKK5EauRLGSByq2FmCdX5/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Static Shock",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZGVmNWQyYmMtZDZkNC00NjAyLWFjZmMtYzJmZTMwMmYzYjk4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A teenager gains electromagnetic powers and becomes a superhero.",
         year: "2000",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1LquU3cM5cLHClNJYIzr3MMW3TWD7cFAf?usp=share_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1qn4z619FFkWvT6hZym1iuJnhW1F0g9sl?usp=share_link" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1iptDIN4iEnihXHEAX-9IgswkGgbeHoYj?usp=share_link" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/10hP9sXsV81QG-iMZrAK1i6yy_l0hFKqb?usp=share_link" },
-          { part: "Crossover Special", url: "https://drive.google.com/file/d/1KdTz1iNPyMsd7qbKAmWUJKF9-mEyM8lx/view?usp=share_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1DXsl6SG-yNvVO9ubMIBDFRHBzANAmayr/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Wh9s2cTn-fg1W4WZWH92LoTlIP0Sj_WW/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1j_7ZYdU_lxRXG9v4V9sdJVOXg5PtDQ_4/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/13H41l89-S6_vJDHtLruV9-HRbCxvQLcr/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1jnwN0p_fsE-YoWELQ_SVoo5eHp58Cb2i/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ZpkvSJRPexWCjwRgGRp5JB9tlTDGC3y2/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1i3huo-vllXppg9Gy6dIQ7eXRofovYVHv/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/12gk7vgJbeJvlUXUoNZGJq4HIgwW_99cV/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1MJ0iyUvS69SUaHAy4EAzDpQZIDV2s90j/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1R9-z1TD1ub58FmPOWUOkWBJmZHMg5rmA/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/19hF2GfhwWz2zfooRKf0ne0w_UEYn3_lP/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1xju1PKzTAvi0uX0VK9UPxGmAYwXFBOsA/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1HjN0roDllL4xlWcF1EDGefsKjPcc5aBV/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1LU2flW6-4OwGF31fPI5yZugEOfAhd2hU/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1kSrnwKsejZxH_BV3Qbis8ljqFR4v0N-u/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1h9L9iT-U9JG776xgQx7nn3XybcvFkYUD/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1pGzhwyrbX042Q9XCgEaCVdHziktd3XZp/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1uGfFhjBVFep_zTe7KW7V77gRR8IXFmdb/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1NmpuXuvjngaQGHxeiHJOSgMtbF34VAKH/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1AIRkowVp_RIsAytF84iNpdNo6fTXdCVT/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1BP7jsjhN0tQNomOfmdmnEbFzFWd5OYY6/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1IIaMjDj2IGxoiaAmVa7hvXJPcnfv3yM4/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1lrgaFdV6KkG_SzLYvHrQXc0kGgLKUYC-/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1BJVlfFsp2CPBz78BWKRD9HyFchcAhN0e/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1mZjmjCgiWOIkIVa3g3D61zILiZpGykSY/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1UhtOYY_0c7yXGZinWs-gkAAMLbXIzG5f/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1wU3QZ3CI2gc5Y9U8jV1T_Y6dIORs4rYd/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1wkijNdRM-1p93FhFQp4wFwaAt8hCLVng/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1j5YdTjnamX0NUwPC7GaSib6rRQ0NNA02/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1AFmoRfwiDLfo5jtCkH876w5HWwMZgl3v/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Dfqn01wu54ChMT6tmp3BdlIzKAechue5/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1mg7g7ophPm3iUuSayn1Ckhd-pwuhtebw/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1FQTFxJatKFJ2CTXKeO3tHO1IDCQfh8F5/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1ej5yv-pz4hnnkrJptbjqFyeEOnoadibr/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1do-8r1hzejH3tMoxyvZ3eJsTmOwmn0yn/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1VjLK1ZrGuOV7T2uJqnTWDTehxNjtWnoF/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1sA2HAnXBHrmF39nVOpS_fqGpaNlR0Eat/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/15v9QaoV7sXMn-VwpEBK3_TbbW_SuTj9f/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1iHHJvFoUzLAjCijghki-unbYgc3WGfTM/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1S2b6BtSj07nS9ZdZC1td4M2vCusiceVq/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Tw5CoJuTeYtgK_m0lPOG5BR3AuvR8Ndp/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1WcbUtaEeHT0YzD-_ujRy6ix5KCvgR4XW/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1q07h-bPbJzFAbGR6AKhyfJllEi_thAUe/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1QNCVpMIBsQWzOvI73iS8jat3pHBLFKck/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1_62U5cR3LChPhbeUsw_GO1mNiniWH-AL/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1WoW8XM73RBOcx945IsWOdz5bMRvjiVMs/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1kBs2m0WlU-Sc4FLZXRLw44X32M7iF8z3/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1dNBOBlls6bBCifuQPx_XbeSg2hko7HuF/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/13WgMVZouSmoTx7_yDJOsjdRQw-Sgqvq5/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/13mv1At5UWSV23K9KgvrYcmuqElxr_6G7/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1DJYkUJ_Ve6Yp5uFL4PJH0D1yyVo3xgrG/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1XZkLhKC5ahK0Q8KCoWPl9SlgCtC2AFHW/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Static Shock Special",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1KdTz1iNPyMsd7qbKAmWUJKF9-mEyM8lx/view" }
+            ]
+          }
         ]
       },
       {
-          title: "Stranger Things",
+        title: "Stranger Things",
         imageUrl: "https://upload.wikimedia.org/wikipedia/en/b/b1/Stranger_Things_season_1.jpg",
         description: "A group of friends in a small town uncover supernatural mysteries.",
         year: "2016",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1nvlUoxv5y_55eN0yjkIGJ3u84p9wQGxm?usp=sharing" },
-          { part: "Season 5", url: "https://drive.google.com/drive/folders/1y2ynRtvKVJFoOiXtNxPj098z33ymZquc" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1iQogY8gFgem__XtKj5aJjoNxXGQilxAX/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1jgYL5Ru_GD3dNfT5qBHTipzq5w2XRUr5/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1aH9AXyWDLHW9Q5TYX2H_p-krULOpHgYZ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1c56Ka3-Thl85vVyr-b5XxLgifco26hfN/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1QaceTUxTTe1LAhZX3ZG61nIiFqcPyPH4/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/13-WLret-_1IC-xbgebcgt5lfQx_IkL8K/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1_hSbVTQe8c5NzxKAGyLSPD9fgQODbbkJ/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1JBHaiOBl1BPiwhd602hE9TWcqZDX7Hkr/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1n_w3MhB8WoLaJNGClnczDrSmbvZXBipk/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1KhRxYotobPlGnWqkizom2U-a4GrGUEul/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1uhFMfkgVrd6l8p-BOWAUGQkrCzMc9x8f/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1vMwPgjYX3SUQ9SyUTUUbwpt9cJ8y3uaV/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1NqoMZKPXRzY2Zq7UjOsLvbjI5MrLdWhh/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1TwrfHSip1z7nXAqRFuqJGy2gG-_bvhIV/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1LK1j4N_SGTNSo7dNmzbkedg0BvvYRcON/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/12R3i0y_cAvAKR6bwmTz36vYqCxoCrLr4/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -769,48 +7925,371 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZGJjMmI3ZDMtZTgyNi00MTZhLWE2ZjAtN2Q4YTUyMTg4OGY1XkEyXkFqcGc@._V1_.jpg",
         description: "A boy with magical powers lives with three alien warriors.",
         year: "2013",
-        link: "https://drive.google.com/drive/folders/1DdwOFAilBai2kDZVmRDCoNkqxTu6_E_5"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1S8UnNdpB5qfOBXgiVgQnOcB8xm8_p51O/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1_hlF66zZRLbcMfPokQYT5skqrx__0vHJ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1VQyIk3hjxM7WSJ6MhP4APneggJjHq4Io/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1zY0m1i2jl-LrL9pcKSBtdCget3--GlXN/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1utx4HOc-bUnH6R2jNaofCIPyVBZTLXLI/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1sGlIOrTwVNdHCJiJJhE306v2nuNU6j0r/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1cxZVtywLfZbKvGr_sgtnKdov24buh80W/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1AsNtvc5u4SEFWTowPfbaSTSwB5zo7AaX/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1lo289nFcZoYUuKDJVG32LqtoZyYkolMp/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1zKpNsmrY0RWIcZ4rGSwGAkCosqcUzlsm/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1z4UJ2LeqPz0fvsXXMcVU0AMWOTmWaOBm/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1FApy16Fw8p0sthPi1AhN8wqtKOhkPRFU/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1c_rpU3tKmiZZdyu0L8hdb_thZJ8QQYjT/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1A8WPej5pfRj9GHv6IieZ5MeJyLuDTHEl/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1KObAUQxjhgj7B_yUp29_nFJfbqtrSYo6/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1WHGZ2dlmCicRnVnaSQdvP6Gb0yi67vZ4/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1N7ilmsZatIaqMOZzOb4Mw1mOC0vcTNiu/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1OskoDF9-NVgP4jSJt8GHCwsNRkpuDpp5/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1pMmFTYLRBmlUm_TI6cCumyZfG3esTNBx/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1LG2hOGODz5kvQ38dB9qeaiYNdudh0XDM/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1T_qy_X0-_A1AQXKYTzKoTooNAUaGCX__/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1oTVI0Tr9GD1T7YbepO7pDGihrqH-Z2ma/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1ked1NNqZk7LiUAAX8G_kFWBYnuYhVw-F/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1Pzq1-SKdPhSwH_asYrG4oiyEwT8m6KNk/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/12swngjfmdTbQ5kxWwI2kKepceY9obquW/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1A4PzIwK3nJWAeSpFu-9pv-BK8DDHwQuL/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1aJq98qTi2bqZ4Owu7HDibsXpaLVPRodd/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1e7av_KJZG8mCa7EP7oxYgq8OOS-bo7-Y/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1L0dMe62YI33YKTt6I_BQi8aberHsEc40/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/10ZAJIIWK3F939lDxaEQLg5PKhq9-YQTC/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1i1xc5rm_LeQzqXrONNAUCDymRWdfxU2Z/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1BHJqpisNSKw2o7L7b5x7YZpDOZyNmOEi/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1eF4aR2_W5w7LM-2VmShMbFhOx1DKO8Ss/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1B2DnA72Fnql1MEsQ97jEyMugRIE-XzYU/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/14APygWFbt5vDLnPBFU-jEBuCUPFD4d8Q/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1_Zz74h7J3rv0UmAaVQhze9t5CP5m5SlZ/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1T9_trZVluRAs0qbaCAiLYPgJC8Zl0MAF/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1GvThi5SMDC9Vy0XAp14EdDADDFRU7jFk/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1oyuITYqOvmbOvbboWXdvVJw6FCxQDXX_/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1Bx9p-Q7PhBxlwGhSKotDWb1WA5ITfzpA/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1VPPtt2-uw6Br9OanPHu_Kwif42zWPoKh/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/151OOWnJK6BKUdYS91fTFL28mg9YP6Wyy/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1aMEWnHSMx1PaGl-DnoxOYWOJDSovzOKU/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1TktWHQuPSmHakZDBcMmMLG8Uc7pfdNLu/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/19jitHr-mnPBZoKFqBH168CwuPba7g186/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1v86zpZXFSpJUONC_BbjnE0j1UH2x82Mg/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1rsa1m6SDBsy_vABOp5SHMIQI4w-tSjYM/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/175kmnpGHzkiROK4jNjFjARZpLudYXQk1/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1kAy2IKxTaH-6bcZwraUJfAmELqGgCM4D/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1jfvvwPT4pTOjpkFWJFYE5isoVWWnjtXa/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1xR4lxhhHQCY12eaT7LWm7CVP-Rl8fiy_/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/12LDPCiS0myuSht6OjfU---3WhMMjHXkd/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/17_GNFlpWltlUJEIieElFmA_ceqgG_AoU/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/15Bpi9meG0ST3YZ1akUUZydtlk7pLjkqb/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1TS7o9cy1iN0M3w-r3yDuOQgvDu4Ienrx/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/12DezdKoEuOtC9Rqfi-1g8E7smugdVfMF/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1yEp108ikzPmW37PXT8Md3mvuo6vLSLHC/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1mkXl35Z4eHY_S0n_RJhcT5I4uLyH6zJW/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/17jK_1QFN-IrykU9zmI1pmuB-pl-WVsZR/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/14TbW6fJpE33AM7zV7V7fzE-Fqtl1mlzM/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1AMkeWAvR3Vj9M2_A6BjfiwSwQILThVMC/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1cC39Zwks90dssTN38Sa6b9vUn3cNKtdJ/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1dTIjCQPICo_AfBXTdCcHFIaNXmnKgW8U/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1f4-1cLdUyzWBFDrJ3TZ0s0dxIUQUOORx/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1mYlR-huyNIXQ75XOZddhvVeG350p4mX3/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1dnLsyA556B0LCpyUQwh-z1JYrbUUd8Nc/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1H0H36l_QQca9K0DvommASnUZVTtHrYAZ/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/16Z8ipbpWLVhMGIlXwKOoKHJlj3Frdu3A/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1lCPSWA_djqNe8QWxoVtziQNhP0SNrRF4/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1nxznDoVwgpTlCpdHDEfdvYRP0a05ODhi/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1LmCE7QsfflHcH0-c08JoYpQkNHc6ETQy/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1UGK83RU8fxBhKNDVCfKWKWMc7We85ppm/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1ehMfmYuGm2OCaeEmFk-Nd0qTqAUZTXzF/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1kkNi5Hwp0TO-uBLWd6xwRM7BjI0rg0dv/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1zCDWmcGLpmXM1R_d4WiUeKix5TO__o4w/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1Fnj5X0P5UDa1e2RGRR04eAvIY4O5ZLM5/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1MS-xUeDKh4xGYK0JJzRYpdGFOOdg5mIA/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1c_ry3gnijYoXUYGimkPsBmJueSME6Z6g/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1sy_lINSDL9xuxDKBv8Xa7rSl2LCklnDX/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1oNr2wChGAMVJ1tdPBRmOpg-7QpD4lyuF/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1VxK9pPArXBbd8iQJzO0S0vWUAO9aPthO/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ff3GiZ9J972A4bqdHXWtM8Ex4U0IfRGv/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1-ig27JNysUEoVYwm6Y_mmCsB-Fel-j8L/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/116hzsE-kce76QLvI87Y6_Mi2qsOBaGhc/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1aRLHieHV6lUtvxaGB5f3AmTDXZRgzYqg/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1NgVBZrJ9YPw-S8minGYBDmPceiakPza6/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1jW-1bgUofspA2xNwHXQ53YskUKWlEgyi/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1DXME4xFMn74P_LPwgBRwBhnDKJ5Q0LDn/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1h5mryyfdOP_NIr0BmMfXPyZh5f9qxWgM/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1iMbb8ZSl82UzXHaP0rC5XbZYNZcSliR0/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1MC1T00tit08J3-BTlaFfC_rIOvw6uALa/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1b5i2bv6k3EvF0QuFyn6XRK5VxxIDhiBo/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1V9X-8fEewtc39j2sYCfRJSVkESHJMxhS/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1bH9XBxW1LjlWVd4C3TEfV-lf4HgfvQlN/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1KzLuDW9Oiyg4qMQZz7ehv3knh-3eeVga/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1KXStO6wtx35PK8FxWytnPTwjBf1wE1bm/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1Xw_-UvIDM7cg14OPVy6weIfNjrGeinqJ/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1X_urZk4YiXliijW_ohGUZbHSjtY-2g-F/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1wxay0ZAwVdm7jy3FEwouV5Nbktqs-cRi/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1vTEucKHgA2ZacoSu8-DXcJDg5WSYxB7Q/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1a82Kdy-vEKDN0zInq1egTgaUR8EjtYqy/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/18HBnhhD3jp78pGCu7Y3ltOzqXG4HlVIG/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1kkbcT1iATzWCgP55H9Exqhohmcd9o5Jr/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ePXKynBmGMJuW-EI7l_ZVWra2MKSZQ8H/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1x90L2X52mLkmtJ-6UKbTiXdbov8YI8Gu/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1C14XETSuayj26O6jDLEMdTgktvgcvWdn/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/12N3T4ASjMlKmCHo04y-2LmvF6uDIs4l-/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1G0Pf8sV37M94-nVnuNzN5AqzFhERFMnZ/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ZOd2a7tLEq2dUr83djgvFB8hI-RaQPQr/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1w7lED7t-M9rOX3j49ZhXszcP-s-xTC3m/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1c5RC_k8VjrXtxfMaBsw7MJtsi9OBQDAp/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1sGNMSqC1emKj1t4SrHZ3emV6ab5_h1C-/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1C7cCEH_88jHEGeymQVnP3kvKDaBN8Jtj/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1aYuVfOP1m2vSmNd4VpSUIcyLXvjHSiiV/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1csbFGG3mP9SiDt_NZ_PE3Gqt_fJKPhbx/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1yWxXbt2QhDHNXORqc4KD8iKp6TYWgeQH/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1FfIyddWIDYoBlzz-HVF8zmXt3CR_Kw23/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/15_d58kdW5SVL-H4V8eMDK4MKu1phPiUv/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1rJHZIqt2hUYO7mLTB5RTO91IXYXOQOyk/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1CdM_JWNSKpK9gXYk-kYpBKSbP7qGfiwY/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1pwlgwqjZXB8FqQwUnxqtKzqTRAp0eO6C/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1YBiKzQwsxGOWtdsKaBHjgmKO4YaBMLJV/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1SU2occbNrc2KEKrm2wuXrAjEYnHx7q2I/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1y3Np_psDUL5uiSR5WteS5oj745wO5wvC/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1vd9zQpu5G9VP6ZEdmIRwpEL8gkuAVWuV/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1sydd6YeVOn_bnH2en8Hrq16Wyu7sek1t/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1W5QJ5xZv7oYnMKEIgdSsCf55XxJ5VuwA/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1cpl6HKz2iQ8DIJKxM2IBH09ocCDfyIM0/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Ugfl1G_F83ZQHR1sAb4eHBOvcNo1TgQ_/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1m9_zIb86CPcfU6GSPLxpA6xh-vRpKtH0/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Qf8j7zQwWqGhdba1aLy8p5EWlYjPO4OJ/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/15K0QvUap6ejcW8MDECWaXdUvjLbHkcTx/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1vsm7pm5WImF2yXjPolNbRX59NEfXtS42/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1W1YCXAu0TBlWJSXnGpNpvDLHC8KEBrqn/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1wimEB1k_otpxbh3DpCO4KMic9-J2c8uD/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1xlOki-DLSTZGhql6hOYuZ4-A3aHrnQFl/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1pSByIUrvL8aIcgg_Xc4SX61QmI0EMg2W/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/104YEp6ng-KSVaBlZwR1pHp8LOFuo5qvB/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1nrIvZgtfFMsNZQBvXP_lRs_0hGkRkmSM/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1WK2ftt0Wtn6qdr1QsSOGEwKppts9qLv7/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1jIuX3VTEtYvb6I5mZodN9YKKDWhmeffC/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1bQ1T-pGBg90HQ2j1GZkJNv7exbm8opie/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1kO2pjaWgK_N6MwNUh1ixm2X3ykk99Jmf/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/14CF51xJ7dO7Q7v3b4Wga85kl1SMkFw7B/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1S_MEsAVTgRRtBpYubxSKdt4wwumUZ0cg/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1CiWtg51mGJ2afOABUdDeCzxYuvyPCfS4/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1zc3sz87R7kLkHmWFEl-vuqDx3_Kp2a4C/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1_RQgkhNPcczyzXq3Z97UyE4GjkhaF3c2/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1b8tIrRfiAwJ7fBm__pEraZ-oAy1eU08j/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/11Ffic9llD7s1C9PYeTyK32I-whqnd2DF/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1JaftAyxggc6utIOxN0oGm1z358G9wsjP/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1w8NwUBnGi1E8CJkWbIvww2LJOYTt2CMp/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1W005iHSWLECTFeXBnf8btkxWMTPZ-XT-/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1Eox132OK-WjcUzly4_7Ae2Jr6Gl40q0l/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1c2Locs_oOaM-6ooCKhm70wWawsTY5H7p/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Steven Universe Future",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZjBkODlhZGMtZDRiYy00ODdjLThkN2YtMGQ5ZDAwY2Q1ZGVhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A limited series following Steven after the events of the main series.",
         year: "2019",
-        link: "https://drive.google.com/drive/folders/1A-I64-vVIDKD14IzEh6mcMcvFmMH0NVr?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "Steven Universe S06",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1NSVKJdnPhnv9qvCfl3d32JlGSq4uGciJ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/15t0pYtu6ONdQR1iXekjQHoVnY9oIE1W2/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1XpaJIvbICJrYGvBzdIJtAHFSCwvf1-LU/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1It8LoD0sbrrEd_rcoVOSFOHpgkm2grBG/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1uRSWXIxGC6GHiBDYx5qm0MSqA5UPbZeA/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ICRWFGk6tRCXUdyDtr-4YdluhXx7X6Vj/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Zl1i_O8rRzRNqrws68nUEsYRyRUsx4le/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1iL70mgmJCXN5Da-y_1otL3gmeLcmxbgF/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1skc6iR_u243rWlNvGmkq9HVbDfjPd71f/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1UirUoz1-8B3LWoSTeq0Kh3b4G2uWfj3J/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1K8iWMR5WxcUs8MIlyKwsCb1dHlgmsfCM/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1M4f1-yYu2rbYUZ8VJBPxaxjOK63FUbpA/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1aqJXiW0_ZWE0J-lx0Q42KptXcb9I9XL_/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1NNcWcWJgJucXOyocFFTt6uLBrWOnZxTQ/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1YMdaa8G8cSb-3LIuUBk-QoMxMb_1QzWL/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1wb764yVhKvBfTEZKcTzNC23yTzk7DlwA/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/17CnA14MFjEjQa6JDgWwoERMQwcTl25QA/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1sf54qLTemO-DOnycWS-nJS7F3vU34F1H/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1fa38pyDeN-CTGV019OH1mO13j0omTZOa/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1wnc2zyLQtCGl67rzr-FVdPURXZ5xKBTx/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Super Mario World",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdsQPjWLhTyaHRd6gw5MLVPz8ilkUOMtAKk7PnfjL_qy1E0k9s",
         description: "Mario, Luigi, and Princess Toadstool move to Dinosaur Land and meet Yoshi as they fight King Koopa.",
         year: "1991",
-        link: "https://drive.google.com/open?id=1nw7hzEpAuL_0QVZ-dP4GLstPrTlGg2OI&usp=drive_copy"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1axrTZ8cjywQJ1QDL4w4U5Waqh3gdZ0l6/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1V0B3qy4WBMtTbdMOgpJPtP8txU2V6758/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/10fwDqfmAsj3w6sn2z2VW2vJbXX9lWl_I/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1ZU_auLbKm5fq2TDi_xuDDhFs7EhULBdS/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1BRmY5OcAJ-7g_eT3iHHCYcQiGUWJkCGg/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1VM6T5hwOPvbxizwXtvKxKS7SKwEkG7g3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1dQKIXRQzkiNiaHGx4qQ3YywUcHN-5EFz/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1cAGWRhIJy0Y_3OO9AmTwRN0C1OhIBz94/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/14O8Cvce6_4aSpMCU3JRexbFuNBk03WMy/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/13HXxQ-8bs5oPa_F6kwSM9yCP7QVi6wbR/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1fQGOrRsOBUwa7JQsrtjZtpglZrlkU42y/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1CzaQuxdZH1CWk6z1U1m9Rjh9ut05L7GK/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/14nsK9cf4MB1hwglyEXWQpJegpXuJy6ws/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "TAWOG",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BNmEwYzNhODgtZDc2Yi00MDAyLTliNWYtMDRkMThmMWE0NGNkXkEyXkFqcGc@._V1_.jpg",
         description: "The misadventures of a blue cat and his goldfish brother.",
         year: "2011",
-        link: "https://drive.google.com/drive/folders/1BAI5pvu6W_DuBYOT9DW2LiUR62dgPmz-"
-      },
-      {
-        title: "TWWWOG",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/en/1/13/TAWOGTheWonderfullyWeirdWorldOfGumball.jpg",
-        description: "A series of shorts exploring the world of Gumball.",
-        year: "2024",
-        link: "https://drive.google.com/drive/folders/13oj-KiKH9dX2-q_yQT-XZV3xxXWNznt6"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1x02cULh9AH5TxOj0eWVpiVYTHCKC4uQT/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Teen Titans",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMjE5MjMzOTc1Ml5BMl5BanBnXkFtZTcwNDQxMDY5OQ@@._V1_FMjpg_UX1000_.jpg",
         description: "A group of teenage superheroes fight crime and deal with growing up.",
         year: "2003",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1vqoOxi2w4IJmPelqXsTmcNCczxb6hIO7?usp=share_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1rJxtTqih-pPjiFpF5ZbqKQmRyd9AK7jg?usp=share_link" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1pDw-FSyAcNLLeSHiwyBLeg-6Pr3KQWvP?usp=share_link" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1HvR1tsCeTnXVV6K1CJbfEoU0RpBLGe6h?usp=share_link" },
-          { part: "Season 5 PT.1", url: "https://drive.google.com/drive/folders/14rLPyemnSo-5fe6I9cXj1AvEekaBuaEb?usp=share_link" },
-          { part: "Season 5 PT.2", url: "https://drive.google.com/drive/folders/1TlBloSMfzBvPUUwkvRBQ-GZAjKbTjutS?usp=share_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/11QNHwez9O0pt13n9AVqYlVkCic5u1xJ-/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1xovkmrynIXCM2CBNPASP3XyqxyHCu6TT/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1SDpWU1phCUyoMs44wWbMOv6oS4vOlWtt/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1lep1lVsMmkxXdikoLiinRsvPjDKTFEc-/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/16Doblju1oR3ibE2PyNZRCO2JGQBFKXcP/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1usnA8aRaJGIL44CbDuFybGIZii_GyqvN/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1TXdjCMgCpLwFfL2I6dzzf9Kg4KPV4B-M/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1gfT4U-Vcu-CkKIygeL9POnY69H7F_Cnb/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1EqEp1y2ch0aI0nKJLLnFbPcwvFInzgyR/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1FuOwjFkzQj5C659R90aYNkEWNddO5h5i/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1xTevaPLz6nrBWsm78IgCZTUGyzM32BT0/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1nItn2pv9KYMH3odisaRaFM6Z88lBzTu1/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1tWuPlImvXrKhieObc07rxOq4c2VaF8QF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1mU77GInwaVAOpHFZxECfq-Fmzud2OFAy/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1rWr7mL3aQDoFVwn4kuOwE4xOaulG9rn8/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ELXYBp9yeigfCKGQcCOwPYlU7sONVad1/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1WM09-__kDq1pUV0LEo8MfzPeXuGMfuJM/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1LRQ7gJVhSei3eqrtER2DSQ65b2T9rttC/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1jbyTF2DImK5SVLOy3D2e-Ge9ujN79udE/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/11434YgExawdAIrgS7w2livWmkPbVkKjQ/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1FlT0FEPpdnToKZpXFzVnL9Zuuf0PHUaq/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1sFLQ4dwsTf-1zOuoUrnLxT94h5isKVxY/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1va5Gse_EfK3uC0WWZkkLs2NYYkt23dkt/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1nSEp6i8LJ78dROezJjpJNiBcBN0NI-7T/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1k58hONCt_L5cfwd0xDUMsaK-i_Xgo_gC/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1weOCZpgCZubYhsmXzl1jvMzzrUF6aUfR/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1H6DhcPH52XvMXQnMUYJ-2b9Qd355O0M-/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1S9d80nelsyYII3O3jqvDdFaKGKYGOGKw/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/12ZdJbRY7tVDWBKbFPOCFPcaZProh0Lci/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/13DW8vL4aQen0fHPWF73sN_E0kcNDQdRz/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1NQ5n-K2A7whufq0Gf0EkhtBEPs1EXyi-/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1fWG2F2bFi9bRctQPxaMoFtEBPfyUiyqq/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1_WbVoN3oqTGzO-3wUUXNBUXfLosFbOr4/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1jK4W2q8ifkBRY9tms-BKIcR-caa9vjTr/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1LVfgT-V8jtRD8AhAKL5cn2KPEl3kbQg_/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1qnxsflmEoPzx-dFqbJm6pN_Po-GgFPYs/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1e2CH6kxWDt_LE4sWWQjLD3WHILzkUN9W/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1CQ8NneMS9Cd0kEKJeR7AxAWjr-zmRasx/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1KmLS-iOcR3HpYrFLvRotqJTcJxOn8y3b/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1qA8WnFfy-5kbjxsdrKwDi473Ko72z7GJ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1oSy_5_agxyff5p8av-r_1UhY2-pqq576/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ZolYn8JPGpeXcnxWrYrWSJjQPwpSk9Ow/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1NLBqKD0eYzTjDH8leqS53F8SP1rPd1iu/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1CV3gdf15Ggp3TdkZRy7QEG6tkoYW1Vec/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1CzOAktICV6ywrnJEx6e5e4OGjD3uZaWs/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Ub38-VcFxSJxwJSuvf43kE8x9SlVZAzT/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/10F_QwqP759fMz9NMCJF8d4KrY_bnVeYW/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/12UDUIGqF_a08C9fVWZwSSEvckImldlJl/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1JEmipS0TyxtPIQpz8imxSbF9D2fmqJ1q/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1hqp2po_UVk6MffwQGDRUIIshxqeW75dH/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1MkPBms6euv1pYyw_gxpN5ahd9WQOMRUH/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1Si_twEx7PYbi6Pq73vrZ4DQCcCj-13QQ/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Y4LT5LCJ6eNF4qRW09LKQEmx8wCkseoF/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1msB8j4LIS5zEW5Lh6M0Nmoqm7tuXQxoR/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1zP6t28O4sR4_o23ymsZaQlNeW0P9z00B/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1nT2NlBgeya_sdk7yX7fu3_ug7RXnqcgz/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/11lMdoP5aw923vK9sFrihGwXdUqvx4021/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ytbs0_3SFE7YmhPsLZ9Cm8wtpkVBX_t3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1xG_92tJlpZDdo3ktMFQvkpCm4vrOeImD/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1PRzj6hwGjzIpJvefVSId496e9Rg2jCq2/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/10PLF9xYiPJvgF9BEtJduvYPwKiNjwt6K/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1KkLJmmlNCZ7iqYBrZ8SMVDNzqL9mMIAt/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1qwcrbds81q7DlhNfOZwAojoC8eqXQMNd/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1e88Kc-IOA0Pe61-v7UaEDo7At0dR5be4/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/17qMoI4hIzMSfeFlJJDq9Teedi_MzAACi/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -818,12 +8297,151 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3DSM9bYeiNCni1x7Q_svGGwzNMlrt9q5jw&s",
         description: "The adventures of four mutant turtles trained in ninjutsu.",
         year: "2003",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1h_pnGrifrJnpbP0H59oKqpo3dbCv5TSl?usp=sharing" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1I_f_9tKL56cmonwKJYdpx9L8y9OqmWUd?usp=sharing" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/1DqUOZMN_Qa2APcNMLr1U8HZ4SFXdQjXB?usp=drive_link" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1Qp2xW3xAvGAykrch5TWd2VvVBPW7d6XM?usp=drive_link" },
-          { part: "Season 5", url: "https://drive.google.com/drive/folders/15r5t0S0tKORIf7YDx11-_UQgp6jI-GTS?usp=drive_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1wFIbaFE1hBdckzU2UGPaPTQjgJJSINaX/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Eft1mman8eVaWNOlBuuRzKYWeMVAuihz/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1hIT68aBzQF2C-nxLdUEIUYIoX1tq4Mus/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Mi-gW68h9AgUXQa_JPj9C7Ck5B-I4GBl/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1aYe-09FJct48qXwU3qr43di2jz8W21TH/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Q7h67Mdt59vhNPHxk8f0kN8UrdCpgskj/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1_87F2_-bL5NjWJDtcsmMT5eFza1-wPuF/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1WD7mawY5RNKMvAR23ogb7HEaFsugLz7S/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/198-nt-sUoYxFZ1wSDW6nJ00PYrXrpIVL/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1GxyKx1q7ThLfnLG2YV5JT2g1mC-Km-2Z/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/102RXb-v7W2knHHvjlnlDO7d5zdWuWIxE/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1FqyRQ70vQrxH6cy-QQHUAoefCWouahOs/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1FBZGrhbCPy4_S9MWqnXDEQojtzNn-dlW/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1zYJXWzS3BQutuonMJq0QF25vJDSu5dmr/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1Ij-1hTFNYvkRLroA2ri3Jya8X1kzZQC0/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1HorVih1DpPlbGZZEfRiyvZYk93X8x_IQ/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1Wk3N5kV_Sj-6ZwjsVckVd2Di2Nm4NchK/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/170HW1P6MEni-XLZX4znjL2nCR3uGChCQ/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1QBccjhQPC_DWqYs7jpIXLu2B-WALzcQE/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1vfS9-hgSPlSkCHwqlnWCk8_Dnl9XjaCK/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1b5jhUwM1gYz18YEK5-Afgkmh3MHCyyuv/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1HWMQtrmg8dpoe_M8JVUGJ9r5n_SBmTpx/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1HjloLT1phyUG6En5WU5NOm-59i5uSDfm/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1uVW0cPQqyMIkU47WfK2I2-0ulelTc5w8/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1UBMla-NQq0LhX4HPLA-Y5Sma3BKcG3Sk/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/19vpcUeW17d05fL3N0u0Re2wjeZAxi6to/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/173C1_DK9xkhwrRUFQKuGUwQpsqFvZ-GN/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1KPJO8-hfnzhOQJ9fqmxuXM9rN_f02-WO/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1DBF2ck6nN6NJEezpiGAurFQuqkNCUCrK/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Vuz3b4SrKma-2uJFxzXR-2bLVDtRkCiY/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1HVDTypETfUw3NCUmaw_sTN2AM3-5yi8M/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1tBf9QJbRtt5vl9LzaFYJhAGgTug4YgSK/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1f4hjB3uk4bsiwmvCgHpcyBseE0Hgj0Y0/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1c9GaxqWNcWrPF8yKL7UkSXTDGtgFoCYy/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1nqrY7VBpfPVHAaTAG7NhtKrt2rCE9kQo/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/191cEoG9jhSKjOgV-BMao7E8-RLGAC3hN/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1Xjyfn7kPA9k8QBYFSZ0f2RwaaEDQJd3m/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/17k9hpQoL0ZFgM4fQtbH-yTdiCN5weffV/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1BsRhIFt9c3WWeildni1GMmj4VboR7GZQ/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1sVdXqxZdE627f70D4TphMmU9siwrVFb-/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1ecU6CE_6Wx764y38rupbjmdoKC-QKX9f/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1jhaa4r9nwMD-aiYA0GEb1qNZBp2LikAv/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1TaF1neGW6r7IUYguYOOQSj0Vg6MTDIWi/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1c1uhXu2gT369JvmzI4OKTG7BWZUavE0B/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1rpudpGRFdQ4hkW7ldhbPmXT_o4Ij1WCB/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1vOoJIjiFdC3gp06DKAgYqarmSfROQXqN/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1LFXhrIAZHHbpBciNRVnADGf92mVTq7yA/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/13XB6Hu-BV_7WzxiitVdarXwfPzMvN17H/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/169QFRVqGvpANLHdBuO-dv3urP6AY-FRl/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1X98HQ2mJMdiSND49uWMSHLEpyNF0VAQA/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1D82-raMkPWNuUTHBmUV9ks12zvG7VCLW/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1XrqDaa8CA9GJrI2Q2mNlfzcXSeyVud5i/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1iwWaXtcFDNt_96LoV7asnNDFK7xq-QjO/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1e0yRIKAGBV5ZCPVuSsrQtzfnq-LS--e6/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/18_rYjEeECvfS0rBAdaAqoWnqB9vkJHRg/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1og8d6WEEYVjPVmpb83w6pi3NWKW-ha8P/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1AEEPIi_zXUYOxEs_i48aQw_ZX0TjN8r9/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1AKTtPC9zpFB3uqrnAEDu0hfNByum_Uqw/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1-fbV-s9FlAjLvh4ecWI9nnRZakLv8jZg/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1NBfafLUjB0A4fxzj8fVVtLBVFX2bHAWi/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1H_V9n3xVXj0o3pecerYsDLuALKFSL4WC/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1K5zTZz8cxMd68p_u49XtC-ABXJe0jbZH/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1sjdvTSM7X3uGqPQDpuOXJya46xTK4g9_/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/19u2D4yGhKS8FON58ciuOiwca9zhiKL2V/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1UN7g4M986SuG_hKGvykSJhV49eqF_yo4/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1zkuKxU2CbkKxHvBXsy6GxeBtNvE4y2j5/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1T9r7xR01HZlwFFmhq6I5gI0VGEnHo1-O/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1aCHH3-uyhGFTkemGx5rgFQ8Y5_KR20wJ/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/16c4XLtF1HNUaWNuGSQsaw65PZg-3jjx6/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/17V_UxzD3vFhYyWYLdlhyhPlCg4Im1Xwe/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1yE6NWnByPfwTHCK5qTcVJ4E3JvWJoxDb/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1vbi9F2EaZKziY1rhFSOJ2_qtyPFwPAmO/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/12UhOiC3W6AUeoKPVrazkPddnuoz-ruql/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1C0w-MCx5_IPWbbY-qgOvSNa4RB8v5gln/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1xVU6U06xYDRA7OtUI89UE6J88Pec1_by/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1TE9gaSt0_utEXXh_6bSXRF78LreqsCFF/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1hxyLddJEMdQE1fkIyEwgmzM2pc4p_HiC/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1N833fT4lg2De_mtj6Ngm9qRNDI7bJqFC/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1AYcxgKtF_iFka1A27vmx-VxF9_yqvORY/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1qCx9tm64MRMx8ImpH2zkXC2xffMF67os/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1SQLeRgVkYx4ScMEKcMC0HmIOESf02VId/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1HbehD6EIAlLYRk2xHsJHRQfSK8dQ9CrA/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1fCGG8_EKN5RKL4ZlaXTfOCUgJhYRDStJ/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1O6v-koHmXxw0U1Kj9PMET2DepB-HAiQ8/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1vOeyhqhtSqD7Qw8n0cG-l02yvcEiFb_x/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1d1YTF7aPe_1QnPzi1w45XwcXtW7uGSLh/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/12lEF5wRTLHwev-A84dUPI1HvhiCdChRS/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1UXuDg_yVl5MY-G-lX86l6Izk04P_sgOd/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1-MqWIcAeefvQ4KkEshdZHkQqglIt5hcs/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1CMO_LrjLtEB77P2g_u3sRlArmpbbKb9_/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1jf2DwKW-eZzMoqEar-GFSiJIF3jv9P4r/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1RFNYKbHD8sP2g6a7j8hIDvUh2ovv17gv/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1M9HvQ7NGYV6ZAzIBi3wO0HFC41ldry8v/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1ad62ZJcZEiAF8kcYLF_0lVIk2KTg2c5k/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1KhK6t3kSL30BuEp0BBLWFJZ-g05iFphr/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1oUzwrMkhbwKry4VmKysus6F12EplgifG/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1mn0rb5gOWWqn2v6w3FKDrCbzIwspt14h/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1pNS895kfxp_CA6GJ53Mkb4SPKbTe0RMM/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1wSo50LPH7sxJXaXnMCHgE2E4wWu-GmIL/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1fj9cggfajCUVgrltJ-Lgy9nBj5iWPN2J/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1A7dIcYXnHVUtfFSG4_-Wp3j94CMgDTMH/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1wf4V3qiircygrqxM_1JdyTWp0zK3qHzG/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1_9pcOv0Ei8Yri9Jjge0eD4RnNoRUWeJ1/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1iA6A8sS-nw02OZTmXXZsnhHkxpQuahP0/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1tvw1AYJtL6r4UfZb6-gDTV9B2XU3AEeo/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1XCIhkZOm_j85zCADY9N1D0c73WzHzX3x/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1AyvpTvqnO4oHd_vJyDFknhS9RUIw5F-7/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1GM0Q7Qm8Htbx_-klvYa3aHmSXRoTr6n7/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1Sr2hlbTPt0DqUWozkHuGjjnlrhv2rMvN/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/145NgkyoPUfhJK1zI6jumFDeyfyM0wqRv/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1GNOKUPaYW8dHtONDnudpSKxau0IgndVB/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1QPEW1NHgLru6Kfq2Ud72BILXC6d5lNF2/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1ZcQJWWOtPPK_ICS13CZk2v8FqIwXydqx/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1v6HPIAZA5M4kv4kN7_vLd9FywY1kLhvb/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -831,41 +8449,223 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Owvr_pUS8xRs8b-IyjFlY0VzfCeBdcl-OgiEm1-gIpE4NpVr",
         description: "Mario and Luigi travel across the Mushroom Kingdom to thwart the evil plans of King Koopa and his seven Koopalings.",
         year: "1990",
-        link: "https://drive.google.com/open?id=1x8OrNtdQ0KcunMJGMmUNs881lnHUDd2I&usp=drive_copy"
-      },
-      {
-        title: "The Chi",
-        imageUrl: "https://m.media-amazon.com/images/M/MV5BMDlhYjhkMmYtNmUxMy00MjE3LTgyY2YtZGUwYjZlN2NlY2RhXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
-        description: "A drama series following residents of the South Side of Chicago.",
-        year: "2018",
-        link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmR3n8HCwwXduBya71Xfjm_4MYDu6cddK-Cg&s"
-      },
-      {
-        title: "The Cleveland Show",
-        imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQLWiVsQ5H1IOIn8dsH23CBVlOt5o-KKPQFpQJOoKnPKfKeX6hZ",
-        description: "A spin-off of Family Guy following Cleveland Brown.",
-        year: "2009",
-        link: "https://drive.google.com/drive/folders/12Hm67Xk3fNqRQ59pmZEBu1cq3PsC2KJH"
+        seasons: [
+          {
+            number: 1,
+            title: "The Adventures of Super Mario Bros. 3 S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1OltdibSzp7BV8HmvnitJjKKJohpGIDTa/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1xhdeCur3b1G4AITjSGw_p7s1St_1uZET/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1tX-mjCjnVCXgWM8RF_KGNdrJU8WzCfro/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1OnX-yw4lWuZLMgauF7DlRKzot8YcizQw/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1-m2BktBYq0659l6O4Atn5nUhDISW_QIQ/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1UlSVNQTwzPwBxBgr5NHiC7-y9p331zod/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1t9uVUQjyiSoYBLHYpQwOqH43AdN4vr4R/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1fH6rNvki1n9Sel9hqi17X5giKaKX_AbY/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1kjxnNGmI_JuNJZgVgg7NAQ8-BpaT1VAO/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1LZeWD5tlDzwOq76K6Xfi0Nmg0iNE9Umk/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1AHpkFUTWdQvC6CWzZgaWih0wh0ZPunNs/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1mi-h8S3MnJcl4KU_v3iKgLNtluzt2_Tk/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1_dLxh9uwrbgCKypYlUM8fSWUaVGuariW/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/13TrVZ6MsEYJkkWPt9PqAD1nrIs9nsaV5/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1f_oD1ba0gDiccNhJzyUpqCxKOOmnAWOM/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1s5kCqq9yR-6OZ3aquWuPZv05BVQC_0BU/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1iSMJlScKYQwVxxmBz4pOYPNQ3dDyvDxI/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1rz7_9PHJoXi9GZ8cE_HEHI6tpxDxEe5p/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1_D6o1sxm2KfhjFkowiSI_tZfnNWbGSV6/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1DaJgZEOOAjQfz-HuWcBRz0plUP17roCr/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/15ovAJOxOZNzczgeHeevDIioSewPrNXk1/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1axxaFY7pPZA2gYv3U-kTsbXV53FAcPPB/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1fVrE0KplfttaIJucA6fkt7jZZvyhwPPM/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1HSPQ6EPbTlkwYeSXZgUBZO2LCIUUmE96/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1uNhmtEYz4zqekrmDygk_PRTEi_Iln8ic/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1pwL4_hJIVpwNdwt3Pr-jBGv5MYPfgUfs/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The Cuphead Show",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BZDA2Zjg3YmEtNGIzMS00YjM3LWJmZmUtNTc2ZDYzY2U5OTdlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated series based on the Cuphead video game.",
         year: "2022",
-        link: "https://drive.google.com/drive/folders/1j_K1YV4w_sHAzwEAaUMl-qSk4qjrYSJ_?usp=share_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1w6kw7J1QlDdfjLbDKACQSOzVV1g_Bqum/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1PRY_itdNhtlnXJ_h8822smaM2Nqx3gWU/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/17G8-J-ofRVXZg1_hzwQzXb_7oDo6n5cU/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1qL1dFEKXBeuKf_dfzRW-TDfQnb2a58QX/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1XdxdUu7n8sNBVjSZKdm3mE_p89fGloaU/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/16wXQ2O95-acTKPDh83kyzq_pWgD3drmn/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1ue0XATUwGtdhjtsyiZXb-6AicxJXAoWA/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1uaLmGIoAjXbJj-5zCkRXIu0nMOMiyzS7/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1VkycvaQSLohbU2CKaMQgbWZ9g4zsDolC/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1_918NUX1bQMdQCtwjnNe0CaxdFjYCcJ4/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1R-0pNDZHoopJfngCULWeDDuDnpFlLx5C/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1tSx1zPNWAG7GJ6g-fViRw21PT_-6Rwej/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The Good Doctor",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR4uEfx9JopZDvlvvLB4W3cr8cN22vsDBO7xrJS4nqqpAzdXksx",
         description: "A young surgeon with autism and savant syndrome joins a prestigious hospital.",
         year: "2017",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1-xSt1mLjjtY87DSpKjVbnV1P37jv_CMs?usp=sharing" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1AELIoYI4dmAAEPmAtN2mV1qXycI530dp?usp=sharing" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/11yLhbzbHBC7SKbXM2J_GL4d8GD512rWU?usp=sharing" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1Z4_G8ZzFFGDmtyvNx89Jjn7kJ2BAVbeO?usp=sharing" },
-          { part: "Season 5", url: "https://drive.google.com/drive/folders/1NzP7wTzfC5BThyTNmw1j-BLWPnVoaNOk?usp=sharing" },
-          { part: "Season 6", url: "https://drive.google.com/drive/folders/15DzZ1sXWu_CEagMkG3tTFOcR1GncSkQl?usp=drive_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "Season 1",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ZNjI0BAzlujxs-P-kzPb7KgmXMbEbbl6/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1GGTpyz9VjjVjiSlMziWrBuFYXHmfynhY/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1eoIPOeEt14mkjlddULydb8utu9yFmJ3j/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Wdk_ag2_71DXpgpC6HBjs3PNBcQCt3Fn/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1R8QFv4FqtlxNT3LAdpBE6rgMGtfdTdq9/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1wB0LiX4jNoyoRa6GMntWoDDXkVUuW-w2/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1RBrPLMr-aZvqRgowzs2qGyhncobfhdzZ/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1w8NG6j2olAD-rv2qmrKx31UKruRwVtka/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1FDale47wa3gZK-fvfNw8sEGLOl3GFNhw/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1ahpsQQurXUFOaoCYTrbIpqb09BeGJgcW/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/19OtBOl8CfJUwaAL7o2yBr0wqh3slpN7-/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1vDlC7dUzL45czXWFzNxhMmB2NAjN7u8Y/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/178nn7zvdqvsOWPPkYL9g0zjvOCxpROm7/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1ZVi0GpZBB_KNl2NLXJyhO4NQ3cuJ-hsb/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1zQqluU-b2RYfZTyS4_jqpBrYyrBsd0yq/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1Odeba1uFv3nTsCfjb0YEV1brGxjMLAqk/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Season 2",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Ma1xgvQxe6yvr9txkEsN7aiM8ryAMMic/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1w1NCZL307MUu7z6I0XBVB0EiAIStka_-/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1s-w3cCH9v4cBt8ka3M9PfbnES1IC8Rxq/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1k6yU1LwhHTAu_xitwYHTOgE3Jx43wRXX/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1O6ArVsyriY10oCBGpf3FibLD-C0mCWBI/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1vpGa_904DifRPcBt3M__Plne_ycjGnFS/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1TsXQwPZ-WiI9hBZwsop2fXepDhax0TUw/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1MzZyRYrO9mMv4eLp2cMCyjfsg0BFZyph/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1W60sf-58Wpe7gTDop6MJKpfeo9w2fFRs/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1UCLs5A91hk270WhqcnUAKTU8GDuMr_Ok/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1ASVyVRVaXlRKDf1ljM6DP7UlogSzm4IS/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1zVLle482m70utIDj45vk5QcXaasagZCl/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1_EVrkCDGF-91OfxkEm7dPMy1F1ZJytX0/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1Ul6Tt-URuaBiSZFjKVSVWYplYt8K1xfV/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1bJ8QC19Qn_sR2jaUFsVshqedvspp1jg1/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1F3f7-m0IhtzWVwQfjtCpJ3sET2O9J_sC/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1hdXRxDgu4zPzr5VydqfPw2sQtEHc7ldJ/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1e4kawCM3CzW04lY4EK0KQpZq6Hv5XG7j/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Season 3",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1EGEsgLkw3rYasceiT-_lOBztU9lU1Tof/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/12XKfaW7TCj5GtBx0IDTcrk_Kq_audLot/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1-ZTYGM2Ijs4Fwe_XEW2gB_bNGiuYZRpE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1lAR_V4gNsodBsd_F2vmWVylPywYCHzT5/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1CAgvcDgxvC67emddy5cMTlpTQZ3SC3GX/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1PQCHUSgpr93kUWfQ1DnSJujErHuRBNzS/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/19-VK503vQjlGasLS-Jj5WGyluKBuy5kC/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1H-LLhiT32EBi0KAuRsUZJuMaPNyffKtP/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1aMwrWPxO_6RNFAFh7GyXA9PnRCVz8lA9/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1x5uOn9Z2_vUKOrA9_dwIsXF7oW9jkB-4/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1cIWcHV6mD2pTdWtQqxVZ5NNQk0QqiyAY/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1PtpHi_eP-DlFzmugvG6OzyoJ_50zaEog/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/11do2ZWC9hT0hwxpzGJcH0JYOXGHdITwJ/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1TgDwV1sHf1wlYDXrcyK2PxpxJIrP963X/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1d-N8DCasHn8Mq5Q1pjIwQivOxPMUgBrk/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1BQDzgV68fbNmwc1umbVUKUxyQsI7zCa2/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1ODOKplEgbTqkL3Rohw4-icmHFIplT3_1/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1tnCb9IIEFXLyMqzOa_TNFAeATHo1hXRo/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1IWFMrDy5yCAemEYVRg473nD3mWAY9PFw/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1NY2MQ_t2A5dmYjWEuxbj27WgTPN3zGdV/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Season 4",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/17-IY812sTQ4QpYPNfm2S1S8KHQ6AURwR/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1WDwuvniCZllxGBjijgt8us8uJwYTwX_D/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1UsEL1DDoJmTZy6f3ACA-VFJyI-sZWDQT/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1CcwswD94hsvk3J79qwwH_V2xqpA4sI07/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1hf1rkcW7wqxULe9ilC9QLPItfCMCTTwx/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ukW-7_qViuXOycp9LgiDmLRRpNK0aENN/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1m-jSFIYTdxavsJBdjL2qOG1K4aZPM13l/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1Kt0xQqSN_5oycgzDOl3ve9rtVCUiqdL6/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1pxA_dXypnJ9BF8sZpEIa9EP1Ji-M90sb/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1cMQTIZuiF1XEBaE-qEd9hrCPc9V68KyH/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/18Kj9hbouht8_X2Kqie6MnRPFvF0uXH2W/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/14m8RKMgy-k9dxZE0lbmXIB_jmLdRLP_1/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1NQg66_cgm6dFdFXuKxTgP-j9MSZTgPvh/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1Rmg-TOmz99HyYvzOv-zfKRsbxWaLu1tY/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1dC4XLcLRdVAotPWLHGIkVsua8UTRr_B9/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1DoMmFaeIhKVmnvYKir04WowOQhhUSSe2/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1ZXi_koxk04832QF83jG24KQfRNVMx431/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1UXhSoGyHpLlxCSQV7rGEV_pXAA4DJTIq/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1wBAXdkMGOjfd-vtCShMmTawsOjK7q3nm/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1thxhTjQqjhBZvO8bc35tiX7iBezBKjzM/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Season 5",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1xs4dKfpNP_VC4MO4Jz-2Z-dZzXV5G-dq/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1WSdYVnacTsepI6q8DGREk6l2T0uPAYvZ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1aW-Nl7L5wOpHMG_oN6KilGyh4t89ait5/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1DLU3R05qdkE-P1qawu3MUsbLk0YdKiZm/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/10xMR6_LPuUb8ng01Wn6hWIMfOukXTmZn/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1I8zFqrj7Co5l0j3I-8FgKb1hd41-rtMk/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/10lal3kX3nKJPk00uUVXd9ctIJdPe32Af/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1T0_1EFKXLCTBzEIYiutwxdENiQeWaBce/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1eFaGXxPXYQJDAVmMR2rekIw2rLfcSZFO/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1He3Gq3d5XWUUHTBmF9-xBSKhAZ6znY-M/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1EEx1fkN4-RxE7usEduopfZ6NNq7KH9v7/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1wh8KmhnOND_5fLojqqjK5oyCupVSNdIR/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1d2_tunT-bomnM5dX-Mgmkcrp7rIgCUxp/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1RubDk_l3N4wrtTPgVLZTbfJOSHhKU3Fg/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1PZIhsuynot3SRVVdcgD0t_l1-3jcMxRi/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/15ErjkouhItGTc-RByRCQbQjfFxNpa9IE/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1NiP2r8xJpGflkH_DD6Gqs-RDuDIaeG4A/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1AJeK15jzD5B-EcIGtOdfx7ld277fAlzA/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Season 6",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1JbOLbfx7wLnqzM4B7s2arv2oqut88Fw6/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/112SXbmQJZYQyOrtt7ph4PElsgMsABjKW/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1oCV_9Q2PvE975C_fvrbAuq8ZtyY4jO3r/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/10G4H-1A_dAgKOxBDovFQBd7AfOx5UI7D/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1wuf5X9IM8i_ONKeaa_0VZV9Ifl2wDjfA/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/14hba24Q1KYgZwCJRGTOauIn7kFZmPrCo/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1SwOzi0kCDsZxAiXQ-wuPjnZpbKMApxC7/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1UBoPRKdZZIIBjsZAvId5JuQoIxWLjL6d/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1shI1jtqob2H050MKeeGh-dbi5nHDLmNQ/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1Eoan3LKPl5HzMp_9Cl2MJv2tT-46Q_XQ/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1t9XQySGoFMIMDR95U_Z5CRSZ9By8sVN9/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/19w5Yd7O6qKlR8vIyc3DxAhlLYk5IF3Jp/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1f1QrTLpCmdsTx6eIaXkjZDet5ksZHXZ8/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1zNvOz1cZASC87g6tX2iFHQ4SVqjtKxs2/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/19qHL3Bgr3EZg-Gsp7u6rHuuy-HbfBDwr/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1GJk7BubdbIUTc2ZqG8p0GHfp96YWf9Vs/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1_GxUX_eGgyGcUMPVoSYds-YXMGVb1BRK/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1duEIQ4zji0o5pBKSUBrSQsWxiWgaDIm1/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1gulkF_n_UBqmPC63tlxth37x7fgn9flI/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1EGJDXoxJOhIt5f1wL4ooosn7ka4vTNo3/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1iK5jmyiC2CzzWbpT8CrKmRvap1hlNNUZ/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1uU6WrF4WVfrhPQRQs8JFckNgJq0p1nXo/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -873,37 +8673,645 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://m.media-amazon.com/images/M/MV5BYWI3ODJlMzktY2U5NC00ZjdlLWE1MGItNWQxZDk3NWNjN2RhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "A post-apocalyptic drama series based on the video game.",
         year: "2023",
-        link: "https://drive.google.com/drive/folders/12hjbl3XZmVF1WFsjWuiCMJ9USmenFV3L"
+        seasons: [
+          {
+            number: 1,
+            title: "The Last of Us S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1cxLiohRM1eYZi-5KQa0T9Wk4Av50QXM8/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1gM8tl3TZr3r0YlSFJNys2bkRPihpQcaW/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1oDwux2FmSmAehq_FVmk7VScUN1MXmHHM/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1IgUBgCet2s8dhewQCTHLU3ycuNaNQs_5/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1KM2GECLhNQ8K3lK2kBawP7dlNwWgP4S5/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Gbdldm5KHActcE7Hg1Hf-ZZuvvnBzT36/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1dN2Sw-UdmjsCUeJnvD8dBlx-XqWtT_fB/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/12U9GshduwnWOA9qhlBpXLizfOij4ZJAw/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1keBpg5yQ2MLnFUHmkco2u6w2-iyK2Rx7/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The Power Puff Girls",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BODY3YjMyOTktZWFiZS00MGNkLWExZjUtYjJjYjljMGM1YWY4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "Three superpowered girls fight crime in Townsville.",
         year: "1998",
-        link: "https://drive.google.com/drive/folders/1IYfB0oASMroneHQn8KansvGRnNIcYnFd?usp=sharing"
+        seasons: [
+          {
+            number: 0,
+            title: "Pilot",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1A0UelzwzMUyLeHtxUi0rL9U5gjyfVsCk/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Vvn8afg04Uj2m719yINHD7sP9KhGdnBE/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ftMYurD04mbVt-nLc8nq670DDW_LOGpY/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 1,
+            title: "Powerpuff Girls S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1_N_0LOAkHFHa930zaem40jdNZmIDJDRs/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1kewEuSsq2ozZkFDHMp4w4CFw9FVw2pkc/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1k9wp6ZOb5DjlRS7b8iITaQjN_YGxzNr4/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Nb-_jzLV6hm6bR2snW6A-J3bgU6u1wf_/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19c3TmQ5Zj2xLVV9Rc2xdjXdu172yUH9A/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1q5-qEyyiHwfe8WwFBoIFAEHn5pBlIYPe/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/16zJwdup7KKgRyGKH3ynNlnatS6uDC9V_/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/17c8Pj6-s3vDYqbLe8N8NrBdv46tjCrZb/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1n06s7eCoTC5Ne9nkmJSV1ePCqULlv2ZD/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/109JY25QKev7nI1lS2FJgwVYbTtDpDLW-/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1C7O96uQGSR3chloxLeQ4MejdTbXz6OIs/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1-vG3Jdo7K3YlWKpF_gEb4cUFUe8TBd_1/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1QKQSJRQA007AlEinPg5YKekOjKBB3a7I/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/17iFKxca7OTDJu4XFFgxWzd0RlXWNUUsW/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1Nu1hkw1JgqOxx-7eLQHlstd75RKGTNph/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/13XsHAnZ3BYCkeYuDy2aXf1lTQM5goPmq/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1pvBKmOZ8FfLgrshJ8ZZa0oXt6hfnj0fJ/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1dliMRjzGCJ7p7uYlAvR-j1_S3zAHJVx9/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/198-QwWNdFikD7TMbdHTK9jDyOv4KyKTh/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1Fm-C0o59FSl8lEsjLPAhlwQCALpTFvTm/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1X5xaq9rrXkdiLrrRKgFZchX0KqHPwRO-/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1k1JvG5Yc8PFfiMFuKAZYOoqUbSns-ssq/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/10F6ZfOzCaPQUFO94JkJ5l2eq8vBeZorU/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1i0ahgb-EDakYikzdI4V1b60Rc3GJp8Oc/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Powerpuff Girls S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1zuhO6vnVIBnvsRqkeBnEUzx5cEzaSxw3/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1K1CsCzsQHv3IOJ77XYQhgPwCVp4UfeZX/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1_kGj1yiReeqRmmlNj0dVu5qtpSyozO58/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1wp33vnvvD6Sqj1xvDONuccjUb_PTQ7pr/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1WOQdhfy4DdL1ELfLL05ZOKSIdACY3dlE/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1KI8mMOyM6ygv1HkHowWGTFNbSvNK9pDm/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1gl9CgKkMq9Sj0deRiAurP3_smb2nR5li/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/19vRZZqBnl82gsj3p2_yRumeF6jhXViva/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/12g2tz_dK55M1tSTAscWHPnu1cgXcuh-r/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1x6n_zCH3MrA_8HCzrWITlHcaHse5_EQD/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1wiVRDkOCzcnh9srRYp-bDf84Reag-E2k/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1efhYzmP1cIwAxekuKjdF5b37jFF921Y-/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/125S_b6Cptu5VJE8lOsodEyvJgxZdmFL5/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1YobzGKQU0EmVbIgDO70rsWXpFEloBmbd/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1OSHOj-iGHH3L6iYyqvTu1e5CTyjUla-d/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1uoeeKTQyFPfE73ZYVK_-GJw8cluH9Svx/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/16AsqhwcLqhbqGYPi1rmJ1oT-KrAT6nFs/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1tcMJ88SwcJkzAPYBOaLhZAcokj0aVPVK/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1ImCLlCS6pLPzDdhPMjhhSUbQI4bvsPUX/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1BIvDdlG_Yfx7yf6R9TPt92POSD__6EMw/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1IVwmVAky1tDg4mbVP_Z8NVMGdAvJcllo/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1b-vd7EdapSFhHlykRQDiDR658gKKHcsX/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1xwjiCpElMRse0RjbSwOp6MmYI4GMAONs/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1yEiCmm_kYRJ9SqykFo9D5bw4ZHh6V8O8/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1I5XjE-BFA5pZcGzMlJxrV6Tf6VRXw4xw/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/171yAb3ezcUbNc7QVaKeaqO8EEP4yKBoS/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Powerpuff Girls S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1t0unVbSBTliOvKHDphX7YR2GUhdwLipV/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1iv2wXnE1XDv76AezGtNg23ZkmfX2r6V7/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1MoV_7EAa5mvm5_ZtPmXuCNDN8sGRw8fX/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1z7veQpmLizWQk755EUz4rPaUFUn_aiJ5/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/17QdbuUsUaAKRciiyT--9H25UYwfXGAH0/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1yqIr9-NDbHUjyiD-AeOnxcWJKLW6MYn1/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1rlVp-VZS6lfMkt3PdDg76hF29aZpYN9r/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1yZBLbf1dW_CwzkIdwsVhvGAt3etaKOLC/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1SM0JjpRFuIN6EZ-buO2mNf8_RQyoJQO7/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/10VVRKoshnu4pUkdFLsYWxkUfyFCNXE21/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/12jswLjhKN2pGP_Kym66VhXmv_TlXrfcA/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1zmkzmNfty8BhTEfevhtXbmEmJtzd9KCK/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1FtTyuCwJGqf2KFz35xFMNFNvex_-lQAe/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1D-DUUZr5aoL4Q8rDc4vbT9ZwCAxjGObY/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1FcoiiUfrVPsthp33j1ezob0kZv2uNMo4/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1dTH_s7kM8_EXvPTnq3MhzxvngFHtMMOV/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1Qhy17lfagsebvAWVxcCd90YKh2qbvJCc/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1WKLMzbVLXd_xEz7ecA2wHhl20X6-CSNE/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/19Wrkmf75k13OBC8pu2wVmBX_2nhDvkil/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1LHtugnfc7yWsAUfNACh8jlRUrWKD1WCx/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/18PX2JiXjJeftN_Y5S7aMJT42QXS4IBvd/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1Ue19hT27stQfONnWkVGwIx6ibc-yhyce/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1ABP_y_aaNcra6v0sfVJuCW3iBVa-ijjx/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1EwtTZxQxBHn99Ll6C70R3qgDcPRW3vqd/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "Powerpuff Girls S04",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/12_uqILrVCGT45_AJGoaFGPeY95n6N1AD/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1B5evPIiAYRb_F9D_H6kJ77HCQfCYaOzo/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1fE2mO1HQGPdGhRNQwxnT4VHgKc-aI34y/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1dh7DWEexMtGclXCmp4KG3CrLmFFRuIqh/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1nfFzhE4TxAHBX3c_DTlPpmrfKGgm5xyo/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1cZriR0VKVvxgnU4mZEOtA7ciiAFqmsON/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1ADnshTCugjz0jw5twlMzfCLlCyJU215k/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/19yodrgfUe11biDKQLUij9X64EZh34UHw/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/11EeW9_gI19KvJup3v1Cy4QKCA7yAWUn3/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1i-hMDPi3pkkayRmf0OYJto-WOmAN4YUF/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "Powerpuff Girls S05",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/18G9pGLahmveMPFQOOLRQ0AEDQb2bTswS/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1yOCFWCRX1Jl64OU5YsZ9y3GaAY9k5-Eh/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1zVabeUqTo3NEjUotZGwSihCzu0pgrzmG/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1xg7suRjQ83f0z3HrPZ1CSu_1-KQ8EZpe/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1L19z5YDBhJ4FS5xHFwSkRg1484iSsDaj/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/11tBVVStIdybSX1sE-yooTmcVxslxOPKa/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1lFPp1PxVTdR6VXU9_OxHNmC37oEEvrmc/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1dn3dJlt6WmgVSdWB6b3WthuqG6Ow00zO/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1n5iotrQCfNrpvhNVjcdjw68Cte9nKpeH/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1-7YWauMSSdY7Qs-Jcf8evjLC6kkTwBel/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/15Ph-RFMy4-TQZlwh9j6Vk9Tr81ucXfmc/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1fkXUw-fyRUCB2W0ACzpz11FOYvrwkFJm/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1VkKMGA8mUZQNMUaABR4gb_GOenWzc7Js/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1y9M3t6aiBm5X8LQNr551ax3a3mvx6UDz/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1fB7c8VH21T2yG4aB_H97DHA7NyQWnFX5/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1VtYb9DBQeEMvJUq2ZcgLTXDH4STk6pvm/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1CpG3hGjICDYzC9UqFwZKqnBR-vd06nRC/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1HRNoD7kRLIAoSlHJMKGTfzfsCPB1ft1P/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1n_UZCXSV8eHdUMHZ-lAKV43lBcb2g6yT/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1YXDFhcvoxbFg7xKtVxw9Y9T0KCPnHKGB/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1gv6Lf6x_h3X0V_vUSPI8o-rI5VV3FPtX/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1axWdeUgCue4A-PEfB-0St2Rb9ZNa78uu/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/10qbcdGMxyjnYwcacpxxe08eHkNznn_Oj/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1OUHtZY3gHyR3oPrnU8oU0GH3dnWnjuhl/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1cevW4m7UHM8s_nR0MLnuvIeGQ4LZGDGw/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/183b3Od4H1h35AxARz6Dw3oUlLbx8VbjU/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1cJkejyJ6kSExQ2KWX9e55WSmu3xGkj5g/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1WPEPSxC_Pkbv3eU8-0S49l4OwoWOJJWH/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1E1bV6Kjs0EKB03jPUVGivBNFK7gfh61j/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1BG2KSCLZB0tgquej11Q8ntlIyw-f58nt/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1QD65bOvkWnZHkje3QcvFDdMMKtWIjLx3/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1HedY6HDL8bo5E2ctTMhLc-rcfTqTiQnX/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/14oYNYQ33UBXXIE-oR8y-Ymi5FLPYIzVh/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "Powerpuff Girls S06",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1A2hDB4Yq6fZLGPHzpKdwvubjsJ77hY1O/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1uuD37AIl2t3f1DR3rvuA1jeaxXLnV0ZB/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1WsIcHgbEtFOmiX6Y2FEhdmGA7Lr5Du4z/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/17jlxNwODjsqabKj8Rj9-dz9Ef9CtGRPp/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1lSvX9iIhgdDRmhmZQ-4YEUXRDkUWCi6-/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1weZQAARPX3_LaOA5uAOFNftNxIg1LIRB/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1n0s1seDnepUeUbokCKpUWbEU86HMVrsx/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1hGW_qe23ggZkmTSz0kVh2o1DOYwd7qIm/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1eHRNIcLSXzj_iSIEJxdoOEmh4ali3_9t/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1dk_PEgEvV2V6a3W9fQxjnO3tbu7abkYh/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1siQ_boNt9UexXGpGoQfkg-wsu0PUAITZ/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1-ZvrEJp6YOIrutgA6SvQ0GyFw8NQrqjO/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1TuFybif3km9QMEWpbopo3Dtd9_yehqL4/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1d4scL7dq_KhnbnU5qfuNr5SCibAheeUs/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1T-sB6KfYD9DjrmoTB0nJaMmkGTsCyCAQ/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1Ssr6gMECSw7UhcxbeB3WT_JK4U-ApasB/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1pjnlrj-Diw05hXvErALfd4xtXb_IHJ5P/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1FeiWQe1hmtTYGfHhk3m0MwjlZIOf0lki/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1RyYUEAS1lKu83ZPz-R39jen3sF1fbdOz/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The Proud Family",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMTRjYzdmYjctYTJjMy00MGVjLWFkZTItNGUxNGZmYzRmOWYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         description: "An animated series following the life of Penny Proud.",
         year: "2001",
-        link: "https://drive.google.com/drive/folders/16Wl2PBxEjlETW1FzF7zZZ8vHH9WfO3eq?usp=sharing"
+        seasons: [
+          {
+            number: 1,
+            title: "The Proud Family S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1m-R0PEpuBeD1C_12cQbZsSsJ_a36MAEx/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/11kLIVm_vLFzBZIbD7qmmPzGcmAbvC-kk/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/12oMiCNMxvqfP_H-wlh_9C0exHCgn-ouy/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1wolcq-UYDIdP9pnzmFfjJiSxHukopIXD/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1-yMxdxz9cDGjNx33seEsD9AI7QrruWiQ/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1bLXeG5RhDy_KpB7jCDhl7hadUsNoXo_r/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1eN3QTLuHlhlVC328OH9A9aVgAdnamLLE/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1lLyeHS6iWYGRtGINTXwB0kdioy_zLbCk/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1vyAevvGWvWZ1JTPbopeYIjN_WCWYI4L7/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1xiWnaisaDaI7lT6ae-pTtFdzhbQ7UC5t/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1DZ6R0lJdVxEjrSlqA2a-QzafuByBW0XW/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1vMC5BLCg-H6c_-KFgLGFVMkfLPT0924P/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/107Hke-4bqWupAMdsSPqY8x4VkajLIxuj/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1ltC5vh5yVYKoqyIeLDttlQXjzKrSASFv/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1lE9ONhm54ik_VG2qM76dxKEvMcciwZIh/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1wHiVELL_6FHyTbt1tPrmx1w-9IPvqjia/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1L8GUVYhOsBpjH-G4JA96xJPb7ur9Bore/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1ADrCPaBe2In9IDS9LHrM2rzlcQGdBN2F/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1H5QXFCdaCcUcxbLv4-iQUpQIIXMxI9f1/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1AgsC9VSDjyKcaEEjUugepu-yimy_Ws10/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1rVPUrEm4nOG5MH3xeW4wMUIJch8fySic/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "The Proud Family S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1962sAiPH4UZ5LSekQDGz4h1TetyTkiNy/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1T9aGT_2h28Min243_GFvcNO6Gpf3jPJS/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1L6g91rAV_gltHv1yhgQvXYP2xwsNG6rG/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1dTgcwQmDKdoufOpCU2Lu1UnlyGdguLPJ/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1UFKdPykur8YTeEI1gSxXbSwG2W4-6Jrg/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1VWbYDhu4-4zrb23DSsMAVVjqy8gOO2eJ/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/17yNqY6jRxwVw4dFaEpyuuB5_aFo8lQ7A/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1_hlhZc14NYCmmk0uPYB-l-ApyQScxICy/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1RldT-OpoJfhYd0O5jqp7u85SXTj47nHx/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1Pn0aOXGLNEGMFW31Crid51rjetq6gWnP/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1B-R7ctxTF_RcdHF1wENJfPVNKFP0PZya/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1rVyBcjFgX6npXK1zI8BSzSXO5iEDI82D/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/17x8f5OiYGmutop8nEczMQWki6_2DMfYu/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1C_VdsoxdWeZ_G6pbcsFNs94rtJ4wYa7I/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1exqn-ne55qsLisPVKvv2i2iu0NBfWwHZ/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1s8IXw0jhSNbI2URXVR1-GT-fh4QGA9ji/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1Jsyb83bquAFg7R10sdNF6z_jbxq3vGow/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/19pmrqGCdrC8_F2_gS8TPob0ehZjUylQH/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1s0AjmKRMt9ViatO4-AR_-FoGh5_ulMxE/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/18AzyTRktwMJM85nITBtQdlPxUzuYc8Qd/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "The Proud Family S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ECajFkx0Ucoe5DdDMY7tXPeLgeyc2nkv/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1j7mrH4ec4-WRImQCTCHxF4_SdD856KXf/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1-1W-nEF0hSzPbmXBvN5SeiOcKVzGMFP2/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1cacEWf_Dn1OOdctREhTOspxbzDKoSvWq/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1ZzBZn_CFHD--6-TlZwfIEFXxksmAYWeo/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1uHorcXAVQTLVvBVBwXsnb4dqXIdM0aG3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1usUf_fZQNb3pE_rME-UJ7KQ9Rq8ZOdI0/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1_Jsoa1SzIpFfomX-rM86uV1BeMY9e6gc/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1EqYQOm6YRqoKUsbZXa2irVnRnkuzG6zr/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1txX9GXyHeF1-Y_hl_FC6d0dWORGEkmiQ/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1OaP0v45ScBsyh0GTy2fSzge1q-vZQP3b/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The Simpsons",
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSjBQ3mYHfXn9D5mOd5NIvOVtJtndaat3TYzgugN1q0RBhDS4X1",
         description: "The long-running animated sitcom following the Simpson family.",
         year: "1989",
-        link: "https://drive.google.com/drive/folders/1tXo2krTMvXr-ATSqthy55PUpRRIu1HRr?usp=sharing"
+        seasons: [
+          {
+            number: 0,
+            title: "The Simpsons S00",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1AiZQ3TZ4qiJT5rzZdABm-vvFW0UeJWpp/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/18_NgOk6iq01BhQBQ2ttOO84Axd4or7wB/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1yeDJGHldHtTJP0qtid4Zdf0Kz04yvpB_/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1QlSIddEtZMNCxAe8_Jff9c-GO0jDZR9n/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1Axx4xJWW9uWR_1XGmt-2d2ulFiFgbuKK/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1s-Kdr1EZ_W8guvM7wAK1M4KtsYUDoqWM/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1WDZdMI8JBKkQ7ICaySj3K7gNme3zgPct/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1XykekTpHjYNJCm4beZDpjrH-cb6Ssw07/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1fppFe9ZGMb-X0nQDNmIJ7tG7BDjGyvP5/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1yFiKd_anCLHqcCqQ4_XCx5qMKzsoU9LD/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1Cj8XFF3XTk0PARYR07Hc7MjKujdHa5S0/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1ErSSbHmyfU9mLZ4pk9i0HpXl_NqHF8Od/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1iTdhv5OS5DkBDvoA6kyvA9Q2zguwnhrn/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1bvQrA2U9fbZWem1KSIvBOTd3PCBam-rX/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/161t9bP1zM0DtoPkeKhfe2izDsQv0zf2x/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1tqkaz0Av5MjlJ8DWZZ5to8I5eJ3Hug2b/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1FA0sy7yO9GzGoa_iQx1qujun8OYXHNzj/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/13gE_ysUrEJaUSsBVb_23IbyfwNmVjZfg/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1d5i85KpaQKNSqWBvitNDKSrgdF2uv9eH/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1ZEQqUtlCvSJO1sZZ8NhjDDmuzsDR0wnM/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1oY6X5c5XjlYCu9vmKhaJS1X4v5HYE4_R/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1W73siiilcCackgMq6g1HC3ZbZyElAe6t/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1lzA3SMnuyG5sh0U3lzoADrHojD2cNczo/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1h5DxGzHX_gTKz4nnnbrRMVq0cBpyOAnz/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1h-jvHB-6d7oxtJorzuliy3Mu9X2g2j5p/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/14HU6cON9EtWpajCqfW_7ws_4yTZgGxXN/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1OSWP8q8b7u81ry1MQKK7cAhne2E-lfas/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1_JW8_N-dVPGUOu1UVGv1CuxIeW3mcwy0/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1pdeqvv-gBlfzn67gkOJMIz2rDsDIy4D0/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1nz0c-XBqx6Je2JiXYJqViLZS5AY6g7Id/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1kF3ZBOCSnY21X8Qjdta2K05eMNKGBlb6/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1oKxxU4jj5u4guvIMSGwloxXC1iZUebiM/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1zh1lIWF68AWbazKUvtuzrRt1C2DD6w6D/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1UK8Q2XX_v9FuqXE0nwpsNTueU8NgZ1DG/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1GTBqWl3Qbckp962qiVRUy9JWGVt3C_a3/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1eR0ugJnHYOCFODhiUuTvi9NdNEa5cxXx/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1qc3XJ6563rc3U0T9d6vNFUO4gD-HR7b9/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/17B1JZiG2wtkYtCPtpILk--fc7Q_9qeF-/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1OTre4Ge6KCxVwtthbH0ZnKNCxmS4t3Fn/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/12J_3mKrk9lOLFn32I3ho9kZlFKPGzDFG/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1Z4OpQud4uh9gYtqYPWJai3H5u1PWWWMd/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1LcZMUpXRl7vBxKPjEGr0tx1Bo6vVqtBP/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1fHaEjXMOPJBMW_z0owYbEsiFIuVDIcE5/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/18p7-hreEbrmHL6b7fEvTcOeFSrounW5G/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/14sNv0ZmK3WNyiYYBRHCgzzJtuOu1rtwM/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1lsTJvniL8zWntsVzFAt-YlgAJ-u9T4S2/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/1AYGcd6eIvrOYp2F_gFOz52pvSzx1jCfx/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1UwV1xsZ_RoI9XtlyDlBhXxN3q8il-HAf/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 1,
+            title: "The Simpsons S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-Ns9sOHgKgEx3gVjm9OaYJcyKqmVdA6E/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1NQF_jE6eDiPYbNxNai8BVNPJh6AefOC5/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1UMp9Ej6i19DL07TgW-MsJy50lw5HZ44s/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/17uOK1ytSQhpFJcbZE-kRySfP9l6xLwKS/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1gIBYoPgBXus_iGb4F4UyXLchAqUm5iWZ/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1Zq3pXsc6cBKcxZMDLkOmiee2ZnGHg0QL/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1mnFEMVY8YqJXIfVHyY8kLtU3nqp2wjoq/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1gLFN-DqawfqyDpDgIusS3XcdY4qMHCOb/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1epJ7Tg3GmOwLo_DJvRhmYKxrkaw6K6kn/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1LLu8ad0p6YvxXK11XNvvjrFRTcs96wT6/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1pD36J-uzlLEOn_bT72OKSSb9snuQZyHY/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1pUAxtexHNaj36llhC8rQVEHiJB5hnN0-/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/10cdS8fE5I9VGiYKXdU760F1Y3JUJxon6/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "The Simpsons S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Flzh3-H0la-wG_9hiomk2kDfnnVcpHO9/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1D95OuZCLpFb2z9SdiRUnMrGz85d3Qazo/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1dUA287M6kBVljptVYE11HeNa-sEmddT0/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1AeBYiGlFhQUC4bhZuC0nkX0S8J7V-mC5/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1cBbuv_5R8LFbxEPaxVhnQKcm7u3CiUfr/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1y7W_PxFYc58MAze9T3hTxRCSJF2zxA66/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1e0tGnNbKDO_FJ8e68ZpD4pQuJl_Qj_qE/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1N0LV_LlGF3Cn_6lVNN2DF4Y13JxhOEP9/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1x6cWX9qB98OcpMZuuxlSqFDdBgbPyYS5/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1pwnO3rM8PFHj-w7woEW9KP4wu8ZSQgmQ/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1-kSNBs2W8ua_HVLaztG4ts81wXBxZXOl/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1wfKRRJzsms3HXpUkVJU6PfaVVQquYlRL/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1L6xPSLaINg_ARSB7rV1pvsB_9a7ad9ks/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1cLd4B3SPeYmIOdwrB9VKZEBY8BlSMN-F/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1WRonKg8KGHsZKhKawUiOqk-Si4hcfXXk/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1iMKpQOYThkVQdjy9BwY1Ena-vbu5M4aZ/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1TxOcmlWJrgNt2l0V1c8VEoMvZCUtuk51/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/19loHq15a_FAyPBMWBBIfJtJXp4t_j6Tj/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1PwSXFMXw_rr9aJ3X1wsRJ1-y-3Eemo1z/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1zq8wpWfvZKNi7c-jcCGyILDJkkWbilZ4/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1RJ1XiloByj6rDIeuh45fU9HaxAMLcIZs/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1xqzY8ijg1kXvxLf4vmROxFtgfHYvKW8j/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "The Simpsons S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1UM9na0vUeTfbv-CcSjEMtwbSqFcUtr5h/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1hi6I5CdV0kR9r9NRUUE2_oZFDcOI5iAG/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1aaAu1xPISrH1Oa3v_loPOWQLEknQZ2DJ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1rVXcoYDd0B69z0hn7HSKDnnctk48obIA/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1xWwEN9AAh5Yli1wIE8LxaAcY2BfleQPG/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1xVHlnWZzz6743sPIlmMQhhJXZeKWrdcE/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1C6TGsYHepXBxPK9tl7KUWu2i3KJ-G_Dh/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1wpRjiJ3OH34NK07JFH9vX2d_8e8kUTID/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1dWb1Ln3kd8_YZe32xxtr0a5H76_3V3NM/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1eR8WSa5DnJVFuEsxD0HPXoDUHIV1s6kv/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1ZNIUNt2ZB9b3eStXkI2wXpORFBcpam-j/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1LdrFfU1wnUZwjBR3jxG38lKIJUzGLmXg/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1FQ_O44tacV7oJSBJD3mxdiCgmLOdvQxt/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1PoMPFoWtYKOVLzMPnzKnvVDozsp9hKvD/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1C1TzCuVyiDGO9uidYHoaCedkNpl_kKn4/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1rwYh3dx8O2c3nWkeaDm8i1B87pbrvbTS/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1IFdnY4YzTIXrmldbc0MZ7REw_l-kCB82/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1yeNhYimZffCxoAJ8lTdukxrHh02HS554/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1WAEznIoTTMDJ4nXp5Ndl7GoG3skNcPX5/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1tFfi00c8bfNFWXswxTqk5kmxKyCEF7og/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1qY-uZAaddiam6gO0iKCbJ_j0nFLpr3dl/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1oFctsB6Si86JWMoiAU12kcbSojWAyqtd/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1LQwyzEa6DwjdJgDmhupfMCKoeMMMGEZ-/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1r9NozC0zCApoEZGP-zeuR2bX3nlPedkt/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "The Simpsons S04",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1KAehkgbg-YBXJRyCm6l-ecKX619VVvPZ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1qSOc4dASdzY2K84Dj2X5OKmDw_LnLN14/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ydqfasWEJlcHx43QgKe8KNzkKUb3hVN6/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1THTQuddwq1W31aT7VsFgmOK2KUnUrrKm/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1afaGQLUO838eejHv6xmD-03ufSTJRzuR/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1wlLTHswGWAK5k3j-3Bh4TF1xrHrOy8hT/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1In4gmKqE6kbgnGlZ1aVyx44T5S71ikfk/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1fcb8LZ3medzhEr68RpAuVfRp9S7JRkoC/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1dDKiyj4LWdenNqioqMZmMbxzRSI3S5OW/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1P6H6nVSXqN9rsdu5Op8IVPi9wsMEOvXr/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1LwFB7h8pFHj0wmjuI-xKNF6ikWlfgGsS/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/15FmvaHoXHy82dGZFScrY47PvhzYpWNRB/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/11zQn0TSjrMs_qCe4ZVbWhnWJMM6bP_OO/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1u4VjPdK4GGfccZHzL9bvidLRZVaSilCb/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1BV5Su981BnhJHbXBrFXn31C3m56g3lzf/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1FCslI7t-ISO_pSYnzPhbU2orAQOWnudH/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1H55oI60M20AbA7vShlQs8Ba4ZIMO0NIq/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/11QUsDM1ID6YlQc_9I6KCgpRCzsLRTgwc/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1Ukk4hATuuPRt55syI228I81_0gWWqSt2/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1r5pt4zZvlVjtW5h0OCP-tYh9iDJZ6KrR/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1povCVIFIIokvaX2TpbYs2uVMGUo2AtCE/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/10TXcBVmgprW498sHqY_yk-EFeT93Ng3I/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "The Simpsons S05",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1oJCGFLK73DzowfFANq1XFZDkW76-PzKQ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1kJpqN9o6eeLkN0Z_2mE6W_E9Kyi7U94m/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1sm_p24oIlcdSivhHWvoL0_Dp-Lo_qmpQ/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1G7bga_CW85HPyGD6K8RX1y7uSjwU07LS/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1ggC171CApXFFb-vIMgElDyMF6w6zouy1/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/10TF76qb47rq0-KvhJhFT5q1TBOM38FSO/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/196SE42FcJVoZczUqeMdd_my_8TDbMZeq/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1quWWw8gvVNii1-R5EuINjjlqJyPc52cR/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1WxK6huMjZU-Dby_wuvB2xC5xDEwQ8xGO/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1x7BPAXTpPObObS0RkRCXWDpFryUhT0Ii/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1wKyY-assij8AXA8bL-PZKvw25zL_46yB/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1feCsJKaOANxSlYfuJW8vXWp71rkJt4do/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/15tee7TWmtrMi02ZKzfz7hh84bR40jGic/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1KiwbiVpWO6SMKWTHJ2oDLj15Y4mQel3Y/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1-MXhHRDARMMiJ7mVsPTE0gAilclffcn8/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1qDd1iicC3q5NE1XmaoseWpIQBLHGofFS/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/13gh9NNdcRMs3qMjEjlExF9ai9cALXlvh/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1VAut7B71OKQ2zXLu70lWl8cjtcl5_dUv/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1DMJH1iyIvMqxGkLr4d6b18pkdRaq32KF/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1VWPjbwTMvjLViz8x5OTphdf4mqFMuj5d/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1_gBGvzzqSSb9D-YWBNYHxZGehtQeVdaz/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1u92OMWJMV05N6BCkJCFo8hei6PPYvdUe/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 6,
+            title: "The Simpsons S06",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1XEZcyTDGxLuFi_BGkz4XuYdDcnHQmXV9/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1npdGvfnT3MB697K6BgtmWqn1R8lMnwdA/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1RsSYO5xjwlVOg44uxBSUfn06tfyOM1Hu/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Z8a7V7_L3ldcvBGMZdtQJQDAw-VkpnAc/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1uONEa6pLqMaMMMWyolY_qcORzTtoBcEQ/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1ffCCCir---5RosROBxZ550alaIJY9mVw/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1PTSTJjl_TADvrXZ6lL27R--VQaOO4lg2/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1I0JQ8T96cyyRSYFMDwxD8_aD3dmp24Xu/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1fk0hK-W-F6Cj-3j9WYBjuQbmQryoTAHT/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1wyhH194OT57XBjcAwwJW_ijV9l6fJyQh/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1wCARFjro3bBDZN3XnK_dL2Qm9z3O38M9/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1qY9ckEvZAQztAxJxhaKYJQGizibH2zuc/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1f175esGXEo47j3k0CR18NyBA6riiyuHU/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/155IYDkuxMD3PO9o8xKIRUmqFj2OJOrW-/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1_MmhHRHc840939KamYEgxx7x9YA2Njex/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1fCuVCn_aW06nQFlDG8bCf_fU8DktlqE2/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1mlQ2zUwIobc_tuzGwn4MQ_5nF-3xYXjd/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1Jefe1fYu5tYzeEBwGID-upr3W09TM8J-/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1GTW1z9OmaIKHJDZe1In620C_cAaGDVHF/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1PTeyax7KiuAjk__LxWlZBL9QhuULoHR7/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1lqCW-GEGeN1EFHYUS483ATnOyenpl_4D/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1apg0rxFlW47LCueh2jWcfBiOl1O2Z-N1/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1bcXZlHCMEfaXekLAPba8Iop6myWM5fGp/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1yeDW0WK5CWL7yR3tDahFStY6iqbclTx1/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1OMg9Uz8n72TSX8I19TBjTEVlJpDfCT_r/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/18n_GkGOuxleS9AVRv1gtVjEkRWcEtWqv/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/19Z8AzAGl8Pmuo2p27Em2vBnL6xSkDDNA/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 7,
+            title: "The Simpsons S07",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1NSTeGnjCFA28b5aMNLH87TarlcirzEKb/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1RcmjT3CzZ0THA8Y_5wYuxkxoG06edpeS/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1x9Pb9XMLIu7j1oazjS6lBYF5yDMH7T3n/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1eYWXQ4rGEB-xlqEffoMVc8dNeFQwFJDt/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1EMzZzyaLFJqlWKnW-pYylmMwDPdR3KLM/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1t0r-IZrRx_fXDu9YyKoSlietRKjRgzsU/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1PGClxPBolzl-fEKZ6iiJbDNx0MRY6vim/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1JqLBAfU3E0YzK-5wS2SsQqkiWj-IcEQr/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/10SNeLIAhqRjlCjfUF1a1V4C7dycNX7mw/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1FC0f3m_bG7HKfgWo7ldebA3RDNkRkFeI/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1vy7pcqcBG519usdEr74Fow1xU3m_xgxn/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1IWGlk_9HbjuQa_3nNONzphpSzqDKL5_T/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1tBFDLmoy28DqBql9pRmDIr84-KKgeKqO/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1SEYHhQeXXznMQ1cdNotkFJ9LV-RK9ixF/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1D98ASETO67XAuWmZ6WCUesmHVGye7cLX/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1gKL7vCosgxu5IKlx5F8dhL6tlhI3qgOD/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1nYPv5bX9HO_WCr5xzAFOq_sbcYubDVIC/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1FzvWU7V_ONkKehCzEQ-lHPz4VEI__fjr/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1FA_StzUnPGTpeGEqVKgaSWFtVGcyeqEc/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1LfVEkwyW9IgcZkNyi3EPmdDlKw2aWGhH/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1zxuM21CS6_KjGLZPyww4INF6HiGGgFYP/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1LEK-wORCILBd5GLiiOJtb83AsKUYG-nu/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1FVqomOm7OmrePEDwQ7sU1TuAktpdBIpu/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1pCKmuVxMCgRTxU8gx0MdvAVuKrKM3y7w/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1CSC3EHF1Hoks3OEiniY5FZX2OT9iioet/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 8,
+            title: "The Simpsons S08",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ViEbLqD-t1KZ0_3F-65QuGCLk7mymuNe/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1pG9gWZ8QEdhjX5sg2j1y8KduTF7fiKFm/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1o2rqqnqu5fw4kev0NccIm85qhTuB6wNC/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1qkV-UcVRttG1ydyW6ms7oMzdq-Qqp35f/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1zNZfb-WbSJW_MSwvb45aveS6wrn6rv1E/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1aURtWsuE-8dRmsSJGKWR9WDm0HBYBJMu/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/13K7P-IFv86JfacRyBarQJkQouhGqVq5H/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1_dKDSSBbNyO2Fj365GXvpqgkFHmg3OD6/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1IYdoshP0SaNGeaPzkfHGmlnm4tVMukGR/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1kPTuSRkyVUxd_f7c447GtL-OZm_BC2j9/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1l5dYf39ZZDtj6Abu0e-1d0W43b4FAboJ/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1JkDJXkDrkxeKSjFHtZpuGfzrKqdz7cox/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1o4T14PnMOHB8dGu9vWvF2KxbH6OJo44s/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1cl4pwZjHOVJ3KIW_EVGf9RcaGG09KKbX/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1JI7ww4D_fB_Orcx5Q3UbDGXx_DHLYWms/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1kFRWfaUPbo29ri43ZzVSTpICrXiUvGuM/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1_8w796-SFxj76jJB9Kacu1wAbEX4DWZj/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1S88ubw_OiMmxIZ0QkrLfvuzmqK2WitGz/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1QVdJWuIus6WuCtj4ZibhYh31rNWoGXx1/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1p-qUD-sHSyNC-YSs0vHKjJE3GybokOCT/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1BwB8yX_dx3p2kWQJcNVomMEt9G6SWgMP/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1I1Ec0vrV_FaP3jTjMLBNjcnTZtwZu8KM/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1jgO4jmCIW421dQFa822R_9nY9pQx2UTX/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1JTZXLA394J6YpAbGu4sXQbibPRD3Bc-T/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1EnpljjLxMoiz60xVZvsKVvMSDc-Nq9HD/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 9,
+            title: "The Simpsons S09",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1ovtrWWZ06BUoqUXJhBogrERa_mYmKlU4/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1SlfPET1d8MPLBunlUkQMBQ5YB1MC5dhO/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1IHtyQ7YHBYznzq6kGOJO9Tge0Ey_8ZGS/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1R4JOENi-UXoeyStlRTfkhqB60jJvXnBD/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1OamM_KMVrjnWJGGIpMPN98uYxwLnxNwM/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1LSJme7SMihazgBS-WHtVx7pRsf4AQi9K/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1xDJfJsApRU0kEQEbten2fXBH9rb_fBqe/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1WHxV2ruDsjS7gKJXaz_ht58AszxWWqn6/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/18M0TNdqrbPEdm7LJ3Qtq19WhgmiumM9S/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1TuJK1D_YHQRsE7rPTRMGvDqBfKhAsRST/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1hjno3Z7uYGFqiRcJ7Cl2Ezpakag81D64/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1SPuEeQbJ4GpwqT2r-6wKYBWvyzLG1zhK/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1wQZicjfDnnLEUrJ5kwd5BYHhZgM-MSdS/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1Szep-UHr4_u1T2OQWML5gkO54ZMzQTVn/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1eVbXIgF_aVNb2aPF8WmC6LzcVz2QZtNH/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1yQIx2Vu8uIENLaEVxE3M84JwNcbHGiS7/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/121G5sbjP1AimGGMtTge7GCMmRrH_srum/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1gShydTKThf-fITb0vx0uZS_BDQxxnKCc/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1MFJGsT5BnFC-DnhNoGPNkPIXJwIjp1dz/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1kndIYHoX_nRQA40s1OLVIFNxOzM_QaBt/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1K1C6p8fB3UEG4BTV-_b25Per1fBSvIFF/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1NICxohIsNNiitsCtPQiPAYxqAkpxNmnP/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1eclpicdmqr8-Wr4BaJWSUrCLuUvvJl5R/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/19SieeV2Z0C0TlvVLX4AFGkcK-b8chVBv/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1QrithRuxDDZkt3xZmaxRo0dAmLBtHeBf/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The Summer I Turned Pretty",
         imageUrl: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS1v03xzkDtp2KAzL3n3mwuG32Db-UkFDTo2fP8UlqJIeF1Mbeu",
         description: "A girl finds herself in a love triangle with two brothers.",
         year: "2022",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/1MYMY-BGuKDWgmcsuWjKX6uFV0yLukSBO?usp=sharing" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1K_X6PMWG7j484hQv9nU9SYRKuR8AWx92?usp=sharing" }
+        seasons: [
+          {
+            number: 1,
+            title: "The Summer I Turned Pretty S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Nx1I45HKSRHrDLZU1rCrcZMC_9Ed53Da/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1CUwmDstU2sVNInjjCEdAedF6zfGmEXIJ/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1FjSbOkBXpHMyPWhbZD3Uar6o7NuxM1hE/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/16ScmXTPCPaMjqJmhamSB8794bnIQ9sWG/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1_DI_F2zx6_dAbdv5NOK2bgzkXyXfSpH_/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1brjLuov_3geCx1BF9djtX2kfp29oIHZ9/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1Q3sC1euX4ZElCcSdlY3333-SvPAlZgMh/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "The Summer I Turned Pretty S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1EcV2GITeGqaaQw5hWdaQQ7_w1h3yKjGD/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1Q-OAxIyzjE7bqcvhxBoUgx1ly4VML0yP/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/19y8LdLuBpMCLqhnKhc4AwZ3ltfpvQyDp/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1jTK7ZN8d2vbW2_GbdS3DXChtEcC__KVO/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1k42ZkAaK7nQklq7GzSy_uQnkfcha4l7c/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/14bRPwc9HIy7w1UpzmupfVm797izqF6Lk/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1QBo1J7XvZBAosI368xl0ibeqrbJHEBBX/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/15dwsOn92ah9Ltq_oV9DusGqmGjRr1VfP/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -911,47 +9319,210 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTLIXk9uSVQaI9FmohagbcEGEX1wdqiDMhd1M_A1fYPdCxAyqs",
         description: "The first TV show based on the Mario games, featuring live-action segments and animated adventures.",
         year: "1989",
-        link: "https://drive.google.com/open?id=1u2FRXPJq6TFc4DH6pqk8bhe5_Ymgu6GY&usp=drive_copy"
+        seasons: [
+          {
+            number: 1,
+            title: "Super Mario Super Show S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1AhmpK4ge7FZolS5mVZEPnOStY_Wzexvl/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1sU6ShpeyXfTL53Y7E29R5H9AO2FBKBrk/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/10MTMgXKmegnh7Jd2aMzgZNzBvC_bnq2j/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The Walking Dead",
         imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS4B03WCAkIK0U9kwizx8R70zP-FuHe7n22JkLmgIlrUy1pi8X1",
         description: "Survivors of a zombie apocalypse try to stay alive.",
         year: "2010",
-        link: "https://drive.google.com/drive/folders/1xtsZbxPaGypqsMTtRpgOEpSUyJvuYn1-"
+        seasons: [
+          {
+            number: 1,
+            title: "The Walking Dead S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1Gb3-pkP76U373Bhw2FXnj-cUdA2hAePr/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1buXruSw_A6vcKk54RgFzKhK43wA5kSyf/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1SDgMHOF5vaxHoZgF6-3KoeUVAGtfipJB/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1uVJdPy9oTzLqKjHymDsKJpapq4hz13RQ/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19CWjKmu2oaZUOkHzppFc5_OX7b7cVf8K/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1dLGQvn3tcCoybkOTAzXjZJjHVk-peBrP/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "The X-Files",
-        imageUrl: "https.m.media-amazon.com/images/M/MV5BZDA0MmM4YWYtYjY1Ny00N2RjLWFjNGQtYjJmYjM1YmVhY2Y1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
+        imageUrl: "https://m.media-amazon.com/images/M/MV5BZDA0MmM4YWYtYjY1Ny00N2RjLWFjNGQtYjJmYjM1YmVhY2Y1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
         description: "Two FBI agents investigate paranormal cases.",
         year: "1993",
-        link: "https://drive.google.com/folderview?id=1ARvjA9abgf9qPCiAn0_A1tLjtGrNc_KP"
-      },
-      {
-        title: "Thomas & Friends",
-        imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSiyJVbZqmXoYcYOvbUT2BhGADcrddaV1ouBGm81wfEF0fVgeSn",
-        description: "The adventures of Thomas the Tank Engine and his friends on the Island of Sodor.",
-        year: "1984",
-        link: "https://drive.google.com/drive/folders/1OFWN8hASAuNWSn9mK2gANJ0PSQhvIA2r"
+        seasons: [
+          {
+            number: 1,
+            title: "The X-Files S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-xCJqCBk6YHD6FpMLu03RSp_raxGERHX/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/112rCpMDgiYvxDDCMvsp3jy7nzebpZEuj/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/15TxruGtV5DVuhnEQ1YB-N7k30mw4E0eL/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1qP1r9Stba_ORkWv_GWYcA4Q71_lwxS7a/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/19ZKMyr56pdRlv2CImYKBoHEMFN0ctKdB/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1UAC8S5ZLxZln6Wnts6EkqRrS1GEY8j32/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1lqEzy_XUua-47_44A101prFBi3ipYkAL/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1fRPZqAz-MN3Dwxc-eEWlzhFQBGC-_-l4/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/12yVKGF8TRm23BBDZc4ZcrW1N6DlKC_Cf/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1ikHNjbIENdl6PcuMJE_LTFCAIZjmJWUU/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1W9-wCfIvVejb6pFtj86U-Eo-PSTJGA29/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1vJy5OdFlJjXqrr-pDDXwzt_RG7Vvmtas/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1jLfTMIGs1bf4QJ44u_NgFUyCgHzTmlVa/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1hm4Cn7JSR3ERROLDM7o8FeFbf4NELZM8/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1n-I4PFNnUsebkfwCNXf-1FgkYbUC1kmm/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1EputVI7IEGYSVhYbUYXermbuyXhGtinG/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/136lwnjy80jEHkWTqfYOgiGWW3Ei8-d_R/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1cqwjefnF-FCddxCAUjwX7OgtCXGOjNnx/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1eDcLvHrcSYUv7p20unL41v5q6KtzFExN/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/16W0dXW0ZSkBb5CH8jEFLGtEuOfNudzWS/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1mpaHEEougHbdcsZ-yMcAGid8ncPu2_fw/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1uOTAhQxzQRo3sAEeWZVVtNLFCWuALH0f/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1YY6A1Bx80Okxugf-9HCgqxlF_Ggw2pbS/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1Z3RLKoql15w8yLcMN7FTkqw8Bkz-WSVK/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Wednesday",
         imageUrl: "https://m.media-amazon.com/images/M/MV5BMDE1NjNmZjgtZTg0OC00NjkxLWEzYzItMDNkMTc3YjgxZWQyXkEyXkFqcGc@._V1_.jpg",
         description: "Wednesday Addams investigates a series of murders at her new school.",
         year: "2022",
-        link: "https://drive.google.com/drive/folders/1o99ZY5RLvFF1k0K-CU2Qu-MEm7rQZyap?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Wednesday S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/193rUxWJ0rtcMMSu1WstGV-6DxdGIaIJK/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/17mdJ23VA75p10zmuEe75GlcT8eTxmZm9/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/112xBToT3b00lOpAYQoMOQNBnqFLiI2b1/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/12qMMYlZVj1w0bn1950YfmosiE4vOarOk/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1T2qhXs3li_HQ3rTHMCgrC3xK2wCXO3gd/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1klZ_aiYlj0IzbxodfTnLRxDDSvn7cMPM/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1G6Ob0hGfRuPGDOJ5qdwmpdW0O1ceUlON/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1bWVQx3W6Gf5HnUt9ywuQ4n6MPTac6Om8/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "X-Men",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTldYIoE2paN2vfxg4dvBC6AA7lRoKwaF_mA&s",
         description: "The classic animated series following the X-Men.",
         year: "1992",
-        links: [
-          { part: "Season 1", url: "https://drive.google.com/drive/folders/18a_VCltjLCHu0UIgOrfRRxq7OIj7dw9i?usp=share_link" },
-          { part: "Season 2", url: "https://drive.google.com/drive/folders/1khaD7HkjetVca7uuhDEgPzWqPLwFcErQ?usp=share_link" },
-          { part: "Season 3", url: "https://drive.google.com/drive/folders/13z5iRAxkLTvO3XWNBIuguRPJS-4MPHjX?usp=share_link" },
-          { part: "Season 4", url: "https://drive.google.com/drive/folders/1yUkaEirDrNUIURTEF-Yi0_VKAtyBftGZ?usp=share_link" },
-          { part: "Season 5", url: "https://drive.google.com/drive/folders/1lm_C-dAiAVANZlH66bZNnnUP8qWYo0zT?usp=share_link" }
+        seasons: [
+          {
+            number: 1,
+            title: "X-Men S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1x79jW0ikGGeMLENZHkbaB_4BOMsRRJfQ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1tGtFButXSQbIAVKfztoLN8qx4ToL41tN/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1pAorzostAgmSQszRvcUn_ZyVAeqsA-u1/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1RQERdTHI9bsiDdlOTNVj8QGKtIYSLqEk/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/18HwdilTtan-mTf5KYZkAoCsotQmwU71c/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1VRfkTIjLgMmHhsbKuorwIZg1pZ8u1sns/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1gtHXnEWch-3fkZsF94anqmofLNZVDq91/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1gh0eqBH0-0LWWejvN9qdtLLZZuFU0K3O/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1bUhTDO4E9ZcEOfZFx8r-kplpCnwoXBAX/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1I2s64f8WAeCwFgHi0mv82IHfsHnWir3S/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1nzkiYaaNj1rqTcNuSsiO-6093Z7Do00o/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1NRHJL_Qt3FnzsAtm4zeQlAKQJcWTSuF7/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/18Z5xfrocAX7VCuwfo7EqvjRPvjo2z2vG/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "X-Men S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-IycxCaYSqlcLCYx693BP27SzAq7Pd0y/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1mc_i2GjI1tKYtfC80dII9IqRXYnuGXki/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1-yASE53PfhckzRA0u8V6-28-cNSc0bpn/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1fwa9dCqER2xJvyaCd1jBrnOWLFUh8LNm/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1qzHXypZDSGvL4PtQr4EWkpmhp3w7NoNa/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1U7pH6A83bMJc6GTI7nS-F6JXSmeTyEu7/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1CgNUErcKV5GH5Za7RY5LXpem0aMml6Kc/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/12fwMP2tMKsKZHT9pJph1gnvr8bWHun8Y/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1TZn-r3kdIgxISq9dQZc_cWy7qBTKSHeF/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1NoR2kl1Ddxx4ZKxV3Y7AMh9Qza-8LeXL/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1T9W6fUMrCS7l2UzS3IaVwQ-lSXaqzIld/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/17PtNGI3O3YBcVKqMZp1-Rh3cS6ECfqpA/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1M2fgC-7r_w9BOcEoxbuG1WIBarPee8h2/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "X-Men S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1byxQnH51uwxf_WUit2tkw7H8_pcKU2a7/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1R-ZDDx7hB4heOJpia9IzJX7xGaN2wxAR/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1m1v_SxIomCARxQ4BencnmLEFvT2VxLKd/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1SO_LZjED4ZrAAYqz4iKePxdUQalr0p5O/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1x8ajScmrv2wGwZCvdGUDW-9SPqO3U0xq/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1NxGQwZO8gcvmwQQaiPKq2r4FLaKmu0Co/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1gZjpiDHMcKdxcFvsKD9nby891cL97qCT/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1MB42wFyU3AJTe0WnfrZGAcEjJB5u5mRm/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1Z3CvI2VG7xC8pfW2BnYhPnhgY8q67lPH/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1aZVMsKQ9NC2-mpsKDm6ylGGvjDF8AW86/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1cqWJCf3w7vq4P8UzRvqUnNoIkoleVCtp/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1Rjrhdss3tWQDv9LxICIAFkue3ZqaYyBe/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1FX4PXBZCyemHSiLj_iOWtHPqcGZiAmkk/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1zH8Dy770MyMvxitNMFkkyicQKoVh5kEW/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1Yo67Zhw9hSwC7ju7HdpI3IbMQfrvw76y/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1YCuRD9Tur8UzqkjH8PAqiBarWsjfMeZA/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1nO5b8KyOGPACd7ibP9zclLr8zBBuwBCK/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1gAJ6IestmsKOHft_4YanxLfPbg0zviDG/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1vhXn45d18xd3KTn08dD6av3wBTM6OUQx/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 4,
+            title: "X-Men S04",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1l3PX2rc2_UD8-KYlg95OpWrEr9xViaSt/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1lnjUgEZgoqis2Fk4NMZvw2tN_R5kpBxm/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/11MHmSdWTzrvG8LDyvtQU6GZDE0n7L4l3/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1VlE4TmV3R4HOjveY1EWr03hjYHJNhGTm/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1uFKvDhUPASUgAZOI5G927NR-XnsiRzwS/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/12SCiYFdNwYhMUxzvPHm7z_74fDr4rP07/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1F4cS-1lSLMrCzNcUJryibghGlUf-Mo3V/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1U2YblAObdZx3DKStyo6CjTqLv6w6D1Xv/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1dsYJSSzbjfpcasMStYoq4ws__1RQKxYz/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1eQtioxt6Hs6WSOhjuqK_7Xz6X-7CTeTz/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1ZEE3GmWHA6YI53njPam_lVqdOkvu4tB_/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1TxMnT6whdraIu_6oZKE8KZMKvXlZHPXg/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1Q7hFGT_xddPOpwU6KCVJ14wDQ0gMYZLI/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1LuV0pesz3BfCbIBMWxH6FeSyKknZG4Cp/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1XEpTTAGnEwUG7kGs2MVL1D6YQNVM3PjH/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1YuUND7dAqH2mN6La1tp4IsembMvqTuT7/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1wGTiEsHnTjz2Tl-Do-5-ndDcmgg-_nRO/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 5,
+            title: "X-Men S05",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1KWAs6qcYOytPf4MQ5rqJueya7-vjcS0w/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1qDovHvXIJNRSC3Du8c6LVtyH4hjb-q-R/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1x2SZxTtjkpv3G95T1XFAMPLM8qIN0m_7/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1LPYHV1cEEqgR4RU1wHAkJ2r1CxHGR8BG/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1SJe-OuWeS40efg_2fxZSeGZVElhB8A6H/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/13hvM-PHW66xcLAv0xZ9T7HieGnJKILs3/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1vlGedTUtVJUpepXW0UArnPiw3ySCa43v/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1kfhhtnbri5NXqDCrOLupRG3GwdZLib4-/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1GxiD-8NX8oemicx_uUE66Q_ssyEcvr9k/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1agtC5pcdQFtdLsnuErGXNLT1nSlBawuy/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1BcYVIumLveBeC1Tiys5y2HCSxcML1Evy/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1B8F7Nh8B63oUvXGwA_okwLv2O94KEoR8/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/10dWsUD6zpjD8IBqFeUVawUAe5X5JnYun/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1tC3oJ1nbZDcCdImNgjdZP3rrIzg23oiA/view?usp=drive_link" }
+            ]
+          }
         ]
       },
       {
@@ -959,13 +9530,125 @@ export const TV_SHOWS: TVShow[] = [
         imageUrl: "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/yokaiwatch_6.png",
         description: "A boy gains a watch that allows him to see and interact with Yo-kai.",
         year: "2014",
-        link: "https://drive.google.com/drive/folders/1yUIXCpBp86InMF8gNxKekCMbd0LBVAlP?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Yo-Kai Watch S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1-mrpKKCTWfm-fLg-oNBnaeAe9SvoC8T9/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1FOzVZkbmDVj1hMfs9mQpycDzMxjXXNIB/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1g8Upp6nDz1bUlZzhx5DlemeUojUcFj1p/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1qJufM-AV4vgI_-soZ-TVLMjNPEF2uopL/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1bGBuHvULQkDrEXlCiUj4tZXJKiOft167/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/11Ef85SIbOHoEHQnYSfwzO8uk2Od6e_Jr/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1H-hdnpbcVCZmEtuicgoXP4AA_HjB5ETw/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1XKbFQGt5DlxxjXF1vnwfKrS-NbPTkuzX/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/11zn-2vjn_Hx0GH_WawwdfC9Pem1tPVcG/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/14ozFobnQ35WGbpVv2KWPlV3kbkV8rFCN/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/11_7ACMRDNEJHUzMIBPx0lEdCt7XRA6tM/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1puePMlaO4E6TucuCUKaMLjYY9JKWZNtI/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1scBJTarHgrHFpRngA4kPVWR7NCzkdNh4/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/1zb0w_N8UFr-j64KJwkDlDVOZvCHupkqp/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1oFGkcZBxCl6s3JrnHWZqdbGxdIcBxQKM/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1l6WI5fC127fycB9StZ3Fzj4UIuwpsegX/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1MAz62EPyqe3crY39rgxXUXbiLV_RUjL_/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1JFlXiRu0wkkk5EAWQx-rb-WL1Wiu8tUB/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/11nxEyopQCQKRcFrkj34V1DY13Xtnif1k/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/17eI-T4Q8kzhEtG_4KOFu8I9_c2QEhST8/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/1XbIxDWukSIHDfwjGqFTI2Fsi_59J-PBp/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/1b5PE1eGUkZ_ar6xUfM5-PHEfN2ek2_KY/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1usSj_orYML_m5lavMBw_FaogXaeveSYx/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1_Zw2pa_8eoOB1tM8HbiFHqgpUfNakaz8/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1sJlK6tIEs3mk7AQNx6Y4uscGGP9GPXk6/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1siOHjo4Pe8sP6RXMwhUb5S4ONLVJm0Up/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1Nt3ZLZHwdt26jyxR6CZxcYiT9_M_UKui/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 2,
+            title: "Yo-Kai Watch S02",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1dxdE1iesWZhMtsFJrZDRbog0LT9wts-V/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1F-55rQi80LGFIO3RDco-dF8kYA3P4oG_/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1ZBo7dM4mjxauCrMD6ShFvFe1LJvdR_Ni/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1hge4Z4v-WfLr70qn3C8yJB_JRNMfuwGG/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/1hn-LwuViKdjGEuTxh6q0wt8WoBXrDwLo/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1tMdJPcil5x2OQni_Z_dHZSqw83o2NyVN/view?usp=drive_link" },
+              { title: "Episode 7", link: "https://drive.google.com/file/d/1j79TnL49XlLV3uv1HM9n9nxAnwHlv9cR/view?usp=drive_link" },
+              { title: "Episode 8", link: "https://drive.google.com/file/d/1AMraPcgV1odVALHOv_LKUA5ySjC7hJS-/view?usp=drive_link" },
+              { title: "Episode 9", link: "https://drive.google.com/file/d/1lnOdQkiaGP9m93xiQlu9UQspj4T8yjx2/view?usp=drive_link" },
+              { title: "Episode 10", link: "https://drive.google.com/file/d/1p195dUUCzFJM7YtM8GBPU2bzy1lM5fNW/view?usp=drive_link" },
+              { title: "Episode 11", link: "https://drive.google.com/file/d/1BfZt31Nq2dnBE7c_yQ4_zFBr325VWguf/view?usp=drive_link" },
+              { title: "Episode 12", link: "https://drive.google.com/file/d/1kDds_K03uRw25kehft3HY2h98wcpa8R9/view?usp=drive_link" },
+              { title: "Episode 13", link: "https://drive.google.com/file/d/1j651rmUPwGJLJLU4CWjPhzdRm9E2JCnF/view?usp=drive_link" },
+              { title: "Episode 14", link: "https://drive.google.com/file/d/14yTRtZhId32fgEXUfLzCZrXEuUvrlEes/view?usp=drive_link" },
+              { title: "Episode 15", link: "https://drive.google.com/file/d/1q1SSfe2aR88JKc77gPcO2pKF-mfktGcK/view?usp=drive_link" },
+              { title: "Episode 16", link: "https://drive.google.com/file/d/1a9epxzDJveH3fRl34JVNlRK6qCh_pQIt/view?usp=drive_link" },
+              { title: "Episode 17", link: "https://drive.google.com/file/d/1chESurGOq3deI7chreaXwOXuKM9IC6lZ/view?usp=drive_link" },
+              { title: "Episode 18", link: "https://drive.google.com/file/d/1bg2UxeNjvQSiEELcWW2qruesxUORhC2A/view?usp=drive_link" },
+              { title: "Episode 19", link: "https://drive.google.com/file/d/1tXOe52WADmJJuGC34duLa_8MXyddokvF/view?usp=drive_link" },
+              { title: "Episode 20", link: "https://drive.google.com/file/d/1yw7NU5SvVm8MYmVenPjS2iEJquNDZdLQ/view?usp=drive_link" },
+              { title: "Episode 21", link: "https://drive.google.com/file/d/18-en2I0fFgxTeaKKvE-ZatmsFofqhqLn/view?usp=drive_link" },
+              { title: "Episode 22", link: "https://drive.google.com/file/d/15_SpmGoSv_ZChPIrX9sQi_xBBUErDuZF/view?usp=drive_link" },
+              { title: "Episode 23", link: "https://drive.google.com/file/d/1TuFEZqhFkc4juSc3DeV_JoY09Wh_BJoD/view?usp=drive_link" },
+              { title: "Episode 24", link: "https://drive.google.com/file/d/1xQilrJQ1LhiUfekqta6GEJarV8DmNSvm/view?usp=drive_link" },
+              { title: "Episode 25", link: "https://drive.google.com/file/d/1r0HXQM5-1DlFPwCTK12SD_sa9WAZJoBK/view?usp=drive_link" },
+              { title: "Episode 26", link: "https://drive.google.com/file/d/1WxhtRTsR_jCbPqkjWvmt-nIZ68oi1zle/view?usp=drive_link" },
+              { title: "Episode 27", link: "https://drive.google.com/file/d/1Lyow39y-n6t3yYXEoMZa3svrUfYJvUBw/view?usp=drive_link" },
+              { title: "Episode 28", link: "https://drive.google.com/file/d/1k37HPnni254BC3BkpkqqBvVtfq3IDu6h/view?usp=drive_link" },
+              { title: "Episode 29", link: "https://drive.google.com/file/d/1eEXcKz0VQ0bhoVBL8d0QGxYF3Q7PGRf5/view?usp=drive_link" },
+              { title: "Episode 30", link: "https://drive.google.com/file/d/1o0EVrmhl-61TgFsiCT3Fp83cmlFkumoV/view?usp=drive_link" },
+              { title: "Episode 31", link: "https://drive.google.com/file/d/1h6pLdI_9uVFlsnbzoJ_3MC9YsehAXuMa/view?usp=drive_link" },
+              { title: "Episode 32", link: "https://drive.google.com/file/d/1lCDHeaxu_AJIWjwQGw244CfLq09r1cMO/view?usp=drive_link" },
+              { title: "Episode 33", link: "https://drive.google.com/file/d/1kN2ySgfoR2GCcfoytP_oQBKCyBKIxSLu/view?usp=drive_link" },
+              { title: "Episode 34", link: "https://drive.google.com/file/d/1PaqlObqcpdWob-c2u-32d_wQgtGgp4xh/view?usp=drive_link" },
+              { title: "Episode 35", link: "https://drive.google.com/file/d/1tOyqB73ydcjt7AuVwshAdr3SWYU-Ebag/view?usp=drive_link" },
+              { title: "Episode 36", link: "https://drive.google.com/file/d/1dj5I4_5v23nzAdM_gxX1tICu_El-VNir/view?usp=drive_link" },
+              { title: "Episode 37", link: "https://drive.google.com/file/d/1JnOJL8zqSovx5yffNQbgNALGiKnbxXQO/view?usp=drive_link" },
+              { title: "Episode 38", link: "https://drive.google.com/file/d/1LmR5JMUBkosdANN9qVXaSoaPuExmciLF/view?usp=drive_link" },
+              { title: "Episode 39", link: "https://drive.google.com/file/d/1dAB4p3swX1Sbi02VHhS4AedbXh5T_Xa9/view?usp=drive_link" },
+              { title: "Episode 40", link: "https://drive.google.com/file/d/1ja78G9OZg5jYT884cadcFmGgLl-PPLA2/view?usp=drive_link" },
+              { title: "Episode 41", link: "https://drive.google.com/file/d/1wR2EGWHUkQcNayjHxD_UzxOatW7FnoD-/view?usp=drive_link" },
+              { title: "Episode 42", link: "https://drive.google.com/file/d/1obp3YvN9lmWY8xco5S3T8Y-4qqb8Je4q/view?usp=drive_link" },
+              { title: "Episode 43", link: "https://drive.google.com/file/d/1pToc5qcfvDrtr9j-_nJraRfz0drlKGQB/view?usp=drive_link" },
+              { title: "Episode 44", link: "https://drive.google.com/file/d/1rTL4Yj-FBSO8cLRYEqMljd9SQyuq1qaJ/view?usp=drive_link" },
+              { title: "Episode 45", link: "https://drive.google.com/file/d/1W_X1_gCLC0uXqnaS7CMCujl-xmFrMBxT/view?usp=drive_link" },
+              { title: "Episode 46", link: "https://drive.google.com/file/d/1t4f_5HTTl2PYr1V8XXcPpxFbgBITXlmD/view?usp=drive_link" },
+              { title: "Episode 47", link: "https://drive.google.com/file/d/12fM7wpS00OpBq0oo4uALMPOSZClBiHi_/view?usp=drive_link" },
+              { title: "Episode 48", link: "https://drive.google.com/file/d/1qoQoWb8QTGiSFwsOM5UeXuUMuSXk1wpq/view?usp=drive_link" },
+              { title: "Episode 49", link: "https://drive.google.com/file/d/1iNgXUI25HUPBTaO7XBXRdCkjL0LqxEMy/view?usp=drive_link" },
+              { title: "Episode 50", link: "https://drive.google.com/file/d/1dUpKLBDrlIhXrsx0KmHqgqAgGKJc8otk/view?usp=drive_link" }
+            ]
+          },
+          {
+            number: 3,
+            title: "Yo-Kai Watch S03",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1JODUyl3t07In0jlt0u1AvUtKtYtGOJmZ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1_Bt_rhkoJytjnGg34pnAbBphCTyG_Bq3/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/18ClnSWGjUV0gH_33IsHJ93jey1WZtp8M/view?usp=drive_link" }
+            ]
+          }
+        ]
       },
       {
         title: "Zootopia+",
         imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThmBkjtYKPHpy2f76goyLvuMGT2UHEpI95oQEiZgISMK2cs25V",
         description: "A series of animated shorts following characters from the Zootopia film.",
         year: "2022",
-        link: "https://drive.google.com/drive/folders/1MJUMWPnNAitXb9osZfMgR4AZw8WqbJ3-?usp=drive_link"
+        seasons: [
+          {
+            number: 1,
+            title: "Zootopia+ S01",
+            episodes: [
+              { title: "Episode 1", link: "https://drive.google.com/file/d/1UK7-4qr2c-Nkn1W_Gji2o4N1aonjnroZ/view?usp=drive_link" },
+              { title: "Episode 2", link: "https://drive.google.com/file/d/1lAsUfnc2I5DUm4MRqboD_iRYFhqHOwJq/view?usp=drive_link" },
+              { title: "Episode 3", link: "https://drive.google.com/file/d/1Lde0tqLSOf_yZN4d3464b_QQnBxgZRQ1/view?usp=drive_link" },
+              { title: "Episode 4", link: "https://drive.google.com/file/d/1Rge9RcHa933ppIeg0wJqWlmI88kq6VbW/view?usp=drive_link" },
+              { title: "Episode 5", link: "https://drive.google.com/file/d/16i6OSdIaNaZSoW163RlVxFFkkbF_AEm4/view?usp=drive_link" },
+              { title: "Episode 6", link: "https://drive.google.com/file/d/1OLhGxX_kQ1Ht9o3G9GhwMKSQof_dwsB0/view?usp=drive_link" }
+            ]
+          }
+        ]
       }
 ];
