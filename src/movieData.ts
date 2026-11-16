@@ -28,6 +28,13 @@ export const MOVIES: Movie[] = [
                 link: "https://drive.google.com/file/d/1fGpb8UBbynGx9NaHDc5wPzYjjUAD7gLW/view",
                 description: "Crime-fighting canine-human hybrid adventures.",
                 year: "2025"
+             },
+             {
+                title: "Spider-man: Brand New Day",
+                imageUrl: "https://cdn.jsdelivr.net/gh/dino-cmxy/Chillkirbcentrall@main/redraw-movie-poster-in-the-comic-book-covers-v0-6fajo4f1dmbe1.jpeg",
+                link: "https://drive.google.com/file/d/1fGpb8UBbynGx9NaHDc5wPzYjjUAD7gLW/view",
+                description: "Spiderman collection.",
+                year: "2026"
             },
             {
                 title: "Michael",
